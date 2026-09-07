@@ -137,6 +137,9 @@ def run_production_job(campaign, job, backend, frozen_path, out_name,
         campaign.transition(State.PRODUCTION_RENDERING, "executor: submit")
 
         q.update(job["job_id"], status=JOB_RUNNING, attempt=job["attempt"] + 1)
+        campaign.audit.record(campaign.cid, campaign.state.value, campaign.state.value,
+                              "PRODUCTION_JOB_STARTED", "system", artifact=out_name,
+                              extra={"job_id": job["job_id"]})
         rid = _retry(lambda: backend.submit(frozen_path, out_name), sleep=sleep)
         q.update(job["job_id"], status=JOB_SUBMITTED, shotstack_render_id=rid)
 
@@ -171,9 +174,16 @@ def run_production_job(campaign, job, backend, frozen_path, out_name,
         q.update(job["job_id"], status=JOB_QC_RUNNING)
         rep = campaign.run_tech_qc(str(dest))
         if rep.get("qc_pass") is True:
+            campaign.audit.record(campaign.cid, campaign.state.value, campaign.state.value,
+                                  "TECH_QC_PASS", "system", artifact=out_name)
             campaign.transition(State.AWAITING_FINAL_VIDEO_APPROVAL, "executor: QC pass -> await final video")
             q.update(job["job_id"], status=JOB_DONE, tech_qc_status="PASS")
+            campaign.audit.record(campaign.cid, campaign.state.value, campaign.state.value,
+                                  "PRODUCTION_JOB_COMPLETED", "system", artifact=out_name,
+                                  artifact_sha=out_sha, extra={"job_id": job["job_id"]})
         else:
+            campaign.audit.record(campaign.cid, campaign.state.value, campaign.state.value,
+                                  "TECH_QC_FAIL", "system", artifact=out_name)
             q.update(job["job_id"], status=JOB_HOLD, tech_qc_status="FAIL",
                      error="tech QC material failure")
         return q.get(job["job_id"])

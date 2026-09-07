@@ -17,9 +17,12 @@ from pathlib import Path as _Path
 
 
 class Campaign:
-    def __init__(self, workdir, manifest_path, runner_path=None):
+    def __init__(self, workdir, manifest_path, runner_path=None, dispatcher=None,
+                 dispatch_retries=3):
         self.workdir = Path(workdir)
         self.workdir.mkdir(parents=True, exist_ok=True)
+        self.dispatcher = dispatcher            # None = no live dispatch (dry / safe default)
+        self.dispatch_retries = dispatch_retries
         self.manifest = load_manifest(manifest_path)
         self.manifest_dir = _Path(manifest_path).resolve().parent
         self.cid = self.manifest["campaign_id"]
@@ -105,8 +108,13 @@ class Campaign:
         elif gate == GATE_PUBLISH:
             self._status["publish_approval"] = (decision == APPROVE)
         self._save_status()
+        if gate == GATE_CREATIVE:
+            self.audit.record(self.cid, self.state.value, self.state.value,
+                              "CREATIVE_APPROVAL_RECORDED", by, artifact=asset_id,
+                              artifact_sha=artifact_sha256, extra={"decision": decision})
+        # REJECT must NEVER trigger production.
         if gate == GATE_CREATIVE and decision == APPROVE:
-            self._maybe_queue_production(artifact_sha256)  # zero-terminal trigger (V1.1)
+            self._maybe_queue_production(artifact_sha256)  # queue + auto-dispatch (V1.1.1)
         return rec
 
     def _resolve_frozen(self):
@@ -129,8 +137,50 @@ class Campaign:
         self.audit.record(self.cid, self.state.value, self.state.value,
                           "auto-queue production job" if created else "production job idempotent-reuse",
                           "system", artifact="frozen_master", artifact_sha=approval_sha,
-                          extra={"job_id": job["job_id"]})
+                          extra={"job_id": job["job_id"], "created": created})
+        # Only a freshly created job dispatches. An existing DONE/in-progress job (idempotent reuse)
+        # must NOT dispatch -> prevents duplicate paid renders (req 5).
+        if created:
+            self._request_dispatch(job)
         return job
+
+    def _request_dispatch(self, job):
+        """Securely trigger the production-render workflow. Approval is already persisted, so a
+        dispatch failure never loses the approval; it routes to HOLD / DISPATCH_RETRY."""
+        import time
+        from .jobs import JOB_DISPATCH_RETRY, JOB_HOLD
+        from .dispatcher import DispatchTransient, DispatchAuthError
+        self.audit.record(self.cid, self.state.value, self.state.value,
+                          "PRODUCTION_DISPATCH_REQUESTED", "system",
+                          artifact="frozen_master", artifact_sha=job["frozen_json_sha256"],
+                          extra={"job_id": job["job_id"]})
+        if self.dispatcher is None:
+            self.audit.record(self.cid, self.state.value, self.state.value,
+                              "PRODUCTION_DISPATCH_DEFERRED", "system",
+                              extra={"reason": "no dispatcher configured"})
+            return
+        for i in range(self.dispatch_retries):
+            try:
+                self.dispatcher.dispatch(self.cid)
+                self.jobs.update(job["job_id"], error=None)
+                self.audit.record(self.cid, self.state.value, self.state.value,
+                                  "PRODUCTION_DISPATCH_ACCEPTED", "system",
+                                  extra={"job_id": job["job_id"]})
+                return
+            except DispatchTransient as e:
+                self.jobs.update(job["job_id"], status=JOB_DISPATCH_RETRY, error=str(e))
+                time.sleep(0.05 * (2 ** i))
+            except DispatchAuthError as e:
+                self.jobs.update(job["job_id"], status=JOB_HOLD, error=str(e))
+                self.audit.record(self.cid, self.state.value, self.state.value,
+                                  "PRODUCTION_DISPATCH_FAILED", "system", error=str(e))
+                self.hold(f"dispatch auth failure: {e}")
+                return
+        self.jobs.update(job["job_id"], status=JOB_DISPATCH_RETRY,
+                         error="dispatch transient failure exhausted")
+        self.audit.record(self.cid, self.state.value, self.state.value,
+                          "PRODUCTION_DISPATCH_FAILED", "system", error="transient exhausted")
+        self.hold("dispatch failed after retries")
 
     def gate_ok(self, gate, current_sha):
         return self.approvals.is_approved(self.cid, gate, current_sha)

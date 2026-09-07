@@ -11,10 +11,12 @@ from unpipe.orchestrator import Campaign
 from unpipe.states import State
 from unpipe.approvals import GATE_CREATIVE
 from unpipe import mediaqc, executor
+from unpipe.dispatcher import FakeDispatcher
 from unpipe.util import sha256_file, now_iso
 
+import tempfile
 MANI = HERE / "campaigns" / "cover-2-dryrun" / "campaign.json"
-WORK = HERE / "campaigns" / "cover-2-dryrun" / "state"
+WORK = Path(tempfile.mkdtemp(prefix="cover2_dryrun_")) / "state"   # fresh, ephemeral each run
 FROZEN = HERE / "campaigns" / "cover-2-dryrun" / "frozen_dryrun.json"
 
 
@@ -23,17 +25,21 @@ def main():
     def log(x): lines.append(x); print(x)
     log(f"# Cover #2 dry-run — {now_iso()}")
 
-    c = Campaign(WORK, MANI, runner_path="/x")
+    disp = FakeDispatcher()   # stands in for the GitHub repository_dispatch call
+    c = Campaign(WORK, MANI, runner_path="/x", dispatcher=disp)
     # source registration
     c.register("source_master", MANI, "source_ref")   # ref only (binary on Drive)
     log("source registered")
 
-    # creative approval -> auto-queues production job (zero-terminal trigger)
+    # creative approval -> auto-queues production job AND auto-dispatches the workflow (V1.1.1)
     sha = sha256_file(FROZEN)
     c.approve(GATE_CREATIVE, "frozen_master", sha, by="Nitin", notes="dry-run creative approve")
     jobs = c.jobs.all()
-    log(f"after creative approve: jobs queued = {len(jobs)} (frozen SHA {sha[:12]}…)")
+    log(f"after creative approve: jobs queued = {len(jobs)} · dispatch calls = {disp.calls} "
+        f"(frozen SHA {sha[:12]}…)")
     assert len(jobs) == 1, "creative approval must auto-queue exactly one job"
+    assert disp.calls == ["cover-2-dryrun"], "creative approval must auto-dispatch exactly once"
+    log("=> APPROVE auto-dispatched the render workflow (no GitHub UI, no terminal)")
 
     # move to FROZEN_JSON_READY (system) and run the executor with a FAKE production backend
     c._status["current_state"] = State.FROZEN_JSON_READY.value; c._save_status()
@@ -65,6 +71,8 @@ def main():
           and be._submits == subs and not c._status["publish_approval"])
     log("")
     log("Zero-terminal checks (simulated executor path):")
+    log("  Nitin action = CREATIVE APPROVE only")
+    log("  GitHub Actions UI / Run-workflow / campaign_id entry by Nitin = NONE (auto-dispatched)")
     log("  terminal / curl / key-copy / polling / download / ffprobe by Nitin = NONE")
     log(f"  publish performed = NO · publish_approval = {c._status['publish_approval']}")
     log(f"COVER2_DRYRUN = {'PASS' if ok else 'FAIL'}")

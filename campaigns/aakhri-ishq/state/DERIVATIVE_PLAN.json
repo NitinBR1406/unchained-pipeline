@@ -10,7 +10,7 @@
     "tiktok",
     "facebook_reels"
   ],
-  "generated_at": "2026-09-07T15:43:05.267495Z",
+  "generated_at": "2026-09-07T17:35:17.438786Z",
   "status": "ADAPTER_READY",
   "note": "ffmpeg cut adapter; enable connected=True + ffmpeg for real cuts"
 }

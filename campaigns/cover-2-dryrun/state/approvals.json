@@ -10,6 +10,28 @@
       "artifact_sha256": "34fd2407426a52f1cdf98e2c1f24628f08dbc594ef3b7e13bc3837e860ca9b5c",
       "notes": "dry-run creative approve",
       "version": "1"
+    },
+    {
+      "campaign_id": "cover-2-dryrun",
+      "asset_id": "frozen_master",
+      "gate": "NITIN_CREATIVE_APPROVAL",
+      "decision": "APPROVE",
+      "approved_by": "Nitin",
+      "timestamp": "2026-09-07T17:35:17.491558Z",
+      "artifact_sha256": "34fd2407426a52f1cdf98e2c1f24628f08dbc594ef3b7e13bc3837e860ca9b5c",
+      "notes": "dry-run creative approve",
+      "version": "1"
+    },
+    {
+      "campaign_id": "cover-2-dryrun",
+      "asset_id": "frozen_master",
+      "gate": "NITIN_CREATIVE_APPROVAL",
+      "decision": "APPROVE",
+      "approved_by": "Nitin",
+      "timestamp": "2026-09-07T17:36:04.666312Z",
+      "artifact_sha256": "34fd2407426a52f1cdf98e2c1f24628f08dbc594ef3b7e13bc3837e860ca9b5c",
+      "notes": "dry-run creative approve",
+      "version": "1"
     }
   ]
 }

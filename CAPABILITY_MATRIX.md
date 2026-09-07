@@ -20,6 +20,11 @@ Classification legend:
 | ZERO-TERMINAL TRIGGER (V1.1) | IMPL, requires deployment | creative approval auto-queues job; GH Actions workflow runs executor with encrypted secret. |
 | IDEMPOTENCY (renders) (V1.1) | IMPL+TESTED | job idempotency key (campaign+frozenSHA+profile); no duplicate paid renders; DONE job not re-run. |
 | AUTO RETRY (V1.1) | IMPL+TESTED | bounded backoff on transient (429/5xx/timeout); material errors → HOLD. |
+| APPROVAL AUTO-DISPATCH (V1.1.1) | IMPL+TESTED | creative APPROVE fires repository_dispatch; REJECT never does; SHA-bound; idempotent; auth-fail→HOLD; transient→retry→HOLD. Tested with mock (no network/paid render). |
+| DISPATCH TOKEN (V1.1.1) | needs 1-time deploy | least-privilege fine-grained PAT (Actions:write, single repo) as GITHUB_DISPATCH_TOKEN, server-side. |
+| ONE-TAP MOBILE APPROVAL (V1.1.2) | IMPL+TESTED / needs 1-time host | signed-link approval service: mobile APPROVE/REJECT → authoritative SHA-bound record → auto-dispatch. Reusable for all 3 gates. Server-side secrets, single-use links, idempotent, authorized. Tested with mock (12 tests). Needs the tiny service hosted once. |
+| APPROVAL SERVICE HARDENING (V1.1.3) | IMPL+TESTED (real HTTP) | health endpoint, request-size cap, per-IP rate limit, security headers, secret-safe logging, disk-persisted single-use nonce (survives restart), dry-dispatch smoke mode. 11/11 live HTTP smoke over a running server. |
+| PUBLIC HTTPS DEPLOY (V1.1.3) | REQUIRES 1-TIME HOST (your account) | Dockerfile + render.yaml blueprint ready; needs your Render/Fly/Railway login to get a public phone URL. Cannot be created from the build env. |
 | PRODUCTION SECRET MGMT | IMPL+TESTED | env-var only; never printed/stored; missing-secret → safe HOLD. |
 | AUTO POLLING | IMPL | in shotstack_production_render.sh (poll until done/failed/timeout). |
 | AUTO DOWNLOAD | IMPL | runner downloads MP4 to production-renders/<id>/. |

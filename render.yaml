@@ -1,0 +1,28 @@
+# Render.com blueprint for the one-tap approval service (public HTTPS, TLS auto).
+# Deploy: push repo -> Render -> New -> Blueprint -> pick this repo. Set the two secrets in the
+# dashboard (sync:false means Render prompts you; values never live in git).
+services:
+  - type: web
+    name: unchained-approval
+    env: docker
+    plan: starter            # small always-on; avoids free-tier cold-sleep for reliable taps
+    healthCheckPath: /healthz
+    autoDeploy: true
+    disk:
+      name: approval-state   # persistent -> single-use nonce store survives restarts/redeploys
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: APPROVAL_SIGNING_SECRET
+        sync: false          # enter once in dashboard
+      - key: GITHUB_DISPATCH_TOKEN
+        sync: false          # least-privilege fine-grained PAT (Actions:write on this repo only)
+      - key: APPROVERS
+        value: nitin
+      - key: GH_OWNER
+        value: NitinBR1406
+      - key: GH_REPO
+        value: unchained-pipeline
+      - key: CONSUMED_STORE
+        value: /data/_approvals_consumed.json
+      # PIPELINE_DISPATCH_DRY is intentionally UNSET in production (real GitHub dispatch).

@@ -65,6 +65,28 @@
       "artifact_sha256": "AKI_PRODUCTION_MASTER_V01_SHA_PENDING_LOCAL_RENDER",
       "notes": "NITIN_FINAL_VIDEO_APPROVAL = TRUE (authoritative)",
       "version": "1"
+    },
+    {
+      "campaign_id": "aakhri-ishq",
+      "asset_id": "frozen_master_v01",
+      "gate": "NITIN_CREATIVE_APPROVAL",
+      "decision": "APPROVE",
+      "approved_by": "Nitin",
+      "timestamp": "2026-09-07T17:35:17.432977Z",
+      "artifact_sha256": "f50bedec74c20c1b691575e71272623313dda1cc4e6c984f1a670085c03cecda",
+      "notes": "Gemini 96.8/100; MUST_FIX=0; reconstruction",
+      "version": "1"
+    },
+    {
+      "campaign_id": "aakhri-ishq",
+      "asset_id": "production_master_v01",
+      "gate": "NITIN_FINAL_VIDEO_APPROVAL",
+      "decision": "APPROVE",
+      "approved_by": "Nitin",
+      "timestamp": "2026-09-07T17:35:17.436360Z",
+      "artifact_sha256": "AKI_PRODUCTION_MASTER_V01_SHA_PENDING_LOCAL_RENDER",
+      "notes": "NITIN_FINAL_VIDEO_APPROVAL = TRUE (authoritative)",
+      "version": "1"
     }
   ]
 }

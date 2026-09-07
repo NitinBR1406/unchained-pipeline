@@ -1,6 +1,6 @@
 {
   "campaign_id": "cover-2-dryrun",
-  "current_state": "AWAITING_FINAL_VIDEO_APPROVAL",
+  "current_state": "FROZEN_JSON_READY",
   "last_successful_state": "AWAITING_FINAL_VIDEO_APPROVAL",
   "blocking_issue": null,
   "creative_approval": true,
@@ -13,5 +13,5 @@
   "packaging_status": "NONE",
   "publication_status": "NONE",
   "analytics_status": "NONE",
-  "updated_at": "2026-09-07T15:42:53.401202Z"
+  "updated_at": "2026-09-07T17:36:04.675407Z"
 }

@@ -6,7 +6,7 @@
     "sha256": "2cdae875e9dbdc24f37e0a0be2aabca0be1884f434665cf4e4c2467b4073a524",
     "exists": true,
     "size": 627,
-    "registered_at": "2026-09-07T15:42:53.387421Z",
+    "registered_at": "2026-09-07T17:36:04.663933Z",
     "meta": {}
   },
   "frozen_master": {
@@ -16,7 +16,7 @@
     "sha256": "34fd2407426a52f1cdf98e2c1f24628f08dbc594ef3b7e13bc3837e860ca9b5c",
     "exists": true,
     "size": 110,
-    "registered_at": "2026-09-07T15:42:53.390292Z",
+    "registered_at": "2026-09-07T17:36:04.672272Z",
     "meta": {}
   },
   "production_master": {
