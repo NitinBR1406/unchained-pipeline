@@ -1,0 +1,17 @@
+{
+  "campaign_id": "cover-2-dryrun",
+  "current_state": "AWAITING_FINAL_VIDEO_APPROVAL",
+  "last_successful_state": "AWAITING_FINAL_VIDEO_APPROVAL",
+  "blocking_issue": null,
+  "creative_approval": true,
+  "video_approval": false,
+  "publish_approval": false,
+  "source_asset": "COVER2_SOURCE.mp4",
+  "preview_asset": null,
+  "production_master": "COVER2_PRESENTATION_MASTER_V01.mp4",
+  "derivative_count": 0,
+  "packaging_status": "NONE",
+  "publication_status": "NONE",
+  "analytics_status": "NONE",
+  "updated_at": "2026-09-07T15:42:53.401202Z"
+}

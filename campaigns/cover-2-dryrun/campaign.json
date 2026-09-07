@@ -1,0 +1,19 @@
+{
+  "campaign_id": "cover-2-dryrun",
+  "artist": "UNCHAINED NITIN",
+  "song_title": "Cover 2 (dry-run)",
+  "release_type": "cover",
+  "source_master": "COVER2_SOURCE.mp4",
+  "duration": 208.625,
+  "aspect_ratio": "9:16",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "presentation_preset": "MOTION_A_PREMIUM_RESTRAINED",
+  "brand_profile": "UNCHAINED_NITIN_BRAND_PROFILE_V1",
+  "frozen_master": "frozen_dryrun.json",
+  "production_master_name": "COVER2_PRESENTATION_MASTER_V01.mp4",
+  "platform_targets": ["youtube_hero", "instagram_reels", "tiktok"],
+  "rights": {"status": "RIGHTS_HOLD"},
+  "release_status": "DRY_RUN"
+}

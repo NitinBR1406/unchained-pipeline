@@ -1,0 +1,23 @@
+{
+  "jobs": [
+    {
+      "job_id": "job-1-34fd2407",
+      "campaign_id": "cover-2-dryrun",
+      "frozen_json_artifact_id": "frozen_master",
+      "frozen_json_sha256": "34fd2407426a52f1cdf98e2c1f24628f08dbc594ef3b7e13bc3837e860ca9b5c",
+      "production_profile": "MASTER_V1",
+      "idempotency_key": "cover-2-dryrun|34fd2407426a52f1cdf98e2c1f24628f08dbc594ef3b7e13bc3837e860ca9b5c|MASTER_V1",
+      "requested_at": "2026-09-07T15:42:53.390727Z",
+      "authorized_by_gate": "NITIN_CREATIVE_APPROVAL",
+      "status": "DONE",
+      "attempt": 1,
+      "shotstack_render_id": "fake-render-123",
+      "output_artifact_id": "production_master",
+      "output_sha256": "66ca2ef29740cb168fd1adc103b982f66948f5e3a6fef5c8f2bbe2fe593cbc9c",
+      "tech_qc_status": "PASS",
+      "created_at": "2026-09-07T15:42:53.390730Z",
+      "updated_at": "2026-09-07T15:42:53.402026Z",
+      "error": null
+    }
+  ]
+}

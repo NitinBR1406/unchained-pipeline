@@ -1,0 +1,23 @@
+{
+  "jobs": [
+    {
+      "job_id": "job-1-f50bedec",
+      "campaign_id": "aakhri-ishq",
+      "frozen_json_artifact_id": "frozen_master",
+      "frozen_json_sha256": "f50bedec74c20c1b691575e71272623313dda1cc4e6c984f1a670085c03cecda",
+      "production_profile": "MASTER_V1",
+      "idempotency_key": "aakhri-ishq|f50bedec74c20c1b691575e71272623313dda1cc4e6c984f1a670085c03cecda|MASTER_V1",
+      "requested_at": "2026-09-07T15:43:05.264489Z",
+      "authorized_by_gate": "NITIN_CREATIVE_APPROVAL",
+      "status": "QUEUED",
+      "attempt": 0,
+      "shotstack_render_id": null,
+      "output_artifact_id": null,
+      "output_sha256": null,
+      "tech_qc_status": null,
+      "created_at": "2026-09-07T15:43:05.264493Z",
+      "updated_at": "2026-09-07T15:43:05.264494Z",
+      "error": null
+    }
+  ]
+}

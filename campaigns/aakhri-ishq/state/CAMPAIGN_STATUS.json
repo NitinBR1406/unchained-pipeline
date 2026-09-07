@@ -1,0 +1,17 @@
+{
+  "campaign_id": "aakhri-ishq",
+  "current_state": "AWAITING_PUBLISH_APPROVAL",
+  "last_successful_state": "AWAITING_PUBLISH_APPROVAL",
+  "blocking_issue": null,
+  "creative_approval": true,
+  "video_approval": true,
+  "publish_approval": false,
+  "source_asset": "AKI_VISUAL_LOCK_AUDIO_MASTER_V01.mp4",
+  "preview_asset": null,
+  "production_master": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+  "derivative_count": 7,
+  "packaging_status": "READY",
+  "publication_status": "NONE",
+  "analytics_status": "NONE",
+  "updated_at": "2026-09-07T15:43:05.271621Z"
+}

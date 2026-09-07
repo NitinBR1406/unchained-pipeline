@@ -1,0 +1,16 @@
+{
+  "campaign_id": "aakhri-ishq",
+  "master": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+  "targets": [
+    "youtube_hero",
+    "youtube_shorts",
+    "instagram_reels",
+    "instagram_feed",
+    "instagram_stories",
+    "tiktok",
+    "facebook_reels"
+  ],
+  "generated_at": "2026-09-07T15:43:05.267495Z",
+  "status": "ADAPTER_READY",
+  "note": "ffmpeg cut adapter; enable connected=True + ffmpeg for real cuts"
+}

@@ -1,0 +1,65 @@
+name: production-render
+
+# Zero-terminal production execution. Triggered by the creative-approval step
+# (repository_dispatch: production-render) or manually from the GitHub UI (workflow_dispatch).
+# The Shotstack production key is an encrypted repo/environment secret entered ONCE.
+
+on:
+  workflow_dispatch:
+    inputs:
+      campaign_id:
+        description: "Campaign id (folder under campaigns/)"
+        required: true
+        default: "aakhri-ishq"
+  repository_dispatch:
+    types: [production-render]
+
+permissions:
+  contents: write   # to commit updated campaign state/reports back
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Resolve campaign id
+        id: cid
+        run: |
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "id=${{ github.event.client_payload.campaign_id }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "id=${{ github.event.inputs.campaign_id }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run autonomous production executor
+        env:
+          SHOTSTACK_PRODUCTION_API_KEY: ${{ secrets.SHOTSTACK_PRODUCTION_API_KEY }}
+        run: |
+          CID="${{ steps.cid.outputs.id }}"
+          python3 prod_executor_entry.py \
+            --manifest "campaigns/${CID}/campaign.json" \
+            --workdir  "campaigns/${CID}/state"
+
+      - name: Upload render artifacts (master, reports, job/state)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-${{ steps.cid.outputs.id }}
+          path: |
+            campaigns/${{ steps.cid.outputs.id }}/state/*.mp4
+            campaigns/${{ steps.cid.outputs.id }}/state/*.json
+            campaigns/${{ steps.cid.outputs.id }}/state/*.jsonl
+
+      - name: Commit updated state
+        if: always()
+        run: |
+          git config user.name "unchained-pipeline-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add campaigns/ || true
+          git commit -m "production render state update [skip ci]" || echo "no changes"
+          git push || echo "push skipped"

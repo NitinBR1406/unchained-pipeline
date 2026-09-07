@@ -1,0 +1,22 @@
+{
+  "frozen_master_v01": {
+    "artifact_id": "frozen_master_v01",
+    "path": "/sessions/dreamy-determined-ritchie/mnt/outputs/AKI_SHOTSTACK_FULL_MASTER_V01_FROZEN_EDIT.json",
+    "kind": "frozen_edit_json",
+    "sha256": "f50bedec74c20c1b691575e71272623313dda1cc4e6c984f1a670085c03cecda",
+    "exists": true,
+    "size": 31175,
+    "registered_at": "2026-09-07T15:43:05.261520Z",
+    "meta": {}
+  },
+  "frozen_master": {
+    "artifact_id": "frozen_master",
+    "path": "/sessions/dreamy-determined-ritchie/mnt/outputs/AKI_SHOTSTACK_FULL_MASTER_V01_FROZEN_EDIT.json",
+    "kind": "frozen_edit_json",
+    "sha256": "f50bedec74c20c1b691575e71272623313dda1cc4e6c984f1a670085c03cecda",
+    "exists": true,
+    "size": 31175,
+    "registered_at": "2026-09-07T15:43:05.264080Z",
+    "meta": {}
+  }
+}

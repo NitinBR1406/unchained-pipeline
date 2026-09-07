@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-09-07T15:42:53.399709Z",
+  "file": "/sessions/dreamy-determined-ritchie/mnt/outputs/unchained_pipeline/campaigns/cover-2-dryrun/state/COVER2_PRESENTATION_MASTER_V01.mp4",
+  "tool_available": true,
+  "probe": {
+    "container": "mp4",
+    "duration": 208.625,
+    "width": 1080,
+    "height": 1920,
+    "frame_rate": "24/1",
+    "fps": 24.0,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_sample_rate": null,
+    "audio_channels": null,
+    "audio_duration": "208.6",
+    "video_present": true,
+    "audio_present": true
+  },
+  "issues": [],
+  "qc_pass": true
+}

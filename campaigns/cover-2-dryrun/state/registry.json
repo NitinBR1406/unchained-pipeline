@@ -1,0 +1,35 @@
+{
+  "source_master": {
+    "artifact_id": "source_master",
+    "path": "/sessions/dreamy-determined-ritchie/mnt/outputs/unchained_pipeline/campaigns/cover-2-dryrun/campaign.json",
+    "kind": "source_ref",
+    "sha256": "2cdae875e9dbdc24f37e0a0be2aabca0be1884f434665cf4e4c2467b4073a524",
+    "exists": true,
+    "size": 627,
+    "registered_at": "2026-09-07T15:42:53.387421Z",
+    "meta": {}
+  },
+  "frozen_master": {
+    "artifact_id": "frozen_master",
+    "path": "/sessions/dreamy-determined-ritchie/mnt/outputs/unchained_pipeline/campaigns/cover-2-dryrun/frozen_dryrun.json",
+    "kind": "frozen_edit_json",
+    "sha256": "34fd2407426a52f1cdf98e2c1f24628f08dbc594ef3b7e13bc3837e860ca9b5c",
+    "exists": true,
+    "size": 110,
+    "registered_at": "2026-09-07T15:42:53.390292Z",
+    "meta": {}
+  },
+  "production_master": {
+    "artifact_id": "production_master",
+    "path": "/sessions/dreamy-determined-ritchie/mnt/outputs/unchained_pipeline/campaigns/cover-2-dryrun/state/COVER2_PRESENTATION_MASTER_V01.mp4",
+    "kind": "production_mp4",
+    "sha256": "66ca2ef29740cb168fd1adc103b982f66948f5e3a6fef5c8f2bbe2fe593cbc9c",
+    "exists": true,
+    "size": 700,
+    "registered_at": "2026-09-07T15:42:53.396851Z",
+    "meta": {
+      "render_id": "fake-render-123",
+      "job_id": "job-1-34fd2407"
+    }
+  }
+}

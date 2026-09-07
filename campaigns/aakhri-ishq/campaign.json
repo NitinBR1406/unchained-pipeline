@@ -1,0 +1,31 @@
+{
+  "campaign_id": "aakhri-ishq",
+  "artist": "UNCHAINED NITIN",
+  "song_title": "Aakhri Ishq",
+  "release_type": "cover",
+  "source_master": "AKI_VISUAL_LOCK_AUDIO_MASTER_V01.mp4",
+  "duration": 208.625,
+  "aspect_ratio": "9:16",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "presentation_preset": "MOTION_A_PREMIUM_RESTRAINED",
+  "brand_profile": "UNCHAINED_NITIN_BRAND_PROFILE_V1",
+  "frozen_master": "../../../AKI_SHOTSTACK_FULL_MASTER_V01_FROZEN_EDIT.json",
+  "production_master_name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+  "lyric_master": "AAKHRI_ISHQ_VERIFIED_LYRIC_MASTER_V1.0",
+  "caption_schedule": "aki_brand_master_v01_1.json",
+  "motion_cues": "AKI_SMART_CUES_V03.json",
+  "intro_enabled": true,
+  "outro_enabled": true,
+  "platform_targets": ["youtube_hero", "youtube_shorts", "instagram_reels",
+                        "instagram_feed", "instagram_stories", "tiktok", "facebook_reels"],
+  "rights": {
+    "status": "RIGHTS_HOLD",
+    "composition_publisher": "UNKNOWN",
+    "backing_master_origin": "UNKNOWN",
+    "content_id_expectation": "UNKNOWN",
+    "note": "Cover rights review not completed; publish must not proceed until RIGHTS_PASS."
+  },
+  "release_status": "IN_PRODUCTION"
+}
