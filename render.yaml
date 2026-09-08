@@ -2,9 +2,13 @@ services:
   - type: web
     name: unchained-approval
     env: docker
-    plan: free
+    plan: starter
     healthCheckPath: /healthz
     autoDeploy: true
+    disk:
+      name: approval-state
+      mountPath: /data
+      sizeGB: 1
     envVars:
       - key: APPROVAL_SIGNING_SECRET
         sync: false
@@ -17,4 +21,4 @@ services:
       - key: GH_REPO
         value: unchained-pipeline
       - key: CONSUMED_STORE
-        value: /tmp/_approvals_consumed.json
+        value: /data/_approvals_consumed.json
