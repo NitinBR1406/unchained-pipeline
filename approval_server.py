@@ -31,6 +31,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from unpipe.orchestrator import Campaign
 from unpipe.dispatcher import GitHubDispatcher, DryDispatcher
 from unpipe.approval_service import ApprovalService, ApprovalError
+from unpipe.visualizer_approval import VisualizerApprovalService, VisualizerApprovalError
 
 CAMPAIGNS_ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("campaigns")
 OWNER = os.environ.get("GH_OWNER", "NitinBR1406")
@@ -52,6 +53,7 @@ def campaign_factory(cid):
 
 
 SVC = None
+VSVC = None   # visualizer approval verifier (reuses APPROVAL_SIGNING_SECRET)
 
 
 def build_service():
@@ -61,6 +63,37 @@ def build_service():
         approvers=[a.strip() for a in os.environ.get("APPROVERS", "nitin").split(",")],
         consumed_path=os.environ.get("CONSUMED_STORE", str(CAMPAIGNS_ROOT / "_approvals_consumed.json")),
     )
+
+
+def build_visualizer_service():
+    # Reuses the SAME APPROVAL_SIGNING_SECRET. On APPROVE it calls the NEW Make webhook with
+    # x-make-apikey. It sets NO publish state; Make records only VISUALIZER_APPROVED.
+    return VisualizerApprovalService(
+        signing_secret=os.environ.get("APPROVAL_SIGNING_SECRET", ""),
+        approvers=[a.strip() for a in os.environ.get("APPROVERS", "nitin").split(",")],
+        consumed_path=os.environ.get("VISUALIZER_CONSUMED_STORE",
+                                     str(CAMPAIGNS_ROOT / "_visualizer_approvals_consumed.json")),
+        make_webhook_url=os.environ.get("MAKE_APPROVE_WEBHOOK", ""),
+        make_apikey=os.environ.get("MAKE_APPROVE_APIKEY", ""),
+    )
+
+
+VPAGE = """<!doctype html><html><head><meta name=viewport content="width=device-width,initial-scale=1">
+<title>Visualizer Approval</title><style>body{{font-family:-apple-system,system-ui,sans-serif;
+background:#0d0d0d;color:#F0EAD6;margin:0;padding:24px}}.card{{max-width:420px;margin:8vh auto;
+background:#151515;border:1px solid #2a2a2a;border-radius:16px;padding:24px}}h1{{color:#D4AF37;
+font-size:20px;margin:0 0 4px}}.k{{color:#8a8a8a;font-size:13px;margin-top:14px}}.v{{font-size:17px}}
+form{{display:flex;gap:12px;margin-top:28px}}button{{flex:1;padding:16px;border:0;border-radius:12px;
+font-size:17px;font-weight:600}}.ok{{background:#1f6f43;color:#fff}}.no{{background:#6f1f1f;color:#fff}}
+</style></head><body><div class=card><h1>Visualizer approval</h1><div class=v>{title}</div>
+<div class=k>Content</div><div class=v>{content_id}</div>
+<div class=k>Status</div><div class=v>{status}</div>
+<div class=k>Note</div><div class=v>Approving marks the visualizers VISUALIZER_APPROVED only. Publishing still
+requires a separate Publish Approval Token.</div>
+<form method=POST action="/v/decision">
+<input type=hidden name=token value="{token}"><input type=hidden name=approver value="{approver}">
+<button class=ok name=decision value=APPROVE>APPROVE</button>
+<button class=no name=decision value=REJECT>REJECT</button></form></div></body></html>"""
 
 
 PAGE = """<!doctype html><html><head><meta name=viewport content="width=device-width,initial-scale=1">
@@ -118,6 +151,12 @@ class Handler(BaseHTTPRequestHandler):
         q = parse_qs(urlparse(self.path).query)
         token = (q.get("token") or [""])[0]
         approver = (q.get("approver") or ["nitin"])[0]
+        if path == "/v/approve":                       # visualizer approval confirm page
+            try:
+                d = VSVC.render_request(token)
+                return self._send(200, VPAGE.format(token=token, approver=approver, **d))
+            except VisualizerApprovalError as e:
+                return self._send(400, f"<p>Invalid or expired link: {e}</p>")
         try:
             d = SVC.render_request(token)
             self._send(200, PAGE.format(token=token, approver=approver, **d))
@@ -133,11 +172,22 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(400, "<p>Bad request.</p>")
         if n <= 0 or n > MAX_BODY:
             return self._send(413, "<p>Request too large.</p>")
+        path = urlparse(self.path).path
         form = parse_qs(self.rfile.read(n).decode(errors="ignore"))
         token = (form.get("token") or [""])[0]
         decision = (form.get("decision") or [""])[0]
         approver = (form.get("approver") or [""])[0]
         reason = (form.get("reason") or [""])[0]
+        if path == "/v/decision":                      # visualizer approval decision
+            try:
+                res = VSVC.decide(token, decision, approver)
+                msg = ("Visualizer approved — recorded as VISUALIZER_APPROVED. Publishing still requires a "
+                       "separate Publish Approval Token." if res.get("status") == "VISUALIZER_APPROVED"
+                       else f"Recorded: {res.get('status')}.")
+                return self._send(200, f"<div style='font-family:system-ui;color:#F0EAD6;background:#0d0d0d;"
+                                       f"padding:40px'><h2 style='color:#D4AF37'>{msg}</h2></div>")
+            except VisualizerApprovalError as e:
+                return self._send(400, f"<p>{e}</p>")
         try:
             res = SVC.decide(token, decision, approver, reason)
             msg = ("Approved — production is starting. You'll be notified when the master is ready."
@@ -158,6 +208,7 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     SVC = build_service()   # requires APPROVAL_SIGNING_SECRET
+    VSVC = build_visualizer_service()   # reuses APPROVAL_SIGNING_SECRET; needs MAKE_APPROVE_WEBHOOK + MAKE_APPROVE_APIKEY for live forward
     host = sys.argv[2] if len(sys.argv) > 2 else "0.0.0.0"
     port = int(sys.argv[3]) if len(sys.argv) > 3 else int(os.environ.get("PORT", "8787"))
     ThreadingHTTPServer((host, port), Handler).serve_forever()
