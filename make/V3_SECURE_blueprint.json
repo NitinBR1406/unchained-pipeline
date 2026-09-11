@@ -1,0 +1,35 @@
+{
+  "name": "V3-SECURE: Visualizer Approve -> VISUALIZER_APPROVED only",
+  "flow": [
+    {"id":1,"module":"gateway:CustomWebHook","version":1,"parameters":{"hook":4368839,"maxResults":1},"mapper":{}},
+    {"id":2,"module":"util:SetVariables","version":1,"mapper":{"scope":"roundtrip","variables":[
+      {"name":"ts_num","value":"{{parseNumber(1.ts)}}"},
+      {"name":"age","value":"{{parseNumber(formatDate(now; \"X\")) - parseNumber(1.ts)}}"},
+      {"name":"future","value":"{{parseNumber(1.ts) - parseNumber(formatDate(now; \"X\"))}}"}
+    ]}},
+    {"id":3,"module":"builtin:BasicRouter","version":1,"mapper":{},"routes":[
+      {"flow":[{"id":30,"module":"gateway:WebhookRespond","version":1,"mapper":{"status":400,"body":"missing/malformed timestamp"},"filter":{"name":"malformed ts","conditions":[[{"a":"{{ifempty(1.ts; \"\")}}","o":"text:equal","b":""}],[{"a":"{{2.ts_num}}","o":"number:lessorequal","b":"0"}]]}}]},
+      {"flow":[{"id":31,"module":"gateway:WebhookRespond","version":1,"mapper":{"status":403,"body":"timestamp in future"},"filter":{"name":"future ts","conditions":[[{"a":"{{2.ts_num}}","o":"number:greater","b":"0"},{"a":"{{2.future}}","o":"number:greater","b":"30"}]]}}]},
+      {"flow":[{"id":32,"module":"gateway:WebhookRespond","version":1,"mapper":{"status":410,"body":"approval request expired"},"filter":{"name":"stale ts","conditions":[[{"a":"{{2.ts_num}}","o":"number:greater","b":"0"},{"a":"{{2.future}}","o":"number:lessorequal","b":"30"},{"a":"{{2.age}}","o":"number:greater","b":"300"}]]}}]},
+      {"flow":[
+        {"id":4,"module":"datastore:ExistRecord","version":1,"parameters":{"datastore":185338},"mapper":{"key":"{{sha256(1.nonce)}}"},"filter":{"name":"fresh","conditions":[[{"a":"{{2.ts_num}}","o":"number:greater","b":"0"},{"a":"{{2.future}}","o":"number:lessorequal","b":"30"},{"a":"{{2.age}}","o":"number:lessorequal","b":"300"}]]}},
+        {"id":5,"module":"builtin:BasicRouter","version":1,"mapper":{},"routes":[
+          {"flow":[{"id":40,"module":"gateway:WebhookRespond","version":1,"mapper":{"status":400,"body":"missing/malformed nonce"},"filter":{"name":"malformed nonce","conditions":[[{"a":"{{ifempty(1.nonce; \"\")}}","o":"text:equal","b":""}]]}}]},
+          {"flow":[{"id":41,"module":"gateway:WebhookRespond","version":1,"mapper":{"status":409,"body":"nonce already consumed (replay)"},"filter":{"name":"replay","conditions":[[{"a":"{{ifempty(1.nonce; \"\")}}","o":"text:notequal","b":""},{"a":"{{if(4.exist; \"Y\"; \"N\")}}","o":"text:equal","b":"Y"}]]}}]},
+          {"flow":[
+            {"id":6,"module":"datastore:AddRecord","version":1,"parameters":{"datastore":185338},"mapper":{"key":"{{sha256(1.nonce)}}","overwrite":true,"data":{"nonce_hash":"{{sha256(1.nonce)}}","content_id":"{{1.content_id}}","consumed_at":"{{now}}","ts":"{{1.ts}}"}},"filter":{"name":"new nonce","conditions":[[{"a":"{{ifempty(1.nonce; \"\")}}","o":"text:notequal","b":""},{"a":"{{if(4.exist; \"Y\"; \"N\")}}","o":"text:equal","b":"N"}]]}},
+            {"id":7,"module":"datastore:ExistRecord","version":1,"parameters":{"datastore":171448},"mapper":{"key":"{{1.content_id}}"}},
+            {"id":8,"module":"builtin:BasicRouter","version":1,"mapper":{},"routes":[
+              {"flow":[{"id":50,"module":"gateway:WebhookRespond","version":1,"mapper":{"status":404,"body":"unknown content_id"},"filter":{"name":"unknown","conditions":[[{"a":"{{if(7.exist; \"Y\"; \"N\")}}","o":"text:equal","b":"N"}]]}}]},
+              {"flow":[
+                {"id":9,"module":"datastore:UpdateRecord","version":1,"parameters":{"datastore":171448},"mapper":{"key":"{{1.content_id}}","data":{"status":"VISUALIZER_APPROVED"}},"filter":{"name":"known","conditions":[[{"a":"{{if(7.exist; \"Y\"; \"N\")}}","o":"text:equal","b":"Y"}]]}},
+                {"id":10,"module":"gateway:WebhookRespond","version":1,"mapper":{"status":200,"body":"VISUALIZER_APPROVED"}}
+              ]}
+            ]}
+          ]}
+        ]}
+      ]}
+    ]}
+  ],
+  "metadata":{"instant":true,"version":1,"scenario":{"roundtrips":1,"maxErrors":3,"autoCommit":true,"sequential":true,"confidential":false,"dlq":false,"dataloss":false},"designer":{"orphans":[]}}
+}

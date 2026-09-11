@@ -48,6 +48,9 @@ class T(unittest.TestCase):
         self.assertEqual(len(p.calls), 1)
         self.assertEqual(p.calls[0]["apikey"], "APIKEY_TEST")            # apikey carried
         self.assertEqual(p.calls[0]["payload"]["content_id"], "hua-main")
+        self.assertIn("ts", p.calls[0]["payload"])                      # server forwards ts
+        self.assertIsInstance(p.calls[0]["payload"]["ts"], int)        # server-verified epoch seconds
+        self.assertTrue(p.calls[0]["payload"]["nonce"])                 # server forwards the HMAC-verified nonce
         self.assertFalse(r["creates_publish_approval"])                  # no publish approval
         self.assertFalse(r["sets_scheduled"])                           # never Scheduled
 

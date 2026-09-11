@@ -22,3 +22,9 @@ services:
         value: unchained-pipeline
       - key: CONSUMED_STORE
         value: /data/_approvals_consumed.json
+      - key: VISUALIZER_CONSUMED_STORE
+        value: /data/_visualizer_approvals_consumed.json   # persistent disk -> nonce store survives restarts
+      - key: MAKE_APPROVE_WEBHOOK
+        sync: false          # new V3-SECURE hook URL (enter in dashboard; never in git)
+      - key: MAKE_APPROVE_APIKEY
+        sync: false          # x-make-apikey value (must match the Make hook's api key)
