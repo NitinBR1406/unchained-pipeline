@@ -181,13 +181,20 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/v/decision":                      # visualizer approval decision
             try:
                 res = VSVC.decide(token, decision, approver)
-                msg = ("Visualizer approved — recorded as VISUALIZER_APPROVED. Publishing still requires a "
-                       "separate Publish Approval Token." if res.get("status") == "VISUALIZER_APPROVED"
-                       else f"Recorded: {res.get('status')}.")
-                return self._send(200, f"<div style='font-family:system-ui;color:#F0EAD6;background:#0d0d0d;"
-                                       f"padding:40px'><h2 style='color:#D4AF37'>{msg}</h2></div>")
             except VisualizerApprovalError as e:
-                return self._send(400, f"<p>{e}</p>")
+                # Make unreachable / 5xx / other -> explicit, retry-safe failure (nonce NOT consumed).
+                # Validation errors (bad token/signature/expiry/approver) -> 400.
+                m = str(e)
+                if m.startswith("make unreachable") or m.startswith("make webhook rejected"):
+                    return self._send(503, "<div style='font-family:system-ui;color:#F0EAD6;"
+                                           "background:#0d0d0d;padding:40px'><h2 style='color:#D4AF37'>"
+                                           "Approval not confirmed</h2><p>Downstream not confirmed. It is safe "
+                                           "to open the link and press APPROVE again.</p></div>")
+                return self._send(400, f"<p>{m}</p>")
+            # Success (2xx or confirmed idempotent 409 replay) -> deterministic page, exception-free.
+            return self._send(200, "<div style='font-family:system-ui;color:#F0EAD6;background:#0d0d0d;"
+                                   "padding:40px'><h2 style='color:#04b34f'>VISUALIZER_APPROVED</h2>"
+                                   "<p>Publishing still requires a separate Publish Approval.</p></div>")
         try:
             res = SVC.decide(token, decision, approver, reason)
             msg = ("Approved — production is starting. You'll be notified when the master is ready."

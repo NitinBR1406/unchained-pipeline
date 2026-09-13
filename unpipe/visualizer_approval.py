@@ -19,10 +19,15 @@ import hmac
 import json
 import time
 import urllib.request
+import urllib.error
 
 from .util import read_json, write_json, now_iso
 
 GATE_VISUALIZER = "visualizer"
+
+# Exact, proven replay-response body of Make scenario 9796001 module 41 (plain text; Content-Type is
+# Make's default and is intentionally NOT part of the predicate). Strict, fail-closed match only.
+MAKE_REPLAY_BODY = "nonce already consumed (replay)"
 
 
 def _b64e(b): return base64.urlsafe_b64encode(b).decode().rstrip("=")
@@ -34,13 +39,26 @@ class VisualizerApprovalError(Exception):
 
 
 def _http_post_json(url, payload, apikey, timeout=20):
-    """Default Make poster. Sends x-make-apikey; returns (status_code, body_text)."""
+    """Default Make poster. Sends x-make-apikey; returns (status_code, body_text).
+
+    Any real HTTP response (incl. 4xx/5xx) is returned as (code, body) so the caller can branch
+    (e.g. 409 replay). A NETWORK-level failure (timeout / connection reset / DNS) raises, so the
+    caller treats it as 'not confirmed' and does NOT consume the nonce.
+    """
     data = json.dumps(payload, separators=(",", ":")).encode()
     req = urllib.request.Request(url, data=data, method="POST")
     req.add_header("content-type", "application/json")
     req.add_header("x-make-apikey", apikey)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.status, r.read().decode(errors="ignore")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.status, r.read().decode(errors="ignore")
+    except urllib.error.HTTPError as e:            # got an HTTP status (4xx/5xx) -> return it, don't raise
+        try:
+            eb = e.read().decode(errors="ignore")
+        except Exception:
+            eb = ""
+        return e.code, eb
+    # urllib.error.URLError / socket.timeout / TimeoutError / OSError propagate = network failure
 
 
 class VisualizerApprovalService:
@@ -110,14 +128,47 @@ class VisualizerApprovalService:
             raise VisualizerApprovalError("make webhook/apikey not configured")
         body = {"content_id": p["content_id"], "title": p.get("title", ""), "approver": approver,
                 "nonce": nonce, "ts": int(time.time()), "intent": "VISUALIZER_APPROVED"}
-        code, _ = self._poster(self._make_url, body, self._make_apikey)
-        if not (200 <= int(code) < 300):
-            raise VisualizerApprovalError(f"make webhook rejected (status {code})")
-        result = {"status": "VISUALIZER_APPROVED", "content_id": p["content_id"], "by": approver,
-                  "at": now_iso(), "forwarded_to_make": True, "make_status": int(code),
-                  "creates_publish_approval": False, "sets_scheduled": False}
-        self._consume(nonce, result)
-        return result
+
+        # Robust to BOTH poster styles: one that RETURNS (code, body) and one that RAISES urllib
+        # HTTPError (urllib.request.urlopen raises on non-2xx). HTTPError is a subclass of URLError,
+        # so it MUST be caught first and treated as an HTTP status (e.g. 409), never as "unreachable".
+        try:
+            code, rbody = self._poster(self._make_url, body, self._make_apikey)
+        except urllib.error.HTTPError as e:                     # got an HTTP status response
+            code = e.code
+            try:
+                rbody = e.read().decode(errors="ignore")
+            except Exception:
+                rbody = ""
+        except (urllib.error.URLError, TimeoutError, OSError) as e:  # true network failure
+            raise VisualizerApprovalError(f"make unreachable (not confirmed): {type(e).__name__}")
+        code = int(code)
+        rbody = (rbody or "")
+
+        # 2xx: the approval was committed by Make this call.
+        if 200 <= code < 300:
+            result = {"status": "VISUALIZER_APPROVED", "content_id": p["content_id"], "by": approver,
+                      "at": now_iso(), "forwarded_to_make": True, "make_status": code,
+                      "idempotent_replay": False,
+                      "creates_publish_approval": False, "sets_scheduled": False}
+            self._consume(nonce, result)
+            return result
+
+        # 409 ONLY from our own secure webhook whose sole 409 is the nonce-replay response.
+        # Treat as idempotent success ONLY when the body confirms it is that replay/nonce response;
+        # never convert an arbitrary conflict into success.
+        # STRICT, fail-closed: only the exact Make replay body (after .strip()) is idempotent success.
+        # No substring / no case-fold / no Content-Type dependency. Anything else at 409 -> failure.
+        if code == 409 and rbody.strip() == MAKE_REPLAY_BODY:
+            result = {"status": "VISUALIZER_APPROVED", "content_id": p["content_id"], "by": approver,
+                      "at": now_iso(), "forwarded_to_make": True, "make_status": 409,
+                      "idempotent_replay": True,
+                      "creates_publish_approval": False, "sets_scheduled": False}
+            self._consume(nonce, result)
+            return result
+
+        # 5xx and any other 4xx (incl. an unconfirmed 409): explicit failure, nonce NOT consumed.
+        raise VisualizerApprovalError(f"make webhook rejected (status {code})")
 
     def _consume(self, nonce, result):
         self._consumed[nonce] = result
