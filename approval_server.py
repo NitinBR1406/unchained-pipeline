@@ -213,7 +213,11 @@ class Handler(BaseHTTPRequestHandler):
             except Exception:
                 return self._send_json(400, {"eligible": False, "reason": "MALFORMED_REQUEST"})
             try:
-                res = PSVC.evaluate(req)          # PSVC.evaluate is itself fail-closed
+                # Build the publish service PER REQUEST so it re-reads the on-disk approval + grant
+                # stores every call. Grant/approval changes -- especially REVOCATION -- take effect on
+                # the very next request with NO service restart. Still fail-closed (build/read errors
+                # are caught here and by PublishApprovalService.evaluate).
+                res = build_publish_service().evaluate(req)
             except Exception:
                 return self._send_json(500, {"eligible": False, "reason": "INTERNAL_ERROR"})
             return self._send_json(200, res)
@@ -260,7 +264,9 @@ class Handler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     SVC = build_service()   # requires APPROVAL_SIGNING_SECRET
     VSVC = build_visualizer_service()   # reuses APPROVAL_SIGNING_SECRET; needs MAKE_APPROVE_WEBHOOK + MAKE_APPROVE_APIKEY for live forward
-    PSVC = build_publish_service()   # publish-eligibility; needs PUBLISH_ELIGIBILITY_APIKEY (+ PUBLISH_APPROVALS_STORE / PUBLISH_GRANTS_STORE)
+    # NOTE: the publish-eligibility service is now built PER REQUEST (see do_POST) so grant/approval
+    # store changes (incl. revocation) take effect on the next request without a restart. No boot singleton.
+    _ = build_publish_service()      # boot-time smoke check only: needs PUBLISH_ELIGIBILITY_APIKEY (+ stores)
     host = sys.argv[2] if len(sys.argv) > 2 else "0.0.0.0"
     port = int(sys.argv[3]) if len(sys.argv) > 3 else int(os.environ.get("PORT", "8787"))
     ThreadingHTTPServer((host, port), Handler).serve_forever()
