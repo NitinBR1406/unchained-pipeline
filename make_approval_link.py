@@ -14,11 +14,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from unpipe.approval_service import ApprovalService
-from unpipe.approvals import GATE_CREATIVE, GATE_FINAL_VIDEO, GATE_PUBLISH
+from unpipe.approvals import GATE_CREATIVE, GATE_FINAL_VIDEO, GATE_FINAL_ASSET, GATE_PUBLISH
 from unpipe.manifest import load_manifest
 from unpipe.util import sha256_file
 
-GATE_MAP = {"creative": GATE_CREATIVE, "final_video": GATE_FINAL_VIDEO, "publish": GATE_PUBLISH}
+GATE_MAP = {"creative": GATE_CREATIVE, "final_video": GATE_FINAL_VIDEO,
+            "final_asset": GATE_FINAL_ASSET, "publish": GATE_PUBLISH}
 
 
 def _frozen_sha(campaigns_root, campaign_id):

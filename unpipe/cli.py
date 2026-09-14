@@ -12,9 +12,10 @@ gate = creative | final_video | publish
 import json
 import sys
 from .orchestrator import Campaign
-from .approvals import GATE_CREATIVE, GATE_FINAL_VIDEO, GATE_PUBLISH, APPROVE, REJECT
+from .approvals import GATE_CREATIVE, GATE_FINAL_VIDEO, GATE_FINAL_ASSET, GATE_PUBLISH, APPROVE, REJECT
 
-GATE_MAP = {"creative": GATE_CREATIVE, "final_video": GATE_FINAL_VIDEO, "publish": GATE_PUBLISH}
+GATE_MAP = {"creative": GATE_CREATIVE, "final_video": GATE_FINAL_VIDEO,
+            "final_asset": GATE_FINAL_ASSET, "publish": GATE_PUBLISH}
 
 
 def main(argv=None):

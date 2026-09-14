@@ -23,11 +23,11 @@ FINAL_VIDEO_APPROVED alone. Any missing datum / lookup error / exception => NOT 
 This module does NOT weaken the visualizer approval flow: VISUALIZER_APPROVED is never consulted here
 and never grants publication authority.
 """
-import hashlib
-import json
 import time
 
-from .approvals import GATE_CREATIVE, GATE_FINAL_VIDEO, GATE_PUBLISH
+from .approvals import GATE_CREATIVE, GATE_FINAL_ASSET, GATE_PUBLISH
+# Single source of truth for canonicalization (re-exported so existing importers keep working).
+from .canonical import compute_fingerprint, final_gate_for_medium, MEDIUM_VIDEO
 from .util import read_json
 
 REASON_ELIGIBLE = "VALID_PUBLISH_APPROVAL"
@@ -35,19 +35,6 @@ REASON_ELIGIBLE = "VALID_PUBLISH_APPROVAL"
 
 class PublishApprovalError(Exception):
     pass
-
-
-def compute_fingerprint(content_id, asset_sha256, platform, packaging_sha256="", schedule_version=""):
-    """Material publication fingerprint. Any material change -> different fingerprint."""
-    basis = {
-        "content_id": content_id,
-        "asset_sha256": asset_sha256,
-        "platform": platform,
-        "packaging_sha256": packaging_sha256 or "",
-        "schedule_version": schedule_version or "",
-    }
-    raw = json.dumps(basis, sort_keys=True, separators=(",", ":")).encode()
-    return hashlib.sha256(raw).hexdigest()
 
 
 class PublishApprovalService:
@@ -88,17 +75,29 @@ class PublishApprovalService:
             fp = compute_fingerprint(content_id, asset_sha256, platform,
                                      req.get("packaging_sha256", ""), req.get("schedule_version", ""))
 
-            # content must exist AND have a publish grant (a bare content id / status is never enough)
-            grant = self._grants.get(content_id)
+            # content must exist AND have a publish grant (a bare content id / status is never enough).
+            # Platform-scoped grant key (content_id::platform) with legacy fallback to content_id.
+            # Approvals are checked under the SAME campaign key so IG/FB (different fingerprints) stay
+            # independent; legacy video grants keyed by content_id resolve exactly as before.
+            composite = "{}::{}".format(content_id, platform)
+            grant = self._grants.get(composite)
+            approval_campaign = composite
+            if grant is None:
+                grant = self._grants.get(content_id)
+                approval_campaign = content_id
             if not grant:
                 return self._blocked("NO_PUBLISH_APPROVAL")
 
             # three independent human gates, each bound to the current fingerprint
-            if not self._is_approved(content_id, GATE_CREATIVE, fp):
+            if not self._is_approved(approval_campaign, GATE_CREATIVE, fp):
                 return self._blocked("CREATIVE_APPROVAL_MISSING")
-            if not self._is_approved(content_id, GATE_FINAL_VIDEO, fp):
-                return self._blocked("FINAL_VIDEO_APPROVAL_MISSING")
-            if not self._is_approved(content_id, GATE_PUBLISH, fp):
+            # medium-neutral final-asset gate: video keeps NITIN_FINAL_VIDEO_APPROVAL, poster requires
+            # NITIN_FINAL_ASSET_APPROVAL. Missing grant.medium defaults to video (existing behavior).
+            final_gate = final_gate_for_medium(grant.get("medium", MEDIUM_VIDEO))
+            if not self._is_approved(approval_campaign, final_gate, fp):
+                return self._blocked("FINAL_ASSET_APPROVAL_MISSING" if final_gate == GATE_FINAL_ASSET
+                                     else "FINAL_VIDEO_APPROVAL_MISSING")
+            if not self._is_approved(approval_campaign, GATE_PUBLISH, fp):
                 return self._blocked("NO_PUBLISH_APPROVAL")
 
             # publish grant scope / lifecycle
