@@ -28,3 +28,9 @@ services:
         sync: false          # new V3-SECURE hook URL (enter in dashboard; never in git)
       - key: MAKE_APPROVE_APIKEY
         sync: false          # x-make-apikey value (must match the Make hook's api key)
+      - key: PUBLISH_ELIGIBILITY_APIKEY
+        sync: false          # P0-B: shared secret Make sends as x-publish-apikey to /v/publish-eligibility (enter in dashboard; never in git)
+      - key: PUBLISH_APPROVALS_STORE
+        value: /data/_publish_approvals.json     # server-side 3-gate approval store (persistent disk)
+      - key: PUBLISH_GRANTS_STORE
+        value: /data/_publish_grants.json        # server-side publish grants: fingerprint/platform/schedule scope, exp, revoked

@@ -19,6 +19,8 @@ Env:
   CONSUMED_STORE            path for the single-use nonce store (put on a persistent disk)
 Run: python3 approval_server.py <campaigns_root> [host] [port]
 """
+import hmac
+import json
 import os
 import sys
 import time
@@ -32,6 +34,8 @@ from unpipe.orchestrator import Campaign
 from unpipe.dispatcher import GitHubDispatcher, DryDispatcher
 from unpipe.approval_service import ApprovalService, ApprovalError
 from unpipe.visualizer_approval import VisualizerApprovalService, VisualizerApprovalError
+from unpipe.approvals import ApprovalStore
+from unpipe.publish_approval import PublishApprovalService
 
 CAMPAIGNS_ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("campaigns")
 OWNER = os.environ.get("GH_OWNER", "NitinBR1406")
@@ -54,6 +58,7 @@ def campaign_factory(cid):
 
 SVC = None
 VSVC = None   # visualizer approval verifier (reuses APPROVAL_SIGNING_SECRET)
+PSVC = None   # publish-eligibility verifier (server-side authority; fail-closed)
 
 
 def build_service():
@@ -76,6 +81,26 @@ def build_visualizer_service():
         make_webhook_url=os.environ.get("MAKE_APPROVE_WEBHOOK", ""),
         make_apikey=os.environ.get("MAKE_APPROVE_APIKEY", ""),
     )
+
+
+def build_publish_service():
+    # Server-side publish-eligibility verifier. Reads the (server-side, disk-persisted) approval store
+    # + publish grants; NEVER trusts Make datastore state. Fail-closed by construction.
+    return PublishApprovalService(
+        approvals=ApprovalStore(os.environ.get(
+            "PUBLISH_APPROVALS_STORE", str(CAMPAIGNS_ROOT / "_publish_approvals.json"))),
+        grants=os.environ.get("PUBLISH_GRANTS_STORE", str(CAMPAIGNS_ROOT / "_publish_grants.json")),
+    )
+
+
+def _publish_authed(headers):
+    # The endpoint itself is authenticated: Make must send x-publish-apikey matching the env secret.
+    # Missing/blank config -> deny (fail closed). Constant-time compare; value is never logged.
+    expected = os.environ.get("PUBLISH_ELIGIBILITY_APIKEY", "")
+    got = headers.get("x-publish-apikey", "") or ""
+    if not expected:
+        return False
+    return hmac.compare_digest(str(expected), str(got))
 
 
 VPAGE = """<!doctype html><html><head><meta name=viewport content="width=device-width,initial-scale=1">
@@ -139,6 +164,9 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b)
 
+    def _send_json(self, code, obj):
+        self._send(code, json.dumps(obj, separators=(",", ":")), "application/json")
+
     def _ip(self):
         return self.headers.get("X-Forwarded-For", self.client_address[0]).split(",")[0].strip()
 
@@ -173,7 +201,23 @@ class Handler(BaseHTTPRequestHandler):
         if n <= 0 or n > MAX_BODY:
             return self._send(413, "<p>Request too large.</p>")
         path = urlparse(self.path).path
-        form = parse_qs(self.rfile.read(n).decode(errors="ignore"))
+        raw = self.rfile.read(n).decode(errors="ignore")
+        if path == "/v/publish-eligibility":
+            # Authenticated, machine-readable, fail-closed publish-eligibility check for Make to call
+            # BEFORE any publisher route. Returns JSON {"eligible":bool,"reason":<code>,...}. Anything
+            # other than eligible==true means BLOCKED. Never falls back to status=New.
+            if not _publish_authed(self.headers):
+                return self._send_json(401, {"eligible": False, "reason": "UNAUTHORIZED"})
+            try:
+                req = json.loads(raw)
+            except Exception:
+                return self._send_json(400, {"eligible": False, "reason": "MALFORMED_REQUEST"})
+            try:
+                res = PSVC.evaluate(req)          # PSVC.evaluate is itself fail-closed
+            except Exception:
+                return self._send_json(500, {"eligible": False, "reason": "INTERNAL_ERROR"})
+            return self._send_json(200, res)
+        form = parse_qs(raw)
         token = (form.get("token") or [""])[0]
         decision = (form.get("decision") or [""])[0]
         approver = (form.get("approver") or [""])[0]
@@ -216,6 +260,7 @@ class Handler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     SVC = build_service()   # requires APPROVAL_SIGNING_SECRET
     VSVC = build_visualizer_service()   # reuses APPROVAL_SIGNING_SECRET; needs MAKE_APPROVE_WEBHOOK + MAKE_APPROVE_APIKEY for live forward
+    PSVC = build_publish_service()   # publish-eligibility; needs PUBLISH_ELIGIBILITY_APIKEY (+ PUBLISH_APPROVALS_STORE / PUBLISH_GRANTS_STORE)
     host = sys.argv[2] if len(sys.argv) > 2 else "0.0.0.0"
     port = int(sys.argv[3]) if len(sys.argv) > 3 else int(os.environ.get("PORT", "8787"))
     ThreadingHTTPServer((host, port), Handler).serve_forever()
