@@ -1,4 +1,4 @@
-"""Temporal side of the P0-E live bake-off — V02.2 (phased; explicit-state readiness, no sleep-as-proof).
+"""Temporal side of the P0-E live bake-off — V02.3 (bootstrap/readiness closure: worker connect-retry + strict poller readycheck + bootstrap evidence).
 Phases (called by the CI workflow, interleaved with docker kill/restart of worker + postgres):
   worker            -> run a worker (low concurrency so a held slot would be visible)
   start             -> start A (durable human wait) and PROVE it reached AWAITING via an explicit, bounded
@@ -70,13 +70,46 @@ class PosterWorkflow:
         await workflow.execute_activity(a_sink, task_id, start_to_close_timeout=timedelta(minutes=1), retry_policy=rp)
         return {"task_id":task_id,"status":"COMPLETED"}
 async def _client(): return await Client.connect(TEMPORAL_ADDRESS)
+WORKER_CONNECT_RETRIES=int(os.environ.get("WORKER_CONNECT_RETRIES","40"))
+WORKER_CONNECT_BACKOFF_S=float(os.environ.get("WORKER_CONNECT_BACKOFF_S","3"))
 async def worker():
-    c=await _client()
-    async with Worker(c, task_queue=TASK_QUEUE, workflows=[PosterWorkflow], activities=[a_claude,a_gemini_long,a_arch,a_sink],
-                      max_concurrent_activities=MAX_SLOTS, max_concurrent_workflow_tasks=MAX_SLOTS):
-        print("temporal worker up (slots=%d)"%MAX_SLOTS); await asyncio.Future()
+    # depends_on only waits for container start, not for the Temporal server + default namespace to be ready.
+    # Retry the connect/registration so a premature start self-heals into a LIVE poller instead of crashing.
+    last=None
+    for attempt in range(WORKER_CONNECT_RETRIES):
+        try:
+            c=await _client()
+            async with Worker(c, task_queue=TASK_QUEUE, workflows=[PosterWorkflow], activities=[a_claude,a_gemini_long,a_arch,a_sink],
+                              max_concurrent_activities=MAX_SLOTS, max_concurrent_workflow_tasks=MAX_SLOTS):
+                print("temporal worker up (slots=%d) after %d attempt(s)"%(MAX_SLOTS,attempt+1)); await asyncio.Future()
+            return
+        except Exception as e:
+            last=e; print("worker connect attempt %d failed: %s"%(attempt+1, type(e).__name__)); await asyncio.sleep(WORKER_CONNECT_BACKOFF_S)
+    raise SystemExit("temporal worker could not register a poller: %r"%last)
 def _ids_path():
     os.makedirs(os.path.dirname(IDS), exist_ok=True); return IDS
+def _evid_dir():
+    d=os.environ.get("EVIDENCE_DIR")
+    if not d:
+        rl=os.environ.get("RESULTS_LOG","")
+        d=os.path.dirname(rl) if rl else "evidence"
+    os.makedirs(d, exist_ok=True); return d
+def _write_temporal_bootstrap(ready, n, detail):
+    json.dump({"TEMPORAL_WORKER_POLLERS_READY":bool(ready),"TEMPORAL_WORKER_COUNT":int(n),
+               "task_queue":TASK_QUEUE,"namespace":"default","detail":detail},
+              open(os.path.join(_evid_dir(),"temporal_bootstrap.json"),"w"), indent=2)
+async def _count_pollers(c):
+    """Return the number of LIVE workflow pollers on TASK_QUEUE (0 on any error). Never raises."""
+    try:
+        from temporalio.api.workflowservice.v1 import DescribeTaskQueueRequest
+        from temporalio.api.taskqueue.v1 import TaskQueue as _TQ
+        from temporalio.api.enums.v1 import TaskQueueType
+        resp=await c.workflow_service.describe_task_queue(DescribeTaskQueueRequest(
+            namespace="default", task_queue=_TQ(name=TASK_QUEUE),
+            task_queue_type=TaskQueueType.TASK_QUEUE_TYPE_WORKFLOW))
+        return len(getattr(resp,"pollers",[]) or [])
+    except Exception:
+        return 0
 async def _worker_ready(c, deadline_s):
     """Best-effort task-queue poller probe. Returns (ready, detail); NEVER raises. If the describe API is
     unavailable/errors, returns ready=True with a note so the bounded query loop stays the real gate; only
@@ -121,6 +154,25 @@ async def _await_awaiting(c, wid, deadline_s):
             reason="QUERY_NOT_READY"
         await asyncio.sleep(QUERY_POLL_EVERY_S)
     return False, last, reason
+async def readycheck():
+    """STRICT, fail-closed: prove worker1/worker2 register LIVE Temporal pollers BEFORE start. Readiness is
+    NEVER skipped or assumed-PASS: the gate is a positive poller count observed from describe_task_queue."""
+    try:
+        c=await _client()
+    except Exception as e:
+        _write_temporal_bootstrap(False, 0, {"reason":"SERVER_UNREACHABLE","err":type(e).__name__})
+        cs.record("TEMPORAL_BOOTSTRAP","temporal","OBSERVED_FAIL",{"reason":"SERVER_UNREACHABLE"})
+        print("TEMPORAL_WORKER_POLLERS_READY=FALSE TEMPORAL_WORKER_COUNT=0 diag=SERVER_UNREACHABLE"); raise SystemExit(1)
+    end=time.time()+READY_DEADLINE_S; n=0
+    while time.time()<end:
+        n=await _count_pollers(c)
+        if n>0: break
+        await asyncio.sleep(QUERY_POLL_EVERY_S)
+    ready=n>0
+    _write_temporal_bootstrap(ready, n, {"reason":"OK" if ready else "NO_POLLERS"})
+    cs.record("TEMPORAL_BOOTSTRAP","temporal","OBSERVED_PASS" if ready else "OBSERVED_FAIL",{"pollers":n})
+    print("TEMPORAL_WORKER_POLLERS_READY=%s TEMPORAL_WORKER_COUNT=%d"%("TRUE" if ready else "FALSE", n))
+    if not ready: raise SystemExit(1)
 async def start():
     c=await _client(); ids={}
     ready, rdetail=await _worker_ready(c, READY_DEADLINE_S)
@@ -175,6 +227,7 @@ async def resume():
     print("resume done; A=%s L=%s parallel_done=%d dedup=%d"%(rA["status"],rL["status"],done,dup))
 def phase(name):
     if name=="worker": asyncio.run(worker())
+    elif name=="readycheck": asyncio.run(readycheck())
     elif name=="start": asyncio.run(start())
     elif name=="resume": asyncio.run(resume())
     else: raise SystemExit("unknown phase "+name)

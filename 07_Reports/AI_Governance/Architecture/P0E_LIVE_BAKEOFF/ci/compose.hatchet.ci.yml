@@ -15,12 +15,14 @@ services:
     ports: ["8888:8080","7077:7077"]
   worker1:
     build: {context: .., dockerfile: Dockerfile.worker}
+    restart: on-failure
     command: ["python","hatchet_bakeoff.py","worker"]
     depends_on: [hatchet]
     environment: {HATCHET_CLIENT_TOKEN: "${HATCHET_CLIENT_TOKEN}", HATCHET_CLIENT_TLS_STRATEGY: "none", MAX_RUNS: "4", SE_STORE: /data/se/side_effects.json}
     volumes: ["${SE_DIR}:/data/se"]
   worker2:
     build: {context: .., dockerfile: Dockerfile.worker}
+    restart: on-failure
     command: ["python","hatchet_bakeoff.py","worker"]
     depends_on: [hatchet]
     environment: {HATCHET_CLIENT_TOKEN: "${HATCHET_CLIENT_TOKEN}", HATCHET_CLIENT_TLS_STRATEGY: "none", MAX_RUNS: "4", SE_STORE: /data/se/side_effects.json}

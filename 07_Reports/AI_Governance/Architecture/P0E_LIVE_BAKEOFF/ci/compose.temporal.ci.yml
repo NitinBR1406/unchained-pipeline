@@ -1,4 +1,4 @@
-# CI Temporal stack V02: 2 worker containers (phase worker, low slots) + BIND-mounted shared side-effect
+# CI Temporal stack V02.3 (workers restart:on-failure so a premature start self-heals into a live poller): 2 worker containers (phase worker, low slots) + BIND-mounted shared side-effect
 # dir so the host-run start/resume can read the OBSERVED oracle. Ephemeral; down -v after.
 version: "3.8"
 services:
@@ -12,12 +12,14 @@ services:
     ports: ["7233:7233"]
   worker1:
     build: {context: .., dockerfile: Dockerfile.worker}
+    restart: on-failure
     command: ["python","temporal_bakeoff.py","worker"]
     depends_on: [temporal]
     environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json}
     volumes: ["${SE_DIR}:/data/se"]
   worker2:
     build: {context: .., dockerfile: Dockerfile.worker}
+    restart: on-failure
     command: ["python","temporal_bakeoff.py","worker"]
     depends_on: [temporal]
     environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json}

@@ -1,12 +1,15 @@
-# P0-E Live Control-Plane Bake-Off — GitHub Actions V02.2 (ephemeral ubuntu-latest, Docker preinstalled).
+# P0-E Live Control-Plane Bake-Off — GitHub Actions V02.3 (ephemeral ubuntu-latest, Docker preinstalled).
 # Copy to .github/workflows/p0e-live-bakeoff.yml on branch p0e/live-control-plane-bakeoff.
-# V02.2 changes vs V02:
-#   1) Temporal and Hatchet run as SEPARATE, PARALLEL jobs (no needs: between them) so a Temporal failure
-#      can NOT prevent Hatchet from executing  => TEMPORAL_FAILURE_BLOCKS_HATCHET = FALSE (proven by design).
-#   2) A final assemble+gate job (needs both, if: always()) merges each engine's results.jsonl and stays
-#      FAIL-CLOSED: a missing/failed engine => its records absent => NOT_TESTABLE => FINAL_RECOMMENDATION
-#      PENDING => gate exits non-zero, while every engine's evidence is still uploaded.
-# NO production secrets. Disposable infra only; each engine job tears itself down with `down -v`.
+# V02.3 = BOOTSTRAP/READINESS CLOSURE ONLY (no redesign):
+#   * Temporal: a STRICT, fail-closed poller readycheck (controller.py temporal readycheck) proves worker1/
+#     worker2 register LIVE pollers BEFORE start; workers self-heal via connect-retry + restart:on-failure.
+#   * Hatchet: run-scoped token is created robustly (JWT-shape asserted, masked, fail-closed if empty),
+#     exported to BOTH the worker containers and the host controller process; a config readycheck proves the
+#     client initialises before start; module import no longer needs a token (lazy client init).
+#   * Both engines still run as SEPARATE, PARALLEL jobs; assemble_gate needs:[meta,temporal,hatchet],
+#     if: always(), uploads evidence BEFORE a FAIL-CLOSED gate. No durability/acceptance criterion changed.
+#   * On any engine failure, docker compose ps + (redacted) logs + server diagnostics are captured to evidence.
+#   * Secrets are NEVER echoed/committed/uploaded (::add-mask:: + JWT redaction on captured logs).
 name: p0e-live-bakeoff
 on:
   workflow_dispatch: {}
@@ -58,6 +61,11 @@ jobs:
           SE_DIR=$SE_DIR docker compose -f ci/compose.temporal.ci.yml up -d --build
           for i in $(seq 1 60); do docker compose -f ci/compose.temporal.ci.yml exec -T temporal tctl cluster health && break || sleep 3; done
           { echo '{'; echo "\"temporal_image_digest\":\"$(docker inspect --format='{{index .RepoDigests 0}}' temporalio/auto-setup:1.25.0 2>/dev/null)\","; echo "\"postgres_image_digest\":\"$(docker inspect --format='{{index .RepoDigests 0}}' postgres:16 2>/dev/null)\""; echo '}'; } > evidence/temporal_versions.json || true
+      - name: Temporal — readiness (STRICT, fail-closed poller gate)
+        env: { TEMPORAL_ADDRESS: "localhost:7233" }
+        run: |
+          # writes evidence/temporal_bootstrap.json {TEMPORAL_WORKER_POLLERS_READY, TEMPORAL_WORKER_COUNT}; exits 1 if 0 pollers
+          python controller.py temporal readycheck
       - name: Temporal — run (start, crash+DB restart, resume)
         env: { TEMPORAL_ADDRESS: "localhost:7233" }
         run: |
@@ -71,6 +79,13 @@ jobs:
           sleep 15
           python controller.py temporal resume
           kill $(cat /tmp/stats.pid) || true
+      - name: Temporal — diagnostics on failure
+        if: failure()
+        run: |
+          { echo "== docker compose ps =="; docker compose -f ci/compose.temporal.ci.yml ps;
+            echo "== worker logs =="; docker compose -f ci/compose.temporal.ci.yml logs --no-color --tail 200 worker1 worker2;
+            echo "== temporal server logs =="; docker compose -f ci/compose.temporal.ci.yml logs --no-color --tail 120 temporal;
+            echo "== cluster health =="; docker compose -f ci/compose.temporal.ci.yml exec -T temporal tctl cluster health; } > evidence/temporal_diagnostics.log 2>&1 || true
       - name: Temporal — down
         if: always()
         run: SE_DIR=$PWD/se_temporal docker compose -f ci/compose.temporal.ci.yml down -v
@@ -94,19 +109,53 @@ jobs:
       - uses: actions/checkout@v4
       - name: Setup host SDK
         run: mkdir -p evidence && (pip install hatchet-sdk pyyaml >/dev/null 2>&1 || pip install hatchet-sdk)
-      - name: Hatchet — up + token
+      - name: Hatchet — up + run-scoped token (robust, masked, fail-closed)
         run: |
           export SE_DIR=$PWD/se_hatchet; mkdir -p $SE_DIR; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
           SE_DIR=$SE_DIR docker compose -f ci/compose.hatchet.ci.yml up -d --build postgres hatchet
           for i in $(seq 1 60); do curl -sf http://localhost:8888/ >/dev/null && break || sleep 3; done
-          TOKEN=$(docker compose -f ci/compose.hatchet.ci.yml exec -T hatchet /hatchet-admin token create --config /config --tenant-id 707d0855-80ab-4e1f-a156-f1c4546cbf52 2>/dev/null | tail -1)
-          echo "HATCHET_CLIENT_TOKEN=$TOKEN" >> $GITHUB_ENV
+          # create token; require a JWT-shaped (a.b.c) non-empty value; retry while hatchet finishes seeding
+          TOKEN=""
+          for i in $(seq 1 20); do
+            TOKEN=$(docker compose -f ci/compose.hatchet.ci.yml exec -T hatchet /hatchet-admin token create --config /config --tenant-id 707d0855-80ab-4e1f-a156-f1c4546cbf52 2>/dev/null | tr -d '\r' | tail -1)
+            case "$TOKEN" in *.*.*) break;; *) TOKEN=""; sleep 3;; esac
+          done
+          if [ -z "$TOKEN" ]; then
+            python3 -c "import json,os;os.makedirs('evidence',exist_ok=True);json.dump({'HATCHET_CLIENT_CONFIG_READY':False,'detail':{'reason':'TOKEN_CREATE_EMPTY'}},open('evidence/hatchet_bootstrap.json','w'),indent=2)"
+            echo "HATCHET token bootstrap FAILED (empty) — fail-closed"; exit 1
+          fi
+          echo "::add-mask::$TOKEN"                       # never let the token appear in logs
+          echo "HATCHET_CLIENT_TOKEN=$TOKEN" >> $GITHUB_ENV   # run-scoped: available to host + compose in later steps
           { echo '{'; echo "\"hatchet_image_digest\":\"$(docker inspect --format='{{index .RepoDigests 0}}' $(docker compose -f ci/compose.hatchet.ci.yml images -q hatchet) 2>/dev/null)\""; echo '}'; } > evidence/hatchet_versions.json || true
+      - name: Hatchet — config readiness (STRICT, fail-closed)
+        env: { HATCHET_CLIENT_TLS_STRATEGY: "none" }
+        run: |
+          # writes evidence/hatchet_bootstrap.json {HATCHET_CLIENT_CONFIG_READY}; exits 1 if token/config invalid
+          python controller.py hatchet readycheck
+      - name: Hatchet — start workers + prove workers live (fail-closed)
+        env: { HATCHET_CLIENT_TLS_STRATEGY: "none" }
+        run: |
+          SE_DIR=$SE_DIR HATCHET_CLIENT_TOKEN=$HATCHET_CLIENT_TOKEN docker compose -f ci/compose.hatchet.ci.yml up -d --build worker1 worker2
+          sleep 12
+          UP=$(docker compose -f ci/compose.hatchet.ci.yml ps --services --filter "status=running" 2>/dev/null | grep -c -E '^worker[12]$' || true)
+          export UP
+          python3 - <<'PY'
+          import json,os
+          up=int(os.environ.get("UP","0") or 0)
+          p="evidence/hatchet_bootstrap.json"; d={}
+          if os.path.exists(p):
+            try: d=json.load(open(p))
+            except Exception: d={}
+          d["HATCHET_WORKERS_READY"]= up>=2
+          d["HATCHET_WORKER_COUNT"]= up
+          json.dump(d, open(p,"w"), indent=2)
+          print("HATCHET_WORKERS_READY=%s HATCHET_WORKER_COUNT=%d"%(up>=2, up))
+          PY
+          [ "${UP:-0}" -ge 2 ] || { echo "Hatchet workers not live (fail-closed)"; exit 1; }
       - name: Hatchet — run (start, crash+DB restart, resume)
         env: { HATCHET_CLIENT_TLS_STRATEGY: "none" }
         run: |
           ( while true; do docker stats --no-stream --format '{{.Name}} {{.CPUPerc}} {{.MemUsage}}' >> evidence/hatchet_stats.log; sleep 5; done ) & echo $! > /tmp/hstats.pid
-          SE_DIR=$SE_DIR HATCHET_CLIENT_TOKEN=$HATCHET_CLIENT_TOKEN docker compose -f ci/compose.hatchet.ci.yml up -d --build worker1 worker2
           export SE_STORE=$SE_DIR/side_effects.json IDS_FILE=$SE_DIR/ids_hatchet.json
           python controller.py hatchet start
           docker kill $(docker ps -q --filter name=worker1) || true
@@ -116,6 +165,12 @@ jobs:
           sleep 20
           python controller.py hatchet resume
           kill $(cat /tmp/hstats.pid) || true
+      - name: Hatchet — diagnostics on failure (token-redacted)
+        if: failure()
+        run: |
+          { echo "== docker compose ps =="; docker compose -f ci/compose.hatchet.ci.yml ps;
+            echo "== logs (JWT-redacted) =="; docker compose -f ci/compose.hatchet.ci.yml logs --no-color --tail 200; } 2>&1 \
+            | sed -E 's/[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}/<REDACTED_JWT>/g' > evidence/hatchet_diagnostics.log || true
       - name: Hatchet — down
         if: always()
         run: SE_DIR=$PWD/se_hatchet docker compose -f ci/compose.hatchet.ci.yml down -v
@@ -145,21 +200,26 @@ jobs:
       - name: Merge evidence (missing engine -> NOT_TESTABLE -> PENDING, fail-closed)
         run: |
           mkdir -p evidence
-          cp dl/p0e-meta/run_meta.json            evidence/ 2>/dev/null || true
-          cp dl/p0e-meta/sdk_versions.json        evidence/ 2>/dev/null || true
+          cp dl/p0e-meta/run_meta.json                       evidence/ 2>/dev/null || true
+          cp dl/p0e-meta/sdk_versions.json                   evidence/ 2>/dev/null || true
           cp dl/p0e-temporal-evidence/temporal_versions.json evidence/ 2>/dev/null || true
           cp dl/p0e-temporal-evidence/temporal_stats.log     evidence/ 2>/dev/null || true
+          cp dl/p0e-temporal-evidence/temporal_bootstrap.json   evidence/ 2>/dev/null || true
+          cp dl/p0e-temporal-evidence/temporal_diagnostics.log  evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_versions.json   evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_stats.log       evidence/ 2>/dev/null || true
+          cp dl/p0e-hatchet-evidence/hatchet_bootstrap.json     evidence/ 2>/dev/null || true
+          cp dl/p0e-hatchet-evidence/hatchet_diagnostics.log    evidence/ 2>/dev/null || true
           : > evidence/results.jsonl
           cat dl/p0e-temporal-evidence/results.jsonl >> evidence/results.jsonl 2>/dev/null || true
           cat dl/p0e-hatchet-evidence/results.jsonl  >> evidence/results.jsonl 2>/dev/null || true
           echo "engines present:"; ls dl || true
+          echo "bootstrap readiness:"; cat evidence/temporal_bootstrap.json 2>/dev/null; cat evidence/hatchet_bootstrap.json 2>/dev/null
           echo "merged results line count:"; wc -l evidence/results.jsonl || true
       - name: Assemble + hash
         run: |
           python controller.py assemble
-          sha256sum evidence/P0E_*.json evidence/P0E_*.md evidence/results.jsonl > evidence/EVIDENCE_SHA256SUMS.txt || true
+          sha256sum evidence/P0E_*.json evidence/P0E_*.md evidence/results.jsonl evidence/*_bootstrap.json > evidence/EVIDENCE_SHA256SUMS.txt || true
           cat evidence/P0E_LIVE_FINAL_DECISION_V01.md || true
       - name: Upload final evidence
         if: always()
