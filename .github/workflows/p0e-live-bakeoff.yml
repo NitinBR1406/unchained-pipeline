@@ -1,6 +1,9 @@
 # P0-E Live Control-Plane Bake-Off — GitHub Actions V02.3 (ephemeral ubuntu-latest, Docker preinstalled).
 # Copy to .github/workflows/p0e-live-bakeoff.yml on branch p0e/live-control-plane-bakeoff.
-# V02.9 = SDK ALIGNMENT (host hatchet-sdk pinned ==0.47.0 to match Dockerfile.worker; h.client unchanged) +
+# V02.10 = HATCHET gRPC TRANSPORT FORENSICS (diagnostic-only; read-only pre-push probe + enriched on-failure
+#   capture: 7077 owner/iface, host publish, TCP/HTTP2 reset behavior, broadcast addr, container exit/restart, server logs).
+#   No compose/durability/scoring change; run step byte-identical. Next run's evidence determines the one-line V02.11 fix.
+# (carried) V02.9 = SDK ALIGNMENT (host hatchet-sdk pinned ==0.47.0 to match Dockerfile.worker; h.client unchanged) +
 #   TEMPORAL READINESS FORENSICS (richer NO_POLLERS diagnostics: container/exit/restart state, worker
 #   stdout/stderr, namespace + taskqueue describe). Readiness stays strict/fail-closed. Temporal semantics unchanged.
 # (carried) V02.8 = TRANSPORT PROBE ERREXIT CLOSURE: the curl command-substitution now sits in an `if` condition so a
@@ -229,6 +232,30 @@ jobs:
           print("HATCHET_WORKERS_READY=%s HATCHET_WORKER_COUNT=%d"%(up>=2, up))
           PY
           [ "${UP:-0}" -ge 2 ] || { echo "Hatchet workers not live (fail-closed)"; exit 1; }
+      - name: Hatchet — gRPC transport forensics (pre-push, read-only)
+        env: { HATCHET_CLIENT_TLS_STRATEGY: "none" }
+        run: |
+          set +e
+          C="docker compose -f ci/compose.hatchet.ci.yml"
+          F=evidence/hatchet_grpc_forensics.log
+          RED='s/[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}/<REDACTED_JWT>/g'
+          {
+            echo "== compose ps -a =="; $C ps -a
+            echo "== hatchet container state/exit/restart (pre-push) =="
+            for id in $($C ps -aq hatchet); do
+              docker inspect --format '{{.Name}} status={{.State.Status}} running={{.State.Running}} exitcode={{.State.ExitCode}} restarts={{.RestartCount}} oom={{.State.OOMKilled}} error={{.State.Error}}' "$id"
+            done
+            echo "== advertised gRPC broadcast address (container env) =="; $C exec -T hatchet printenv SERVER_GRPC_BROADCAST_ADDRESS
+            echo "== SERVER_GRPC_INSECURE (container env) =="; $C exec -T hatchet printenv SERVER_GRPC_INSECURE
+            echo "== /etc/hosts hatchet mapping (host) =="; grep -w hatchet /etc/hosts
+            echo "== listeners INSIDE hatchet container (which iface owns 7077) =="; $C exec -T hatchet sh -c 'ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null || cat /proc/net/tcp'
+            echo "== host published listeners (docker-proxy 7077/8888) =="; { ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null; } | grep -E ':7077|:8888'
+            echo "== host TCP connect 127.0.0.1:7077 =="; timeout 5 bash -c 'exec 3<>/dev/tcp/127.0.0.1/7077 && echo TCP_OPEN || echo TCP_FAIL'
+            echo "== host HTTP/2 prior-knowledge probe 127.0.0.1:7077 (observe reset) =="; curl -sv --http2-prior-knowledge --max-time 5 http://127.0.0.1:7077/ 2>&1
+            echo "== hatchet server logs (tail) =="; $C logs --no-color --tail 150 hatchet 2>&1
+          } 2>&1 | sed -E "$RED" > "$F"
+          python3 -c "import json,os;json.dump({'grpc_forensics_captured':os.path.exists('$F'),'note':'pre-push read-only transport forensics; no auth/durability claim'},open('evidence/hatchet_grpc_forensics.json','w'),indent=2)"
+          echo "captured hatchet gRPC forensics -> $F"
       - name: Hatchet — run (start, crash+DB restart, resume)
         timeout-minutes: 30
         env: { HATCHET_CLIENT_TLS_STRATEGY: "none" }
@@ -246,9 +273,20 @@ jobs:
       - name: Hatchet — diagnostics on failure (token-redacted)
         if: failure()
         run: |
-          { echo "== docker compose ps =="; docker compose -f ci/compose.hatchet.ci.yml ps;
-            echo "== logs (JWT-redacted) =="; docker compose -f ci/compose.hatchet.ci.yml logs --no-color --tail 200; } 2>&1 \
-            | sed -E 's/[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}/<REDACTED_JWT>/g' > evidence/hatchet_diagnostics.log || true
+          set +e
+          C="docker compose -f ci/compose.hatchet.ci.yml"
+          D=evidence/hatchet_diagnostics.log
+          RED='s/[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}/<REDACTED_JWT>/g'
+          {
+            echo "== compose ps -a =="; $C ps -a
+            echo "== hatchet container state/exit/restart (post-failure; compare vs pre-push forensics) =="
+            for id in $($C ps -aq hatchet); do
+              docker inspect --format '{{.Name}} status={{.State.Status}} exitcode={{.State.ExitCode}} restarts={{.RestartCount}} oom={{.State.OOMKilled}} error={{.State.Error}}' "$id"
+            done
+            echo "== listeners inside hatchet (7077 owner) =="; $C exec -T hatchet sh -c 'ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null || cat /proc/net/tcp'
+            echo "== all logs (tail) =="; $C logs --no-color --tail 250
+          } 2>&1 | sed -E "$RED" > "$D"
+          echo "captured hatchet diagnostics -> $D"
       - name: Hatchet — down
         if: always()
         run: SE_DIR=$PWD/se_hatchet docker compose -f ci/compose.hatchet.ci.yml down -v
@@ -291,6 +329,8 @@ jobs:
           cp dl/p0e-hatchet-evidence/hatchet_stats.log       evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_bootstrap.json     evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_diagnostics.log    evidence/ 2>/dev/null || true
+          cp dl/p0e-hatchet-evidence/hatchet_grpc_forensics.log  evidence/ 2>/dev/null || true
+          cp dl/p0e-hatchet-evidence/hatchet_grpc_forensics.json evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_token_stderr.log   evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_server_bootstrap.json evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_sdk_provenance.json evidence/ 2>/dev/null || true
