@@ -1,0 +1,14 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"P0E EVENT_LEDGER event","type":"object",
+ "required":["event_id","event_type","timestamp","agent","schema_version"],
+ "properties":{
+  "event_id":{"type":"string"},"event_type":{"type":"string",
+   "enum":["TASK_REQUEST","TASK_CLAIMED","TASK_STARTED","TASK_RESULT","TASK_FAILED","AUDIT_REQUEST","AUDIT_RESULT",
+           "CREATIVE_INTELLIGENCE_REQUEST","CREATIVE_INTELLIGENCE_RESULT","ARCH_DECISION","HUMAN_GATE_REQUEST",
+           "HUMAN_GATE_GRANTED","HUMAN_GATE_REJECTED","STATE_REDUCED","LEASE_ACQUIRED","LEASE_EXPIRED",
+           "LEASE_RELEASED","RUNNER_HEARTBEAT","EVIDENCE_REGISTERED"]},
+  "timestamp":{"type":"string"},"agent":{"type":"string"},"schema_version":{"type":"integer"},
+  "task_id":{"type":["string","null"]},"inputs":{"type":"object"},"evidence":{"type":"array"},
+  "decision":{},"confidence":{},"next_action":{},"correlation_id":{"type":"string"},"causation_id":{"type":"string"},
+  "lease_id":{"type":"string"},"idempotency_key":{"type":"string"},"gate":{"type":"string"},"input_hash":{"type":"string"},
+  "ledger_seq":{"type":"integer"},"prev_ledger_hash":{"type":"string"},"ledger_hash":{"type":"string"}},
+ "additionalProperties":true}

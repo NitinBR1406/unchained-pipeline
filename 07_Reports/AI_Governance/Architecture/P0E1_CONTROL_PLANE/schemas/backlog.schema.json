@@ -1,0 +1,13 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"P0E BACKLOG task","type":"object",
+ "required":["task_id","title","status","autonomy_level","human_gate_required"],
+ "properties":{
+  "task_id":{"type":"string"},"title":{"type":"string"},"priority":{"type":["integer","string"]},
+  "dependencies":{"type":"array","items":{"type":"string"}},
+  "status":{"type":"string","enum":["READY","CLAIMED","RUNNING","VERIFYING","COMPLETED","BLOCKED","WAITING_FOR_NITIN","FAILED"]},
+  "autonomy_level":{"type":"string"},"allowed_scope":{"type":"array"},"definition_of_done":{"type":"string"},
+  "tests_required":{"type":"array"},"evidence_required":{"type":"array"},"rollback":{"type":"string"},
+  "human_gate_required":{"type":["string","null","boolean"]},"blocked_reason":{"type":["string","null"]},
+  "next_action":{"type":["string","null"]},"claimed_by":{"type":["string","null"]},"lease_id":{"type":["string","null"]},
+  "lease_expires_at":{"type":["number","null"]},"input_hash":{"type":["string","null"]},
+  "idempotency_key":{"type":["string","null"]},"state_version":{"type":["integer","null"]}},
+ "additionalProperties":true}

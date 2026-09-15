@@ -1,0 +1,38 @@
+{
+  "artifact": "P0E_CONTROL_PLANE_ARCHITECTURE_DECISION",
+  "version": "V01",
+  "schema_version": 1,
+  "P0E_CONTROL_PLANE_ARCHITECTURE_APPROVAL": "APPROVED",
+  "SELECTED_CONTROL_PLANE": "TEMPORAL",
+  "ARCHITECTURE_BAKEOFF": "CLOSED",
+  "WINNER": "TEMPORAL",
+  "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+  "authoritative_evidence": {
+    "github_run_id": "34979288601",
+    "git_commit_sha": "fe1b83c1d36960016834b9eda6577c53a84c159a",
+    "branch": "p0e/live-control-plane-bakeoff",
+    "evidence_version": "P0-E V02.12",
+    "temporal_sdk": "1.33.0",
+    "hatchet_sdk": "0.47.0"
+  },
+  "temporal_decision_critical": {
+    "DURABLE_HUMAN_WAIT": "OBSERVED_PASS",
+    "CRASH_DURING_LONG_ACTIVITY": "OBSERVED_PASS",
+    "ORCHESTRATOR_DB_INTERRUPTION": "OBSERVED_PASS",
+    "DUPLICATE_STALE_EVENTS": "OBSERVED_PASS",
+    "IDEMPOTENCY_UNDER_RETRY": "OBSERVED_PASS",
+    "PARALLEL_AUTONOMY_20": "OBSERVED_PASS",
+    "result": "6/6 OBSERVED_PASS"
+  },
+  "temporal_acceptance": {
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": "FALSE",
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": "FALSE",
+    "STATE_RECOVERED_AFTER_RESTART": "TRUE",
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": "FALSE",
+    "ACCEPTANCE_ALL_MET": true
+  },
+  "adr_ref": "P0E_ADR_001_TEMPORAL_CONTROL_PLANE.md",
+  "comparison_closed": true,
+  "provenance": {"author":"claude","architecture_authority":"chatgpt","release_authority":"nitin"}
+}

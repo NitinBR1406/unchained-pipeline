@@ -1,0 +1,12 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"UNCHAINED_MASTER_PROJECT_STATE","type":"object",
+ "required":["schema_version","state_version","project","phase","architecture_locks","approvals","invariants","duplicate_side_effect_count"],
+ "properties":{
+  "schema_version":{"type":"integer"},"state_version":{"type":"integer"},"updated_at":{"type":["string","null"]},
+  "updated_by":{"type":["string","null"]},"project":{"type":"string"},"phase":{"type":"string"},"milestone":{"type":"string"},
+  "production_state":{"type":"object"},"scenario_ids":{"type":"object"},"datastore_ids":{"type":"object"},
+  "git":{"type":"object"},"deployments":{"type":"array"},"architecture_locks":{"type":"object"},
+  "approvals":{"type":"object"},"grants":{"type":"object"},"proven_tests":{"type":"array"},
+  "issue_classes":{"type":"object"},"current_release":{},"current_content":{},"autonomous_execution":{"type":"object"},
+  "backlog_summary":{"type":"object"},"runner_health":{"type":"object"},"evidence_refs":{"type":"array"},
+  "provenance":{"type":"array"},"invariants":{"type":"object"},"duplicate_side_effect_count":{"type":"integer"}},
+ "additionalProperties":true}

@@ -1,0 +1,82 @@
+{
+  "approvals": {},
+  "architecture_locks": {
+    "adr_ref": "P0E_ADR_001_TEMPORAL_CONTROL_PLANE.md",
+    "architecture_bakeoff": "CLOSED",
+    "production_deployment_authorized": false,
+    "selected_control_plane": "TEMPORAL",
+    "winner": "TEMPORAL"
+  },
+  "autonomous_execution": {
+    "active_tasks": [],
+    "current_task": null,
+    "waiting_for_nitin": [
+      {
+        "gate": "NITIN_PUBLISH_APPROVAL",
+        "task_id": "P0E1-EXAMPLE-PUBLISH"
+      }
+    ]
+  },
+  "backlog_summary": {
+    "blocked": 1,
+    "claimed": 0,
+    "completed": 4,
+    "failed": 0,
+    "ready": 1,
+    "running": 0,
+    "verifying": 0,
+    "waiting_for_nitin": 1
+  },
+  "current_content": null,
+  "current_release": null,
+  "datastore_ids": {},
+  "deployments": [],
+  "duplicate_side_effect_count": 0,
+  "evidence_refs": [
+    {
+      "artifact": "P0E_CONTROL_PLANE_ARCHITECTURE_DECISION_V01.json",
+      "version": "V01"
+    }
+  ],
+  "git": {
+    "branch": "p0e/live-control-plane-bakeoff",
+    "commit_sha": "fe1b83c1d36960016834b9eda6577c53a84c159a",
+    "repository": "NitinBR1406/unchained-pipeline"
+  },
+  "grants": {},
+  "invariants": {
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "STATE_RECOVERED_AFTER_RESTART": true,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": false,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": false
+  },
+  "issue_classes": {
+    "material": [],
+    "must_fix": [],
+    "nice_to_have": []
+  },
+  "milestone": "TEMPORAL CONTROL PLANE FOUNDATION",
+  "phase": "P0-E1",
+  "production_state": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "mutated": false,
+    "p1_scenario": "9627055"
+  },
+  "project": "UNCHAINED NITIN \u2014 MASTER",
+  "proven_tests": [],
+  "provenance": [
+    {
+      "arch_decision": "e001",
+      "ts": "2026-01-01T00:00:01Z"
+    }
+  ],
+  "runner_health": {
+    "claude": "2026-01-01T00:00:03Z"
+  },
+  "scenario_ids": {},
+  "schema_version": 1,
+  "state_version": 3,
+  "updated_at": "2026-01-01T00:00:03Z",
+  "updated_by": "claude"
+}
