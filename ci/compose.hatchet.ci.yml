@@ -1,0 +1,37 @@
+# CI Hatchet stack incl. TWO worker containers + shared side-effect volume. Ephemeral; `down -v` after.
+# hatchet-lite exposes dashboard :8888 and engine grpc :7077. A client token is minted in the workflow
+# (see p0e-live-bakeoff.yml: `hatchet-admin token create`) and injected as HATCHET_CLIENT_TOKEN.
+version: "3.8"
+services:
+  postgres:
+    image: postgres:16
+    environment: {POSTGRES_USER: hatchet, POSTGRES_PASSWORD: hatchet, POSTGRES_DB: hatchet}
+  hatchet:
+    image: ghcr.io/hatchet-dev/hatchet/hatchet-lite:latest   # pin digest in real run; recorded in evidence
+    depends_on: [postgres]
+    environment:
+      DATABASE_URL: "postgresql://hatchet:hatchet@postgres:5432/hatchet?sslmode=disable"
+      SERVER_AUTH_COOKIE_INSECURE: "t"
+      SERVER_GRPC_BROADCAST_ADDRESS: "hatchet:7077"
+      SERVER_GRPC_INSECURE: "t"
+    ports: ["8888:8080","7077:7077"]
+  worker1:
+    build: {context: .., dockerfile: Dockerfile.worker}
+    command: ["python","hatchet_bakeoff.py","--worker"]
+    depends_on: [hatchet]
+    environment:
+      HATCHET_CLIENT_TOKEN: "${HATCHET_CLIENT_TOKEN}"
+      HATCHET_CLIENT_TLS_STRATEGY: "none"
+      SE_STORE: /data/se/side_effects.json
+    volumes: ["se:/data/se"]
+  worker2:
+    build: {context: .., dockerfile: Dockerfile.worker}
+    command: ["python","hatchet_bakeoff.py","--worker"]
+    depends_on: [hatchet]
+    environment:
+      HATCHET_CLIENT_TOKEN: "${HATCHET_CLIENT_TOKEN}"
+      HATCHET_CLIENT_TLS_STRATEGY: "none"
+      SE_STORE: /data/se/side_effects.json
+    volumes: ["se:/data/se"]
+volumes:
+  se: {}
