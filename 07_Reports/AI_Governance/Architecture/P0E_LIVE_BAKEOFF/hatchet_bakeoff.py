@@ -1,16 +1,26 @@
 """Hatchet side of the P0-E live bake-off — V02.3 (bootstrap/readiness closure: LAZY client init + strict
 config readycheck + bootstrap evidence). Uses current native durable primitives (durable event wait,
 worker-slot eviction, retries). Phases mirror temporal: worker | readycheck | start | resume.
+V02.7: readycheck CLIENT_INIT_FAILED now records a SECRET-SAFE err/msg/trace (see _sanitize) to pinpoint the failing attribute/config path; still fail-closed, never PASS.
 V02.3 FIX: V02 constructed `Hatchet(debug=True)` at MODULE IMPORT, so importing this module (host-side
 `controller.py hatchet start/resume`, or the worker container) raised
 `pydantic_core.ValidationError: API token is required ...` whenever HATCHET_CLIENT_TOKEN was missing/empty
 — a bootstrap failure, not a durability failure. The client (and the decorator-bound workflow class) are
 now built LAZILY, only once a valid runtime token is present; a missing token fails CLOSED with bootstrap
 evidence and NEVER constructs a silently-passing client. Authored from hatchet-sdk docs; OBSERVED only on the runner."""
-import os, sys, time, json, uuid
+import os, sys, time, json, uuid, re, traceback
 MAX_RUNS=int(os.environ.get("MAX_RUNS","4"))
 IDS=os.environ.get("IDS_FILE","/data/se/ids_hatchet.json")
 import common_semantics as cs
+def _sanitize(text):
+    """Secret-safe: strip the run token, JWT-shaped values, and Authorization/Bearer values. No env dump."""
+    if text is None: return ""
+    s=str(text)
+    tok=os.environ.get("HATCHET_CLIENT_TOKEN","").strip()
+    if tok: s=s.replace(tok,"<REDACTED_TOKEN>")
+    s=re.sub(r'[A-Za-z0-9_=-]{10,}\.[A-Za-z0-9_=-]{10,}\.[A-Za-z0-9_=-]{6,}', '<REDACTED_JWT>', s)
+    s=re.sub(r'(?i)\b(authorization|bearer|token)\b\s*[:=]?\s*[^\s,;]+', r'\1 <REDACTED>', s)
+    return s
 APPROVE_EVENT="nitin:approve"
 ENQUEUE_EVENT="poster:enqueue"
 def _evid_dir():
@@ -84,8 +94,12 @@ def readycheck():
     except SystemExit:
         raise
     except Exception as e:
-        _write_bootstrap(HATCHET_CLIENT_CONFIG_READY=False, detail={"reason":"CLIENT_INIT_FAILED","err":type(e).__name__})
-        print("HATCHET_CLIENT_CONFIG_READY=FALSE diag=CLIENT_INIT_FAILED"); raise SystemExit(1)
+        detail={"reason":"CLIENT_INIT_FAILED",
+                "err":type(e).__name__,
+                "msg":_sanitize(str(e)),
+                "trace":_sanitize(traceback.format_exc(limit=4))[-1200:]}
+        _write_bootstrap(HATCHET_CLIENT_CONFIG_READY=False, detail=detail)
+        print("HATCHET_CLIENT_CONFIG_READY=FALSE diag=CLIENT_INIT_FAILED err=%s"%type(e).__name__); raise SystemExit(1)
     _write_bootstrap(HATCHET_CLIENT_CONFIG_READY=True, detail={"reason":"CONFIG_OK"})
     cs.record("HATCHET_BOOTSTRAP","hatchet","OBSERVED_PASS",{"reason":"CONFIG_OK"})
     print("HATCHET_CLIENT_CONFIG_READY=TRUE")

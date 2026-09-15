@@ -1,6 +1,7 @@
 # P0-E Live Control-Plane Bake-Off — GitHub Actions V02.3 (ephemeral ubuntu-latest, Docker preinstalled).
 # Copy to .github/workflows/p0e-live-bakeoff.yml on branch p0e/live-control-plane-bakeoff.
-# V02.6 = HARNESS SEMANTICS CLOSURE (no redesign): L auto-completes after the long activity; Hatchet
+# V02.7 = HATCHET CLIENT BOOTSTRAP FORENSICS: deterministic transport probe (no 000000 false-positive) + hatchet-job SDK provenance. Temporal LOCKED/green.
+# (carried) V02.6 = HARNESS SEMANTICS CLOSURE: L auto-completes after the long activity; Hatchet
 #   server-liveness is transport-based (403 != down). No test-semantics/scoring/gate/production change.
 # (carried) V02.5 = BOOTSTRAP CONFIGURATION CLOSURE:
 #   * Temporal: BIND_ON_IP=0.0.0.0 (compose) + AUTHORITATIVE fail-closed frontend-health gate + server-bootstrap evidence.
@@ -127,7 +128,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup host SDK
-        run: mkdir -p evidence && (pip install hatchet-sdk pyyaml >/dev/null 2>&1 || pip install hatchet-sdk)
+        run: |
+          mkdir -p evidence
+          pip install hatchet-sdk pyyaml >/dev/null 2>&1 || pip install hatchet-sdk
+          python3 - <<'PY'
+          import json,importlib.metadata as m,platform
+          def v(p):
+            try: return m.version(p)
+            except Exception: return "unknown"
+          json.dump({"hatchet_sdk_job_version": v("hatchet-sdk"),
+                     "dockerfile_pinned_hatchet_sdk": "0.47.0",
+                     "python": platform.python_version()},
+                    open("evidence/hatchet_sdk_provenance.json","w"), indent=2)
+          PY
       - name: Hatchet — up + run-scoped token (robust, masked, fail-closed)
         run: |
           export SE_DIR=$PWD/se_hatchet; mkdir -p $SE_DIR; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
@@ -139,8 +152,12 @@ jobs:
           # returns ANY real HTTP status (http_code != 000). Auth/token/worker readiness stay separate fail-closed gates.
           SERVER_READY=0; LAST_CODE=000
           for i in $(seq 1 60); do
-            LAST_CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 5 http://localhost:8888/ 2>/dev/null || echo 000)
-            case "$LAST_CODE" in ""|000) sleep 3;; *) SERVER_READY=1; break;; esac
+            LAST_CODE=$(curl -s -o /dev/null -w '%{http_code}' --max-time 5 http://localhost:8888/ 2>/dev/null); RC=$?
+            if [ "$RC" -ne 0 ]; then LAST_CODE=000; fi
+            case "$LAST_CODE" in
+              [1-9][0-9][0-9]) SERVER_READY=1; break ;;
+              *) sleep 3 ;;
+            esac
           done
           python3 -c "import json;json.dump({'HATCHET_SERVER_READY': ${SERVER_READY}==1,'observed_http_code':'${LAST_CODE}','note':'liveness=transport-only; not an auth-success claim'},open('evidence/hatchet_server_bootstrap.json','w'),indent=2)"
           if [ "$SERVER_READY" != 1 ]; then
@@ -257,6 +274,7 @@ jobs:
           cp dl/p0e-hatchet-evidence/hatchet_diagnostics.log    evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_token_stderr.log   evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_server_bootstrap.json evidence/ 2>/dev/null || true
+          cp dl/p0e-hatchet-evidence/hatchet_sdk_provenance.json evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_server_logs.log    evidence/ 2>/dev/null || true
           : > evidence/results.jsonl
           cat dl/p0e-temporal-evidence/results.jsonl >> evidence/results.jsonl 2>/dev/null || true
