@@ -12,14 +12,14 @@ services:
     environment: {DB: postgres12, DB_PORT: 5432, POSTGRES_USER: temporal, POSTGRES_PWD: temporal, POSTGRES_SEEDS: postgresql, BIND_ON_IP: "0.0.0.0"}
     ports: ["7233:7233"]
   worker1:
-    build: {context: ../.., dockerfile: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/ci/Dockerfile.p0e1worker}
+    build: {context: ../../../../.., dockerfile: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/ci/Dockerfile.p0e1worker}
     restart: on-failure
     command: ["python","-m","control_plane.temporal_live","worker"]
     depends_on: [temporal]
     environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json, RESULTS_LOG: /data/se/results.jsonl, APPROVAL_KEYRING: /data/se/approval_authority.TEST_ONLY.json}
     volumes: ["${SE_DIR}:/data/se"]
   worker2:
-    build: {context: ../.., dockerfile: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/ci/Dockerfile.p0e1worker}
+    build: {context: ../../../../.., dockerfile: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/ci/Dockerfile.p0e1worker}
     restart: on-failure
     command: ["python","-m","control_plane.temporal_live","worker"]
     depends_on: [temporal]
