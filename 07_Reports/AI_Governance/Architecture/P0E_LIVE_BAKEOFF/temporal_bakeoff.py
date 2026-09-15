@@ -1,4 +1,4 @@
-"""Temporal side of the P0-E live bake-off — V02.4 (post-restart recovery closure: every restart/recovery await is BOUNDED with evidence markers; a timeout fail-closes + tears down, never hangs).
+"""Temporal side of the P0-E live bake-off — V02.6 (harness fixture fix: L auto-completes after the long activity) / V02.4 (post-restart recovery closure: every restart/recovery await is BOUNDED with evidence markers; a timeout fail-closes + tears down, never hangs).
 Phases (called by the CI workflow, interleaved with docker kill/restart of worker + postgres):
   worker            -> run a worker (low concurrency so a held slot would be visible)
   start             -> start A (durable human wait) and PROVE it reached AWAITING via an explicit, bounded
@@ -194,7 +194,10 @@ async def start():
         cs.record("TEMPORAL_START_DIAG","temporal","OBSERVED_FAIL",{"reason":whyA,"A_state":stA})
         json.dump(ids, open(_ids_path(),"w")); print("DIAG=%s A_state=%s"%(whyA,stA)); raise SystemExit(1)
     # (2) launch L (heartbeated long) + 20 auto WHILE A is proven-awaiting
-    ids["L"]=f"L-{uuid.uuid4().hex[:6]}"; await c.start_workflow(PosterWorkflow.run, args=["L",120.0,False], id=ids["L"], task_queue=TASK_QUEUE)
+    # L = CRASH_DURING_LONG_ACTIVITY subject: auto=True so it SELF-COMPLETES after the (killed+retried) long
+    # activity. V02.6 fixture fix: auto=False made L enter AWAITING_HUMAN_GATE and block on an approval that
+    # resume() never sends for L -> a harness L_RESULT_TIMEOUT, not an engine failure. Scoring/records unchanged.
+    ids["L"]=f"L-{uuid.uuid4().hex[:6]}"; await c.start_workflow(PosterWorkflow.run, args=["L",120.0,True], id=ids["L"], task_queue=TASK_QUEUE)
     ids["P"]=[]
     for i in range(20):
         wid=f"P{i}-{uuid.uuid4().hex[:4]}"; ids["P"].append(wid)

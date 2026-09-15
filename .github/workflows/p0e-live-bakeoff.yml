@@ -1,6 +1,8 @@
 # P0-E Live Control-Plane Bake-Off — GitHub Actions V02.3 (ephemeral ubuntu-latest, Docker preinstalled).
 # Copy to .github/workflows/p0e-live-bakeoff.yml on branch p0e/live-control-plane-bakeoff.
-# V02.5 = BOOTSTRAP CONFIGURATION CLOSURE (no redesign):
+# V02.6 = HARNESS SEMANTICS CLOSURE (no redesign): L auto-completes after the long activity; Hatchet
+#   server-liveness is transport-based (403 != down). No test-semantics/scoring/gate/production change.
+# (carried) V02.5 = BOOTSTRAP CONFIGURATION CLOSURE:
 #   * Temporal: BIND_ON_IP=0.0.0.0 (compose) + AUTHORITATIVE fail-closed frontend-health gate + server-bootstrap evidence.
 #   * Hatchet: server cookie-domain/URL fix (compose) so the API starts; host maps hatchet->127.0.0.1 so host+workers use the same broadcast addr; server-ready evidence before token creation.
 # (carried) V02.4 = RECOVERY/TOKEN CLOSURE:
@@ -132,10 +134,15 @@ jobs:
           # host must reach the engine at the token's broadcast address (hatchet:7077); 7077 is published, so map it to loopback
           grep -q "[[:space:]]hatchet$" /etc/hosts || echo "127.0.0.1 hatchet" | sudo tee -a /etc/hosts >/dev/null
           SE_DIR=$SE_DIR docker compose -f ci/compose.hatchet.ci.yml up -d --build postgres hatchet
-          # AUTHORITATIVE server-ready gate: the API must actually be serving (cookie-domain/session-store bootstrap fixed in compose)
-          SERVER_READY=0
-          for i in $(seq 1 60); do curl -sf http://localhost:8888/ >/dev/null && { SERVER_READY=1; break; } || sleep 3; done
-          python3 -c "import json;json.dump({'HATCHET_SERVER_READY': ${SERVER_READY}==1},open('evidence/hatchet_server_bootstrap.json','w'),indent=2)"
+          # AUTHORITATIVE server-LIVENESS gate (transport only; NOT an auth-success claim).
+          # V02.6 fix: `curl -sf` treated the server's real HTTP 403 on GET / as "down". Liveness = the server
+          # returns ANY real HTTP status (http_code != 000). Auth/token/worker readiness stay separate fail-closed gates.
+          SERVER_READY=0; LAST_CODE=000
+          for i in $(seq 1 60); do
+            LAST_CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 5 http://localhost:8888/ 2>/dev/null || echo 000)
+            case "$LAST_CODE" in ""|000) sleep 3;; *) SERVER_READY=1; break;; esac
+          done
+          python3 -c "import json;json.dump({'HATCHET_SERVER_READY': ${SERVER_READY}==1,'observed_http_code':'${LAST_CODE}','note':'liveness=transport-only; not an auth-success claim'},open('evidence/hatchet_server_bootstrap.json','w'),indent=2)"
           if [ "$SERVER_READY" != 1 ]; then
             { echo "== hatchet server logs (JWT-redacted) =="; docker compose -f ci/compose.hatchet.ci.yml logs --no-color --tail 200 hatchet; } 2>&1               | sed -E 's/[A-Za-z0-9_=-]{20,}\.[A-Za-z0-9_=-]{10,}\.[A-Za-z0-9_=-]{10,}/<REDACTED_JWT>/g' > evidence/hatchet_server_logs.log || true
             echo "HATCHET_SERVER_READY=FALSE (fail-closed)"; exit 1
