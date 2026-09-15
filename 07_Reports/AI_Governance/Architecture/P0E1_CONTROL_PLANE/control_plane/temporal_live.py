@@ -1,4 +1,4 @@
-"""P0E1-TEMPORAL-LIVE-WIRE — runnable wiring of ControlPlaneTask to a DISPOSABLE, NON-PRODUCTION Temporal
+"""P0E1-TEMPORAL-LIVE-WIRE (worker startup hardened: bounded connect + namespace-ready retry) — runnable wiring of ControlPlaneTask to a DISPOSABLE, NON-PRODUCTION Temporal
 dev server. Produces RAW runtime evidence (never simulation). Guarded so it imports without the SDK.
 Phases (invoked by .github/workflows/p0e1-temporal-live.yml):
   worker  -> low-slot worker (MAX_SLOTS) so a held slot would be visible
@@ -23,6 +23,8 @@ QUERY_RPC_TIMEOUT_S=float(os.environ.get("QUERY_RPC_TIMEOUT_S","5"))
 POLL_EVERY_S=float(os.environ.get("POLL_EVERY_S","2"))
 RESULT_DEADLINE_S=float(os.environ.get("RESULT_DEADLINE_S","240"))
 PARALLEL_RESULT_DEADLINE_S=float(os.environ.get("PARALLEL_RESULT_DEADLINE_S","120"))
+WORKER_CONNECT_RETRIES=int(os.environ.get("WORKER_CONNECT_RETRIES","60"))
+WORKER_CONNECT_BACKOFF_S=float(os.environ.get("WORKER_CONNECT_BACKOFF_S","3"))
 AWAITING="AWAITING_HUMAN_GATE"
 REQUIRED_TESTS=["DURABLE_HUMAN_WAIT","CRASH_DURING_LONG_ACTIVITY","ORCHESTRATOR_DB_INTERRUPTION",
     "DUPLICATE_STALE_EVENTS","IDEMPOTENCY_RETRY","PARALLEL_AUTONOMY_20","LEASE_EXPIRY_RECLAIM",
@@ -98,8 +100,28 @@ if _HAS:
                     self._phase="REJECTED"; return {"task_id":task["task_id"],"status":"REJECTED_UNVERIFIED_APPROVAL"}
             self._phase="COMPLETED"; return {"task_id":task["task_id"],"status":"COMPLETED"}
     async def _client(): return await Client.connect(ADDR)
+    async def _connect_ready():
+        """BOUNDED worker readiness: retry Client.connect while Temporal is unreachable AND tolerate the
+        short window where namespace 'default' is not yet registered. Fail-closed (SystemExit) if the
+        deadline is exceeded. This makes workers register real pollers; it does NOT weaken start()'s
+        NO_POLLERS acceptance (start still fail-closes if pollers==0)."""
+        last=None
+        for attempt in range(WORKER_CONNECT_RETRIES):
+            try:
+                c=await Client.connect(ADDR)
+                try:
+                    from temporalio.api.workflowservice.v1 import DescribeNamespaceRequest
+                    await c.workflow_service.describe_namespace(DescribeNamespaceRequest(namespace="default"))
+                except Exception as e2:
+                    last=e2; print("worker: namespace 'default' not ready (attempt %d): %s"%(attempt+1,type(e2).__name__))
+                    await asyncio.sleep(WORKER_CONNECT_BACKOFF_S); continue
+                print("worker: connected + namespace 'default' visible after %d attempt(s)"%(attempt+1)); return c
+            except Exception as e:
+                last=e; print("worker: connect failed (attempt %d): %s"%(attempt+1,type(e).__name__))
+                await asyncio.sleep(WORKER_CONNECT_BACKOFF_S)
+        raise SystemExit("worker readiness deadline exceeded after %d attempts: %r"%(WORKER_CONNECT_RETRIES,last))
     async def worker():
-        c=await _client()
+        c=await _connect_ready()
         async with Worker(c,task_queue=TASK_QUEUE,workflows=[ControlPlaneTask],
                           activities=[act_execute,act_long,act_verify_approval],
                           max_concurrent_activities=MAX_SLOTS,max_concurrent_workflow_tasks=MAX_SLOTS):
