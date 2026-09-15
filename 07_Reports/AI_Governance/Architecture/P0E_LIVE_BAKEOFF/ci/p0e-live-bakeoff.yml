@@ -1,6 +1,9 @@
 # P0-E Live Control-Plane Bake-Off — GitHub Actions V02.3 (ephemeral ubuntu-latest, Docker preinstalled).
 # Copy to .github/workflows/p0e-live-bakeoff.yml on branch p0e/live-control-plane-bakeoff.
-# V02.8 = TRANSPORT PROBE ERREXIT CLOSURE: the curl command-substitution now sits in an `if` condition so a
+# V02.9 = SDK ALIGNMENT (host hatchet-sdk pinned ==0.47.0 to match Dockerfile.worker; h.client unchanged) +
+#   TEMPORAL READINESS FORENSICS (richer NO_POLLERS diagnostics: container/exit/restart state, worker
+#   stdout/stderr, namespace + taskqueue describe). Readiness stays strict/fail-closed. Temporal semantics unchanged.
+# (carried) V02.8 = TRANSPORT PROBE ERREXIT CLOSURE: the curl command-substitution now sits in an `if` condition so a
 #   transient curl exit (e.g. 56) can't abort the step under `bash -e`; loop retries, LAST_CODE=000 => DOWN.
 # (carried) V02.7 = HATCHET CLIENT BOOTSTRAP FORENSICS: deterministic transport probe (no 000000 false-positive) + hatchet-job SDK provenance. Temporal LOCKED/green.
 # (carried) V02.6 = HARNESS SEMANTICS CLOSURE: L auto-completes after the long activity; Hatchet
@@ -45,7 +48,7 @@ jobs:
             "GITHUB_BRANCH":os.environ.get("GITHUB_REF_NAME"),"RUNNER_OS":platform.platform(),"python":platform.python_version()},
             open("evidence/run_meta.json","w"),indent=2)
           PY
-          pip install temporalio hatchet-sdk pyyaml >/dev/null 2>&1 || pip install temporalio hatchet-sdk
+          pip install temporalio hatchet-sdk==0.47.0 pyyaml >/dev/null 2>&1 || pip install temporalio hatchet-sdk==0.47.0
           python3 - <<'PY'
           import json,importlib.metadata as m
           def v(p):
@@ -104,10 +107,23 @@ jobs:
       - name: Temporal — diagnostics on failure
         if: failure()
         run: |
-          { echo "== docker compose ps =="; docker compose -f ci/compose.temporal.ci.yml ps;
-            echo "== worker logs =="; docker compose -f ci/compose.temporal.ci.yml logs --no-color --tail 200 worker1 worker2;
-            echo "== temporal server logs =="; docker compose -f ci/compose.temporal.ci.yml logs --no-color --tail 120 temporal;
-            echo "== cluster health =="; docker compose -f ci/compose.temporal.ci.yml exec -T temporal tctl cluster health; } > evidence/temporal_diagnostics.log 2>&1 || true
+          set +e
+          C="docker compose -f ci/compose.temporal.ci.yml"
+          D=evidence/temporal_diagnostics.log
+          {
+            echo "== docker compose ps -a =="; $C ps -a
+            echo "== container state / exit / restart =="
+            for id in $($C ps -aq); do
+              docker inspect --format '{{.Name}} status={{.State.Status}} running={{.State.Running}} exitcode={{.State.ExitCode}} restarts={{.RestartCount}} oom={{.State.OOMKilled}} error={{.State.Error}}' "$id"
+            done
+            echo "== worker1 logs (stdout+stderr, all) =="; $C logs --no-color --timestamps --tail all worker1
+            echo "== worker2 logs (stdout+stderr, all) =="; $C logs --no-color --timestamps --tail all worker2
+            echo "== temporal server logs (tail) =="; $C logs --no-color --tail 150 temporal
+            echo "== cluster health =="; $C exec -T temporal tctl cluster health
+            echo "== namespace readiness (default) =="; $C exec -T temporal tctl --namespace default namespace describe
+            echo "== taskqueue describe (p0e-bakeoff workflow pollers) =="; $C exec -T temporal tctl taskqueue describe --taskqueue p0e-bakeoff
+          } > "$D" 2>&1
+          echo "captured temporal diagnostics -> $D"
       - name: Temporal — down
         if: always()
         run: SE_DIR=$PWD/se_temporal docker compose -f ci/compose.temporal.ci.yml down -v
@@ -132,14 +148,16 @@ jobs:
       - name: Setup host SDK
         run: |
           mkdir -p evidence
-          pip install hatchet-sdk pyyaml >/dev/null 2>&1 || pip install hatchet-sdk
+          pip install hatchet-sdk==0.47.0 pyyaml >/dev/null 2>&1 || pip install hatchet-sdk==0.47.0
           python3 - <<'PY'
           import json,importlib.metadata as m,platform
           def v(p):
             try: return m.version(p)
             except Exception: return "unknown"
-          json.dump({"hatchet_sdk_job_version": v("hatchet-sdk"),
-                     "dockerfile_pinned_hatchet_sdk": "0.47.0",
+          jobv=v("hatchet-sdk"); pinned="0.47.0"
+          json.dump({"hatchet_sdk_job_version": jobv,
+                     "dockerfile_pinned_hatchet_sdk": pinned,
+                     "host_matches_worker": jobv==pinned,
                      "python": platform.python_version()},
                     open("evidence/hatchet_sdk_provenance.json","w"), indent=2)
           PY
