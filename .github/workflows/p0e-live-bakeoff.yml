@@ -1,7 +1,12 @@
-# P0-E Live Control-Plane Bake-Off — GitHub Actions V02 (ephemeral ubuntu-latest, Docker preinstalled).
+# P0-E Live Control-Plane Bake-Off — GitHub Actions V02.2 (ephemeral ubuntu-latest, Docker preinstalled).
 # Copy to .github/workflows/p0e-live-bakeoff.yml on branch p0e/live-control-plane-bakeoff.
-# V02 closes live evidence: real worker kill/restart + Postgres/orchestrator restart during the active
-# window, structured OBSERVED records, fail-closed gate, teardown+verify. NO production secrets.
+# V02.2 changes vs V02:
+#   1) Temporal and Hatchet run as SEPARATE, PARALLEL jobs (no needs: between them) so a Temporal failure
+#      can NOT prevent Hatchet from executing  => TEMPORAL_FAILURE_BLOCKS_HATCHET = FALSE (proven by design).
+#   2) A final assemble+gate job (needs both, if: always()) merges each engine's results.jsonl and stays
+#      FAIL-CLOSED: a missing/failed engine => its records absent => NOT_TESTABLE => FINAL_RECOMMENDATION
+#      PENDING => gate exits non-zero, while every engine's evidence is still uploaded.
+# NO production secrets. Disposable infra only; each engine job tears itself down with `down -v`.
 name: p0e-live-bakeoff
 on:
   workflow_dispatch: {}
@@ -10,14 +15,13 @@ permissions: { contents: read }
 env:
   HARNESS: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF
 jobs:
-  bakeoff:
+  # ------------------------------------------------------------------ metadata / provenance
+  meta:
     runs-on: ubuntu-latest
     defaults: { run: { working-directory: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF } }
-    env:
-      RESULTS_LOG: ${{ github.workspace }}/07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF/evidence/results.jsonl
     steps:
       - uses: actions/checkout@v4
-      - name: Metadata + SDKs
+      - name: Metadata + SDK versions
         run: |
           mkdir -p evidence
           python3 - <<'PY'
@@ -34,7 +38,20 @@ jobs:
             except Exception: return "unknown"
           json.dump({"temporalio":v("temporalio"),"hatchet_sdk":v("hatchet-sdk")}, open("evidence/sdk_versions.json","w"), indent=2)
           PY
-      # ================= TEMPORAL =================
+      - name: Upload meta
+        uses: actions/upload-artifact@v4
+        with: { name: p0e-meta, path: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF/evidence/ }
+
+  # ------------------------------------------------------------------ TEMPORAL (independent job)
+  temporal:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF } }
+    env:
+      RESULTS_LOG: ${{ github.workspace }}/07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF/evidence/results.jsonl
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup host SDK
+        run: mkdir -p evidence && (pip install temporalio pyyaml >/dev/null 2>&1 || pip install temporalio)
       - name: Temporal — up
         run: |
           export SE_DIR=$PWD/se_temporal; mkdir -p $SE_DIR; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
@@ -57,7 +74,26 @@ jobs:
       - name: Temporal — down
         if: always()
         run: SE_DIR=$PWD/se_temporal docker compose -f ci/compose.temporal.ci.yml down -v
-      # ================= HATCHET =================
+      - name: Temporal — verify teardown
+        if: always()
+        run: |
+          echo "containers:"; docker ps -a
+          test -z "$(docker ps -q)" && echo "POC_INFRA_REMAINING=FALSE" || (echo "POC_INFRA_REMAINING=TRUE"; exit 1)
+      - name: Upload temporal evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: p0e-temporal-evidence, path: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF/evidence/ }
+
+  # ------------------------------------------------------------------ HATCHET (independent job; NO needs: temporal)
+  hatchet:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF } }
+    env:
+      RESULTS_LOG: ${{ github.workspace }}/07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF/evidence/results.jsonl
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup host SDK
+        run: mkdir -p evidence && (pip install hatchet-sdk pyyaml >/dev/null 2>&1 || pip install hatchet-sdk)
       - name: Hatchet — up + token
         run: |
           export SE_DIR=$PWD/se_hatchet; mkdir -p $SE_DIR; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
@@ -83,22 +119,51 @@ jobs:
       - name: Hatchet — down
         if: always()
         run: SE_DIR=$PWD/se_hatchet docker compose -f ci/compose.hatchet.ci.yml down -v
-      # ================= EVIDENCE =================
-      - name: Assemble + hash
-        if: always()
-        run: |
-          python controller.py assemble
-          sha256sum evidence/P0E_*.json evidence/P0E_*.md > evidence/EVIDENCE_SHA256SUMS.txt || true
-          cat evidence/P0E_LIVE_FINAL_DECISION_V01.md || true
-      - name: Upload evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with: { name: p0e-live-bakeoff-evidence, path: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF/evidence/ }
-      - name: Verify teardown
+      - name: Hatchet — verify teardown
         if: always()
         run: |
           echo "containers:"; docker ps -a
-          echo "volumes:"; docker volume ls
           test -z "$(docker ps -q)" && echo "POC_INFRA_REMAINING=FALSE" || (echo "POC_INFRA_REMAINING=TRUE"; exit 1)
+      - name: Upload hatchet evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: p0e-hatchet-evidence, path: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF/evidence/ }
+
+  # ------------------------------------------------------------------ ASSEMBLE + FAIL-CLOSED GATE
+  assemble_gate:
+    needs: [ meta, temporal, hatchet ]
+    if: always()   # runs even if an engine job failed -> proves TEMPORAL_FAILURE_BLOCKS_HATCHET=FALSE and keeps the gate honest
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF } }
+    env:
+      RESULTS_LOG: ${{ github.workspace }}/07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF/evidence/results.jsonl
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download all engine evidence
+        uses: actions/download-artifact@v4
+        with: { path: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF/dl }
+      - name: Merge evidence (missing engine -> NOT_TESTABLE -> PENDING, fail-closed)
+        run: |
+          mkdir -p evidence
+          cp dl/p0e-meta/run_meta.json            evidence/ 2>/dev/null || true
+          cp dl/p0e-meta/sdk_versions.json        evidence/ 2>/dev/null || true
+          cp dl/p0e-temporal-evidence/temporal_versions.json evidence/ 2>/dev/null || true
+          cp dl/p0e-temporal-evidence/temporal_stats.log     evidence/ 2>/dev/null || true
+          cp dl/p0e-hatchet-evidence/hatchet_versions.json   evidence/ 2>/dev/null || true
+          cp dl/p0e-hatchet-evidence/hatchet_stats.log       evidence/ 2>/dev/null || true
+          : > evidence/results.jsonl
+          cat dl/p0e-temporal-evidence/results.jsonl >> evidence/results.jsonl 2>/dev/null || true
+          cat dl/p0e-hatchet-evidence/results.jsonl  >> evidence/results.jsonl 2>/dev/null || true
+          echo "engines present:"; ls dl || true
+          echo "merged results line count:"; wc -l evidence/results.jsonl || true
+      - name: Assemble + hash
+        run: |
+          python controller.py assemble
+          sha256sum evidence/P0E_*.json evidence/P0E_*.md evidence/results.jsonl > evidence/EVIDENCE_SHA256SUMS.txt || true
+          cat evidence/P0E_LIVE_FINAL_DECISION_V01.md || true
+      - name: Upload final evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: p0e-live-bakeoff-evidence, path: 07_Reports/AI_Governance/Architecture/P0E_LIVE_BAKEOFF/evidence/ }
       - name: Fail-closed gate
         run: python controller.py gate
