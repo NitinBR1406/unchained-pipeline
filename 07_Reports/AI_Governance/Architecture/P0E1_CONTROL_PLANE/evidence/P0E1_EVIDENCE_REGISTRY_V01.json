@@ -1,0 +1,15 @@
+{
+  "artifact": "P0E1_EVIDENCE_REGISTRY", "version": "V01", "schema_version": 1,
+  "P0E1_FINAL_FREEZE": "GREEN",
+  "shared_drive": {"name": "Unchained Nitin — Master", "drive_id": "0AG0CqqUZ6YuXUk9PVA"},
+  "final_folder": {"title": "P0E1_CONTROL_PLANE_V02_FINAL", "id": "1c4fg3t7YGL4-183GJhbZOBgyIPGuAk7_"},
+  "historical_folder_v01": {"title": "P0E1_CONTROL_PLANE_V01", "id": "1CzQOPbY44mhXu23aUgiGitQ_dSNPvhpg", "note": "historical; not overwritten"},
+  "files": [
+    {"title": "P0E1_LIVE_ACCEPTANCE_V01.json", "drive_id": "1j-uuzMCuvbPZfkjYrVGlYSw9lgqiymRF", "sha256": "4344d2e816736b47221bdcda3b4d0e5a9f9f959904389211ae050f6439c32d4d", "readback_sha256_verified": true},
+    {"title": "UNCHAINED_MASTER_PROJECT_STATE_V02.json", "drive_id": "1k7fOT9sN-5dHpAGHG8GKdLTBPrUpXWEh", "sha256": "e3b2fbfc815fe4ee395bdeaa955d0626fee2eca95facba980f5d6deb4445c1c2", "readback_sha256_verified": true},
+    {"title": "P0E1_TEST_REPORT_V02.json", "drive_id": "1rtfIWGD3KoofNRlrsNTd8F8tfOFRtiWR", "sha256": "18c670c5c0e8ebd79dcefaebc8654bccf1911b2dbad0fbf50c77d010dcaf65f5", "readback_sha256_verified": "byte-identical upload/read-back"},
+    {"title": "SHA256SUMS.FINAL.txt", "drive_id": "1tRDMLUXTj6S92UhZsLGMZIb6fHoAb1rc", "sha256": "7a8e6a643706846e750f684b0c1a506b53eaa9e170e5a6f741a661b12c020838", "readback_sha256_verified": "byte-identical upload/read-back"}
+  ],
+  "central_persistence_verified": true,
+  "production_deployment_authorized": false
+}

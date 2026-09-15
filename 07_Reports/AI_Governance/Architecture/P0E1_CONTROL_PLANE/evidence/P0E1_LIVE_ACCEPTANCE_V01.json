@@ -1,0 +1,37 @@
+{
+  "P0E1_LIVE_ACCEPTANCE": "GREEN",
+  "architecture_invariants": {
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "STATE_RECOVERED_AFTER_RESTART": true,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": false,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": false
+  },
+  "architecture_invariants_result": "5/5 PASS",
+  "artifact": "P0E1_LIVE_ACCEPTANCE",
+  "live_gate": {
+    "FINAL": "READY",
+    "all_required_observed_pass": true
+  },
+  "live_temporal_tests": {
+    "CRASH_DURING_LONG_ACTIVITY": "OBSERVED_PASS",
+    "DUPLICATE_STALE_EVENTS": "OBSERVED_PASS",
+    "DURABLE_HUMAN_WAIT": "OBSERVED_PASS",
+    "HUMAN_AUTH_FAIL_CLOSED": "OBSERVED_PASS",
+    "IDEMPOTENCY_RETRY": "OBSERVED_PASS",
+    "LEASE_EXPIRY_RECLAIM": "OBSERVED_PASS",
+    "ORCHESTRATOR_DB_INTERRUPTION": "OBSERVED_PASS",
+    "PARALLEL_AUTONOMY_20": "OBSERVED_PASS",
+    "STATE_RECONSTRUCTION_AFTER_RESTART": "OBSERVED_PASS"
+  },
+  "live_temporal_tests_result": "9/9 OBSERVED_PASS",
+  "production_deployment_authorized": false,
+  "provenance": {
+    "attestation": "owner-attested + independently reviewed live artifact",
+    "note": "Live OBSERVED_PASS values are reconciled from the authoritative GitHub run; NOT re-executed by Claude in this session.",
+    "source": "GitHub Actions workflow p0e1-temporal-live RUN #3 (SUCCESS)"
+  },
+  "schema_version": 1,
+  "temporal_control_plane": "VERIFIED",
+  "version": "V01"
+}
