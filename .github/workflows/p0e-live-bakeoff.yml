@@ -1,6 +1,10 @@
 # P0-E Live Control-Plane Bake-Off — GitHub Actions V02.3 (ephemeral ubuntu-latest, Docker preinstalled).
 # Copy to .github/workflows/p0e-live-bakeoff.yml on branch p0e/live-control-plane-bakeoff.
-# V02.3 = BOOTSTRAP/READINESS CLOSURE ONLY (no redesign):
+# V02.4 = RECOVERY/TOKEN CLOSURE ONLY (no redesign):
+#   * Temporal resume() awaits are BOUNDED (bounded deadlines) + run steps have timeout-minutes -> no infinite hang after restart.
+#   * Hatchet run-scoped token is parsed by JWT-regex from the FULL admin output (fixes empty-token from `tail -1`),
+#     with redacted stderr captured on failure. Same masked token to host + workers. No hardcoded/fallback credential.
+# (still) BOOTSTRAP/READINESS CLOSURE from V02.3:
 #   * Temporal: a STRICT, fail-closed poller readycheck (controller.py temporal readycheck) proves worker1/
 #     worker2 register LIVE pollers BEFORE start; workers self-heal via connect-retry + restart:on-failure.
 #   * Hatchet: run-scoped token is created robustly (JWT-shape asserted, masked, fail-closed if empty),
@@ -67,6 +71,7 @@ jobs:
           # writes evidence/temporal_bootstrap.json {TEMPORAL_WORKER_POLLERS_READY, TEMPORAL_WORKER_COUNT}; exits 1 if 0 pollers
           python controller.py temporal readycheck
       - name: Temporal — run (start, crash+DB restart, resume)
+        timeout-minutes: 30
         env: { TEMPORAL_ADDRESS: "localhost:7233" }
         run: |
           ( while true; do docker stats --no-stream --format '{{.Name}} {{.CPUPerc}} {{.MemUsage}}' >> evidence/temporal_stats.log; sleep 5; done ) & echo $! > /tmp/stats.pid
@@ -114,15 +119,22 @@ jobs:
           export SE_DIR=$PWD/se_hatchet; mkdir -p $SE_DIR; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
           SE_DIR=$SE_DIR docker compose -f ci/compose.hatchet.ci.yml up -d --build postgres hatchet
           for i in $(seq 1 60); do curl -sf http://localhost:8888/ >/dev/null && break || sleep 3; done
-          # create token; require a JWT-shaped (a.b.c) non-empty value; retry while hatchet finishes seeding
+          # create run-scoped token; EXTRACT the JWT (a.b.c) by regex from the FULL admin output.
+          # V02.4 fix: `tail -1` grabbed an empty/log line -> empty token; regex-extract is order-independent.
+          # tenant-id is a NON-secret identifier (hatchet-lite seeded default), overridable; the TOKEN is never hardcoded.
+          HATCHET_TENANT_ID="${HATCHET_TENANT_ID:-707d0855-80ab-4e1f-a156-f1c4546cbf52}"
           TOKEN=""
-          for i in $(seq 1 20); do
-            TOKEN=$(docker compose -f ci/compose.hatchet.ci.yml exec -T hatchet /hatchet-admin token create --config /config --tenant-id 707d0855-80ab-4e1f-a156-f1c4546cbf52 2>/dev/null | tr -d '\r' | tail -1)
-            case "$TOKEN" in *.*.*) break;; *) TOKEN=""; sleep 3;; esac
+          : > evidence/hatchet_token_stderr.log
+          for i in $(seq 1 30); do
+            RAW=$(docker compose -f ci/compose.hatchet.ci.yml exec -T hatchet /hatchet-admin token create --config /config --tenant-id "$HATCHET_TENANT_ID" 2>>evidence/hatchet_token_stderr.log | tr -d '\r')
+            TOKEN=$(printf '%s\n' "$RAW" | grep -oE '[A-Za-z0-9_=-]+\.[A-Za-z0-9_=-]+\.[A-Za-z0-9_=-]+' | tail -1)
+            [ -n "$TOKEN" ] && break || { TOKEN=""; sleep 3; }
           done
+          # redact any JWT-shaped value that may have reached the captured stderr, before it becomes evidence
+          sed -i -E 's/[A-Za-z0-9_=-]{20,}\.[A-Za-z0-9_=-]{10,}\.[A-Za-z0-9_=-]{10,}/<REDACTED_JWT>/g' evidence/hatchet_token_stderr.log || true
           if [ -z "$TOKEN" ]; then
-            python3 -c "import json,os;os.makedirs('evidence',exist_ok=True);json.dump({'HATCHET_CLIENT_CONFIG_READY':False,'detail':{'reason':'TOKEN_CREATE_EMPTY'}},open('evidence/hatchet_bootstrap.json','w'),indent=2)"
-            echo "HATCHET token bootstrap FAILED (empty) — fail-closed"; exit 1
+            python3 -c "import json,os;os.makedirs('evidence',exist_ok=True);json.dump({'HATCHET_CLIENT_CONFIG_READY':False,'detail':{'reason':'TOKEN_CREATE_EMPTY','tenant_id_used':os.environ.get('HATCHET_TENANT_ID','default-seeded')}},open('evidence/hatchet_bootstrap.json','w'),indent=2)"
+            echo "HATCHET token bootstrap FAILED (empty) — fail-closed (see evidence/hatchet_token_stderr.log, redacted)"; exit 1
           fi
           echo "::add-mask::$TOKEN"                       # never let the token appear in logs
           echo "HATCHET_CLIENT_TOKEN=$TOKEN" >> $GITHUB_ENV   # run-scoped: available to host + compose in later steps
@@ -153,6 +165,7 @@ jobs:
           PY
           [ "${UP:-0}" -ge 2 ] || { echo "Hatchet workers not live (fail-closed)"; exit 1; }
       - name: Hatchet — run (start, crash+DB restart, resume)
+        timeout-minutes: 30
         env: { HATCHET_CLIENT_TLS_STRATEGY: "none" }
         run: |
           ( while true; do docker stats --no-stream --format '{{.Name}} {{.CPUPerc}} {{.MemUsage}}' >> evidence/hatchet_stats.log; sleep 5; done ) & echo $! > /tmp/hstats.pid
@@ -206,10 +219,12 @@ jobs:
           cp dl/p0e-temporal-evidence/temporal_stats.log     evidence/ 2>/dev/null || true
           cp dl/p0e-temporal-evidence/temporal_bootstrap.json   evidence/ 2>/dev/null || true
           cp dl/p0e-temporal-evidence/temporal_diagnostics.log  evidence/ 2>/dev/null || true
+          cp dl/p0e-temporal-evidence/temporal_recovery.json     evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_versions.json   evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_stats.log       evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_bootstrap.json     evidence/ 2>/dev/null || true
           cp dl/p0e-hatchet-evidence/hatchet_diagnostics.log    evidence/ 2>/dev/null || true
+          cp dl/p0e-hatchet-evidence/hatchet_token_stderr.log   evidence/ 2>/dev/null || true
           : > evidence/results.jsonl
           cat dl/p0e-temporal-evidence/results.jsonl >> evidence/results.jsonl 2>/dev/null || true
           cat dl/p0e-hatchet-evidence/results.jsonl  >> evidence/results.jsonl 2>/dev/null || true

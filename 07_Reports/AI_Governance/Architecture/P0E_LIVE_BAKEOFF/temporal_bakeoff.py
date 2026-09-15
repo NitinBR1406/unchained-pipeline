@@ -1,4 +1,4 @@
-"""Temporal side of the P0-E live bake-off — V02.3 (bootstrap/readiness closure: worker connect-retry + strict poller readycheck + bootstrap evidence).
+"""Temporal side of the P0-E live bake-off — V02.4 (post-restart recovery closure: every restart/recovery await is BOUNDED with evidence markers; a timeout fail-closes + tears down, never hangs).
 Phases (called by the CI workflow, interleaved with docker kill/restart of worker + postgres):
   worker            -> run a worker (low concurrency so a held slot would be visible)
   start             -> start A (durable human wait) and PROVE it reached AWAITING via an explicit, bounded
@@ -21,6 +21,11 @@ READY_DEADLINE_S=float(os.environ.get("READY_DEADLINE_S","90"))
 QUERY_RPC_TIMEOUT_S=float(os.environ.get("QUERY_RPC_TIMEOUT_S","5"))
 QUERY_POLL_EVERY_S=float(os.environ.get("QUERY_POLL_EVERY_S","2"))
 PARALLEL_RECHECK_S=float(os.environ.get("PARALLEL_RECHECK_S","30"))
+# V02.4 post-restart recovery deadlines (bounded; NO await may block unbounded)
+RESUME_READY_DEADLINE_S=float(os.environ.get("RESUME_READY_DEADLINE_S","60"))
+SIGNAL_DEADLINE_S=float(os.environ.get("SIGNAL_DEADLINE_S","30"))
+RESULT_DEADLINE_S=float(os.environ.get("RESULT_DEADLINE_S","240"))
+PARALLEL_RESULT_DEADLINE_S=float(os.environ.get("PARALLEL_RESULT_DEADLINE_S","120"))
 import common_semantics as cs
 from temporalio import workflow, activity
 from temporalio.client import Client
@@ -205,26 +210,79 @@ async def start():
               {"reason":"OK" if ok else whyA2,"A_before":stA,"A_while_parallel":stA2})
     print("started; A(before)=%s A(while_parallel)=%s diag=%s"%(stA,stA2,"OK" if ok else whyA2))
     if not ok: raise SystemExit(1)
-async def resume():
-    c=await _client(); ids=json.load(open(IDS))
-    hA=c.get_workflow_handle(ids["A"])
-    await hA.signal(PosterWorkflow.approve,"TOK"); await hA.signal(PosterWorkflow.approve,"TOK")  # duplicate approve
-    rA=await hA.result()
-    hL=c.get_workflow_handle(ids["L"]); rL=await hL.result()
-    # parallel-20 completion
-    done=0
-    for wid in ids["P"]:
+def _write_recovery(ok, reason, timings=None):
+    json.dump({"TEMPORAL_RECOVERY_OK":bool(ok),"reason":reason,"timings_s":timings or {}},
+              open(os.path.join(_evid_dir(),"temporal_recovery.json"),"w"), indent=2)
+def _fail_closed(reason, timings=None):
+    # recovery/diagnostic marker only — NEVER an OBSERVED_PASS derived from bootstrap
+    cs.record("TEMPORAL_RECOVERY_DIAG","temporal","OBSERVED_FAIL",{"reason":reason})
+    _write_recovery(False, reason, timings)
+    print("DIAG=%s (fail-closed, bounded)"%reason); raise SystemExit(1)
+async def _await_result(h, deadline_s):
+    """Bounded workflow-result await. Returns (result_or_None, timed_out). Never blocks unbounded."""
+    try:
+        r=await asyncio.wait_for(h.result(), timeout=deadline_s); return r, False
+    except asyncio.TimeoutError:
+        return None, True
+    except Exception as e:
+        return {"status":"ERROR","err":type(e).__name__}, False
+async def _signal_bounded(h, deadline_s):
+    end=time.time()+deadline_s
+    while time.time()<end:
         try:
-            await c.get_workflow_handle(wid).result(); done+=1
-        except Exception: pass
+            await asyncio.wait_for(h.signal(PosterWorkflow.approve,"TOK"), timeout=min(5.0,deadline_s))
+            await asyncio.wait_for(h.signal(PosterWorkflow.approve,"TOK"), timeout=min(5.0,deadline_s))  # duplicate approve
+            return True
+        except Exception:
+            await asyncio.sleep(QUERY_POLL_EVERY_S)
+    return False
+async def resume():
+    t0=time.time(); T={}
+    c=await _client(); ids=json.load(open(IDS))
+    # (R0) BOUNDED: prove worker1/worker2 re-registered LIVE pollers AFTER the CI kill + Postgres/Temporal restart
+    end=time.time()+RESUME_READY_DEADLINE_S; n=0
+    while time.time()<end:
+        n=await _count_pollers(c)
+        if n>0: break
+        await asyncio.sleep(QUERY_POLL_EVERY_S)
+    T["post_restart_ready_s"]=round(time.time()-t0,1)
+    cs.record("TEMPORAL_RESTART_RECOVERY","temporal","OBSERVED_PASS" if n>0 else "OBSERVED_FAIL",{"phase":"post_restart_worker_pollers","count":n})
+    if n<=0: _fail_closed("WORKER_NOT_REREGISTERED_AFTER_RESTART", T)
+    hA=c.get_workflow_handle(ids["A"])
+    # (R1) BOUNDED signal (dup-approve) with retry inside the deadline
+    ts=time.time(); okS=await _signal_bounded(hA, SIGNAL_DEADLINE_S); T["signal_s"]=round(time.time()-ts,1)
+    cs.record("TEMPORAL_RESUME_SIGNAL","temporal","OBSERVED_PASS" if okS else "OBSERVED_FAIL",{"dup_approve":True})
+    if not okS: _fail_closed("SIGNAL_TIMEOUT", T)
+    # (R2) BOUNDED result awaits — a hang here was the V02.3 failure; now it fail-closes with evidence
+    ts=time.time(); rA,toA=await _await_result(hA, RESULT_DEADLINE_S); T["A_result_s"]=round(time.time()-ts,1)
+    if toA:
+        cs.record("DURABLE_HUMAN_WAIT","temporal","OBSERVED_FAIL",{"phase":"resume","diag":"A_RESULT_TIMEOUT"})
+        cs.record("ORCHESTRATOR_DB_INTERRUPTION","temporal","OBSERVED_FAIL",{"diag":"A_RESULT_TIMEOUT"})
+        _fail_closed("A_RESULT_TIMEOUT", T)
+    hL=c.get_workflow_handle(ids["L"])
+    ts=time.time(); rL,toL=await _await_result(hL, RESULT_DEADLINE_S); T["L_result_s"]=round(time.time()-ts,1)
+    if toL:
+        cs.record("CRASH_DURING_LONG_ACTIVITY","temporal","OBSERVED_FAIL",{"diag":"L_RESULT_TIMEOUT"})
+        cs.record("ORCHESTRATOR_DB_INTERRUPTION","temporal","OBSERVED_FAIL",{"diag":"L_RESULT_TIMEOUT"})
+        _fail_closed("L_RESULT_TIMEOUT", T)
+    # parallel-20 completion — BOUNDED by a single global deadline
+    ts=time.time(); done=0; pend=time.time()+PARALLEL_RESULT_DEADLINE_S
+    for wid in ids["P"]:
+        rem=pend-time.time()
+        if rem<=0: break
+        r,to=await _await_result(c.get_workflow_handle(wid), rem)
+        if (not to) and r and r.get("status")=="COMPLETED": done+=1
+    T["parallel_result_s"]=round(time.time()-ts,1)
     dup=cs.dedup_count()  # side effects are one-per-key; duplicates would inflate but keys are stable
+    # ---- SUCCESS-PATH records: byte/semantically identical to V02.3 (acceptance criteria unchanged) ----
     cs.record("DURABLE_HUMAN_WAIT","temporal","OBSERVED_PASS" if rA["status"]=="COMPLETED" else "OBSERVED_FAIL",{"phase":"resume","result":rA})
     cs.record("DUPLICATE_STALE_EVENTS","temporal","OBSERVED_PASS" if rA["status"]=="COMPLETED" else "OBSERVED_FAIL",{"dup_approve":"second ignored, single completion"})
     cs.record("CRASH_DURING_LONG_ACTIVITY","temporal","OBSERVED_PASS" if rL["status"]=="COMPLETED" else "OBSERVED_FAIL",{"resumed_after_worker_kill":True})
     cs.record("ORCHESTRATOR_DB_INTERRUPTION","temporal","OBSERVED_PASS" if (rA["status"]=="COMPLETED" and rL["status"]=="COMPLETED") else "OBSERVED_FAIL",{"postgres_restart_during_run":True,"duplicate_completion":False})
     cs.record("IDEMPOTENCY_RETRY","temporal","OBSERVED_PASS",{"dedup_store_entries":dup,"duplicate_side_effect_count":0})
     cs.record("PARALLEL_AUTONOMY_20","temporal","OBSERVED_PASS" if done==20 else "OBSERVED_FAIL",{"completed":done,"while_A_awaiting":True})
-    print("resume done; A=%s L=%s parallel_done=%d dedup=%d"%(rA["status"],rL["status"],done,dup))
+    _write_recovery(True, "OK", T)
+    print("resume done; A=%s L=%s parallel_done=%d dedup=%d timings=%s"%(rA["status"],rL["status"],done,dup,T))
 def phase(name):
     if name=="worker": asyncio.run(worker())
     elif name=="readycheck": asyncio.run(readycheck())
