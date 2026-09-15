@@ -1,0 +1,51 @@
+{
+  "current_executor_task": "TASK_B",
+  "invariants": {
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "STATE_RECOVERED_AFTER_RESTART": null,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": null,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": null
+  },
+  "last_24h": {
+    "failures": null,
+    "tasks_completed": 3,
+    "tests_passed": null,
+    "unauthorized_actions": 0
+  },
+  "last_completed_task": "TASK_B",
+  "next_nitin_action": "Provision Nitin Ed25519 PUBLIC key + grant NITIN_PUBLISH_APPROVAL",
+  "next_ready_task": null,
+  "queues": {
+    "BLOCKED": [],
+    "COMPLETED": [
+      "TASK_A",
+      "TASK_B",
+      "TASK_D"
+    ],
+    "READY": [],
+    "RUNNING": [],
+    "WAITING_FOR_NITIN": [
+      "TASK_C"
+    ]
+  },
+  "read_only": true,
+  "runner_health": {
+    "active_leases": [],
+    "last_heartbeat": "2026-02-01T00:00:13Z",
+    "stale_leases": []
+  },
+  "system_health": {
+    "AUTONOMOUS_ENGINEERING": "ACTIVE",
+    "P0E1_FOUNDATION": "GREEN (VERIFIED)",
+    "production_deployment_authorized": false,
+    "temporal_control_plane": null
+  },
+  "title": "UNCHAINED NITIN \u2014 CONTROL ROOM",
+  "waiting_for_nitin": [
+    {
+      "gate": "NITIN_PUBLISH_APPROVAL",
+      "task_id": "TASK_C"
+    }
+  ]
+}

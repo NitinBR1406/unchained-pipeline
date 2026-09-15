@@ -1,0 +1,60 @@
+{
+  "tasks": [
+    {
+      "task_id": "TASK_A",
+      "title": "Independent autonomous task",
+      "dependencies": [],
+      "status": "COMPLETED",
+      "human_gate_required": null,
+      "autonomy_level": "L1_AUTONOMOUS",
+      "allowed_scope": [
+        "synthetic"
+      ],
+      "definition_of_done": "executes automatically",
+      "rollback": "n/a",
+      "_job_id": "697dd015fdd6215d8cad4043645553d32e0eebbc4ba5d9084e6c033575e9cd52"
+    },
+    {
+      "task_id": "TASK_B",
+      "title": "Depends on TASK_A",
+      "dependencies": [
+        "TASK_A"
+      ],
+      "status": "COMPLETED",
+      "human_gate_required": null,
+      "autonomy_level": "L1_AUTONOMOUS",
+      "allowed_scope": [
+        "synthetic"
+      ],
+      "definition_of_done": "executes automatically after A",
+      "rollback": "n/a",
+      "_job_id": "8f762e40fad665534b79a1c1513e11ddcb86e015537159bb08c74246857975fc"
+    },
+    {
+      "task_id": "TASK_C",
+      "title": "Requires NITIN publish approval",
+      "dependencies": [],
+      "status": "WAITING_FOR_NITIN",
+      "human_gate_required": "NITIN_PUBLISH_APPROVAL",
+      "autonomy_level": "L3_HUMAN_GATED",
+      "allowed_scope": [],
+      "definition_of_done": "never auto; parks WAITING_FOR_NITIN",
+      "content_fingerprint": "synthetic-C",
+      "rollback": "n/a"
+    },
+    {
+      "task_id": "TASK_D",
+      "title": "Independent from C",
+      "dependencies": [],
+      "status": "COMPLETED",
+      "human_gate_required": null,
+      "autonomy_level": "L1_AUTONOMOUS",
+      "allowed_scope": [
+        "synthetic"
+      ],
+      "definition_of_done": "executes while C waits",
+      "rollback": "n/a",
+      "_job_id": "9c71644883625cdf9f758ba1757cb6f63bc3e349111194ba51ce61a3bdc6f091"
+    }
+  ]
+}

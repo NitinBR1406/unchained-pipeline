@@ -1,0 +1,14 @@
+{"schema_version":1,"tasks":[
+ {"task_id":"TASK_A","title":"Independent autonomous task","dependencies":[],"status":"READY",
+  "human_gate_required":null,"autonomy_level":"L1_AUTONOMOUS","allowed_scope":["synthetic"],
+  "definition_of_done":"executes automatically","rollback":"n/a"},
+ {"task_id":"TASK_B","title":"Depends on TASK_A","dependencies":["TASK_A"],"status":"READY",
+  "human_gate_required":null,"autonomy_level":"L1_AUTONOMOUS","allowed_scope":["synthetic"],
+  "definition_of_done":"executes automatically after A","rollback":"n/a"},
+ {"task_id":"TASK_C","title":"Requires NITIN publish approval","dependencies":[],"status":"READY",
+  "human_gate_required":"NITIN_PUBLISH_APPROVAL","autonomy_level":"L3_HUMAN_GATED","allowed_scope":[],
+  "definition_of_done":"never auto; parks WAITING_FOR_NITIN","content_fingerprint":"synthetic-C","rollback":"n/a"},
+ {"task_id":"TASK_D","title":"Independent from C","dependencies":[],"status":"READY",
+  "human_gate_required":null,"autonomy_level":"L1_AUTONOMOUS","allowed_scope":["synthetic"],
+  "definition_of_done":"executes while C waits","rollback":"n/a"}
+]}
