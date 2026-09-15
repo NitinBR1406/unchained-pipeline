@@ -1,8 +1,9 @@
 # P0-E Live Control-Plane Bake-Off — GitHub Actions V02.3 (ephemeral ubuntu-latest, Docker preinstalled).
 # Copy to .github/workflows/p0e-live-bakeoff.yml on branch p0e/live-control-plane-bakeoff.
 # V02.10 = HATCHET gRPC TRANSPORT FORENSICS (diagnostic-only; read-only pre-push probe + enriched on-failure
-#   capture: 7077 owner/iface, host publish, TCP/HTTP2 reset behavior, broadcast addr, container exit/restart, server logs).
+#   capture: 7070 owner/iface, host publish, TCP/HTTP2 reset behavior, broadcast addr, container exit/restart, server logs).
 #   No compose/durability/scoring change; run step byte-identical. Next run's evidence determines the one-line V02.11 fix.
+# V02.11 = HATCHET gRPC CONFIG CLOSURE: official bind(0.0.0.0)+broadcast(hatchet:7070)+port(7070) alignment; probe ports updated to 7070.
 # (carried) V02.9 = SDK ALIGNMENT (host hatchet-sdk pinned ==0.47.0 to match Dockerfile.worker; h.client unchanged) +
 #   TEMPORAL READINESS FORENSICS (richer NO_POLLERS diagnostics: container/exit/restart state, worker
 #   stdout/stderr, namespace + taskqueue describe). Readiness stays strict/fail-closed. Temporal semantics unchanged.
@@ -167,7 +168,7 @@ jobs:
       - name: Hatchet — up + run-scoped token (robust, masked, fail-closed)
         run: |
           export SE_DIR=$PWD/se_hatchet; mkdir -p $SE_DIR; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
-          # host must reach the engine at the token's broadcast address (hatchet:7077); 7077 is published, so map it to loopback
+          # host must reach the engine at the token's broadcast address (hatchet:7070); 7070 is published, so map it to loopback
           grep -q "[[:space:]]hatchet$" /etc/hosts || echo "127.0.0.1 hatchet" | sudo tee -a /etc/hosts >/dev/null
           SE_DIR=$SE_DIR docker compose -f ci/compose.hatchet.ci.yml up -d --build postgres hatchet
           # AUTHORITATIVE server-LIVENESS gate (transport only; NOT an auth-success claim).
@@ -248,10 +249,10 @@ jobs:
             echo "== advertised gRPC broadcast address (container env) =="; $C exec -T hatchet printenv SERVER_GRPC_BROADCAST_ADDRESS
             echo "== SERVER_GRPC_INSECURE (container env) =="; $C exec -T hatchet printenv SERVER_GRPC_INSECURE
             echo "== /etc/hosts hatchet mapping (host) =="; grep -w hatchet /etc/hosts
-            echo "== listeners INSIDE hatchet container (which iface owns 7077) =="; $C exec -T hatchet sh -c 'ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null || cat /proc/net/tcp'
-            echo "== host published listeners (docker-proxy 7077/8888) =="; { ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null; } | grep -E ':7077|:8888'
-            echo "== host TCP connect 127.0.0.1:7077 =="; timeout 5 bash -c 'exec 3<>/dev/tcp/127.0.0.1/7077 && echo TCP_OPEN || echo TCP_FAIL'
-            echo "== host HTTP/2 prior-knowledge probe 127.0.0.1:7077 (observe reset) =="; curl -sv --http2-prior-knowledge --max-time 5 http://127.0.0.1:7077/ 2>&1
+            echo "== listeners INSIDE hatchet container (which iface owns 7070) =="; $C exec -T hatchet sh -c 'ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null || cat /proc/net/tcp'
+            echo "== host published listeners (docker-proxy 7070/8888) =="; { ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null; } | grep -E ':7070|:8888'
+            echo "== host TCP connect 127.0.0.1:7070 =="; timeout 5 bash -c 'exec 3<>/dev/tcp/127.0.0.1/7070 && echo TCP_OPEN || echo TCP_FAIL'
+            echo "== host HTTP/2 prior-knowledge probe 127.0.0.1:7070 (observe reset) =="; curl -sv --http2-prior-knowledge --max-time 5 http://127.0.0.1:7070/ 2>&1
             echo "== hatchet server logs (tail) =="; $C logs --no-color --tail 150 hatchet 2>&1
           } 2>&1 | sed -E "$RED" > "$F"
           python3 -c "import json,os;json.dump({'grpc_forensics_captured':os.path.exists('$F'),'note':'pre-push read-only transport forensics; no auth/durability claim'},open('evidence/hatchet_grpc_forensics.json','w'),indent=2)"
@@ -283,7 +284,7 @@ jobs:
             for id in $($C ps -aq hatchet); do
               docker inspect --format '{{.Name}} status={{.State.Status}} exitcode={{.State.ExitCode}} restarts={{.RestartCount}} oom={{.State.OOMKilled}} error={{.State.Error}}' "$id"
             done
-            echo "== listeners inside hatchet (7077 owner) =="; $C exec -T hatchet sh -c 'ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null || cat /proc/net/tcp'
+            echo "== listeners inside hatchet (7070 owner) =="; $C exec -T hatchet sh -c 'ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null || cat /proc/net/tcp'
             echo "== all logs (tail) =="; $C logs --no-color --tail 250
           } 2>&1 | sed -E "$RED" > "$D"
           echo "captured hatchet diagnostics -> $D"

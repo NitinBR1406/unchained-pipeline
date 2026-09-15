@@ -1,4 +1,6 @@
-# CI Hatchet stack V02.5 (server bootstrap fix: SERVER_AUTH_COOKIE_DOMAIN + SERVER_URL so the session store
+# CI Hatchet stack V02.11 (official gRPC alignment: hatchet-lite engine listens on 7070 and needs
+#   SERVER_GRPC_BIND_ADDRESS=0.0.0.0 to be container-reachable; broadcast + published port aligned to 7070).
+# (carried) V02.5 server bootstrap fix: SERVER_AUTH_COOKIE_DOMAIN + SERVER_URL so the session store
 #   initialises and the API actually starts after tenant creation; then token creation succeeds). 2 workers + shared dir.
 version: "3.8"
 services:
@@ -14,9 +16,10 @@ services:
       SERVER_AUTH_COOKIE_INSECURE: "t"
       SERVER_AUTH_SET_EMAIL_VERIFIED: "t"
       SERVER_URL: "http://localhost:8888"
-      SERVER_GRPC_BROADCAST_ADDRESS: "hatchet:7077"
+      SERVER_GRPC_BIND_ADDRESS: "0.0.0.0"
+      SERVER_GRPC_BROADCAST_ADDRESS: "hatchet:7070"
       SERVER_GRPC_INSECURE: "t"
-    ports: ["8888:8080","7077:7077"]
+    ports: ["8888:8080","7070:7070"]
   worker1:
     build: {context: .., dockerfile: Dockerfile.worker}
     restart: on-failure
