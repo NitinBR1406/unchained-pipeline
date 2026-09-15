@@ -1,0 +1,102 @@
+# .github/workflows/p0e1-temporal-live.yml — MINIMAL entrypoint to run the authored P0-E1 Temporal
+# live-wire harness on GitHub's DISPOSABLE runner. Reuses ci/compose.temporal-dev.ci.yml +
+# control_plane/temporal_live.py (no orchestration duplication). NON-PRODUCTION. No publishing, no P1,
+# no production credentials. TEST_ONLY crypto is generated in-run, never committed/persisted.
+name: p0e1-temporal-live
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Exact commit/ref to check out"
+        required: false
+        default: c74198a912300bff4d5507859fe59124c280b3d6
+  push:
+    branches: [ "p0e/live-control-plane-bakeoff" ]
+    paths:
+      - "07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/**"
+      - ".github/workflows/p0e1-temporal-live.yml"
+permissions: { contents: read }
+env:
+  HARNESS: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE } }
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref || github.sha }}
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Host SDK (pinned) + crypto
+        run: pip install "temporalio==1.33.0" cryptography pyyaml >/dev/null 2>&1 || pip install temporalio cryptography
+      - name: Provision TEST_ONLY approval material (ephemeral; never Nitin's real key)
+        run: |
+          export SE_DIR=$PWD/se; mkdir -p $SE_DIR evidence; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
+          PYTHONPATH=$PWD python3 - "$SE_DIR" <<'PY'
+          import sys, json
+          from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+          from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
+          from control_plane.events import canonical
+          from control_plane.human_auth import content_fingerprint
+          se=sys.argv[1]; kid="TEST_ONLY-nitin-key"
+          priv=Ed25519PrivateKey.generate()
+          pub=priv.public_key().public_bytes(Encoding.Raw,PublicFormat.Raw).hex()
+          json.dump({"_note":"TEST_ONLY ephemeral keyring — NOT Nitin real authority","keys":{kid:{"public_key_hex":pub,"owner":"TEST_ONLY"}},"revoked":[]},
+                    open(se+"/approval_authority.TEST_ONLY.json","w"))
+          fp=content_fingerprint({"content_id":"P0E1-TEST","asset_sha256":"disposable","platform":"none","packaging_sha256":"disposable","schedule_version":"test"})
+          pl={"approval_id":"TEST_ONLY-a1","gate":"NITIN_PUBLISH_APPROVAL","task_id":"P0E1-A","content_fingerprint":fp,
+              "nonce":"TEST_ONLY-n1","issued_at":"2000-01-01T00:00:00Z","expires_at":"2999-01-01T00:00:00Z","key_id":kid}
+          sig=priv.sign(canonical(pl).encode()).hex()
+          json.dump({"payload":pl,"signature":sig}, open(se+"/approval_valid.TEST_ONLY.json","w"))
+          fpl=dict(pl); fpl["task_id"]="P0E1-F"
+          json.dump({"payload":fpl,"signature":"00"*64}, open(se+"/approval_forged.TEST_ONLY.json","w"))  # bad signature => must be rejected
+          print("TEST_ONLY material provisioned")
+          PY
+          echo "APPROVAL_KEYRING=$SE_DIR/approval_authority.TEST_ONLY.json" >> $GITHUB_ENV
+          echo "APPROVAL_VALID_FILE=$SE_DIR/approval_valid.TEST_ONLY.json" >> $GITHUB_ENV
+          echo "APPROVAL_FORGED_FILE=$SE_DIR/approval_forged.TEST_ONLY.json" >> $GITHUB_ENV
+      - name: Up (disposable dev Temporal)
+        run: |
+          SE_DIR=$SE_DIR docker compose -f ci/compose.temporal-dev.ci.yml up -d --build
+          HEALTHY=0; for i in $(seq 1 60); do if docker compose -f ci/compose.temporal-dev.ci.yml exec -T temporal tctl cluster health >/tmp/h 2>&1; then HEALTHY=1; break; fi; sleep 3; done
+          cp /tmp/h evidence/temporal_health.txt 2>/dev/null || true
+          [ "$HEALTHY" = 1 ] || { echo "temporal frontend not healthy (fail-closed)"; exit 1; }
+      - name: Live proofs (start, crash+restart, resume)
+        timeout-minutes: 30
+        env: { TEMPORAL_ADDRESS: "localhost:7233" }
+        run: |
+          export SE_STORE=$SE_DIR/side_effects.json IDS_FILE=$SE_DIR/ids_p0e1.json RESULTS_LOG=$PWD/evidence/results.jsonl PYTHONPATH=$PWD
+          python -m control_plane.temporal_live start
+          docker kill $(docker ps -q --filter name=worker1) || true
+          docker compose -f ci/compose.temporal-dev.ci.yml restart postgresql temporal
+          sleep 12
+          SE_DIR=$SE_DIR docker compose -f ci/compose.temporal-dev.ci.yml up -d worker1
+          sleep 15
+          python -m control_plane.temporal_live resume
+      - name: Assemble live gate (non-fatal here; writes P0E1_LIVE_RESULTS.json)
+        if: always()
+        env: { TEMPORAL_ADDRESS: "localhost:7233" }
+        run: |
+          export RESULTS_LOG=$PWD/evidence/results.jsonl PYTHONPATH=$PWD
+          rm -f evidence/GATE_FAILED
+          python -m control_plane.temporal_live gate || echo "PENDING" > evidence/GATE_FAILED
+      - name: Diagnostics on failure
+        if: failure()
+        run: |
+          set +e; C="docker compose -f ci/compose.temporal-dev.ci.yml"
+          { echo "== ps -a =="; $C ps -a; echo "== worker1 =="; $C logs --no-color --tail all worker1; echo "== worker2 =="; $C logs --no-color --tail all worker2; echo "== temporal =="; $C logs --no-color --tail 150 temporal; } > evidence/p0e1_live_diagnostics.log 2>&1
+      - name: Upload evidence (even if the gate fails)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: p0e1-temporal-live-evidence, path: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/evidence/ }
+      - name: Teardown (unconditional)
+        if: always()
+        run: SE_DIR=$PWD/se docker compose -f ci/compose.temporal-dev.ci.yml down -v || true
+      - name: Verify teardown (POC_INFRA_REMAINING=FALSE)
+        if: always()
+        run: |
+          docker ps -a
+          test -z "$(docker ps -q)" && echo "POC_INFRA_REMAINING=FALSE" || { echo "POC_INFRA_REMAINING=TRUE"; exit 1; }
+      - name: Fail-closed acceptance gate (LAST)
+        run: test ! -f evidence/GATE_FAILED || { echo "LIVE acceptance PENDING (fail-closed)"; exit 1; }

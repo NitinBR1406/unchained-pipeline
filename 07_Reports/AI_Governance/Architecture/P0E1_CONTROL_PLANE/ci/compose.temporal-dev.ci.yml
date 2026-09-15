@@ -1,4 +1,6 @@
 # DISPOSABLE dev Temporal for P0E1-TEMPORAL-LIVE-WIRE (non-production). `down -v` after. No prod secrets.
+# Workers verify human approvals via act_verify_approval against a TEST_ONLY keyring provisioned at runtime
+# into the shared volume (APPROVAL_KEYRING). The committed approval_authority.json stays fail-closed/empty.
 version: "3.8"
 services:
   postgresql:
@@ -14,12 +16,12 @@ services:
     restart: on-failure
     command: ["python","-m","control_plane.temporal_live","worker"]
     depends_on: [temporal]
-    environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json}
+    environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json, RESULTS_LOG: /data/se/results.jsonl, APPROVAL_KEYRING: /data/se/approval_authority.TEST_ONLY.json}
     volumes: ["${SE_DIR}:/data/se"]
   worker2:
     build: {context: ../.., dockerfile: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/ci/Dockerfile.p0e1worker}
     restart: on-failure
     command: ["python","-m","control_plane.temporal_live","worker"]
     depends_on: [temporal]
-    environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json}
+    environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json, RESULTS_LOG: /data/se/results.jsonl, APPROVAL_KEYRING: /data/se/approval_authority.TEST_ONLY.json}
     volumes: ["${SE_DIR}:/data/se"]
