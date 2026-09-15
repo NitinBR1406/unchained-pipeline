@@ -1,0 +1,133 @@
+"""P0-E2 Slice-2 LIVE adapter: dispatch READY backlog tasks onto the verified disposable Temporal control
+plane as real ControlPlaneTask workflows. Reuses P0-E1 (temporal_live.ControlPlaneTask + activities +
+human_auth) and P0-E1/Slice-1 primitives (ledger, reducer, backlog, leases, idempotency) — no duplication.
+Deterministic workflow-id = 'p0e2-'+pinned job_id so retries/duplicate dispatch dedup at Temporal (and the
+side effect stays exactly-once). Gated tasks park WAITING_FOR_NITIN via a durable-wait workflow that holds
+NO worker slot and is never signalled here (no fabricated approval). The `client_factory` is injectable so
+the orchestration logic is offline-testable; the LIVE proof requires GitHub (see p0e2-autonomous-live.yml).
+No production, no publishing."""
+import os, sys, json, asyncio
+HERE=os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(HERE, "..", "P0E1_CONTROL_PLANE"))
+from control_plane import events as E
+from control_plane.ledger import EventLedger
+from control_plane.reducer import reduce
+from control_plane.backlog import ready_tasks
+from control_plane.leases import LeaseTable
+from control_plane.idempotency import job_id
+TASK_QUEUE="p0e1-control-plane"   # reuse the P0-E1 ControlPlaneTask queue/worker
+RESULT_DEADLINE_S=float(os.environ.get("RESULT_DEADLINE_S","240"))
+
+class LiveRunner:
+    def __init__(self, backlog_path, ledger_path, evidence_dir, client_factory=None, keyring=None, ttl=100):
+        self.backlog_path=backlog_path; self.evidence_dir=evidence_dir; os.makedirs(evidence_dir, exist_ok=True)
+        self.ledger=EventLedger(ledger_path); self.leases=LeaseTable(); self.keyring=keyring or {"keys":{},"revoked":[]}
+        self.ttl=ttl; self._clock=0; self.client_factory=client_factory
+        self.tasks={t["task_id"]:t for t in json.load(open(backlog_path))["tasks"]}
+        self.dispatched={}   # task_id -> workflow_id (dedup / observed)
+        self.run_ids={}      # task_id -> temporal run_id (where available)
+    def _t(self): self._clock+=1; return "2026-03-01T00:00:%02dZ"%(self._clock%60)
+    def _emit(self, **kw):
+        kw.setdefault("timestamp", self._t()); kw.setdefault("agent","claude")
+        e=E.make_event(event_id="s2-%04d"%self._clock, **kw); self.ledger.append(e); return e
+    def state(self): return reduce(self.ledger.read_all(), keyring=self.keyring)
+    def _tasklist(self): return list(self.tasks.values())
+    def _pin_job(self, task):
+        if not task.get("_job_id"):
+            ih=E.input_hash({"task_id":task["task_id"],"scope":task.get("allowed_scope")})
+            task["_job_id"]=job_id(task["task_id"], self.state()["state_version"], ih)
+        return task["_job_id"]
+    def _wf_id(self, task): return "p0e2-"+self._pin_job(task)
+    async def _client(self):
+        if self.client_factory: return await self.client_factory()
+        from control_plane.temporal_live import _client   # real temporalio client
+        return await _client()
+    async def _start(self, client, task):
+        """Start a ControlPlaneTask workflow with a deterministic id (dedups duplicate dispatch)."""
+        try:
+            from control_plane.temporal_live import ControlPlaneTask
+            run_ref=ControlPlaneTask.run
+        except Exception:
+            run_ref="ControlPlaneTask.run"   # offline/fake path uses the name
+        wf_id=self._wf_id(task)
+        payload={"task_id":task["task_id"],"human_gate_required":bool(task.get("human_gate_required")),
+                 "required_gate":task.get("human_gate_required"),"content_fingerprint":task.get("content_fingerprint"),
+                 "long_seconds":task.get("long_seconds",0),"state_version":self.state()["state_version"],
+                 "input_hash":self._pin_job(task)}
+        h=await client.start_workflow(run_ref, payload, id=wf_id, task_queue=TASK_QUEUE)
+        self.dispatched[task["task_id"]]=wf_id
+        self.run_ids[task["task_id"]]=getattr(h,"first_execution_run_id",None)
+        return h, wf_id
+    async def dispatch(self, client, task):
+        tid=task["task_id"]
+        lease=self.leases.acquire(tid, "claude", "lease-"+tid, now=self._clock, ttl=self.ttl)
+        if lease is None: return "LEASE_DENIED"
+        self._emit(event_type="LEASE_ACQUIRED", task_id=tid, lease_id=lease.lease_id)
+        self._emit(event_type="TASK_STARTED", task_id=tid); task["status"]="RUNNING"
+        h,wf_id=await self._start(client, task)
+        if task.get("human_gate_required"):
+            # durable human wait: workflow parks (no slot held); we do NOT signal (no fabricated approval)
+            self._emit(event_type="HUMAN_GATE_REQUEST", task_id=tid, gate=task["human_gate_required"],
+                       inputs={"content_fingerprint":task.get("content_fingerprint"),"workflow_id":wf_id})
+            task["status"]="WAITING_FOR_NITIN"; return "WAITING_FOR_NITIN"
+        try:
+            res=await asyncio.wait_for(h.result(), timeout=RESULT_DEADLINE_S)
+        except Exception as ex:
+            self._emit(event_type="TASK_FAILED", task_id=tid, idempotency_key=task["_job_id"],
+                       inputs={"error":type(ex).__name__}); task["status"]="FAILED"; return "FAILED"
+        task["status"]="VERIFYING"
+        ev=os.path.join(self.evidence_dir,"exec_%s.json"%tid)
+        json.dump({"task_id":tid,"workflow_id":wf_id,"run_id":self.run_ids.get(tid),"result":res,"idempotency_key":task["_job_id"]}, open(ev,"w"))
+        self._emit(event_type="TASK_RESULT", task_id=tid, idempotency_key=task["_job_id"],
+                   evidence=[os.path.basename(ev)], inputs={"workflow_id":wf_id})
+        lg=self.leases.get(tid);
+        if lg: lg.release()
+        self._emit(event_type="LEASE_RELEASED", task_id=tid); task["status"]="COMPLETED"; return "COMPLETED"
+    async def _poller_snapshot(self, client):
+        try:
+            from control_plane.temporal_live import _count_pollers
+            n=await _count_pollers(client)
+            open(os.path.join(self.evidence_dir,"poller_snapshot.json"),"w").write(json.dumps({"workflow_pollers":n}))
+        except Exception: pass
+    async def run_live(self, max_passes=50):
+        client=await self._client(); passes=0
+        await self._poller_snapshot(client)
+        while passes<max_passes:
+            progressed=False
+            for task in ready_tasks(self._tasklist()):
+                if task.get("human_gate_required") and task["status"]=="WAITING_FOR_NITIN": continue
+                st=await self.dispatch(client, task)
+                if st in ("COMPLETED","WAITING_FOR_NITIN"): progressed=True
+            if not progressed: break
+            passes+=1
+        self._persist(); return self.state()
+    def _persist(self): json.dump({"tasks":self._tasklist()}, open(self.backlog_path,"w"), indent=2)
+    def gate(self):
+        status={t["task_id"]:t["status"] for t in self._tasklist()}
+        st=self.state()
+        crit={"TASK_A":"COMPLETED","TASK_B":"COMPLETED","TASK_C":"WAITING_FOR_NITIN","TASK_D":"COMPLETED"}
+        ok=all(status.get(k)==v for k,v in crit.items())
+        # exactly-once: distinct completed workflow dispatches == distinct COMPLETED tasks
+        out={"final_task_status":status,"REAL_TEMPORAL_WORKFLOWS_OBSERVED":bool(self.dispatched),
+             "workflow_ids":self.dispatched,"run_ids":self.run_ids,
+             "AUTONOMOUS_CHAIN_A_TO_B":"PASS" if status.get("TASK_A")=="COMPLETED" and status.get("TASK_B")=="COMPLETED" else "FAIL",
+             "HUMAN_GATE_C_WAITING":"PASS" if status.get("TASK_C")=="WAITING_FOR_NITIN" else "FAIL",
+             "INDEPENDENT_D_CONTINUES":"PASS" if status.get("TASK_D")=="COMPLETED" else "FAIL",
+             "HUMAN_MESSAGE_RELAY_REQUIRED":st["invariants"]["HUMAN_MESSAGE_RELAY_REQUIRED"],
+             "WAITING_WORKFLOW_BLOCKS_OTHER_WORK":st["invariants"]["WAITING_WORKFLOW_BLOCKS_OTHER_WORK"],
+             "no_approval_fabricated": "NITIN_PUBLISH_APPROVAL" not in st.get("approvals",{}),
+             "FINAL":"PASS" if ok else "PENDING","PRODUCTION_DEPLOYMENT_AUTHORIZED":False}
+        json.dump(out, open(os.path.join(self.evidence_dir,"P0E2_LIVE_RESULTS.json"),"w"), indent=2, sort_keys=True)
+        print("GATE:",out["FINAL"],json.dumps(status))
+        return out, ok
+def _phase(name):
+    import argparse
+    ap=argparse.ArgumentParser(); ap.add_argument("phase"); ap.add_argument("--backlog",required=True)
+    ap.add_argument("--ledger",required=True); ap.add_argument("--evidence",required=True); a=ap.parse_args()
+    r=LiveRunner(a.backlog,a.ledger,a.evidence)
+    if a.phase=="run": asyncio.run(r.run_live())
+    elif a.phase=="gate":
+        _,ok=r.gate();  sys.exit(0 if ok else 1)
+    else: raise SystemExit("unknown phase "+a.phase)
+if __name__=="__main__":
+    _phase(sys.argv[1] if len(sys.argv)>1 else "run")

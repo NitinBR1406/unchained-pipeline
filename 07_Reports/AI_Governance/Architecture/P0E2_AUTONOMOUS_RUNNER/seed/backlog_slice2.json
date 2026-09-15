@@ -1,0 +1,6 @@
+{"schema_version":1,"tasks":[
+ {"task_id":"TASK_A","title":"Independent","dependencies":[],"status":"READY","human_gate_required":null,"autonomy_level":"L1_AUTONOMOUS","allowed_scope":["synthetic"],"long_seconds":0},
+ {"task_id":"TASK_B","title":"Depends on A","dependencies":["TASK_A"],"status":"READY","human_gate_required":null,"autonomy_level":"L1_AUTONOMOUS","allowed_scope":["synthetic"],"long_seconds":0},
+ {"task_id":"TASK_C","title":"Requires NITIN publish approval","dependencies":[],"status":"READY","human_gate_required":"NITIN_PUBLISH_APPROVAL","autonomy_level":"L3_HUMAN_GATED","allowed_scope":[],"content_fingerprint":"synthetic-C","long_seconds":0},
+ {"task_id":"TASK_D","title":"Independent long task (kill window)","dependencies":[],"status":"READY","human_gate_required":null,"autonomy_level":"L1_AUTONOMOUS","allowed_scope":["synthetic"],"long_seconds":45}
+]}
