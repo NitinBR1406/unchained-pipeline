@@ -1,13 +1,10 @@
-# Worker image for the P0-E live bake-off (CI). Lets CI hard-kill/restart worker CONTAINERS to produce
-# OBSERVED crash/restart evidence. Authored from docs; built/run by the GitHub Actions runner (not the sandbox).
+# Worker image for the P0-E live bake-off (CI) — V02. Runs a driver worker PHASE so CI can kill/restart it.
 FROM python:3.11-slim
 WORKDIR /app
-# pin SDK versions at run time via build-arg; record resolved versions in results
 ARG TEMPORALIO_VERSION=1.7.1
 ARG HATCHET_SDK_VERSION=0.47.0
 RUN pip install --no-cache-dir "temporalio==${TEMPORALIO_VERSION}" "hatchet-sdk==${HATCHET_SDK_VERSION}" || \
     pip install --no-cache-dir temporalio hatchet-sdk
-COPY common_semantics.py temporal_bakeoff.py hatchet_bakeoff.py /app/
-ENV SE_STORE=/data/se/side_effects.json
-# ENTRYPOINT chosen by compose command (temporal worker OR hatchet worker)
-CMD ["python", "temporal_bakeoff.py", "--worker"]
+COPY common_semantics.py temporal_bakeoff.py hatchet_bakeoff.py controller.py /app/
+ENV SE_STORE=/data/se/side_effects.json RESULTS_LOG=/data/se/results.jsonl
+CMD ["python","temporal_bakeoff.py","worker"]

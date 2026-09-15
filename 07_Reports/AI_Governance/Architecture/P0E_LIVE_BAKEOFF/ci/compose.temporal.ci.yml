@@ -1,5 +1,5 @@
-# CI Temporal stack incl. TWO worker containers + shared volume for the side-effect store, so the
-# controller can `docker kill`/restart a worker and read dedup state. Ephemeral; `down -v` after.
+# CI Temporal stack V02: 2 worker containers (phase worker, low slots) + BIND-mounted shared side-effect
+# dir so the host-run start/resume can read the OBSERVED oracle. Ephemeral; down -v after.
 version: "3.8"
 services:
   postgresql:
@@ -10,22 +10,15 @@ services:
     depends_on: [postgresql]
     environment: {DB: postgres12, DB_PORT: 5432, POSTGRES_USER: temporal, POSTGRES_PWD: temporal, POSTGRES_SEEDS: postgresql}
     ports: ["7233:7233"]
-  temporal-ui:
-    image: temporalio/ui:2.31.0
-    depends_on: [temporal]
-    environment: {TEMPORAL_ADDRESS: "temporal:7233"}
-    ports: ["8233:8080"]
   worker1:
     build: {context: .., dockerfile: Dockerfile.worker}
-    command: ["python","temporal_bakeoff.py","--worker"]
+    command: ["python","temporal_bakeoff.py","worker"]
     depends_on: [temporal]
-    environment: {TEMPORAL_ADDRESS: "temporal:7233", SE_STORE: /data/se/side_effects.json}
-    volumes: ["se:/data/se"]
+    environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json}
+    volumes: ["${SE_DIR}:/data/se"]
   worker2:
     build: {context: .., dockerfile: Dockerfile.worker}
-    command: ["python","temporal_bakeoff.py","--worker"]
+    command: ["python","temporal_bakeoff.py","worker"]
     depends_on: [temporal]
-    environment: {TEMPORAL_ADDRESS: "temporal:7233", SE_STORE: /data/se/side_effects.json}
-    volumes: ["se:/data/se"]
-volumes:
-  se: {}
+    environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json}
+    volumes: ["${SE_DIR}:/data/se"]
