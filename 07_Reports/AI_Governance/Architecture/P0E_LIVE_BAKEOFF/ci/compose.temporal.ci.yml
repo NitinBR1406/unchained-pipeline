@@ -1,4 +1,4 @@
-# CI Temporal stack V02.3 (workers restart:on-failure so a premature start self-heals into a live poller): 2 worker containers (phase worker, low slots) + BIND-mounted shared side-effect
+# CI Temporal stack V02.5 (BIND_ON_IP=0.0.0.0 so the frontend listens on 127.0.0.1 + container IP -> tctl health + worker registration both work; workers restart:on-failure): 2 worker containers (phase worker, low slots) + BIND-mounted shared side-effect
 # dir so the host-run start/resume can read the OBSERVED oracle. Ephemeral; down -v after.
 version: "3.8"
 services:
@@ -8,7 +8,7 @@ services:
   temporal:
     image: temporalio/auto-setup:1.25.0
     depends_on: [postgresql]
-    environment: {DB: postgres12, DB_PORT: 5432, POSTGRES_USER: temporal, POSTGRES_PWD: temporal, POSTGRES_SEEDS: postgresql}
+    environment: {DB: postgres12, DB_PORT: 5432, POSTGRES_USER: temporal, POSTGRES_PWD: temporal, POSTGRES_SEEDS: postgresql, BIND_ON_IP: "0.0.0.0"}
     ports: ["7233:7233"]
   worker1:
     build: {context: .., dockerfile: Dockerfile.worker}
