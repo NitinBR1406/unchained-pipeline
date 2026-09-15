@@ -1,0 +1,25 @@
+{
+  "note": "Fill from a REAL run on a Docker-capable host. Each test -> pass/fail + measurements. This produces the final RETURN block.",
+  "environment": {"host": "", "docker_version": "", "temporal_image": "temporalio/auto-setup:1.25.0", "hatchet_image": "", "temporalio_sdk": "", "hatchet_sdk": ""},
+  "tests": {
+    "1_durable_human_wait": {"temporal": {"resume_exact": null, "worker_slot_held_during_wait": null, "server_restart_survived": null}, "hatchet": {"resume_exact": null, "worker_slot_held_during_wait": null, "server_restart_survived": null}},
+    "2_crash_during_long_activity": {"temporal": {"detection_seconds": null, "resumed": null, "duplicate_side_effect": null}, "hatchet": {"detection_seconds": null, "resumed": null, "duplicate_side_effect": null}},
+    "3_orchestrator_db_interruption": {"temporal": {"state_intact": null, "duplicate_completion": null}, "hatchet": {"state_intact": null, "duplicate_completion": null}},
+    "4_duplicate_stale_events": {"temporal": {"deterministic_final_state": null}, "hatchet": {"deterministic_final_state": null}},
+    "5_parallel_autonomy": {"temporal": {"throughput_tasks_per_min": null, "starvation": null, "lock_contention": null, "wait_state_cpu_ram": null}, "hatchet": {"throughput_tasks_per_min": null, "starvation": null, "lock_contention": null, "wait_state_cpu_ram": null}},
+    "6_audit_recovery": {"temporal": {"reconstructable": null, "replayable": null, "custom_ledger_loc": null, "stale_dup_visibility": null}, "hatchet": {"reconstructable": null, "replayable": null, "custom_ledger_loc": null, "stale_dup_visibility": null}}
+  },
+  "ops_burden": {
+    "temporal": {"containers": null, "db_deps": null, "config_lines": null, "setup_minutes": null, "upgrade_surface": null, "backup_restore_steps": null, "idle_cpu_ram": null, "under_test_cpu_ram": null, "debugging_effort": null, "custom_glue_loc": null},
+    "hatchet": {"containers": null, "db_deps": null, "config_lines": null, "setup_minutes": null, "upgrade_surface": null, "backup_restore_steps": null, "idle_cpu_ram": null, "under_test_cpu_ram": null, "debugging_effort": null, "custom_glue_loc": null}
+  },
+  "return_block": {
+    "TEMPORAL_LIVE_PASS": null, "HATCHET_LIVE_PASS": null,
+    "TEMPORAL_FAILURES": null, "HATCHET_FAILURES": null,
+    "TEMPORAL_CUSTOM_GLUE": null, "HATCHET_CUSTOM_GLUE": null,
+    "TEMPORAL_OPS_BURDEN": null, "HATCHET_OPS_BURDEN": null,
+    "TEMPORAL_RECOVERY_CONFIDENCE": null, "HATCHET_RECOVERY_CONFIDENCE": null,
+    "RECOMMENDED_CONTROL_PLANE": null, "DECISION_CONFIDENCE": null, "FINAL_REASON": null
+  },
+  "decision_rule": "Hatchet if all safety/durability pass + no meaningful recovery/audit gap + modest glue + materially lower ops; Temporal if Hatchet shows a durability/recovery/audit weakness OR needs enough glue that simplicity is lost. Ignore popularity/ecosystem-size alone."
+}

@@ -1,0 +1,23 @@
+# Disposable Hatchet stack for the P0-E live bake-off. NOT production. Tear down with `docker compose down -v`.
+# Authored from Hatchet self-host docs; pin to the current Hatchet release and follow its quickstart for
+# token issuance (dashboard). Postgres is the ONLY datastore dependency (key ops-simplicity data point).
+version: "3.8"
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: hatchet
+      POSTGRES_PASSWORD: hatchet
+      POSTGRES_DB: hatchet
+    ports: ["5433:5432"]
+    volumes: ["hatchet_pg:/var/lib/postgresql/data"]
+  hatchet:
+    image: ghcr.io/hatchet-dev/hatchet/hatchet-lite:latest   # pin exact tag in real run; record version
+    depends_on: ["postgres"]
+    environment:
+      DATABASE_URL: "postgresql://hatchet:hatchet@postgres:5432/hatchet?sslmode=disable"
+      SERVER_AUTH_COOKIE_INSECURE: "t"
+      SERVER_GRPC_BROADCAST_ADDRESS: "127.0.0.1:7077"
+    ports: ["8888:8080", "7077:7077"]   # dashboard :8888, engine grpc :7077
+volumes:
+  hatchet_pg: {}
