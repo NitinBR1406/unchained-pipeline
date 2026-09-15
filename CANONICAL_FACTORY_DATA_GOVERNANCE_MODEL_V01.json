@@ -1,0 +1,140 @@
+{
+  "artifact": "CANONICAL_FACTORY_DATA_GOVERNANCE_MODEL_V01",
+  "artifact_type": "ARCHITECTURE_CONTRACT",
+  "status_note": "ARCHITECTURE CONTRACT — NOT permission to publish. No real publication authorized by this document.",
+  "authoring_agent": "CLAUDE",
+  "date": "2026-09-13",
+  "provenance": "Derived from GEMINI_HANDOFF_PACKAGE_V01 (facts), SECURITY_PHASE2A_PUBLISH_AUTHORITY_TRACE_V01 (security truth), GEMINI_10M_GROWTH_AUDIT_V01 (INDEPENDENT_ANALYSIS_NOT_IMPLEMENTATION_APPROVED). Gemini claims about platform metrics are architectural input only and require official platform/API verification before implementation.",
+
+  "canonical_identity_chain": "SONG -> CAMPAIGN -> MASTER -> DERIVATIVE -> CONTENT -> APPROVAL -> PUBLICATION -> PLATFORM_POST_ID -> ANALYTICS -> LEARNING -> COMMERCIAL_ATTRIBUTION",
+
+  "identity_model": {
+    "song": {"song_id": "text (stable)", "track_type": "enum: COVER | ORIGINAL"},
+    "campaign": {"campaign_id": "text (stable, attribution root)"},
+    "master": {"master_asset_id": "text", "master_sha256": "hex (content fingerprint of the master)"},
+    "derivative": {"derivative_id": "text", "derivative_type": "text (e.g. reel, poster, clip, teaser)"},
+    "content": {"content_id": "text (the publishable item)"},
+    "publication": {"publication_id": "text (unique per publish attempt; single-use)", "platform": "text", "platform_post_id": "text (returned by platform)", "published_at": "iso"},
+    "isrc_rule": "isrc_code is REQUIRED only for an official original/master/release. NEVER required for cover content. Absence of ISRC MUST NOT block cover publication.",
+    "notes": "Every publishable item MUST resolve the full chain from song_id down to content_id before it can be considered for publication."
+  },
+
+  "state_separation_principle": {
+    "rule": "Workflow STATE and authorization STATE are separate concepts and MUST NOT be conflated.",
+    "workflow_state_examples": ["New", "Scheduled", "Ready", "Published", "Error", "VISUALIZER_APPROVED"],
+    "authorization_state": ["NITIN_CREATIVE_APPROVAL", "NITIN_FINAL_VIDEO_APPROVAL", "NITIN_PUBLISH_APPROVAL"],
+    "hard_invariants": [
+      "status='New' MUST NOT be an authorization primitive.",
+      "status='Scheduled' MUST NOT authorize publication.",
+      "VISUALIZER_APPROVED is NOT Publish Approval.",
+      "FINAL_VIDEO_APPROVED != PUBLISH_APPROVED.",
+      "No workflow status alone may cause publication."
+    ]
+  },
+
+  "approval_model": {
+    "gates_in_order": ["NITIN_CREATIVE_APPROVAL", "NITIN_FINAL_VIDEO_APPROVAL", "NITIN_PUBLISH_APPROVAL"],
+    "non_negotiable": "All three gates are mandatory and independent. Passing one never implies another.",
+    "binding": "Each approval is bound to the approved artifact fingerprint (SHA-256). A changed artifact invalidates prior approval for the changed artifact.",
+    "reuse": "Reuses existing unpipe/approvals.py ApprovalStore (three-gate, SHA-bound). P0 HARDENS the publish gate (see publish_approval_eligibility)."
+  },
+
+  "fingerprint_contract": {
+    "definition": "Publish Approval binds to a material publication fingerprint = sha256 of the canonical basis {content_id, asset_sha256, platform, packaging_sha256, schedule_version}.",
+    "rule": "Any material change (asset, platform, packaging, schedule version) after approval yields a different fingerprint and INVALIDATES publication eligibility. Approval is never silently reused for materially changed content.",
+    "reference_impl": "publish_gate.compute_fingerprint (proven)."
+  },
+
+  "publish_approval_eligibility": {
+    "publisher_may_publish_ONLY_if_ALL_true": [
+      "content exists / is fully identifiable",
+      "creative_approval == APPROVED (bound to current fingerprint)",
+      "final_video_approval == APPROVED (bound to current fingerprint)",
+      "publish_approval == APPROVE (bound to current fingerprint)",
+      "current fingerprint == approved fingerprint",
+      "platform within approved platform scope",
+      "schedule within approved schedule window AND schedule_version matches",
+      "approval not expired",
+      "approval not revoked",
+      "publication_id not already consumed (duplicate/replay safe)"
+    ],
+    "fail_closed": "Any failed condition, missing datum, or unexpected error => BLOCKED. Never PUBLISH on error.",
+    "reference_impl": "publish_gate.PublishApprovalGate.evaluate (proven: 16/16 negative+positive tests)."
+  },
+
+  "publication_model": {
+    "publication_record": ["publication_id", "content_id", "campaign_id", "platform", "platform_post_id", "published_at", "approved_fingerprint", "publish_approval_id"],
+    "duplicate_safety": "publication_id is single-use; a consumed publication_id must never publish again."
+  },
+
+  "analytics_ready_model": {
+    "principle": "Do NOT pollute the canonical content schema with platform-specific metric columns (yt_views_7d, ig_saves_7d, ...).",
+    "observation_ledger": {
+      "name": "Analytics Observation Ledger (generic, append-only)",
+      "fields": ["publication_id", "platform", "metric_name", "metric_value", "window", "observed_at", "source", "granularity"],
+      "p0_requirement": "P0 does NOT implement collectors. P0 only guarantees every publication has a stable publication_id so analytics can attach later WITHOUT redesign.",
+      "verification_rule": "Any Gemini platform metric name/definition must be verified against the official platform/API before a collector is built."
+    }
+  },
+
+  "attribution_ready_model": {
+    "p0_minimum": ["campaign_id", "attribution_code / utm_campaign_code (where useful)"],
+    "future_chain": "CONTENT -> PUBLICATION -> AUDIENCE_RESPONSE -> INQUIRY -> BOOKING -> REVENUE",
+    "p0_scope": "No CRM, no booking, no revenue accounting in P0. Only stable identifiers so attribution can be added later."
+  },
+
+  "experiment_ready_model": {
+    "fields": ["experiment_id", "hypothesis", "tested_variable", "variant_id"],
+    "population_rule": "Not required on every publication. Schema must represent controlled experiments without redesign.",
+    "discipline": "Prefer ONE controlled variable per experiment. Do not encourage changing multiple variables and claiming causal learning."
+  },
+
+  "daily_content_engine_model": {
+    "operational_rule": "Every day something must be POSTED. Daily posting != daily recording.",
+    "uniqueness": "Same creative on 4 platforms = ONE unique content day (not four).",
+    "buffer_metrics": {
+      "ready_content_days": "content that exists / is prepared (NOT necessarily eligible)",
+      "approved_schedulable_content_days": "ONLY content actually eligible for scheduling/publication counts toward the official buffer",
+      "health": {"GREEN": ">=30", "AMBER": "14-29", "RED": "7-13", "CRITICAL": "<7"}
+    },
+    "future_fatigue_controls": ["song rotation", "content type rotation", "hook rotation", "visual rotation", "CTA rotation", "platform rotation"],
+    "p0_scope": "Advanced fatigue optimization is NOT allowed to delay P0."
+  },
+
+  "target_actual_forecast": {
+    "rule": "Gemini EUR 10M / 12.5M trajectories are strategic hypotheses, NOT measured Nitin baselines.",
+    "reporting_must_distinguish": ["TARGET", "ACTUAL", "FORECAST"],
+    "prohibition": "Never hardcode target assumptions as actual performance."
+  },
+
+  "p0_p1_p2_boundaries": {
+    "P0_in_scope": ["identity chain", "three approval gates + hardened publish eligibility", "fingerprint binding", "platform + schedule scope binding", "expiry + revocation + duplicate safety", "fail-closed publisher gate", "publication_id for analytics-readiness", "campaign_id for attribution-readiness", "experiment fields available (unpopulated ok)", "daily content engine compatibility"],
+    "P1_P2_deferred": ["full CRM", "booking management", "revenue/royalty accounting", "ISRC automation", "full analytics collectors", "full Gemini automation", "EUR 10M forecasting", "advanced audience segmentation", "advanced attribution", "brand-deal CRM", "tour/sync management", "Resolve automation", "Digital Twin"]
+  },
+
+  "migration_mapping": {
+    "current_reality": "Active photo publisher P1 (9627055) reads datastore 177455 (PosterSchedule) filter status='New' and publishes to IG+FB with NO approval gate. N3/N4 video publishers INACTIVE. Legacy 9561890 INACTIVE. Secure visualizer 9796001 writes only VISUALIZER_APPROVED (INACTIVE).",
+    "target": "Publisher eligibility is decided by the Publish Approval Eligibility gate (all-conditions, fail-closed). status='New' is demoted to a pure workflow marker and is NOT sufficient to publish.",
+    "field_additions_non_destructive": ["song_id", "track_type", "campaign_id", "master_asset_id", "master_sha256", "derivative_id", "derivative_type", "content_id", "publication_id", "approved_fingerprint", "publish_approval_id", "experiment_id (optional)", "attribution_code (optional)"],
+    "preserve": "All existing fields (poster_id, image_url, caption, scheduled_at, ig, fb, status, ig_post_id, fb_post_id, group) are preserved. Additions are additive only."
+  },
+
+  "acceptance_criteria": [
+    "IDENTITY_CHAIN representable end to end",
+    "workflow state separated from authorization state",
+    "three approval gates enforced",
+    "publish eligibility requires ALL conditions; fail-closed",
+    "fingerprint + platform-scope + schedule-scope binding enforced",
+    "expired/revoked/duplicate/status-only/visualizer-only all BLOCKED",
+    "analytics-ready via publication_id + observation ledger design",
+    "attribution-ready via campaign_id",
+    "experiment-ready via experiment fields",
+    "no real publication performed during implementation/proof"
+  ],
+
+  "rollback_strategy": {
+    "principle": "All P0 Make changes must be reversible with a captured pre-change blueprint snapshot per scenario.",
+    "publisher_gate": "If the gate misbehaves, revert the publisher scenario to its captured pre-change blueprint and leave it DEACTIVATED until re-proven. Fail-closed means a broken gate blocks publication (safe), never opens it.",
+    "no_data_deletion": "Rollback never deletes authoritative data; superseded artifacts move to trash (recoverable) only after central verification."
+  }
+}

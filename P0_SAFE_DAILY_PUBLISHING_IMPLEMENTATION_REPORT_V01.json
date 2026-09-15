@@ -1,0 +1,142 @@
+{
+  "artifact": "P0_SAFE_DAILY_PUBLISHING_IMPLEMENTATION_REPORT_V01",
+  "artifact_type": "IMPLEMENTATION_REPORT",
+  "authoring_agent": "CLAUDE",
+  "date": "2026-09-13",
+  "final_status": "CONDITIONAL_PASS",
+  "headline": "P0 gate LOGIC and canonical model are proven and centrally persisted. NO live Make change and NO real publication were performed. Live wiring of the gate into the active P1 publisher is DESIGNED but intentionally deferred to an explicit Nitin checkpoint (release + external-verifier deploy authority).",
+
+  "current_state_inspected": {
+    "P1_9627055": "ACTIVE; blueprint unchanged vs Phase2A; reads datastore 177455 (PosterSchedule) filter status='New'; publishes IG(CreatePostPhoto)+FB(UploadPhoto); NO approval gate; sequential:true; scheduling 900s; nextExec confirmed. All 13 PosterSchedule records currently status='Published' (no 'New' pending), so P1 is effectively idle now.",
+    "N3_9385359": "INACTIVE + isinvalid (confirmed).",
+    "N4_9385364": "INACTIVE (confirmed).",
+    "legacy_9561890": "INACTIVE (confirmed, kept off).",
+    "secure_visualizer_9796001": "INACTIVE; writes ONLY VISUALIZER_APPROVED.",
+    "contradiction_with_phase2a": "NONE. Current Make state is consistent with SECURITY_PHASE2A_PUBLISH_AUTHORITY_TRACE_V01."
+  },
+
+  "authoritative_inputs_located": {
+    "GEMINI_HANDOFF_PACKAGE_V01": "Shared Drive (read).",
+    "SECURITY_PHASE2A_PUBLISH_AUTHORITY_TRACE_V01": "Shared Drive (read).",
+    "GEMINI_10M_GROWTH_AUDIT_V01": "Shared Drive (read; treated as INDEPENDENT_ANALYSIS_NOT_IMPLEMENTATION_APPROVED).",
+    "P0-2_publish_approval_token_model": "Located in local clone unpipe/approvals.py (three-gate ApprovalStore, SHA-bound). REUSED as the foundation; hardened for P0.",
+    "daily_content_inventory_implementation": "NOT FOUND as a discrete artifact on the Shared Drive or clone in this pass. Daily-content-engine COMPATIBILITY is satisfied at the model level (buffer metrics + uniqueness defined in the canonical model); integrating a specific existing inventory implementation is a remaining item requiring the source location from Nitin/ChatGPT."
+  },
+
+  "exact_changes_made": {
+    "make_scenarios_changed": "NONE",
+    "scenario_ids_changed": [],
+    "modules_touched": "NONE",
+    "datastores_or_sheets_touched": "NONE",
+    "make_activations_or_deactivations": "NONE",
+    "durable_artifacts_created": [
+      "CANONICAL_FACTORY_DATA_GOVERNANCE_MODEL_V01.json (Shared Drive, verified)",
+      "P0_SAFE_DAILY_PUBLISHING_IMPLEMENTATION_REPORT_V01.json (this file)"
+    ],
+    "reference_implementation_evidence_local": [
+      {"file": "publish_gate.py", "sha256": "efc5104efc60615b2e5cb99fbc7068b811446767e95a40bd5a2d6589f6dc2216", "role": "P0 Publish-Approval Eligibility Gate reference implementation (fail-closed)"},
+      {"file": "test_publish_gate.py", "sha256": "06867719b541d6ee7f4615c80b6cb09a3b8e6b16186dc98a1039d99b69f0d058", "role": "negative+positive test suite"}
+    ]
+  },
+
+  "identity_chain_implemented": "MODELED + reference-provable (canonical model). NOT yet written as live Make fields. Field additions are additive/non-destructive and specified in the migration mapping.",
+
+  "gate_proof": {
+    "method": "Deterministic reference implementation executed in isolation. No Make execution, no network post, no real publication. The test proves the GATE (eligibility logic), not a bypass of a final module.",
+    "negative_tests_total": 12,
+    "negative_tests_pass": 12,
+    "negative_cases": {
+      "1_no_publish_approval": "BLOCKED",
+      "2_creative_missing": "BLOCKED",
+      "3_final_video_missing": "BLOCKED",
+      "4_expired": "BLOCKED",
+      "5_revoked": "BLOCKED",
+      "6_wrong_fingerprint": "BLOCKED",
+      "7_wrong_platform": "BLOCKED (fingerprint + token-scope, two sub-cases)",
+      "8_schedule_out_of_scope": "BLOCKED",
+      "9_changed_packaging": "BLOCKED",
+      "10_duplicate_replay": "BLOCKED",
+      "11_visualizer_only": "BLOCKED",
+      "12_status_new_only": "BLOCKED"
+    },
+    "positive_dry_run": "PUBLISH_ELIGIBLE with valid creative+final+publish approvals, matching fingerprint, approved platform, in-window schedule, not expired/revoked, unused publication_id. STOPPED before any public execution.",
+    "extra": {"fail_closed_on_malformed_input": "BLOCKED", "duplicate_safe_first_ok_second_blocked": "PASS"},
+    "suite_result": "16/16 PASS"
+  },
+
+  "gate_binding": {
+    "status_new_alone_blocked": true,
+    "visualizer_approval_alone_blocked": true,
+    "fingerprint_binding": true,
+    "platform_scope_binding": true,
+    "schedule_scope_binding": true,
+    "expired_blocked": true,
+    "revoked_blocked": true,
+    "duplicate_safe": true,
+    "fail_closed": true
+  },
+
+  "designed_not_applied_live_wiring": {
+    "summary": "The minimal safe change-set to place the live P1 publisher behind the gate is designed but NOT applied, because it (a) mutates a live active production publisher, (b) requires an external verifier for non-weakened expiry/revocation/fingerprint checks (Make cannot do this natively and MUST NOT be weakened), which needs Render deploy + secret provisioning (Nitin authority), and (c) is a release action reserved for Nitin.",
+    "proposed_minimal_change_set": [
+      "Capture pre-change blueprint snapshot of P1 (rollback point).",
+      "Deactivate P1 (safe now: no 'New' records pending).",
+      "Insert an eligibility pre-check before any post module: for each candidate record, resolve identity + call the Publish-Approval verifier (reuse the existing Render approval_server pattern, authenticated) which returns ELIGIBLE/BLOCKED per the all-conditions contract; on anything other than an explicit ELIGIBLE -> skip (fail-closed).",
+      "Publisher posts ONLY when verifier returns ELIGIBLE and consumes a single-use publication_id.",
+      "Prove end-to-end with the final IG/FB modules pointed at a mock/test destination (no public post), then hand back to Nitin for activation."
+    ],
+    "why_not_now": "Executing live mutation + external deploy autonomously would risk accidental public posting and cross the STOP conditions ('live publisher cannot be safely isolated without release authority', 'architectural decision/deploy outside P0 scope'). Gate correctness is already proven in isolation."
+  },
+
+  "aakhri_ishq_pilot": {
+    "M02_REPLAY": {"final_video_approval": "FINAL_VIDEO_APPROVED (per input)", "publish_approval": "NONE (not inferred)", "asset_reused": true, "re_rendered": false},
+    "M03_DISCOVERY": {"final_video_approval": "FINAL_VIDEO_APPROVED (per input)", "publish_approval": "NONE (not inferred)", "asset_reused": true, "re_rendered": false},
+    "M08_EMOTIONAL": {"final_video_approval": "FINAL_VIDEO_APPROVED (per input)", "publish_approval": "NONE (not inferred)", "asset_reused": true, "re_rendered": false},
+    "M08_CONVERSION": {"final_video_approval": "inherits verified M08 binary where applicable", "publish_approval": "NONE (not inferred)", "asset_reused": true, "re_rendered": false},
+    "note": "No approved AKI asset was re-rendered. PUBLISH APPROVAL remains NONE for all until Nitin gives NEW explicit Publish Approval. No AKI content was published."
+  },
+
+  "gemini_conformance": {
+    "gemini_growth_model_compatible": true,
+    "analytics_ready": "true (publication_id + generic Observation Ledger design; no schema pollution; collectors deferred to P1)",
+    "experiment_ready": "true (experiment_id/hypothesis/tested_variable/variant_id representable; one-variable discipline)",
+    "attribution_ready": "true (campaign_id + optional attribution_code; CRM deferred)",
+    "platform_metric_verification_rule": "Gemini metric names/definitions must be verified against official platform/API before any collector is built (not done in P0; not required for P0)."
+  },
+
+  "tests_and_evidence": {
+    "gate_suite": "16/16 PASS (12 negatives + positive + fail-closed + duplicate-safe), executed in sandbox.",
+    "make_integration_tests": "NOT RUN — would require live scenario execution; deferred with the live wiring to avoid any posting risk."
+  },
+
+  "rollback_instructions": "No Make change was made, so no Make rollback is required. For the future live wiring: keep the pre-change P1 blueprint snapshot; to roll back, restore that snapshot and leave P1 DEACTIVATED until re-proven. Superseded central artifacts are trashed (recoverable) only after read-back verification; nothing is hard-deleted.",
+
+  "known_limitations": [
+    "Gate proven at logic level (Python reference impl), not yet as a live Make integration.",
+    "Non-weakened expiry/revocation/fingerprint enforcement in Make realistically needs the external verifier (Render) — deploy + secrets are Nitin authority.",
+    "Daily Content Inventory concrete implementation not located this pass (model-level compatibility only)."
+  ],
+
+  "open_items": {
+    "OPEN_MUST_FIX": [
+      "Wire the proven gate in front of the active P1 publisher (behind an authenticated external verifier) and prove E2E against a mock destination — requires Nitin checkpoint + Render deploy authority."
+    ],
+    "OPEN_MATERIAL": [
+      "Locate/confirm the existing Daily Content Inventory implementation to integrate (or confirm it should be built fresh).",
+      "Provision Publish-Approval token issuance flow (issue/expire/revoke) reusing the approval_server pattern."
+    ],
+    "OPEN_NICE_TO_HAVE": [
+      "Analytics Observation Ledger datastore + first collector (P1).",
+      "Attribution code convention per campaign."
+    ]
+  },
+
+  "central_persistence_evidence": {
+    "canonical_model": {"drive_file_id": "1AzC645I4xohWm4lgtvcgrhUWOX1Wr_Rd", "central_path": "07_Reports/AI_Governance/Architecture/CANONICAL_FACTORY_DATA_GOVERNANCE_MODEL_V01.json", "sha256": "f2c253a03bacad9a4df0725a44cf5cb4b20c8c4cab37bcb94ff9d825998bf286", "size_bytes": 10146, "reconciliation_state": "MATCHED", "central_persistence_verified": true},
+    "this_report": {"central_path": "07_Reports/AI_Governance/Architecture/P0_SAFE_DAILY_PUBLISHING_IMPLEMENTATION_REPORT_V01.json", "note": "drive_file_id + sha recorded in the registry entry after this file's own read-back verification."}
+  },
+
+  "real_publication_performed": false,
+  "ready_for_nitin_publish_approval": false,
+  "next_control_point": "Nitin + ChatGPT review this report and the canonical contract. If approved, Nitin authorizes: (1) Render verifier deploy for Publish-Approval, (2) the live P1 gate wiring with mock-destination E2E. Only AFTER that proof does a separate, explicit Nitin Publish Approval authorize any real public post."
+}

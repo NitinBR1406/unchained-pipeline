@@ -1,0 +1,45 @@
+{
+  "artifact": "P1_ROLLBACK_SNAPSHOT_9627055_V01",
+  "artifact_type": "ROLLBACK_SNAPSHOT",
+  "captured_by": "CLAUDE",
+  "captured_at": "2026-09-13",
+  "purpose": "Exact pre-change live blueprint of the active P1 publisher, captured as the rollback point for the (not-yet-applied) P0-B production gate wiring. Restore via scenarios_update with this blueprint and leave DEACTIVATED until re-proven.",
+  "scenario_id": 9627055,
+  "name": "P1: Poster Publisher (IG+FB, schedule-aware)",
+  "isActive_at_capture": true,
+  "isinvalid_at_capture": false,
+  "lastEdit_at_capture": "2026-08-11T08:38:22.349Z",
+  "scheduling": {"type": "indefinitely", "interval": 900},
+  "route_and_bypass_analysis": {
+    "trigger": "scheduled every 900s (no webhook)",
+    "reader": "module 1 datastore:SearchRecord datastore=177455 filter status='New' sort scheduled_at",
+    "router": "module 5 builtin:BasicRouter with 2 routes",
+    "publication_modules": {
+      "IG_route": "module 10 instagram-business:CreatePostPhoto (accountId 17841457677776171); success writer module 11 -> status='Published'",
+      "FB_route": "module 20 http:MakeRequest (image fetch) -> module 21 facebook-pages:UploadPhoto (page_id 839373332878305); success writer module 22 -> status='Published'"
+    },
+    "every_route_to_publication": ["1 -> 5 -> route1 -> 10 (IG publish)", "1 -> 5 -> route2 -> 20 -> 21 (FB publish)"],
+    "current_gate": "NONE. Each route filter checks only ig/fb=='TRUE', platform post_id empty, and scheduled_at<=now. No approval/authority check.",
+    "alternate_bypass": "None within P1 beyond the two documented routes. External/manual seeding of datastore 177455 with status='New' is the upstream authority surface (per Phase2A).",
+    "gate_placement_design": "Insert a Publish-Approval eligibility pre-check between module 1 (SearchRecord) and module 5 (BasicRouter), OR as a mandatory leading condition on BOTH route filters, such that neither module 10 nor module 21 can be reached unless the verifier returns an explicit ELIGIBLE for that record's fingerprint/platform/schedule. Fail-closed on anything else."
+  },
+  "blueprint": {
+    "flow": [
+      {"id": 1, "module": "datastore:SearchRecord", "parameters": {"datastore": 177455}, "mapper": {"sort": [{"key": "scheduled_at", "order": 1}], "filter": [[{"a": "status", "b": "New", "o": "text:equal"}]]}},
+      {"id": 5, "module": "builtin:BasicRouter", "routes": [
+        {"flow": [
+          {"id": 10, "module": "instagram-business:CreatePostPhoto", "parameters": {"__IMTCONN__": 14369479}, "filter": {"name": "IG due", "conditions": [[{"a": "{{ifempty(1.data.ig; \"\")}}", "b": "TRUE", "o": "text:equal"}, {"a": "{{ifempty(1.data.ig_post_id; \"EMPTY\")}}", "b": "EMPTY", "o": "text:equal"}, {"a": "{{formatDate(parseDate(1.data.scheduled_at; \"YYYY-MM-DD HH:mm:ss\"; \"Europe/Amsterdam\"); \"X\")}}", "b": "{{formatDate(now; \"X\")}}", "o": "number:lessorequal"}]]}, "mapper": {"caption": "{{1.data.caption}}", "accountId": "17841457677776171", "image_url": "{{1.data.image_url}}"}, "onerror": [{"id": 50, "module": "datastore:UpdateRecord", "parameters": {"datastore": 177455}, "mapper": {"key": "{{1.key}}", "data": {"status": "Error", "ig_post_id": "IG_ERR: {{error.message}}"}}}, {"id": 51, "module": "datastore:AddRecord", "parameters": {"datastore": 168812}, "mapper": {"data": {"post_id": "{{1.key}}", "platform": "instagram", "scenario": "P1", "raw_error": "{{toString(error)}}", "timestamp": "{{now}}", "error_type": "{{error.type}}", "status_code": "{{error.statusCode}}", "error_message": "{{error.message}}"}}}]},
+          {"id": 11, "module": "datastore:UpdateRecord", "parameters": {"datastore": 177455}, "mapper": {"key": "{{1.key}}", "data": {"status": "Published", "ig_post_id": "{{ifempty(10.id; \"IG_POSTED\")}}"}}}
+        ]},
+        {"flow": [
+          {"id": 20, "module": "http:MakeRequest", "parameters": {"authenticationType": "noAuth"}, "filter": {"name": "FB due", "conditions": [[{"a": "{{ifempty(1.data.fb; \"\")}}", "b": "TRUE", "o": "text:equal"}, {"a": "{{ifempty(1.data.fb_post_id; \"EMPTY\")}}", "b": "EMPTY", "o": "text:equal"}, {"a": "{{formatDate(parseDate(1.data.scheduled_at; \"YYYY-MM-DD HH:mm:ss\"; \"Europe/Amsterdam\"); \"X\")}}", "b": "{{formatDate(now; \"X\")}}", "o": "number:lessorequal"}]]}, "mapper": {"url": "{{1.data.image_url}}", "method": "get", "parseResponse": false, "allowRedirects": true, "stopOnHttpError": false}, "onerror": [{"id": 60, "module": "datastore:UpdateRecord", "parameters": {"datastore": 177455}, "mapper": {"key": "{{1.key}}", "data": {"status": "Error", "fb_post_id": "FB_DL_ERR: {{error.message}}"}}}]},
+          {"id": 21, "module": "facebook-pages:UploadPhoto", "parameters": {"__IMTCONN__": 14363628}, "mapper": {"data": "{{20.data}}", "message": "{{1.data.caption}}", "page_id": "839373332878305", "fileName": "{{1.key}}.jpg"}, "onerror": [{"id": 62, "module": "datastore:UpdateRecord", "parameters": {"datastore": 177455}, "mapper": {"key": "{{1.key}}", "data": {"status": "Error", "fb_post_id": "FB_ERR: {{error.message}}"}}}, {"id": 63, "module": "datastore:AddRecord", "parameters": {"datastore": 168812}, "mapper": {"data": {"post_id": "{{1.key}}", "platform": "facebook", "scenario": "P1", "raw_error": "{{toString(error)}}", "timestamp": "{{now}}", "error_type": "{{error.type}}", "status_code": "{{error.statusCode}}", "error_message": "{{error.message}}"}}}]},
+          {"id": 22, "module": "datastore:UpdateRecord", "parameters": {"datastore": 177455}, "mapper": {"key": "{{1.key}}", "data": {"status": "Published", "fb_post_id": "{{ifempty(21.post_id; \"FB_POSTED\")}}"}}}
+        ]}
+      ]}
+    ],
+    "metadata": {"instant": false, "scenario": {"sequential": true, "autoCommit": true, "maxErrors": 3, "roundtrips": 1}},
+    "scheduling": {"type": "indefinitely", "interval": 900}
+  },
+  "restore_procedure": "scenarios_update(9627055, blueprint=<this blueprint>); confirm; leave DEACTIVATED until the gate is re-proven. Never re-activate on a failed/partial gate (fail-closed)."
+}

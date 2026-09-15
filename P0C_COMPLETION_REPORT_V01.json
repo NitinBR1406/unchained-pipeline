@@ -1,0 +1,45 @@
+{
+  "report": "P0C_COMPLETION_REPORT_V01",
+  "phase": "P0-C - Poster Publish Approval (per-platform grants, medium-neutral final gate)",
+  "generated_at_utc": "2026-09-14T14:20:00Z",
+  "deployed_commit": "e8c3bd59fe61b15e9cd1a202a1b722e101b4bed2",
+  "verifier_endpoint": "https://unchained-approval.onrender.com/v/publish-eligibility",
+  "render_service": "unchained-approval (srv-dafht9f40ujc73bc48fg), branch main, autoDeploy on commit",
+  "code": {
+    "files_changed": ["unpipe/approvals.py", "unpipe/publish_approval.py", "unpipe/cli.py", "make_approval_link.py"],
+    "files_new": ["unpipe/canonical.py", "unpipe/provisioner.py", "scripts/provision_poster.py", "tests/test_canonical.py", "tests/test_provisioner.py", "tests/test_poster_publish_approval.py", "tests/test_multiplatform.py"],
+    "unit_tests": "47 passed / 0 failed (video regression 19/19 unchanged); local pre-push run reported 131 passed across full suite",
+    "shared_canonicalization": "unpipe/canonical.py is single source: compute_fingerprint, packaging_canonical_json/sha256, scheduled_at_to_epoch (Europe/Amsterdam), schedule_window, final_gate_for_medium",
+    "medium_neutral_gate": "grant.medium default video; poster requires NITIN_FINAL_ASSET_APPROVAL; video keeps NITIN_FINAL_VIDEO_APPROVAL; not relabeled",
+    "multiplatform": "grants keyed content_id::platform with legacy content_id fallback; approvals also platform-scoped campaign; IG/FB independent"
+  },
+  "make_boundary_v2": "HTTP parseResponse=OFF -> toString(data) -> json:ParseJSON (onerror=block) -> filter requires parsed reason==VALID_PUBLISH_APPROVAL AND raw regex boolean eligible:true -> mock sink; handleErrors=true. Adversarial matrix A-I proven (string 'true', malformed, trailing garbage, empty, missing fields all blocked; only genuine boolean-true+token passes). Base64-buffer pitfall (parseResponse off returns buffer) caught live and fixed via toString.",
+  "live_e2e": {
+    "ig_positive": "eligible=true, VALID_PUBLISH_APPROVAL, approval_id PA-P0C_TEST_POSTER-instagram, mock sink exactly once",
+    "fb_positive": "eligible=true, VALID_PUBLISH_APPROVAL, approval_id PA-P0C_TEST_POSTER-facebook, mock sink exactly once",
+    "duplicate_safe": "replay after status=Published -> no second sink",
+    "asset_mismatch": "HTTP 200 eligible=false CREATIVE_APPROVAL_MISSING",
+    "packaging_mismatch": "HTTP 200 eligible=false CREATIVE_APPROVAL_MISSING",
+    "schedule_version_mismatch": "HTTP 200 eligible=false CREATIVE_APPROVAL_MISSING",
+    "out_of_window": "HTTP 200 eligible=false SCHEDULE_MISMATCH",
+    "http_200_eligible_false_blocked": true,
+    "strict_json_auth": "proven (V2 probe A-I)",
+    "fail_closed": "proven (V2 probe malformed/parse; P0-B handleErrors for HTTP/network)",
+    "cross_platform_isolation": "proven on deployed commit via unit suite (IG!->FB, FB!->IG, revoke isolation, expiry isolation) + structural composite keys; live positive confirms independent per-platform resolution"
+  },
+  "provisioning": "per (content_id, platform) grant via scripts/provision_poster.py; refuses unless creative+final_asset+publish approvals exist bound to the fingerprint; grants store /data/_publish_grants.json, approvals /data/_publish_approvals.json",
+  "cleanup_absence_proof": {
+    "make_disposables_deleted": ["clone 9807092", "store 185857", "structure 627375", "probes + stores/structures"],
+    "render_test_grants_removed": ["P0C_TEST_POSTER::instagram", "P0C_TEST_POSTER::facebook"],
+    "render_test_approvals_removed": "all P0C_TEST_POSTER:: rows (incl 3 typo rows)",
+    "post_restart_live_absence": "IG and FB both HTTP 200 eligible=false NO_PUBLISH_APPROVAL",
+    "restart_deploy": "dep-dak03rvqj5pc73fapkb0 (same commit) live"
+  },
+  "safety": {"real_p1_9627055": "inactive/untouched", "N3_N4_legacy_9561890": "OFF", "live_poster_store_177455": "untouched", "real_publication_performed": false, "aakhri_ishq_publish_approval_created": false},
+  "open_items": {
+    "must_fix": ["Verifier reads grant/approval stores at boot only; grant creation AND revocation take effect only after restart -> revocation is NOT immediate. Must reload per-request (or file-watch) before REAL P1 activation."],
+    "material": ["REAL P1 gate must use the V2 Make boundary (toString -> ParseJSON -> reason + boolean-true regex); parseResponse=off returns base64 buffer."],
+    "nice_to_have": ["publish_approval.py module docstring still references final_video."]
+  },
+  "final_status": "P0-C COMPLETE: implemented, unit-tested, live end-to-end proven, disposable authority provisioned+exercised+removed, absence confirmed live. Ready for P0-D real-P1 wiring planning."
+}

@@ -1,0 +1,205 @@
+{
+  "artifact": "P0D_P1_PRE_V2_ROLLBACK_SNAPSHOT_V01",
+  "purpose": "Verbatim pre-V2 rollback snapshot of REAL P1 scenario 9627055, captured read-only before any V2 publish-eligibility gate insertion.",
+  "phase": "P0-D / pre-V2-insertion",
+  "captured_at_utc": "2026-09-14T15:05:36Z",
+  "captured_by": "Claude (read-only Make API GET)",
+  "capture_method": "scenarios_get(9627055) + data-stores_get(177455) + data-structures_get(613256); no writes",
+  "scenario_id": 9627055,
+  "scenario_name": "P1: Poster Publisher (IG+FB, schedule-aware)",
+  "team_id": 2778692,
+  "folder_id": 476909,
+  "state_at_capture": {
+    "isActive": false,
+    "isPaused": false,
+    "isinvalid": false,
+    "islinked": false,
+    "islocked": false,
+    "iswaiting": false,
+    "concept": false,
+    "chainingRole": "none",
+    "hookId": null,
+    "nextExec": null,
+    "dlqCount": 0,
+    "allDlqCount": 0,
+    "created": "2026-08-06T15:26:14.710Z",
+    "lastEdit": "2026-08-11T08:38:22.349Z",
+    "scheduling": { "type": "indefinitely", "interval": 900 },
+    "createdByUser": { "id": 5637212, "name": "Nitin Ramdaras", "email": "nitinramdaras@hotmail.com" },
+    "updatedByUser": { "id": 5637212, "name": "Nitin Ramdaras", "email": "nitinramdaras@hotmail.com" }
+  },
+  "scenario_flags": {
+    "instant": false,
+    "version": 1,
+    "dlq": false,
+    "dataloss": false,
+    "maxErrors": 3,
+    "autoCommit": true,
+    "roundtrips": 1,
+    "sequential": true,
+    "confidential": false,
+    "freshVariables": false,
+    "autoCommitTriggerLast": true
+  },
+  "datastore_references": {
+    "primary_queue": {
+      "id": 177455,
+      "name": "PosterSchedule",
+      "datastructureId": 613256,
+      "records_at_capture": 13,
+      "size_bytes_at_capture": 6988,
+      "maxSize": 1048576,
+      "structure_spec": [
+        { "name": "poster_id", "type": "text" },
+        { "name": "image_url", "type": "text" },
+        { "name": "caption", "type": "text" },
+        { "name": "scheduled_at", "type": "text" },
+        { "name": "ig", "type": "text" },
+        { "name": "fb", "type": "text" },
+        { "name": "status", "type": "text" },
+        { "name": "ig_post_id", "type": "text" },
+        { "name": "fb_post_id", "type": "text" },
+        { "name": "group", "type": "text" }
+      ]
+    },
+    "error_log_store": { "id": 168812, "usage": "AddRecord targets in onerror handlers (modules 51, 63)" }
+  },
+  "module_graph_summary": [
+    { "id": 1, "module": "datastore:SearchRecord", "datastore": 177455, "role": "trigger/select status=New, sort scheduled_at ASC" },
+    { "id": 5, "module": "builtin:BasicRouter", "routes": 2 },
+    { "id": 10, "module": "instagram-business:CreatePostPhoto", "route": "IG", "connection": 14369479, "account_id": "17841457677776171", "onerror": [50, 51] },
+    { "id": 11, "module": "datastore:UpdateRecord", "route": "IG", "datastore": 177455, "role": "mark Published + ig_post_id" },
+    { "id": 20, "module": "http:MakeRequest", "route": "FB", "role": "GET image_url (non-publishing)", "auth": "noAuth", "stopOnHttpError": false, "onerror": [60] },
+    { "id": 21, "module": "facebook-pages:UploadPhoto", "route": "FB", "connection": 14363628, "page_id": "839373332878305", "onerror": [62, 63] },
+    { "id": 22, "module": "datastore:UpdateRecord", "route": "FB", "datastore": 177455, "role": "mark Published + fb_post_id" }
+  ],
+  "current_filters": {
+    "module_1_search": [ [ { "a": "status", "b": "New", "o": "text:equal" } ] ],
+    "IG_due_module_10": "ig==TRUE AND ig_post_id EMPTY AND scheduled_at(Europe/Amsterdam) <= now",
+    "FB_due_module_20": "fb==TRUE AND fb_post_id EMPTY AND scheduled_at(Europe/Amsterdam) <= now"
+  },
+  "current_error_handlers": {
+    "50": "IG publish fail -> ds177455 UpdateRecord status=Error, ig_post_id=IG_ERR:<msg>",
+    "51": "IG publish fail -> ds168812 AddRecord error log (platform=instagram)",
+    "60": "FB image download fail -> ds177455 UpdateRecord status=Error, fb_post_id=FB_DL_ERR:<msg>",
+    "62": "FB upload fail -> ds177455 UpdateRecord status=Error, fb_post_id=FB_ERR:<msg>",
+    "63": "FB upload fail -> ds168812 AddRecord error log (platform=facebook)"
+  },
+  "hardcoded_references": {
+    "instagram_account_id": "17841457677776171",
+    "facebook_page_id": "839373332878305",
+    "instagram_connection__IMTCONN__": 14369479,
+    "facebook_connection__IMTCONN__": 14363628,
+    "datastores": [177455, 168812]
+  },
+  "gate_status_at_capture": "NONE — no publish-eligibility verifier present; publishing driven solely by router due-filters (flag + empty post-id + schedule).",
+  "blueprint": {
+    "flow": [
+      {
+        "id": 1,
+        "mapper": {
+          "sort": [ { "key": "scheduled_at", "order": 1 } ],
+          "filter": [ [ { "a": "status", "b": "New", "o": "text:equal" } ] ]
+        },
+        "module": "datastore:SearchRecord",
+        "version": 1,
+        "metadata": { "designer": { "x": 0, "y": 0 } },
+        "parameters": { "datastore": 177455 }
+      },
+      {
+        "id": 5,
+        "mapper": {},
+        "module": "builtin:BasicRouter",
+        "routes": [
+          {
+            "flow": [
+              {
+                "id": 10,
+                "filter": {
+                  "name": "IG due",
+                  "conditions": [
+                    [
+                      { "a": "{{ifempty(1.data.ig; \"\")}}", "b": "TRUE", "o": "text:equal" },
+                      { "a": "{{ifempty(1.data.ig_post_id; \"EMPTY\")}}", "b": "EMPTY", "o": "text:equal" },
+                      { "a": "{{formatDate(parseDate(1.data.scheduled_at; \"YYYY-MM-DD HH:mm:ss\"; \"Europe/Amsterdam\"); \"X\")}}", "b": "{{formatDate(now; \"X\")}}", "o": "number:lessorequal" }
+                    ]
+                  ]
+                },
+                "mapper": { "caption": "{{1.data.caption}}", "accountId": "17841457677776171", "image_url": "{{1.data.image_url}}" },
+                "module": "instagram-business:CreatePostPhoto",
+                "onerror": [
+                  { "id": 50, "mapper": { "key": "{{1.key}}", "data": { "status": "Error", "ig_post_id": "IG_ERR: {{error.message}}" }, "upsert": false, "overwriteArrays": false }, "module": "datastore:UpdateRecord", "version": 1, "parameters": { "datastore": 177455 } },
+                  { "id": 51, "mapper": { "data": { "post_id": "{{1.key}}", "platform": "instagram", "scenario": "P1", "raw_error": "{{toString(error)}}", "timestamp": "{{now}}", "error_type": "{{error.type}}", "status_code": "{{error.statusCode}}", "error_message": "{{error.message}}" }, "overwrite": false }, "module": "datastore:AddRecord", "version": 1, "parameters": { "datastore": 168812 } }
+                ],
+                "version": 1,
+                "parameters": { "__IMTCONN__": 14369479 }
+              },
+              {
+                "id": 11,
+                "mapper": { "key": "{{1.key}}", "data": { "status": "Published", "ig_post_id": "{{ifempty(10.id; \"IG_POSTED\")}}" }, "upsert": false, "overwriteArrays": false },
+                "module": "datastore:UpdateRecord",
+                "version": 1,
+                "metadata": { "designer": { "x": 600, "y": -150 } },
+                "parameters": { "datastore": 177455 }
+              }
+            ]
+          },
+          {
+            "flow": [
+              {
+                "id": 20,
+                "filter": {
+                  "name": "FB due",
+                  "conditions": [
+                    [
+                      { "a": "{{ifempty(1.data.fb; \"\")}}", "b": "TRUE", "o": "text:equal" },
+                      { "a": "{{ifempty(1.data.fb_post_id; \"EMPTY\")}}", "b": "EMPTY", "o": "text:equal" },
+                      { "a": "{{formatDate(parseDate(1.data.scheduled_at; \"YYYY-MM-DD HH:mm:ss\"; \"Europe/Amsterdam\"); \"X\")}}", "b": "{{formatDate(now; \"X\")}}", "o": "number:lessorequal" }
+                    ]
+                  ]
+                },
+                "mapper": { "url": "{{1.data.image_url}}", "method": "get", "timeout": 300, "shareCookies": false, "parseResponse": false, "allowRedirects": true, "stopOnHttpError": false, "requestCompressedContent": false },
+                "module": "http:MakeRequest",
+                "onerror": [
+                  { "id": 60, "mapper": { "key": "{{1.key}}", "data": { "status": "Error", "fb_post_id": "FB_DL_ERR: {{error.message}}" }, "upsert": false, "overwriteArrays": false }, "module": "datastore:UpdateRecord", "version": 1, "parameters": { "datastore": 177455 } }
+                ],
+                "version": 4,
+                "parameters": { "authenticationType": "noAuth" }
+              },
+              {
+                "id": 21,
+                "mapper": { "data": "{{20.data}}", "message": "{{1.data.caption}}", "page_id": "839373332878305", "fileName": "{{1.key}}.jpg" },
+                "module": "facebook-pages:UploadPhoto",
+                "onerror": [
+                  { "id": 62, "mapper": { "key": "{{1.key}}", "data": { "status": "Error", "fb_post_id": "FB_ERR: {{error.message}}" }, "upsert": false, "overwriteArrays": false }, "module": "datastore:UpdateRecord", "version": 1, "parameters": { "datastore": 177455 } },
+                  { "id": 63, "mapper": { "data": { "post_id": "{{1.key}}", "platform": "facebook", "scenario": "P1", "raw_error": "{{toString(error)}}", "timestamp": "{{now}}", "error_type": "{{error.type}}", "status_code": "{{error.statusCode}}", "error_message": "{{error.message}}" }, "overwrite": false }, "module": "datastore:AddRecord", "version": 1, "parameters": { "datastore": 168812 } }
+                ],
+                "version": 6,
+                "parameters": { "__IMTCONN__": 14363628 }
+              },
+              {
+                "id": 22,
+                "mapper": { "key": "{{1.key}}", "data": { "status": "Published", "fb_post_id": "{{ifempty(21.post_id; \"FB_POSTED\")}}" }, "upsert": false, "overwriteArrays": false },
+                "module": "datastore:UpdateRecord",
+                "version": 1,
+                "metadata": { "designer": { "x": 600, "y": 150 } },
+                "parameters": { "datastore": 177455 }
+              }
+            ]
+          }
+        ],
+        "version": 1,
+        "metadata": { "designer": { "x": 300, "y": 0 } }
+      }
+    ],
+    "name": "P1: Poster Publisher (IG+FB, schedule-aware)",
+    "metadata": {
+      "instant": false,
+      "version": 1,
+      "designer": { "orphans": [] },
+      "scenario": { "dlq": false, "dataloss": false, "maxErrors": 3, "autoCommit": true, "roundtrips": 1, "sequential": true, "confidential": false, "freshVariables": false, "autoCommitTriggerLast": true }
+    },
+    "scheduling": { "type": "indefinitely", "interval": 900 },
+    "interface": { "input": [], "output": [] }
+  }
+}

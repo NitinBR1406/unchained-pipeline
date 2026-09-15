@@ -1,0 +1,47 @@
+{
+  "report": "P0B_PRODUCTION_GATE_INTEGRATION_REPORT_V02",
+  "phase": "P0-B — Live verifier integration + controlled clone E2E",
+  "generated_at_utc": "2026-09-14T10:10:00Z",
+  "verifier": {
+    "endpoint": "https://unchained-approval.onrender.com/v/publish-eligibility",
+    "secret_handling": "Make Keychain (keychain:apikeyauth) id 217337, header x-publish-apikey; never in blueprint; agent never handled the value",
+    "http_contract": "eligible:false returned with HTTP 200; 401 bad key; 400 non-JSON; 500 INTERNAL_ERROR; fail-closed by construction"
+  },
+  "clone": {
+    "scenario_id": 9804752,
+    "gate": "per-route http:ActionSendDataAPIKeyAuth (platform-scoped), parseResponse+handleErrors on; mock sink only when eligible==true; post-publish status=Published idempotency marker",
+    "bypass_paths": 0,
+    "status_after": "deleted (disposable)"
+  },
+  "real_p1": {"scenario_id": 9627055, "active": false, "touched": false},
+  "other_scenarios": {"N3_9385359": "OFF", "N4_9385364": "OFF", "legacy_V3_9561890": "OFF"},
+  "results": {
+    "positive": {"case": "P0B_TEST_CONTENT_001 IG", "eligible": true, "reason": "VALID_PUBLISH_APPROVAL", "http": 200, "sink_reached": "exactly once"},
+    "negatives": [
+      {"case": "no approval / unknown", "reason": "NO_PUBLISH_APPROVAL", "http": 200, "sink": false},
+      {"case": "status=New only", "reason": "NO_PUBLISH_APPROVAL", "http": 200, "sink": false},
+      {"case": "VISUALIZER_ONLY", "reason": "FINAL_VIDEO_APPROVAL_MISSING", "http": 200, "sink": false},
+      {"case": "FINAL_ONLY (no publish gate)", "reason": "NO_PUBLISH_APPROVAL", "http": 200, "sink": false},
+      {"case": "EXPIRED", "reason": "EXPIRED", "http": 200, "sink": false},
+      {"case": "REVOKED", "reason": "REVOKED", "http": 200, "sink": false},
+      {"case": "asset fingerprint mismatch", "reason": "CREATIVE_APPROVAL_MISSING (fingerprint-bound)", "http": 200, "sink": false},
+      {"case": "packaging fingerprint mismatch", "reason": "CREATIVE_APPROVAL_MISSING (fingerprint-bound)", "http": 200, "sink": false},
+      {"case": "wrong platform", "reason": "CREATIVE_APPROVAL_MISSING (fingerprint dominates platform)", "http": 200, "sink": false},
+      {"case": "wrong schedule_version", "reason": "CREATIVE_APPROVAL_MISSING (schedule_version in fingerprint)", "http": 200, "sink": false},
+      {"case": "scheduled_at_epoch outside window", "reason": "SCHEDULE_MISMATCH", "http": 200, "sink": false}
+    ],
+    "http_200_eligible_false_blocked": true,
+    "fail_closed": ["network unreachable -> blocked", "HTTP non-2xx (503) -> blocked", "malformed/non-JSON body -> parse error -> blocked", "JSON parse failure -> blocked", "missing eligible field -> blocked (filter requires ==true)"],
+    "boolean_contract": {"boolean_true_pass": true, "boolean_false_block": true, "observation": "verifier emits JSON boolean; parseResponse normalizes; filter text-equality would coerce a literal string 'true' — recommend strict boolean typing (material)"},
+    "duplicate_safety": {"level": "publication-flow", "mechanism": "post-publish status=Published marker; SearchRecord picks only New", "result": "exactly one boundary execution across replay"}
+  },
+  "disposable_test_ids": ["P0B_TEST_CONTENT_001","P0B_TEST_VISUALIZER_ONLY","P0B_TEST_FINAL_ONLY","P0B_TEST_EXPIRED","P0B_TEST_REVOKED"],
+  "safety": {"real_publication_performed": false, "aakhri_ishq_publish_approval_created": false, "keychain_secret_exposed": false, "live_poster_store_177455_touched": false},
+  "cleanup_verification": {"render_seeds_cleaned": true, "verified_via": "re-queried all 5 test content_ids after Render cleanup+restart; each returned eligible=false / NO_PUBLISH_APPROVAL", "make_disposables_deleted": ["scenario 9804752","scenario 9805647","datastore 185743","datastructure 627249"]},
+  "open_items": {
+    "must_fix_before_real_p1_wiring": ["Poster publish-approval provisioning (OPTION 1 chosen): posters need per-poster grants (content_id=poster_id, asset_sha256, packaging_sha256, schedule, NITIN_FINAL_ASSET_APPROVAL + creative + publish) on the verifier before wiring real P1"],
+    "material": ["Gate filter uses text-equality (eligible=='true'); implement strict boolean typing"],
+    "nice_to_have": ["PLATFORM_MISMATCH and schedule_version mismatch shadowed by FINGERPRINT_MISMATCH (documented)"]
+  },
+  "final_status": "CLONE E2E PASS and all disposables cleaned. Real P1 inactive/unmodified. Real-P1 wiring gated on Poster Publish Approval Provisioner (OPTION 1) + strict boolean typing + regression tests."
+}
