@@ -1,0 +1,41 @@
+# P0E1 Temporal live-wire (DISPOSABLE dev server; NON-PRODUCTION). Captures RAW runtime evidence.
+name: p0e1-temporal-live
+on: { workflow_dispatch: {} }
+permissions: { contents: read }
+env: { HARNESS: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE }
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE } }
+    steps:
+      - uses: actions/checkout@v4
+      - name: Up (disposable dev Temporal)
+        run: |
+          export SE_DIR=$PWD/se; mkdir -p $SE_DIR evidence; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
+          SE_DIR=$SE_DIR docker compose -f ci/compose.temporal-dev.ci.yml up -d --build
+          HEALTHY=0; for i in $(seq 1 60); do if docker compose -f ci/compose.temporal-dev.ci.yml exec -T temporal tctl cluster health >/tmp/h 2>&1; then HEALTHY=1; break; fi; sleep 3; done
+          [ "$HEALTHY" = 1 ] || { echo "temporal not healthy"; exit 1; }
+      - name: Live proofs (start, crash+restart, resume)
+        env: { TEMPORAL_ADDRESS: "localhost:7233" }
+        timeout-minutes: 30
+        run: |
+          export SE_STORE=$SE_DIR/side_effects.json IDS_FILE=$SE_DIR/ids_p0e1.json RESULTS_LOG=$PWD/evidence/results.jsonl PYTHONPATH=$PWD
+          python -m control_plane.temporal_live start
+          docker kill $(docker ps -q --filter name=worker1) || true
+          docker compose -f ci/compose.temporal-dev.ci.yml restart postgresql temporal
+          sleep 12
+          SE_DIR=$SE_DIR docker compose -f ci/compose.temporal-dev.ci.yml up -d worker1
+          sleep 15
+          python -m control_plane.temporal_live resume
+      - name: Diagnostics on failure
+        if: failure()
+        run: |
+          set +e; C="docker compose -f ci/compose.temporal-dev.ci.yml"
+          { echo "== ps =="; $C ps -a; echo "== worker1 =="; $C logs --no-color --tail all worker1; echo "== temporal =="; $C logs --no-color --tail 120 temporal; } > evidence/p0e1_live_diagnostics.log 2>&1
+      - name: Down
+        if: always()
+        run: SE_DIR=$PWD/se docker compose -f ci/compose.temporal-dev.ci.yml down -v
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: p0e1-temporal-live-evidence, path: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/evidence/ }

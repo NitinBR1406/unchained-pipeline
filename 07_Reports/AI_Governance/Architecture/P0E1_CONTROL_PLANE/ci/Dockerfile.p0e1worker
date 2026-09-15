@@ -1,0 +1,9 @@
+# P0E1 control-plane worker image (dev/CI only). Pin temporalio to the approved SDK.
+FROM python:3.11-slim
+WORKDIR /app
+ARG TEMPORALIO_VERSION=1.33.0
+RUN pip install --no-cache-dir "temporalio==${TEMPORALIO_VERSION}" cryptography || pip install --no-cache-dir temporalio cryptography
+COPY 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/control_plane /app/control_plane
+COPY 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/approval_authority.json /app/approval_authority.json
+ENV SE_STORE=/data/se/side_effects.json RESULTS_LOG=/data/se/results.jsonl PYTHONPATH=/app
+CMD ["python","-m","control_plane.temporal_live","worker"]

@@ -33,18 +33,31 @@ state["invariants"].update({
 public={k:v for k,v in state.items() if not k.startswith("_")}
 open(os.path.join(EV,"UNCHAINED_MASTER_PROJECT_STATE.json"),"w").write(json.dumps(public,indent=2,sort_keys=True))
 
-# 3) run tests -> report
-r=subprocess.run([sys.executable, os.path.join(HERE,"tests","test_foundation.py")],capture_output=True,text=True)
-last=[l for l in r.stdout.splitlines() if l.startswith("TOTAL=")]
-tot=pas=fai=0
-if last:
-    for kv in last[-1].split():
-        k,_,v=kv.partition("=");
-        if k=="TOTAL":tot=int(v)
-        if k=="PASSED":pas=int(v)
-        if k=="FAILED":fai=int(v)
-report={"suite":"P0E1 test_foundation","total":tot,"passed":pas,"failed":fai,"skipped":0,"exit_code":r.returncode,
-        "invariants":state["invariants"],"stdout_tail":r.stdout.splitlines()[-6:]}
+# 3) run BOTH offline suites -> separate reports (do not collapse into one generic GREEN)
+def run(name, marker):
+    r=subprocess.run([sys.executable, os.path.join(HERE,"tests",name)],capture_output=True,text=True)
+    tot=pas=fai=0
+    for l in r.stdout.splitlines():
+        if l.startswith(marker):
+            for kv in l.split():
+                k,_,v=kv.partition("=")
+                if k.endswith("TOTAL"):tot=int(v)
+                if k.endswith("PASSED"):pas=int(v)
+                if k.endswith("FAILED"):fai=int(v)
+    return {"suite":name,"total":tot,"passed":pas,"failed":fai,"skipped":0,"exit_code":r.returncode}
+foundation=run("test_foundation.py","TOTAL=")
+human_auth=run("test_human_auth.py","HA_TOTAL=")
+report={
+ "OFFLINE_TESTS":{"foundation":foundation,"green": foundation["failed"]==0 and foundation["exit_code"]==0},
+ "HUMAN_AUTH_TESTS":{"suite":human_auth,"green": human_auth["failed"]==0 and human_auth["exit_code"]==0,
+    "AI_CAN_CREATE_NITIN_APPROVAL":False,"AI_CAN_INFER_NITIN_APPROVAL":False,
+    "AI_CAN_IMPERSONATE_NITIN_BY_EVENT_METADATA":False,"PUBLISH_WITHOUT_NITIN_APPROVAL":False},
+ "LIVE_TEMPORAL_TESTS":{"status":"NOT_RUN_PENDING_RUNNER",
+    "reason":"requires a live disposable Temporal server (Docker/temporalio); not available in this session",
+    "harness":["control_plane/temporal_live.py","ci/compose.temporal-dev.ci.yml","ci/Dockerfile.p0e1worker","ci/p0e1-temporal-live.yml"],
+    "note":"authored + statically validated; live OBSERVED evidence to be captured on a runner. NOT simulated."},
+ "CENTRAL_PERSISTENCE":{"CENTRAL_PERSISTENCE_VERIFIED":False,"status":"PENDING"},
+ "invariants":state["invariants"]}
 open(os.path.join(EV,"P0E1_TEST_REPORT.json"),"w").write(json.dumps(report,indent=2))
 
 # 4) SHA256 manifest of all P0E1 artifacts (code + docs + schemas + evidence)
@@ -65,6 +78,7 @@ man=os.path.join(EV,"SHA256SUMS.txt")
 with open(man,"w") as f:
     for fp in files: f.write("%s  %s\n"%(sha(fp), os.path.relpath(fp,HERE)))
 print("MASTER_STATE state_version=",public["state_version"],"winner=",public["architecture_locks"]["winner"])
-print("TESTS total=%d passed=%d failed=%d"%(tot,pas,fai))
+print("OFFLINE foundation=%(total)d/%(passed)d/%(failed)d"%foundation)
+print("HUMAN_AUTH=%(total)d/%(passed)d/%(failed)d"%human_auth)
 print("INVARIANTS=",json.dumps(state["invariants"]))
 print("manifest_files=",len(files))

@@ -1,23 +1,50 @@
 {
-  "suite": "P0E1 test_foundation",
-  "total": 27,
-  "passed": 27,
-  "failed": 0,
-  "skipped": 0,
-  "exit_code": 0,
+  "OFFLINE_TESTS": {
+    "foundation": {
+      "suite": "test_foundation.py",
+      "total": 27,
+      "passed": 27,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0
+    },
+    "green": true
+  },
+  "HUMAN_AUTH_TESTS": {
+    "suite": {
+      "suite": "test_human_auth.py",
+      "total": 15,
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0
+    },
+    "green": true,
+    "AI_CAN_CREATE_NITIN_APPROVAL": false,
+    "AI_CAN_INFER_NITIN_APPROVAL": false,
+    "AI_CAN_IMPERSONATE_NITIN_BY_EVENT_METADATA": false,
+    "PUBLISH_WITHOUT_NITIN_APPROVAL": false
+  },
+  "LIVE_TEMPORAL_TESTS": {
+    "status": "NOT_RUN_PENDING_RUNNER",
+    "reason": "requires a live disposable Temporal server (Docker/temporalio); not available in this session",
+    "harness": [
+      "control_plane/temporal_live.py",
+      "ci/compose.temporal-dev.ci.yml",
+      "ci/Dockerfile.p0e1worker",
+      "ci/p0e1-temporal-live.yml"
+    ],
+    "note": "authored + statically validated; live OBSERVED evidence to be captured on a runner. NOT simulated."
+  },
+  "CENTRAL_PERSISTENCE": {
+    "CENTRAL_PERSISTENCE_VERIFIED": false,
+    "status": "PENDING"
+  },
   "invariants": {
     "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": false,
     "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": false,
     "STATE_RECOVERED_AFTER_RESTART": true,
     "DUPLICATE_SIDE_EFFECT_COUNT": 0,
     "HUMAN_MESSAGE_RELAY_REQUIRED": false
-  },
-  "stdout_tail": [
-    "PASS INV_WORKER_SLOT_HELD_DURING_HUMAN_WAIT_false",
-    "PASS INV_STATE_RECOVERED_AFTER_RESTART_true",
-    "PASS INV_DUPLICATE_SIDE_EFFECT_COUNT_zero",
-    "PASS INV_HUMAN_MESSAGE_RELAY_REQUIRED_false",
-    "",
-    "TOTAL=27 PASSED=27 FAILED=0"
-  ]
+  }
 }

@@ -58,10 +58,10 @@ except ReducerError: ok("malformed_failclosed",True)
 imp=reduce([arch, ev(10,"HUMAN_GATE_REQUEST",task_id="P",gate="NITIN_PUBLISH_APPROVAL"),
             ev(11,"HUMAN_GATE_GRANTED",task_id="P",gate="NITIN_PUBLISH_APPROVAL",agent="claude")])
 ok("ai_cannot_create_nitin_approval", "NITIN_PUBLISH_APPROVAL" not in imp["approvals"])
-ok("impersonation_recorded_rejected", any(r["reason"]=="unauthorized_human_gate" for r in imp["_rejected_events"]))
-grant=reduce([arch, ev(10,"HUMAN_GATE_REQUEST",task_id="P",gate="NITIN_PUBLISH_APPROVAL"),
-              ev(11,"HUMAN_GATE_GRANTED",task_id="P",gate="NITIN_PUBLISH_APPROVAL",agent="nitin")])
-ok("nitin_can_grant", grant["approvals"].get("NITIN_PUBLISH_APPROVAL",{}).get("granted_by")=="nitin")
+ok("impersonation_recorded_rejected", any(r["reason"].startswith("human_gate_") for r in imp["_rejected_events"]))
+bare=reduce([arch, ev(10,"HUMAN_GATE_REQUEST",task_id="P",gate="NITIN_PUBLISH_APPROVAL"),
+             ev(11,"HUMAN_GATE_GRANTED",task_id="P",gate="NITIN_PUBLISH_APPROVAL",agent="nitin")])
+ok("bare_nitin_metadata_does_not_grant", "NITIN_PUBLISH_APPROVAL" not in bare["approvals"])  # hardened: metadata != authority
 
 # --- WAITING_FOR_NITIN isolation: independent READY task stays executable ---
 tasks=[{"task_id":"PUB","status":"WAITING_FOR_NITIN","dependencies":[]},

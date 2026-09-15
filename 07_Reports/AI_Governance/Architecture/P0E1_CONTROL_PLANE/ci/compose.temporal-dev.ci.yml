@@ -1,0 +1,25 @@
+# DISPOSABLE dev Temporal for P0E1-TEMPORAL-LIVE-WIRE (non-production). `down -v` after. No prod secrets.
+version: "3.8"
+services:
+  postgresql:
+    image: postgres:16
+    environment: {POSTGRES_USER: temporal, POSTGRES_PASSWORD: temporal}
+  temporal:
+    image: temporalio/auto-setup:1.25.0
+    depends_on: [postgresql]
+    environment: {DB: postgres12, DB_PORT: 5432, POSTGRES_USER: temporal, POSTGRES_PWD: temporal, POSTGRES_SEEDS: postgresql, BIND_ON_IP: "0.0.0.0"}
+    ports: ["7233:7233"]
+  worker1:
+    build: {context: ../.., dockerfile: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/ci/Dockerfile.p0e1worker}
+    restart: on-failure
+    command: ["python","-m","control_plane.temporal_live","worker"]
+    depends_on: [temporal]
+    environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json}
+    volumes: ["${SE_DIR}:/data/se"]
+  worker2:
+    build: {context: ../.., dockerfile: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/ci/Dockerfile.p0e1worker}
+    restart: on-failure
+    command: ["python","-m","control_plane.temporal_live","worker"]
+    depends_on: [temporal]
+    environment: {TEMPORAL_ADDRESS: "temporal:7233", MAX_SLOTS: "4", SE_STORE: /data/se/side_effects.json}
+    volumes: ["${SE_DIR}:/data/se"]

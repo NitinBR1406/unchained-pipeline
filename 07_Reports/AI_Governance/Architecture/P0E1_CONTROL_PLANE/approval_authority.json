@@ -1,0 +1,6 @@
+{
+  "_note": "Nitin's Ed25519 PUBLIC key(s) only. His PRIVATE key is generated offline and NEVER stored here. Until a real key is provisioned, keys is empty => ALL human-gate approvals fail closed (no publish possible).",
+  "keys": {},
+  "revoked": [],
+  "provisioning": "Nitin runs offline: generate Ed25519 keypair; give ONLY the public key hex; add as keys['nitin-key-1']={public_key_hex, owner:'nitin'}."
+}
