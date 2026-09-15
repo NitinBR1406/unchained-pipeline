@@ -1,6 +1,8 @@
 # P0-E Live Control-Plane Bake-Off — GitHub Actions V02.3 (ephemeral ubuntu-latest, Docker preinstalled).
 # Copy to .github/workflows/p0e-live-bakeoff.yml on branch p0e/live-control-plane-bakeoff.
-# V02.7 = HATCHET CLIENT BOOTSTRAP FORENSICS: deterministic transport probe (no 000000 false-positive) + hatchet-job SDK provenance. Temporal LOCKED/green.
+# V02.8 = TRANSPORT PROBE ERREXIT CLOSURE: the curl command-substitution now sits in an `if` condition so a
+#   transient curl exit (e.g. 56) can't abort the step under `bash -e`; loop retries, LAST_CODE=000 => DOWN.
+# (carried) V02.7 = HATCHET CLIENT BOOTSTRAP FORENSICS: deterministic transport probe (no 000000 false-positive) + hatchet-job SDK provenance. Temporal LOCKED/green.
 # (carried) V02.6 = HARNESS SEMANTICS CLOSURE: L auto-completes after the long activity; Hatchet
 #   server-liveness is transport-based (403 != down). No test-semantics/scoring/gate/production change.
 # (carried) V02.5 = BOOTSTRAP CONFIGURATION CLOSURE:
@@ -152,8 +154,7 @@ jobs:
           # returns ANY real HTTP status (http_code != 000). Auth/token/worker readiness stay separate fail-closed gates.
           SERVER_READY=0; LAST_CODE=000
           for i in $(seq 1 60); do
-            LAST_CODE=$(curl -s -o /dev/null -w '%{http_code}' --max-time 5 http://localhost:8888/ 2>/dev/null); RC=$?
-            if [ "$RC" -ne 0 ]; then LAST_CODE=000; fi
+            if LAST_CODE=$(curl -s -o /dev/null -w '%{http_code}' --max-time 5 http://localhost:8888/ 2>/dev/null); then :; else LAST_CODE=000; fi
             case "$LAST_CODE" in
               [1-9][0-9][0-9]) SERVER_READY=1; break ;;
               *) sleep 3 ;;
