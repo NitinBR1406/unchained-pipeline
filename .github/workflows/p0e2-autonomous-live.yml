@@ -1,0 +1,74 @@
+# .github/workflows/p0e2-autonomous-live.yml — P0-E2 Slice-2 LIVE autonomous runner on a DISPOSABLE,
+# NON-PRODUCTION Temporal control plane. Reuses the P0-E1 disposable compose + ControlPlaneTask worker
+# (07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/ci/compose.temporal-dev.ci.yml) and the P0-E2
+# LiveRunner driver. Injects worker kill + service/DB restart + duplicate dispatch. Uploads raw evidence
+# even on failure; unconditional teardown; verifies POC_INFRA_REMAINING=FALSE; fail-closed final gate.
+# No production, no publishing, no P1/Make/Render/social mutation.
+name: p0e2-autonomous-live
+on: { workflow_dispatch: { inputs: { ref: { description: "commit/ref", required: false, default: e64e4553bf0b4b41672479ec3dddda75c3727ebb } } } }
+permissions: { contents: read }
+env:
+  P0E1: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
+  P0E2: 07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: "${{ github.event.inputs.ref || github.sha }}" }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Host SDK (pinned) + crypto
+        run: pip install "temporalio==1.33.0" cryptography >/dev/null 2>&1 || pip install temporalio cryptography
+      - name: Up disposable Temporal (reuse P0-E1 compose + ControlPlaneTask worker)
+        working-directory: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
+        run: |
+          export SE_DIR=$PWD/se; mkdir -p $SE_DIR; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
+          SE_DIR=$SE_DIR docker compose -f ci/compose.temporal-dev.ci.yml up -d --build
+          HEALTHY=0; for i in $(seq 1 60); do if docker compose -f ci/compose.temporal-dev.ci.yml exec -T temporal tctl cluster health >/tmp/h 2>&1; then HEALTHY=1; break; fi; sleep 3; done
+          [ "$HEALTHY" = 1 ] || { echo "temporal not healthy"; exit 1; }
+      - name: Run live A/B/C/D chain + inject failures
+        timeout-minutes: 35
+        env: { TEMPORAL_ADDRESS: "localhost:7233" }
+        run: |
+          mkdir -p "$P0E2/evidence"; cp "$P0E2/seed/backlog_slice2.json" "$P0E2/evidence/BACKLOG_live.json"
+          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2" RESULT_DEADLINE_S=240
+          LEDGER="$PWD/$P0E2/evidence/EVENT_LEDGER.jsonl"; : > "$LEDGER"
+          ( python "$P0E2/temporal_runner.py" run --backlog "$P0E2/evidence/BACKLOG_live.json" --ledger "$LEDGER" --evidence "$P0E2/evidence" ) & RUNPID=$!
+          sleep 25
+          echo "WORKER_KILL_TS=$(date -u +%FT%TZ)" >> "$P0E2/evidence/failure_injection.log"
+          docker kill $(docker ps -q --filter name=worker1) || true
+          docker compose -f "$P0E1/ci/compose.temporal-dev.ci.yml" restart postgresql temporal || true
+          sleep 12
+          SE_DIR=$SE_DIR docker compose -f "$P0E1/ci/compose.temporal-dev.ci.yml" up -d worker1 || true
+          echo "WORKER_RECOVERY_TS=$(date -u +%FT%TZ)" >> "$P0E2/evidence/failure_injection.log"
+          wait $RUNPID || true
+          echo "DUPLICATE_DISPATCH_TS=$(date -u +%FT%TZ)" >> "$P0E2/evidence/failure_injection.log"
+          python "$P0E2/temporal_runner.py" run --backlog "$P0E2/evidence/BACKLOG_live.json" --ledger "$LEDGER" --evidence "$P0E2/evidence" || true
+      - name: Assemble evidence (non-fatal; writes P0E2_LIVE_RESULTS.json)
+        if: always()
+        run: |
+          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2"
+          python "$P0E2/temporal_runner.py" gate --backlog "$P0E2/evidence/BACKLOG_live.json" --ledger "$PWD/$P0E2/evidence/EVENT_LEDGER.jsonl" --evidence "$P0E2/evidence" || echo "PENDING" > "$P0E2/evidence/GATE_FAILED"
+          python "$P0E2/control_room_v02.py" --ledger "$PWD/$P0E2/evidence/EVENT_LEDGER.jsonl" --backlog "$P0E2/evidence/BACKLOG_live.json" --live-results "$P0E2/evidence/P0E2_LIVE_RESULTS.json" --out-json "$P0E2/evidence/CONTROL_ROOM_V02.json" || true
+      - name: Diagnostics on failure
+        if: failure()
+        working-directory: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
+        run: |
+          set +e; C="docker compose -f ci/compose.temporal-dev.ci.yml"
+          { echo "== ps =="; $C ps -a; echo "== worker1 =="; $C logs --no-color --tail all worker1; echo "== temporal =="; $C logs --no-color --tail 150 temporal; } > "../P0E2_AUTONOMOUS_RUNNER/evidence/p0e2_live_diagnostics.log" 2>&1
+      - name: Upload evidence (even on failure)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: p0e2-autonomous-live-evidence, path: 07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER/evidence/ }
+      - name: Teardown (unconditional)
+        if: always()
+        working-directory: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
+        run: SE_DIR=$PWD/se docker compose -f ci/compose.temporal-dev.ci.yml down -v || true
+      - name: Verify teardown (POC_INFRA_REMAINING=FALSE)
+        if: always()
+        run: |
+          docker ps -a
+          test -z "$(docker ps -q)" && echo "POC_INFRA_REMAINING=FALSE" || { echo "POC_INFRA_REMAINING=TRUE"; exit 1; }
+      - name: Fail-closed acceptance gate (LAST)
+        run: test ! -f "$P0E2/evidence/GATE_FAILED" || { echo "SLICE2 acceptance PENDING (fail-closed)"; exit 1; }
