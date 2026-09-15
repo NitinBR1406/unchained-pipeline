@@ -3,7 +3,10 @@
 # V02.10 = HATCHET gRPC TRANSPORT FORENSICS (diagnostic-only; read-only pre-push probe + enriched on-failure
 #   capture: 7070 owner/iface, host publish, TCP/HTTP2 reset behavior, broadcast addr, container exit/restart, server logs).
 #   No compose/durability/scoring change; run step byte-identical. Next run's evidence determines the one-line V02.11 fix.
-# V02.11 = HATCHET gRPC CONFIG CLOSURE: official bind(0.0.0.0)+broadcast(hatchet:7070)+port(7070) alignment; probe ports updated to 7070.
+# V02.12 = PER-ENGINE ACCEPTANCE REDUCER (additive, read-only): surfaces each engine's five acceptance
+#   criteria from its OWN raw OBSERVED_PASS records (P0E_ACCEPTANCE_BY_ENGINE_V01.json). Does NOT alter the
+#   joint fail-closed gate, durability semantics, or the comparison; names no winner.
+# (carried) V02.11 = HATCHET gRPC CONFIG CLOSURE: official bind(0.0.0.0)+broadcast(hatchet:7070)+port(7070) alignment; probe ports updated to 7070.
 # (carried) V02.9 = SDK ALIGNMENT (host hatchet-sdk pinned ==0.47.0 to match Dockerfile.worker; h.client unchanged) +
 #   TEMPORAL READINESS FORENSICS (richer NO_POLLERS diagnostics: container/exit/restart state, worker
 #   stdout/stderr, namespace + taskqueue describe). Readiness stays strict/fail-closed. Temporal semantics unchanged.
@@ -347,6 +350,8 @@ jobs:
           python controller.py assemble
           sha256sum evidence/P0E_*.json evidence/P0E_*.md evidence/results.jsonl evidence/*_bootstrap.json > evidence/EVIDENCE_SHA256SUMS.txt || true
           cat evidence/P0E_LIVE_FINAL_DECISION_V01.md || true
+      - name: Per-engine acceptance reducer (additive, read-only; does not gate)
+        run: python acceptance_reducer.py
       - name: Upload final evidence
         if: always()
         uses: actions/upload-artifact@v4
