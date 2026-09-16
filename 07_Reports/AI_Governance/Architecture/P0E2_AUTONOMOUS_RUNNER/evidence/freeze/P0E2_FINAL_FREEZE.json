@@ -1,0 +1,54 @@
+{
+  "artifact": "P0E2_FINAL_FREEZE", "version": "V01", "schema_version": 1,
+  "P0E2_FINAL_FREEZE": "GREEN",
+  "P0E2_SLICE_2": "GREEN",
+  "TEMPORAL_AUTONOMOUS_RUNNER": "LIVE_VERIFIED",
+  "P0E_AUTONOMOUS_CONTROL_PLANE": "LIVE_FOUNDATION_VERIFIED",
+  "provenance": {
+    "github_run_id": "35138346011",
+    "git_commit_sha": "c89277180557d1525d219adec680ebbf6692a10a",
+    "branch": "p0e/live-control-plane-bakeoff",
+    "workflow": "p0e2-autonomous-live.yml",
+    "temporal_architecture": "LOCKED",
+    "attestation": "owner-attested + independently reviewed live acceptance",
+    "live_artifact_digest": "NOT_AVAILABLE_IN_THIS_ENVIRONMENT (see run 35138346011 artifact P0E2_ACCEPTANCE_VERDICT.json / P0E2_LIVE_RESULTS.json for concrete workflow_ids/run_ids)"
+  },
+  "live_acceptance": {
+    "FINAL": "PASS",
+    "failed_criteria": [],
+    "REAL_TEMPORAL_WORKFLOWS_OBSERVED": true,
+    "workflow_ids_present_for": ["TASK_A","TASK_B","TASK_C","TASK_D"],
+    "run_ids_present_for_executed": ["TASK_A","TASK_B","TASK_D"],
+    "AUTONOMOUS_CHAIN_A_TO_B": "PASS",
+    "HUMAN_GATE_C_WAITING": "PASS",
+    "INDEPENDENT_D_CONTINUES": "PASS",
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": false,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "EVENT_LEDGER_CHAIN_VALID": true,
+    "STATE_RECONSTRUCTION": "PASS",
+    "STALE_LEASE_RECLAIM": "PASS",
+    "no_approval_fabricated": true,
+    "failure_injection": "6/6 PASS",
+    "POC_INFRA_REMAINING": false,
+    "poc_source": "authoritative teardown/acceptance evidence (see P0E2-NB-001 re: results file null)"
+  },
+  "offline_regression": "123/123 PASS",
+  "locks": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "non_blocking": [
+    {"id": "P0E2-NB-001", "severity": "NON_BLOCKING",
+     "summary": "P0E2_LIVE_RESULTS.json reports POC_INFRA_REMAINING=null while authoritative teardown/acceptance evidence proves false.",
+     "action": "Fix opportunistically in the next compatible engineering slice with regression coverage. Does NOT reopen P0-E2 GREEN.",
+     "note": "The runner already emits POC_INFRA_REMAINING=null in P0E2_LIVE_RESULTS.json; the workflow writes authoritative poc_infra.json=false and the strict gate accepts poc_infra.json OR results. Normalize the runner field to mirror poc_infra.json in the next slice."}
+  ],
+  "final_statement": {
+    "P0E2_FINAL_FREEZE": "GREEN",
+    "MUST_FIX": 0, "MATERIAL": 0, "NON_BLOCKING": 1,
+    "SAFE_TO_BEGIN_NEXT_CONTROL_PLANE_SLICE": true,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false
+  }
+}
