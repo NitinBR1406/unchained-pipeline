@@ -1,11 +1,15 @@
-# .github/workflows/p0e2-autonomous-live.yml — P0-E2 Slice-2 LIVE autonomous runner on a DISPOSABLE,
-# NON-PRODUCTION Temporal control plane. Reuses the P0-E1 disposable compose + ControlPlaneTask worker
-# (07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/ci/compose.temporal-dev.ci.yml) and the P0-E2
-# LiveRunner driver. Injects worker kill + service/DB restart + duplicate dispatch. Uploads raw evidence
-# even on failure; unconditional teardown; verifies POC_INFRA_REMAINING=FALSE; fail-closed final gate.
-# No production, no publishing, no P1/Make/Render/social mutation.
+# .github/workflows/p0e2-autonomous-live.yml — P0-E2 Slice-2 LIVE autonomous runner (DISPOSABLE, NON-PROD).
+# HARDENED: SHA-pinned unambiguous checkout (no obsolete fallback; verify CHECKED_OUT_SHA==requested),
+# structured failure-injection + poc evidence, and a STRICT independent fail-closed acceptance gate
+# (acceptance_gate.py) as the authoritative final step. Reuses the P0-E1 disposable compose + ControlPlaneTask
+# worker. No production, no publishing, no P1/Make/Render/social mutation.
 name: p0e2-autonomous-live
-on: { workflow_dispatch: { inputs: { ref: { description: "commit/ref", required: false, default: e64e4553bf0b4b41672479ec3dddda75c3727ebb } } } }
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "IMMUTABLE full 40-hex commit SHA to check out (required; no branch names)"
+        required: true
 permissions: { contents: read }
 env:
   P0E1: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
@@ -14,8 +18,19 @@ jobs:
   live:
     runs-on: ubuntu-latest
     steps:
+      - name: Validate requested SHA (fail-closed; must be a 40-hex commit)
+        run: |
+          REF="${{ github.event.inputs.ref }}"
+          echo "$REF" | grep -Eq '^[0-9a-f]{40}$' || { echo "ref must be a full 40-hex commit SHA, got: $REF"; exit 1; }
       - uses: actions/checkout@v4
-        with: { ref: "${{ github.event.inputs.ref || github.sha }}" }
+        with: { ref: "${{ github.event.inputs.ref }}" }
+      - name: Verify checkout is exactly the requested SHA (no silent divergence)
+        run: |
+          mkdir -p "$P0E2/evidence"
+          CHECKED_OUT_SHA=$(git rev-parse HEAD)
+          echo "CHECKED_OUT_SHA=$CHECKED_OUT_SHA"
+          echo "{\"requested\":\"${{ github.event.inputs.ref }}\",\"CHECKED_OUT_SHA\":\"$CHECKED_OUT_SHA\"}" > "$P0E2/evidence/checkout.json"
+          [ "$CHECKED_OUT_SHA" = "${{ github.event.inputs.ref }}" ] || { echo "checkout SHA mismatch"; exit 1; }
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
       - name: Host SDK (pinned) + crypto
@@ -25,31 +40,48 @@ jobs:
         run: |
           export SE_DIR=$PWD/se; mkdir -p $SE_DIR; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
           SE_DIR=$SE_DIR docker compose -f ci/compose.temporal-dev.ci.yml up -d --build
-          HEALTHY=0; for i in $(seq 1 60); do if docker compose -f ci/compose.temporal-dev.ci.yml exec -T temporal tctl cluster health >/tmp/h 2>&1; then HEALTHY=1; break; fi; sleep 3; done
-          [ "$HEALTHY" = 1 ] || { echo "temporal not healthy"; exit 1; }
-      - name: Run live A/B/C/D chain + inject failures
+          H=0; for i in $(seq 1 60); do if docker compose -f ci/compose.temporal-dev.ci.yml exec -T temporal tctl cluster health >/tmp/h 2>&1; then H=1; break; fi; sleep 3; done
+          [ "$H" = 1 ] || { echo "temporal not healthy"; exit 1; }
+      - name: Run live A/B/C/D chain + inject failures (structured evidence)
         timeout-minutes: 35
-        env: { TEMPORAL_ADDRESS: "localhost:7233" }
+        env: { TEMPORAL_ADDRESS: "localhost:7233", SE_STORE: "" }
         run: |
-          mkdir -p "$P0E2/evidence"; cp "$P0E2/seed/backlog_slice2.json" "$P0E2/evidence/BACKLOG_live.json"
-          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2" RESULT_DEADLINE_S=240
+          C="docker compose -f $P0E1/ci/compose.temporal-dev.ci.yml"
+          cp "$P0E2/seed/backlog_slice2.json" "$P0E2/evidence/BACKLOG_live.json"
+          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2" RESULT_DEADLINE_S=240 SE_STORE="$SE_DIR/side_effects.json"
           LEDGER="$PWD/$P0E2/evidence/EVENT_LEDGER.jsonl"; : > "$LEDGER"
           ( python "$P0E2/temporal_runner.py" run --backlog "$P0E2/evidence/BACKLOG_live.json" --ledger "$LEDGER" --evidence "$P0E2/evidence" ) & RUNPID=$!
           sleep 25
-          echo "WORKER_KILL_TS=$(date -u +%FT%TZ)" >> "$P0E2/evidence/failure_injection.log"
-          docker kill $(docker ps -q --filter name=worker1) || true
-          docker compose -f "$P0E1/ci/compose.temporal-dev.ci.yml" restart postgresql temporal || true
+          KILL_TS=$(date -u +%FT%TZ); KILLED=false
+          if docker kill $(docker ps -q --filter name=worker1) >/dev/null 2>&1; then KILLED=true; fi
+          PGT=false; TMP=false
+          $C restart postgresql temporal && { PGT=true; TMP=true; }
           sleep 12
-          SE_DIR=$SE_DIR docker compose -f "$P0E1/ci/compose.temporal-dev.ci.yml" up -d worker1 || true
-          echo "WORKER_RECOVERY_TS=$(date -u +%FT%TZ)" >> "$P0E2/evidence/failure_injection.log"
+          SE_DIR=$SE_DIR $C up -d worker1 || true
+          REC_TS=$(date -u +%FT%TZ); RECOV=false
+          W1=$(docker ps -q --filter name=worker1 | head -1)
+          [ -n "$W1" ] && [ "$(docker inspect -f '{{.State.Running}}' $W1 2>/dev/null)" = "true" ] && RECOV=true
+          THEALTH=false; $C exec -T temporal tctl cluster health >/dev/null 2>&1 && THEALTH=true
           wait $RUNPID || true
-          echo "DUPLICATE_DISPATCH_TS=$(date -u +%FT%TZ)" >> "$P0E2/evidence/failure_injection.log"
+          DUP_TS=$(date -u +%FT%TZ)
           python "$P0E2/temporal_runner.py" run --backlog "$P0E2/evidence/BACKLOG_live.json" --ledger "$LEDGER" --evidence "$P0E2/evidence" || true
-      - name: Assemble evidence (non-fatal; writes P0E2_LIVE_RESULTS.json)
+          DTASK=$(python3 -c "import json;print(json.load(open('$P0E2/evidence/BACKLOG_live.json'))['tasks'] and [t['status'] for t in json.load(open('$P0E2/evidence/BACKLOG_live.json'))['tasks'] if t['task_id']=='TASK_D'][0])" 2>/dev/null || echo unknown)
+          EXECREC=false; [ "$DTASK" = "COMPLETED" ] && EXECREC=true
+          python3 - <<PY
+          import json
+          json.dump({"worker_kill_observed":$KILLED,"worker_recovery_observed":$RECOV,
+                     "postgres_restart_observed":$PGT,"temporal_restart_observed":$TMP,
+                     "temporal_recovery_observed":$THEALTH,"execution_recovered":$EXECREC,
+                     "timestamps":{"worker_kill":"$KILL_TS","worker_recovery":"$REC_TS","duplicate_dispatch":"$DUP_TS"}},
+                    open("$P0E2/evidence/failure_injection.json","w"), indent=2)
+          PY
+          cat "$P0E2/evidence/failure_injection.json"
+      - name: Assemble raw results + Control Room V02 (non-fatal)
         if: always()
+        env: { SE_STORE: "" }
         run: |
-          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2"
-          python "$P0E2/temporal_runner.py" gate --backlog "$P0E2/evidence/BACKLOG_live.json" --ledger "$PWD/$P0E2/evidence/EVENT_LEDGER.jsonl" --evidence "$P0E2/evidence" || echo "PENDING" > "$P0E2/evidence/GATE_FAILED"
+          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2" SE_STORE="$SE_DIR/side_effects.json"
+          python "$P0E2/temporal_runner.py" gate --backlog "$P0E2/evidence/BACKLOG_live.json" --ledger "$PWD/$P0E2/evidence/EVENT_LEDGER.jsonl" --evidence "$P0E2/evidence" || true
           python "$P0E2/control_room_v02.py" --ledger "$PWD/$P0E2/evidence/EVENT_LEDGER.jsonl" --backlog "$P0E2/evidence/BACKLOG_live.json" --live-results "$P0E2/evidence/P0E2_LIVE_RESULTS.json" --out-json "$P0E2/evidence/CONTROL_ROOM_V02.json" || true
       - name: Diagnostics on failure
         if: failure()
@@ -57,18 +89,26 @@ jobs:
         run: |
           set +e; C="docker compose -f ci/compose.temporal-dev.ci.yml"
           { echo "== ps =="; $C ps -a; echo "== worker1 =="; $C logs --no-color --tail all worker1; echo "== temporal =="; $C logs --no-color --tail 150 temporal; } > "../P0E2_AUTONOMOUS_RUNNER/evidence/p0e2_live_diagnostics.log" 2>&1
-      - name: Upload evidence (even on failure)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with: { name: p0e2-autonomous-live-evidence, path: 07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER/evidence/ }
       - name: Teardown (unconditional)
         if: always()
         working-directory: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
         run: SE_DIR=$PWD/se docker compose -f ci/compose.temporal-dev.ci.yml down -v || true
-      - name: Verify teardown (POC_INFRA_REMAINING=FALSE)
+      - name: Verify teardown -> poc_infra.json (POC_INFRA_REMAINING)
         if: always()
         run: |
           docker ps -a
-          test -z "$(docker ps -q)" && echo "POC_INFRA_REMAINING=FALSE" || { echo "POC_INFRA_REMAINING=TRUE"; exit 1; }
-      - name: Fail-closed acceptance gate (LAST)
-        run: test ! -f "$P0E2/evidence/GATE_FAILED" || { echo "SLICE2 acceptance PENDING (fail-closed)"; exit 1; }
+          if [ -z "$(docker ps -q)" ]; then R=false; else R=true; fi
+          python3 -c "import json;json.dump({'POC_INFRA_REMAINING':$R},open('$P0E2/evidence/poc_infra.json','w'))"
+          cat "$P0E2/evidence/poc_infra.json"
+      - name: STRICT acceptance verdict (authoritative; writes P0E2_ACCEPTANCE_VERDICT.json; non-fatal here)
+        if: always()
+        run: |
+          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2"
+          python "$P0E2/acceptance_gate.py" --evidence "$P0E2/evidence" || echo "verdict=FAIL"
+      - name: Upload evidence (even on failure)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: p0e2-autonomous-live-evidence, path: 07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER/evidence/ }
+      - name: FAIL-CLOSED final gate (exit non-zero unless FINAL=PASS)
+        run: |
+          python3 -c "import json,sys;v=json.load(open('$P0E2/evidence/P0E2_ACCEPTANCE_VERDICT.json'));print('FINAL=',v['FINAL']);sys.exit(0 if v['FINAL']=='PASS' else 1)"

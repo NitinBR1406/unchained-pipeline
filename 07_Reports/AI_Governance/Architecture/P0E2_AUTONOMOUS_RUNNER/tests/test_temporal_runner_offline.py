@@ -43,11 +43,11 @@ asyncio.run(r.dispatch(fc, r.tasks["TASK_A"]))
 ok("duplicate_dispatch_same_wf_id", set(fc.started.keys())==set(before.keys()))
 # gate
 out,okg=r.gate()
-ok("gate_pass_when_ABCD_correct", okg and out["FINAL"]=="PASS" and out["HUMAN_GATE_C_WAITING"]=="PASS")
+ok("runner_sanity_ok_when_ABCD_correct", okg and out["HUMAN_GATE_C_WAITING"]=="PASS" and out["WAITING_WORKFLOW_BLOCKS_OTHER_WORK"] is False)
 ok("gate_reports_no_fabricated_approval", out["no_approval_fabricated"] is True)
 # gate fail-closed if C got (wrongly) completed
 r.tasks["TASK_C"]["status"]="COMPLETED"; out2,okg2=r.gate()
-ok("gate_failclosed_if_C_not_waiting", (not okg2) and out2["FINAL"]=="PENDING")
+ok("runner_sanity_incomplete_if_C_not_waiting", not okg2)
 
 print("\nS2OFF_TOTAL=%d PASSED=%d FAILED=%d"%(P+F,P,F))
 if FAILS: print("FAILURES:",FAILS)
