@@ -17,14 +17,15 @@ def _nonempty_str(x): return isinstance(x,str) and len(x.strip())>0
 def _is_true(x): return x is True
 def _is_false(x): return x is False           # rejects null/absent/truthy-nonbool
 def derive_status_from_ledger(events):
+    """Precedence COMPLETED > FAILED > WAITING_FOR_NITIN > RUNNING (a gated task emits TASK_STARTED then
+    HUMAN_GATE_REQUEST; the human-wait must win over the earlier RUNNING)."""
+    rank={"RUNNING":1,"WAITING_FOR_NITIN":2,"FAILED":3,"COMPLETED":4}
+    m={"TASK_STARTED":"RUNNING","HUMAN_GATE_REQUEST":"WAITING_FOR_NITIN","TASK_FAILED":"FAILED","TASK_RESULT":"COMPLETED"}
     st={}
     for e in events:
-        t=e.get("task_id"); et=e.get("event_type")
-        if not t: continue
-        if et=="TASK_RESULT": st[t]="COMPLETED"
-        elif et=="TASK_FAILED": st.setdefault(t,"FAILED")
-        elif et=="HUMAN_GATE_REQUEST": st.setdefault(t,"WAITING_FOR_NITIN")
-        elif et=="TASK_STARTED": st.setdefault(t,"RUNNING")
+        t=e.get("task_id"); v=m.get(e.get("event_type"))
+        if not t or not v: continue
+        if t not in st or rank[v] > rank[st[t]]: st[t]=v
     return st
 def verify(evidence_dir):
     C={}; det={}
@@ -72,9 +73,16 @@ def verify(evidence_dir):
     dsec=res.get("DUPLICATE_SIDE_EFFECT_COUNT")
     C["DUPLICATE_SIDE_EFFECT_COUNT_zero"]=isinstance(dsec,int) and dsec==0
     # stale lease reclaim: ledger has LEASE_EXPIRED then a later LEASE_ACQUIRED (reclaim), and results PASS
-    exp=[i for i,e in enumerate(events) if e.get("event_type")=="LEASE_EXPIRED"]
-    reclaim=any(e.get("event_type")=="LEASE_ACQUIRED" and i>min(exp) for i,e in enumerate(events)) if exp else False
-    C["STALE_LEASE_RECLAIM"]=res.get("STALE_LEASE_RECLAIM")=="PASS" and bool(exp) and reclaim
+    def _stale_ok():
+        exp=[i for i,e in enumerate(events) if e.get("event_type")=="LEASE_EXPIRED"]
+        for xi in exp:
+            xh=(events[xi].get("inputs") or {}).get("holder")
+            for j,e in enumerate(events):
+                if j>xi and e.get("event_type")=="LEASE_ACQUIRED":
+                    h=(e.get("inputs") or {}).get("holder")
+                    if h and xh and h!=xh: return True   # reclaimed by a different valid holder
+        return False
+    C["STALE_LEASE_RECLAIM"]=res.get("STALE_LEASE_RECLAIM")=="PASS" and _stale_ok()
     # failure injection booleans
     for b in FI_BOOLS: C["FI_"+b]=_is_true(fi.get(b))
     # infra teardown

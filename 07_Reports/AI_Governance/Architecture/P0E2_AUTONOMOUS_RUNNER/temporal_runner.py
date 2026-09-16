@@ -60,6 +60,7 @@ class LiveRunner:
         h=await client.start_workflow(run_ref, payload, id=wf_id, task_queue=TASK_QUEUE)
         self.dispatched[task["task_id"]]=wf_id
         self.run_ids[task["task_id"]]=getattr(h,"first_execution_run_id",None)
+        self._persist_dispatched()   # authoritative cross-process evidence (gate runs in a separate process)
         return h, wf_id
     async def dispatch(self, client, task):
         tid=task["task_id"]
@@ -109,11 +110,61 @@ class LiveRunner:
         """Real, ledger-derivable stale-lease reclaim: a dead worker's lease expires and is reclaimed."""
         self.leases.acquire(target, "dead-worker", "lease-stale-1", now=self._clock, ttl=1)
         self._emit(event_type="LEASE_ACQUIRED", task_id=target, lease_id="lease-stale-1", inputs={"holder":"dead-worker"})
-        self._emit(event_type="LEASE_EXPIRED", task_id=target, lease_id="lease-stale-1")
+        self._emit(event_type="LEASE_EXPIRED", task_id=target, lease_id="lease-stale-1", inputs={"holder":"dead-worker"})
         rl=self.leases.reclaim(target, "claude", "lease-stale-2", now=self._clock+10, ttl=self.ttl)
-        self._emit(event_type="LEASE_ACQUIRED", task_id=target, lease_id="lease-stale-2", inputs={"reclaimed_from":"dead-worker"})
+        self._emit(event_type="LEASE_ACQUIRED", task_id=target, lease_id="lease-stale-2", inputs={"holder":"claude","reclaimed_from":"dead-worker"})
         self.stale_lease_reclaimed = bool(rl and rl.holder=="claude")
         return self.stale_lease_reclaimed
+    def _persist_dispatched(self):
+        m={tid:{"workflow_id":self.dispatched.get(tid),"run_id":self.run_ids.get(tid)} for tid in self.dispatched}
+        json.dump(m, open(os.path.join(self.evidence_dir,"dispatched.json"),"w"), indent=2)
+    def _aggregate_ids(self):
+        """Aggregate workflow/run ids from PERSISTED authoritative evidence (dispatched.json + exec_*.json +
+        ledger), so a separate gate process derives real ids rather than empty in-memory maps."""
+        import glob
+        wf={}; run={}
+        dp=os.path.join(self.evidence_dir,"dispatched.json")
+        if os.path.exists(dp):
+            try:
+                for tid,v in json.load(open(dp)).items():
+                    if v.get("workflow_id"): wf[tid]=v["workflow_id"]
+                    if v.get("run_id"): run[tid]=v["run_id"]
+            except Exception: pass
+        for f in glob.glob(os.path.join(self.evidence_dir,"exec_TASK_*.json")):
+            try:
+                j=json.load(open(f)); tid=j.get("task_id")
+                if tid and j.get("workflow_id"): wf.setdefault(tid,j["workflow_id"])
+                if tid and j.get("run_id"): run.setdefault(tid,j["run_id"])
+            except Exception: pass
+        try:
+            for e in self.ledger.read_all():
+                if e.get("event_type")=="HUMAN_GATE_REQUEST":
+                    w=(e.get("inputs") or {}).get("workflow_id")
+                    if e.get("task_id") and w: wf.setdefault(e["task_id"], w)
+        except Exception: pass
+        return wf, run
+    def _derive_status(self, events):
+        """Per-task terminal status with precedence: COMPLETED > FAILED > WAITING_FOR_NITIN > RUNNING."""
+        rank={"RUNNING":1,"WAITING_FOR_NITIN":2,"FAILED":3,"COMPLETED":4}
+        cur={}
+        for e in events:
+            t=e.get("task_id"); et=e.get("event_type")
+            if not t: continue
+            m={"TASK_STARTED":"RUNNING","HUMAN_GATE_REQUEST":"WAITING_FOR_NITIN","TASK_FAILED":"FAILED","TASK_RESULT":"COMPLETED"}.get(et)
+            if not m: continue
+            if t not in cur or rank[m] > rank[cur[t]]: cur[t]=m
+        return cur
+    def _stale_lease_reclaim(self, events):
+        """Deterministic: an expired lease reclaimed by a DIFFERENT holder."""
+        acq=[e for e in events if e.get("event_type")=="LEASE_ACQUIRED"]
+        exp=[i for i,e in enumerate(events) if e.get("event_type")=="LEASE_EXPIRED"]
+        for xi in exp:
+            xh=(events[xi].get("inputs") or {}).get("holder")
+            for j,e in enumerate(events):
+                if j>xi and e.get("event_type")=="LEASE_ACQUIRED":
+                    h=(e.get("inputs") or {}).get("holder")
+                    if h and xh and h!=xh: return True
+        return False
     def _persist(self): json.dump({"tasks":self._tasklist()}, open(self.backlog_path,"w"), indent=2)
     def _dup_side_effects(self):
         se=os.environ.get("SE_STORE","")
@@ -125,26 +176,29 @@ class LiveRunner:
         status={t["task_id"]:t["status"] for t in self._tasklist()}
         st=self.state()
         crit={"TASK_A":"COMPLETED","TASK_B":"COMPLETED","TASK_C":"WAITING_FOR_NITIN","TASK_D":"COMPLETED"}
-        ok=all(status.get(k)==v for k,v in crit.items())   # runner-level SANITY only (NOT the security gate)
+        ok=all(status.get(k)==v for k,v in crit.items())
         try:
             from control_plane.ledger import EventLedger as _L
             L=_L(self.ledger.path); chain=L.verify_chain(); evs=L.read_all()
-            recon = (json.dumps(reduce(evs),sort_keys=True)==json.dumps(reduce(evs),sort_keys=True))
+            derived=self._derive_status(evs)
+            recon=(json.dumps(reduce(evs),sort_keys=True)==json.dumps(reduce(evs),sort_keys=True)) and                   bool(status) and all(derived.get(t)==status.get(t) for t in status)
+            stale=self._stale_lease_reclaim(evs)
         except Exception:
-            chain=False; recon=False
-        c_wait = status.get("TASK_C")=="WAITING_FOR_NITIN"; d_done = status.get("TASK_D")=="COMPLETED"
-        real = all(bool(self.dispatched.get(t)) for t in ("TASK_A","TASK_B","TASK_C","TASK_D"))
+            chain=False; recon=False; stale=False
+        wf,run=self._aggregate_ids()                 # from PERSISTED evidence (cross-process safe)
+        c_wait=status.get("TASK_C")=="WAITING_FOR_NITIN"; d_done=status.get("TASK_D")=="COMPLETED"
+        real=all(bool(wf.get(t)) for t in ("TASK_A","TASK_B","TASK_C","TASK_D"))
         out={"final_task_status":status,
              "REAL_TEMPORAL_WORKFLOWS_OBSERVED": bool(real),
-             "workflow_ids":self.dispatched,"run_ids":self.run_ids,
+             "workflow_ids":wf,"run_ids":run,
              "AUTONOMOUS_CHAIN_A_TO_B":"PASS" if status.get("TASK_A")=="COMPLETED" and status.get("TASK_B")=="COMPLETED" else "FAIL",
              "HUMAN_GATE_C_WAITING":"PASS" if c_wait else "FAIL",
              "INDEPENDENT_D_CONTINUES":"PASS" if d_done else "FAIL",
              "HUMAN_MESSAGE_RELAY_REQUIRED": False,
-             "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": bool(c_wait and not d_done),  # explicit bool, never null
+             "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": bool(c_wait and not d_done),
              "no_approval_fabricated": (st.get("approvals",{})=={}),
              "DUPLICATE_SIDE_EFFECT_COUNT": self._dup_side_effects(),
-             "STALE_LEASE_RECLAIM": "PASS" if getattr(self,"stale_lease_reclaimed",False) else "FAIL",
+             "STALE_LEASE_RECLAIM": "PASS" if stale else "FAIL",
              "EVENT_LEDGER_CHAIN_VALID": bool(chain),
              "STATE_RECONSTRUCTION": "PASS" if recon else "FAIL",
              "POC_INFRA_REMAINING": None,

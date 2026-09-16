@@ -10,6 +10,14 @@ def build_v02(ledger_path, backlog_path, live_results_path=None, temporal_health
     for t in tasks: bys.setdefault(t["status"],[]).append(t["task_id"])
     results=json.load(open(live_results_path)) if (live_results_path and os.path.exists(live_results_path)) else {}
     def evs(et): return [e for e in events if e.get("event_type")==et]
+    def _stale_reclaim():
+        exp=[i for i,e in enumerate(events) if e.get("event_type")=="LEASE_EXPIRED"]
+        for xi in exp:
+            xh=(events[xi].get("inputs") or {}).get("holder")
+            for j,e in enumerate(events):
+                if j>xi and e.get("event_type")=="LEASE_ACQUIRED" and (e.get("inputs") or {}).get("holder") and (e.get("inputs") or {}).get("holder")!=xh:
+                    return "PASS"
+        return "FAIL"
     active=[e["task_id"] for e in evs("LEASE_ACQUIRED") if not any(x.get("task_id")==e["task_id"] and x.get("event_type") in ("LEASE_RELEASED","LEASE_EXPIRED") for x in events)]
     wf=[e.get("inputs",{}).get("workflow_id") for e in evs("TASK_RESULT") if e.get("inputs",{}).get("workflow_id")]
     return {
@@ -20,7 +28,8 @@ def build_v02(ledger_path, backlog_path, live_results_path=None, temporal_health
       "RUNNER_HEALTH":{"LAST_HEARTBEAT":state.get("updated_at"),"ACTIVE_LEASES":active,
                        "STALE_LEASES":[e["task_id"] for e in evs("LEASE_EXPIRED")],
                        "LAST_TEMPORAL_WORKFLOW": wf[-1] if wf else None,
-                       "LAST_RECOVERY_EVENT": (evs("LEASE_EXPIRED")[-1]["task_id"] if evs("LEASE_EXPIRED") else None)},
+                       "LAST_RECOVERY_EVENT": (evs("LEASE_EXPIRED")[-1]["task_id"] if evs("LEASE_EXPIRED") else None),
+                       "STALE_LEASE_RECLAIM": _stale_reclaim()},
       "QUEUES":{k:bys.get(k,[]) for k in ("READY","CLAIMED","RUNNING","VERIFYING","WAITING_FOR_NITIN","BLOCKED","COMPLETED")},
       "CURRENT_EXECUTOR_TASK":state["autonomous_execution"].get("current_task"),
       "LAST_COMPLETED_TASK": (evs("TASK_RESULT")[-1]["task_id"] if evs("TASK_RESULT") else None),

@@ -11,15 +11,27 @@ P=F=0; FAILS=[]
 def ok(n,c):
     global P,F
     (globals().__setitem__('P',P+1) if c else (globals().__setitem__('F',F+1),FAILS.append(n))); print("PASS" if c else "FAIL",n)
-def build_valid():
+def build_valid(stale="ok", gated_started=True):
     d=tempfile.mkdtemp()
     L=EventLedger(os.path.join(d,"EVENT_LEDGER.jsonl")); n=[0]
     def ev(et,**k):
         n[0]+=1; L.append(E.make_event("e%03d"%n[0],et,"2026-03-01T00:00:%02dZ"%(n[0]%60),"claude",**k))
     for t in ("TASK_A","TASK_B","TASK_D"):
         ev("TASK_STARTED",task_id=t); ev("TASK_RESULT",task_id=t,idempotency_key="k-"+t,evidence=["ev"])
+    if gated_started: ev("TASK_STARTED",task_id="TASK_C")   # gated task runs an activity, THEN parks
     ev("HUMAN_GATE_REQUEST",task_id="TASK_C",gate="NITIN_PUBLISH_APPROVAL")
-    ev("LEASE_ACQUIRED",task_id="STALE",lease_id="l1"); ev("LEASE_EXPIRED",task_id="STALE",lease_id="l1"); ev("LEASE_ACQUIRED",task_id="STALE",lease_id="l2")
+    if stale=="ok":
+        ev("LEASE_ACQUIRED",task_id="STALE",lease_id="l1",inputs={"holder":"dead-worker"})
+        ev("LEASE_EXPIRED",task_id="STALE",lease_id="l1",inputs={"holder":"dead-worker"})
+        ev("LEASE_ACQUIRED",task_id="STALE",lease_id="l2",inputs={"holder":"claude","reclaimed_from":"dead-worker"})
+    elif stale=="no_expiry":
+        ev("LEASE_ACQUIRED",task_id="STALE",lease_id="l1",inputs={"holder":"dead-worker"})
+        ev("LEASE_ACQUIRED",task_id="STALE",lease_id="l2",inputs={"holder":"claude"})
+    elif stale=="same_holder":
+        ev("LEASE_ACQUIRED",task_id="STALE",lease_id="l1",inputs={"holder":"dead-worker"})
+        ev("LEASE_EXPIRED",task_id="STALE",lease_id="l1",inputs={"holder":"dead-worker"})
+        ev("LEASE_ACQUIRED",task_id="STALE",lease_id="l2",inputs={"holder":"dead-worker"})
+    # stale=="none": no lease events
     res={"final_task_status":{"TASK_A":"COMPLETED","TASK_B":"COMPLETED","TASK_C":"WAITING_FOR_NITIN","TASK_D":"COMPLETED"},
          "REAL_TEMPORAL_WORKFLOWS_OBSERVED":True,
          "workflow_ids":{"TASK_A":"p0e2-a","TASK_B":"p0e2-b","TASK_C":"p0e2-c","TASK_D":"p0e2-d"},
@@ -55,6 +67,14 @@ neg("neg_postgres_restart_false", lambda d: json.dump({**{b:True for b in AG.FI_
 neg("neg_temporal_recovery_false", lambda d: json.dump({**{b:True for b in AG.FI_BOOLS},"temporal_recovery_observed":False}, open(os.path.join(d,"failure_injection.json"),"w")), "FI_temporal_recovery_observed")
 neg("neg_duplicate_side_effect", lambda d: W_(d,{**R_(d),"DUPLICATE_SIDE_EFFECT_COUNT":1}), "DUPLICATE_SIDE_EFFECT_COUNT_zero")
 neg("neg_stale_lease_absent", lambda d: W_(d,{**R_(d),"STALE_LEASE_RECLAIM":"FAIL"}), "STALE_LEASE_RECLAIM")
+def _neg_ledger(name, stale, crit):
+    d=build_valid(stale=stale)   # results still claims PASS; ledger lacks a valid reclaim -> gate must FAIL
+    v=AG.verify(d); ok(name, v["FINAL"]=="FAIL" and crit in v["failed_criteria"])
+_neg_ledger("neg_stale_without_expiry", "no_expiry", "STALE_LEASE_RECLAIM")
+_neg_ledger("neg_stale_same_holder_reclaim", "same_holder", "STALE_LEASE_RECLAIM")
+_neg_ledger("neg_stale_none", "none", "STALE_LEASE_RECLAIM")
+# STATE_RECONSTRUCTION missing final_task_status => FAIL
+neg("neg_state_reconstruction_missing", lambda d: W_(d,{k:v for k,v in R_(d).items() if k!="final_task_status"}), "STATE_RECONSTRUCTION")
 def _tamper(d):
     p=os.path.join(d,"EVENT_LEDGER.jsonl"); ls=open(p).read().splitlines()
     r=json.loads(ls[1]); r["agent"]="tampered"; ls[1]=json.dumps(r); open(p,"w").write("\n".join(ls)+"\n")
