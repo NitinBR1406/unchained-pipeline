@@ -1,4 +1,6 @@
 # .github/workflows/p0e2-autonomous-live.yml — P0-E2 Slice-2 LIVE autonomous runner (DISPOSABLE, NON-PROD).
+# LIVE-RERUN-2 fixes: (D1) runner uses bounded namespace-readiness before post-restart dispatch;
+#   (D2) evidence JSON booleans are emitted by evidence_json.py (real Python bools), no shell->python interpolation.
 # HARDENED: SHA-pinned unambiguous checkout (no obsolete fallback; verify CHECKED_OUT_SHA==requested),
 # structured failure-injection + poc evidence, and a STRICT independent fail-closed acceptance gate
 # (acceptance_gate.py) as the authoritative final step. Reuses the P0-E1 disposable compose + ControlPlaneTask
@@ -65,16 +67,9 @@ jobs:
           wait $RUNPID || true
           DUP_TS=$(date -u +%FT%TZ)
           python "$P0E2/temporal_runner.py" run --backlog "$P0E2/evidence/BACKLOG_live.json" --ledger "$LEDGER" --evidence "$P0E2/evidence" || true
-          DTASK=$(python3 -c "import json;print(json.load(open('$P0E2/evidence/BACKLOG_live.json'))['tasks'] and [t['status'] for t in json.load(open('$P0E2/evidence/BACKLOG_live.json'))['tasks'] if t['task_id']=='TASK_D'][0])" 2>/dev/null || echo unknown)
+          DTASK=$(python3 -c "import json,sys;ts=json.load(open('$P0E2/evidence/BACKLOG_live.json'))['tasks'];print([t['status'] for t in ts if t['task_id']=='TASK_D'][0])" 2>/dev/null || echo unknown)
           EXECREC=false; [ "$DTASK" = "COMPLETED" ] && EXECREC=true
-          python3 - <<PY
-          import json
-          json.dump({"worker_kill_observed":$KILLED,"worker_recovery_observed":$RECOV,
-                     "postgres_restart_observed":$PGT,"temporal_restart_observed":$TMP,
-                     "temporal_recovery_observed":$THEALTH,"execution_recovered":$EXECREC,
-                     "timestamps":{"worker_kill":"$KILL_TS","worker_recovery":"$REC_TS","duplicate_dispatch":"$DUP_TS"}},
-                    open("$P0E2/evidence/failure_injection.json","w"), indent=2)
-          PY
+          FI_WORKER_KILL_OBSERVED="$KILLED" FI_WORKER_RECOVERY_OBSERVED="$RECOV"           FI_POSTGRES_RESTART_OBSERVED="$PGT" FI_TEMPORAL_RESTART_OBSERVED="$TMP"           FI_TEMPORAL_RECOVERY_OBSERVED="$THEALTH" FI_EXECUTION_RECOVERED="$EXECREC"           FI_WORKER_KILL_TS="$KILL_TS" FI_WORKER_RECOVERY_TS="$REC_TS" FI_DUPLICATE_DISPATCH_TS="$DUP_TS"           PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2" python "$P0E2/evidence_json.py" failure_injection --out "$P0E2/evidence/failure_injection.json"
           cat "$P0E2/evidence/failure_injection.json"
       - name: Assemble raw results + Control Room V02 (non-fatal)
         if: always()
@@ -97,8 +92,8 @@ jobs:
         if: always()
         run: |
           docker ps -a
-          if [ -z "$(docker ps -q)" ]; then R=false; else R=true; fi
-          python3 -c "import json;json.dump({'POC_INFRA_REMAINING':$R},open('$P0E2/evidence/poc_infra.json','w'))"
+          if [ -z "$(docker ps -q)" ]; then POC=false; else POC=true; fi
+          POC_INFRA_REMAINING="$POC" PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2" python "$P0E2/evidence_json.py" poc --out "$P0E2/evidence/poc_infra.json"
           cat "$P0E2/evidence/poc_infra.json"
       - name: STRICT acceptance verdict (authoritative; writes P0E2_ACCEPTANCE_VERDICT.json; non-fatal here)
         if: always()

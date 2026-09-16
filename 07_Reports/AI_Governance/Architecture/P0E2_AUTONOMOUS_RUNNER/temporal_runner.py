@@ -1,4 +1,4 @@
-"""P0-E2 Slice-2 LIVE adapter: dispatch READY backlog tasks onto the verified disposable Temporal control
+"""P0-E2 Slice-2 LIVE adapter (DEFECT-1: bounded post-restart namespace readiness via P0-E1 _connect_ready): dispatch READY backlog tasks onto the verified disposable Temporal control
 plane as real ControlPlaneTask workflows. Reuses P0-E1 (temporal_live.ControlPlaneTask + activities +
 human_auth) and P0-E1/Slice-1 primitives (ledger, reducer, backlog, leases, idempotency) — no duplication.
 Deterministic workflow-id = 'p0e2-'+pinned job_id so retries/duplicate dispatch dedup at Temporal (and the
@@ -41,8 +41,10 @@ class LiveRunner:
     def _wf_id(self, task): return "p0e2-"+self._pin_job(task)
     async def _client(self):
         if self.client_factory: return await self.client_factory()
-        from control_plane.temporal_live import _client   # real temporalio client
-        return await _client()
+        # DEFECT-1 fix: reuse the P0-E1 BOUNDED readiness (connect + namespace 'default' visible) so a
+        # post-restart resume never dispatches before Temporal is ready. Fail-closed (SystemExit) on timeout.
+        from control_plane.temporal_live import _connect_ready
+        return await _connect_ready()
     async def _start(self, client, task):
         """Start a ControlPlaneTask workflow with a deterministic id (dedups duplicate dispatch)."""
         try:
