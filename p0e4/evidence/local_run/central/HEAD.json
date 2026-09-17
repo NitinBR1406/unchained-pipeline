@@ -1,0 +1,7 @@
+{
+  "file": "state_v11.json",
+  "ledger_head_hash": "b346666a2129c04c8f3dcbc94ea7e736919d8af96986886c802badd88ea7c93b",
+  "sha256": "cbdd036517b833c539675910312b9eb54a400cd8fc9b8f6eedd6d78a984aaac9",
+  "state_hash": "00e45f55a66fe742501f0e34570ea7a69d3493f78072ced41b040fe66806a2be",
+  "state_version": 11
+}

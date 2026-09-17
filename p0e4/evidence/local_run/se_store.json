@@ -1,0 +1,17 @@
+{
+  "done": {
+    "923351dfc275022683ff7d1a771eb452d7091b73327ec1591225f2278f6dfdaf": {
+      "evidence": [
+        "AKI_INTAKE.json#sha256=ac61a9ac886d62a2fb94a61245b29b885e236d728ae73b64c0fa9d095528b90c"
+      ],
+      "status": "OK"
+    },
+    "9c2cd4526852228b5d40bf184639bf3716215e48e03b18c1923d32e190babb9c": {
+      "evidence": [
+        "INDEPENDENT_GOVERNANCE_AUDIT.json#sha256=af2704ce6d7ce55ffc95589592a81b7366c3dd989f838c110c5c927c41b1b8a1"
+      ],
+      "status": "OK"
+    }
+  },
+  "duplicate_attempts": 0
+}

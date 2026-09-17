@@ -1,0 +1,79 @@
+{
+  "approvals": {},
+  "architecture_locks": {
+    "adr_ref": null,
+    "architecture_bakeoff": null,
+    "production_deployment_authorized": false,
+    "selected_control_plane": null,
+    "winner": null
+  },
+  "autonomous_execution": {
+    "active_tasks": [],
+    "current_task": "AKI_INTAKE",
+    "waiting_for_nitin": []
+  },
+  "backlog_summary": {
+    "blocked": 0,
+    "completed": 0,
+    "ready": 0,
+    "running": 0,
+    "waiting_for_nitin": 0
+  },
+  "current_content": null,
+  "current_release": null,
+  "datastore_ids": {},
+  "deployments": [],
+  "duplicate_side_effect_count": 0,
+  "evidence_refs": [
+    {
+      "evidence": [
+        "AKI_INTAKE.json#sha256=ac61a9ac886d62a2fb94a61245b29b885e236d728ae73b64c0fa9d095528b90c"
+      ],
+      "job_id": "923351dfc275022683ff7d1a771eb452d7091b73327ec1591225f2278f6dfdaf",
+      "task_id": "AKI_INTAKE"
+    }
+  ],
+  "git": {
+    "branch": null,
+    "commit_sha": null,
+    "repository": null
+  },
+  "grants": {},
+  "invariants": {
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "STATE_RECOVERED_AFTER_RESTART": null,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": null,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": null
+  },
+  "issue_classes": {
+    "material": [],
+    "must_fix": [],
+    "nice_to_have": []
+  },
+  "ledger_head_hash": "2c7e049358e4f466f306092bc85a866ee08218711c21aa88e61b7a8e60c2c40f",
+  "milestone": "TEMPORAL CONTROL PLANE FOUNDATION",
+  "phase": "P0-E1",
+  "production_state": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "mutated": false,
+    "p1_scenario": "9627055"
+  },
+  "project": "UNCHAINED NITIN \u2014 MASTER",
+  "proven_tests": [
+    {
+      "evidence": [
+        "AKI_INTAKE.json#sha256=ac61a9ac886d62a2fb94a61245b29b885e236d728ae73b64c0fa9d095528b90c"
+      ],
+      "task_id": "AKI_INTAKE"
+    }
+  ],
+  "provenance": [],
+  "runner_health": {},
+  "scenario_ids": {},
+  "schema_version": 1,
+  "state_hash": "8e93d6a048186aec6a5d58ce3c6c307dd134a4e7eecdc413c72ead67eb686386",
+  "state_version": 6,
+  "updated_at": "1000",
+  "updated_by": "claude"
+}

@@ -1,0 +1,87 @@
+{
+  "tested_sha": "7c4855a4d5491cfc24b3cd8637cdf4851b404634",
+  "verdict": "BLOCKED_NOT_GREEN",
+  "regression_suites_passed": 35,
+  "regression_suites_total": 35,
+  "smoke_exit_code": 0,
+  "report": {
+    "acceptance": "BLOCKED_NOT_GREEN",
+    "intake": {
+      "schema_version": 1,
+      "workload_type": "production_release_handoff",
+      "campaign_id": "aakhri-ishq",
+      "source_freeze_sha": "263a36980fc2e2aa3138609f5406555ead9ef8d7",
+      "source_master_state_version": 10,
+      "source_sha256": {
+        "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/evidence/freeze/UNCHAINED_MASTER_PROJECT_STATE_V05.json": "5d0c90cfd9b544304bb2dac762046c8ff66eb17e5bd3033188204f847d7b7bcf",
+        "campaigns/aakhri-ishq/campaign.json": "e23faa391680ff17d7bbcdf1e698977b30767e1fb1ad5ee5ab90e2f82a213438",
+        "campaigns/aakhri-ishq/state/approvals.json": "3c27207443e809189e386e2fc7098d48017fa7cb8191b42b2e54bd1ea2b4cdd5",
+        "campaigns/aakhri-ishq/state/registry.json": "9fbcd5d0a164d00cc97da465929e16c3433f7bb89fee346f19ab6c0d4515068d",
+        "campaigns/aakhri-ishq/state/PACKAGING.json": "af67ca495e007bb60ded0dd7486a745b520535236a1470758448cfa4b54062e0",
+        "campaigns/aakhri-ishq/state/DERIVATIVE_PLAN.json": "113a54dfba750bdd6ecd5a05ed4e69aa0df97ee9823ba09c768bc9d7184df06a"
+      },
+      "authorizations": {
+        "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+        "PUBLICATION_AUTHORIZED": false
+      },
+      "first_real_poster": "PAUSED_BY_NITIN",
+      "approvals_observed": {
+        "NITIN_CREATIVE_APPROVAL": {
+          "campaign_id": "aakhri-ishq",
+          "asset_id": "frozen_master_v01",
+          "gate": "NITIN_CREATIVE_APPROVAL",
+          "decision": "APPROVE",
+          "approved_by": "Nitin",
+          "timestamp": "2026-09-07T17:35:17.432977Z",
+          "artifact_sha256": "f50bedec74c20c1b691575e71272623313dda1cc4e6c984f1a670085c03cecda",
+          "notes": "Gemini 96.8/100; MUST_FIX=0; reconstruction",
+          "version": "1"
+        },
+        "NITIN_FINAL_VIDEO_APPROVAL": {
+          "campaign_id": "aakhri-ishq",
+          "asset_id": "production_master_v01",
+          "gate": "NITIN_FINAL_VIDEO_APPROVAL",
+          "decision": "APPROVE",
+          "approved_by": "Nitin",
+          "timestamp": "2026-09-07T17:35:17.436360Z",
+          "artifact_sha256": "AKI_PRODUCTION_MASTER_V01_SHA_PENDING_LOCAL_RENDER",
+          "notes": "NITIN_FINAL_VIDEO_APPROVAL = TRUE (authoritative)",
+          "version": "1"
+        }
+      },
+      "publish_approval_created": false,
+      "publish_ready": false,
+      "status": "BLOCKED_INTEGRATION",
+      "blockers": [
+        "FINAL_VIDEO_SHA_UNBOUND",
+        "PRODUCTION_MASTER_NOT_REGISTERED",
+        "RIGHTS_NOT_PASS",
+        "PACKAGING_INCOMPLETE",
+        "DERIVATIVES_NOT_VERIFIED",
+        "SHARED_DRIVE_ASSET_READBACK_REQUIRED",
+        "DURABLE_LIVE_EXECUTOR_NOT_PROVISIONED",
+        "SHARED_DRIVE_STATE_PERSISTENCE_NOT_PROVISIONED"
+      ],
+      "next_human_gate": "NITIN_PUBLISH_APPROVAL",
+      "publication_side_effect_count": 0,
+      "evidence_scope": "repository_intake_and_local_control_loop_only"
+    },
+    "backlog_summary": {
+      "ready": 0,
+      "running": 0,
+      "blocked": 1,
+      "waiting_for_nitin": 0,
+      "completed": 2,
+      "failed": 0,
+      "claimed": 0,
+      "verifying": 0
+    },
+    "replay_verified": true,
+    "control_loop_state_version": 11,
+    "ledger_head_hash": "b346666a2129c04c8f3dcbc94ea7e736919d8af96986886c802badd88ea7c93b",
+    "authoritative_master_state_version": 10,
+    "authoritative_master_state_updated": false,
+    "live_temporal_observed": false,
+    "shared_drive_persisted": false
+  }
+}

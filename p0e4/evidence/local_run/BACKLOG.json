@@ -1,0 +1,88 @@
+[
+  {
+    "allowed_scope": [
+      "p0e4_readonly_intake"
+    ],
+    "autonomy_level": "AUTONOMOUS_SAFE",
+    "blocked_reason": null,
+    "claimed_by": "worker-1",
+    "definition_of_done": "hash-bound intake evidence",
+    "dependencies": [],
+    "evidence_required": [
+      "intake.json"
+    ],
+    "human_gate_required": null,
+    "idempotency_key": "923351dfc275022683ff7d1a771eb452d7091b73327ec1591225f2278f6dfdaf",
+    "input_hash": "e9e5a920a15a6c497108fb832ad9717617182d10eff09aa34df86ba4da2f82b7",
+    "lease_expires_at": 1030,
+    "lease_id": "L-AKI_INTAKE-1000",
+    "next_action": "inspect",
+    "priority": 10,
+    "rollback": "discard isolated staging only",
+    "state_version": null,
+    "status": "COMPLETED",
+    "task_id": "AKI_INTAKE",
+    "tests_required": [
+      "offline"
+    ],
+    "title": "AKI_INTAKE"
+  },
+  {
+    "allowed_scope": [
+      "p0e4_readonly_intake"
+    ],
+    "autonomy_level": "HUMAN_GATED",
+    "blocked_reason": "FINAL_VIDEO_SHA_UNBOUND,PRODUCTION_MASTER_NOT_REGISTERED,RIGHTS_NOT_PASS,PACKAGING_INCOMPLETE,DERIVATIVES_NOT_VERIFIED,SHARED_DRIVE_ASSET_READBACK_REQUIRED,DURABLE_LIVE_EXECUTOR_NOT_PROVISIONED,SHARED_DRIVE_STATE_PERSISTENCE_NOT_PROVISIONED",
+    "claimed_by": null,
+    "definition_of_done": "hash-bound intake evidence",
+    "dependencies": [
+      "AKI_INTAKE"
+    ],
+    "evidence_required": [
+      "intake.json"
+    ],
+    "human_gate_required": "NITIN_PUBLISH_APPROVAL",
+    "idempotency_key": null,
+    "input_hash": "e9e5a920a15a6c497108fb832ad9717617182d10eff09aa34df86ba4da2f82b7",
+    "lease_expires_at": null,
+    "lease_id": null,
+    "next_action": "inspect",
+    "priority": 20,
+    "rollback": "discard isolated staging only",
+    "state_version": null,
+    "status": "BLOCKED",
+    "task_id": "AKI_RELEASE",
+    "tests_required": [
+      "offline"
+    ],
+    "title": "AKI_RELEASE"
+  },
+  {
+    "allowed_scope": [
+      "p0e4_readonly_intake"
+    ],
+    "autonomy_level": "AUTONOMOUS_SAFE",
+    "blocked_reason": null,
+    "claimed_by": "worker-1",
+    "definition_of_done": "hash-bound intake evidence",
+    "dependencies": [],
+    "evidence_required": [
+      "intake.json"
+    ],
+    "human_gate_required": null,
+    "idempotency_key": "9c2cd4526852228b5d40bf184639bf3716215e48e03b18c1923d32e190babb9c",
+    "input_hash": "e9e5a920a15a6c497108fb832ad9717617182d10eff09aa34df86ba4da2f82b7",
+    "lease_expires_at": 1031,
+    "lease_id": "L-INDEPENDENT_GOVERNANCE_AUDIT-1001",
+    "next_action": "inspect",
+    "priority": 30,
+    "rollback": "discard isolated staging only",
+    "state_version": null,
+    "status": "COMPLETED",
+    "task_id": "INDEPENDENT_GOVERNANCE_AUDIT",
+    "tests_required": [
+      "offline"
+    ],
+    "title": "INDEPENDENT_GOVERNANCE_AUDIT"
+  }
+]
