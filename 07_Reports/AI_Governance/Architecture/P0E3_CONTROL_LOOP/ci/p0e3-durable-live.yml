@@ -76,6 +76,7 @@ jobs:
           cp "$P0E3/seed/backlog_slice2.json" "$P0E3/evidence/BACKLOG_live.json"
           LEDGER_P0E2="$PWD/$P0E2/evidence/EVENT_LEDGER.jsonl"; : > "$LEDGER_P0E2"
           python "$P0E2/temporal_runner.py" run --backlog "$P0E3/evidence/BACKLOG_p0e2_adapter.json" --ledger "$LEDGER_P0E2" --evidence "$P0E2/evidence"
+          python "$P0E2/temporal_runner.py" gate --backlog "$P0E3/evidence/BACKLOG_p0e2_adapter.json" --ledger "$LEDGER_P0E2" --evidence "$P0E2/evidence"
           # extract real workflow/run ids the LiveRunner persisted (never invented)
           python "$P0E3/ci/extract_workflows.py" --p0e2-results "$P0E2/evidence/P0E2_LIVE_RESULTS.json" --out "$P0E3/evidence/workflows.json"
       - name: Run P0-E3 durable loop live + REAL Shared Drive persistence lifecycle
@@ -85,7 +86,7 @@ jobs:
           P0E3_DRIVE_ID: "0AG0CqqUZ6YuXUk9PVA"
         run: |
           export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E3" \
-                 P0E3_CENTRAL_DIR="$SE_DIR/central" \
+                 P0E3_CENTRAL_DIR="$PWD/$P0E3/evidence/central" \
                  P0E3_DRIVE_NAMESPACE="P0E3_LIVE_ACCEPTANCE_DRIVE_TEST_${{ github.run_id }}" \
                  REQUESTED_SHA="${{ github.event.inputs.ref }}" \
                  CHECKED_OUT_SHA="$(git rev-parse HEAD)" \
@@ -106,7 +107,7 @@ jobs:
           # Temporal-only teardown record (real python bool). Shared-Drive artifact status is taken from the
           # driver's real Drive lifecycle contract (drive_persistence.json) during assemble.
           printf '{"TEMPORAL_POC_INFRA_REMAINING": %s}' "$TPOC" > "$P0E3/evidence/temporal_poc.json"
-          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E3" P0E3_CENTRAL_DIR="$SE_DIR/central" \
+          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E3" P0E3_CENTRAL_DIR="$PWD/$P0E3/evidence/central" \
                  REQUESTED_SHA="${{ github.event.inputs.ref }}" CHECKED_OUT_SHA="$(git rev-parse HEAD)" \
                  WORKFLOWS_JSON="$PWD/$P0E3/evidence/workflows.json" POC_JSON="$PWD/$P0E3/evidence/temporal_poc.json"
           python "$P0E3/live_driver.py" assemble --evidence "$PWD/$P0E3/evidence" || true
