@@ -1,0 +1,17 @@
+{
+  "SHARED_DRIVE_TEST_ARTIFACTS_REMAINING": false,
+  "backend_type": "google_shared_drive",
+  "cas_head_update_observed": true,
+  "disposable_test_namespace": "P0E3_LIVE_ACCEPTANCE_DRIVE_TEST_35258089586",
+  "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+  "expected_sha256": "af2f3b62b65c112113392f2ef272bf48c0b58f4a009cf50533d2c2c53237d2c7",
+  "head_object_id": "1Y-k5puz-GEjKO_ZkL3-oYxhusz3UWYuH",
+  "head_readback_observed": true,
+  "readback_observed": true,
+  "readback_sha256": "af2f3b62b65c112113392f2ef272bf48c0b58f4a009cf50533d2c2c53237d2c7",
+  "readback_sha_matches": true,
+  "source": "live_drive_lifecycle",
+  "stale_write_rejected": true,
+  "version_object_id": "1w0aMjeSSEbfWBG3_9TduWNunCf6P2uUZ",
+  "write_observed": true
+}

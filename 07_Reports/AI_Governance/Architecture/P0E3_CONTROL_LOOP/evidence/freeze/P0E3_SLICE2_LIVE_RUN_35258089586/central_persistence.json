@@ -1,0 +1,42 @@
+{
+  "CENTRAL_READBACK_SHA_MATCH": true,
+  "CENTRAL_WRITE_READBACK_VERIFIED": true,
+  "REAL_CENTRAL_PERSISTENCE_OBSERVED": true,
+  "STALE_WRITE_REJECTED": true,
+  "backend": {
+    "backend_type": "shared_volume",
+    "cross_process": true,
+    "disposable": true,
+    "kind": "shared_volume",
+    "root": "/home/runner/work/unchained-pipeline/unchained-pipeline/07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/evidence/central"
+  },
+  "head": {
+    "file": "state_v18.json",
+    "ledger_head_hash": "4bb0d1764e90fd507a799e44241ce5a6f26e69b12366a2c1a061e97976a8fd0d",
+    "sha256": "f7e948ae979a36d0f6bd098d8d66588ff9bc57a144ca5c9246114fae8c3617b1",
+    "state_hash": "6602485b3ebed1f4dc31dea6e1290e91990bf52f745c5bd21d78a9e2d655ff3a",
+    "state_version": 18
+  },
+  "writes": [
+    {
+      "file": "state_v0.json",
+      "readback_sha256": "b0636046aa117d779677df47c7aa59cd742d88cc4acd38821bdbf4d687d4abf7"
+    },
+    {
+      "file": "state_v10.json",
+      "readback_sha256": "3a6cc63aa04bb0ae670fdb2ce85e110b4bc8abf1ecb9855f0b2de15ba5ce0a0a"
+    },
+    {
+      "file": "state_v13.json",
+      "readback_sha256": "f2258d24226a41f486aac2f6af890de06735c71082a9d83461c500b1b0de959a"
+    },
+    {
+      "file": "state_v18.json",
+      "readback_sha256": "f7e948ae979a36d0f6bd098d8d66588ff9bc57a144ca5c9246114fae8c3617b1"
+    },
+    {
+      "file": "state_v5.json",
+      "readback_sha256": "01d669f4f158c2838e9dbbb0504b3a6a0c065dc89bbae6143818dc95ad63f92a"
+    }
+  ]
+}

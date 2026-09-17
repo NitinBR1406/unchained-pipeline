@@ -1,0 +1,72 @@
+{
+  "FINAL": "PASS",
+  "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+  "P0E2_NB_001": "CLOSED",
+  "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+  "PUBLICATION_AUTHORIZED": false,
+  "crash_recovery_matrix": {
+    "A_after_ledger_before_state": {
+      "PASS": true,
+      "present": true
+    },
+    "B_after_state_before_readback": {
+      "PASS": true,
+      "present": true
+    },
+    "C_after_claim_before_exec": {
+      "PASS": true,
+      "present": true
+    },
+    "D_during_execution": {
+      "PASS": true,
+      "present": true
+    },
+    "E_after_effect_before_completion": {
+      "PASS": true,
+      "present": true
+    },
+    "F_while_waiting_for_nitin": {
+      "PASS": true,
+      "present": true
+    }
+  },
+  "criteria": {
+    "AUTONOMOUS_NEXT_TASK": true,
+    "CENTRAL_READBACK_SHA_MATCH": true,
+    "CENTRAL_WRITE_READBACK_VERIFIED": true,
+    "CHECKED_OUT_SHA_MATCHES_REQUEST": true,
+    "CONCURRENT_DOUBLE_CLAIM_COUNT_IS_ZERO": true,
+    "CRASH_RECOVERY_MATRIX": true,
+    "DUPLICATE_SIDE_EFFECT_COUNT_IS_ZERO": true,
+    "EVENT_LEDGER_APPEND_ONLY": true,
+    "EVENT_LEDGER_CHAIN_VALID": true,
+    "HUMAN_MESSAGE_RELAY_REQUIRED_IS_FALSE": true,
+    "NO_APPROVAL_FABRICATED": true,
+    "P0E2_NB_001_CLOSED": true,
+    "POC_INFRA_REMAINING_IS_FALSE": true,
+    "REAL_CENTRAL_PERSISTENCE_OBSERVED": true,
+    "REAL_SHARED_DRIVE_PERSISTENCE_OBSERVED": true,
+    "REAL_TEMPORAL_WORKFLOWS_OBSERVED": true,
+    "SHARED_DRIVE_TEST_ARTIFACTS_REMAINING_IS_FALSE": true,
+    "STALE_LEASE_RECLAIM": true,
+    "STALE_WRITE_REJECTED": true,
+    "STATE_REPLAY_MATCHES_MASTER": true,
+    "STATE_VERSION_MONOTONIC": true,
+    "TEMPORAL_POC_INFRA_REMAINING_IS_FALSE": true,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK_IS_FALSE": true
+  },
+  "failed_criteria": [],
+  "gate": "P0E3_SLICE_2_LIVE_ACCEPTANCE",
+  "notes": {
+    "central_head": {
+      "file": "state_v18.json",
+      "sha256": "f7e948ae979a36d0f6bd098d8d66588ff9bc57a144ca5c9246114fae8c3617b1"
+    },
+    "checkout": {
+      "CHECKED_OUT_SHA": "fe3bb58c3ddbd8bc02d968c00f7f03d51d3d8936",
+      "requested": "fe3bb58c3ddbd8bc02d968c00f7f03d51d3d8936"
+    },
+    "duplicate_side_effect_max": 0,
+    "replay": "OK"
+  }
+}

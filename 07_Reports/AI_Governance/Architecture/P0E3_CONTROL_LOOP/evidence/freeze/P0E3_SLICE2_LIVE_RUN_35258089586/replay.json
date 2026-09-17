@@ -1,0 +1,8 @@
+{
+  "STATE_REPLAY_MATCHES_MASTER": true,
+  "STATE_VERSION_MONOTONIC": true,
+  "detail": "OK",
+  "ledger_head_hash": "4bb0d1764e90fd507a799e44241ce5a6f26e69b12366a2c1a061e97976a8fd0d",
+  "state_hash": "6602485b3ebed1f4dc31dea6e1290e91990bf52f745c5bd21d78a9e2d655ff3a",
+  "state_version": 18
+}
