@@ -72,9 +72,10 @@ jobs:
         env: { TEMPORAL_ADDRESS: "localhost:7233" }
         run: |
           export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2" SE_STORE="$SE_DIR/side_effects.json" RESULT_DEADLINE_S=240
+          python -c 'import json,os; src=os.environ["P0E3"]+"/seed/backlog_slice2.json"; dst=os.environ["P0E3"]+"/evidence/BACKLOG_p0e2_adapter.json"; data=json.load(open(src)); assert isinstance(data,list), "Slice2 backlog must be a list"; json.dump({"tasks":data},open(dst,"w"),indent=2)'
           cp "$P0E3/seed/backlog_slice2.json" "$P0E3/evidence/BACKLOG_live.json"
           LEDGER_P0E2="$PWD/$P0E2/evidence/EVENT_LEDGER.jsonl"; : > "$LEDGER_P0E2"
-          python "$P0E2/temporal_runner.py" run --backlog "$P0E3/evidence/BACKLOG_live.json" --ledger "$LEDGER_P0E2" --evidence "$P0E2/evidence" || true
+          python "$P0E2/temporal_runner.py" run --backlog "$P0E3/evidence/BACKLOG_p0e2_adapter.json" --ledger "$LEDGER_P0E2" --evidence "$P0E2/evidence"
           # extract real workflow/run ids the LiveRunner persisted (never invented)
           python "$P0E3/ci/extract_workflows.py" --p0e2-results "$P0E2/evidence/P0E2_LIVE_RESULTS.json" --out "$P0E3/evidence/workflows.json"
       - name: Run P0-E3 durable loop live + REAL Shared Drive persistence lifecycle
