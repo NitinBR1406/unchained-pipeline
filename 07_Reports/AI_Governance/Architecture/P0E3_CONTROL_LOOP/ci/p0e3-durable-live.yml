@@ -1,0 +1,130 @@
+# .github/workflows/p0e3-durable-live.yml — P0-E3 Slice-2 LIVE acceptance for the Durable Autonomous
+# Control Loop (DISPOSABLE, NON-PRODUCTION). Verifies against REAL Temporal (P0-E1 disposable compose) and the
+# REAL Google Shared Drive (0AG0CqqUZ6YuXUk9PVA) central persistence backend. SHA-pinned unambiguous checkout
+# (explicit 40-hex, no branch fallback, verify CHECKED_OUT_SHA==requested). Real workflow/run ids come from the
+# frozen P0-E2 LiveRunner dispatch. Independent, fail-closed acceptance reducer is the authoritative final gate.
+# Unconditional teardown (Temporal + Shared Drive) -> POC_INFRA_REMAINING=false.
+#
+# AUTH: Google Workload Identity Federation ONLY (keyless). No service-account JSON key, no inline JSON
+# credential input, no long-lived-key secret, and NO fallback from WIF to any long-lived credential. The auth
+# inputs are three NON-SECRET repository variables (vars.*). A fail-closed pre-flight rejects missing/malformed
+# WIF vars BEFORE the Drive live acceptance. No production / Make / Render / social mutation.
+name: p0e3-durable-live
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "IMMUTABLE full 40-hex commit SHA to check out (required; no branch names, no default)"
+        required: true
+permissions:
+  contents: read
+  id-token: write
+env:
+  P0E1: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
+  P0E2: 07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER
+  P0E3: 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate requested SHA (fail-closed; must be a 40-hex commit, no branch fallback)
+        run: |
+          REF="${{ github.event.inputs.ref }}"
+          echo "$REF" | grep -Eq '^[0-9a-f]{40}$' || { echo "ref must be a full 40-hex commit SHA, got: $REF"; exit 1; }
+      - uses: actions/checkout@v4
+        with: { ref: "${{ github.event.inputs.ref }}" }
+      - name: Verify checkout is exactly the requested SHA -> checkout.json
+        run: |
+          mkdir -p "$P0E3/evidence"
+          CHECKED_OUT_SHA=$(git rev-parse HEAD)
+          echo "{\"requested\":\"${{ github.event.inputs.ref }}\",\"CHECKED_OUT_SHA\":\"$CHECKED_OUT_SHA\"}" > "$P0E3/evidence/checkout.json"
+          [ "$CHECKED_OUT_SHA" = "${{ github.event.inputs.ref }}" ] || { echo "checkout SHA mismatch"; exit 1; }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Host SDK (pinned) + crypto + Google Drive client
+        run: pip install "temporalio==1.33.0" cryptography google-api-python-client google-auth >/dev/null 2>&1 || pip install temporalio cryptography google-api-python-client google-auth
+      # WIF pre-flight: fail closed BEFORE any Drive work if the keyless auth vars are missing/malformed.
+      # These are NON-SECRET repository variables (vars.*); no key, no inline JSON credential, no fallback.
+      - name: WIF pre-flight (fail-closed; validates keyless auth variables)
+        env:
+          GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
+          GCP_WIF_PROVIDER: ${{ vars.GCP_WIF_PROVIDER }}
+          GCP_DRIVE_SERVICE_ACCOUNT: ${{ vars.GCP_DRIVE_SERVICE_ACCOUNT }}
+        run: python "$P0E3/ci/wif_preflight.py"
+      # Keyless authentication via Google Workload Identity Federation ONLY.
+      # The service account (vars.GCP_DRIVE_SERVICE_ACCOUNT) must be a member with Content Manager on the
+      # "Unchained Nitin — Master" Shared Drive (0AG0CqqUZ6YuXUk9PVA). No JSON key is ever created or stored.
+      - name: Authenticate to Google via Workload Identity Federation (keyless)
+        uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ vars.GCP_PROJECT_ID }}
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_DRIVE_SERVICE_ACCOUNT }}
+      - name: Up disposable Temporal (reuse frozen P0-E1 compose + ControlPlaneTask worker)
+        working-directory: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
+        run: |
+          export SE_DIR=$PWD/se; mkdir -p $SE_DIR/central; echo "SE_DIR=$SE_DIR" >> $GITHUB_ENV
+          SE_DIR=$SE_DIR docker compose -f ci/compose.temporal-dev.ci.yml up -d --build
+          H=0; for i in $(seq 1 60); do if docker compose -f ci/compose.temporal-dev.ci.yml exec -T temporal tctl cluster health >/tmp/h 2>&1; then H=1; break; fi; sleep 3; done
+          [ "$H" = 1 ] || { echo "temporal not healthy"; exit 1; }
+      - name: Dispatch REAL Temporal workflows (frozen P0-E2 LiveRunner) -> workflows.json
+        timeout-minutes: 20
+        env: { TEMPORAL_ADDRESS: "localhost:7233" }
+        run: |
+          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E2" SE_STORE="$SE_DIR/side_effects.json" RESULT_DEADLINE_S=240
+          cp "$P0E3/seed/backlog_slice2.json" "$P0E3/evidence/BACKLOG_live.json"
+          LEDGER_P0E2="$PWD/$P0E2/evidence/EVENT_LEDGER.jsonl"; : > "$LEDGER_P0E2"
+          python "$P0E2/temporal_runner.py" run --backlog "$P0E3/evidence/BACKLOG_live.json" --ledger "$LEDGER_P0E2" --evidence "$P0E2/evidence" || true
+          # extract real workflow/run ids the LiveRunner persisted (never invented)
+          python "$P0E3/ci/extract_workflows.py" --p0e2-results "$P0E2/evidence/P0E2_LIVE_RESULTS.json" --out "$P0E3/evidence/workflows.json"
+      - name: Run P0-E3 durable loop live + REAL Shared Drive persistence lifecycle
+        timeout-minutes: 30
+        env:
+          TEMPORAL_ADDRESS: "localhost:7233"
+          P0E3_DRIVE_ID: "0AG0CqqUZ6YuXUk9PVA"
+        run: |
+          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E3" \
+                 P0E3_CENTRAL_DIR="$SE_DIR/central" \
+                 P0E3_DRIVE_NAMESPACE="P0E3_LIVE_ACCEPTANCE_DRIVE_TEST_${{ github.run_id }}" \
+                 REQUESTED_SHA="${{ github.event.inputs.ref }}" \
+                 CHECKED_OUT_SHA="$(git rev-parse HEAD)" \
+                 WORKFLOWS_JSON="$PWD/$P0E3/evidence/workflows.json"
+          # live_driver executes: durable loop (Temporal) + REAL Shared Drive write/readback/SHA/CAS/stale/teardown.
+          # If ADC (Drive service account) is absent, the Drive lifecycle fails closed -> gate FAILs (honest).
+          python "$P0E3/live_driver.py" run --evidence "$PWD/$P0E3/evidence"
+      - name: Teardown (unconditional)
+        if: always()
+        working-directory: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
+        run: SE_DIR=$PWD/se docker compose -f ci/compose.temporal-dev.ci.yml down -v || true
+      - name: Verify teardown (Temporal + Shared Drive) and re-assemble aggregate
+        if: always()
+        run: |
+          docker ps -a
+          # TEMPORAL disposable infra removed?
+          if [ -z "$(docker ps -q)" ]; then TPOC=false; else TPOC=true; fi
+          # Temporal-only teardown record (real python bool). Shared-Drive artifact status is taken from the
+          # driver's real Drive lifecycle contract (drive_persistence.json) during assemble.
+          printf '{"TEMPORAL_POC_INFRA_REMAINING": %s}' "$TPOC" > "$P0E3/evidence/temporal_poc.json"
+          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E3" P0E3_CENTRAL_DIR="$SE_DIR/central" \
+                 REQUESTED_SHA="${{ github.event.inputs.ref }}" CHECKED_OUT_SHA="$(git rev-parse HEAD)" \
+                 WORKFLOWS_JSON="$PWD/$P0E3/evidence/workflows.json" POC_JSON="$PWD/$P0E3/evidence/temporal_poc.json"
+          python "$P0E3/live_driver.py" assemble --evidence "$PWD/$P0E3/evidence" || true
+          cat "$P0E3/evidence/poc_infra.json"
+      - name: STRICT live acceptance verdict (authoritative; writes P0E3_LIVE_ACCEPTANCE_VERDICT.json)
+        if: always()
+        run: |
+          export PYTHONPATH="$PWD/$P0E1:$PWD/$P0E3"
+          python "$P0E3/live_acceptance_p0e3.py" --evidence "$PWD/$P0E3/evidence" || echo "verdict=FAIL"
+      - name: Diagnostics on failure
+        if: failure()
+        working-directory: 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE
+        run: |
+          set +e; C="docker compose -f ci/compose.temporal-dev.ci.yml"
+          { echo "== ps =="; $C ps -a; echo "== worker1 =="; $C logs --no-color --tail all worker1; echo "== temporal =="; $C logs --no-color --tail 150 temporal; } > "../P0E3_CONTROL_LOOP/evidence/p0e3_live_diagnostics.log" 2>&1
+      - name: Upload evidence (even on failure)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: p0e3-durable-live-evidence, path: 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/evidence/ }
+      - name: FAIL-CLOSED final gate (exit non-zero unless FINAL=PASS)
+        run: |
+          python3 -c "import json,sys;v=json.load(open('$P0E3/evidence/P0E3_LIVE_ACCEPTANCE_VERDICT.json'));print('FINAL=',v['FINAL'],'failed=',v['failed_criteria']);sys.exit(0 if v['FINAL']=='PASS' else 1)"

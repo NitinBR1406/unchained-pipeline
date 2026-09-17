@@ -9,6 +9,33 @@ for p in (ROOT, os.path.join(ARCH, "P0E1_CONTROL_PLANE")):
         sys.path.insert(0, p)
 
 
+def live_shaped_drive_contract():
+    """A TEST-layer, live-shaped Drive contract for exercising the gate's all-criteria PASS path offline.
+
+    Represents what a genuine live Drive run emits (source='live_drive_lifecycle') — it is NOT the synthetic
+    offline fixture, and it is NOT read from any recorded artifact. Values are deterministic TEST values. This
+    lets negative/positive tests establish a PASS baseline hermetically without any recorded live artifact.
+    """
+    h = "1" * 64
+    return {
+        "backend_type": "google_shared_drive",
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+        "disposable_test_namespace": "TEST_ONLY_live_shaped_ns",
+        "version_object_id": "TEST_ONLY_live_version_object",
+        "head_object_id": "TEST_ONLY_live_head_object",
+        "write_observed": True,
+        "readback_observed": True,
+        "expected_sha256": h,
+        "readback_sha256": h,
+        "readback_sha_matches": True,
+        "cas_head_update_observed": True,
+        "head_readback_observed": True,
+        "stale_write_rejected": True,
+        "SHARED_DRIVE_TEST_ARTIFACTS_REMAINING": False,
+        "source": "live_drive_lifecycle",
+    }
+
+
 class Counter:
     def __init__(self, tag):
         self.tag = tag

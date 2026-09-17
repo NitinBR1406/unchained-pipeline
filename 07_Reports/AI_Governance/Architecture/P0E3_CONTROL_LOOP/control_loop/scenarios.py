@@ -8,7 +8,9 @@ from .control_loop import DurableControlLoop, Clock, CrashInjected
 from . import state_model
 from .persistence import CentralPersistence, LocalDirBackend, CONFLICT, OK
 
-SEED = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "seed", "backlog_slice1.json")
+_SEED_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "seed")
+SEED = os.path.join(_SEED_DIR, "backlog_slice1.json")
+SEED_SLICE2 = os.path.join(_SEED_DIR, "backlog_slice2.json")
 
 
 def _fresh_workdir():

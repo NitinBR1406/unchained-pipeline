@@ -1,0 +1,3 @@
+55954ac3e28a4dd3403619c88fd315b13e40fdc8963d158cf538fe0eadab745a  ci/p0e3-durable-live.yml
+f07d3cbd990b2c24a409c9dba1c673e9818c5e0c1541a9e86d4d50dcca2fd3a3  ci/wif_preflight.py
+988a8ba97d8096420b38409d3b970ab861a4b639cd1d951f6432910fc7514913  tests/test_wif_auth.py
