@@ -1,0 +1,107 @@
+{
+  "FINAL": "PASS",
+  "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+  "PUBLICATION_AUTHORIZED": false,
+  "crash_recovery_matrix": {
+    "A_after_ledger_before_state": {
+      "PASS": true,
+      "c_waits": true,
+      "crashed": true,
+      "independent_continues": true,
+      "no_duplicate_side_effect": true,
+      "no_fabricated_approval": true,
+      "no_lost_completed_work": true,
+      "replay_matches": true
+    },
+    "B_after_state_before_readback": {
+      "PASS": true,
+      "c_waits": true,
+      "crashed": true,
+      "independent_continues": true,
+      "no_duplicate_side_effect": true,
+      "no_fabricated_approval": true,
+      "no_lost_completed_work": true,
+      "replay_matches": true
+    },
+    "C_after_claim_before_exec": {
+      "PASS": true,
+      "c_waits": true,
+      "crashed": true,
+      "independent_continues": true,
+      "no_duplicate_side_effect": true,
+      "no_fabricated_approval": true,
+      "no_lost_completed_work": true,
+      "replay_matches": true
+    },
+    "D_during_execution": {
+      "PASS": true,
+      "c_waits": true,
+      "crashed": true,
+      "independent_continues": true,
+      "no_duplicate_side_effect": true,
+      "no_fabricated_approval": true,
+      "no_lost_completed_work": true,
+      "replay_matches": true
+    },
+    "E_after_effect_before_completion": {
+      "PASS": true,
+      "c_waits": true,
+      "crashed": true,
+      "independent_continues": true,
+      "no_duplicate_side_effect": true,
+      "no_fabricated_approval": true,
+      "no_lost_completed_work": true,
+      "replay_matches": true
+    },
+    "F_while_waiting_for_nitin": {
+      "PASS": true,
+      "c_waits": true,
+      "crashed": true,
+      "independent_continues": true,
+      "no_duplicate_side_effect": true,
+      "no_fabricated_approval": true,
+      "no_lost_completed_work": true,
+      "replay_matches": true
+    }
+  },
+  "criteria": {
+    "AUTONOMOUS_NEXT_TASK": true,
+    "CENTRAL_WRITE_READBACK_VERIFIED": true,
+    "CONCURRENT_DOUBLE_CLAIM_COUNT_IS_ZERO": true,
+    "CRASH_RECOVERY_MATRIX": true,
+    "DUPLICATE_SIDE_EFFECT_COUNT_IS_ZERO": true,
+    "EVENT_LEDGER_APPEND_ONLY": true,
+    "EVENT_LEDGER_CHAIN_VALID": true,
+    "HUMAN_MESSAGE_RELAY_REQUIRED_IS_FALSE": true,
+    "NO_APPROVAL_FABRICATED": true,
+    "STALE_LEASE_RECLAIM": true,
+    "STALE_WRITE_REJECTED": true,
+    "STATE_REPLAY_MATCHES_MASTER": true,
+    "STATE_VERSION_MONOTONIC": true,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK_IS_FALSE": true
+  },
+  "failed_criteria": [],
+  "gate": "P0E3_SLICE_1_ACCEPTANCE",
+  "invariants": {
+    "AUTONOMOUS_NEXT_TASK": "PASS",
+    "CENTRAL_WRITE_READBACK_VERIFIED": true,
+    "CONCURRENT_DOUBLE_CLAIM_COUNT": 0,
+    "CRASH_RECOVERY_MATRIX": "PASS",
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "EVENT_LEDGER_APPEND_ONLY": true,
+    "EVENT_LEDGER_CHAIN_VALID": true,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "NO_APPROVAL_FABRICATED": true,
+    "STALE_LEASE_RECLAIM": "PASS",
+    "STALE_WRITE_REJECTED": true,
+    "STATE_REPLAY_MATCHES_MASTER": true,
+    "STATE_VERSION_MONOTONIC": true,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": false
+  },
+  "notes": {
+    "CONCURRENT_DOUBLE_CLAIM_COUNT": 0,
+    "DUPLICATE_SIDE_EFFECT_COUNT_happy": 0,
+    "STATE_REPLAY_MATCHES_MASTER": "OK",
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": false
+  }
+}
