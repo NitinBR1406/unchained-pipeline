@@ -67,6 +67,37 @@ jobs:
           SE_DIR=$SE_DIR docker compose -f ci/compose.temporal-dev.ci.yml up -d --build
           H=0; for i in $(seq 1 60); do if docker compose -f ci/compose.temporal-dev.ci.yml exec -T temporal tctl cluster health >/tmp/h 2>&1; then H=1; break; fi; sleep 3; done
           [ "$H" = 1 ] || { echo "temporal not healthy"; exit 1; }
+          export PYTHONPATH="$GITHUB_WORKSPACE/$P0E1"
+          python - <<'PYREADY'
+          import asyncio
+          from temporalio.client import Client
+          from temporalio.api.workflowservice.v1 import DescribeNamespaceRequest
+
+          async def main():
+              consecutive = 0
+              last = None
+              for attempt in range(60):
+                  try:
+                      client = await Client.connect("localhost:7233")
+                      await client.workflow_service.describe_namespace(
+                          DescribeNamespaceRequest(namespace="default")
+                      )
+                      consecutive += 1
+                      print(f"namespace default ready {consecutive}/3")
+                      if consecutive >= 3:
+                          print("TEMPORAL_NAMESPACE_STABLE=PASS")
+                          return
+                  except Exception as exc:
+                      last = exc
+                      consecutive = 0
+                      print(f"namespace default not ready: {type(exc).__name__}")
+                  await asyncio.sleep(1)
+              raise SystemExit(
+                  f"Temporal namespace default did not become stable: {last!r}"
+              )
+
+          asyncio.run(main())
+          PYREADY
       - name: Dispatch REAL Temporal workflows (frozen P0-E2 LiveRunner) -> workflows.json
         timeout-minutes: 20
         env: { TEMPORAL_ADDRESS: "localhost:7233" }
