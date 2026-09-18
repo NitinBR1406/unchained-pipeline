@@ -1,0 +1,20 @@
+{
+  "status": "BLOCKED_EXTERNAL_SETUP",
+  "accepted_scope": "Authenticated Drive discovery and local existing-wrapper replay only; external integration NOT accepted",
+  "tested_sha": "62223aec075438b5d5b46058a7815061b6bd5c19",
+  "authenticated_external_capabilities": 0,
+  "provider_execution_receipts": [],
+  "deterministic_replay": true,
+  "regression_suites_passed": 47,
+  "raw_audio_pair_bound": false,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "remaining_ready_external_tasks": 0,
+  "blocked_tasks": [
+    "EXISTING_CLAUDE_INVOCATION",
+    "GEMINI_INTELLIGENCE_SMOKE",
+    "GEMINI_QC_SMOKE",
+    "RAW_FINAL_AUDIO_BINDING"
+  ]
+}

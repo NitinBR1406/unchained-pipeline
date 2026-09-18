@@ -1,4 +1,21 @@
-## Latest authoritative engineering state: V11 / state_version 16
+## Latest authoritative state: V12 / state_version 17 — BLOCKED_EXTERNAL_SETUP
+
+[Latest pointer](MASTER_STATE_LATEST.json) · [V12 state](evidence/external_v12/UNCHAINED_MASTER_PROJECT_STATE_V12.json) · [setup packet](evidence/external_v12/HUMAN_ACTION_PACKET.json).
+
+V12 records fresh external discovery, not successful provider integration. The existing
+repository packaging wrapper was reused and replayed deterministically; the external
+Claude Social Media Post System source/invocation contract was not located. No Gemini
+or Claude provider tool/CLI or checked environment credential was available. Authenticated
+provider smoke tests remain NOT_RUN. Drive RAW download hit its 268435456-byte connector
+limit; the final-audio binding remains unestablished. The Claude desktop fallback requires
+OS permissions; its retry was rejected by automatic approval review. No bypass attempted.
+
+47/47 offline suites passed at `62223aec075438b5d5b46058a7815061b6bd5c19`.
+The V11 queue was reconciled without new dispatch/commit. No external task was inserted
+into its narrow JSON-fixture scope. All historical evidence and frozen components remain
+unchanged. Deployment/publication remain false and First Real Poster remains paused.
+
+## Previous authoritative engineering state: V11 / state_version 16
 
 Machine-readable discovery: [MASTER_STATE_LATEST.json](MASTER_STATE_LATEST.json).
 State: [V11](evidence/executor_v11/UNCHAINED_MASTER_PROJECT_STATE_V11.json).

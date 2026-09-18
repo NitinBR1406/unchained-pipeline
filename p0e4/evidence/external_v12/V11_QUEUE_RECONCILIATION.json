@@ -1,0 +1,8 @@
+{
+  "status": "QUIESCENT",
+  "completed_existing_tasks": 1,
+  "new_dispatches": 0,
+  "new_commits": 0,
+  "external_tasks_enqueued": 0,
+  "reason": "External capability work is outside the proven bounded JSON fixture write scope."
+}

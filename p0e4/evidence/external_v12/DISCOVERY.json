@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "baseline_sha": "536d726f5774f1d0f688a8eb8f33cc4f6cadf29e",
+  "observed_date": "2026-09-18",
+  "drive_searches": {
+    "Claude": [
+      {
+        "id": "1WgFktYwHtBCut7XNTE2TE_wFeG39HwyD",
+        "title": "P0E_ADR_001_TEMPORAL_CONTROL_PLANE.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1CzQOPbY44mhXu23aUgiGitQ_dSNPvhpg"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1FQAAzxfEKq82PL1DNXY79V2mrCqgOZRg",
+        "title": "AKI_MASTER_STATUS.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "19zTfqoNKaEL1Ngq1NIBKxvIo9h6MAdI2",
+        "title": "P0E4_HUMAN_REVIEW_V08.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm",
+        "title": "P0E4_HUMAN_REVIEW_V07.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1uxYSm48Z2Ps32qHhWGE5kPKDZMT6oUyE",
+        "title": "AKI_CHATGPT_WORK_REVIEW_V01.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      }
+    ],
+    "Gemini": [
+      {
+        "id": "1OeTAJuGrcBXWrE6QRSE7znV0yshgGKSG",
+        "title": "AKI_CLEANBASE_FX_V03_IMPLEMENTATION.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1DVHHfEKrzTyDUFXILXyOQJOrbjYSYDCA",
+        "title": "AKI_SHAKE_CUESHEET_V02_VALIDATED.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1_hFm-EAEuB8Myt6EAnjIGi45vrPJWGzT"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1FQAAzxfEKq82PL1DNXY79V2mrCqgOZRg",
+        "title": "AKI_MASTER_STATUS.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1tS10Pqz640GUT99WivJvJv5PzUByqbRU",
+        "title": "AKI_SHAKE_CUESHEET_V01.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1_hFm-EAEuB8Myt6EAnjIGi45vrPJWGzT"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "19zTfqoNKaEL1Ngq1NIBKxvIo9h6MAdI2",
+        "title": "P0E4_HUMAN_REVIEW_V08.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm",
+        "title": "P0E4_HUMAN_REVIEW_V07.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1uxYSm48Z2Ps32qHhWGE5kPKDZMT6oUyE",
+        "title": "AKI_CHATGPT_WORK_REVIEW_V01.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      }
+    ],
+    "Social_Media": [
+      {
+        "id": "1vbZUYfE1FxABFJtTP7Qmtd4qiGdOOjfd",
+        "title": "AKI_CHATGPT_WORK_V02_DELTA_REVIEW.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      }
+    ],
+    "audio": [
+      {
+        "id": "1OeTAJuGrcBXWrE6QRSE7znV0yshgGKSG",
+        "title": "AKI_CLEANBASE_FX_V03_IMPLEMENTATION.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1WOpJ4diDfNhR1AW1VoQ82RzYGMxUCiww",
+        "title": "AKI_CLEANBASE_COLOR_FX_V02_IMPLEMENTATION.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1doIhJibhosISiMo6SEd1m2mcl-YscXNr",
+        "title": "AKI_CHATGPT_WORK_V03_FINAL_VALIDATION.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "19zTfqoNKaEL1Ngq1NIBKxvIo9h6MAdI2",
+        "title": "P0E4_HUMAN_REVIEW_V08.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1uxYSm48Z2Ps32qHhWGE5kPKDZMT6oUyE",
+        "title": "AKI_CHATGPT_WORK_REVIEW_V01.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1vbZUYfE1FxABFJtTP7Qmtd4qiGdOOjfd",
+        "title": "AKI_CHATGPT_WORK_V02_DELTA_REVIEW.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm",
+        "title": "P0E4_HUMAN_REVIEW_V07.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "1FQAAzxfEKq82PL1DNXY79V2mrCqgOZRg",
+        "title": "AKI_MASTER_STATUS.md",
+        "mime_type": "text/markdown",
+        "parent_ids": [
+          "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy"
+        ],
+        "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+      },
+      {
+        "id": "19LSCU_BbRWpSWWDrJgC4YNQFzLXe3Rmd",
+        "title": "UnchainedNitin_MasterSheet_backup.xlsx",
+        "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "parent_ids": [
+          "0AOa08v0OHcQ5Uk9PVA"
+        ]
+      },
+      {
+        "id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+        "title": "UnchainedNitin_MasterSheet",
+        "mime_type": "application/vnd.google-apps.spreadsheet",
+        "parent_ids": [
+          "0AOa08v0OHcQ5Uk9PVA"
+        ]
+      }
+    ]
+  },
+  "folders": {
+    "raw": [
+      {
+        "id": "1Uk6Ru7wtU1Y3aCeOdYQwPhuTojHzDgN6",
+        "title": "AKI_SOURCE_0902_V01.mov",
+        "mime_type": "video/quicktime",
+        "size": "323607983",
+        "modified_time": "2026-09-05T15:12:56.914Z"
+      }
+    ],
+    "masters": [
+      {
+        "id": "1LkzWJ8Ad9qe7ji05stkwFgOjz9fEqkpx",
+        "title": "AKI_VISUAL_LOCK_AUDIO_MASTER_V01.mp4",
+        "mime_type": "video/mp4",
+        "size": "150678664",
+        "modified_time": "2026-09-11T13:51:03.326Z"
+      },
+      {
+        "id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+        "title": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+        "mime_type": "video/mp4",
+        "size": "168512442",
+        "modified_time": "2026-09-07T14:33:14.236Z"
+      },
+      {
+        "id": "1akJIL6H84UV1Y_yfCpUwWNQg7lw3n-1H",
+        "title": "AKI_CLEANBASE_COLOR_FX_V01.mp4",
+        "mime_type": "video/mp4",
+        "size": "147130775",
+        "modified_time": "2026-09-06T17:15:53.838Z"
+      },
+      {
+        "id": "1k8-8ecXDqrP4oHx4PRjMOaxuIiJbRbUu",
+        "title": "AKI_CLEANBASE_COLOR_MASTER_V01.mp4.mov",
+        "mime_type": "video/quicktime",
+        "size": "396729314",
+        "modified_time": "2026-09-06T15:37:52.912Z"
+      }
+    ],
+    "configfolder": [
+      {
+        "id": "1aXO1Nz1rxN7Z_XAB2JUO-hSGdev3YdTG",
+        "title": "AKI_SHOTSTACK_FULL_MASTER_V01_FROZEN_EDIT.json",
+        "mime_type": "application/json",
+        "size": "31175",
+        "modified_time": "2026-09-07T14:25:13.089Z"
+      }
+    ]
+  },
+  "metadata_checks": [
+    {
+      "id": "1Uk6Ru7wtU1Y3aCeOdYQwPhuTojHzDgN6",
+      "title": "AKI_SOURCE_0902_V01.mov",
+      "mime_type": "video/quicktime",
+      "size": "323607983",
+      "url": null,
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": "2026-09-05T15:12:56.914Z",
+      "parent_ids": [
+        "1Yo_g4gfuBhmE5t82WZTsZygYEjuJrolj"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "id": "1LkzWJ8Ad9qe7ji05stkwFgOjz9fEqkpx",
+      "title": "AKI_VISUAL_LOCK_AUDIO_MASTER_V01.mp4",
+      "mime_type": "video/mp4",
+      "size": "150678664",
+      "url": null,
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": "2026-09-11T13:51:03.326Z",
+      "parent_ids": [
+        "10MHCWiPXA-uEv1emq7TDgMS7rVEollWW"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    }
+  ],
+  "requested_checksum_fields_returned": false,
+  "raw_download_error": {
+    "error": "HTTP error prior to action invocation. HTTPException: 413: File too large to download: 323607983 bytes exceeds the 268435456-byte limit.",
+    "error_code": "INVALID_ARGUMENT"
+  },
+  "callable_provider_tools": [],
+  "local_cli": {
+    "claude": null,
+    "gemini": null
+  },
+  "credential_environment_presence": {
+    "GEMINI_API_KEY": false,
+    "GOOGLE_API_KEY": false,
+    "ANTHROPIC_API_KEY": false
+  },
+  "limitations": [
+    "Search and inspected folders are bounded discovery, not proof of global absence.",
+    "No credential stores, tokens or secret values read.",
+    "Authenticated Drive reads do not constitute Gemini or Claude authenticated execution.",
+    "Historical AKI_MASTER_STATUS is not newer approval authority.",
+    "No claim about capabilities on other hosts."
+  ],
+  "computer_use_claude_fallback": {
+    "first_attempt": "PENDING_ACCESSIBILITY_AND_SCREEN_RECORDING",
+    "retry": "AUTO_REVIEW_REJECTED",
+    "app_content_observed": false,
+    "prompt_sent": false,
+    "reason": "Retry before required OS permissions completed was not authorized."
+  }
+}

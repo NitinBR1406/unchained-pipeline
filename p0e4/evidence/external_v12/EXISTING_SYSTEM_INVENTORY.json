@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "system": "Existing repository production/packaging + historical Make P1 integration",
+  "external_claude_service": "NOT_ESTABLISHED",
+  "historical_p1_scenario_id": "9627055",
+  "live_p1_inspected": false,
+  "sources": [
+    {
+      "uri": "unpipe/adapters.py",
+      "sha256": "f5758eb6395aa63817da2aeee830cc40829cba0183e261a7f5e56cc5160ba6bc"
+    },
+    {
+      "uri": "unpipe/executor.py",
+      "sha256": "b76db102ec414c087e7d2db72ab434daf34b34aa615ca9d78fc527e73f015cf2"
+    },
+    {
+      "uri": "unpipe/production.py",
+      "sha256": "741ad38266538238ce86e35ba38f61b088c734ca66c655e9e9cc04efd3702091"
+    },
+    {
+      "uri": "unpipe/orchestrator.py",
+      "sha256": "7094c5371f1fc0cfb364328bb62b7cdb7d2a88dcbd713aea3e3ffe6327370869"
+    },
+    {
+      "uri": "unpipe/dispatcher.py",
+      "sha256": "33eaeb407a876fe29dfa4d41bd82435e9e801abd02c997c457965297567dcdbf"
+    },
+    {
+      "uri": "make/V3_SECURE_blueprint.json",
+      "sha256": "3ddbc0051fe65352d38f2cf8979fd245d437c3049533b3579dca13704f682d69"
+    },
+    {
+      "uri": "P0D_REAL_P1_WIRING_PLAN_V01.md",
+      "sha256": "e27f0e2a1e502106bdece7ba43cdd8ddb894b6da2f9a11c664b9ca44fecd7406"
+    },
+    {
+      "uri": "CANONICAL_FACTORY_DATA_GOVERNANCE_MODEL_V01.json",
+      "sha256": "f2c253a03bacad9a4df0725a44cf5cb4b20c8c4cab37bcb94ff9d825998bf286"
+    },
+    {
+      "uri": "CAPABILITY_MATRIX.md",
+      "sha256": "75ec9b9180faa5eeef9ed48428160fc27a4fd993397d37854146a731d9d45168"
+    }
+  ],
+  "reused_entrypoint": "unpipe.adapters.PackagingEngine.build",
+  "production_entrypoint_observed": "unpipe.executor.run_production_job",
+  "limitations": [
+    "PackagingEngine produces metadata drafts, not rendered assets",
+    "Claude/Gemini authenticated transports not configured",
+    "Historical snapshots are not proof of current remote state"
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

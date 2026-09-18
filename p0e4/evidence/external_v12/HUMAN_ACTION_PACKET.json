@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "EXTERNAL_SETUP_REQUIRED",
+  "setup_actions": [
+    {
+      "capability": "EXISTING_CLAUDE_SOCIAL_MEDIA_POST_SYSTEM",
+      "action": "Expose its existing source/project location and versioned non-publishing invocation contract in an accessible project integration. Configure its authentication through the approved secret manager. Do not rebuild or activate publication."
+    },
+    {
+      "capability": "GEMINI_INTELLIGENCE_AND_INDEPENDENT_QC",
+      "action": "Expose an authenticated callable route and model identity for synthetic non-publishing smoke tests; configure credentials outside chat in the approved secret manager."
+    },
+    {
+      "capability": "RAW_AND_FINAL_AUDIO_BINDING",
+      "action": "Provide an authenticated streaming/materialization route for Drive RAW 1Uk6Ru7wtU1Y3aCeOdYQwPhuTojHzDgN6 (323607983 bytes, above current connector limit), and identify the authoritative final-audio file or explicit authorized embedded-audio lineage. Do not infer it from a filename."
+    }
+  ],
+  "optional_desktop_fallback": {
+    "required": "User-granted macOS Accessibility and Screen Recording permissions plus authorization to retry inspection",
+    "status": "AUTO_REVIEW_BLOCKED_PENDING_OS_PERMISSIONS"
+  },
+  "secret_names": [],
+  "secret_name_note": "Existing service contract unavailable; no new credential names or values invented.",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

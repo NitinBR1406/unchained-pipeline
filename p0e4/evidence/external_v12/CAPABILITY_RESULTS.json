@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "claude": {
+    "status": "NOT_RUN_SETUP_REQUIRED",
+    "authenticated_receipt": null
+  },
+  "gemini_intelligence": {
+    "status": "NOT_RUN_SETUP_REQUIRED",
+    "authenticated_receipt": null
+  },
+  "gemini_qc": {
+    "status": "NOT_RUN_SETUP_REQUIRED",
+    "authenticated_receipt": null
+  },
+  "raw_binding": {
+    "status": "BLOCKED_CONNECTOR_SIZE_LIMIT",
+    "file_id": "1Uk6Ru7wtU1Y3aCeOdYQwPhuTojHzDgN6",
+    "sha256": null
+  },
+  "final_audio_binding": {
+    "status": "NOT_ESTABLISHED",
+    "sha256": null
+  },
+  "drive_discovery": {
+    "status": "AUTHENTICATED_READ_SUCCESS",
+    "scope": "metadata, folders, text references only"
+  }
+}
