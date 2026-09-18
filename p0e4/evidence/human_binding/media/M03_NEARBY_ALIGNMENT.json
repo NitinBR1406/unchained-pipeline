@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "derivative_time": 0.5,
+      "nominal_master_time": 52.91562,
+      "best_nearby_master_time": 52.91562,
+      "search_window_seconds": 1,
+      "sample_rate_fps": 24,
+      "minimum_rgb_mae": 4.060758744855967
+    },
+    {
+      "derivative_time": 7.03,
+      "nominal_master_time": 59.44562,
+      "best_nearby_master_time": 59.403953333333334,
+      "search_window_seconds": 1,
+      "sample_rate_fps": 24,
+      "minimum_rgb_mae": 23.19545267489712
+    },
+    {
+      "derivative_time": 13.56,
+      "nominal_master_time": 65.97561999999999,
+      "best_nearby_master_time": 65.76728666666666,
+      "search_window_seconds": 1,
+      "sample_rate_fps": 24,
+      "minimum_rgb_mae": 29.52639660493827
+    }
+  ],
+  "purpose": "Disambiguate nominal seek/frame timing differences before classifying visual deviation."
+}

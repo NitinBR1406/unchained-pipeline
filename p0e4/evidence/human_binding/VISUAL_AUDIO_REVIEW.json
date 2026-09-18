@@ -1,0 +1,41 @@
+{
+  "reviewer": "Codex",
+  "scope": "Exact-SHA static visual comparisons and machine audio/video analysis; independent of original render execution, not external Gemini/Claude QC.",
+  "baseline": "Nitin-confirmed presentation master 0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+  "findings": [
+    {
+      "asset": "presentation_master",
+      "look": "APPROVED_REFERENCE",
+      "verified": "SHA and full decode; 7 static frames inspected, including ending brand lockup.",
+      "missing": "No new full-motion/lip-sync or listening review. Existing approval is retained."
+    },
+    {
+      "asset": "M02",
+      "look": "LOOK_MATCH_SAMPLED",
+      "verified": "Three audio-aligned paired frames visually match baseline framing/appearance; RGB MAE ~1.18\u20131.34/255.",
+      "audio_boundary": "Active signal at end: last 100 ms RMS 0.3839791, final mono sample 0.3280152. Potential abrupt ending; requires listening/creative decision, not an asserted audible defect.",
+      "missing": "Exact-SHA human derivative scope, authenticated cut receipt and full-motion/listening QC."
+    },
+    {
+      "asset": "M08",
+      "look": "LOOK_MATCH_SAMPLED",
+      "verified": "Three paired frames visually match; RGB MAE ~1.15\u20131.24/255. Brand lockup visible at ending.",
+      "audio_boundary": "Lower end RMS 0.0114761, final mono sample 0.0010711; no listening sign-off inferred.",
+      "missing": "Exact-SHA human derivative scope, authenticated cut receipt and full-motion/listening QC."
+    },
+    {
+      "asset": "M03",
+      "look": "LOOK_DEVIATION_SAMPLED",
+      "verified": "Later paired samples show changed framing/scale relative to master. RGB MAE 23.51 and 29.97/255 at 7.03/13.56 s. Searching nearby master frames within +/-0.5 s yields minima 23.20 and 29.53; simple one-frame seek timing does not remove the discrepancy.",
+      "audio_boundary": "Active signal at end: last 100 ms RMS 0.4336637, final mono sample 0.4655314; requires listening/creative decision.",
+      "missing": "Evidence that changed framing is within approved scope; exact-SHA approval/cut receipt; full-motion/listening QC."
+    }
+  ],
+  "crop_text": "No hard text clipping visible in the inspected static frames. Small gold translation text is less legible at contact-sheet resolution. No current platform UI safe-area overlays or device playback were tested; safe-area certification remains UNKNOWN.",
+  "motion_lipsync": "NOT_VERIFIED; static sample similarity and waveform correlation cannot establish full motion or lip-sync.",
+  "cut_continuity": "Sampled frames show the same performance setting. Entire cut continuity was not perceptually reviewed; machine decode and signal scan are separate evidence.",
+  "lineage": "Waveform matches and paired pictures support a content relationship to the master, but neither proves authenticated parent SHA/render recipe nor historical human approval.",
+  "gemini_claude": "No callable integration available; no result fabricated, no message relayed through Nitin.",
+  "no_media_modified": true,
+  "publication_approval_created": false
+}

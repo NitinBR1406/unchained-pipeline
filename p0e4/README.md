@@ -1,5 +1,41 @@
 # P0-E4 — production integration and release orchestration
 
+## Current follow-up — V08 / state_version 13
+
+[Human review](evidence/human_binding/HUMAN_REVIEW.md),
+[rights matrix](evidence/human_binding/RIGHTS_MATRIX.json),
+[V08](evidence/human_binding/UNCHAINED_MASTER_PROJECT_STATE_V08.json).
+The explicit user-supplied 18 September statement binds the existing final-video decision
+to master SHA `0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1`.
+Its original bytes and hash are retained. This resolves the identity attestation question;
+it does not forge an Ed25519 signature, create a HUMAN_GATE_GRANTED event, or mutate the
+frozen runtime/campaign approval store. The registered event actor is Codex and the human
+source, date precision and scope are explicit. V07 and its ledger prefix are unchanged.
+
+Nitin's own-production backing declaration answers the origin question at owner-attestation
+level. His negative licence and Content ID answers are preserved. Composition/lyrics and
+platform coverage remain unproven; RIGHTS_HOLD is unchanged. General platform guidance,
+retrieval limitations and a concrete unsent rights-action dossier are recorded.
+
+Exact-SHA fresh downloads and full A/V decode pass for all four assets. Waveform and paired
+frame comparisons support relationship to the master but do not establish authenticated
+render lineage. M02/M08 have sampled LOOK MATCH; M03 has sampled framing LOOK DEVIATION.
+M02/M03 end on active audio and require listening/creative review. Full motion/lip-sync,
+perceptual listening and platform UI safe-area certification are not claimed. No callable
+Gemini/Claude QC was available. No media was changed or re-rendered.
+
+38/38 suites (including 9 new binding tests), 61 prior manifest entries and deterministic
+replay pass on implementation SHA `2a3168a81bb0e66193e52fbe1cf6ce70c2640964`.
+Evidence projection/QC utilities are offline-only under `evidence/human_binding/`; no
+production adapter or Temporal workflow was changed. No duplicate live run is necessary.
+Run `PYTHONDONTWRITEBYTECODE=1 python p0e4/evidence/human_binding/project.py` to replay V08.
+Shared Drive archival/readback is recorded in `PERSISTENCE_RECEIPTS.json`; its hash is outside
+the archive to avoid circularity. The complete file inventory is in `SHA256SUMS.txt`.
+
+Release remains BLOCKED with RIGHTS_CLEARANCE and RELEASE_PACKAGE_REVIEW outstanding.
+Both authorization flags remain false, FIRST_REAL_POSTER remains PAUSED_BY_NITIN, and no
+publication/deployment occurred. Prior V06/V07 sections below are historical evidence.
+
 ## Latest review follow-up — V07 / state_version 12
 
 See [compact human review](evidence/review/HUMAN_REVIEW.md),

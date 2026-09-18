@@ -1,0 +1,28 @@
+{
+  "tested_sha": "2a3168a81bb0e66193e52fbe1cf6ce70c2640964",
+  "ingested_at": "2026-09-18T14:36:02.821577+00:00",
+  "evidence_files": [
+    "NITIN_SOURCE_REQUEST.txt",
+    "HUMAN_ATTESTATION.json",
+    "RIGHTS_MATRIX.json",
+    "RIGHTS_ACTION_PACKET.md",
+    "PLATFORM_RIGHTS.md",
+    "DRIVE_SEARCH.json",
+    "SOURCE_REVIEW.json",
+    "VISUAL_AUDIO_REVIEW.json",
+    "HUMAN_REVIEW.md",
+    "REGRESSION.json",
+    "media/AKI_SHOTSTACK_PRESENTATION_MASTER_V01_contact.jpg",
+    "media/M03_NEARBY_ALIGNMENT.jpg",
+    "media/M03_NEARBY_ALIGNMENT.json",
+    "media/MEDIA_QC.json",
+    "media/PAIRED_FRAME_QC.json",
+    "media/TEMPORAL_SIGNAL_SCAN.json",
+    "media/aakhri-ishq_DERIVATIVE_M02_contact.jpg",
+    "media/aakhri-ishq_DERIVATIVE_M02_paired.jpg",
+    "media/aakhri-ishq_DERIVATIVE_M03_contact.jpg",
+    "media/aakhri-ishq_DERIVATIVE_M03_paired.jpg",
+    "media/aakhri-ishq_DERIVATIVE_M08_contact.jpg",
+    "media/aakhri-ishq_DERIVATIVE_M08_paired.jpg"
+  ]
+}

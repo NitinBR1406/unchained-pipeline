@@ -1,0 +1,12 @@
+{
+  "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+  "folder_id": "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR",
+  "archive_file_id": "1RTcX80S94N72WAw2BKm0vyoVfZBnPTpG",
+  "archive_sha256": "5dd88d282e4495e989e285c31545c69625c243f2b2ee52f7785bbd0fd9a0e3cd",
+  "archive_readback_byte_identical": true,
+  "all_archive_members_match_repository_evidence": true,
+  "state_file_id": "1SmZU1AcxGVkSSlzUUeRl131CuH6Cqdyq",
+  "human_review_file_id": "19zTfqoNKaEL1Ngq1NIBKxvIo9h6MAdI2",
+  "standalone_metadata_verified": true,
+  "standalone_byte_readback": "Exact bytes verified within archive; standalone file metadata verified."
+}

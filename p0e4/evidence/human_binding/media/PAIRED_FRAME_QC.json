@@ -1,0 +1,70 @@
+{
+  "pairs": [
+    {
+      "asset_sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+      "paired_sheet": "aakhri-ishq_DERIVATIVE_M08_paired.jpg",
+      "samples": [
+        {
+          "master_time": 199.41563,
+          "derivative_time": 0.5,
+          "rgb_mae_0_255": 1.154372427983539
+        },
+        {
+          "master_time": 203.44063,
+          "derivative_time": 4.525,
+          "rgb_mae_0_255": 1.243886316872428
+        },
+        {
+          "master_time": 207.46563,
+          "derivative_time": 8.55,
+          "rgb_mae_0_255": 1.1939763374485597
+        }
+      ],
+      "limits": "Audio-aligned static samples, not a full-frame sequence or cryptographic lineage receipt."
+    },
+    {
+      "asset_sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+      "paired_sheet": "aakhri-ishq_DERIVATIVE_M02_paired.jpg",
+      "samples": [
+        {
+          "master_time": 31.91562,
+          "derivative_time": 0.5,
+          "rgb_mae_0_255": 1.1839891975308643
+        },
+        {
+          "master_time": 38.69062,
+          "derivative_time": 7.275,
+          "rgb_mae_0_255": 1.2190046296296295
+        },
+        {
+          "master_time": 45.46562,
+          "derivative_time": 14.05,
+          "rgb_mae_0_255": 1.3387551440329217
+        }
+      ],
+      "limits": "Audio-aligned static samples, not a full-frame sequence or cryptographic lineage receipt."
+    },
+    {
+      "asset_sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+      "paired_sheet": "aakhri-ishq_DERIVATIVE_M03_paired.jpg",
+      "samples": [
+        {
+          "master_time": 52.91562,
+          "derivative_time": 0.5,
+          "rgb_mae_0_255": 4.060758744855967
+        },
+        {
+          "master_time": 59.44562,
+          "derivative_time": 7.03,
+          "rgb_mae_0_255": 23.508485082304528
+        },
+        {
+          "master_time": 65.97561999999999,
+          "derivative_time": 13.56,
+          "rgb_mae_0_255": 29.96898405349794
+        }
+      ],
+      "limits": "Audio-aligned static samples, not a full-frame sequence or cryptographic lineage receipt."
+    }
+  ]
+}

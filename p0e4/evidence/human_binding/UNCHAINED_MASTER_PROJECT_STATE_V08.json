@@ -1,0 +1,567 @@
+{
+  "P0E3_SLICE_1": "GREEN",
+  "P0E3_SLICE_2": "GREEN",
+  "architecture_locks": {
+    "adr_ref": "P0E_ADR_001_TEMPORAL_CONTROL_PLANE.md",
+    "architecture_bakeoff": "CLOSED",
+    "p0e2_autonomous_runner": "LIVE_VERIFIED",
+    "p0e3_control_loop": "SLICE2_GREEN_LIVE",
+    "production_deployment_authorized": false,
+    "selected_control_plane": "TEMPORAL",
+    "temporal_control_plane": "VERIFIED",
+    "winner": "TEMPORAL"
+  },
+  "authorizations": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "SAFE_FOR_P0E3_LIVE_ACCEPTANCE": true,
+    "SAFE_TO_BEGIN_NEXT_CONTROL_PLANE_SLICE": true
+  },
+  "current_content": "aakhri-ishq",
+  "current_release": {
+    "next_gate_after_resolution": "NITIN_PUBLISH_APPROVAL",
+    "publish_ready": false,
+    "status": "BLOCKED"
+  },
+  "git": {
+    "branch": "p0e/live-control-plane-bakeoff",
+    "freeze_commit_sha": "1265c68680068cdda7215334a9c009355d2a0dc1",
+    "p0e2_live_run_commit_sha": "c89277180557d1525d219adec680ebbf6692a10a",
+    "p0e3_slice2_live_commit_sha": "fe3bb58c3ddbd8bc02d968c00f7f03d51d3d8936",
+    "p0e3_slice2_workflow_registration_sha": "594ccf2b8b0ac3aaa93210dff614492bbe865dd3",
+    "repository": "NitinBR1406/unchained-pipeline"
+  },
+  "invariants": {
+    "AUTONOMOUS_NEXT_TASK": "PASS",
+    "CENTRAL_READBACK_SHA_MATCH": true,
+    "CENTRAL_WRITE_READBACK_VERIFIED": true,
+    "CONCURRENT_DOUBLE_CLAIM_COUNT": 0,
+    "CRASH_RECOVERY_MATRIX": "PASS",
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "EVENT_LEDGER_APPEND_ONLY": true,
+    "EVENT_LEDGER_CHAIN_VALID": true,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "NO_APPROVAL_FABRICATED": true,
+    "REAL_CENTRAL_PERSISTENCE_OBSERVED": true,
+    "REAL_SHARED_DRIVE_PERSISTENCE_OBSERVED": true,
+    "REAL_TEMPORAL_WORKFLOWS_OBSERVED": true,
+    "SHARED_DRIVE_TEST_ARTIFACTS_REMAINING": false,
+    "STALE_LEASE_RECLAIM": "PASS",
+    "STALE_WRITE_REJECTED": true,
+    "STATE_RECOVERED_AFTER_RESTART": true,
+    "STATE_REPLAY_MATCHES_MASTER": true,
+    "STATE_VERSION_MONOTONIC": true,
+    "TEMPORAL_POC_INFRA_REMAINING": false,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": false,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": false
+  },
+  "issue_classes": {
+    "material": [],
+    "must_fix": [],
+    "nice_to_have": []
+  },
+  "milestone": "PRODUCTION INTEGRATION \u2014 ENGINEERING VERIFIED, HUMAN GATES PENDING",
+  "p0e3_decision_critical_sha256": {
+    "P0E3_CONTROL_LOOP/acceptance_p0e3.py": "77638206ff1056c2c2be07e090504bed3033590f833df10d595f25bd2edc07b2",
+    "P0E3_CONTROL_LOOP/control_loop/control_loop.py": "8c3ebbfab8abd0fcf25b9982472f6eb021957de006144b3d9c246d694f6c0137",
+    "P0E3_CONTROL_LOOP/control_loop/durable_stores.py": "fe15afcd57f11c4dcbdb26e6251691aff08e7aaff1922b0b95dd24d42f851f65",
+    "P0E3_CONTROL_LOOP/control_loop/nb001_normalize.py": "6a203d20e031517ae0a4f3f3df0b5a08616597b34b6c5c0362a3854c68afcc29",
+    "P0E3_CONTROL_LOOP/control_loop/persistence.py": "2b97b657095c4cdea4c4bcbd25f8ff7bf8cf9ef712238e6586ef2bf1877387aa",
+    "P0E3_CONTROL_LOOP/control_loop/scenarios.py": "ec3a593b6e9a9c8d9e809c7a5f6b439198b343e313f53e31ee609c487d076ac8",
+    "P0E3_CONTROL_LOOP/control_loop/state_model.py": "46fd39824aa342ac452e3644d57f34e448bb30939e13d8839f39440960feb6ee",
+    "P0E3_CONTROL_LOOP/seed/backlog_slice1.json": "aca4fbaaa4445863f3af750661899abfcfd33041bb3d23fc9fc49cda684c7a99"
+  },
+  "p0e3_slice2_live_acceptance": {
+    "authoritative_run": "35258089586",
+    "central_head_file": "state_v18.json",
+    "central_head_sha256": "f7e948ae979a36d0f6bd098d8d66588ff9bc57a144ca5c9246114fae8c3617b1",
+    "central_state_version": 18,
+    "concurrent_double_claim_count": 0,
+    "duplicate_side_effect_count": 0,
+    "failed_criteria": [],
+    "feature_sha": "fe3bb58c3ddbd8bc02d968c00f7f03d51d3d8936",
+    "final": "PASS",
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "p0e2_nb_001": "CLOSED",
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "workflow_registration_sha": "594ccf2b8b0ac3aaa93210dff614492bbe865dd3"
+  },
+  "p0e4": {
+    "assets_decode_verified": 4,
+    "authoritative_engineering_run": "35325952509",
+    "completed_safe_tasks": [
+      "AKI_ASSET_INVENTORY",
+      "AKI_PACKAGE_DRAFT",
+      "AKI_READINESS",
+      "INDEPENDENT_GOVERNANCE_AUDIT"
+    ],
+    "disposable_infrastructure_remaining": false,
+    "evidence_refs": [
+      {
+        "path": "p0e4/evidence/resume/MEDIA_QC.json",
+        "sha256": "fe9610e146e897dbaba365fe509b8a154b9e0bc25998c5fea6453c161e00c041"
+      },
+      {
+        "path": "p0e4/evidence/resume/REGRESSION.json",
+        "sha256": "b7dde512091de759e6ebabf87151927a9ddb0462473f30e03db4db4e142c47c8"
+      },
+      {
+        "path": "p0e4/evidence/resume/ci_35325952509/SOURCE.json",
+        "sha256": "dbeeae9c4e84a2432b08fc706477670cc8c191b5b19e23f2c226dd7dd549cbfa"
+      },
+      {
+        "path": "p0e4/evidence/resume/ci_35325952509/live/INTEGRATION.json",
+        "sha256": "d77ff0dd446862d1965703e0f529c28ad8da062dbc166df90437dae02bcbce13"
+      },
+      {
+        "path": "p0e4/evidence/resume/RELEASE_REVIEW_PACKET.json",
+        "sha256": "e14ec9c55fe6e71868166dbb498911252d5f3bf3720c3d6fa622e72af04d661f"
+      }
+    ],
+    "final_video_binding": {
+      "asset_name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+      "asset_sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+      "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+      "scope": "Binding of existing final-video decision only; not new approval",
+      "status": "RESOLVED_EXPLICIT_HUMAN_ATTESTATION"
+    },
+    "human_binding_followup": {
+      "evidence_refs": [
+        {
+          "path": "p0e4/evidence/human_binding/NITIN_SOURCE_REQUEST.txt",
+          "sha256": "f6f84bff0b33e79f7921676fc9b52ef030cb6b839536b679b7c9a8bfebc4f159"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json",
+          "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/RIGHTS_MATRIX.json",
+          "sha256": "6183c9dfff16cae907c095403408d3f4ca378da966d25a4150a5b59ca8bb0e2b"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/RIGHTS_ACTION_PACKET.md",
+          "sha256": "cfbc0bcc5f3757e3e3a9920f95ce385612263d87960bef68cae4286c29d3c8f6"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/PLATFORM_RIGHTS.md",
+          "sha256": "161461f3166262de596a24b5f5bccea69f65370ed44e70741f502590edfa74e6"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/DRIVE_SEARCH.json",
+          "sha256": "19722c9a566d041242cf928df3f23285f50debcf6806ad0db56996960c27505e"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/SOURCE_REVIEW.json",
+          "sha256": "c910a3f9e25dac98adcba0c8268b5596a8970e66f04ef25746e3c6fdf2812cb2"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/VISUAL_AUDIO_REVIEW.json",
+          "sha256": "be4469ce4b19e3e6ba51167dfadb1b99b3da8e827a7fdae2cb93db16e6718685"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/HUMAN_REVIEW.md",
+          "sha256": "a88f2b5183ea5ed8eaf4c0749c2ccd8a958abbf349ce6fef50696177a081377c"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/REGRESSION.json",
+          "sha256": "9eefcfbbc10d75c4c83d53b39e98db042561b798bfc78fd6dbe52d06b2f1ecf9"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/AKI_SHOTSTACK_PRESENTATION_MASTER_V01_contact.jpg",
+          "sha256": "1efb2e91feb49feb34b855f422f6b87e5f37039b8311bc9f7f0b034ab6b7aeb9"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/M03_NEARBY_ALIGNMENT.jpg",
+          "sha256": "a1d6b85699c091db49774a196fb029629764d925c8f8daf84cd8d205941de959"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/M03_NEARBY_ALIGNMENT.json",
+          "sha256": "e66c5099538422cb4314c99578938094d3c1687f90aed9c15c4844e26230b499"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/MEDIA_QC.json",
+          "sha256": "f80efded774f2c0c2d43577fda25280545fb190cc358eee3d762c48f60a97d45"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/PAIRED_FRAME_QC.json",
+          "sha256": "35a133719862d2d0b1804bdc65300eb8786a638d133701157f6cb5309a57f49f"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/TEMPORAL_SIGNAL_SCAN.json",
+          "sha256": "00cee432920db90f0f4340d88c95269cc65abffcd43174383822212e43116282"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M02_contact.jpg",
+          "sha256": "627f81089d5c4c82d0bd856548ac6daa79c5a6d942a135b6ccaca3f399e434b5"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M02_paired.jpg",
+          "sha256": "e508264daa4b766f91efea9ebe89920f2bb136ef5d3a73b4bbcdaf716a2de1ff"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M03_contact.jpg",
+          "sha256": "63b0c534d2ecfad51921a9ae6a77a070fca883617baeb6dbe8ee8fb6d32c68d4"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M03_paired.jpg",
+          "sha256": "fd0ed6dbf0318db671462f8271ff6e25e681c155c0e336644e858e6208af5974"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M08_contact.jpg",
+          "sha256": "5b721841c613f0c6cac85bf13f3992148ccc28b9a01867549fa0b8b1acc10972"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M08_paired.jpg",
+          "sha256": "003c95a336d45c460ed4f9b00ca1952f61be1c44bd359f51bea580a617c9853e"
+        }
+      ],
+      "human_evidence": {
+        "binding": {
+          "asset_name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+          "asset_sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+          "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+          "scope": "Binding of existing final-video decision only; not new approval",
+          "status": "RESOLVED_EXPLICIT_HUMAN_ATTESTATION"
+        },
+        "cryptographic_signature": "NOT_SUPPLIED_NOT_FABRICATED",
+        "decision_date_as_supplied": "2026-09-18",
+        "decision_time": "NOT_SUPPLIED",
+        "existing_approval": {
+          "approved_by": "Nitin",
+          "artifact_sha256": "AKI_PRODUCTION_MASTER_V01_SHA_PENDING_LOCAL_RENDER",
+          "asset_id": "production_master_v01",
+          "campaign_id": "aakhri-ishq",
+          "decision": "APPROVE",
+          "gate": "NITIN_FINAL_VIDEO_APPROVAL",
+          "notes": "NITIN_FINAL_VIDEO_APPROVAL = TRUE (authoritative)",
+          "timestamp": "2026-09-07T17:35:17.436360Z",
+          "version": "1"
+        },
+        "human_binding_statement": "Ik bevestig dat mijn bestaande NITIN_FINAL_VIDEO_APPROVAL voor Aakhri Ishq betrekking heeft op AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4 met SHA256 0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1.",
+        "new_approval_created": false,
+        "registered_by": "codex",
+        "rights_facts": {
+          "backing_master_origin": "EIGEN_PRODUCTIE_HUMAN_DECLARED",
+          "composition_clearance": "NOT_ESTABLISHED",
+          "content_id_outcome": "UNKNOWN",
+          "exact_version_content_id_previously_tested": false,
+          "explicit_composition_publication_licence_previously_obtained": false,
+          "independent_daw_stems_or_sample_licence_audit": "NOT_PERFORMED",
+          "third_party_backing_origin_question": "ANSWERED_BY_OWNER"
+        },
+        "rights_status": "RIGHTS_HOLD",
+        "runtime_signed_grant_created": false,
+        "source_kind": "EXPLICIT_USER_SUPPLIED_FILE_IN_THIS_TASK",
+        "source_sha256": "f6f84bff0b33e79f7921676fc9b52ef030cb6b839536b679b7c9a8bfebc4f159",
+        "speaker_as_supplied": "Nitin"
+      },
+      "ingested_at": "2026-09-18T14:36:02.821577+00:00",
+      "remaining": [
+        "RIGHTS_CLEARANCE",
+        "RELEASE_PACKAGE_REVIEW"
+      ],
+      "tested_sha": "2a3168a81bb0e66193e52fbe1cf6ce70c2640964"
+    },
+    "live_evidence_limit": "Disposable single-worker integration with existing P0-E3 protocol; no production deployment or multiwriter production guarantee.",
+    "next_gate_after_resolution": "NITIN_PUBLISH_APPROVAL",
+    "no_publication": true,
+    "platform_review_packages": 7,
+    "real_shared_drive_runtime_persistence_observed": true,
+    "real_temporal_observed": true,
+    "regression_suites_passed": 37,
+    "remaining": [
+      {
+        "gate": "RIGHTS_CLEARANCE",
+        "reason": "Owner declares own backing and no prior explicit composition licence; campaign-specific composition/lyrics/platform coverage and Content ID outcome not established."
+      },
+      {
+        "gate": "RELEASE_PACKAGE_REVIEW",
+        "reason": "Exact-SHA derivative approval/lineage and final package decision not established; see current QC scope."
+      }
+    ],
+    "review_followup": {
+      "evidence_refs": [
+        {
+          "path": "p0e4/evidence/review/REVIEW_QC.json",
+          "sha256": "375366463344542c1027d5fc04c8599b0b013bd8df6422cfc9b3cab3a3eddaeb"
+        },
+        {
+          "path": "p0e4/evidence/review/HUMAN_REVIEW.md",
+          "sha256": "4b443ef6f3016baaf5d77abe210ce9cfc573521a70b1151f733f2927c3a32e95"
+        },
+        {
+          "path": "p0e4/evidence/review/REGRESSION.json",
+          "sha256": "3f0625fc5980d78af21ee61b44818feba225ce514365ab0370fdbf4ede0e1be0"
+        },
+        {
+          "path": "p0e4/evidence/review/DRIVE_DISCOVERY.json",
+          "sha256": "98f22ba6e3e7ee7ef13b8fd0d52f2d4621fbe5a5af892886a99ca18dd93d61ba"
+        },
+        {
+          "path": "p0e4/evidence/review/DRIVE_MASTER_STATUS_REFERENCE.md",
+          "sha256": "c7e3bb11ad6a41154d037551ce9e31c4871cb91a89d59e21573cf11100c93961"
+        }
+      ],
+      "remaining": [
+        "NITIN_FINAL_VIDEO_APPROVAL_SHA_BINDING",
+        "RIGHTS_CLEARANCE",
+        "RELEASE_PACKAGE_REVIEW"
+      ],
+      "tested_sha": "7d4738394b5bb433dd9f9023460b10d3f44b19c1",
+      "verdict": "BLOCKED_NOT_GREEN"
+    },
+    "rights_facts": {
+      "backing_master_origin": "EIGEN_PRODUCTIE_HUMAN_DECLARED",
+      "composition_clearance": "NOT_ESTABLISHED",
+      "content_id_outcome": "UNKNOWN",
+      "exact_version_content_id_previously_tested": false,
+      "explicit_composition_publication_licence_previously_obtained": false,
+      "independent_daw_stems_or_sample_licence_audit": "NOT_PERFORMED",
+      "third_party_backing_origin_question": "ANSWERED_BY_OWNER"
+    },
+    "tested_sha": "41230edcaac11218ec7576530ce79065522a42f2",
+    "verdict": "BLOCKED_NOT_GREEN"
+  },
+  "phase": "P0-E4",
+  "production_state": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "mutated": false,
+    "p1_scenario": "9627055"
+  },
+  "project": "UNCHAINED NITIN \u2014 MASTER",
+  "proven_tests": [
+    {
+      "result": "46/46 PASS",
+      "suite": "P0E1_offline"
+    },
+    {
+      "result": "77/77 PASS",
+      "suite": "P0E2_offline"
+    },
+    {
+      "result": "FINAL=PASS failed_criteria=[]",
+      "run": "35138346011",
+      "suite": "P0E2_live"
+    },
+    {
+      "result": "131/131 PASS",
+      "suite": "P0E3_offline"
+    },
+    {
+      "result": "254/254 PASS",
+      "suite": "FULL_OFFLINE_REGRESSION"
+    },
+    {
+      "result": "23/23 executable test files PASS",
+      "suite": "P0E3_FULL_EXECUTABLE_REGRESSION"
+    },
+    {
+      "result": "FINAL=PASS failed_criteria=[]",
+      "run": "35258089586",
+      "suite": "P0E3_SLICE2_LIVE"
+    }
+  ],
+  "provenance": [
+    {
+      "artifact": "P0E1_CONTROL_PLANE",
+      "note": "Temporal control-plane foundation; append-only ledger + deterministic reducer + human-auth",
+      "phase": "P0-E1",
+      "status": "FROZEN_GREEN"
+    },
+    {
+      "artifact": "P0E2_FINAL_FREEZE.json",
+      "failed_criteria": [],
+      "final": "PASS",
+      "freeze_commit": "1265c68680068cdda7215334a9c009355d2a0dc1",
+      "live_run": "35138346011",
+      "phase": "P0-E2",
+      "run_commit": "c89277180557d1525d219adec680ebbf6692a10a",
+      "status": "GREEN"
+    },
+    {
+      "artifact": "P0E3_SLICE1_ACCEPTANCE.json",
+      "note": "durable autonomous control loop foundation; offline acceptance PASS, live acceptance not yet run",
+      "phase": "P0-E3",
+      "status": "GREEN_OFFLINE"
+    },
+    {
+      "artifact": "P0E3_LIVE_ACCEPTANCE_VERDICT.json",
+      "central_state_version": 18,
+      "failed_criteria": [],
+      "final": "PASS",
+      "live_run": "35258089586",
+      "note": "P0-E3 Slice 2 authoritative live acceptance; real Temporal workflows, central persistence, Google Shared Drive lifecycle, replay and clean teardown verified.",
+      "phase": "P0-E3",
+      "run_commit": "fe3bb58c3ddbd8bc02d968c00f7f03d51d3d8936",
+      "status": "GREEN_LIVE",
+      "workflow_registration_commit": "594ccf2b8b0ac3aaa93210dff614492bbe865dd3"
+    },
+    {
+      "evidence_refs": [
+        {
+          "path": "p0e4/evidence/resume/MEDIA_QC.json",
+          "sha256": "fe9610e146e897dbaba365fe509b8a154b9e0bc25998c5fea6453c161e00c041"
+        },
+        {
+          "path": "p0e4/evidence/resume/REGRESSION.json",
+          "sha256": "b7dde512091de759e6ebabf87151927a9ddb0462473f30e03db4db4e142c47c8"
+        },
+        {
+          "path": "p0e4/evidence/resume/ci_35325952509/SOURCE.json",
+          "sha256": "dbeeae9c4e84a2432b08fc706477670cc8c191b5b19e23f2c226dd7dd549cbfa"
+        },
+        {
+          "path": "p0e4/evidence/resume/ci_35325952509/live/INTEGRATION.json",
+          "sha256": "d77ff0dd446862d1965703e0f529c28ad8da062dbc166df90437dae02bcbce13"
+        },
+        {
+          "path": "p0e4/evidence/resume/RELEASE_REVIEW_PACKET.json",
+          "sha256": "e14ec9c55fe6e71868166dbb498911252d5f3bf3720c3d6fa622e72af04d661f"
+        }
+      ],
+      "phase": "P0-E4",
+      "status": "BLOCKED_NOT_GREEN",
+      "tested_sha": "41230edcaac11218ec7576530ce79065522a42f2"
+    },
+    {
+      "evidence_refs": [
+        {
+          "path": "p0e4/evidence/review/REVIEW_QC.json",
+          "sha256": "375366463344542c1027d5fc04c8599b0b013bd8df6422cfc9b3cab3a3eddaeb"
+        },
+        {
+          "path": "p0e4/evidence/review/HUMAN_REVIEW.md",
+          "sha256": "4b443ef6f3016baaf5d77abe210ce9cfc573521a70b1151f733f2927c3a32e95"
+        },
+        {
+          "path": "p0e4/evidence/review/REGRESSION.json",
+          "sha256": "3f0625fc5980d78af21ee61b44818feba225ce514365ab0370fdbf4ede0e1be0"
+        },
+        {
+          "path": "p0e4/evidence/review/DRIVE_DISCOVERY.json",
+          "sha256": "98f22ba6e3e7ee7ef13b8fd0d52f2d4621fbe5a5af892886a99ca18dd93d61ba"
+        },
+        {
+          "path": "p0e4/evidence/review/DRIVE_MASTER_STATUS_REFERENCE.md",
+          "sha256": "c7e3bb11ad6a41154d037551ce9e31c4871cb91a89d59e21573cf11100c93961"
+        }
+      ],
+      "phase": "P0-E4",
+      "remaining": [
+        "NITIN_FINAL_VIDEO_APPROVAL_SHA_BINDING",
+        "RIGHTS_CLEARANCE",
+        "RELEASE_PACKAGE_REVIEW"
+      ],
+      "status": "REVIEW_EVIDENCE_REGISTERED_BLOCKED",
+      "tested_sha": "7d4738394b5bb433dd9f9023460b10d3f44b19c1",
+      "verdict": "BLOCKED_NOT_GREEN"
+    },
+    {
+      "evidence_refs": [
+        {
+          "path": "p0e4/evidence/human_binding/NITIN_SOURCE_REQUEST.txt",
+          "sha256": "f6f84bff0b33e79f7921676fc9b52ef030cb6b839536b679b7c9a8bfebc4f159"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json",
+          "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/RIGHTS_MATRIX.json",
+          "sha256": "6183c9dfff16cae907c095403408d3f4ca378da966d25a4150a5b59ca8bb0e2b"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/RIGHTS_ACTION_PACKET.md",
+          "sha256": "cfbc0bcc5f3757e3e3a9920f95ce385612263d87960bef68cae4286c29d3c8f6"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/PLATFORM_RIGHTS.md",
+          "sha256": "161461f3166262de596a24b5f5bccea69f65370ed44e70741f502590edfa74e6"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/DRIVE_SEARCH.json",
+          "sha256": "19722c9a566d041242cf928df3f23285f50debcf6806ad0db56996960c27505e"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/SOURCE_REVIEW.json",
+          "sha256": "c910a3f9e25dac98adcba0c8268b5596a8970e66f04ef25746e3c6fdf2812cb2"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/VISUAL_AUDIO_REVIEW.json",
+          "sha256": "be4469ce4b19e3e6ba51167dfadb1b99b3da8e827a7fdae2cb93db16e6718685"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/HUMAN_REVIEW.md",
+          "sha256": "a88f2b5183ea5ed8eaf4c0749c2ccd8a958abbf349ce6fef50696177a081377c"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/REGRESSION.json",
+          "sha256": "9eefcfbbc10d75c4c83d53b39e98db042561b798bfc78fd6dbe52d06b2f1ecf9"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/AKI_SHOTSTACK_PRESENTATION_MASTER_V01_contact.jpg",
+          "sha256": "1efb2e91feb49feb34b855f422f6b87e5f37039b8311bc9f7f0b034ab6b7aeb9"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/M03_NEARBY_ALIGNMENT.jpg",
+          "sha256": "a1d6b85699c091db49774a196fb029629764d925c8f8daf84cd8d205941de959"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/M03_NEARBY_ALIGNMENT.json",
+          "sha256": "e66c5099538422cb4314c99578938094d3c1687f90aed9c15c4844e26230b499"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/MEDIA_QC.json",
+          "sha256": "f80efded774f2c0c2d43577fda25280545fb190cc358eee3d762c48f60a97d45"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/PAIRED_FRAME_QC.json",
+          "sha256": "35a133719862d2d0b1804bdc65300eb8786a638d133701157f6cb5309a57f49f"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/TEMPORAL_SIGNAL_SCAN.json",
+          "sha256": "00cee432920db90f0f4340d88c95269cc65abffcd43174383822212e43116282"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M02_contact.jpg",
+          "sha256": "627f81089d5c4c82d0bd856548ac6daa79c5a6d942a135b6ccaca3f399e434b5"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M02_paired.jpg",
+          "sha256": "e508264daa4b766f91efea9ebe89920f2bb136ef5d3a73b4bbcdaf716a2de1ff"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M03_contact.jpg",
+          "sha256": "63b0c534d2ecfad51921a9ae6a77a070fca883617baeb6dbe8ee8fb6d32c68d4"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M03_paired.jpg",
+          "sha256": "fd0ed6dbf0318db671462f8271ff6e25e681c155c0e336644e858e6208af5974"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M08_contact.jpg",
+          "sha256": "5b721841c613f0c6cac85bf13f3992148ccc28b9a01867549fa0b8b1acc10972"
+        },
+        {
+          "path": "p0e4/evidence/human_binding/media/aakhri-ishq_DERIVATIVE_M08_paired.jpg",
+          "sha256": "003c95a336d45c460ed4f9b00ca1952f61be1c44bd359f51bea580a617c9853e"
+        }
+      ],
+      "phase": "P0-E4",
+      "status": "HUMAN_BINDING_EVIDENCE_REGISTERED",
+      "tested_sha": "2a3168a81bb0e66193e52fbe1cf6ce70c2640964"
+    }
+  ],
+  "schema_version": 1,
+  "state_lineage": {
+    "engineering_ledger_head_hash": "643b1e260d85236b4c528e67f506df921aebfc23e688e400b3002e762b965f53",
+    "engineering_transition_count": 3,
+    "parent_sha256": "db5e558f53d800b94303b4e74df74eee7dc57a8fb808c96b02086065abd47e79",
+    "parent_version": 12
+  },
+  "state_version": 13,
+  "updated_at": "2026-09-18T14:36:02.821577+00:00",
+  "updated_by": "codex"
+}

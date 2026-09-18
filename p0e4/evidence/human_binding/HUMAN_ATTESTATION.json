@@ -1,0 +1,40 @@
+{
+  "binding": {
+    "asset_name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+    "asset_sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+    "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+    "scope": "Binding of existing final-video decision only; not new approval",
+    "status": "RESOLVED_EXPLICIT_HUMAN_ATTESTATION"
+  },
+  "cryptographic_signature": "NOT_SUPPLIED_NOT_FABRICATED",
+  "decision_date_as_supplied": "2026-09-18",
+  "decision_time": "NOT_SUPPLIED",
+  "existing_approval": {
+    "approved_by": "Nitin",
+    "artifact_sha256": "AKI_PRODUCTION_MASTER_V01_SHA_PENDING_LOCAL_RENDER",
+    "asset_id": "production_master_v01",
+    "campaign_id": "aakhri-ishq",
+    "decision": "APPROVE",
+    "gate": "NITIN_FINAL_VIDEO_APPROVAL",
+    "notes": "NITIN_FINAL_VIDEO_APPROVAL = TRUE (authoritative)",
+    "timestamp": "2026-09-07T17:35:17.436360Z",
+    "version": "1"
+  },
+  "human_binding_statement": "Ik bevestig dat mijn bestaande NITIN_FINAL_VIDEO_APPROVAL voor Aakhri Ishq betrekking heeft op AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4 met SHA256 0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1.",
+  "new_approval_created": false,
+  "registered_by": "codex",
+  "rights_facts": {
+    "backing_master_origin": "EIGEN_PRODUCTIE_HUMAN_DECLARED",
+    "composition_clearance": "NOT_ESTABLISHED",
+    "content_id_outcome": "UNKNOWN",
+    "exact_version_content_id_previously_tested": false,
+    "explicit_composition_publication_licence_previously_obtained": false,
+    "independent_daw_stems_or_sample_licence_audit": "NOT_PERFORMED",
+    "third_party_backing_origin_question": "ANSWERED_BY_OWNER"
+  },
+  "rights_status": "RIGHTS_HOLD",
+  "runtime_signed_grant_created": false,
+  "source_kind": "EXPLICIT_USER_SUPPLIED_FILE_IN_THIS_TASK",
+  "source_sha256": "f6f84bff0b33e79f7921676fc9b52ef030cb6b839536b679b7c9a8bfebc4f159",
+  "speaker_as_supplied": "Nitin"
+}

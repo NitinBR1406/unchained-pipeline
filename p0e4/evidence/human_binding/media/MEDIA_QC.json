@@ -1,0 +1,211 @@
+{
+  "assets": [
+    {
+      "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+      "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+      "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+      "size_bytes": 168512442,
+      "full_av_decode": "PASS",
+      "source_unchanged": true,
+      "probe_prior_hash_bound": {
+        "ffmpeg_version": "7.1 built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 24.0,
+        "source_size": [
+          1080,
+          1920
+        ],
+        "size": [
+          1080,
+          1920
+        ],
+        "rotate": 0,
+        "duration": 208.42000000000002
+      },
+      "audio_measurement": {
+        "sample_rate": 8000,
+        "channels_for_analysis": 1,
+        "duration_seconds": 208.405375,
+        "first_100ms_rms": 0.024515,
+        "last_100ms_rms": 0.0010023,
+        "first_sample": -6.632886652369052e-05,
+        "last_sample": 0.0015056325355544686,
+        "peak_abs_mono_resampled": 1.0290671586990356,
+        "limits": "Mono resampling measurements are not perceived loudness, true peak or listening review."
+      },
+      "contact_sheet": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01_contact.jpg",
+      "sample_times_seconds": [
+        0.1,
+        40,
+        60,
+        100,
+        140,
+        180,
+        208.22000000000003
+      ],
+      "motion_lipsync_review": "NOT_PERFORMED_FULL_MOTION",
+      "perceptual_audio_boundary_review": "NOT_PERFORMED",
+      "creative_approval_inferred": false
+    },
+    {
+      "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+      "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+      "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+      "size_bytes": 13125360,
+      "full_av_decode": "PASS",
+      "source_unchanged": true,
+      "probe_prior_hash_bound": {
+        "ffmpeg_version": "7.1 built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 24.0,
+        "source_size": [
+          1080,
+          1920
+        ],
+        "size": [
+          1080,
+          1920
+        ],
+        "rotate": 0,
+        "duration": 9.05
+      },
+      "audio_measurement": {
+        "sample_rate": 8000,
+        "channels_for_analysis": 1,
+        "duration_seconds": 9.024,
+        "first_100ms_rms": 0.2831283,
+        "last_100ms_rms": 0.0114761,
+        "first_sample": -2.0901779862469994e-08,
+        "last_sample": 0.0010710812639445066,
+        "peak_abs_mono_resampled": 0.9877598881721497,
+        "limits": "Mono resampling measurements are not perceived loudness, true peak or listening review."
+      },
+      "contact_sheet": "aakhri-ishq_DERIVATIVE_M08_contact.jpg",
+      "sample_times_seconds": [
+        0.1,
+        2.2625,
+        4.525,
+        6.7875000000000005,
+        8.850000000000001
+      ],
+      "motion_lipsync_review": "NOT_PERFORMED_FULL_MOTION",
+      "perceptual_audio_boundary_review": "NOT_PERFORMED",
+      "creative_approval_inferred": false,
+      "audio_alignment_to_master": {
+        "best_offset_seconds": 198.91563,
+        "normalized_waveform_correlation": 0.979742,
+        "interpretation": "Signal similarity only; not an authenticated render lineage or creative approval."
+      }
+    },
+    {
+      "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+      "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+      "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+      "size_bytes": 19179667,
+      "full_av_decode": "PASS",
+      "source_unchanged": true,
+      "probe_prior_hash_bound": {
+        "ffmpeg_version": "7.1 built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 24.0,
+        "source_size": [
+          1080,
+          1920
+        ],
+        "size": [
+          1080,
+          1920
+        ],
+        "rotate": 0,
+        "duration": 14.55
+      },
+      "audio_measurement": {
+        "sample_rate": 8000,
+        "channels_for_analysis": 1,
+        "duration_seconds": 14.528,
+        "first_100ms_rms": 0.0927149,
+        "last_100ms_rms": 0.3839791,
+        "first_sample": 5.459660314954817e-07,
+        "last_sample": 0.3280152380466461,
+        "peak_abs_mono_resampled": 1.006859540939331,
+        "limits": "Mono resampling measurements are not perceived loudness, true peak or listening review."
+      },
+      "contact_sheet": "aakhri-ishq_DERIVATIVE_M02_contact.jpg",
+      "sample_times_seconds": [
+        0.1,
+        3.6375,
+        7.275,
+        10.912500000000001,
+        14.350000000000001
+      ],
+      "motion_lipsync_review": "NOT_PERFORMED_FULL_MOTION",
+      "perceptual_audio_boundary_review": "NOT_PERFORMED",
+      "creative_approval_inferred": false,
+      "audio_alignment_to_master": {
+        "best_offset_seconds": 31.41562,
+        "normalized_waveform_correlation": 0.985837,
+        "interpretation": "Signal similarity only; not an authenticated render lineage or creative approval."
+      }
+    },
+    {
+      "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+      "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+      "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+      "size_bytes": 22670942,
+      "full_av_decode": "PASS",
+      "source_unchanged": true,
+      "probe_prior_hash_bound": {
+        "ffmpeg_version": "7.1 built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 24.0,
+        "source_size": [
+          1080,
+          1920
+        ],
+        "size": [
+          1080,
+          1920
+        ],
+        "rotate": 0,
+        "duration": 14.06
+      },
+      "audio_measurement": {
+        "sample_rate": 8000,
+        "channels_for_analysis": 1,
+        "duration_seconds": 14.037375,
+        "first_100ms_rms": 0.2574953,
+        "last_100ms_rms": 0.4336637,
+        "first_sample": 5.4458414524560794e-05,
+        "last_sample": 0.46553143858909607,
+        "peak_abs_mono_resampled": 1.0189298391342163,
+        "limits": "Mono resampling measurements are not perceived loudness, true peak or listening review."
+      },
+      "contact_sheet": "aakhri-ishq_DERIVATIVE_M03_contact.jpg",
+      "sample_times_seconds": [
+        0.1,
+        3.515,
+        7.03,
+        10.545,
+        13.860000000000001
+      ],
+      "motion_lipsync_review": "NOT_PERFORMED_FULL_MOTION",
+      "perceptual_audio_boundary_review": "NOT_PERFORMED",
+      "creative_approval_inferred": false,
+      "audio_alignment_to_master": {
+        "best_offset_seconds": 52.41562,
+        "normalized_waveform_correlation": 0.984446,
+        "interpretation": "Signal similarity only; not an authenticated render lineage or creative approval."
+      }
+    }
+  ],
+  "method": "Exact SHA check + full A/V decode + mono 8kHz waveform match + stated static frame samples",
+  "limits": "No authenticated cut receipt; no independent Gemini/Claude result; no full-motion or listening approval."
+}

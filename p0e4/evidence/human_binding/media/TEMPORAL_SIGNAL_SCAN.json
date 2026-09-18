@@ -1,0 +1,37 @@
+[
+  {
+    "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+    "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+    "exit_code": 0,
+    "filter": "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=-60dB:d=1; silencedetect=n=-50dB:d=0.1",
+    "events": [
+      "[silencedetect @ 0x142e0f9e0] silence_start: 208.278896",
+      "[silencedetect @ 0x142e0f9e0] silence_end: 208.395083 | silence_duration: 0.116187"
+    ],
+    "limits": "Threshold detections only, no aesthetic/lip-sync/listening verdict."
+  },
+  {
+    "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+    "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+    "exit_code": 0,
+    "filter": "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=-60dB:d=1; silencedetect=n=-50dB:d=0.1",
+    "events": [],
+    "limits": "Threshold detections only, no aesthetic/lip-sync/listening verdict."
+  },
+  {
+    "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+    "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+    "exit_code": 0,
+    "filter": "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=-60dB:d=1; silencedetect=n=-50dB:d=0.1",
+    "events": [],
+    "limits": "Threshold detections only, no aesthetic/lip-sync/listening verdict."
+  },
+  {
+    "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+    "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+    "exit_code": 0,
+    "filter": "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=-60dB:d=1; silencedetect=n=-50dB:d=0.1",
+    "events": [],
+    "limits": "Threshold detections only, no aesthetic/lip-sync/listening verdict."
+  }
+]

@@ -1,0 +1,99 @@
+{
+  "rights_status": "RIGHTS_HOLD",
+  "classification_values": [
+    "PROVEN",
+    "UNKNOWN",
+    "HUMAN_REQUIRED",
+    "EXTERNAL_ACTION_REQUIRED"
+  ],
+  "rows": [
+    {
+      "topic": "Existing final-video SHA binding",
+      "status": "PROVEN",
+      "proven": "Explicit Nitin statement binds the existing decision to master SHA 0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1.",
+      "missing": "No new decision required for this identity question. No Ed25519 signature supplied.",
+      "why_required": "Immutable asset identity must match the existing decision.",
+      "autonomous_resolution": true,
+      "minimum_action": "None for source-level binding. Runtime grants remain on the existing authenticated approval path; no signature is manufactured."
+    },
+    {
+      "topic": "Backing/master origin",
+      "status": "PROVEN",
+      "proven": "Owner explicitly declares EIGEN PRODUCTIE. This answers the previously unknown third-party backing origin question as an owner attestation.",
+      "missing": "No independent DAW/stems/sample or contributor audit supplied; exclusive ownership is not independently certified.",
+      "why_required": "Separate backing provenance from underlying composition rights.",
+      "autonomous_resolution": true,
+      "minimum_action": "None to record the declaration; provide production/sample evidence only if required by the eventual rights review."
+    },
+    {
+      "topic": "Prior composition/publication licence",
+      "status": "PROVEN",
+      "proven": "Owner explicitly states NEE.",
+      "missing": "No licence grants are evidenced.",
+      "why_required": "A negative fact cannot be promoted to clearance.",
+      "autonomous_resolution": true,
+      "minimum_action": "None to record the negative fact."
+    },
+    {
+      "topic": "Composition/songwriting/lyrics rights-holder and coverage",
+      "status": "EXTERNAL_ACTION_REQUIRED",
+      "proven": "Campaign is a cover; RIGHTS_HOLD is still authoritative. No campaign-specific permission located in inspected repository/Drive evidence.",
+      "missing": "Identified rights-holder(s), applicable permission or documented platform coverage for composition/lyrics, platforms, territory and actual use.",
+      "why_required": "Own recording does not by itself establish underlying-work clearance; project requires RIGHTS_PASS.",
+      "autonomous_resolution": false,
+      "minimum_action": "Obtain or supply authoritative written coverage for the proposed seven-platform release using RIGHTS_ACTION_PACKET.md; no purchase/contact/upload is preauthorized."
+    },
+    {
+      "topic": "YouTube hero/Shorts coverage",
+      "status": "UNKNOWN",
+      "proven": "Official general copyright and cover monetization guidance reviewed.",
+      "missing": "Asset-specific claim/licence outcome and intended use/territory/account conditions.",
+      "why_required": "General provider policy is not this campaign clearance.",
+      "autonomous_resolution": false,
+      "minimum_action": "Include YouTube hero and Shorts in the rights coverage confirmation."
+    },
+    {
+      "topic": "Instagram/Facebook coverage",
+      "status": "UNKNOWN",
+      "proven": "Official library-access search excerpt found; complete Meta guideline retrieval blocked by login/temporary provider block.",
+      "missing": "Verified complete current policy and coverage of these baked-in cover recordings for intended accounts/use.",
+      "why_required": "Library licensing cannot be assumed to transfer to arbitrary adapter uploads.",
+      "autonomous_resolution": false,
+      "minimum_action": "Obtain provider/rights-holder coverage evidence covering IG Reels/Feed/Stories and FB Reels."
+    },
+    {
+      "topic": "TikTok coverage",
+      "status": "UNKNOWN",
+      "proven": "Official IP policy and commercial-music excerpt reviewed.",
+      "missing": "Applicable licence/valid basis and commercial/noncommercial use/account scope.",
+      "why_required": "No general IP page grants a licence to this asset.",
+      "autonomous_resolution": false,
+      "minimum_action": "Include TikTok and commercial-use conditions in the rights coverage confirmation."
+    },
+    {
+      "topic": "Content ID expectation",
+      "status": "EXTERNAL_ACTION_REQUIRED",
+      "proven": "Owner explicitly states no exact-version test/upload has occurred.",
+      "missing": "Publisher/platform response or an authorized exact-SHA test outcome.",
+      "why_required": "Do not invent a no-claim guarantee; claims and rights are separate.",
+      "autonomous_resolution": false,
+      "minimum_action": "Obtain publisher/platform handling confirmation; any private test upload requires its own explicit authorization and does not itself establish RIGHTS_PASS."
+    },
+    {
+      "topic": "Derivative approval scope / release package",
+      "status": "HUMAN_REQUIRED",
+      "proven": "Historical report says final-video approved per input for M02/M03/M08, but does not bind that assertion to these hashes. Seven proposals remain unchanged.",
+      "missing": "Exact-SHA derivative approval or authoritative historical binding, plus accept/change decision on the seven packages. M03 sampled LOOK DEVIATION and M02/M03 active audio end boundaries require review.",
+      "why_required": "Names and technical QC cannot supply a human decision.",
+      "autonomous_resolution": false,
+      "minimum_action": "After reviewing the QC, accept the three exact-SHA derivatives and seven packages, or list exceptions. This is not publish approval."
+    }
+  ],
+  "evidence": [
+    "NITIN_SOURCE_REQUEST.txt",
+    "SOURCE_REVIEW.json",
+    "DRIVE_SEARCH.json",
+    "PLATFORM_RIGHTS.md"
+  ],
+  "proven_definition": "Proven to the stated evidence level, including explicitly labelled owner attestations; not independent legal certification."
+}
