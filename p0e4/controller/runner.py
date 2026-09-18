@@ -93,7 +93,15 @@ class Loop(h.DurableControlLoop):
         self.backlog.save()
 
     def process_one(self,task,worker_id='worker-1'):
-        try:return super().process_one(task,worker_id)
+        try:
+            jid=self._recorded_job_id(task['task_id'])
+            if jid and self.se.has(jid):
+                # Frozen side-effect cache is an optimization, never independent
+                # execution proof. Validate before it can emit TASK_RESULT.
+                require((self.executor.location(jid)/'intent.json').exists(),'cached execution has no intent')
+                verified=self.executor(task,jid,self.clock.now())
+                require(self.se.get(jid)==verified,'cached execution receipt mismatch')
+            return super().process_one(task,worker_id)
         except Pending:
             tid=task['task_id'];lease=self.leases.get(tid)
             self._append('EVIDENCE_REGISTERED',task_id=tid,inputs={'execution_status':'DISPATCH_UNCONFIRMED_NO_BLIND_RETRY'})

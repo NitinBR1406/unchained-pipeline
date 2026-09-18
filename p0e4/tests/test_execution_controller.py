@@ -139,6 +139,16 @@ class ControllerTests(unittest.TestCase):
         self.assertEqual(result['backlog_summary']['blocked'],1)
         self.assertEqual(result['backlog_summary']['completed'],1)
 
+    def test_corrupted_cached_receipt_cannot_append_success_after_crash(self):
+        def crash(point,ctx):
+            if point=='after_side_effect':raise CrashInjected()
+        with self.assertRaises(CrashInjected):self.call(crash_hook=crash)
+        path=next((self.out/'dispatch').glob('*/last.json'));path.write_text('{}')
+        result=self.call(2000)
+        self.assertEqual(result['backlog_summary']['completed'],0)
+        self.assertEqual(self.transport.calls,1)
+        self.assertNotIn('"event_type":"TASK_RESULT"',(self.out/'EVENT_LEDGER.jsonl').read_text())
+
     def test_completed_artifact_tampering_never_passes_cached_success(self):
         self.call()
         path=next((self.out/'dispatch').glob('*/last.json'))
