@@ -1,0 +1,14 @@
+{
+  "parent_remote_sha": "649bb5d7a895ccc7227e2571fa9dcee7a0168f47",
+  "tested_sha": "1609f57476fab8b8b8ea95e33c5781a0409400f5",
+  "source_files": [
+    "p0e4/controller/project_v14.py",
+    "p0e4/integration/historical_context.py",
+    "p0e4/tests/test_historical_context.py",
+    "p0e4/tests/test_v14_projection.py"
+  ],
+  "frozen_components_changed": false,
+  "new_authoritative_live_runs": 0,
+  "external_mutations": 0,
+  "history_only": true
+}

@@ -1,0 +1,25 @@
+{
+  "status": "HISTORICAL_CONTEXT_ACCEPTED_PRODUCTION_BLOCKED",
+  "tested_sha": "1609f57476fab8b8b8ea95e33c5781a0409400f5",
+  "deterministic_replay": true,
+  "real_media_qc_proven": false,
+  "durable_gui_dispatcher_proven": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "production_e2e_status": "BLOCKED_NOT_GREEN",
+  "blocked_tasks": [
+    "NITIN_AUDIO_SOURCE_BINDING",
+    "EXISTING_N3_GOVERNANCE"
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "historical_context_refs": {
+    "package": {
+      "uri": "p0e4/evidence/history_v14/GEMINI_HISTORICAL_CONTEXT_PACKAGE.json",
+      "sha256": "4f8b6cc386133301e6410c8d8542fb5f633d24c9bf33e65bf84d4d32083b8224"
+    },
+    "excerpts": {
+      "uri": "p0e4/evidence/history_v14/SOURCE_EXCERPTS.json",
+      "sha256": "097ad6e73d680276030eacf3a51994e57c2b7b8721f61a33992462cd329bc126"
+    }
+  }
+}

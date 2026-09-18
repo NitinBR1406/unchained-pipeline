@@ -1,0 +1,161 @@
+{
+  "package_sha256": "2c17a0ed819588dd65b9a0cb8938fce9e234e8bb0628faa7b0f0fb0be39270d5",
+  "trust": "UNTRUSTED_HISTORICAL_CONTEXT",
+  "context": [
+    {
+      "id": "I01",
+      "category": "growth",
+      "summary": "Use stylistically related covers as discovery bridges to originals; test whether listeners actually convert.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P003"
+      ]
+    },
+    {
+      "id": "I02",
+      "category": "audience",
+      "summary": "Explore Hindi-rock identity across Netherlands, Suriname/Caribbean, UK and India; regional affinity remains a hypothesis, not verified audience analytics.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P001",
+        "P011"
+      ]
+    },
+    {
+      "id": "I03",
+      "category": "hooks",
+      "summary": "Test immediate vocal/performance openings and distinct emotional moments: direct gaze, intimate phrase, chorus and climax. Historical timestamps require mapping to the current asset SHA and timebase.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P030",
+        "P031"
+      ]
+    },
+    {
+      "id": "I04",
+      "category": "formats",
+      "summary": "Explore several distinct short cuts from one performance plus full-length releases. No historical format classification establishes current platform eligibility.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P030",
+        "P114"
+      ]
+    },
+    {
+      "id": "I05",
+      "category": "visual_treatment",
+      "summary": "Historical options converge on dark charcoal, antique gold, face-first hierarchy and readable restrained typography. Preserve the currently locked baseline; these are context, not redesign authorization.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P005",
+        "P035",
+        "P096"
+      ]
+    },
+    {
+      "id": "I06",
+      "category": "editing_effects",
+      "summary": "Favor stable intimate passages and sparse musically justified motion. Historical FX cues require actual-asset inspection and fresh validation; no blanket shake/flash preset.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P042",
+        "P132"
+      ]
+    },
+    {
+      "id": "I07",
+      "category": "editing_effects",
+      "summary": "Consider selective translation windows and clean instrumental breathing spaces; check baked-in captions and current platform overlays before placing text.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P093",
+        "P096"
+      ]
+    },
+    {
+      "id": "I08",
+      "category": "platform",
+      "summary": "Adapt calls-to-action and presentation to platform and audience, with restrained end cards and mobile-readable thumbnails. Current UI geometry and policies require fresh checks.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P033",
+        "P035"
+      ]
+    },
+    {
+      "id": "I09",
+      "category": "posting",
+      "summary": "Historical staged cadence suggests beginning with 14-day releases and accelerating only after measured capacity and traction. It is not a schedule instruction or publication approval.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P114"
+      ]
+    },
+    {
+      "id": "I10",
+      "category": "experiments",
+      "summary": "Track retention, watch time, click-through, subscriber conversion and catalog lift across explicit review windows. Thresholds must be recalibrated with real analytics.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P120"
+      ]
+    },
+    {
+      "id": "I11",
+      "category": "experiments",
+      "summary": "Bind master, derivative/hook, campaign, experiment and eventual platform identifiers to outcomes. Historical ABSENT-field claims are not a current system audit.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P177",
+        "P180"
+      ]
+    },
+    {
+      "id": "I12",
+      "category": "provenance",
+      "summary": "Keep model analysis, synthesis, actual-asset hashes and human authorization separate. Historical architecture suggestions do not replace the existing Event Ledger/Reducer.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P135",
+        "P188"
+      ]
+    },
+    {
+      "id": "I13",
+      "category": "provenance",
+      "summary": "Source calls a rule 80% but describes 75%; this contradiction cannot weaken the current hard 80% constraint.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P132"
+      ]
+    },
+    {
+      "id": "I14",
+      "category": "editing_effects",
+      "summary": "Earlier continuous-English advice conflicts with later selective-caption advice; retain both as hypotheses and judge the actual asset independently.",
+      "status": "HISTORICAL_HYPOTHESIS",
+      "fresh_validation_required": true,
+      "evidence_ids": [
+        "P031",
+        "P093",
+        "P096"
+      ]
+    }
+  ],
+  "instructions_from_source_executable": false,
+  "fresh_validation_required": true,
+  "approval_authority": false
+}

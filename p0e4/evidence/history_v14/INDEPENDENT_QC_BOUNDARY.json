@@ -1,0 +1,6 @@
+{
+  "historical_context": [],
+  "historical_verdicts_allowed": false,
+  "actual_asset_sha256_required": true,
+  "fresh_independent_review_required": true
+}
