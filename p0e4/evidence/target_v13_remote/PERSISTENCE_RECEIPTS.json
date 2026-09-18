@@ -1,0 +1,18 @@
+{
+  "remote_branch": "origin/p0e4/slice1-production-handoff",
+  "remote_observed_commit": "ab76ed9bde2d2d2449d4d66e764f5e72a2e4e84a",
+  "exact_tested_code_sha": "f125e55547c3421ba9f98b82567e4de71ebce125",
+  "remote_snapshot_regression_sha": "ab76ed9bde2d2d2449d4d66e764f5e72a2e4e84a",
+  "remote_snapshot_suites_passed": 49,
+  "remote_clean_checkout_readable": true,
+  "state_version": 18,
+  "state_sha256": "628111091317eed1e63736e8c7862d3d965973ddb4c8eb24118bcc45484256d4",
+  "manifest_entries_verified": 25,
+  "runtime_code_identical_to_tested_sha": true,
+  "frozen_P0_E0_E3_unchanged": true,
+  "temporary_checkout_cleanup": "CONTEXT_MANAGER_ON_EXIT",
+  "new_authoritative_live_runs": 0,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

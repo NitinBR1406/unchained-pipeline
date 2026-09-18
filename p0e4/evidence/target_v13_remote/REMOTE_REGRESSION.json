@@ -1,0 +1,708 @@
+{
+  "new_authoritative_live_runs": 0,
+  "passed": 49,
+  "prior_manifests": [
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ACCEPTANCE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "drive_discovery.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "freeze_verification.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/AKI_INTAKE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/BACKLOG.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/HANDOFF_ASSESSMENT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/INDEPENDENT_GOVERNANCE_AUDIT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/INPUT_BINDING.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/central/HEAD.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/central/state_v1.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/central/state_v11.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/central/state_v6.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/se_store.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "regression.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ACCEPTANCE_RESUME.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "CI_JOBS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "CI_RUN.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "FREEZE_DIFF_QC.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "MEDIA_QC.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "PERSISTENCE_RECEIPTS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RELEASE_REVIEW_PACKET.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RUNTIME.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "WORKER_CONNECTION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "asset_sources.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/SOURCE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/INTEGRATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/control/BACKLOG.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/control/EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/control/se_store.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/effects/AKI_ASSET_INVENTORY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/effects/AKI_PACKAGE_DRAFT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/effects/AKI_READINESS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/effects/INDEPENDENT_GOVERNANCE_AUDIT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/INTEGRATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/TESTED_SHA.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/BACKLOG.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/HEAD.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/state_v1.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/state_v11.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/state_v16.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/state_v21.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/state_v6.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/se_store.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/effects/AKI_ASSET_INVENTORY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/effects/AKI_PACKAGE_DRAFT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/effects/AKI_READINESS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/effects/INDEPENDENT_GOVERNANCE_AUDIT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "state/ENGINEERING_EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "state/UNCHAINED_MASTER_PROJECT_STATE_V06.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "DRIVE_DISCOVERY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "DRIVE_MASTER_STATUS_REFERENCE.md"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ENGINEERING_EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "HUMAN_REVIEW.md"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REVIEW_QC.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "UNCHAINED_MASTER_PROJECT_STATE_V07.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "reproduce.py"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "DRIVE_SEARCH.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ENGINEERING_EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "HUMAN_ATTESTATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "HUMAN_REVIEW.md"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "NITIN_SOURCE_REQUEST.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "PLATFORM_RIGHTS.md"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "PROJECTION_INPUTS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RIGHTS_ACTION_PACKET.md"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RIGHTS_MATRIX.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "SOURCE_REVIEW.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "UNCHAINED_MASTER_PROJECT_STATE_V08.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "VISUAL_AUDIO_REVIEW.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/AKI_SHOTSTACK_PRESENTATION_MASTER_V01_contact.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/M03_NEARBY_ALIGNMENT.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/M03_NEARBY_ALIGNMENT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/MEDIA_QC.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/PAIRED_FRAME_QC.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/TEMPORAL_SIGNAL_SCAN.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M02_contact.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M02_paired.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M03_contact.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M03_paired.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M08_contact.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M08_paired.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media_qc.py"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "project.py"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "test_project.py"
+    }
+  ],
+  "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "suites": [
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/tests/test_foundation.py",
+      "output": "PASS arch_decision_temporal\nPASS production_not_authorized\nPASS deterministic_replay\nPASS state_recovered_after_restart\nPASS duplicate_side_effect_count_zero\nPASS idempotent_result_not_double_applied\nPASS out_of_order_result_rejected\nPASS unknown_schema_failclosed\nPASS malformed_failclosed\nPASS ai_cannot_create_nitin_approval\nPASS impersonation_recorded_rejected\nPASS bare_nitin_metadata_does_not_grant\nPASS waiting_for_nitin_isolation\nPASS dependency_gating\nPASS lease_acquired\nPASS no_concurrent_double_claim\nPASS stale_lease_expires\nPASS safe_reclaim_after_death\nPASS job_id_deterministic\nPASS exactly_once_side_effect\nPASS ledger_chain_valid\nPASS ledger_tamper_detected\nPASS INV_WAITING_WORKFLOW_BLOCKS_OTHER_WORK_false\nPASS INV_WORKER_SLOT_HELD_DURING_HUMAN_WAIT_false\nPASS INV_STATE_RECOVERED_AFTER_RESTART_true\nPASS INV_DUPLICATE_SIDE_EFFECT_COUNT_zero\nPASS INV_HUMAN_MESSAGE_RELAY_REQUIRED_false\n\nTOTAL=27 PASSED=27 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/tests/test_human_auth.py",
+      "output": "PASS valid_signed_approval_grants\nPASS reject_agent_nitin_no_evidence\nPASS metadata_reason_malformed\nPASS reject_forged_signature\nPASS reject_wrong_content\nPASS reject_wrong_gate\nPASS reject_expired\nPASS reject_revoked\nPASS reject_duplicate_nonce\nPASS reject_malformed_payload\nPASS reject_ai_impersonation\nPASS failclosed_no_provisioned_key\nPASS AI_CAN_CREATE_NITIN_APPROVAL_false\nPASS AI_CAN_IMPERSONATE_BY_METADATA_false\nPASS PUBLISH_WITHOUT_NITIN_APPROVAL_false\n\nHA_TOTAL=15 HA_PASSED=15 HA_FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/tests/test_worker_readiness.py",
+      "output": "worker: connect failed (attempt 1): ConnectionRefusedError\nworker: connect failed (attempt 2): ConnectionRefusedError\nworker: connected + namespace 'default' visible after 3 attempt(s)\nPASS retries_past_connection_refused\nworker: namespace 'default' not ready (attempt 1): RuntimeError\nworker: namespace 'default' not ready (attempt 2): RuntimeError\nworker: namespace 'default' not ready (attempt 3): RuntimeError\nworker: connected + namespace 'default' visible after 4 attempt(s)\nPASS tolerates_namespace_not_found_window\nworker: connect failed (attempt 1): ConnectionRefusedError\nworker: connect failed (attempt 2): ConnectionRefusedError\nworker: connect failed (attempt 3): ConnectionRefusedError\nworker: connect failed (attempt 4): ConnectionRefusedError\nworker: connect failed (attempt 5): ConnectionRefusedError\nworker: connect failed (attempt 6): ConnectionRefusedError\nworker: connect failed (attempt 7): ConnectionRefusedError\nworker: connect failed (attempt 8): ConnectionRefusedError\nworker: connect failed (attempt 9): ConnectionRefusedError\nworker: connect failed (attempt 10): ConnectionRefusedError\nPASS failclosed_when_never_ready\nPASS bounded_retry_count\n\nWR_TOTAL=4 WR_PASSED=4 WR_FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER/tests/test_acceptance_gate.py",
+      "output": "PASS POSITIVE_valid_evidence_PASS\nPASS neg_real_workflows_false\nPASS neg_waiting_blocks_null\nPASS neg_workflow_ids_empty\nPASS neg_missing_C_workflow_id\nPASS neg_run_ids_empty\nPASS neg_missing_failure_injection\nPASS neg_postgres_restart_false\nPASS neg_temporal_recovery_false\nPASS neg_duplicate_side_effect\nPASS neg_stale_lease_absent\nPASS neg_stale_without_expiry\nPASS neg_stale_same_holder_reclaim\nPASS neg_stale_none\nPASS neg_state_reconstruction_missing\nPASS neg_broken_ledger_chain\nPASS neg_state_reconstruction_mismatch\nPASS neg_no_approval_fabricated_false\nPASS neg_missing_mandatory_key\nPASS neg_poc_infra_remaining_true\n\nAG_TOTAL=20 PASSED=20 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER/tests/test_evidence_json.py",
+      "output": "PASS failure_injection_parses\nPASS bools_are_python_bool\nPASS true_string_becomes_True\nPASS false_string_becomes_False\nPASS no_string_true_false_values\nPASS accepted_by_gate_is_true\nPASS rejected_by_gate_is_true_when_false\nPASS poc_bool_type\nPASS poc_is_false_accepted\nPASS poc_true_string\nPASS valid_json_lowercase_bools\n\nEJ_TOTAL=11 PASSED=11 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER/tests/test_rerun3_closure.py",
+      "output": "PASS persisted_dispatched_json\nPASS exec_files_present\nRUNNER_SANITY: OK {\"TASK_A\": \"COMPLETED\", \"TASK_B\": \"COMPLETED\", \"TASK_C\": \"WAITING_FOR_NITIN\", \"TASK_D\": \"COMPLETED\"}\nPASS R1_workflow_ids_ABCD_nonempty\nPASS R1_run_ids_executed_nonempty\nPASS R1_REAL_TEMPORAL_WORKFLOWS_OBSERVED_true\nPASS R1_STALE_LEASE_RECLAIM_pass\nPASS R1_STATE_RECONSTRUCTION_pass\nPASS R1_waiting_blocks_false_not_null\nPASS END_TO_END_FINAL_PASS\nPASS control_room_stale_reclaim_pass\nPASS OLD_BUG_empty_ids_FAILS\n\nR3_TOTAL=11 PASSED=11 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER/tests/test_runner_readiness.py",
+      "output": "worker: connect failed (attempt 1): ConnectionRefusedError\nworker: namespace 'default' not ready (attempt 2): RuntimeError\nworker: namespace 'default' not ready (attempt 3): RuntimeError\nworker: namespace 'default' not ready (attempt 4): RuntimeError\nworker: connected + namespace 'default' visible after 5 attempt(s)\nPASS post_restart_waits_for_namespace_then_ready\nworker: namespace 'default' not ready (attempt 1): RuntimeError\nworker: namespace 'default' not ready (attempt 2): RuntimeError\nworker: namespace 'default' not ready (attempt 3): RuntimeError\nworker: namespace 'default' not ready (attempt 4): RuntimeError\nworker: namespace 'default' not ready (attempt 5): RuntimeError\nworker: namespace 'default' not ready (attempt 6): RuntimeError\nworker: namespace 'default' not ready (attempt 7): RuntimeError\nworker: namespace 'default' not ready (attempt 8): RuntimeError\nPASS never_ready_fail_closed\nPASS bounded_not_infinite\n\nRR_TOTAL=3 PASSED=3 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER/tests/test_runner_slice1.py",
+      "output": "PASS A_completed\nPASS B_completed_after_A\nPASS C_waiting_for_nitin\nPASS D_completed_while_C_waits\nPASS AUTONOMOUS_CHAIN_A_TO_B\nPASS INDEPENDENT_D_CONTINUES\nPASS WAITING_WORKFLOW_BLOCKS_OTHER_WORK_false\nPASS no_approval_fabricated\nPASS HUMAN_MESSAGE_RELAY_REQUIRED_false\nPASS DUPLICATE_SIDE_EFFECT_COUNT_zero\nPASS STATE_RECONSTRUCTION\nPASS no_next_ready_only_C_waiting\nPASS stale_lease_blocks_live\nPASS stale_lease_reclaim_after_expiry\nPASS duplicate_dispatch_no_double\nPASS reducer_dedup_replayed_result\nPASS worker_interruption_resume_exactly_once\nPASS invalid_transition_failclosed\nPASS dependency_violation_blocks_B\nPASS ai_cannot_self_approve\n\nSLICE1_TOTAL=20 PASSED=20 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E2_AUTONOMOUS_RUNNER/tests/test_temporal_runner_offline.py",
+      "output": "PASS A_completed\nPASS B_completed_after_A\nPASS C_waiting_for_nitin\nPASS D_completed_while_C_waits\nPASS C_never_signalled_no_fabricated_approval\nPASS real_workflow_dispatch_recorded\nPASS deterministic_unique_workflow_ids\nPASS waiting_not_blocking\nPASS duplicate_dispatch_same_wf_id\nRUNNER_SANITY: OK {\"TASK_A\": \"COMPLETED\", \"TASK_B\": \"COMPLETED\", \"TASK_C\": \"WAITING_FOR_NITIN\", \"TASK_D\": \"COMPLETED\"}\nPASS runner_sanity_ok_when_ABCD_correct\nPASS gate_reports_no_fabricated_approval\nRUNNER_SANITY: INCOMPLETE {\"TASK_A\": \"COMPLETED\", \"TASK_B\": \"COMPLETED\", \"TASK_C\": \"COMPLETED\", \"TASK_D\": \"COMPLETED\"}\nPASS runner_sanity_incomplete_if_C_not_waiting\n\nS2OFF_TOTAL=12 PASSED=12 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_acceptance_gate_p0e3.py",
+      "output": "PASS FINAL_PASS\nPASS no_failed_criteria\nPASS all_criteria_true\nPASS 14_criteria_present\nPASS crash_matrix_6_cells\nPASS crash_matrix_all_pass\nPASS production_deploy_false\nPASS publication_false\nPASS inv_double_claim_zero\nPASS inv_dup_side_effect_zero\nPASS inv_stale_lease_pass\nPASS inv_waiting_false\nPASS inv_relay_false\nPASS inv_crash_pass\nPASS is_true_rejects_null\nPASS is_false_rejects_null\nPASS is_zero_rejects_bool\nPASS regression_forces_FAIL\nPASS broken_replay_forces_FAIL\n\nAG3_TOTAL=19 PASSED=19 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_concurrency.py",
+      "output": "PASS worker1_holds_live_lease\nPASS worker2_not_claimed\nPASS CONCURRENT_DOUBLE_CLAIM_COUNT_zero\nPASS no_side_effect_by_loser\nPASS live_lease_acquired\nPASS reclaim_blocked_while_live\nPASS reclaim_after_expiry\nPASS reclaim_by_different_holder\nPASS second_live_claim_refused\nPASS stale_write_conflict\nPASS stale_write_head_unchanged\nPASS side_effect_ran_once_across_restart\nPASS dedup_flag_on_restart\nPASS durable_result_preserved\n\nCON_TOTAL=14 PASSED=14 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_control_loop.py",
+      "output": "PASS A_completed\nPASS B_completed_after_A\nPASS C_waiting_for_nitin\nPASS D_completed_while_C_waits\nPASS AUTONOMOUS_NEXT_TASK\nPASS WAITING_WORKFLOW_BLOCKS_OTHER_WORK_false\nPASS HUMAN_MESSAGE_RELAY_REQUIRED_false\nPASS no_approval_fabricated\nPASS three_side_effects_total\nPASS no_side_effect_for_gated_C\nPASS distinct_jobs_equal_invocations\nPASS B_after_A_ordering\nPASS rerun_is_noop\nPASS replay_still_matches_after_rerun\nPASS bounded_execution_enforced\nPASS schema_all_fields_present\nPASS schema_missing_field_rejected\nPASS B_not_ready_before_A\nPASS ready_ordered_by_priority\n\nCL_TOTAL=19 PASSED=19 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_crash_recovery.py",
+      "output": "PASS A_after_ledger_before_state_crashed\nPASS A_after_ledger_before_state_no_duplicate_side_effect\nPASS A_after_ledger_before_state_no_lost_completed_work\nPASS A_after_ledger_before_state_independent_D_continues\nPASS A_after_ledger_before_state_C_stays_waiting\nPASS A_after_ledger_before_state_no_fabricated_approval\nPASS A_after_ledger_before_state_replay_matches_after_restart\nPASS B_after_state_before_readback_crashed\nPASS B_after_state_before_readback_no_duplicate_side_effect\nPASS B_after_state_before_readback_no_lost_completed_work\nPASS B_after_state_before_readback_independent_D_continues\nPASS B_after_state_before_readback_C_stays_waiting\nPASS B_after_state_before_readback_no_fabricated_approval\nPASS B_after_state_before_readback_replay_matches_after_restart\nPASS C_after_claim_before_exec_crashed\nPASS C_after_claim_before_exec_no_duplicate_side_effect\nPASS C_after_claim_before_exec_no_lost_completed_work\nPASS C_after_claim_before_exec_independent_D_continues\nPASS C_after_claim_before_exec_C_stays_waiting\nPASS C_after_claim_before_exec_no_fabricated_approval\nPASS C_after_claim_before_exec_replay_matches_after_restart\nPASS D_during_execution_crashed\nPASS D_during_execution_no_duplicate_side_effect\nPASS D_during_execution_no_lost_completed_work\nPASS D_during_execution_independent_D_continues\nPASS D_during_execution_C_stays_waiting\nPASS D_during_execution_no_fabricated_approval\nPASS D_during_execution_replay_matches_after_restart\nPASS E_after_effect_before_completion_crashed\nPASS E_after_effect_before_completion_no_duplicate_side_effect\nPASS E_after_effect_before_completion_no_lost_completed_work\nPASS E_after_effect_before_completion_independent_D_continues\nPASS E_after_effect_before_completion_C_stays_waiting\nPASS E_after_effect_before_completion_no_fabricated_approval\nPASS E_after_effect_before_completion_replay_matches_after_restart\nPASS F_while_waiting_for_nitin_crashed\nPASS F_while_waiting_for_nitin_no_duplicate_side_effect\nPASS F_while_waiting_for_nitin_no_lost_completed_work\nPASS F_while_waiting_for_nitin_independent_D_continues\nPASS F_while_waiting_for_nitin_C_stays_waiting\nPASS F_while_waiting_for_nitin_no_fabricated_approval\nPASS F_while_waiting_for_nitin_replay_matches_after_restart\n\nCR_TOTAL=42 PASSED=42 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_drive_backend.py",
+      "output": "PASS drive_write_ok\nPASS drive_object_id_captured\nPASS drive_head_object_captured\nPASS drive_readback_sha_matches\nPASS drive_stale_write_rejected\nPASS drive_teardown_removes_objects\nPASS lifecycle_write_observed\nPASS lifecycle_readback_sha_matches\nPASS lifecycle_cas_head\nPASS lifecycle_head_readback\nPASS lifecycle_stale_rejected\nPASS lifecycle_artifacts_removed\nPASS fake_client_not_real_shared_drive\nPASS real_contract_passes_predicate\nPASS shared_volume_cannot_pass\nPASS shared_volume_describe_backend_type\nPASS google_client_fail_closed_no_creds\n\nDRV_TOTAL=17 PASSED=17 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_drive_negatives.py",
+      "output": "PASS base_bundle_is_PASS\nPASS shared_volume_presented_as_drive_FAIL\nPASS wrong_backend_type_FAIL\nPASS wrong_drive_id_FAIL\nPASS missing_version_object_id_FAIL\nPASS missing_head_object_id_FAIL\nPASS missing_drive_readback_FAIL\nPASS drive_readback_sha_mismatch_FAIL\nPASS cas_head_not_observed_FAIL\nPASS drive_artifacts_remain_FAIL\nPASS missing_drive_evidence_FAIL\nPASS drive_stale_not_rejected_FAIL\nPASS aggregate_cannot_mask_shared_volume_FAIL\n\nDNEG_TOTAL=13 PASSED=13 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_live_acceptance_p0e3.py",
+      "output": "PASS FINAL_PASS\nPASS no_failed_criteria\nPASS all_criteria_true\nPASS gate_is_slice2\nPASS all_required_criteria_present\nPASS criteria_count_23\nPASS real_shared_drive_observed\nPASS crash_matrix_six_cases\nPASS crash_matrix_all_pass\nPASS production_deploy_false\nPASS publication_false\nPASS first_real_poster_paused\nPASS nb001_closed\nPASS real_central_observed\nPASS real_temporal_observed\nPASS synthetic_fixture_FAILS_gate\nPASS synthetic_only_fails_real_drive\nPASS synthetic_predicate_false\nPASS synthetic_source_tag\nPASS synthetic_all_other_criteria_pass\n\nLA3_TOTAL=20 PASSED=20 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_live_backend.py",
+      "output": "PASS shared_volume_describe_cross_process\nPASS shared_volume_disposable\nPASS shared_volume_write_readback_ok\nPASS cross_process_head_visible\nPASS cross_process_stale_write_rejected\nPASS drive_exists_fail_closed\nPASS drive_get_bytes_fail_closed\nPASS drive_put_fail_closed\nPASS drive_describe_unprovisioned\nPASS make_backend_shared\n\nLB_TOTAL=10 PASSED=10 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_live_negatives.py",
+      "output": "PASS base_bundle_is_PASS\nPASS missing_workflow_ids_FAIL\nPASS missing_central_persistence_FAIL\nPASS empty_readback_hash_FAIL\nPASS sha_mismatch_FAIL\nPASS stale_write_accepted_FAIL\nPASS double_claim_nonzero_FAIL\nPASS duplicate_side_effect_FAIL\nPASS waiting_blocks_FAIL\nPASS human_relay_required_FAIL\nPASS fabricated_approval_FAIL\nPASS missing_crash_scenario_FAIL\nPASS failed_crash_recovery_FAIL\nPASS poc_infra_remains_FAIL\nPASS wrong_checkout_sha_FAIL\nPASS null_decision_critical_FAIL\nPASS tampered_ledger_chain_FAIL\nPASS aggregate_cannot_mask_missing_central_FAIL\n\nNEG_TOTAL=18 PASSED=18 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_nb001.py",
+      "output": "PASS null_normalized_to_false\nPASS normalization_recorded\nPASS absent_normalized_to_false\nPASS already_false_unchanged\nPASS unproven_left_unchanged\nPASS unproven_reason\nPASS detect_explicit_false\nPASS detect_struct_false\nPASS detect_true_is_not_false\nPASS detect_unproven_is_not_false\nPASS detect_garbage_is_not_false\nPASS detect_string_false\n\nNB_TOTAL=12 PASSED=12 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_nb001_live.py",
+      "output": "PASS aggregate_poc_boolean_false\nPASS aggregate_nb001_marked_closed\nPASS gate_nb001_closed\nPASS gate_pass_with_nb001\nPASS aggregate_poc_not_false_when_remaining\nPASS gate_fails_when_infra_remains\nPASS gate_nb001_open_when_infra_remains\nPASS no_frozen_p0e2_path_referenced\n\nNBL_TOTAL=8 PASSED=8 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_persistence.py",
+      "output": "PASS first_write_ok\nPASS head_reflects_write\nPASS readback_sha_matches\nPASS cas_advance_ok\nPASS stale_expectation_conflict\nPASS head_untouched_on_conflict\nPASS wrong_headhash_conflict\nPASS historical_overwrite_rejected\nPASS v1_file_preserved\nPASS v2_file_preserved\nPASS empty_store_nonzero_expectation_conflict\nPASS readback_mismatch_raises\nPASS no_head_committed_on_readback_fail\n\nPER_TOTAL=13 PASSED=13 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_state_model.py",
+      "output": "PASS replay_matches_master\nPASS persisted_has_state_hash\nPASS persisted_has_ledger_head_hash\nPASS state_version_positive\nPASS derive_is_deterministic\nPASS state_hash_binds_version_and_head\nPASS monotonic_true\nPASS monotonic_regress_false\nPASS replay_rejects_version_tamper\nPASS replay_rejects_core_tamper\nPASS replay_ignores_persist_metadata\nPASS derive_fail_closed_on_tamper\n\nSM_TOTAL=12 PASSED=12 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/tests/test_wif_auth.py",
+      "output": "PASS preflight_pass_on_valid_vars\nPASS 1_missing_project_id_fail\nPASS 2_missing_wif_provider_fail\nPASS 3_malformed_provider_fail\nPASS 4_missing_service_account_fail\nPASS 4b_malformed_service_account_fail\nPASS 5_no_credentials_json_path\nPASS 5b_auth_step_has_no_credentials_json\nPASS 6_no_gcp_drive_sa_path\nPASS 7_single_auth_step\nPASS 7b_no_secrets_reference_anywhere\nPASS 7c_preflight_rejects_longlived_var\nPASS 8_id_token_write\nPASS 9_contents_read\nPASS 10_auth_is_v3\nPASS 10b_project_id_from_var\nPASS 10c_provider_from_var\nPASS 10d_service_account_from_var\nPASS preflight_before_drive_run\nPASS preflight_before_auth\nPASS 11_shared_volume_cannot_satisfy_drive\nPASS preserved_sha_input_required\nPASS preserved_drive_id\nPASS preserved_teardown_temporal\nPASS preserved_acceptance_gate_step\nPASS preserved_fail_closed_final_gate\n\nWIF_TOTAL=26 PASSED=26 FAILED=0\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/evidence/human_binding/test_project.py",
+      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.005s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_controller_projection.py",
+      "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.003s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_engineering_executor.py",
+      "output": ".........To /var/folders/tz/gk0spkg11t56hvttd34wd_cc0000gn/T/tmp22vgn3rk/remote.git\n   542d184..fd094d6  fd094d6697bdce6b88a1b1030dec9ae234f4bc84 -> p0e4/slice1-production-handoff\n.....\n----------------------------------------------------------------------\nRan 14 tests in 5.226s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_engineering_projection.py",
+      "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.003s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_execution_controller.py",
+      "output": "............\n----------------------------------------------------------------------\nRan 12 tests in 1.020s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_external_projection.py",
+      "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.003s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_handoff.py",
+      "output": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.041s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_integration_contracts.py",
+      "output": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.002s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_integration_ingest.py",
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.002s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_integration_projection.py",
+      "output": "{\"state_version\": 14, \"deterministic_replay\": true, \"publication_authorized\": false}\n{\"state_version\": 14, \"deterministic_replay\": true, \"publication_authorized\": false}\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.008s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_release.py",
+      "output": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.021s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_rights_router.py",
+      "output": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.018s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_state_update.py",
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.003s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_ui_receipts.py",
+      "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "p0e4/tests/test_v13_projection.py",
+      "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.009s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_canonical.py",
+      "output": "test_final_gate_for_medium (__main__.T.test_final_gate_for_medium) ... ok\ntest_fingerprint_deterministic_and_material (__main__.T.test_fingerprint_deterministic_and_material) ... ok\ntest_packaging_canonical_and_sha (__main__.T.test_packaging_canonical_and_sha) ... ok\ntest_schedule_window (__main__.T.test_schedule_window) ... ok\ntest_scheduled_at_to_epoch_amsterdam_dst (__main__.T.test_scheduled_at_to_epoch_amsterdam_dst) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.005s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_multiplatform.py",
+      "output": "test_expired_platform_blocks_only_that_platform (__main__.T.test_expired_platform_blocks_only_that_platform) ... ok\ntest_fb_grant_cannot_authorize_ig (__main__.T.test_fb_grant_cannot_authorize_ig) ... ok\ntest_ig_and_fb_coexist_and_both_authorize (__main__.T.test_ig_and_fb_coexist_and_both_authorize) ... ok\ntest_ig_grant_cannot_authorize_fb (__main__.T.test_ig_grant_cannot_authorize_fb) ... ok\ntest_legacy_video_grant_still_resolves (__main__.T.test_legacy_video_grant_still_resolves) ... ok\ntest_material_change_ig_does_not_mutate_fb (__main__.T.test_material_change_ig_does_not_mutate_fb) ... ok\ntest_revoke_ig_does_not_affect_fb (__main__.T.test_revoke_ig_does_not_affect_fb) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.012s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_pipeline.py",
+      "output": "test_aakhri_state_reconstruction (__main__.TestPipeline.test_aakhri_state_reconstruction) ... ok\ntest_changed_hash_invalidates_approval (__main__.TestPipeline.test_changed_hash_invalidates_approval) ... ok\ntest_invalid_transition (__main__.TestPipeline.test_invalid_transition) ... ok\ntest_master_mode_rejects_proof_range (__main__.TestPipeline.test_master_mode_rejects_proof_range) ... ok\ntest_missing_secret_safe_failure (__main__.TestPipeline.test_missing_secret_safe_failure) ... ok\ntest_production_blocked_without_creative_approval (__main__.TestPipeline.test_production_blocked_without_creative_approval) ... ok\ntest_publish_blocked_on_rights_hold (__main__.TestPipeline.test_publish_blocked_on_rights_hold) ... ok\ntest_publish_blocked_without_publish_approval (__main__.TestPipeline.test_publish_blocked_without_publish_approval) ... ok\ntest_qc_duration_failure_holds (__main__.TestPipeline.test_qc_duration_failure_holds) ... ok\ntest_qc_missing_audio_holds (__main__.TestPipeline.test_qc_missing_audio_holds) ... ok\ntest_retry_does_not_duplicate_publish (__main__.TestPipeline.test_retry_does_not_duplicate_publish) ... ok\ntest_transition_table (__main__.TestPipeline.test_transition_table) ... ok\ntest_valid_transition (__main__.TestPipeline.test_valid_transition) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.012s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_poster_publish_approval.py",
+      "output": "test_integration_provisioner_then_verifier (__main__.T.test_integration_provisioner_then_verifier) ... ok\ntest_poster_final_video_does_not_satisfy (__main__.T.test_poster_final_video_does_not_satisfy) ... ok\ntest_poster_missing_creative_blocked (__main__.T.test_poster_missing_creative_blocked) ... ok\ntest_poster_missing_final_asset_blocked (__main__.T.test_poster_missing_final_asset_blocked) ... ok\ntest_poster_missing_publish_blocked (__main__.T.test_poster_missing_publish_blocked) ... ok\ntest_poster_outside_window_blocked (__main__.T.test_poster_outside_window_blocked) ... ok\ntest_poster_three_gate_eligible (__main__.T.test_poster_three_gate_eligible) ... ok\ntest_poster_wrong_platform_blocked (__main__.T.test_poster_wrong_platform_blocked) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.008s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_provisioner.py",
+      "output": "test_final_video_does_not_satisfy_poster_final_asset (__main__.T.test_final_video_does_not_satisfy_poster_final_asset) ... ok\ntest_idempotent_identical (__main__.T.test_idempotent_identical) ... ok\ntest_material_change_requires_new_binding (__main__.T.test_material_change_requires_new_binding) ... ok\ntest_provisioner_never_writes_approvals (__main__.T.test_provisioner_never_writes_approvals) ... ok\ntest_refuse_when_final_asset_missing (__main__.T.test_refuse_when_final_asset_missing) ... ok\ntest_refuse_when_publish_gate_missing (__main__.T.test_refuse_when_publish_gate_missing) ... ok\ntest_revoke_is_per_platform (__main__.T.test_revoke_is_per_platform) ... ok\ntest_valid_grant_creation (__main__.T.test_valid_grant_creation) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.009s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_publish_approval.py",
+      "output": "test_10_visualizer_only_blocked (__main__.T.test_10_visualizer_only_blocked) ... ok\ntest_10b_final_video_alone_blocked (__main__.T.test_10b_final_video_alone_blocked) ... ok\ntest_11_malformed_blocked (__main__.T.test_11_malformed_blocked) ... ok\ntest_12_internal_error_fail_closed (__main__.T.test_12_internal_error_fail_closed) ... ok\ntest_13_valid_complete_eligible (__main__.T.test_13_valid_complete_eligible) ... ok\ntest_14_duplicate_verification_no_mutation (__main__.T.test_14_duplicate_verification_no_mutation) ... ok\ntest_15_result_has_no_secret_fields (__main__.T.test_15_result_has_no_secret_fields) ... ok\ntest_1_no_publish_approval_blocked (__main__.T.test_1_no_publish_approval_blocked) ... ok\ntest_1b_publish_gate_missing_blocked (__main__.T.test_1b_publish_gate_missing_blocked) ... ok\ntest_2_creative_missing_blocked (__main__.T.test_2_creative_missing_blocked) ... ok\ntest_3_final_missing_blocked (__main__.T.test_3_final_missing_blocked) ... ok\ntest_4_expired_blocked (__main__.T.test_4_expired_blocked) ... ok\ntest_5_revoked_blocked (__main__.T.test_5_revoked_blocked) ... ok\ntest_6_fingerprint_mismatch_blocked (__main__.T.test_6_fingerprint_mismatch_blocked) ... ok\ntest_6b_material_change_blocked (__main__.T.test_6b_material_change_blocked) ... ok\ntest_7_wrong_platform_blocked (__main__.T.test_7_wrong_platform_blocked) ... ok\ntest_8_wrong_schedule_blocked (__main__.T.test_8_wrong_schedule_blocked) ... ok\ntest_8b_wrong_schedule_version_blocked (__main__.T.test_8b_wrong_schedule_version_blocked) ... ok\ntest_9_status_new_only_blocked (__main__.T.test_9_status_new_only_blocked) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.007s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_reload.py",
+      "output": "test_A_valid_before_revoke (__main__.T.test_A_valid_before_revoke) ... ok\ntest_B_revoke_on_disk_no_restart (__main__.T.test_B_revoke_on_disk_no_restart) ... ok\ntest_C_restore_no_restart (__main__.T.test_C_restore_no_restart) ... ok\ntest_expiry (__main__.T.test_expiry) ... ok\ntest_fingerprint_mismatch (__main__.T.test_fingerprint_mismatch) ... ok\ntest_malformed_request (__main__.T.test_malformed_request) ... ok\ntest_missing_grant (__main__.T.test_missing_grant) ... ok\ntest_platform_isolation (__main__.T.test_platform_isolation) ... ok\ntest_schedule_mismatch (__main__.T.test_schedule_mismatch) ... ok\ntest_schedule_version_mismatch (__main__.T.test_schedule_version_mismatch) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.007s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_v11.py",
+      "output": "test_completed_job_not_rerendered (__main__.V11.test_completed_job_not_rerendered) ... ok\ntest_creative_approval_autoqueues (__main__.V11.test_creative_approval_autoqueues) ... ok\ntest_duplicate_enqueue_no_duplicate (__main__.V11.test_duplicate_enqueue_no_duplicate) ... ok\ntest_invalid_range_json_holds (__main__.V11.test_invalid_range_json_holds) ... ok\ntest_missing_secret_safe_failure (__main__.V11.test_missing_secret_safe_failure) ... ok\ntest_no_approval_no_job (__main__.V11.test_no_approval_no_job) ... ok\ntest_qc_fail_holds (__main__.V11.test_qc_fail_holds) ... ok\ntest_sandbox_endpoint_holds (__main__.V11.test_sandbox_endpoint_holds) ... ok\ntest_secret_never_persisted (__main__.V11.test_secret_never_persisted) ... ok\ntest_sha_mismatch_no_queue (__main__.V11.test_sha_mismatch_no_queue) ... ok\ntest_success_download_hash_qc_awaitfinal (__main__.V11.test_success_download_hash_qc_awaitfinal) ... ok\ntest_transient_retry_succeeds (__main__.V11.test_transient_retry_succeeds) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.036s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_v111.py",
+      "output": "test_aki_like_no_rerender (__main__.V111.test_aki_like_no_rerender) ... ok\ntest_approve_dispatches (__main__.V111.test_approve_dispatches) ... ok\ntest_auth_failure_holds (__main__.V111.test_auth_failure_holds) ... ok\ntest_duplicate_approve_single_dispatch (__main__.V111.test_duplicate_approve_single_dispatch) ... ok\ntest_existing_done_no_dispatch (__main__.V111.test_existing_done_no_dispatch) ... ok\ntest_existing_running_no_dispatch (__main__.V111.test_existing_running_no_dispatch) ... ok\ntest_no_approval_no_dispatch (__main__.V111.test_no_approval_no_dispatch) ... ok\ntest_no_dispatcher_safe (__main__.V111.test_no_dispatcher_safe) ... ok\ntest_reject_no_dispatch (__main__.V111.test_reject_no_dispatch) ... ok\ntest_secrets_not_persisted (__main__.V111.test_secrets_not_persisted) ... ok\ntest_sha_mismatch_no_dispatch (__main__.V111.test_sha_mismatch_no_dispatch) ... ok\ntest_transient_exhausted_holds (__main__.V111.test_transient_exhausted_holds) ... ok\ntest_transient_retry (__main__.V111.test_transient_retry) ... ok\ntest_workflow_dispatch_present (__main__.V111.test_workflow_dispatch_present) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.552s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_v112.py",
+      "output": "test_approve_autodispatches (__main__.V112.test_approve_autodispatches) ... ok\ntest_approve_records_authoritative (__main__.V112.test_approve_records_authoritative) ... ok\ntest_bad_signature_rejected (__main__.V112.test_bad_signature_rejected) ... ok\ntest_expired_rejected (__main__.V112.test_expired_rejected) ... ok\ntest_no_second_human_gate (__main__.V112.test_no_second_human_gate) ... ok\ntest_no_secret_in_client_surface (__main__.V112.test_no_secret_in_client_surface) ... ok\ntest_production_idempotency_intact (__main__.V112.test_production_idempotency_intact) ... ok\ntest_reject_records_no_dispatch (__main__.V112.test_reject_records_no_dispatch) ... ok\ntest_render_request_fields_safe (__main__.V112.test_render_request_fields_safe) ... ok\ntest_replay_idempotent (__main__.V112.test_replay_idempotent) ... ok\ntest_sha_mismatch_blocks (__main__.V112.test_sha_mismatch_blocks) ... ok\ntest_unauthorized_blocked (__main__.V112.test_unauthorized_blocked) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.015s\n\nOK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": "tests/test_visualizer_approval.py",
+      "output": "test_1_valid_signed_request_accepted_and_forwarded (__main__.T.test_1_valid_signed_request_accepted_and_forwarded) ... ok\ntest_2_invalid_signature_rejected (__main__.T.test_2_invalid_signature_rejected) ... ok\ntest_3_expired_request_rejected (__main__.T.test_3_expired_request_rejected) ... ok\ntest_4_replayed_nonce_idempotent_not_double_forwarded (__main__.T.test_4_replayed_nonce_idempotent_not_double_forwarded) ... ok\ntest_5_unauthorized_approver_rejected (__main__.T.test_5_unauthorized_approver_rejected) ... ok\ntest_6_reject_decision_records_without_forward (__main__.T.test_6_reject_decision_records_without_forward) ... ok\ntest_7_persistence_of_consumed_nonce_across_instances (__main__.T.test_7_persistence_of_consumed_nonce_across_instances) ... ok\ntest_r10_publish_and_scheduled_never_set (__main__.T.test_r10_publish_and_scheduled_never_set) ... ok\ntest_r1_make_200_deterministic_success (__main__.T.test_r1_make_200_deterministic_success) ... ok\ntest_r2_make_200_nonce_consumed_once (__main__.T.test_r2_make_200_nonce_consumed_once) ... ok\ntest_r3_make_409_replay_is_idempotent_success (__main__.T.test_r3_make_409_replay_is_idempotent_success) ... ok\ntest_r4_409_no_second_mutation_single_forward (__main__.T.test_r4_409_no_second_mutation_single_forward) ... ok\ntest_r5_timeout_fails_and_nonce_not_consumed (__main__.T.test_r5_timeout_fails_and_nonce_not_consumed) ... ok\ntest_r6_urlerror_fails_and_nonce_not_consumed (__main__.T.test_r6_urlerror_fails_and_nonce_not_consumed) ... ok\ntest_r7_make_500_fails_and_nonce_not_consumed (__main__.T.test_r7_make_500_fails_and_nonce_not_consumed) ... ok\ntest_r8_unrelated_4xx_not_false_success (__main__.T.test_r8_unrelated_4xx_not_false_success) ... ok\ntest_r9_duplicate_same_token_one_effective_mutation (__main__.T.test_r9_duplicate_same_token_one_effective_mutation) ... ok\ntest_s10_raised_httperror_409_exact_success_wrong_fails (__main__.T.test_s10_raised_httperror_409_exact_success_wrong_fails) ... ok\ntest_s11_failure_then_success_consumes_once (__main__.T.test_s11_failure_then_success_consumes_once) ... ok\ntest_s1_exact_body_is_idempotent_success (__main__.T.test_s1_exact_body_is_idempotent_success) ... ok\ntest_s2_whitespace_around_exact_body_success (__main__.T.test_s2_whitespace_around_exact_body_success) ... ok\ntest_s3_invalid_nonce_body_fails (__main__.T.test_s3_invalid_nonce_body_fails) ... ok\ntest_s4_replay_nonce_words_only_fails (__main__.T.test_s4_replay_nonce_words_only_fails) ... ok\ntest_s5_html_containing_nonce_fails (__main__.T.test_s5_html_containing_nonce_fails) ... ok\ntest_s6_empty_409_body_fails (__main__.T.test_s6_empty_409_body_fails) ... ok\ntest_s7_exact_plus_extra_text_fails (__main__.T.test_s7_exact_plus_extra_text_fails) ... ok\ntest_s8_case_altered_fails (__main__.T.test_s8_case_altered_fails) ... ok\ntest_s9_unrelated_409_fails (__main__.T.test_s9_unrelated_409_fails) ... ok\ntest_u1_raised_httperror_409_replay_does_not_escape (__main__.T.test_u1_raised_httperror_409_replay_does_not_escape) ... ok\ntest_u2_raised_httperror_409_unrelated_fails (__main__.T.test_u2_raised_httperror_409_unrelated_fails) ... ok\ntest_u3_raised_httperror_400_fails (__main__.T.test_u3_raised_httperror_400_fails) ... ok\ntest_u4_raised_httperror_500_fails (__main__.T.test_u4_raised_httperror_500_fails) ... ok\ntest_u5_http_post_json_converts_httperror_to_tuple (__main__.T.test_u5_http_post_json_converts_httperror_to_tuple) ... ok\n\n----------------------------------------------------------------------\nRan 33 tests in 0.007s\n\nOK\n"
+    }
+  ],
+  "tested_sha": "ab76ed9bde2d2d2449d4d66e764f5e72a2e4e84a",
+  "total": 49,
+  "tracked_worktree_clean": true,
+  "untracked_runtime_files": []
+}
