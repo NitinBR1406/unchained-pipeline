@@ -1,0 +1,15 @@
+{
+  "frozen_scope_unchanged": true,
+  "prior_manifest_entries_verified": 151,
+  "all_prior_manifest_entries_passed": true,
+  "no_duplicate_authoritative_temporal_live_run": true,
+  "actual_cli_write_dispatches": 1,
+  "cleanup": "Disposable candidate regression clone and original temporary runtime removed after hash-verified persistent migration.",
+  "implementation_sha": "2aa92f3d0c36f4f85bc8c96f185980f2282368e7",
+  "source_files": {
+    "p0e4/controller/engineering.py": "ac3f09637fdb5a9b6a8621740de39bc5d24ba5d9f0ea607a718d81c7666ff02e",
+    "p0e4/controller/project_v11.py": "3927b62afc4f0ad4057882633bebeaa008b7d72aa09ce7baba534a254427b435",
+    "p0e4/tests/test_engineering_executor.py": "5553dcd95e86cc0a99037b1399691f6eb07f86e9ac01cc0c317503329c2ce4f6",
+    "p0e4/tests/test_engineering_projection.py": "b06417184eb36ff73384ae6584ee4762cb300e6e6cdaf8ea6d6597114764aaa0"
+  }
+}

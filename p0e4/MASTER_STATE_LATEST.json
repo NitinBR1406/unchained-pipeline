@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "master_state_version": "V11",
+  "state_version": 16,
+  "path": "p0e4/evidence/executor_v11/UNCHAINED_MASTER_PROJECT_STATE_V11.json",
+  "sha256": "fa152db2f2b68abbc7963e3815a337759c4d8343f2dacff60df3c5b7065e49f1",
+  "tested_sha": "2aa92f3d0c36f4f85bc8c96f185980f2282368e7",
+  "evidence_manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+  "scope_status": "GREEN_SINGLE_HOST_BOUNDED_WRITE_SLICE",
+  "production_e2e_status": "BLOCKED_NOT_GREEN"
+}

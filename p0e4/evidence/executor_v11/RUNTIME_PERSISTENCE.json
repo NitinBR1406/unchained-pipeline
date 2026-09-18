@@ -1,0 +1,10 @@
+{
+  "status": "VERIFIED",
+  "location": "repository Git common directory / p0e4-executor-runtime / EC_V11_RECEIPT_SCHEMA",
+  "byte_identical_migration": true,
+  "post_migration_queue_completed": 1,
+  "new_dispatches": 0,
+  "new_commits": 0,
+  "recovery_requires_registry_and_runtime": true,
+  "portable_evidence_snapshot": "runtime/"
+}

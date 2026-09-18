@@ -1,0 +1,13 @@
+{
+  "remote_ref": "origin/p0e4/slice1-production-handoff",
+  "remote_head": "dd255c450639587a6574211cdb7fad30960fe2d1",
+  "v10_commit": "533b640fb0b5c4792f3ae0ee602ee12ef4d4da51",
+  "v10_ancestor": true,
+  "state_version": 15,
+  "state_sha256": "aaf49a4f158039a14af587845300e1775d0c1b5036e6acc62efcbcd59d330042",
+  "manifest_entries_verified": 42,
+  "clean_checkout": "/var/folders/tz/gk0spkg11t56hvttd34wd_cc0000gn/T/p0e4-v10-remote-a_nw9l7c/checkout",
+  "checkout_method": "independent no-hardlinks clone of fetched object database, detached at fetched remote HEAD",
+  "clean": true,
+  "status": "REMOTE_V10_VERIFIED"
+}

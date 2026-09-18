@@ -1,6 +1,32 @@
+## Latest authoritative engineering state: V11 / state_version 16
+
+Machine-readable discovery: [MASTER_STATE_LATEST.json](MASTER_STATE_LATEST.json).
+State: [V11](evidence/executor_v11/UNCHAINED_MASTER_PROJECT_STATE_V11.json).
+Evidence: [acceptance](evidence/executor_v11/ACCEPTANCE.json),
+[remote V10 reconciliation](evidence/executor_v11/REMOTE_V10_VERIFICATION.json),
+[manifest](evidence/executor_v11/SHA256SUMS.txt).
+
+V10 was verified from the fetched remote branch in an independent clean checkout:
+commit `533b640fb0b5c4792f3ae0ee602ee12ef4d4da51`, state 15, 42 manifest entries.
+There was no missing V10 push; connector retrieval failure cause is not established.
+
+V11 proves one actual isolated Codex write task, independent output validation,
+45/45 candidate regressions, automatic deterministic commit and remote push at
+`e2e0b69edc352cb88919cea0080184923c3edf0a`. Final executor/reducer code was
+verified with 46/46 suites at `2aa92f3d0c36f4f85bc8c96f185980f2282368e7`.
+Restart/replay produced no additional dispatch or commit. The READY queue drains
+without human handoff; its current approved fixture task is completed. Runtime
+recovery data is in repository Git metadata and snapshotted into evidence.
+
+GREEN is scoped to a single-host bounded JSON-contract writer. General-purpose
+code execution, production integration, daemon operation and multi-host guarantees
+are not claimed. Remaining production work depends on the existing external/human
+gates recorded in NEXT_READY_REVIEW.json. Frozen components and all publication /
+deployment gates remain unchanged.
+
 # P0-E4 — production integration and release orchestration
 
-## Current controller slice — V10 / state_version 15
+## Previous controller slice — V10 / state_version 15
 
 [Acceptance](evidence/controller_v10/ACCEPTANCE.json),
 [Master State V10](evidence/controller_v10/UNCHAINED_MASTER_PROJECT_STATE_V10.json),
