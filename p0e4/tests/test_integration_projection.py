@@ -11,6 +11,18 @@ from integration import project_v09 as p
 from integration.contracts import digest
 
 class ProjectionTests(unittest.TestCase):
+    def test_relative_cli_output_and_idempotent_persist(self):
+        with tempfile.TemporaryDirectory(dir=p.ROOT) as directory:
+            out=Path(directory)
+            (out/'REGRESSION.json').write_text(json.dumps({'tested_sha':'a'*40,
+                'tracked_worktree_clean':True,'untracked_runtime_files':[],
+                'passed':1,'total':1,'prior_manifests':[]}))
+            relative=str(out.relative_to(p.ROOT))
+            p.main(relative,'2026-09-18T17:00:00Z')
+            first=(out/'UNCHAINED_MASTER_PROJECT_STATE_V09.json').read_bytes()
+            p.main(relative,'2026-09-18T17:00:00Z')
+            self.assertEqual(first,(out/'UNCHAINED_MASTER_PROJECT_STATE_V09.json').read_bytes())
+
     def test_additive_replay_preserves_all_gates(self):
         with tempfile.TemporaryDirectory() as directory:
             path=Path(directory)/'ledger';path.write_bytes(p.PREFIX.read_bytes())

@@ -64,7 +64,7 @@ def persist(path,raw):
 
 
 def main(directory,at):
-    out=Path(directory)
+    out=Path(directory).resolve()
     regression=json.loads((out/'REGRESSION.json').read_text())
     require(regression['tracked_worktree_clean'] is True and regression['untracked_runtime_files']==[], 'exact committed source required')
     require(regression['passed']==regression['total'] and all(x['pass'] for x in regression['prior_manifests']), 'regression not passed')
