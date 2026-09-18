@@ -1,0 +1,100 @@
+{
+  "accepted_ledger_prefix_unchanged": true,
+  "all_prior_manifest_entries_pass": true,
+  "archive_scope": "V09 evidence files except SHA256SUMS.txt and PERSISTENCE_RECEIPTS.json; final manifest and receipt are repository sidecars",
+  "ci": "Final evidence commit uses [skip ci] to prevent the existing push-triggered disposable live integration from running again; no workflow dispatch",
+  "cleanup": "Temporary test and smoke directories removed automatically; isolated test Python remains disposable cache",
+  "deterministic_replay_byte_identical": true,
+  "files_changed_outside_p0e4": false,
+  "frozen_components_changed": false,
+  "new_authoritative_live_runs": 0,
+  "prior_manifest_entries_verified": 90,
+  "production_deployed": false,
+  "publication_performed": false,
+  "real_aki_release_status": "BLOCKED_NOT_GREEN",
+  "regression_suites_passed": 42,
+  "regression_suites_total": 42,
+  "reproduce": [
+    "python p0e4/integration/build_evidence.py p0e4/evidence/integration_v09 --at 2026-09-18T20:01:52Z",
+    "python p0e4/integration/project_v09.py p0e4/evidence/integration_v09 --at 2026-09-18T20:01:52Z"
+  ],
+  "rights_router_status": "OFFLINE_VERIFIED_NOT_LIVE_ACCEPTED",
+  "runtime_human_approval_store_modified": false,
+  "source_files": [
+    {
+      "path": "p0e4/integration/CONTRACTS.md",
+      "sha256": "dbe2509b63f72ee425e8b98ccea4e0d977ff623f2808d19c5ddad0eb9b42d7e1"
+    },
+    {
+      "path": "p0e4/integration/__init__.py",
+      "sha256": "4b064a3d25f9731ae1f92dfc7f72bf5cd65c93663ae60160702bb0783f3caf0f"
+    },
+    {
+      "path": "p0e4/integration/build_evidence.py",
+      "sha256": "d7feba068808e80244abf49e580a8ddcb24f7437bb2fbd985e39e965819fcd7a"
+    },
+    {
+      "path": "p0e4/integration/contracts.py",
+      "sha256": "0e94f09b614446cbc74b2f28580ae4b322c58d2754af30a21aeb404064df8cbc"
+    },
+    {
+      "path": "p0e4/integration/existing_system.py",
+      "sha256": "b645699cbc2c29f6cf343a410ccfa940093e40754992260aa160a8e7a3c66e24"
+    },
+    {
+      "path": "p0e4/integration/fixtures.py",
+      "sha256": "1da23426cf12246221fc354f1ade782f6b86e935b53dfe7962871e90d384059b"
+    },
+    {
+      "path": "p0e4/integration/ingest.py",
+      "sha256": "46af0d78f3c3080cd8a571d61b5130e165b847500ad4788c3f920f2579523c4c"
+    },
+    {
+      "path": "p0e4/integration/pipeline.py",
+      "sha256": "ec22e056ea5f44ff8f8f87f749984382ccb2a541b4a276ee62c49d7df9c1c318"
+    },
+    {
+      "path": "p0e4/integration/project_v09.py",
+      "sha256": "ceec21b9901409904d8d3f0153e7ae319fa2919453367acd4dc8ad474edec895"
+    },
+    {
+      "path": "p0e4/integration/rights.py",
+      "sha256": "984f30f2d3412948defc9d37f393bc19fab3911681e229b12f2ef59e726e1bc2"
+    },
+    {
+      "path": "p0e4/integration/verify.py",
+      "sha256": "5b3d81c2189e7f9628b0e18ee581d43ffd33f081aed66a5c4d02ddbf17e0383f"
+    },
+    {
+      "path": "p0e4/tests/test_handoff.py",
+      "sha256": "8a2db6659e68ce367d84ef8190bf322c1b1dd9a91abe6e631efa63342b715bff"
+    },
+    {
+      "path": "p0e4/tests/test_integration_contracts.py",
+      "sha256": "90fce02827fd3a98e56cc23c41220fe0664f5c86f52f81b8033aa03e4a731602"
+    },
+    {
+      "path": "p0e4/tests/test_integration_ingest.py",
+      "sha256": "78e6889fbf3d4458741f703b1b8ad2d06b461f50258b885b3d189738c60ac3f0"
+    },
+    {
+      "path": "p0e4/tests/test_integration_projection.py",
+      "sha256": "77c079c8e25724101a449078c128e03a397070fac214a00828e365659d2c779c"
+    },
+    {
+      "path": "p0e4/tests/test_release.py",
+      "sha256": "b671478639c1ea61de6be4982d5266160cde4f077c69d26eaa80329d37249c91"
+    },
+    {
+      "path": "p0e4/tests/test_rights_router.py",
+      "sha256": "74f77522b2ea0bbde58e62933a6dd12469fda3efc4c9deb3c1c273a43fe10516"
+    },
+    {
+      "path": "p0e4/tests/test_state_update.py",
+      "sha256": "d0626253aaf3acd695bb5086d39d565b9b673306ba92315f3f3f8012aad7af2a"
+    }
+  ],
+  "state_version": 14,
+  "tested_sha": "4d22c8a70a60897173fbdf72d94a5c7f428ed765",
+  "tranche2": "Existing repository wrapper and package/edit contracts implemented and tested; external transports not established"
+}

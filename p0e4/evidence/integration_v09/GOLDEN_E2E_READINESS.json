@@ -1,0 +1,27 @@
+{
+  "authoritative_audio_file_id": null,
+  "authoritative_audio_sha256": null,
+  "available_proofs": [
+    "RAW metadata discovered in authoritative Drive folder",
+    "V08 exact master/derivative SHA and historic decode evidence",
+    "New offline contract/rights/ingest/wrapper tests"
+  ],
+  "content_id": "aakhri-ishq",
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "missing": [
+    "Verified RAW/audio SHA pair",
+    "Authenticated Gemini intelligence response",
+    "Authenticated Claude execution receipt and rendered assets",
+    "Independent full Gemini QC",
+    "Campaign-specific rights coverage",
+    "Exact package final review"
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "publish_ready": false,
+  "raw_source_file_id": "1Uk6Ru7wtU1Y3aCeOdYQwPhuTojHzDgN6",
+  "raw_source_name": "AKI_SOURCE_0902_V01.mov",
+  "raw_source_sha256": null,
+  "status": "BLOCKED_NOT_GREEN",
+  "target_terminal": "WAITING_FOR_NITIN_PUBLISH_APPROVAL"
+}

@@ -1,0 +1,41 @@
+{
+  "content_id": "TEST_ONLY_GOLDEN",
+  "created_at": "2026-09-18T17:00:00Z",
+  "evidence_refs": [
+    {
+      "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+      "uri": "fixture/evidence"
+    }
+  ],
+  "inputs": [
+    {
+      "role": "master",
+      "sha256": "130b23da36a25608b0c13e16af9ec0ea39219b8504d4e8fcc0d1961f6c1346cb",
+      "uri": "fixture/master"
+    }
+  ],
+  "package_id": "TEST_ONLY_INDEPENDENT_QC_PACKAGE",
+  "payload": {
+    "checked_assets": [
+      "130b23da36a25608b0c13e16af9ec0ea39219b8504d4e8fcc0d1961f6c1346cb"
+    ],
+    "checks": {
+      "audio": "PASS",
+      "full_motion": "PASS",
+      "lipsync": "PASS",
+      "look_match": "PASS",
+      "performance_rule": "PASS",
+      "platform_safe_area": "PASS",
+      "technical": "PASS"
+    },
+    "production_package_sha256": "5fcf5f487d32742948f3ecf3cb21b14ea754f7309ab706094039d6c7ebfeed87",
+    "verdict": "PASS"
+  },
+  "producer": {
+    "agent": "TEST_ONLY_GEMINI_QC",
+    "model": null,
+    "run_id": "TEST_ONLY_TEST_ONLY_GEMINI_QC"
+  },
+  "schema": "INDEPENDENT_QC_PACKAGE",
+  "schema_version": 1
+}

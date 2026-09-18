@@ -1,0 +1,369 @@
+{
+  "assets_in_review": [
+    {
+      "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+      "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+      "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1"
+    },
+    {
+      "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+      "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+      "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488"
+    },
+    {
+      "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+      "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+      "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c"
+    },
+    {
+      "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+      "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+      "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533"
+    }
+  ],
+  "content_id": "aakhri-ishq",
+  "evaluated_at": "2026-09-18T20:01:52Z",
+  "no_contact_purchase_or_upload": true,
+  "no_new_approval": true,
+  "rights_reviewer_keys_provisioned": false,
+  "rows": [
+    {
+      "blockers": [
+        "NO_VERIFIED_CAMPAIGN_CLEARANCE",
+        "RELEASE_SCOPE_NOT_ESTABLISHED"
+      ],
+      "composition": "NOT_ESTABLISHED",
+      "content_id_outcome": "UNKNOWN",
+      "existing_campaign_target": true,
+      "licence_evidence": "NOT_AVAILABLE",
+      "lyrics": "NOT_ESTABLISHED",
+      "pass": false,
+      "platform": "youtube_hero",
+      "recording_origin": "OWN_PRODUCTION_OWNER_ATTESTATION_ONLY",
+      "router_result": {
+        "grant_ids": [],
+        "pass": false,
+        "publish_authorized": false,
+        "reasons": [
+          "INVALID_OR_UNAVAILABLE_RIGHTS_EVIDENCE"
+        ],
+        "request_sha256": null,
+        "schema_version": 1,
+        "status": "RIGHTS_HOLD"
+      },
+      "scope": {
+        "account_id": null,
+        "monetized": null,
+        "territories": null,
+        "use": null
+      },
+      "source_evidence_refs": [
+        {
+          "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01",
+          "uri": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json"
+        },
+        {
+          "sha256": "6183c9dfff16cae907c095403408d3f4ca378da966d25a4150a5b59ca8bb0e2b",
+          "uri": "p0e4/evidence/human_binding/RIGHTS_MATRIX.json"
+        }
+      ],
+      "status": "RIGHTS_HOLD"
+    },
+    {
+      "blockers": [
+        "NO_VERIFIED_CAMPAIGN_CLEARANCE",
+        "RELEASE_SCOPE_NOT_ESTABLISHED"
+      ],
+      "composition": "NOT_ESTABLISHED",
+      "content_id_outcome": "UNKNOWN",
+      "existing_campaign_target": true,
+      "licence_evidence": "NOT_AVAILABLE",
+      "lyrics": "NOT_ESTABLISHED",
+      "pass": false,
+      "platform": "youtube_shorts",
+      "recording_origin": "OWN_PRODUCTION_OWNER_ATTESTATION_ONLY",
+      "router_result": {
+        "grant_ids": [],
+        "pass": false,
+        "publish_authorized": false,
+        "reasons": [
+          "INVALID_OR_UNAVAILABLE_RIGHTS_EVIDENCE"
+        ],
+        "request_sha256": null,
+        "schema_version": 1,
+        "status": "RIGHTS_HOLD"
+      },
+      "scope": {
+        "account_id": null,
+        "monetized": null,
+        "territories": null,
+        "use": null
+      },
+      "source_evidence_refs": [
+        {
+          "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01",
+          "uri": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json"
+        },
+        {
+          "sha256": "6183c9dfff16cae907c095403408d3f4ca378da966d25a4150a5b59ca8bb0e2b",
+          "uri": "p0e4/evidence/human_binding/RIGHTS_MATRIX.json"
+        }
+      ],
+      "status": "RIGHTS_HOLD"
+    },
+    {
+      "blockers": [
+        "NO_VERIFIED_CAMPAIGN_CLEARANCE",
+        "RELEASE_SCOPE_NOT_ESTABLISHED"
+      ],
+      "composition": "NOT_ESTABLISHED",
+      "content_id_outcome": "UNKNOWN",
+      "existing_campaign_target": true,
+      "licence_evidence": "NOT_AVAILABLE",
+      "lyrics": "NOT_ESTABLISHED",
+      "pass": false,
+      "platform": "instagram_reels",
+      "recording_origin": "OWN_PRODUCTION_OWNER_ATTESTATION_ONLY",
+      "router_result": {
+        "grant_ids": [],
+        "pass": false,
+        "publish_authorized": false,
+        "reasons": [
+          "INVALID_OR_UNAVAILABLE_RIGHTS_EVIDENCE"
+        ],
+        "request_sha256": null,
+        "schema_version": 1,
+        "status": "RIGHTS_HOLD"
+      },
+      "scope": {
+        "account_id": null,
+        "monetized": null,
+        "territories": null,
+        "use": null
+      },
+      "source_evidence_refs": [
+        {
+          "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01",
+          "uri": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json"
+        },
+        {
+          "sha256": "6183c9dfff16cae907c095403408d3f4ca378da966d25a4150a5b59ca8bb0e2b",
+          "uri": "p0e4/evidence/human_binding/RIGHTS_MATRIX.json"
+        }
+      ],
+      "status": "RIGHTS_HOLD"
+    },
+    {
+      "blockers": [
+        "NO_VERIFIED_CAMPAIGN_CLEARANCE",
+        "RELEASE_SCOPE_NOT_ESTABLISHED"
+      ],
+      "composition": "NOT_ESTABLISHED",
+      "content_id_outcome": "UNKNOWN",
+      "existing_campaign_target": true,
+      "licence_evidence": "NOT_AVAILABLE",
+      "lyrics": "NOT_ESTABLISHED",
+      "pass": false,
+      "platform": "instagram_feed",
+      "recording_origin": "OWN_PRODUCTION_OWNER_ATTESTATION_ONLY",
+      "router_result": {
+        "grant_ids": [],
+        "pass": false,
+        "publish_authorized": false,
+        "reasons": [
+          "INVALID_OR_UNAVAILABLE_RIGHTS_EVIDENCE"
+        ],
+        "request_sha256": null,
+        "schema_version": 1,
+        "status": "RIGHTS_HOLD"
+      },
+      "scope": {
+        "account_id": null,
+        "monetized": null,
+        "territories": null,
+        "use": null
+      },
+      "source_evidence_refs": [
+        {
+          "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01",
+          "uri": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json"
+        },
+        {
+          "sha256": "6183c9dfff16cae907c095403408d3f4ca378da966d25a4150a5b59ca8bb0e2b",
+          "uri": "p0e4/evidence/human_binding/RIGHTS_MATRIX.json"
+        }
+      ],
+      "status": "RIGHTS_HOLD"
+    },
+    {
+      "blockers": [
+        "NO_VERIFIED_CAMPAIGN_CLEARANCE",
+        "RELEASE_SCOPE_NOT_ESTABLISHED"
+      ],
+      "composition": "NOT_ESTABLISHED",
+      "content_id_outcome": "UNKNOWN",
+      "existing_campaign_target": true,
+      "licence_evidence": "NOT_AVAILABLE",
+      "lyrics": "NOT_ESTABLISHED",
+      "pass": false,
+      "platform": "instagram_stories",
+      "recording_origin": "OWN_PRODUCTION_OWNER_ATTESTATION_ONLY",
+      "router_result": {
+        "grant_ids": [],
+        "pass": false,
+        "publish_authorized": false,
+        "reasons": [
+          "INVALID_OR_UNAVAILABLE_RIGHTS_EVIDENCE"
+        ],
+        "request_sha256": null,
+        "schema_version": 1,
+        "status": "RIGHTS_HOLD"
+      },
+      "scope": {
+        "account_id": null,
+        "monetized": null,
+        "territories": null,
+        "use": null
+      },
+      "source_evidence_refs": [
+        {
+          "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01",
+          "uri": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json"
+        },
+        {
+          "sha256": "6183c9dfff16cae907c095403408d3f4ca378da966d25a4150a5b59ca8bb0e2b",
+          "uri": "p0e4/evidence/human_binding/RIGHTS_MATRIX.json"
+        }
+      ],
+      "status": "RIGHTS_HOLD"
+    },
+    {
+      "blockers": [
+        "NO_VERIFIED_CAMPAIGN_CLEARANCE",
+        "RELEASE_SCOPE_NOT_ESTABLISHED"
+      ],
+      "composition": "NOT_ESTABLISHED",
+      "content_id_outcome": "UNKNOWN",
+      "existing_campaign_target": true,
+      "licence_evidence": "NOT_AVAILABLE",
+      "lyrics": "NOT_ESTABLISHED",
+      "pass": false,
+      "platform": "facebook_reels",
+      "recording_origin": "OWN_PRODUCTION_OWNER_ATTESTATION_ONLY",
+      "router_result": {
+        "grant_ids": [],
+        "pass": false,
+        "publish_authorized": false,
+        "reasons": [
+          "INVALID_OR_UNAVAILABLE_RIGHTS_EVIDENCE"
+        ],
+        "request_sha256": null,
+        "schema_version": 1,
+        "status": "RIGHTS_HOLD"
+      },
+      "scope": {
+        "account_id": null,
+        "monetized": null,
+        "territories": null,
+        "use": null
+      },
+      "source_evidence_refs": [
+        {
+          "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01",
+          "uri": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json"
+        },
+        {
+          "sha256": "6183c9dfff16cae907c095403408d3f4ca378da966d25a4150a5b59ca8bb0e2b",
+          "uri": "p0e4/evidence/human_binding/RIGHTS_MATRIX.json"
+        }
+      ],
+      "status": "RIGHTS_HOLD"
+    },
+    {
+      "blockers": [
+        "NO_VERIFIED_CAMPAIGN_CLEARANCE",
+        "RELEASE_SCOPE_NOT_ESTABLISHED"
+      ],
+      "composition": "NOT_ESTABLISHED",
+      "content_id_outcome": "UNKNOWN",
+      "existing_campaign_target": true,
+      "licence_evidence": "NOT_AVAILABLE",
+      "lyrics": "NOT_ESTABLISHED",
+      "pass": false,
+      "platform": "tiktok",
+      "recording_origin": "OWN_PRODUCTION_OWNER_ATTESTATION_ONLY",
+      "router_result": {
+        "grant_ids": [],
+        "pass": false,
+        "publish_authorized": false,
+        "reasons": [
+          "INVALID_OR_UNAVAILABLE_RIGHTS_EVIDENCE"
+        ],
+        "request_sha256": null,
+        "schema_version": 1,
+        "status": "RIGHTS_HOLD"
+      },
+      "scope": {
+        "account_id": null,
+        "monetized": null,
+        "territories": null,
+        "use": null
+      },
+      "source_evidence_refs": [
+        {
+          "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01",
+          "uri": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json"
+        },
+        {
+          "sha256": "6183c9dfff16cae907c095403408d3f4ca378da966d25a4150a5b59ca8bb0e2b",
+          "uri": "p0e4/evidence/human_binding/RIGHTS_MATRIX.json"
+        }
+      ],
+      "status": "RIGHTS_HOLD"
+    },
+    {
+      "blockers": [
+        "NO_VERIFIED_CAMPAIGN_CLEARANCE",
+        "RELEASE_SCOPE_NOT_ESTABLISHED"
+      ],
+      "composition": "NOT_ESTABLISHED",
+      "content_id_outcome": "UNKNOWN",
+      "existing_campaign_target": false,
+      "licence_evidence": "NOT_AVAILABLE",
+      "lyrics": "NOT_ESTABLISHED",
+      "pass": false,
+      "platform": "x",
+      "recording_origin": "OWN_PRODUCTION_OWNER_ATTESTATION_ONLY",
+      "router_result": {
+        "grant_ids": [],
+        "pass": false,
+        "publish_authorized": false,
+        "reasons": [
+          "INVALID_OR_UNAVAILABLE_RIGHTS_EVIDENCE"
+        ],
+        "request_sha256": null,
+        "schema_version": 1,
+        "status": "RIGHTS_HOLD"
+      },
+      "scope": {
+        "account_id": null,
+        "monetized": null,
+        "territories": null,
+        "use": null
+      },
+      "source_evidence_refs": [
+        {
+          "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01",
+          "uri": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json"
+        },
+        {
+          "sha256": "6183c9dfff16cae907c095403408d3f4ca378da966d25a4150a5b59ca8bb0e2b",
+          "uri": "p0e4/evidence/human_binding/RIGHTS_MATRIX.json"
+        }
+      ],
+      "status": "RIGHTS_HOLD"
+    }
+  ],
+  "schema_version": 1,
+  "status": "RIGHTS_HOLD"
+}

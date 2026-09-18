@@ -1,5 +1,35 @@
 # P0-E4 — production integration and release orchestration
 
+## Current integration tranche — V09 / state_version 14
+
+[Verification](evidence/integration_v09/VERIFICATION.json),
+[Master State V09](evidence/integration_v09/UNCHAINED_MASTER_PROJECT_STATE_V09.json),
+[rights matrix](evidence/integration_v09/RIGHTS_MATRIX.json),
+[licensing action packet](evidence/integration_v09/LICENSING_ACTION_PACKET.md),
+[capability setup packet](evidence/integration_v09/HUMAN_ACTION_PACKET.json).
+
+42/42 offline suites pass on exact implementation SHA
+`4d22c8a70a60897173fbdf72d94a5c7f428ed765`. Prior manifests verify; the appended
+EVIDENCE_REGISTERED event yields V09/state_version 14 through the frozen reducer.
+Replay is byte-identical. No frozen P0-E0–E3 files or runtime human grants changed.
+
+Additions: fail-closed signed rights-review routing with immediate revocation and
+scope checks; eight-target Aakhri Ishq matrix (seven current targets plus X review
+only); source-backed unsent licensing packet; wrapper reusing existing
+`unpipe.adapters.PackagingEngine.build`; three strict package contracts with verified
+SHA lineage and authenticated-producer boundary; timestamp edit plans with hard 80%
+performance constraint; hash-bound RAW/audio intake; TEST_ONLY Golden hard-stop tests.
+
+This is offline engineering evidence, not real Gemini/Claude execution, a new render,
+legal clearance or real Golden E2E acceptance. Existing Claude external service is not
+established; no service was rebuilt. RAW metadata was located in Drive, but a verified
+RAW/audio pair and authenticated intelligence/production/QC are still required.
+`RIGHTS_HOLD` and `BLOCKED_NOT_GREEN` remain. Production/publication false; First Real
+Poster paused. The terminal target remains WAITING_FOR_NITIN_PUBLISH_APPROVAL.
+
+No new authoritative live run was dispatched. The evidence push is marked [skip ci]
+to avoid repeating the existing push-triggered disposable integration workflow.
+
 ## Current follow-up — V08 / state_version 13
 
 [Human review](evidence/human_binding/HUMAN_REVIEW.md),

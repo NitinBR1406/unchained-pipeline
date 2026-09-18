@@ -1,0 +1,49 @@
+{
+  "content_id": "TEST_ONLY_GOLDEN",
+  "created_at": "2026-09-18T17:00:00Z",
+  "evidence_refs": [
+    {
+      "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+      "uri": "fixture/evidence"
+    }
+  ],
+  "inputs": [
+    {
+      "role": "raw_video",
+      "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+      "uri": "fixture/raw"
+    },
+    {
+      "role": "authoritative_audio",
+      "sha256": "10c2bfd8e05bf892c38eb5edbc5521a9526155c397e5dd489f0f31f4114ebb62",
+      "uri": "fixture/audio"
+    }
+  ],
+  "package_id": "TEST_ONLY_PRODUCTION_RELEASE_PACKAGE",
+  "payload": {
+    "creative_package_sha256": "cd89dc75ad5be5c0cb2686bad66e4e6a8865f5585eecb8527ff5001a4467684f",
+    "edit_plan_sha256": "a747f7431b3d9c4e997ff3c49e4a3fa341855b0c4c3f416e26dd133de09992a6",
+    "outputs": [
+      {
+        "role": "master",
+        "sha256": "130b23da36a25608b0c13e16af9ec0ea39219b8504d4e8fcc0d1961f6c1346cb",
+        "uri": "fixture/master"
+      }
+    ],
+    "platforms": [
+      {
+        "asset_sha256": "130b23da36a25608b0c13e16af9ec0ea39219b8504d4e8fcc0d1961f6c1346cb",
+        "caption": "TEST_ONLY",
+        "platform": "youtube_hero",
+        "title": "TEST_ONLY"
+      }
+    ]
+  },
+  "producer": {
+    "agent": "TEST_ONLY_CLAUDE",
+    "model": null,
+    "run_id": "TEST_ONLY_TEST_ONLY_CLAUDE"
+  },
+  "schema": "PRODUCTION_RELEASE_PACKAGE",
+  "schema_version": 1
+}

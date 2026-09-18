@@ -1,0 +1,95 @@
+{
+  "cleanup": "Temporary fixture directory automatically removed",
+  "external_agent_executed": false,
+  "external_side_effect_count": 0,
+  "fixture": "TEST_ONLY_NOT_REAL_AKHRI_ISHQ",
+  "ingestion": {
+    "assets": [
+      {
+        "role": "raw_video",
+        "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+        "uri": "fixture/raw"
+      },
+      {
+        "role": "authoritative_audio",
+        "sha256": "10c2bfd8e05bf892c38eb5edbc5521a9526155c397e5dd489f0f31f4114ebb62",
+        "uri": "fixture/audio"
+      }
+    ],
+    "content_id": "TEST_ONLY_GOLDEN",
+    "publication_authorized": false,
+    "received_at": "2026-09-18T17:00:00Z",
+    "schema_version": 1,
+    "status": "INGEST_VERIFIED_BYTES",
+    "technical_decode": "NOT_PERFORMED"
+  },
+  "package_chain_verified": true,
+  "positive_human_wait_boundary": "Exercised separately in test_rights_router.py with ephemeral TEST_ONLY reviewer and verifier double",
+  "real_media_decode": false,
+  "result": {
+    "blockers": [
+      "RIGHTS_HOLD:youtube_hero",
+      "NITIN_FINAL_ASSET_VIDEO_AND_RELEASE_REVIEW_REQUIRED"
+    ],
+    "external_side_effect_count": 0,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "handoff": {
+      "content_id": "TEST_ONLY_GOLDEN",
+      "execution_blockers": [
+        "AUTHENTICATED_CLAUDE_CAPABILITY_NOT_ESTABLISHED",
+        "PRODUCTION_DEPLOYMENT_NOT_AUTHORIZED"
+      ],
+      "existing_system_draft": {
+        "campaign_id": "TEST_ONLY_GOLDEN",
+        "generated_at": "2026-09-18T17:00:00Z",
+        "packages": [
+          {
+            "approval_status": "PENDING",
+            "asset": "TEST_ONLY_GOLDEN:youtube_hero",
+            "asset_sha256": "130b23da36a25608b0c13e16af9ec0ea39219b8504d4e8fcc0d1961f6c1346cb",
+            "caption": "TEST_ONLY",
+            "cover_frame": null,
+            "cta": null,
+            "description": null,
+            "hashtags": [],
+            "platform": "youtube_hero",
+            "publish_datetime": null,
+            "rights_status": "RIGHTS_HOLD",
+            "thumbnail": null,
+            "title": "TEST_ONLY"
+          }
+        ],
+        "status": "ADAPTER_READY"
+      },
+      "external_side_effect_count": 0,
+      "idempotency_key": "5fcf5f487d32742948f3ecf3cb21b14ea754f7309ab706094039d6c7ebfeed87",
+      "production_package_sha256": "5fcf5f487d32742948f3ecf3cb21b14ea754f7309ab706094039d6c7ebfeed87",
+      "schema_version": 1,
+      "status": "PREPARED_NOT_DISPATCHED"
+    },
+    "hard_stop": true,
+    "next_gate": "NITIN_PUBLISH_APPROVAL",
+    "platforms": [
+      {
+        "platform": "youtube_hero",
+        "rights": {
+          "grant_ids": [],
+          "pass": false,
+          "publish_authorized": false,
+          "reasons": [
+            "NO_VERIFIED_APPLICABLE_CLEARANCE"
+          ],
+          "request_sha256": "dc9180c9450b32eb19c5c6353317f2c51a5a1561859a5ccc4d919bf3c560c307",
+          "schema_version": 1,
+          "status": "RIGHTS_HOLD"
+        }
+      }
+    ],
+    "production_deployment_authorized": false,
+    "production_package_sha256": "5fcf5f487d32742948f3ecf3cb21b14ea754f7309ab706094039d6c7ebfeed87",
+    "publication_authorized": false,
+    "publish_ready": false,
+    "schema_version": 1,
+    "status": "BLOCKED"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "CAPABILITY_SETUP_REQUIRED",
+  "setup_actions": [
+    "Expose the EXISTING Claude Social Media Post System through an authenticated non-publishing handoff capability; provide its versioned input/output contract or source location. Repository packaging and production components have already been inventoried and wrapped. Do not rebuild or activate Make P1.",
+    "Connect Gemini intelligence and independent QC with authenticated run receipts, exact content/asset hashes and evidence storage. Provision any provider-required credentials only in the approved secret manager; no credential values in chat or repository.",
+    "Bind the authoritative separate audio asset and RAW source to SHA256 for the real Golden E2E input. The RAW file is located in Drive; a separately authoritative audio file has not been established in the inspected source/config folders.",
+    "For rights-review integration, provision trusted reviewer PUBLIC keys and supply actual reviewed licence/source evidence. No signing key or rights grant was created for Aakhri Ishq."
+  ],
+  "secret_names": [],
+  "secret_name_note": "Exact Gemini/Claude secret names depend on the existing integration contract, which is not available. No names or values invented. Existing Shotstack secret name is documented in the inventory source but is not requested for this non-rendering tranche.",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

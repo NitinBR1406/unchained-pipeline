@@ -1,0 +1,13 @@
+{
+  "all_archive_members_match_repository_evidence": true,
+  "archive_file_id": "1N0F2pvEjf8RGt89eVsLPMIyHkYMXoM03",
+  "archive_readback_byte_identical": true,
+  "archive_scope": "All V09 evidence before repository-side SHA256SUMS.txt and this receipt; excludes those two sidecars to avoid circular hashing",
+  "archive_sha256": "10964af03cd056dcbd21f5b28500ff38f1bf3e1d46e7fd842509b593b16fcee5",
+  "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+  "folder_id": "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR",
+  "state_file_id": "1hTirF0yk5JX9ldLsxxmrSjwqR1NyRDCU",
+  "state_readback_byte_identical": true,
+  "state_sha256": "b4766ce804f9f143970efd3fc59c0bfb3c55fbcc28c42514722407e509d8d045",
+  "tested_sha": "4d22c8a70a60897173fbdf72d94a5c7f428ed765"
+}
