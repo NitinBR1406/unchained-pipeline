@@ -53,3 +53,30 @@ Never delete intent files to force a retry. Do not copy an active controller dir
 to another host and run it there. Keep any ambiguous attempt held for reconciliation.
 No production task can be added merely by changing a READY status: this slice only
 allows the pinned V09 evidence files, read-only scope and absent human gates.
+
+## V11 bounded engineering writer
+
+`engineering.py` adds a single-host write path. The committed READY list permits
+only the receipt-schema engineering fixture under `p0e4/generated/`. It is not a
+general-purpose production/code executor. The child uses the existing actual
+Codex CLI with `workspace-write`, no approval escalation, isolated disposable cwd
+and no repository credentials handed into its prompt. No UI adapter is used.
+
+The parent holds a repository-wide lock plus a durable task-to-job registration.
+It persists claim, lease, intent, RUNNING and heartbeat events, independently
+checks exact output paths/content and execution evidence, creates a deterministic
+commit object with an alternate Git index, runs the full offline regression on a
+clean detached candidate checkout, then fast-forwards and CAS-pushes that commit.
+A crash can repeat object computation or validation but cannot create an extra
+commit or re-dispatch an existing intent. A pre-intent expired claim can retry;
+an ambiguous post-intent attempt is HOLD. Remote divergence is HOLD, never reset.
+Only the parent promotes allowed bytes. Remote exactly-once execution, multi-host
+coordination, daemon installation and arbitrary engineering are not claimed.
+
+Runtime must remain in the same durable job directory on recovery. Its repository
+Git metadata registration is required and is not a portable queue. Child workspace
+sandboxing is OS-enforced; the output allowlist independently protects repository
+promotion. This is not a security boundary for hostile model/runtime compromise.
+Failures in execution or promotion produce machine-readable HOLD receipts.
+The full regression receipt records the exact candidate commit, including generated
+outputs, rather than only its pre-execution source commit.
