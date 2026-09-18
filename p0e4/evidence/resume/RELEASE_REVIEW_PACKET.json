@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "workload_type": "production_release_handoff",
+  "campaign_id": "aakhri-ishq",
+  "baseline": {
+    "schema_version": 1,
+    "workload_type": "production_release_handoff",
+    "campaign_id": "aakhri-ishq",
+    "source_freeze_sha": "263a36980fc2e2aa3138609f5406555ead9ef8d7",
+    "source_master_state_version": 10,
+    "source_sha256": {
+      "07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/evidence/freeze/UNCHAINED_MASTER_PROJECT_STATE_V05.json": "5d0c90cfd9b544304bb2dac762046c8ff66eb17e5bd3033188204f847d7b7bcf",
+      "campaigns/aakhri-ishq/campaign.json": "e23faa391680ff17d7bbcdf1e698977b30767e1fb1ad5ee5ab90e2f82a213438",
+      "campaigns/aakhri-ishq/state/approvals.json": "3c27207443e809189e386e2fc7098d48017fa7cb8191b42b2e54bd1ea2b4cdd5",
+      "campaigns/aakhri-ishq/state/registry.json": "9fbcd5d0a164d00cc97da465929e16c3433f7bb89fee346f19ab6c0d4515068d",
+      "campaigns/aakhri-ishq/state/PACKAGING.json": "af67ca495e007bb60ded0dd7486a745b520535236a1470758448cfa4b54062e0",
+      "campaigns/aakhri-ishq/state/DERIVATIVE_PLAN.json": "113a54dfba750bdd6ecd5a05ed4e69aa0df97ee9823ba09c768bc9d7184df06a"
+    },
+    "authorizations": {
+      "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+      "PUBLICATION_AUTHORIZED": false
+    },
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "approvals_observed": {
+      "NITIN_CREATIVE_APPROVAL": {
+        "campaign_id": "aakhri-ishq",
+        "asset_id": "frozen_master_v01",
+        "gate": "NITIN_CREATIVE_APPROVAL",
+        "decision": "APPROVE",
+        "approved_by": "Nitin",
+        "timestamp": "2026-09-07T17:35:17.432977Z",
+        "artifact_sha256": "f50bedec74c20c1b691575e71272623313dda1cc4e6c984f1a670085c03cecda",
+        "notes": "Gemini 96.8/100; MUST_FIX=0; reconstruction",
+        "version": "1"
+      },
+      "NITIN_FINAL_VIDEO_APPROVAL": {
+        "campaign_id": "aakhri-ishq",
+        "asset_id": "production_master_v01",
+        "gate": "NITIN_FINAL_VIDEO_APPROVAL",
+        "decision": "APPROVE",
+        "approved_by": "Nitin",
+        "timestamp": "2026-09-07T17:35:17.436360Z",
+        "artifact_sha256": "AKI_PRODUCTION_MASTER_V01_SHA_PENDING_LOCAL_RENDER",
+        "notes": "NITIN_FINAL_VIDEO_APPROVAL = TRUE (authoritative)",
+        "version": "1"
+      }
+    },
+    "publish_approval_created": false,
+    "publish_ready": false,
+    "status": "BLOCKED_INTEGRATION",
+    "blockers": [
+      "FINAL_VIDEO_SHA_UNBOUND",
+      "PRODUCTION_MASTER_NOT_REGISTERED",
+      "RIGHTS_NOT_PASS",
+      "PACKAGING_INCOMPLETE",
+      "DERIVATIVES_NOT_VERIFIED",
+      "SHARED_DRIVE_ASSET_READBACK_REQUIRED",
+      "DURABLE_LIVE_EXECUTOR_NOT_PROVISIONED",
+      "SHARED_DRIVE_STATE_PERSISTENCE_NOT_PROVISIONED"
+    ],
+    "next_human_gate": "NITIN_PUBLISH_APPROVAL",
+    "publication_side_effect_count": 0,
+    "evidence_scope": "repository_intake_and_local_control_loop_only"
+  },
+  "media_evidence_sha256": "80a7073ccc6fec79d92df6b8b2e85820227780e2a387c2926b2d338da07ab2a6",
+  "verified_assets": [
+    {
+      "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+      "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+      "size_bytes": 168512442,
+      "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+      "duration": 208.42000000000002
+    },
+    {
+      "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+      "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+      "size_bytes": 13125360,
+      "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+      "duration": 9.05
+    },
+    {
+      "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+      "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+      "size_bytes": 19179667,
+      "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+      "duration": 14.55
+    },
+    {
+      "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+      "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+      "size_bytes": 22670942,
+      "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+      "duration": 14.06
+    }
+  ],
+  "packages": [
+    {
+      "platform": "youtube_hero",
+      "title": "Aakhri Ishq \u2014 UNCHAINED NITIN | Cover Performance",
+      "caption": "Aakhri Ishq, in mijn stem. Een coverperformance van UNCHAINED NITIN.",
+      "description": "Aakhri Ishq, in mijn stem. Een coverperformance van UNCHAINED NITIN. Coverperformance door UNCHAINED NITIN.",
+      "hashtags": [
+        "AakhriIshq",
+        "UnchainedNitin",
+        "CoverPerformance"
+      ],
+      "cta": "Welk moment raakt jou?",
+      "rights_status": "RIGHTS_HOLD",
+      "asset_candidates": [
+        {
+          "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+          "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+          "size_bytes": 168512442,
+          "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+          "duration": 208.42000000000002
+        }
+      ],
+      "selected_asset": null,
+      "publish_datetime": null,
+      "status": "PREPARED_FOR_REVIEW_NOT_APPROVED",
+      "selected_asset_proposal": {
+        "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+        "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+        "size_bytes": 168512442,
+        "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+        "duration": 208.42000000000002
+      },
+      "schedule_version": "UNSCHEDULED_REVIEW_V1"
+    },
+    {
+      "platform": "youtube_shorts",
+      "title": "Aakhri Ishq | UNCHAINED NITIN",
+      "caption": "Even alles stil. Alleen Aakhri Ishq.",
+      "description": "Even alles stil. Alleen Aakhri Ishq. Coverperformance door UNCHAINED NITIN.",
+      "hashtags": [
+        "AakhriIshq",
+        "UnchainedNitin",
+        "CoverPerformance"
+      ],
+      "cta": "Welk moment raakt jou?",
+      "rights_status": "RIGHTS_HOLD",
+      "asset_candidates": [
+        {
+          "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+          "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+          "size_bytes": 168512442,
+          "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+          "duration": 208.42000000000002
+        },
+        {
+          "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+          "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+          "size_bytes": 13125360,
+          "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+          "duration": 9.05
+        },
+        {
+          "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+          "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+          "size_bytes": 19179667,
+          "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+          "duration": 14.55
+        },
+        {
+          "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+          "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+          "size_bytes": 22670942,
+          "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+          "duration": 14.06
+        }
+      ],
+      "selected_asset": null,
+      "publish_datetime": null,
+      "status": "PREPARED_FOR_REVIEW_NOT_APPROVED",
+      "selected_asset_proposal": {
+        "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+        "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+        "size_bytes": 22670942,
+        "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+        "duration": 14.06
+      },
+      "schedule_version": "UNSCHEDULED_REVIEW_V1"
+    },
+    {
+      "platform": "instagram_reels",
+      "title": "Aakhri Ishq",
+      "caption": "Sommige gevoelens blijven in een lied. Aakhri Ishq \u2014 UNCHAINED NITIN.",
+      "description": "Sommige gevoelens blijven in een lied. Aakhri Ishq \u2014 UNCHAINED NITIN. Coverperformance door UNCHAINED NITIN.",
+      "hashtags": [
+        "AakhriIshq",
+        "UnchainedNitin",
+        "CoverPerformance"
+      ],
+      "cta": "Welk moment raakt jou?",
+      "rights_status": "RIGHTS_HOLD",
+      "asset_candidates": [
+        {
+          "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+          "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+          "size_bytes": 168512442,
+          "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+          "duration": 208.42000000000002
+        },
+        {
+          "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+          "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+          "size_bytes": 13125360,
+          "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+          "duration": 9.05
+        },
+        {
+          "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+          "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+          "size_bytes": 19179667,
+          "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+          "duration": 14.55
+        },
+        {
+          "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+          "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+          "size_bytes": 22670942,
+          "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+          "duration": 14.06
+        }
+      ],
+      "selected_asset": null,
+      "publish_datetime": null,
+      "status": "PREPARED_FOR_REVIEW_NOT_APPROVED",
+      "selected_asset_proposal": {
+        "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+        "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+        "size_bytes": 22670942,
+        "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+        "duration": 14.06
+      },
+      "schedule_version": "UNSCHEDULED_REVIEW_V1"
+    },
+    {
+      "platform": "instagram_feed",
+      "title": "Aakhri Ishq \u2014 coverperformance",
+      "caption": "Mijn uitvoering van Aakhri Ishq. UNCHAINED NITIN.",
+      "description": "Mijn uitvoering van Aakhri Ishq. UNCHAINED NITIN. Coverperformance door UNCHAINED NITIN.",
+      "hashtags": [
+        "AakhriIshq",
+        "UnchainedNitin",
+        "CoverPerformance"
+      ],
+      "cta": "Welk moment raakt jou?",
+      "rights_status": "RIGHTS_HOLD",
+      "asset_candidates": [
+        {
+          "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+          "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+          "size_bytes": 168512442,
+          "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+          "duration": 208.42000000000002
+        },
+        {
+          "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+          "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+          "size_bytes": 13125360,
+          "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+          "duration": 9.05
+        },
+        {
+          "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+          "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+          "size_bytes": 19179667,
+          "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+          "duration": 14.55
+        },
+        {
+          "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+          "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+          "size_bytes": 22670942,
+          "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+          "duration": 14.06
+        }
+      ],
+      "selected_asset": null,
+      "publish_datetime": null,
+      "status": "PREPARED_FOR_REVIEW_NOT_APPROVED",
+      "selected_asset_proposal": {
+        "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+        "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+        "size_bytes": 22670942,
+        "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+        "duration": 14.06
+      },
+      "schedule_version": "UNSCHEDULED_REVIEW_V1"
+    },
+    {
+      "platform": "instagram_stories",
+      "title": "Aakhri Ishq",
+      "caption": "Aakhri Ishq \u2014 een moment om te luisteren.",
+      "description": "Aakhri Ishq \u2014 een moment om te luisteren. Coverperformance door UNCHAINED NITIN.",
+      "hashtags": [
+        "AakhriIshq",
+        "UnchainedNitin",
+        "CoverPerformance"
+      ],
+      "cta": "Welk moment raakt jou?",
+      "rights_status": "RIGHTS_HOLD",
+      "asset_candidates": [
+        {
+          "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+          "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+          "size_bytes": 168512442,
+          "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+          "duration": 208.42000000000002
+        },
+        {
+          "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+          "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+          "size_bytes": 13125360,
+          "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+          "duration": 9.05
+        },
+        {
+          "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+          "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+          "size_bytes": 19179667,
+          "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+          "duration": 14.55
+        },
+        {
+          "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+          "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+          "size_bytes": 22670942,
+          "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+          "duration": 14.06
+        }
+      ],
+      "selected_asset": null,
+      "publish_datetime": null,
+      "status": "PREPARED_FOR_REVIEW_NOT_APPROVED",
+      "selected_asset_proposal": {
+        "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+        "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+        "size_bytes": 13125360,
+        "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+        "duration": 9.05
+      },
+      "schedule_version": "UNSCHEDULED_REVIEW_V1"
+    },
+    {
+      "platform": "tiktok",
+      "title": "Aakhri Ishq | Cover",
+      "caption": "Aakhri Ishq, in mijn stem. Welk moment raakt jou?",
+      "description": "Aakhri Ishq, in mijn stem. Welk moment raakt jou? Coverperformance door UNCHAINED NITIN.",
+      "hashtags": [
+        "AakhriIshq",
+        "UnchainedNitin",
+        "CoverPerformance"
+      ],
+      "cta": "Welk moment raakt jou?",
+      "rights_status": "RIGHTS_HOLD",
+      "asset_candidates": [
+        {
+          "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+          "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+          "size_bytes": 168512442,
+          "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+          "duration": 208.42000000000002
+        },
+        {
+          "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+          "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+          "size_bytes": 13125360,
+          "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+          "duration": 9.05
+        },
+        {
+          "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+          "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+          "size_bytes": 19179667,
+          "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+          "duration": 14.55
+        },
+        {
+          "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+          "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+          "size_bytes": 22670942,
+          "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+          "duration": 14.06
+        }
+      ],
+      "selected_asset": null,
+      "publish_datetime": null,
+      "status": "PREPARED_FOR_REVIEW_NOT_APPROVED",
+      "selected_asset_proposal": {
+        "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+        "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+        "size_bytes": 19179667,
+        "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+        "duration": 14.55
+      },
+      "schedule_version": "UNSCHEDULED_REVIEW_V1"
+    },
+    {
+      "platform": "facebook_reels",
+      "title": "Aakhri Ishq \u2014 UNCHAINED NITIN",
+      "caption": "Een coverperformance van Aakhri Ishq. Dank je wel voor het luisteren.",
+      "description": "Een coverperformance van Aakhri Ishq. Dank je wel voor het luisteren. Coverperformance door UNCHAINED NITIN.",
+      "hashtags": [
+        "AakhriIshq",
+        "UnchainedNitin",
+        "CoverPerformance"
+      ],
+      "cta": "Welk moment raakt jou?",
+      "rights_status": "RIGHTS_HOLD",
+      "asset_candidates": [
+        {
+          "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+          "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+          "size_bytes": 168512442,
+          "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+          "duration": 208.42000000000002
+        },
+        {
+          "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+          "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+          "size_bytes": 13125360,
+          "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+          "duration": 9.05
+        },
+        {
+          "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+          "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+          "size_bytes": 19179667,
+          "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+          "duration": 14.55
+        },
+        {
+          "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+          "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+          "size_bytes": 22670942,
+          "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+          "duration": 14.06
+        }
+      ],
+      "selected_asset": null,
+      "publish_datetime": null,
+      "status": "PREPARED_FOR_REVIEW_NOT_APPROVED",
+      "selected_asset_proposal": {
+        "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+        "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+        "size_bytes": 19179667,
+        "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+        "duration": 14.55
+      },
+      "schedule_version": "UNSCHEDULED_REVIEW_V1"
+    }
+  ],
+  "approval_binding_request": {
+    "gate": "NITIN_FINAL_VIDEO_APPROVAL",
+    "existing_decision": {
+      "campaign_id": "aakhri-ishq",
+      "asset_id": "production_master_v01",
+      "gate": "NITIN_FINAL_VIDEO_APPROVAL",
+      "decision": "APPROVE",
+      "approved_by": "Nitin",
+      "timestamp": "2026-09-07T17:35:17.436360Z",
+      "artifact_sha256": "AKI_PRODUCTION_MASTER_V01_SHA_PENDING_LOCAL_RENDER",
+      "notes": "NITIN_FINAL_VIDEO_APPROVAL = TRUE (authoritative)",
+      "version": "1"
+    },
+    "candidate_asset": {
+      "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+      "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+      "size_bytes": 168512442,
+      "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+      "duration": 208.42000000000002
+    },
+    "status": "NEEDS_AUTHORITATIVE_BINDING",
+    "approval_created": false
+  },
+  "rights_request": {
+    "status": "RIGHTS_HOLD",
+    "composition_publisher": "UNKNOWN",
+    "backing_master_origin": "UNKNOWN",
+    "content_id_expectation": "UNKNOWN",
+    "note": "Cover rights review not completed; publish must not proceed until RIGHTS_PASS."
+  },
+  "status": "BLOCKED",
+  "publish_ready": false,
+  "blockers": [
+    "FINAL_VIDEO_APPROVAL_BINDING_REQUIRED",
+    "RIGHTS_HOLD",
+    "PLATFORM_ASSET_SELECTION_AND_FINAL_PACKAGE_REQUIRED"
+  ],
+  "next_gate_after_resolution": "NITIN_PUBLISH_APPROVAL",
+  "publication_side_effect_count": 0,
+  "review_note": "Editorial asset proposals only; not executed by the earlier live run, not approved for publication. Derivative lineage and final release scope require review."
+}

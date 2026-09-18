@@ -1,0 +1,79 @@
+{
+  "approvals": {},
+  "architecture_locks": {
+    "adr_ref": null,
+    "architecture_bakeoff": null,
+    "production_deployment_authorized": false,
+    "selected_control_plane": null,
+    "winner": null
+  },
+  "autonomous_execution": {
+    "active_tasks": [],
+    "current_task": "AKI_ASSET_INVENTORY",
+    "waiting_for_nitin": []
+  },
+  "backlog_summary": {
+    "blocked": 0,
+    "completed": 0,
+    "ready": 0,
+    "running": 0,
+    "waiting_for_nitin": 0
+  },
+  "current_content": null,
+  "current_release": null,
+  "datastore_ids": {},
+  "deployments": [],
+  "duplicate_side_effect_count": 0,
+  "evidence_refs": [
+    {
+      "evidence": [
+        "AKI_ASSET_INVENTORY.json#sha256=db6210ce45d9cf2924e3d5f1b5deb25d20c69aa502e6d656121e39fde1504118"
+      ],
+      "job_id": "bd258235bf81d1e8d98c250d45d27488b5b0e30ef6a7c5d281826e5986ae3503",
+      "task_id": "AKI_ASSET_INVENTORY"
+    }
+  ],
+  "git": {
+    "branch": null,
+    "commit_sha": null,
+    "repository": null
+  },
+  "grants": {},
+  "invariants": {
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "STATE_RECOVERED_AFTER_RESTART": null,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": null,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": null
+  },
+  "issue_classes": {
+    "material": [],
+    "must_fix": [],
+    "nice_to_have": []
+  },
+  "ledger_head_hash": "140b7cd7639fc6838be66df807eec868466996b0dccc0e6302675cb4d4476253",
+  "milestone": "TEMPORAL CONTROL PLANE FOUNDATION",
+  "phase": "P0-E1",
+  "production_state": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "mutated": false,
+    "p1_scenario": "9627055"
+  },
+  "project": "UNCHAINED NITIN \u2014 MASTER",
+  "proven_tests": [
+    {
+      "evidence": [
+        "AKI_ASSET_INVENTORY.json#sha256=db6210ce45d9cf2924e3d5f1b5deb25d20c69aa502e6d656121e39fde1504118"
+      ],
+      "task_id": "AKI_ASSET_INVENTORY"
+    }
+  ],
+  "provenance": [],
+  "runner_health": {},
+  "scenario_ids": {},
+  "schema_version": 1,
+  "state_hash": "180c2cf06e72844377eec710226ed5436549568778c5a52adff93afcfb5d95b8",
+  "state_version": 6,
+  "updated_at": "1000",
+  "updated_by": "claude"
+}

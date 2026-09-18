@@ -1,0 +1,148 @@
+[
+  {
+    "allowed_scope": [
+      "p0e4_readonly_intake"
+    ],
+    "autonomy_level": "AUTONOMOUS_SAFE",
+    "blocked_reason": null,
+    "claimed_by": "worker-1",
+    "definition_of_done": "hash-bound intake evidence",
+    "dependencies": [],
+    "evidence_required": [
+      "intake.json"
+    ],
+    "human_gate_required": null,
+    "idempotency_key": "bd258235bf81d1e8d98c250d45d27488b5b0e30ef6a7c5d281826e5986ae3503",
+    "input_hash": "411bdab2b0332c708d2b3d669e128c677eeee84f42560526ccb3536999c1bc29",
+    "lease_expires_at": 1030,
+    "lease_id": "L-AKI_ASSET_INVENTORY-1000",
+    "next_action": "inspect",
+    "priority": 10,
+    "rollback": "discard isolated staging only",
+    "state_version": null,
+    "status": "COMPLETED",
+    "task_id": "AKI_ASSET_INVENTORY",
+    "tests_required": [
+      "offline"
+    ],
+    "title": "AKI_ASSET_INVENTORY"
+  },
+  {
+    "allowed_scope": [
+      "p0e4_readonly_intake"
+    ],
+    "autonomy_level": "AUTONOMOUS_SAFE",
+    "blocked_reason": null,
+    "claimed_by": "worker-1",
+    "definition_of_done": "hash-bound intake evidence",
+    "dependencies": [
+      "AKI_ASSET_INVENTORY"
+    ],
+    "evidence_required": [
+      "intake.json"
+    ],
+    "human_gate_required": null,
+    "idempotency_key": "1da2e0a8c246fdbf6836e9b9e4dcca7b0979c1411d5e140c8d8a7c853f7c3b98",
+    "input_hash": "411bdab2b0332c708d2b3d669e128c677eeee84f42560526ccb3536999c1bc29",
+    "lease_expires_at": 1031,
+    "lease_id": "L-AKI_PACKAGE_DRAFT-1001",
+    "next_action": "inspect",
+    "priority": 20,
+    "rollback": "discard isolated staging only",
+    "state_version": null,
+    "status": "COMPLETED",
+    "task_id": "AKI_PACKAGE_DRAFT",
+    "tests_required": [
+      "offline"
+    ],
+    "title": "AKI_PACKAGE_DRAFT"
+  },
+  {
+    "allowed_scope": [
+      "p0e4_readonly_intake"
+    ],
+    "autonomy_level": "AUTONOMOUS_SAFE",
+    "blocked_reason": null,
+    "claimed_by": "worker-1",
+    "definition_of_done": "hash-bound intake evidence",
+    "dependencies": [
+      "AKI_PACKAGE_DRAFT"
+    ],
+    "evidence_required": [
+      "intake.json"
+    ],
+    "human_gate_required": null,
+    "idempotency_key": "c5a1e475fa9f0efbd071d27843fc94fcbcc95a9ec449da3f9c4576b02a424352",
+    "input_hash": "411bdab2b0332c708d2b3d669e128c677eeee84f42560526ccb3536999c1bc29",
+    "lease_expires_at": 1032,
+    "lease_id": "L-AKI_READINESS-1002",
+    "next_action": "inspect",
+    "priority": 30,
+    "rollback": "discard isolated staging only",
+    "state_version": null,
+    "status": "COMPLETED",
+    "task_id": "AKI_READINESS",
+    "tests_required": [
+      "offline"
+    ],
+    "title": "AKI_READINESS"
+  },
+  {
+    "allowed_scope": [
+      "p0e4_readonly_intake"
+    ],
+    "autonomy_level": "AUTONOMOUS_SAFE",
+    "blocked_reason": null,
+    "claimed_by": "worker-1",
+    "definition_of_done": "hash-bound intake evidence",
+    "dependencies": [],
+    "evidence_required": [
+      "intake.json"
+    ],
+    "human_gate_required": null,
+    "idempotency_key": "a04e115eaea0636d5cad96fd606ac15105adcc8a8285bc31d75f9cc99fa91bdc",
+    "input_hash": "411bdab2b0332c708d2b3d669e128c677eeee84f42560526ccb3536999c1bc29",
+    "lease_expires_at": 1033,
+    "lease_id": "L-INDEPENDENT_GOVERNANCE_AUDIT-1003",
+    "next_action": "inspect",
+    "priority": 40,
+    "rollback": "discard isolated staging only",
+    "state_version": null,
+    "status": "COMPLETED",
+    "task_id": "INDEPENDENT_GOVERNANCE_AUDIT",
+    "tests_required": [
+      "offline"
+    ],
+    "title": "INDEPENDENT_GOVERNANCE_AUDIT"
+  },
+  {
+    "allowed_scope": [
+      "p0e4_readonly_intake"
+    ],
+    "autonomy_level": "HUMAN_GATED",
+    "blocked_reason": "FINAL_VIDEO_APPROVAL_BINDING_REQUIRED,RIGHTS_HOLD,PLATFORM_ASSET_SELECTION_AND_FINAL_PACKAGE_REQUIRED",
+    "claimed_by": null,
+    "definition_of_done": "hash-bound intake evidence",
+    "dependencies": [
+      "AKI_READINESS"
+    ],
+    "evidence_required": [
+      "intake.json"
+    ],
+    "human_gate_required": "NITIN_PUBLISH_APPROVAL",
+    "idempotency_key": null,
+    "input_hash": "411bdab2b0332c708d2b3d669e128c677eeee84f42560526ccb3536999c1bc29",
+    "lease_expires_at": null,
+    "lease_id": null,
+    "next_action": "inspect",
+    "priority": 35,
+    "rollback": "discard isolated staging only",
+    "state_version": null,
+    "status": "BLOCKED",
+    "task_id": "AKI_RELEASE",
+    "tests_required": [
+      "offline"
+    ],
+    "title": "AKI_RELEASE"
+  }
+]

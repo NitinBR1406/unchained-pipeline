@@ -1,0 +1,105 @@
+{
+  "approvals": {},
+  "architecture_locks": {
+    "adr_ref": null,
+    "architecture_bakeoff": null,
+    "production_deployment_authorized": false,
+    "selected_control_plane": null,
+    "winner": null
+  },
+  "autonomous_execution": {
+    "active_tasks": [],
+    "current_task": "AKI_READINESS",
+    "waiting_for_nitin": []
+  },
+  "backlog_summary": {
+    "blocked": 0,
+    "completed": 0,
+    "ready": 0,
+    "running": 0,
+    "waiting_for_nitin": 0
+  },
+  "current_content": null,
+  "current_release": null,
+  "datastore_ids": {},
+  "deployments": [],
+  "duplicate_side_effect_count": 0,
+  "evidence_refs": [
+    {
+      "evidence": [
+        "AKI_ASSET_INVENTORY.json#sha256=db6210ce45d9cf2924e3d5f1b5deb25d20c69aa502e6d656121e39fde1504118"
+      ],
+      "job_id": "bd258235bf81d1e8d98c250d45d27488b5b0e30ef6a7c5d281826e5986ae3503",
+      "task_id": "AKI_ASSET_INVENTORY"
+    },
+    {
+      "evidence": [
+        "AKI_PACKAGE_DRAFT.json#sha256=109973d4f988b1bc0d66cd807bd086786de9894542fe5703cad1961f1afb9f10"
+      ],
+      "job_id": "1da2e0a8c246fdbf6836e9b9e4dcca7b0979c1411d5e140c8d8a7c853f7c3b98",
+      "task_id": "AKI_PACKAGE_DRAFT"
+    },
+    {
+      "evidence": [
+        "AKI_READINESS.json#sha256=b52603b6fcadbe5172831a9f0d29e333ef3eda7f0e7dbd6bf4089b505e411cf4"
+      ],
+      "job_id": "c5a1e475fa9f0efbd071d27843fc94fcbcc95a9ec449da3f9c4576b02a424352",
+      "task_id": "AKI_READINESS"
+    }
+  ],
+  "git": {
+    "branch": null,
+    "commit_sha": null,
+    "repository": null
+  },
+  "grants": {},
+  "invariants": {
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "STATE_RECOVERED_AFTER_RESTART": null,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": null,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": null
+  },
+  "issue_classes": {
+    "material": [],
+    "must_fix": [],
+    "nice_to_have": []
+  },
+  "ledger_head_hash": "d338d75cb1c4a357480acaba43644b46512a8107fae95f3cb39f490fc6d49f1e",
+  "milestone": "TEMPORAL CONTROL PLANE FOUNDATION",
+  "phase": "P0-E1",
+  "production_state": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "mutated": false,
+    "p1_scenario": "9627055"
+  },
+  "project": "UNCHAINED NITIN \u2014 MASTER",
+  "proven_tests": [
+    {
+      "evidence": [
+        "AKI_ASSET_INVENTORY.json#sha256=db6210ce45d9cf2924e3d5f1b5deb25d20c69aa502e6d656121e39fde1504118"
+      ],
+      "task_id": "AKI_ASSET_INVENTORY"
+    },
+    {
+      "evidence": [
+        "AKI_PACKAGE_DRAFT.json#sha256=109973d4f988b1bc0d66cd807bd086786de9894542fe5703cad1961f1afb9f10"
+      ],
+      "task_id": "AKI_PACKAGE_DRAFT"
+    },
+    {
+      "evidence": [
+        "AKI_READINESS.json#sha256=b52603b6fcadbe5172831a9f0d29e333ef3eda7f0e7dbd6bf4089b505e411cf4"
+      ],
+      "task_id": "AKI_READINESS"
+    }
+  ],
+  "provenance": [],
+  "runner_health": {},
+  "scenario_ids": {},
+  "schema_version": 1,
+  "state_hash": "3f83b7d3eab9a29e111020de5307d5d024ac7a8ecb3de0c53517a3a43146e7d7",
+  "state_version": 16,
+  "updated_at": "1002",
+  "updated_by": "claude"
+}

@@ -1,0 +1,13 @@
+{
+  "google_application_credentials_configured": false,
+  "github_actions_wif_configured": false,
+  "local_adc_file_present": false,
+  "connector_access": "Google Drive read/upload available to orchestrator; no credentials exported to worker",
+  "conclusion": "No worker auth provisioned; connector archival is not runtime CAS persistence",
+  "resolved_in_ci": {
+    "run_id": "35325952509",
+    "keyless_wif": "PASS",
+    "live_drive_persistence": "PASS",
+    "local_credentials_still_absent": true
+  }
+}

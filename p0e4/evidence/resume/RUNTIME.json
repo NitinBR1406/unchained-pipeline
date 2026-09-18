@@ -1,0 +1,6 @@
+{
+  "temporalio": "1.33.0",
+  "cryptography": "50.0.1",
+  "PyYAML": "6.0.3",
+  "imageio-ffmpeg": "0.6.0"
+}

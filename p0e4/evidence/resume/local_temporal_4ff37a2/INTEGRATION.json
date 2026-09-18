@@ -1,0 +1,44 @@
+{
+  "real_temporal_observed": true,
+  "workflow_type": "frozen ControlPlaneTask",
+  "workflows": {
+    "AKI_ASSET_INVENTORY": {
+      "workflow_id": "p0e4-bd258235bf81d1e8d98c250d45d27488b5b0e30ef6a7c5d281826e5986ae3503",
+      "run_id": "01a0b3ae-0d0a-78ca-ac86-b96528429fa4",
+      "status": "COMPLETED"
+    },
+    "AKI_PACKAGE_DRAFT": {
+      "workflow_id": "p0e4-1da2e0a8c246fdbf6836e9b9e4dcca7b0979c1411d5e140c8d8a7c853f7c3b98",
+      "run_id": "01a0b3ae-0d1b-741a-9806-50bd76367fa7",
+      "status": "COMPLETED"
+    },
+    "AKI_READINESS": {
+      "workflow_id": "p0e4-c5a1e475fa9f0efbd071d27843fc94fcbcc95a9ec449da3f9c4576b02a424352",
+      "run_id": "01a0b3ae-0d27-79db-bae6-c476ea921d6d",
+      "status": "COMPLETED"
+    },
+    "INDEPENDENT_GOVERNANCE_AUDIT": {
+      "workflow_id": "p0e4-a04e115eaea0636d5cad96fd606ac15105adcc8a8285bc31d75f9cc99fa91bdc",
+      "run_id": "01a0b3ae-0d33-7b79-9a72-3b7800b10dca",
+      "status": "COMPLETED"
+    }
+  },
+  "duplicate_dispatch_no_activity": true,
+  "test_only_wait_nonblocking": true,
+  "real_release_status": "BLOCKED",
+  "publication_side_effect_count": 0,
+  "approval_signals_sent": 0,
+  "replay_verified": true,
+  "backlog_summary": {
+    "ready": 0,
+    "running": 0,
+    "blocked": 1,
+    "waiting_for_nitin": 0,
+    "completed": 4,
+    "failed": 0,
+    "claimed": 0,
+    "verifying": 0
+  },
+  "live_shared_drive_runtime_persistence": false,
+  "disposable_server_shutdown": true
+}

@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "manifest": "SHA256SUMS.P0E3_SLICE2_FINAL.txt",
+      "path": "ci/p0e3-durable-live.yml",
+      "sha256": "836cb7a8dd3bace16a1d592ed89a51fbf705ca84796a37b6f7fb3ace399ba948",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_SLICE2_FINAL.txt",
+      "path": "evidence/freeze/UNCHAINED_MASTER_PROJECT_STATE_V05.json",
+      "sha256": "5d0c90cfd9b544304bb2dac762046c8ff66eb17e5bd3033188204f847d7b7bcf",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_SLICE2_FINAL.txt",
+      "path": "evidence/freeze/P0E3_SLICE2_LIVE_RUN_35258089586/P0E3_LIVE_ACCEPTANCE_VERDICT.json",
+      "sha256": "12a5d1058121809b28663aba1106ee1419b321edbaf8e80398fd38169ab0d432",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_SLICE2_FINAL.txt",
+      "path": "evidence/freeze/P0E3_SLICE2_LIVE_RUN_35258089586/P0E3_LIVE_RESULTS.json",
+      "sha256": "b307d61c87f52c49696743a02fbcf8d4e9e20fc05305884ba4167b989a0fa522",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_SLICE2_FINAL.txt",
+      "path": "evidence/freeze/P0E3_SLICE2_LIVE_RUN_35258089586/workflows.json",
+      "sha256": "80cea02ab525df4fcc5faa83c23a4d8b4a8df4bf7eadb9c2d13104fe1e5352e0",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_SLICE2_FINAL.txt",
+      "path": "evidence/freeze/P0E3_SLICE2_LIVE_RUN_35258089586/central_persistence.json",
+      "sha256": "6dbbd4a759019bd99a567fc03919a70e5ffed37ff8a09e2984b459a81ad8eee3",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_SLICE2_FINAL.txt",
+      "path": "evidence/freeze/P0E3_SLICE2_LIVE_RUN_35258089586/drive_persistence.json",
+      "sha256": "22873f8a107a8d3bd69dda10557a0f659cf85e0fd6f3b99073814e511f6bbbc7",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_SLICE2_FINAL.txt",
+      "path": "evidence/freeze/P0E3_SLICE2_LIVE_RUN_35258089586/replay.json",
+      "sha256": "69da82d290767dd8281b1435698f494b347b687b419de5564f377c457817241f",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_SLICE2_FINAL.txt",
+      "path": "evidence/freeze/P0E3_SLICE2_LIVE_RUN_35258089586/poc_infra.json",
+      "sha256": "a94fd525f323af474e5f4a53a63a4e2eb3afdc89eb7aa902107dbb74c703dd56",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_SLICE2_FINAL.txt",
+      "path": "evidence/freeze/P0E3_SLICE2_LIVE_RUN_35258089586/temporal_poc.json",
+      "sha256": "8a44e23012c0a8629d72097c51d98dbf1534ac2bd83a7a45a6ba072e9ffc7254",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_HERMETIC.txt",
+      "path": "control_loop/live_evidence.py",
+      "sha256": "bfa2eeabd856e70fffde84abfc5bf2ff8206d859429bd6adb855747a610c7b1e",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_HERMETIC.txt",
+      "path": "tests/_harness.py",
+      "sha256": "3535f7599dbd16ac1df487843894f278eba447d2915cc49869bdbf71aa1ad1e4",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_HERMETIC.txt",
+      "path": "tests/test_live_acceptance_p0e3.py",
+      "sha256": "1898b37897050bc4d0b7010cf7330d7d3d73ad97702130f424e6dc1630553c2f",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_HERMETIC.txt",
+      "path": "tests/test_live_negatives.py",
+      "sha256": "e8106385efb1b1e2acd524a8374c7961f46b2b24dbe3cbdea8abd4c3377a08b1",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_HERMETIC.txt",
+      "path": "tests/test_drive_negatives.py",
+      "sha256": "29ed7c3d66ce89f0f0ccac1b88cbb5db8adc429b61f20588f1b44255356f9c97",
+      "pass": true
+    },
+    {
+      "manifest": "SHA256SUMS.P0E3_HERMETIC.txt",
+      "path": "tests/test_nb001_live.py",
+      "sha256": "2c9eec0db27773d8a64fc88b3efca6e2aa073be173aa0c0cdfc0f93a01d7dddf",
+      "pass": true
+    }
+  ],
+  "frozen_changes": [],
+  "scope_diff": [
+    ".github/workflows/p0e4-integration.yml",
+    "p0e4/README.md",
+    "p0e4/evidence/ACCEPTANCE.json",
+    "p0e4/evidence/SHA256SUMS.txt",
+    "p0e4/evidence/drive_discovery.json",
+    "p0e4/evidence/freeze_verification.json",
+    "p0e4/evidence/local_run/AKI_INTAKE.json",
+    "p0e4/evidence/local_run/BACKLOG.json",
+    "p0e4/evidence/local_run/EVENT_LEDGER.jsonl",
+    "p0e4/evidence/local_run/HANDOFF_ASSESSMENT.json",
+    "p0e4/evidence/local_run/INDEPENDENT_GOVERNANCE_AUDIT.json",
+    "p0e4/evidence/local_run/INPUT_BINDING.json",
+    "p0e4/evidence/local_run/central/HEAD.json",
+    "p0e4/evidence/local_run/central/state_v1.json",
+    "p0e4/evidence/local_run/central/state_v11.json",
+    "p0e4/evidence/local_run/central/state_v6.json",
+    "p0e4/evidence/local_run/se_store.json",
+    "p0e4/evidence/regression.json",
+    "p0e4/evidence/resume/MEDIA_QC.json",
+    "p0e4/evidence/resume/asset_sources.json",
+    "p0e4/handoff.py",
+    "p0e4/media_verify.py",
+    "p0e4/release.py",
+    "p0e4/state_update.py",
+    "p0e4/temporal_integration.py",
+    "p0e4/tests/test_handoff.py",
+    "p0e4/tests/test_release.py",
+    "p0e4/tests/test_state_update.py"
+  ]
+}

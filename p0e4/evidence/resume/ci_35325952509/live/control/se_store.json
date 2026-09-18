@@ -1,0 +1,25 @@
+{
+  "done": {
+    "1da2e0a8c246fdbf6836e9b9e4dcca7b0979c1411d5e140c8d8a7c853f7c3b98": {
+      "evidence": [
+        "AKI_PACKAGE_DRAFT.json#sha256=109973d4f988b1bc0d66cd807bd086786de9894542fe5703cad1961f1afb9f10"
+      ]
+    },
+    "a04e115eaea0636d5cad96fd606ac15105adcc8a8285bc31d75f9cc99fa91bdc": {
+      "evidence": [
+        "INDEPENDENT_GOVERNANCE_AUDIT.json#sha256=5b628407a7d51480d03fc6b98b32b1eff7e8fae896ca66fdff8c1224f06036fc"
+      ]
+    },
+    "bd258235bf81d1e8d98c250d45d27488b5b0e30ef6a7c5d281826e5986ae3503": {
+      "evidence": [
+        "AKI_ASSET_INVENTORY.json#sha256=db6210ce45d9cf2924e3d5f1b5deb25d20c69aa502e6d656121e39fde1504118"
+      ]
+    },
+    "c5a1e475fa9f0efbd071d27843fc94fcbcc95a9ec449da3f9c4576b02a424352": {
+      "evidence": [
+        "AKI_READINESS.json#sha256=b52603b6fcadbe5172831a9f0d29e333ef3eda7f0e7dbd6bf4089b505e411cf4"
+      ]
+    }
+  },
+  "duplicate_attempts": 0
+}
