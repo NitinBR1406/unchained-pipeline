@@ -1,0 +1,23 @@
+{
+  "actions": [
+    {
+      "candidates": [
+        "Audio track in AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4 sha2560c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+        "Audio track in AKI_VISUAL_LOCK_AUDIO_MASTER_V01.mp4 sha25679f6a288b22cf3f6095d6524e055153d7b671beea458f078a9c545e59c63dc61",
+        "Separate final-audio file: authoritative Drive location"
+      ],
+      "gate": "NITIN_AUDIO_SOURCE_BINDING",
+      "question": "Select the authoritative final-audio source for RAW integration.",
+      "status": "ASKED_PENDING_NO_INFERENCE"
+    },
+    {
+      "action": "Keep all production dispatch blocked; no Make/frozen changes under this tranche. A separately authorized production integration/change scope must resolve the N3 gate before real use.",
+      "finding": "Read-only Dispatch report identifies no SHA-bound Nitin publish verifier in existing N3. N3 is inactive/invalid. P1 verifier is reported present, but endpoint runtime and global pause enforcement not tested.",
+      "gate": "EXISTING_N3_GOVERNANCE"
+    }
+  ],
+  "credential_setup_required_for_observed_gui_smokes": false,
+  "schema_version": 1,
+  "secret_values_requested": false,
+  "status": "WAITING_FOR_HUMAN_BINDING_AND_GOVERNANCE"
+}

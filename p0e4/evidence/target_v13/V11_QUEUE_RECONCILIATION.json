@@ -1,0 +1,9 @@
+{
+  "status": "QUIESCENT",
+  "completed_existing_tasks": 1,
+  "held": 0,
+  "new_dispatches": 0,
+  "new_commits": 0,
+  "external_tasks_enqueued": 0,
+  "scope": "V11 bounded JSON fixtures only; observed UI routes deliberately outside controller scope"
+}

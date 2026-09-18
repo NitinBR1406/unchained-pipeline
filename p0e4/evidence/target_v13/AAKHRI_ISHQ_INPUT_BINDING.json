@@ -1,0 +1,33 @@
+{
+  "approval_fabricated": false,
+  "authoritative_audio": null,
+  "candidate_audio_stream_extracted": false,
+  "candidate_container_hashes_ref": "AUDIO_CANDIDATE_HASHES.json",
+  "content_id": "aakhri-ishq",
+  "findings": [
+    "RAW bytes now accessible through mounted authoritative Shared Drive, exceeding earlier connector download size limit",
+    "Both visual/audio-master copies are byte-identical",
+    "Presentation master exact bytes match existing Nitin final-video attestation",
+    "Final-video approval does not explicitly designate a reusable authoritative separate audio input",
+    "Archived NONCANONICAL variant differs and is excluded",
+    "Historical status document dated2026-09-05 predates final-video attestation; not used to revoke later approval"
+  ],
+  "historical_master_status_sha256": "4f23b5b6f569f3773aceed547d96cbb72ee8a8260df57703e18b7464caa87544",
+  "human_binding_requested": true,
+  "lineage_refs": [
+    {
+      "sha256": "c5741f2e44e51cad534b1f5b08e88d1b7e24a5f15d588f7099c6c31429372c01",
+      "uri": "p0e4/evidence/human_binding/HUMAN_ATTESTATION.json"
+    },
+    {
+      "sha256": "e23faa391680ff17d7bbcdf1e698977b30767e1fb1ad5ee5ab90e2f82a213438",
+      "uri": "campaigns/aakhri-ishq/campaign.json"
+    }
+  ],
+  "raw_bytes": 323607983,
+  "raw_file_id": "1Uk6Ru7wtU1Y3aCeOdYQwPhuTojHzDgN6",
+  "raw_sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790",
+  "real_e2e_allowed": false,
+  "schema_version": 1,
+  "status": "WAITING_FOR_NITIN_AUDIO_SOURCE_BINDING"
+}

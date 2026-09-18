@@ -1,4 +1,32 @@
-## Latest authoritative state: V12 / state_version 17 — BLOCKED_EXTERNAL_SETUP
+## Latest authoritative state: V13 / state_version 18 — capability smoke accepted; production blocked
+
+[Latest pointer](MASTER_STATE_LATEST.json) · [V13 state](evidence/target_v13/UNCHAINED_MASTER_PROJECT_STATE_V13.json) · [Claude Dispatch receipt](evidence/target_v13/CLAUDE_DISPATCH_RECEIPT.json) · [manifest](evidence/target_v13/SHA256SUMS.txt) · [human gates](evidence/target_v13/HUMAN_ACTION_PACKET.json).
+
+Nitin explicitly selected **Claude Desktop → Dispatch (Beta)**. Two new bounded
+read-only requests completed: existing-system discovery and N2/N3/P1 boundary
+inspection. Historical chats and historical Dispatch tasks are excluded as execution
+proof. The request nonces, shared Dispatch session identity, observed status and
+request/output hashes are persisted. Provider task UUID and model ID were not exposed.
+Claude-returned nested Make observations are not independently signed API receipts.
+The second result corrects the first: 32 scenarios, and live N2/N3 use a different
+spreadsheet from historical memory. N3 lacks a demonstrated SHA-bound publish
+verifier; P1 is reported to have a fail-closed verifier. No scenario was changed or run.
+
+Gemini UI returned synthetic intelligence at 80% and independently rejected 79%
+in a separate QC conversation. These prove bounded connectivity, not real-media QC.
+RAW and candidate media containers were hashed read-only from the Shared Drive mount.
+The existing approved presentation master hash matches; separate final-audio source
+binding awaits Nitin. No render or production E2E was performed.
+
+49/49 offline suites passed at `f125e55547c3421ba9f98b82567e4de71ebce125`.
+All 189 historical manifest entries verify. V13 replays through the existing reducer;
+UI receipt tampering, historical-task substitution and approval escalation are rejected.
+The synthetic negative Golden replay remains BLOCKED with HARD STOP. The V11 queue
+reconciled its completed task with zero redispatches. GUI execution remains outside
+that executor's proven JSON-fixture scope. Frozen P0-E0–E3 are unchanged.
+Deployment/publication remain false; First Real Poster remains paused.
+
+## Previous authoritative state: V12 / state_version 17 — BLOCKED_EXTERNAL_SETUP
 
 [Latest pointer](MASTER_STATE_LATEST.json) · [V12 state](evidence/external_v12/UNCHAINED_MASTER_PROJECT_STATE_V12.json) · [setup packet](evidence/external_v12/HUMAN_ACTION_PACKET.json).
 

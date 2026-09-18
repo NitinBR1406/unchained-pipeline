@@ -1,0 +1,14 @@
+{
+  "content_id": "TEST_ONLY_P0E4_V13",
+  "meets_80_percent_rule": true,
+  "nonce": "P0E4_V13_GEMINI_INTELLIGENCE_A",
+  "performance_ratio": 0.8,
+  "publication_authorized": false,
+  "recommendations": [
+    {
+      "action": "hold_performance",
+      "timestamp": 2
+    }
+  ],
+  "schema_version": 1
+}

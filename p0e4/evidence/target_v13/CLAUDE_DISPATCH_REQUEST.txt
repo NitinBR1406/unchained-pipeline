@@ -1,0 +1,29 @@
+UNCHAINED NITIN — P0-E4 CLAUDE SOCIAL MEDIA SYSTEM DISCOVERY
+
+NEW bounded Dispatch task. Request ID: P0E4_V13_DISPATCH_DISCOVERY_20260919_A. Do not resume or execute any historical task.
+
+Inspect the existing UNCHAINED NITIN Social Media Post System available to this Claude environment, including relevant projects, artifacts, skills, Make.com V1/V2 scenarios/blueprints, Google Drive/Sheets/Gmail integrations, Shotstack, FFmpeg, Plainly, platform adapters, captions/hashtags/thumbnails, approval flows and existing production/release logic.
+
+This is READ-ONLY discovery.
+DO NOT rebuild the system.
+DO NOT modify Make scenarios.
+DO NOT activate publishing flows.
+DO NOT post to YouTube, Instagram, Facebook, TikTok or X.
+DO NOT incur costs.
+DO NOT fabricate Nitin approval.
+No external writes, messages, emails, renders, uploads, scenario runs, retries, deployments, schedules or permission changes. Do not read or expose secret values. If an external side effect requires approval, STOP that side effect and report the gate. Do not change any repository or frozen P0-E0–E3 component.
+
+Identify:
+1. authoritative existing Social Media Post System components;
+2. reusable production capabilities;
+3. callable execution/invocation surfaces;
+4. required connectors/credentials without exposing secret values;
+5. exact boundaries between Claude, Make, Shotstack/FFmpeg/Plainly and social platforms;
+6. safest non-publishing invocation path for P0-E4;
+7. artifacts/evidence that prove these findings.
+
+Return a structured JSON result suitable for machine ingestion by the P0-E4 Orchestrator. Include request_id, task identity if available, status, observed read-only tool calls and results, component evidence references, historical_claims separately from current_observations, limitations, gates, writes_performed, publishes_performed, NON_PUBLISHING=true. Never invent a successful tool execution. Do not include credentials, tokens, secret values or private webhook URLs.
+
+PRODUCTION_DEPLOYMENT_AUTHORIZED=false
+PUBLICATION_AUTHORIZED=false
+FIRST_REAL_POSTER=PAUSED_BY_NITIN

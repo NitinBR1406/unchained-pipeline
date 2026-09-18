@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "master_state_version": "V12",
-  "state_version": 17,
-  "path": "p0e4/evidence/external_v12/UNCHAINED_MASTER_PROJECT_STATE_V12.json",
-  "sha256": "63afbab443c0b63f4c5b5dacae19ce1d8fccc9ee590bbbc3f39e54ada1317303",
-  "tested_sha": "62223aec075438b5d5b46058a7815061b6bd5c19",
-  "evidence_manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
-  "scope_status": "BLOCKED_EXTERNAL_SETUP",
+  "master_state_version": "V13",
+  "state_version": 18,
+  "path": "p0e4/evidence/target_v13/UNCHAINED_MASTER_PROJECT_STATE_V13.json",
+  "sha256": "628111091317eed1e63736e8c7862d3d965973ddb4c8eb24118bcc45484256d4",
+  "tested_sha": "f125e55547c3421ba9f98b82567e4de71ebce125",
+  "evidence_manifest": "p0e4/evidence/target_v13/SHA256SUMS.txt",
+  "scope_status": "CAPABILITY_SMOKE_ACCEPTED_PRODUCTION_BLOCKED",
   "production_e2e_status": "BLOCKED_NOT_GREEN"
 }

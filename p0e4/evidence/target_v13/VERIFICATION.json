@@ -1,0 +1,996 @@
+{
+  "all_historical_manifests_pass": true,
+  "code_changes": [
+    "p0e4/controller/project_v13.py",
+    "p0e4/integration/ui_receipts.py",
+    "p0e4/tests/test_ui_receipts.py",
+    "p0e4/tests/test_v13_projection.py"
+  ],
+  "external_publish_or_deploy_actions_initiated": 0,
+  "external_side_effect_absence_independently_audited": false,
+  "frozen_P0_E0_E3_unchanged": true,
+  "gemini_independent_79_percent_rejected": true,
+  "gemini_synthetic_80_percent_pass": true,
+  "historical_manifest_entries": 189,
+  "historical_manifests": [
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ACCEPTANCE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "drive_discovery.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "freeze_verification.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/AKI_INTAKE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/BACKLOG.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/HANDOFF_ASSESSMENT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/INDEPENDENT_GOVERNANCE_AUDIT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/INPUT_BINDING.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/central/HEAD.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/central/state_v1.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/central/state_v11.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/central/state_v6.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_run/se_store.json"
+    },
+    {
+      "manifest": "p0e4/evidence/SHA256SUMS.txt",
+      "pass": true,
+      "path": "regression.json"
+    },
+    {
+      "manifest": "p0e4/evidence/computer_use_discovery_v01/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ASSESSMENT.md"
+    },
+    {
+      "manifest": "p0e4/evidence/computer_use_discovery_v01/SHA256SUMS.txt",
+      "pass": true,
+      "path": "CAPABILITY_DISCOVERY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ACCEPTANCE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ENGINEERING_EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "FIRST_RUN.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "PERSISTENCE_RECEIPTS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RESTART_BEFORE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RESTART_VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "UNCHAINED_MASTER_PROJECT_STATE_V10.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "probe/SURFACE_PROOF.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "probe/events.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "probe/input.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "probe/last.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "probe/prompt.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "probe/schema.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/BACKLOG.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/CONTROLLER_RESULT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/central/HEAD.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/central/state_v1.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/central/state_v11.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/central/state_v6.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/events.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/exit.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/intent.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/last.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/process.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/prompt.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/receipt.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/schema.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/stderr.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29/events.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29/exit.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29/intent.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29/last.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29/process.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29/prompt.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29/receipt.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29/schema.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/dispatch/2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29/stderr.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/se_store.json"
+    },
+    {
+      "manifest": "p0e4/evidence/controller_v10/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/seed.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ACCEPTANCE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ENGINEERING_EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "NEXT_READY_REVIEW.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "READY_QUEUE_RESULT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REMOTE_V10_VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RESTART_VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RUNTIME_PERSISTENCE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "SOURCE_REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "UNCHAINED_MASTER_PROJECT_STATE_V11.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/commit.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/completion.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/events.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/exit.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/intent.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/last.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/lease.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/process.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/regression.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/state.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/stderr.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/task.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/verified.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11/SHA256SUMS.txt",
+      "pass": true,
+      "path": "runtime/workspace/p0e4/generated/execution_receipt.schema.json"
+    },
+    {
+      "manifest": "p0e4/evidence/executor_v11_remote_readback/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REMOTE_READBACK.json"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ACCEPTANCE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "CAPABILITY_RESULTS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "DISCOVERY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ENGINEERING_EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "EXISTING_SYSTEM_INVENTORY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "HUMAN_ACTION_PACKET.json"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "UNCHAINED_MASTER_PROJECT_STATE_V12.json"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "V11_QUEUE_RECONCILIATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/external_v12/SHA256SUMS.txt",
+      "pass": true,
+      "path": "WRAPPER_SMOKE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "DRIVE_SEARCH.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ENGINEERING_EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "HUMAN_ATTESTATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "HUMAN_REVIEW.md"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "NITIN_SOURCE_REQUEST.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "PLATFORM_RIGHTS.md"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "PROJECTION_INPUTS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RIGHTS_ACTION_PACKET.md"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RIGHTS_MATRIX.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "SOURCE_REVIEW.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "UNCHAINED_MASTER_PROJECT_STATE_V08.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "VISUAL_AUDIO_REVIEW.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/AKI_SHOTSTACK_PRESENTATION_MASTER_V01_contact.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/M03_NEARBY_ALIGNMENT.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/M03_NEARBY_ALIGNMENT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/MEDIA_QC.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/PAIRED_FRAME_QC.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/TEMPORAL_SIGNAL_SCAN.json"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M02_contact.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M02_paired.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M03_contact.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M03_paired.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M08_contact.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media/aakhri-ishq_DERIVATIVE_M08_paired.jpg"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "media_qc.py"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "project.py"
+    },
+    {
+      "manifest": "p0e4/evidence/human_binding/SHA256SUMS.txt",
+      "pass": true,
+      "path": "test_project.py"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "DISCOVERY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ENGINEERING_EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "EXISTING_SYSTEM_INVENTORY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "GOLDEN_E2E_READINESS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "HUMAN_ACTION_PACKET.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "LICENSING_ACTION_PACKET.md"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "PERSISTENCE_RECEIPTS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "PLATFORM_SOURCE_REVIEW.md"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RIGHTS_GRANTS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RIGHTS_MATRIX.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "TEST_ONLY_CREATIVE_INTELLIGENCE_PACKAGE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "TEST_ONLY_INDEPENDENT_QC_PACKAGE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "TEST_ONLY_PRODUCTION_RELEASE_PACKAGE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "TEST_ONLY_SAFE_SMOKE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "UNCHAINED_MASTER_PROJECT_STATE_V09.json"
+    },
+    {
+      "manifest": "p0e4/evidence/integration_v09/SHA256SUMS.txt",
+      "pass": true,
+      "path": "VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ACCEPTANCE_RESUME.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "CI_JOBS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "CI_RUN.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "FREEZE_DIFF_QC.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "MEDIA_QC.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "PERSISTENCE_RECEIPTS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RELEASE_REVIEW_PACKET.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "RUNTIME.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "WORKER_CONNECTION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "asset_sources.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/SOURCE.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/INTEGRATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/control/BACKLOG.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/control/EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/control/se_store.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/effects/AKI_ASSET_INVENTORY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/effects/AKI_PACKAGE_DRAFT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/effects/AKI_READINESS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ci_35325952509/live/effects/INDEPENDENT_GOVERNANCE_AUDIT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/INTEGRATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/TESTED_SHA.txt"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/BACKLOG.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/HEAD.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/state_v1.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/state_v11.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/state_v16.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/state_v21.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/central/state_v6.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/control/se_store.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/effects/AKI_ASSET_INVENTORY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/effects/AKI_PACKAGE_DRAFT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/effects/AKI_READINESS.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "local_temporal_4ff37a2/effects/INDEPENDENT_GOVERNANCE_AUDIT.json"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "state/ENGINEERING_EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/resume/SHA256SUMS.txt",
+      "pass": true,
+      "path": "state/UNCHAINED_MASTER_PROJECT_STATE_V06.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "DRIVE_DISCOVERY.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "DRIVE_MASTER_STATUS_REFERENCE.md"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "ENGINEERING_EVENT_LEDGER.jsonl"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "HUMAN_REVIEW.md"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REGRESSION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "REVIEW_QC.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "UNCHAINED_MASTER_PROJECT_STATE_V07.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "VERIFICATION.json"
+    },
+    {
+      "manifest": "p0e4/evidence/review/SHA256SUMS.txt",
+      "pass": true,
+      "path": "reproduce.py"
+    }
+  ],
+  "new_authoritative_live_runs": 0,
+  "new_dispatch_discovery_requests": 2,
+  "receipts": [
+    {
+      "production_eligible": false,
+      "publication_eligible": false,
+      "receipt": "CLAUDE_BOUNDARY_RECEIPT.json",
+      "receipt_valid": true,
+      "retry_safe": false
+    },
+    {
+      "production_eligible": false,
+      "publication_eligible": false,
+      "receipt": "CLAUDE_DISPATCH_RECEIPT.json",
+      "receipt_valid": true,
+      "retry_safe": false
+    },
+    {
+      "production_eligible": false,
+      "publication_eligible": false,
+      "receipt": "GEMINI_INTELLIGENCE_RECEIPT.json",
+      "receipt_valid": true,
+      "retry_safe": false
+    },
+    {
+      "production_eligible": false,
+      "publication_eligible": false,
+      "receipt": "GEMINI_QC_RECEIPT.json",
+      "receipt_valid": true,
+      "retry_safe": false
+    }
+  ],
+  "source_asset_mutations": 0,
+  "tested_sha": "f125e55547c3421ba9f98b82567e4de71ebce125"
+}

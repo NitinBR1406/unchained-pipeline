@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-09-18T22:21:18.219010+00:00",
+  "method": "read-only stream from mounted authoritative Shared Drive",
+  "candidates": [
+    {
+      "relative_drive_path": "Campaigns/Aakhri-Ishq/Masters/AKI_VISUAL_LOCK_AUDIO_MASTER_V01.mp4",
+      "bytes": 150678664,
+      "sha256": "79f6a288b22cf3f6095d6524e055153d7b671beea458f078a9c545e59c63dc61",
+      "authority": "CANDIDATE_CONTAINER_ONLY_NOT_FINAL_AUDIO_BINDING"
+    },
+    {
+      "relative_drive_path": "Campaigns/Aakhri-Ishq/01_CapCut-Out/AKI_VISUAL_LOCK_AUDIO_MASTER_V01.mp4",
+      "bytes": 150678664,
+      "sha256": "79f6a288b22cf3f6095d6524e055153d7b671beea458f078a9c545e59c63dc61",
+      "authority": "CANDIDATE_CONTAINER_ONLY_NOT_FINAL_AUDIO_BINDING"
+    },
+    {
+      "relative_drive_path": "Campaigns/Aakhri-Ishq/Masters/AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+      "bytes": 168512442,
+      "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+      "authority": "CANDIDATE_CONTAINER_ONLY_NOT_FINAL_AUDIO_BINDING"
+    },
+    {
+      "relative_drive_path": "Campaigns/Aakhri-Ishq/07_Archive/Non-Canonical/AKI_VISUAL_LOCK_AUDIO_MASTER_V01__NONCANONICAL__audio2d405b7b.mp4",
+      "bytes": 150682221,
+      "sha256": "c98002325d66b2e43875312aac32e385bd48635eef4ec803686ceb1151a34edc",
+      "authority": "CANDIDATE_CONTAINER_ONLY_NOT_FINAL_AUDIO_BINDING"
+    }
+  ],
+  "source_mutations": 0,
+  "final_audio_bound": false
+}

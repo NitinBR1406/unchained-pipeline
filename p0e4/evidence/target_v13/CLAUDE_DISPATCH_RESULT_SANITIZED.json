@@ -1,0 +1,546 @@
+{
+  "NON_PUBLISHING": true,
+  "authoritative_components": {
+    "central_data_store": {
+      "role": "single source of truth for media + per-platform captions/schedules/post-ids",
+      "spreadsheet_id": "16H8aksqIX0xJ7OhrqoYAuNypR4_R440ZMHaVFMuIZdk",
+      "tabs": [
+        "Content_Master",
+        "Captions_Publishing"
+      ]
+    },
+    "cover_pipeline_N0_series": {
+      "capabilities": [
+        "OpusClip submit/poll",
+        "OpenAI romanize+caption",
+        "karaoke word-timings",
+        "beats fetch",
+        "Creatomate render",
+        "media-service /prep",
+        "scheduler -> Content_Master+Captions"
+      ],
+      "state": "mostly inactive"
+    },
+    "poster_publisher": {
+      "P1": {
+        "governance": "FIRST_REAL_POSTER=PAUSED_BY_NITIN",
+        "id": 9627055,
+        "role": "IG+FB poster, schedule-aware",
+        "state": "active"
+      }
+    },
+    "publishing_pipeline_N_series": {
+      "N1_intake": {
+        "id": 9385192,
+        "role": "Drive watcher -> intake new media",
+        "state": "active"
+      },
+      "N2_processing": {
+        "id": 9385197,
+        "role": "captions/hashtags/titles + scheduling into Captions_Publishing",
+        "state": "active",
+        "uses": "OpenAI caption generation"
+      },
+      "N3_publisher": {
+        "boundary": "PRIMARY PUBLISH SURFACE — currently blocked",
+        "id": 9385359,
+        "role": "schedule-aware multi-platform publisher (YouTube/IG/FB/TikTok)",
+        "state": "INACTIVE + isinvalid=true"
+      },
+      "N4_error_retry": {
+        "id": 9385364,
+        "role": "retry max 3 + email alert",
+        "state": "INACTIVE + isinvalid=true"
+      },
+      "N5_reshare_notify": {
+        "id": 9397512,
+        "role": "email after FB upload + mark reshare col",
+        "side_effect": "sends email",
+        "state": "active"
+      },
+      "N6_personal_reel_mail": {
+        "id": 9483892,
+        "role": "ready-to-post mail for personal reel",
+        "state": "active"
+      },
+      "N7_release_scheduler": {
+        "id": 9571076,
+        "role": "flip Scheduled->New at release time",
+        "state": "active"
+      },
+      "N8_download_proxy": {
+        "id": 9571262,
+        "role": "force-download proxy for media URLs",
+        "state": "active"
+      }
+    },
+    "review_approval_flow": {
+      "N0_REVIEW": {
+        "id": 9508282,
+        "role": "approval email",
+        "state": "active"
+      },
+      "N0_REVIEW_APPROVE": {
+        "id": 9508279,
+        "role": "approval webhook (human gate)",
+        "state": "active"
+      },
+      "note": "Human approval is enforced via email + webhook; Claude must never fabricate approval."
+    },
+    "tiktok_auth": {
+      "auth_exchange": {
+        "id": 9442699
+      },
+      "state": "active scaffolding; sandbox token historically expired; app review pending",
+      "token_refresh": {
+        "id": 9442700
+      }
+    },
+    "visualizer_pipeline_V_series": {
+      "V1_intake": {
+        "id": 9516949,
+        "state": "active"
+      },
+      "V1b_lyrics_transcribe": {
+        "id": 9591968,
+        "state": "inactive + isinvalid=true"
+      },
+      "V2_cut_render": {
+        "id": 9516688,
+        "state": "active",
+        "uses": "render/media service"
+      },
+      "V3_SECURE_approve_only": {
+        "id": 9796001,
+        "note": "secure variant stops at VISUALIZER_APPROVED (no auto-publish)",
+        "state": "inactive"
+      },
+      "V3_approve_publish": {
+        "id": 9561890,
+        "state": "inactive"
+      }
+    }
+  },
+  "boundaries": {
+    "claude": "Orchestration, read-only inspection, spec/blueprint authoring (analyst). Does not itself publish or hold platform credentials.",
+    "make_com": "Execution engine. Owns platform connections, webhooks, schedules, and the publish scenarios (N1-N8, P1, V1-V3).",
+    "render_layer": "Shotstack (MCP present), Creatomate (N0-D2), beat-service, media-service /prep, FFmpeg (in media-service deploy zips). Produce rendered media; no posting.",
+    "social_platforms": "YouTube / Instagram / Facebook / TikTok reached ONLY through Make connections at the N3/P1/V3 publish edge — the single crossing point to the public internet, currently gated/paused."
+  },
+  "callable_execution_surfaces": {
+    "read_only_safe": [
+      "make.scenarios_list / scenarios_get / blueprint extract (inspection)",
+      "make.connections_list, environment_get, executions_list/get (history inspection)",
+      "google_drive read (search_files/get_file_metadata/read_file_content)",
+      "skill: unchained-nitin-pipeline-v2:pipeline-knowledge (read-only reference lookup)",
+      "skill: unchained-nitin-pipeline-v2:pipeline-analyst (writes a SPEC only; never builds)"
+    ],
+    "side_effecting_do_not_invoke_without_approval": [
+      "make.scenarios_run / scenarios_activate / scenarios_update / hooks_ping",
+      "skill: unchained-nitin-pipeline-v2:pipeline-builder (pushes blueprints)",
+      "skill: unchained-nitin-pipeline-v2:pipeline-tester (validates then ACTIVATES)",
+      "shotstack render_* (cost + external render)",
+      "N3/N4/P1/V3 activation or any publish webhook"
+    ]
+  },
+  "component_evidence_references": [
+    {
+      "proves": "connector authenticated as Nitin, team 2778692",
+      "ref": "make.users_me"
+    },
+    {
+      "proves": "live 35-scenario inventory incl. N-series, P1, V-series, TikTok auth",
+      "ref": "make.scenarios_list(team 2778692)"
+    },
+    {
+      "proves": "central spreadsheet exists + reachable read-only",
+      "ref": "drive.get_file_metadata(16H8...IZdk)"
+    },
+    {
+      "proves": "documented architecture (IDs, sheet schema, module output fields) — HISTORICAL",
+      "ref": "memory:/projects/01a09228.../unchained-nitin-claude-md.md"
+    },
+    {
+      "proves": "historical N-series status (2026-06-16) — HISTORICAL",
+      "ref": "memory:/projects/01a09228.../unchained-nitin-pipeline-status.md"
+    },
+    {
+      "proves": "documented build/inspect surfaces available",
+      "ref": "skills:unchained-nitin-social-automation + unchained-nitin-pipeline-v2(analyst/builder/tester/knowledge)"
+    }
+  ],
+  "current_observations": {
+    "authoritative_spreadsheet": {
+      "id": "16H8aksqIX0xJ7OhrqoYAuNypR4_R440ZMHaVFMuIZdk",
+      "owner": "[CONTACT_REDACTED]",
+      "reachable_readonly": true,
+      "source": "drive.get_file_metadata",
+      "title": "Master Analysis Sheet"
+    },
+    "connectors_present_this_session": [
+      {
+        "authenticated_as": "[CONTACT_REDACTED]",
+        "scope": "read+write (write NOT used)",
+        "type": "make.com"
+      },
+      {
+        "scope": "read+write (read only used)",
+        "type": "google_drive"
+      },
+      {
+        "scope": "render (NOT called; would incur cost)",
+        "type": "shotstack"
+      },
+      {
+        "scope": "hosting (NOT called)",
+        "type": "render.com"
+      },
+      {
+        "scope": "not used",
+        "type": "chrome_browser"
+      }
+    ],
+    "make_account": {
+      "connected_as": "[CONTACT_REDACTED]",
+      "source": "make.users_me",
+      "team_id": 2778692,
+      "user_id": 5637212
+    },
+    "make_scenarios": {
+      "active": [
+        {
+          "id": 9477609,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "MAIL: Make.com notificaties -> datastore"
+        },
+        {
+          "id": 9508279,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "N0-REVIEW-APPROVE: goedkeur-webhook"
+        },
+        {
+          "id": 9508282,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "N0-REVIEW: Goedkeuringsmail"
+        },
+        {
+          "id": 9385192,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "N1: Intake — Drive Watcher"
+        },
+        {
+          "id": 9385197,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "N2: Processing — Captions & Scheduling"
+        },
+        {
+          "id": 9397512,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "N5: Reshare Notificatie — Email na Facebook Upload"
+        },
+        {
+          "id": 9483892,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "N6: Persoonlijke Reel — Klaar-om-te-plaatsen mail"
+        },
+        {
+          "id": 9571076,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "N7: Release Scheduler (Scheduled -> New op tijd)"
+        },
+        {
+          "id": 9571262,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "N8: Download Proxy (forceer download)"
+        },
+        {
+          "id": 9627055,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "P1: Poster Publisher (IG+FB, schedule-aware)"
+        },
+        {
+          "id": 9442699,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "TikTok Auth Exchange"
+        },
+        {
+          "id": 9442700,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "TikTok Token Refresh"
+        },
+        {
+          "id": 9516949,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "V1: Visualizer Intake"
+        },
+        {
+          "id": 9516688,
+          "isActive": true,
+          "isinvalid": false,
+          "name": "V2: Visualizer Cut -> Render"
+        }
+      ],
+      "count": 35,
+      "inactive": [
+        {
+          "id": 9508104,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-B1: OpusClip Submit"
+        },
+        {
+          "id": 9508147,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-B2: OpusClip Clips ophalen"
+        },
+        {
+          "id": 9472289,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-BEAT TEST: Beat Service Call"
+        },
+        {
+          "id": 9465683,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-B TEST: OpusClip Clip"
+        },
+        {
+          "id": 9465685,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-B TEST: OpusClip Poll"
+        },
+        {
+          "id": 9508973,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-C2: Karaoke woord-timings + romaniseren"
+        },
+        {
+          "id": 9508162,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-C: Romaniseren + caption (OpenAI)"
+        },
+        {
+          "id": 9508207,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-D1: Beats ophalen"
+        },
+        {
+          "id": 9508239,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-D2: Creatomate render"
+        },
+        {
+          "id": 9508460,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-E: Scheduler -> Content_Master + Captions"
+        },
+        {
+          "id": 9508062,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "N0-PREP TEST: Media Service /prep"
+        },
+        {
+          "id": 9385359,
+          "isActive": false,
+          "isinvalid": true,
+          "name": "N3: Publisher — Schedule-Aware (All Platforms)"
+        },
+        {
+          "id": 9385364,
+          "isActive": false,
+          "isinvalid": true,
+          "name": "N4: Error Retry — Max 3 Pogingen + Email Alert"
+        },
+        {
+          "id": 9443204,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "TOOL: Row Reset"
+        },
+        {
+          "id": 9508442,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "TOOL: slick render voorbeeld"
+        },
+        {
+          "id": 9591968,
+          "isActive": false,
+          "isinvalid": true,
+          "name": "V1b: Lyrics Transcribe + Review-mail"
+        },
+        {
+          "id": 9796001,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "V3-SECURE: Visualizer Approve -> VISUALIZER_APPROVED only"
+        },
+        {
+          "id": 9561890,
+          "isActive": false,
+          "isinvalid": false,
+          "name": "V3: Visualizer Approve -> Publish"
+        }
+      ],
+      "source": "make.scenarios_list (live)"
+    }
+  },
+  "external_side_effects_performed": [],
+  "gates": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "notes": [
+      "Any Make scenario activation or run is an external side effect requiring explicit Nitin approval — NOT performed.",
+      "N3 multi-platform Publisher is isinvalid=true and inactive — publishing path is not live.",
+      "TikTok integration historically uses an expired sandbox token pending app review — not usable."
+    ]
+  },
+  "generated_at_utc": "2026-09-19",
+  "historical_claims": {
+    "as_of": "2026-06-16 (memory)",
+    "claims": [
+      "N1/N2/N3 inactive; N3 isinvalid=true; N5 active.",
+      "Last successful publication 2026-06-12 to YouTube+IG+FB (TikTok not posted).",
+      "TikTok sandbox token issued 2026-06-13 (~24h), expired; app review pending.",
+      "Sheet schema: Content_Master + Captions_Publishing with per-platform caption/hashtag/schedule/post-id columns.",
+      "Facebook Page ID and IG business account ID documented; Rakesh (external dev) being phased out in favor of Claude+Nitin."
+    ],
+    "divergence_from_current": [
+      "CURRENT: N1 and N2 are now isActive=true (historical said inactive).",
+      "CURRENT: many new scenarios exist not in the 2026-06 status doc (N0-REVIEW*, N6, N7, N8, P1, V1/V2/V3, TikTok Auth/Refresh, MAIL).",
+      "CONSISTENT: N3 remains isinvalid=true and inactive; N4 also isinvalid=true — multi-platform publisher still blocked."
+    ]
+  },
+  "limitations": [
+    "scenarios_list payload exceeded context; compact fields (id/name/isActive/isinvalid) extracted via grep on the saved result file — per-module blueprints NOT fetched this pass.",
+    "Sheet ROW CONTENTS not read (metadata only) to avoid exposing data and large payloads.",
+    "Shotstack/FFmpeg/Plainly capabilities not exercised (would incur cost/side effects); presence inferred from connectors + scenario names + prior deploy artifacts.",
+    "Secret values (TikTok token, client key, private webhook URLs, connection credentials) deliberately not read/echoed.",
+    "'Plainly' adapter not observed in the live scenario set; render layer observed is Shotstack (MCP) + Creatomate (N0-D2) + media/beat services."
+  ],
+  "observed_read_only_tool_calls": [
+    {
+      "fabricated": false,
+      "result": "13 memory docs listed (profile, areas, project 01a09228 pipeline docs)",
+      "tool": "mcp__memory__memory_list"
+    },
+    {
+      "fabricated": false,
+      "paths": [
+        "unchained-nitin-claude-md.md",
+        "unchained-nitin-pipeline-status.md",
+        "areas/unchained-nitin-channel.md"
+      ],
+      "result": "read OK (historical reference; secrets redacted from this output)",
+      "tool": "mcp__memory__memory_read"
+    },
+    {
+      "fabricated": false,
+      "result": {
+        "email": "[CONTACT_REDACTED]",
+        "id": 5637212,
+        "name": "Nitin Ramdaras",
+        "timezone": "Europe/Amsterdam"
+      },
+      "tool": "make.users_me"
+    },
+    {
+      "args": {
+        "includeSubfolders": true,
+        "teamId": 2778692
+      },
+      "fabricated": false,
+      "result": "35 scenarios returned (large payload); compact inventory captured in current_observations.make_scenarios",
+      "tool": "make.scenarios_list"
+    },
+    {
+      "args": {
+        "fileId": "16H8aksqIX0xJ7OhrqoYAuNypR4_R440ZMHaVFMuIZdk"
+      },
+      "fabricated": false,
+      "result": {
+        "mimeType": "application/vnd.google-apps.spreadsheet",
+        "owner": "[CONTACT_REDACTED]",
+        "reachable": true,
+        "title": "Master Analysis Sheet"
+      },
+      "tool": "drive.get_file_metadata"
+    }
+  ],
+  "publishes_performed": [],
+  "request_id": "P0E4_V13_DISPATCH_DISCOVERY_20260919_A",
+  "required_connectors_credentials_no_secret_values": {
+    "facebook_pages": [
+      "facebook page connection",
+      "page_id present in config"
+    ],
+    "google": [
+      "google (standard)",
+      "google-restricted"
+    ],
+    "instagram_business": [
+      "ig business account connection"
+    ],
+    "note": "All token values, client keys and private webhook URLs are intentionally REDACTED and were not read/exposed.",
+    "openai": [
+      "openai caption/romanize connections (x2)"
+    ],
+    "tiktok": [
+      "sandbox client key + bearer token (EXPIRED, redacted)",
+      "app review pending"
+    ],
+    "webhooks": [
+      "N5 reshare webhook (id 4201776, URL redacted)",
+      "N0-REVIEW-APPROVE hook (id 4251760)",
+      "N2 hook (id 4197563)"
+    ],
+    "youtube": [
+      "youtube upload connection"
+    ]
+  },
+  "reusable_production_capabilities": [
+    "Multi-platform caption/hashtag/title generation (N2 + OpenAI connection)",
+    "Schedule-aware release flipping (N7)",
+    "Media intake from Drive (N1) + force-download proxy (N8)",
+    "Poster publishing to IG+FB (P1, paused by governance)",
+    "Visualizer render pipeline (V1/V2) via render/media service",
+    "Human approval gate (N0-REVIEW + N0-REVIEW-APPROVE webhook)",
+    "Reshare notification + audit email (N5, MAIL->datastore)",
+    "Central Sheet schema (Content_Master + Captions_Publishing) with per-platform publish flags/schedules/post-id write-back"
+  ],
+  "safest_non_publishing_invocation_path_P0E4": [
+    "1. Inspect only: make.scenarios_get on N1,N2,N3,N7,P1 + blueprint extract to map exact module graph.",
+    "2. Read the central Sheet (read-only) to confirm Content_Master/Captions_Publishing schema against memory.",
+    "3. Use pipeline-knowledge (read) and pipeline-analyst (spec-only) for any planning.",
+    "4. NEVER call scenarios_run/activate/update, pipeline-builder, pipeline-tester, shotstack render, or any publish webhook.",
+    "5. Treat N3 isinvalid=true and FIRST_REAL_POSTER=PAUSED_BY_NITIN as hard stops; surface as gates, do not clear them."
+  ],
+  "secrets_exposed": false,
+  "status": "COMPLETE",
+  "task_identity": "UNCHAINED NITIN — P0-E4 CLAUDE SOCIAL MEDIA SYSTEM DISCOVERY",
+  "task_type": "READ_ONLY_DISCOVERY",
+  "writes_performed": []
+}

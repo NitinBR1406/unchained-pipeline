@@ -1,0 +1,313 @@
+{
+  "NON_PUBLISHING": true,
+  "actual_read_only_calls": [
+    {
+      "fabricated": false,
+      "result": "OK (N2 metadata+blueprint)",
+      "scenarioId": 9385197,
+      "tool": "make.scenarios_get"
+    },
+    {
+      "fabricated": false,
+      "result": "OK (N3 metadata+blueprint)",
+      "scenarioId": 9385359,
+      "tool": "make.scenarios_get"
+    },
+    {
+      "fabricated": false,
+      "result": "OK (P1 metadata+blueprint)",
+      "scenarioId": 9627055,
+      "tool": "make.scenarios_get"
+    },
+    {
+      "fabricated": false,
+      "result": "counted 32 top-level scenario objects",
+      "tool": "grep(saved scenarios_list from prior task)"
+    }
+  ],
+  "blocked_subreads": [],
+  "cross_scenario_observations": {
+    "gate_strength_ranking": "P1 (external fail-closed approval verifier) > N3 (sheet-flag only, no approval, currently inactive+invalid) > N2 (no gate; auto-enables publish flags).",
+    "spreadsheet_divergence": {
+      "classification": "observed divergence — the live publishing scenarios reference a different spreadsheet than the memory reference doc; historical claim not confirmed as the live source of truth.",
+      "live_N2_N3_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "memory_documented_id": "16H8aksqIX0xJ7OhrqoYAuNypR4_R440ZMHaVFMuIZdk"
+    },
+    "tiktok_token": "N3 now reads the TikTok bearer from datastore 168757 at runtime (not hardcoded as in historical memory); token value NOT read."
+  },
+  "evidence_refs": [
+    {
+      "proves": "N2 module graph + auto-TRUE publish flags + no approval gate",
+      "ref": "make.scenarios_get(9385197)"
+    },
+    {
+      "proves": "N3 inactive/isinvalid, 4-platform router, sheet-flag-only gate, no approval verifier",
+      "ref": "make.scenarios_get(9385359)"
+    },
+    {
+      "proves": "P1 active with fail-closed external publish-eligibility approval gate",
+      "ref": "make.scenarios_get(9627055)"
+    },
+    {
+      "proves": "live scenario count = 32 (corrects prior 35)",
+      "ref": "grep count of saved scenarios_list"
+    }
+  ],
+  "external_side_effects_performed": 0,
+  "external_writes_performed": 0,
+  "gates": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "generated_at_utc": "2026-09-19",
+  "inventory_count_reconciliation": {
+    "classification": "observed",
+    "finding": "CONFIRMED: the earlier inventory enumerated 32 entries (14 active + 18 inactive); the prior 'count: 35' was inaccurate. Correct live count = 32.",
+    "method": "grep count of scenario-level \"id\": entries in the saved scenarios_list result file (no broad rerun)",
+    "observed_actual_count": 32,
+    "prior_task_reported_count": 35
+  },
+  "limitations": [
+    "Only N2/N3/P1 inspected this pass, as scoped.",
+    "Datastore contents (168757 TikTok token, 168812 errors, 177455 poster rows) NOT read — avoided to prevent secret/data exposure.",
+    "Sheet ROW CONTENTS not read (blueprint-level structure only).",
+    "Approval-verifier API key (auth 217337) and N5 private webhook URL deliberately not exposed.",
+    "Connection __IMTCONN__/account IDs are non-secret Make references, included for graph clarity; no credential values read."
+  ],
+  "per_scenario_findings": {
+    "N2_9385197": {
+      "observed": {
+        "gate_note": "N2 AUTO-sets all four publish_to_* flags = TRUE with no human/approval gate at this stage; approval is expected to live in the separate N0-REVIEW flow, not observed here.",
+        "hook_present": true,
+        "id": 9385197,
+        "isActive": true,
+        "isPaused": false,
+        "isinvalid": false,
+        "islinked": true,
+        "linked_sheets": [
+          "Content_Master",
+          "Status_Logging",
+          "Captions_Publishing"
+        ],
+        "linked_spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+        "module_graph": [
+          {
+            "id": 1,
+            "module": "gateway:CustomWebHook"
+          },
+          {
+            "id": 13,
+            "module": "google-sheets:addRow",
+            "sheet": "Content_Master"
+          },
+          {
+            "id": 14,
+            "module": "google-sheets:addRow",
+            "sheet": "Status_Logging"
+          },
+          {
+            "id": 2,
+            "module": "util:SetVariables",
+            "note": "computes next posting slot"
+          },
+          {
+            "conn_ref": 14335039,
+            "id": 3,
+            "module": "openai-gpt-3:createModelResponse",
+            "note": "gpt-4.1-mini caption/hashtag JSON"
+          },
+          {
+            "id": 7,
+            "module": "google-sheets:addRow",
+            "note": "sets publish_to_youtube/tiktok/instagram/facebook = TRUE and 4 schedule columns",
+            "sheet": "Captions_Publishing"
+          },
+          {
+            "id": 9,
+            "module": "google-sheets:filterRows",
+            "sheet": "Status_Logging"
+          },
+          {
+            "id": 11,
+            "module": "google-sheets:updateRow",
+            "sheet": "Status_Logging",
+            "value": "CAPTIONS_READY"
+          }
+        ],
+        "name": "N2: Processing — Captions & Scheduling",
+        "nitin_publish_approval_or_SHA_gate_checked": false,
+        "publish_or_upload_modules": "NONE (no platform posting in N2)",
+        "scheduling": "immediately"
+      }
+    },
+    "N3_9385359": {
+      "observed": {
+        "gate_note": "NO approval/eligibility/SHA verifier present in N3. Publishing is gated ONLY by Google-Sheet flags/schedule plus the scenario being inactive+isinvalid. This is the weaker gate compared to P1.",
+        "id": 9385359,
+        "isActive": false,
+        "isPaused": false,
+        "isinvalid": true,
+        "islinked": false,
+        "linked_sheets": [
+          "Captions_Publishing",
+          "Content_Master"
+        ],
+        "linked_spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+        "module_graph": [
+          {
+            "filter": "status=New",
+            "id": 1,
+            "module": "google-sheets:filterRows",
+            "sheet": "Captions_Publishing"
+          },
+          {
+            "id": 3,
+            "module": "google-sheets:filterRows",
+            "sheet": "Content_Master"
+          },
+          {
+            "id": 5,
+            "module": "builtin:BasicRouter",
+            "routes": [
+              {
+                "acct_ref": 14374103,
+                "platform": "youtube",
+                "privacy": "public",
+                "publish_module": "youtube:ActionUploadVideo"
+              },
+              {
+                "bearer_source": "datastore:GetRecord(168757) [token NOT read]",
+                "note": "emails a draft-ready notice",
+                "platform": "tiktok",
+                "publish_module": "http:MakeRequest -> open.tiktokapis.com"
+              },
+              {
+                "account_id": "17841457677776171",
+                "conn_ref": 14369479,
+                "platform": "instagram",
+                "publish_module": "instagram-business:CreateAReelPost"
+              },
+              {
+                "conn_ref": 14363628,
+                "page_id": "839373332878305",
+                "platform": "facebook",
+                "posts_to_webhook": "N5 reshare hook [PRIVATE URL REDACTED]",
+                "publish_module": "facebook-pages:uploadAReel"
+              }
+            ]
+          },
+          {
+            "error_logging": "datastore:AddRecord(168812) + email:ActionSendMeEmail on failures"
+          }
+        ],
+        "name": "N3: Publisher — Schedule-Aware (All Platforms)",
+        "nextExec": null,
+        "nitin_publish_approval_or_SHA_gate_checked": false,
+        "publish_gate_logic": "Per-platform sheet-column filter only: status=New AND publish_flag=TRUE AND platform_post_id EMPTY AND schedule_column NOT empty.",
+        "scheduling": "indefinitely/960min"
+      }
+    },
+    "P1_9627055": {
+      "governance_discrepancy": {
+        "action_taken": "NONE — not deactivated, not run, not modified. Reported as a governance item for Nitin, per instruction.",
+        "assessment": "P1 active is NOT publish authorization: every post is blocked unless the external verifier returns VALID_PUBLISH_APPROVAL + eligible, fail-closed. Inspected only.",
+        "observation": "P1 is isActive=true while FIRST_REAL_POSTER=PAUSED_BY_NITIN."
+      },
+      "observed": {
+        "approval_verifier_surface": "[URL_REDACTED] (API-key auth via auth 217337; key NOT exposed)",
+        "backing_store": "datastore 177455 (poster schedule) + datastore 168812 (error log)",
+        "gate_note": "P1 DOES enforce a demonstrable fail-closed publish-eligibility gate: it sends content_id+asset_sha256+packaging_sha256+schedule_version to an external approval verifier and publishes ONLY if reason==VALID_PUBLISH_APPROVAL and eligible==true; any HTTP/parse error fails closed. Matches the P0-E1 human-auth/SHA approval model.",
+        "id": 9627055,
+        "isActive": true,
+        "isPaused": false,
+        "isinvalid": false,
+        "islinked": true,
+        "linked_spreadsheet_id": null,
+        "module_graph": [
+          {
+            "filter": "status=New AND (ig=TRUE, no ig_post_id) OR (fb=TRUE, no fb_post_id)",
+            "id": 1,
+            "module": "datastore:SearchRecord(177455)"
+          },
+          {
+            "id": 5,
+            "module": "builtin:BasicRouter",
+            "routes": [
+              {
+                "platform": "instagram",
+                "steps": [
+                  {
+                    "auth_ref": 217337,
+                    "id": 100,
+                    "module": "http:ActionSendDataAPIKeyAuth",
+                    "onerror": "GATE_HTTP_FAIL -> fail closed",
+                    "rejectUnauthorized": true,
+                    "url": ".../v/publish-eligibility"
+                  },
+                  {
+                    "id": 101,
+                    "module": "json:ParseJSON",
+                    "onerror": "GATE_PARSE_FAIL -> fail closed"
+                  },
+                  {
+                    "account_id": "17841457677776171",
+                    "conn_ref": 14369479,
+                    "gate_filter": "reason == VALID_PUBLISH_APPROVAL AND eligible == true",
+                    "id": 10,
+                    "module": "instagram-business:CreatePostPhoto"
+                  },
+                  {
+                    "id": 11,
+                    "module": "datastore:UpdateRecord(177455) ig_post_id"
+                  }
+                ]
+              },
+              {
+                "platform": "facebook",
+                "steps": [
+                  {
+                    "auth_ref": 217337,
+                    "id": 200,
+                    "module": "http:ActionSendDataAPIKeyAuth",
+                    "onerror": "GATE_HTTP_FAIL -> fail closed",
+                    "url": ".../v/publish-eligibility"
+                  },
+                  {
+                    "id": 201,
+                    "module": "json:ParseJSON",
+                    "onerror": "GATE_PARSE_FAIL -> fail closed"
+                  },
+                  {
+                    "gate_filter": "reason == VALID_PUBLISH_APPROVAL AND eligible == true",
+                    "id": 20,
+                    "module": "http:MakeRequest(get image)"
+                  },
+                  {
+                    "conn_ref": 14363628,
+                    "id": 21,
+                    "module": "facebook-pages:UploadPhoto",
+                    "page_id": "839373332878305"
+                  },
+                  {
+                    "id": 22,
+                    "module": "datastore:UpdateRecord(177455) fb_post_id"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "name": "P1: Poster Publisher (IG+FB, schedule-aware)",
+        "nextExec": "2026-09-18T22:32:33Z",
+        "nitin_publish_approval_or_SHA_gate_checked": true,
+        "scheduling": "indefinitely/900s"
+      }
+    }
+  },
+  "publishes_performed": 0,
+  "request_id": "P0E4_V13_DISPATCH_BOUNDARY_SMOKE_B",
+  "secrets_exposed": false,
+  "status": "COMPLETE",
+  "task_identity": "P0-E4 Dispatch READ-ONLY boundary smoke (N2 / N3 / P1 scenario-get)"
+}

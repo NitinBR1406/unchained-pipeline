@@ -1,0 +1,32 @@
+{
+  "api_cli_preferred": true,
+  "capabilities_exercised": [
+    "getApp",
+    "getAXState",
+    "click",
+    "setValue",
+    "pressKey",
+    "getState",
+    "getTab"
+  ],
+  "claude_boundary_read_only_smoke": "COMPLETED",
+  "claude_dispatch_new_discovery": "COMPLETED",
+  "computer_use_callable": true,
+  "davinci_resolve_callable": "NOT_PROVEN",
+  "durable_dispatcher": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "gemini_independent_qc_synthetic_smoke": "COMPLETED_EXPECTED_REJECTION_79_PERCENT",
+  "gemini_intelligence_synthetic_smoke": "COMPLETED",
+  "native_permissions_smoke": "PASS_FOR_CLAUDE_AX_AND_SAFE_NAVIGATION",
+  "observed_surfaces": [
+    "native Claude Desktop Accessibility",
+    "native Finder output-artifact navigation",
+    "Chrome Gemini browser tab through Computer-use MCP"
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "raw_final_audio_binding": false,
+  "raw_hash_complete": true,
+  "schema_version": 1,
+  "screen_recording_independently_verified": false
+}

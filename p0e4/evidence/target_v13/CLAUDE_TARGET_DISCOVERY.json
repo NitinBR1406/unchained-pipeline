@@ -1,0 +1,39 @@
+{
+  "authoritative_execution_surface": "Claude Desktop > Dispatch (Beta)",
+  "authority": "Explicit Nitin correction in current task",
+  "capability_limitations": [
+    "Completion and returned artifact directly observed; nested Make calls are Claude-reported, not independently signed provider receipts",
+    "Read-only module inspection only; render/publish capabilities not exercised",
+    "No blind GUI retry or exactly-once external dispatch proven",
+    "No general-purpose UI adapter added to V11 executor"
+  ],
+  "corrections_append_only": [
+    "Initial returned inventory count35 corrected to32 by boundary task",
+    "Historical spreadsheet16H8... is not live N2/N3 spreadsheet1QK0..."
+  ],
+  "historical_dispatch_tasks_used_as_execution_evidence": false,
+  "identity_boundary": "Unique request nonce + observed Dispatch session + output artifact hash; no fabricated provider task UUID",
+  "new_requests": [
+    "P0E4_V13_DISPATCH_DISCOVERY_20260919_A",
+    "P0E4_V13_DISPATCH_BOUNDARY_SMOKE_B"
+  ],
+  "ordinary_historical_chat_accepted_as_target": false,
+  "output_artifact_source": "Dispatch Outputs > Show folder in native UI",
+  "provider_task_uuid_exposed": false,
+  "rejected_targets": [
+    {
+      "name": "Make.com Reviewen en Updaten",
+      "reason": "Explicit Nitin rejection as invocation target; previous read-only chat smoke excluded from acceptance"
+    },
+    {
+      "name": "iMac iOS 14 upgrade probleem",
+      "reason": "Historical planning context, not invocation surface"
+    }
+  ],
+  "schema_version": 1,
+  "system_inventory_receipts": [
+    "CLAUDE_DISPATCH_RECEIPT.json",
+    "CLAUDE_BOUNDARY_RECEIPT.json"
+  ],
+  "target_confidence": "EXPLICIT_OWNER_IDENTIFICATION_AND_NEW_OBSERVED_DISPATCH"
+}

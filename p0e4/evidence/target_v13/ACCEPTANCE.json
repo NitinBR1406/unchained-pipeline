@@ -1,0 +1,41 @@
+{
+  "accepted_scope": "New Claude Dispatch read-only discovery + boundary smoke; Gemini synthetic intelligence and independent synthetic QC; RAW/candidate container hashing. Not production integration.",
+  "blocked_tasks": [
+    "NITIN_AUDIO_SOURCE_BINDING",
+    "EXISTING_N3_GOVERNANCE_RECONCILIATION",
+    "REAL_MEDIA_PRODUCTION_AND_QC_NOT_ACCEPTED"
+  ],
+  "deterministic_replay": true,
+  "durable_gui_dispatcher_proven": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "production_deployment_authorized": false,
+  "production_e2e_status": "BLOCKED_NOT_GREEN",
+  "publication_authorized": false,
+  "raw_audio_pair_bound": false,
+  "real_media_qc_proven": false,
+  "regression_suites_passed": 49,
+  "remaining_ready_tasks_in_current_bounded_scope": 0,
+  "scope_exclusions": [
+    "No general UI dispatcher extension",
+    "No provider-signed Make receipts",
+    "No render service invoked",
+    "No frozen/Make mutation",
+    "No publication"
+  ],
+  "status": "CAPABILITY_SMOKE_ACCEPTED_PRODUCTION_BLOCKED",
+  "tested_sha": "f125e55547c3421ba9f98b82567e4de71ebce125",
+  "ui_receipts": [
+    {
+      "sha256": "ae982cc2af3b756f6c9872d7c4f8e30fd205c64689e124fd40e5e0b022475a2e",
+      "uri": "p0e4/evidence/target_v13/CLAUDE_DISPATCH_RECEIPT.json"
+    },
+    {
+      "sha256": "cdd8245d34c0a31eae3f2ee460be88bfa467b5848a2233ee8024a9bb3fb72284",
+      "uri": "p0e4/evidence/target_v13/GEMINI_INTELLIGENCE_RECEIPT.json"
+    },
+    {
+      "sha256": "708378943ef555fafba556c7c18f21b761c6056d4cc36cf0a9d475f6d0eccb7f",
+      "uri": "p0e4/evidence/target_v13/GEMINI_QC_RECEIPT.json"
+    }
+  ]
+}

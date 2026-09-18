@@ -1,0 +1,21 @@
+{
+  "deterministic": true,
+  "output_sha256": "8652a48509e8b9621e9ef846f449c0979d859698f6c0288962040b6bc6dd209f",
+  "result": {
+    "blockers": [
+      "INVALID_OR_UNVERIFIED_PACKAGE_CHAIN"
+    ],
+    "external_side_effect_count": 0,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "hard_stop": true,
+    "next_gate": "NITIN_PUBLISH_APPROVAL",
+    "platforms": [],
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "publish_ready": false,
+    "schema_version": 1,
+    "status": "BLOCKED"
+  },
+  "scope": "TEST_ONLY negative replay; no real media E2E or rendering",
+  "ui_smoke_receipts_cannot_authorize_production": true
+}
