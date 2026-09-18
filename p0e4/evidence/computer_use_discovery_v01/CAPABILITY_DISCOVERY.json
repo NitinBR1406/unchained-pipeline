@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-18T21:04:41.913Z",
+  "source_commit": "533b640fb0b5c4792f3ae0ee602ee12ef4d4da51",
+  "plugin": "unified-computer-use",
+  "tools": [
+    "mcp__cua_repl.js",
+    "mcp__cua_repl.js_reset"
+  ],
+  "current_desktop_context": {
+    "callable": true,
+    "tested_operation": "cua.getState",
+    "invocations": 2,
+    "status": "PASS",
+    "ui_mutations": 0,
+    "app_count": 27,
+    "browser_count": 1,
+    "browser_types": [
+      "iab"
+    ],
+    "inventory_errors": [],
+    "resolve_matches": []
+  },
+  "exposed_capabilities": {
+    "discovery": [
+      "getState",
+      "listApps",
+      "listBrowsers",
+      "listTabs"
+    ],
+    "selection": [
+      "getApp",
+      "getBrowser",
+      "getTab"
+    ],
+    "observation": [
+      "getAXState",
+      "getScreenshot",
+      "getAXStateAndScreenshot"
+    ],
+    "interaction": [
+      "paste",
+      "click",
+      "drag",
+      "pressKey",
+      "scroll",
+      "selectText",
+      "setValue",
+      "typeText",
+      "performSecondaryAction"
+    ],
+    "browser_navigation": [
+      "createBrowserTab",
+      "goto",
+      "back",
+      "forward",
+      "reload",
+      "close"
+    ],
+    "browser_handoff": [
+      "markDeliverable",
+      "markHandoff"
+    ]
+  },
+  "tested_capabilities": [
+    "getState"
+  ],
+  "cli_configuration": {
+    "command": "codex mcp list --json",
+    "exit_code": 0,
+    "enabled_server_names": [
+      "computer-use",
+      "cua_repl",
+      "node_repl"
+    ],
+    "disabled_server_names": [
+      "codex_app"
+    ],
+    "child_runtime_callability": "NOT_PROVEN",
+    "configuration_presence_is_not_callability": true
+  },
+  "assessment": {
+    "gui_adapter": "CONDITIONAL_CANDIDATE",
+    "resolve_installed": "UNKNOWN",
+    "resolve_ui_access": "NOT_TESTED",
+    "resolve_edit_render_export": "NOT_TESTED",
+    "durable_dispatcher": false,
+    "api_cli_preferred": true,
+    "controller_integration": "NOT_IMPLEMENTED",
+    "model_identity": null
+  },
+  "limitations": [
+    "Only inventory reads tested; exposed mutation methods are not execution acceptance.",
+    "App inventory is not exhaustive installation evidence.",
+    "Desktop MCP access does not prove inheritance into isolated Codex CLI child.",
+    "No remote idempotency, durable task queue, receipt protocol or crash recovery established by this MCP smoke.",
+    "GUI stages require exclusive desktop ownership, pinned inputs, expected UI preconditions, artifact hashes and independently verified receipts.",
+    "Ambiguous GUI mutations must hold for reconciliation; do not blindly replay.",
+    "Prefer verified Resolve API/CLI capabilities before GUI fallback; no Resolve scripting interface inspected here."
+  ],
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "frozen_components_modified": false,
+    "production_actions": 0
+  }
+}
