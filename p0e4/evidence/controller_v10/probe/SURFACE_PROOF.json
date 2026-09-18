@@ -1,0 +1,39 @@
+{
+  "api_key_created": false,
+  "authentication_observed": "Logged in using ChatGPT",
+  "executable": "/Applications/ChatGPT.app/Contents/Resources/codex",
+  "exit_code": 0,
+  "files": {
+    "events.jsonl": "dd93799fbed51259efe5313b398fcea55c47d8e732847394d70464b436740069",
+    "input.json": "64642a6291488f8f60e863b8c645057204b8850e71e7339df336044459e9f05c",
+    "last.json": "1d3d6ff09e4c4dbba5bec06d8cb87338ca7dee58cacda8732929c4cdef431126",
+    "prompt.txt": "f473b4dd646b92aa26e52bde062ca18e8cb6b85af73a108bff65e7d09d7bccfe",
+    "schema.json": "18aa5324de14cf1d00abea60f38ac65a38cbad3ab33d77c770e0e69e7a17c26e"
+  },
+  "flags": [
+    "--ignore-user-config",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "-c",
+    "approval_policy=\"never\"",
+    "--json",
+    "--output-schema",
+    "--output-last-message"
+  ],
+  "initial_sandbox_attempt": "Blocked by parent OS sandbox before app-server initialization; successful attempt used reviewed host execution with child read-only sandbox",
+  "model_identity": null,
+  "model_identity_note": "Not supplied by observed JSONL; no model identity inferred",
+  "no_other_callable_codex_work_connector": "Desktop task creation is user-owned task management, not a background execution transport; no invented Work API",
+  "official_sources": [
+    "https://learn.chatgpt.com/docs/non-interactive-mode",
+    "https://learn.chatgpt.com/docs/developer-commands?surface=cli"
+  ],
+  "production_side_effects": 0,
+  "result_verified": true,
+  "scope": "Minimal real non-production dispatch before controller implementation; not a publication or approval",
+  "surface": "codex exec",
+  "thread_id": "01a0b643-a7ae-7271-8c45-7138952dde6e",
+  "version": "0.155.0-alpha.2.6"
+}

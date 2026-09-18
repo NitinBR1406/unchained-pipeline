@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0b64c-e7fe-7273-be6d-d6d92f59f6c4"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"input_sha256\":\"ebe34d554ec32f750733734437051e04e5d9a86497ff5e1bcbe4660d3c3f8cf0\",\"result\":\"PASS\",\"status\":\"COMPLETED\",\"task_id\":\"EC_V10_GOVERNANCE_AUDIT\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":14111,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":77,"reasoning_output_tokens":0}}

@@ -1,0 +1,25 @@
+{
+  "archive_scope": "All controller_v10 files except final SHA256SUMS.txt, persistence receipt and inactive lock file",
+  "cleanup": "All CLI processes exited 0; ephemeral sessions, no production infrastructure created. Test temporary directories removed. Runtime is archived as evidence, not installed as an active service.",
+  "frozen_components_unchanged": true,
+  "new_codex_controller_dispatches": 2,
+  "new_codex_surface_probe": 1,
+  "new_temporal_authoritative_runs": 0,
+  "next_ready": "None in the authorized READY_TASKS_V01 seed. V09 production work retains its capability, rights and human gates.",
+  "prior_manifest_entries_verified": 107,
+  "real_cli_process_exit_codes": [
+    0,
+    0
+  ],
+  "source_files": {
+    "p0e4/controller/README.md": "93cfe2a8d36b2227b5a5b37ea4d8cc57f1c97de444186d0ad5b03809ed443875",
+    "p0e4/controller/READY_TASKS_V01.json": "8ec0d981a2233dd5b2b832586030c8026f628840a39c12e0e5c9b797cf896146",
+    "p0e4/controller/__init__.py": "2ffb78426af9b4446e9645248e3260a53bc162cca4efa4a8073952bc42c30cb2",
+    "p0e4/controller/dispatch.py": "31c4dd4ef3319067025d5cab6389df57ecf113fcdf8220cc0b54c332014e32a8",
+    "p0e4/controller/project_v10.py": "fcda72d86c12b6b039f5d9fc36ebd6d6603e33d4e1a9974984c7904f5a598877",
+    "p0e4/controller/runner.py": "318800af5c60f986f3562104d457fae780c50af98cb3386898f1943864298ef4",
+    "p0e4/tests/test_controller_projection.py": "188c0fee49a98298194f75438e83d1b93958566621070bba88bc99789e9e5011",
+    "p0e4/tests/test_execution_controller.py": "12110122bf31b593e18bf7e7ad909985c9f0d219e3a4b47ee51c9561d629b4d5"
+  },
+  "tested_sha": "ebe322871af44f7e0abcf562e7f7cc00017212a3"
+}

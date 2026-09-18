@@ -1,0 +1,38 @@
+{
+  "all_ready_tasks_in_authorized_seed_completed": true,
+  "atomic_claim_scope": "single-host OS flock + frozen P0-E3 leases",
+  "controller_projection_tests": 1,
+  "controller_tests": 12,
+  "crash_recovery": "Before intent: retry after lease expiry; complete artifacts: recover same receipt; ambiguous intent: hold without new spawn",
+  "deterministic_replay": true,
+  "dispatch_before_engineering_probe_verified": true,
+  "exactly_once_result_application": true,
+  "final_sha_restart_validation": true,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "human_approval_created": false,
+  "limitations": [
+    "One host and one controller directory only",
+    "Read-only no-tool evidence audits, not general write-capable engineering dispatch",
+    "No installed always-on daemon or distributed failover",
+    "No provider-side idempotency API assumed",
+    "Gemini/Claude production integration and real media E2E remain unresolved as recorded in V09"
+  ],
+  "local_at_most_one_spawn_per_job": true,
+  "new_dispatches_on_restart": 0,
+  "offline_suites_passed": 44,
+  "offline_suites_total": 44,
+  "production_deployment_authorized": false,
+  "production_e2e_status": "BLOCKED_NOT_GREEN",
+  "publication_authorized": false,
+  "real_codex_tasks_completed": 2,
+  "real_dispatch_sha": "2580b91e547b4b3d6d2be909e34ef3c6d3feacf0",
+  "remote_exactly_once_guarantee": false,
+  "runtime_artifacts_unchanged_on_restart": 26,
+  "source_update_after_real_dispatch": "Additional cached-receipt validation before TASK_RESULT; full regression and receipt reconciliation repeated on final tested SHA without duplicate dispatch",
+  "status": "GREEN_SINGLE_HOST_READONLY_SLICE",
+  "tested_sha": "ebe322871af44f7e0abcf562e7f7cc00017212a3",
+  "thread_ids": [
+    "01a0b64c-e7fe-7273-be6d-d6d92f59f6c4",
+    "01a0b64d-0a31-7781-8395-2e6616058bf0"
+  ]
+}

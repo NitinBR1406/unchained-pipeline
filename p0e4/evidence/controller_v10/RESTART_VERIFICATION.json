@@ -1,0 +1,8 @@
+{
+  "all_ready_tasks_in_scope_completed": true,
+  "changed": [],
+  "deterministic_replay": true,
+  "new_dispatches": 0,
+  "new_task_results": 0,
+  "runtime_artifacts_byte_identical": true
+}

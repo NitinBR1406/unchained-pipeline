@@ -1,0 +1,17 @@
+{
+  "done": {
+    "0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13": {
+      "evidence": [
+        "dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/receipt.json#sha256=07fbe2675ae9b07d0297e2f4b00a30cee82bd74d7c7393817b521b7dce204f1a"
+      ],
+      "status": "OK"
+    },
+    "2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29": {
+      "evidence": [
+        "dispatch/2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29/receipt.json#sha256=a945976552821dc9bed10fda841ac7622141910224d80d0416dcc1199bcc7d53"
+      ],
+      "status": "OK"
+    }
+  },
+  "duplicate_attempts": 0
+}

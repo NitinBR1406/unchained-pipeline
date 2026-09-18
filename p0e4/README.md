@@ -1,5 +1,36 @@
 # P0-E4 — production integration and release orchestration
 
+## Current controller slice — V10 / state_version 15
+
+[Acceptance](evidence/controller_v10/ACCEPTANCE.json),
+[Master State V10](evidence/controller_v10/UNCHAINED_MASTER_PROJECT_STATE_V10.json),
+[controller contract](controller/README.md),
+[real dispatch-surface proof](evidence/controller_v10/probe/SURFACE_PROOF.json).
+
+GREEN is limited to the single-host, read-only Execution Controller slice. The real
+installed Codex CLI was proved with a minimal schema-bound probe before controller
+implementation. Then two authoritative READY audits were dispatched, in dependency
+order, through the controller to real Codex and returned verified receipts. Restart
+reused the same artifacts with zero new dispatches. The frozen P0-E3 loop supplies
+leases, job identity, Event Ledger and reducer; an additive OS lock serializes local
+claims. An uncertain intent is held, never blindly redispatched. No remote exactly-once
+or multi-host guarantee is claimed.
+
+44/44 suites, including 12 controller recovery/concurrency tests and the V10 projection
+test, pass on `ebe322871af44f7e0abcf562e7f7cc00017212a3`. Actual dispatch occurred on
+`2580b91e547b4b3d6d2be909e34ef3c6d3feacf0`; a subsequent cached-receipt validation
+hardening was fully regression-tested and verified by no-dispatch reconciliation on
+the final tested SHA. Both SHAs and the exact receipts are retained, not conflated.
+107 prior manifest entries verify. The appended evidence event yields V10/state_version
+15; both runtime state and V10 replay deterministically. No frozen P0-E0–E3 changes.
+
+All READY work in the committed controller seed completed. No always-on service was
+installed. Real production E2E remains BLOCKED_NOT_GREEN under V09's unresolved media,
+Gemini/Claude, rights and human review boundaries. Production/publication authorization
+remain false; First Real Poster remains paused. One new Codex surface probe plus two
+controller dispatches, zero duplicate dispatch on restart, zero new Temporal acceptance
+runs, zero publication or fabricated approval.
+
 ## Current integration tranche — V09 / state_version 14
 
 [Verification](evidence/integration_v09/VERIFICATION.json),

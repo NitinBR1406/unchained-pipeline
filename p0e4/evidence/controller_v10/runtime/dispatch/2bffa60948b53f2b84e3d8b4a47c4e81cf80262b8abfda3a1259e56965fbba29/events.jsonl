@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0b64d-0a31-7781-8395-2e6616058bf0"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"input_sha256\":\"6ed0724fdce2c4d630b3f36987a9ab81807f22ae4d7ffdba0cd56e6c2fc94e22\",\"result\":\"PASS\",\"status\":\"COMPLETED\",\"task_id\":\"EC_V10_RIGHTS_HOLD_AUDIT\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":14178,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":80,"reasoning_output_tokens":0}}

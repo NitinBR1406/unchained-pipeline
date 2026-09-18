@@ -1,0 +1,79 @@
+{
+  "approvals": {},
+  "architecture_locks": {
+    "adr_ref": null,
+    "architecture_bakeoff": null,
+    "production_deployment_authorized": false,
+    "selected_control_plane": null,
+    "winner": null
+  },
+  "autonomous_execution": {
+    "active_tasks": [],
+    "current_task": "EC_V10_GOVERNANCE_AUDIT",
+    "waiting_for_nitin": []
+  },
+  "backlog_summary": {
+    "blocked": 0,
+    "completed": 0,
+    "ready": 0,
+    "running": 0,
+    "waiting_for_nitin": 0
+  },
+  "current_content": null,
+  "current_release": null,
+  "datastore_ids": {},
+  "deployments": [],
+  "duplicate_side_effect_count": 0,
+  "evidence_refs": [
+    {
+      "evidence": [
+        "dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/receipt.json#sha256=07fbe2675ae9b07d0297e2f4b00a30cee82bd74d7c7393817b521b7dce204f1a"
+      ],
+      "job_id": "0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13",
+      "task_id": "EC_V10_GOVERNANCE_AUDIT"
+    }
+  ],
+  "git": {
+    "branch": null,
+    "commit_sha": null,
+    "repository": null
+  },
+  "grants": {},
+  "invariants": {
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "STATE_RECOVERED_AFTER_RESTART": null,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": null,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": null
+  },
+  "issue_classes": {
+    "material": [],
+    "must_fix": [],
+    "nice_to_have": []
+  },
+  "ledger_head_hash": "7e76e9475f952731f9095449fa1b348e8efda6634ea5e30a9332616808398d9a",
+  "milestone": "TEMPORAL CONTROL PLANE FOUNDATION",
+  "phase": "P0-E1",
+  "production_state": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "mutated": false,
+    "p1_scenario": "9627055"
+  },
+  "project": "UNCHAINED NITIN \u2014 MASTER",
+  "proven_tests": [
+    {
+      "evidence": [
+        "dispatch/0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13/receipt.json#sha256=07fbe2675ae9b07d0297e2f4b00a30cee82bd74d7c7393817b521b7dce204f1a"
+      ],
+      "task_id": "EC_V10_GOVERNANCE_AUDIT"
+    }
+  ],
+  "provenance": [],
+  "runner_health": {},
+  "scenario_ids": {},
+  "schema_version": 1,
+  "state_hash": "4f53217b79bed1a1b6432550c1bc496fb7687134838bb196c334a744b1f7b476",
+  "state_version": 6,
+  "updated_at": "1789764897.2815511",
+  "updated_by": "codex"
+}

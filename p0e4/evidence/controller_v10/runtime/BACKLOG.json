@@ -1,0 +1,60 @@
+[
+  {
+    "allowed_scope": [
+      "p0e4_readonly_evidence_audit"
+    ],
+    "autonomy_level": "AUTONOMOUS_SAFE",
+    "blocked_reason": null,
+    "claimed_by": "p0e4-codex-controller",
+    "definition_of_done": "Verified actual Codex CLI receipt over pinned V09 evidence",
+    "dependencies": [],
+    "evidence_required": [
+      "intake.json"
+    ],
+    "human_gate_required": null,
+    "idempotency_key": "0c668e8941655eb73aada7d78e12453230d020aabf88e1fa2d450a88f5191a13",
+    "input_hash": "ebe34d554ec32f750733734437051e04e5d9a86497ff5e1bcbe4660d3c3f8cf0",
+    "lease_expires_at": 1789765068.5449421,
+    "lease_id": "L-EC_V10_GOVERNANCE_AUDIT-1789764888",
+    "next_action": "inspect",
+    "priority": 10,
+    "rollback": "discard isolated staging only",
+    "state_version": null,
+    "status": "COMPLETED",
+    "task_id": "EC_V10_GOVERNANCE_AUDIT",
+    "tests_required": [
+      "offline"
+    ],
+    "title": "EC_V10_GOVERNANCE_AUDIT"
+  },
+  {
+    "allowed_scope": [
+      "p0e4_readonly_evidence_audit"
+    ],
+    "autonomy_level": "AUTONOMOUS_SAFE",
+    "blocked_reason": null,
+    "claimed_by": "p0e4-codex-controller",
+    "definition_of_done": "Verified actual Codex CLI receipt over pinned V09 evidence",
+    "dependencies": [
+      "EC_V10_GOVERNANCE_AUDIT"
+    ],
+    "evidence_required": [
+      "intake.json"
+    ],
+    "human_gate_required": null,
+    "idempotency_key": "2bffa60948b53f2b84e3d8b4a47c4e81cf80262b8abfda3a1259e56965fbba29",
+    "input_hash": "6ed0724fdce2c4d630b3f36987a9ab81807f22ae4d7ffdba0cd56e6c2fc94e22",
+    "lease_expires_at": 1789765077.284557,
+    "lease_id": "L-EC_V10_RIGHTS_HOLD_AUDIT-1789764897",
+    "next_action": "inspect",
+    "priority": 20,
+    "rollback": "discard isolated staging only",
+    "state_version": null,
+    "status": "COMPLETED",
+    "task_id": "EC_V10_RIGHTS_HOLD_AUDIT",
+    "tests_required": [
+      "offline"
+    ],
+    "title": "EC_V10_RIGHTS_HOLD_AUDIT"
+  }
+]

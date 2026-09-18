@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"task_id": {"type": "string"}, "input_sha256": {"type": "string"}, "result": {"type": "string"}, "status": {"type": "string"}}, "required": ["task_id", "input_sha256", "result", "status"], "additionalProperties": false}

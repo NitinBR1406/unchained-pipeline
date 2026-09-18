@@ -1,0 +1,16 @@
+{
+  "all_archive_members_match_repository_evidence": true,
+  "archive_file_id": "12vh7fOnLFmOOO1oolYJsWAtSUBEu1KAU",
+  "archive_readback_byte_identical": true,
+  "archive_sha256": "3c2dcd4dd99ce8dedc65c3d046bd708b598bd29753f3342fb67ff1c1fd82ebcb",
+  "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+  "excluded_archive_sidecars": [
+    "SHA256SUMS.txt",
+    "PERSISTENCE_RECEIPTS.json",
+    "runtime/controller.lock"
+  ],
+  "folder_id": "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR",
+  "state_file_id": "1qh879tbM4Ii_KokfiTmhq-P8138akU2a",
+  "state_readback_byte_identical": true,
+  "state_sha256": "aaf49a4f158039a14af587845300e1775d0c1b5036e6acc62efcbcd59d330042"
+}
