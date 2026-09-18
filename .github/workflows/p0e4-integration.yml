@@ -1,0 +1,60 @@
+name: p0e4-disposable-integration
+on:
+  push:
+    branches: [p0e4/slice1-production-handoff]
+    paths:
+      - 'p0e4/*.py'
+      - 'p0e4/tests/**'
+      - '.github/workflows/p0e4-integration.yml'
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: p0e4-disposable-integration
+  cancel-in-progress: false
+jobs:
+  engineering:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify exact source and install isolated runtime
+        run: |
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          python -m pip install temporalio==1.33.0 cryptography PyYAML google-api-python-client google-auth
+      - name: Offline E4 contracts
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+          PYTHONWARNINGS: ignore::ResourceWarning
+        run: |
+          python p0e4/tests/test_handoff.py
+          python p0e4/tests/test_release.py
+          python p0e4/tests/test_state_update.py
+      - name: Existing keyless WIF contract
+        env:
+          GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
+          GCP_WIF_PROVIDER: ${{ vars.GCP_WIF_PROVIDER }}
+          GCP_DRIVE_SERVICE_ACCOUNT: ${{ vars.GCP_DRIVE_SERVICE_ACCOUNT }}
+        run: python 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/ci/wif_preflight.py
+      - uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ vars.GCP_PROJECT_ID }}
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_DRIVE_SERVICE_ACCOUNT }}
+      - name: Real frozen Temporal workflow and disposable Shared Drive state lifecycle
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          mkdir -p /tmp/p0e4-evidence
+          printf '{"tested_sha":"%s","run_id":"%s","environment":"disposable"}\n' "$GITHUB_SHA" "$GITHUB_RUN_ID" > /tmp/p0e4-evidence/SOURCE.json
+          python p0e4/temporal_integration.py --media p0e4/evidence/resume/MEDIA_QC.json --out /tmp/p0e4-evidence/live --drive-namespace "P0E4_DISPOSABLE_${GITHUB_RUN_ID}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: p0e4-disposable-evidence
+          path: /tmp/p0e4-evidence/

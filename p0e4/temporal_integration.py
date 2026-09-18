@@ -30,7 +30,7 @@ async def production_evidence(task: dict) -> dict:
     return await asyncio.to_thread(EXECUTOR, task, task['job_id'], 1000)
 
 
-async def run(package, output, temporal_cli=None):
+async def run(package, output, temporal_cli=None, drive_namespace=None):
     global EXECUTOR
     output = Path(output)
     if output.exists():
@@ -38,6 +38,18 @@ async def run(package, output, temporal_cli=None):
     output.mkdir(parents=True)
     EXECUTOR = release.ReleaseExecutor(output/'effects', package)
     loop = h.DurableControlLoop(str(output/'control'), keyring={})
+    drive_backend = None
+    if drive_namespace is not None:
+        if not drive_namespace.startswith('P0E4_DISPOSABLE_'):
+            raise ValueError('Drive namespace must be isolated disposable E4 evidence')
+        import google.auth
+        from control_loop.drive_client import GoogleApiDriveClient
+        from control_loop.live_backend import GoogleDriveBackend
+        from control_loop.persistence import CentralPersistence
+        credentials, _ = google.auth.default(scopes=['https://www.googleapis.com/auth/drive'])
+        drive_backend = GoogleDriveBackend(GoogleApiDriveClient(credentials, release.DRIVE),
+                                          release.DRIVE, drive_namespace)
+        loop.persistence = CentralPersistence(drive_backend)
     release.seed(loop, package)
     workflows = {}
     with tempfile.TemporaryDirectory(prefix='p0e4-temporal-') as server_dir:
@@ -92,15 +104,29 @@ async def run(package, output, temporal_cli=None):
                 except Exception: pass
                 replay,detail = h.verify_replay(loop.ledger,loop.persisted_state(),keyring={})
                 if not replay: raise ValueError(detail)
-                report = {'real_temporal_observed':True,'workflow_type':'frozen ControlPlaneTask',
+                stale_write_rejected = None
+                if drive_backend:
+                    res = loop.persistence.write(loop.master_state(), expected_state_version=0,
+                                                 expected_ledger_head_hash=None)
+                    stale_write_rejected = res['status'] == 'CONFLICT'
+                    if not stale_write_rejected: raise ValueError('stale Drive state accepted')
+                report = {'real_temporal_observed' :True,'workflow_type':'frozen ControlPlaneTask',
                     'workflows':workflows, 'duplicate_dispatch_no_activity':duplicate_dispatch_no_activity,
                     'test_only_wait_nonblocking':True,'real_release_status':'BLOCKED',
                     'publication_side_effect_count':0,'approval_signals_sent':0,
                     'replay_verified':True,'backlog_summary':loop.backlog.summary(),
-                    'live_shared_drive_runtime_persistence':False}
+                    'live_shared_drive_runtime_persistence':drive_backend is not None,
+                    'drive_stale_write_rejected':stale_write_rejected,
+                    'drive_namespace':drive_namespace}
         finally:
-            await env.shutdown()
+            try:
+                if drive_backend:
+                    remaining = drive_backend.teardown()
+                    if remaining != 0: raise ValueError('disposable Drive cleanup incomplete')
+            finally:
+                await env.shutdown()
         report['disposable_server_shutdown'] = True
+        report['disposable_drive_artifacts_remaining'] = False if drive_backend else None
         (output/'INTEGRATION.json').write_text(json.dumps(report,indent=2))
         return report
 
@@ -108,6 +134,7 @@ async def run(package, output, temporal_cli=None):
 if __name__ == '__main__':
     p=argparse.ArgumentParser(); p.add_argument('--media',required=True); p.add_argument('--out',required=True)
     p.add_argument('--temporal-cli')
+    p.add_argument('--drive-namespace')
     args=p.parse_args()
     package=release.build(json.loads(Path(args.media).read_text()))
-    print(json.dumps(asyncio.run(run(package,args.out,args.temporal_cli)),indent=2))
+    print(json.dumps(asyncio.run(run(package,args.out,args.temporal_cli,args.drive_namespace)),indent=2))

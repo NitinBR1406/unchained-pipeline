@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "name": "AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4",
+      "cache_name": "master.mp4",
+      "file_id": "1ifHVAW1E0NjhN-eguBWUMNRekoemweAn",
+      "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+      "size_bytes": 168512442,
+      "url": "https://drive.google.com/file/d/1ifHVAW1E0NjhN-eguBWUMNRekoemweAn/view",
+      "modified_time": "2026-09-07T14:33:14.236Z",
+      "sha256": "0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1",
+      "probe": {
+        "ffmpeg_version": "7.1 built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 24.0,
+        "source_size": [
+          1080,
+          1920
+        ],
+        "size": [
+          1080,
+          1920
+        ],
+        "rotate": 0,
+        "duration": 208.42000000000002
+      },
+      "full_av_decode_exit_code": 0,
+      "decode_diagnostics": "",
+      "bytes_unchanged": true,
+      "technical_decode_pass": true,
+      "creative_approval_inferred": false,
+      "publication_approval_inferred": false
+    },
+    {
+      "name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+      "cache_name": "aakhri-ishq_DERIVATIVE_M08.mp4",
+      "file_id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+      "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+      "size_bytes": 13125360,
+      "url": "https://drive.google.com/file/d/1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu/view",
+      "modified_time": "2026-09-09T06:59:41.442Z",
+      "sha256": "af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488",
+      "probe": {
+        "ffmpeg_version": "7.1 built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 24.0,
+        "source_size": [
+          1080,
+          1920
+        ],
+        "size": [
+          1080,
+          1920
+        ],
+        "rotate": 0,
+        "duration": 9.05
+      },
+      "full_av_decode_exit_code": 0,
+      "decode_diagnostics": "",
+      "bytes_unchanged": true,
+      "technical_decode_pass": true,
+      "creative_approval_inferred": false,
+      "publication_approval_inferred": false
+    },
+    {
+      "name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+      "cache_name": "aakhri-ishq_DERIVATIVE_M02.mp4",
+      "file_id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+      "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+      "size_bytes": 19179667,
+      "url": "https://drive.google.com/file/d/1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl/view",
+      "modified_time": "2026-09-09T06:54:05.556Z",
+      "sha256": "d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c",
+      "probe": {
+        "ffmpeg_version": "7.1 built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 24.0,
+        "source_size": [
+          1080,
+          1920
+        ],
+        "size": [
+          1080,
+          1920
+        ],
+        "rotate": 0,
+        "duration": 14.55
+      },
+      "full_av_decode_exit_code": 0,
+      "decode_diagnostics": "",
+      "bytes_unchanged": true,
+      "technical_decode_pass": true,
+      "creative_approval_inferred": false,
+      "publication_approval_inferred": false
+    },
+    {
+      "name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+      "cache_name": "aakhri-ishq_DERIVATIVE_M03.mp4",
+      "file_id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+      "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+      "size_bytes": 22670942,
+      "url": "https://drive.google.com/file/d/1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW/view",
+      "modified_time": "2026-09-08T14:24:05.002Z",
+      "sha256": "cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533",
+      "probe": {
+        "ffmpeg_version": "7.1 built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 24.0,
+        "source_size": [
+          1080,
+          1920
+        ],
+        "size": [
+          1080,
+          1920
+        ],
+        "rotate": 0,
+        "duration": 14.06
+      },
+      "full_av_decode_exit_code": 0,
+      "decode_diagnostics": "",
+      "bytes_unchanged": true,
+      "technical_decode_pass": true,
+      "creative_approval_inferred": false,
+      "publication_approval_inferred": false
+    }
+  ]
+}
