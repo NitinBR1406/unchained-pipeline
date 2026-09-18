@@ -1,5 +1,31 @@
 # P0-E4 — production integration and release orchestration
 
+## Latest review follow-up — V07 / state_version 12
+
+See [compact human review](evidence/review/HUMAN_REVIEW.md),
+[review QC](evidence/review/REVIEW_QC.json), and
+[V07](evidence/review/UNCHAINED_MASTER_PROJECT_STATE_V07.json).
+37/37 regression suites pass on `7d4738394b5bb433dd9f9023460b10d3f44b19c1`;
+52 prior evidence-manifest entries and seven proposals verified. Frozen components and
+runtime code are unchanged. No additional authoritative integration run was dispatched.
+V06 remains immutable; the new ledger preserves its exact prefix and adds one engineering
+evidence event. `evidence/review/reproduce.py` deterministically reproduces this offline
+review snapshot, not a replacement runtime reducer. Use `PYTHONDONTWRITEBYTECODE=1`.
+
+The three real gates remain: exact master SHA binding, existing rights evidence, and
+release package/derivative review. `docs/APPROVAL_GOVERNANCE.md` requires the approval's
+exact SHA; names/timestamps or technical QC cannot supply that authority. Rights searches
+are bounded and do not prove evidence is absent everywhere. Derivative source/cut lineage
+and independent audiovisual QC remain unproven; current platform-policy certification
+is not claimed. Media decode results are prior verified evidence, not a new decode.
+
+Shared Drive archive and readback hashes: `evidence/review/PERSISTENCE_RECEIPTS.json`.
+The archive includes V07, the append-only ledger, review page, source discovery, regression,
+reproduction script and checksums. The receipt is outside the archive to avoid circularity.
+Release remains BLOCKED, not PUBLISH_READY. All human authorization flags remain unchanged.
+
+## Earlier V06 integration evidence
+
 **Engineering integration verified; actual release BLOCKED, not GREEN.**
 
 Current evidence: `evidence/resume/ACCEPTANCE_RESUME.json`.
