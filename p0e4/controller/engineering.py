@@ -82,6 +82,7 @@ def inspect_outputs(workspace,task):
 
 
 def verify_execution(job,workspace,task):
+    require(json.loads((job/'intent.json').read_text())=={'task_sha256':digest(canonical(task)),'base_sha':task['base_sha']},'intent identity drift')
     exit_record=json.loads((job/'exit.json').read_text())
     require(exit_record=={'exit_code':0,'terminated':True},'execution failure or timeout')
     events=[json.loads(x) for x in (job/'events.jsonl').read_text().splitlines()]
@@ -221,6 +222,27 @@ def run(root,task,directory,transport,push=False,crash=lambda point:None,now=tim
         atomic(job/'completion.json',receipt)
         return receipt
 
+def run_ready(root,directory,transport,push=False,**kwargs):
+    """Drain the committed bounded READY list; completed jobs do not redispatch."""
+    root=Path(root).resolve();directory=Path(directory).resolve();results=[]
+    seed=json.loads((root/'p0e4/controller/READY_WRITES_V01.json').read_text())
+    common=Path(git(root,'rev-parse','--git-common-dir'))
+    if not common.is_absolute():common=root/common
+    for entry in seed['tasks']:
+        registry=common/'p0e4-executor'/('task-'+entry['task_id']+'.json')
+        if registry.exists():
+            job=Path(json.loads(registry.read_text())['job_directory'])
+            task=json.loads((job/'task.json').read_text())
+            require({k:v for k,v in task.items() if k!='base_sha'}==entry,'READY definition changed')
+        else:
+            task={**entry,'base_sha':git(root,'rev-parse','HEAD')};job=directory/entry['task_id']
+        results.append(run(root,task,job,transport,push,**kwargs))
+    return {'status':'QUIESCENT','results':results,'completed':sum(r['status']=='COMPLETED' for r in results),
+            'held':sum(r['status']!='COMPLETED' for r in results)}
+
+
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--task',required=True);p.add_argument('--output',required=True);p.add_argument('--push',action='store_true')
-    a=p.parse_args();print(json.dumps(run(a.root,json.loads(Path(a.task).read_text()),a.output,WriteCLI('/Applications/ChatGPT.app/Contents/Resources/codex'),a.push)))
+    p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--task');p.add_argument('--output',required=True);p.add_argument('--push',action='store_true')
+    a=p.parse_args();transport=WriteCLI('/Applications/ChatGPT.app/Contents/Resources/codex')
+    result=(run(a.root,json.loads(Path(a.task).read_text()),a.output,transport,a.push) if a.task else run_ready(a.root,a.output,transport,a.push))
+    print(json.dumps(result))

@@ -6,7 +6,7 @@ import sys
 import tempfile
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from controller.engineering import run,git,atomic,WriteCLI,projection
+from controller.engineering import run,git,atomic,WriteCLI,projection,run_ready
 from control_plane.ledger import EventLedger
 
 
@@ -105,6 +105,21 @@ class Tests(unittest.TestCase):
         with (self.job/'executor.lock').open('a') as f:
             fcntl.flock(f,fcntl.LOCK_EX|fcntl.LOCK_NB)
             self.assertEqual(self.call()['status'],'BUSY');self.assertEqual(self.transport.calls,0)
+    def test_ready_queue_continues_then_restart_does_not_dispatch(self):
+        seed_path=self.root/'p0e4/controller/READY_WRITES_V01.json';seed_path.parent.mkdir(parents=True)
+        first={k:v for k,v in self.task.items() if k!='base_sha'}
+        second=copy.deepcopy(first);second['task_id']='TEST_SECOND';second['outputs']={'p0e4/generated/second.json':{'safe':True}}
+        seed_path.write_text(json.dumps({'tasks':[first,second]}));git(self.root,'add',str(seed_path));git(self.root,'commit','--quiet','-m','seed')
+        outer=self
+        class QueueTransport(Transport):
+            def invoke(self,job,workspace,prompt,heartbeat):
+                self.outputs=json.loads((job/'task.json').read_text())['outputs']
+                super().invoke(job,workspace,prompt,heartbeat)
+        t=QueueTransport({})
+        r=run_ready(self.root,self.job,t,regression=self.regression,require_authority=False)
+        self.assertEqual(r['completed'],2);self.assertEqual(t.calls,2)
+        self.assertEqual(run_ready(self.root,self.job,t,regression=self.regression,require_authority=False)['completed'],2)
+        self.assertEqual(t.calls,2)
     def test_branch_change_does_not_overwrite(self):
         def crash(point):
             if point=='after_verified':raise RuntimeError()
