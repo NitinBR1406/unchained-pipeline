@@ -1,0 +1,113 @@
+CONTINUE P0-E4 SLICE 1 — RESUME EXISTING WORK #2
+Continue autonomously from the existing P0-E4 Work #2 session. Do not restart architecture analysis and do not create a competing implementation.
+Authoritative sources, in order
+GitHub NitinBR1406/unchained-pipeline
+latest versioned UNCHAINED_MASTER_PROJECT_STATE
+repository evidence + SHA256 manifests
+Google Shared Drive Unchained Nitin — Master
+Inspect the repository and remote branch first. The last Master Orchestrator verification found branch:
+p0e4/slice1-production-handoff
+Last known persisted P0-E4 state:
+UNCHAINED_MASTER_PROJECT_STATE_V07.json
+state_version = 12
+status = BLOCKED_NOT_GREEN
+Last known P0-E4 review commit:
+9cb489782300231688cb085f7b38b31c528510ab
+Do not assume this is still HEAD: fetch/inspect remote first and continue from the newest authoritative state.
+NEW HUMAN EVIDENCE FROM NITIN — 18 SEPTEMBER 2026
+Nitin explicitly stated:
+Ik bevestig dat mijn bestaande NITIN_FINAL_VIDEO_APPROVAL voor Aakhri Ishq betrekking heeft op AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4 met SHA256 0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1.
+This is only cryptographic binding of the already-existing NITIN_FINAL_VIDEO_APPROVAL.
+It is NOT:
+a new creative approval;
+NITIN_PUBLISH_APPROVAL;
+production deployment authorization;
+publication authorization.
+Persist this human decision governance-correctly through the existing append-only evidence/event → deterministic reducer → versioned Master State mechanism. Do not fabricate Nitin metadata or approval.
+NEW RIGHTS FACTS SUPPLIED BY NITIN
+Nitin explicitly answered:
+Aakhri Ishq instrumental/backing: EIGEN PRODUCTIE
+Explicit composition/publication licence previously obtained: NEE
+Exact version previously tested/uploaded for Content ID: NEE
+Persist these as human-supplied facts, preserving their provenance. Do not convert them automatically into RIGHTS_CLEARANCE.
+Exhaust existing GitHub + Shared Drive evidence for:
+composition/songwriting rights;
+backing/master provenance;
+platform cover/licensing requirements;
+Content-ID expectations;
+any existing rights/licensing documentation.
+Produce an evidence matrix:
+PROVEN / UNKNOWN / HUMAN_REQUIRED / EXTERNAL_ACTION_REQUIRED.
+The fact that the backing is Nitin's own production should close only the third-party backing-master provenance uncertainty where evidence/governance permits. It does not establish rights to the underlying composition/lyrics.
+Do not weaken the rights acceptance criterion to get GREEN.
+THEN CONTINUE AUTONOMOUSLY
+After processing Gate 1 and reducing Gate 2 as far as evidence permits, continue directly with:
+Gate 3 — RELEASE_PACKAGE_REVIEW
+Existing proposals:
+YouTube hero → presentation master
+YouTube Shorts → M03
+Instagram Reels → M03
+Instagram Feed → M03
+Instagram Stories → M08
+TikTok → M02
+Facebook Reels → M02
+CTA:
+Welk moment raakt jou?
+Hashtags:
+#AakhriIshq #UnchainedNitin #CoverPerformance
+Verify derivative lineage and historical approval scope from authoritative evidence. Do not infer approval merely from filenames or previous technical PASS.
+Perform as much independent exact-SHA visual/audio QC as callable tooling allows for:
+AKI_SHOTSTACK_PRESENTATION_MASTER_V01.mp4
+SHA256 0c6fdfc23439d195a2ff4aa4d809fd4621912d0023db5003bc7a6d972d0117b1
+M03
+SHA256 cd1b27df4af74933ece1e132e77088f54abbf2102e037783fc686eecbc92c533
+M02
+SHA256 d26810f51e7c9cfaebe77f97718f5f61d702242c0902eee92fbcb9b149d9276c
+M08
+SHA256 af50457eef5eba1724a8e3f30b55af8ffb9c44e052b399bb21abb816915b1488
+QC scope:
+approved-baseline look match/deviation
+motion/lip-sync
+crop/text safe areas
+cut continuity
+audio boundaries
+Do not fabricate Gemini/Claude QC if those agents are unavailable. Use available tooling and persist exactly what was actually verified.
+AUTONOMOUS EXECUTION CONTRACT
+Continue:
+inspect
+→ implement/persist
+→ test
+→ diagnose/repair in-scope failures
+→ regression
+→ deterministic replay
+→ exact diff/QC
+→ evidence
+→ versioned Master State update
+→ manifests
+→ commit/push
+Do not stop for routine implementation decisions.
+Do not ask Nitin to execute terminal commands.
+Do not dispatch duplicate authoritative live runs.
+Do not modify frozen P0-E0/P0-E1/P0-E2/P0-E3 unless a proven defect plus explicit change control requires reopening.
+HARD GOVERNANCE — MUST REMAIN
+PRODUCTION_DEPLOYMENT_AUTHORIZED = FALSE
+PUBLICATION_AUTHORIZED = FALSE
+FIRST_REAL_POSTER = PAUSED_BY_NITIN
+Temporal remains the LOCKED control-plane architecture.
+No publication.
+No social platform mutation that constitutes publication.
+TARGET
+Reduce every non-human blocker autonomously as far as legitimately possible.
+If all pre-publication acceptance criteria become legitimately satisfied:
+PUBLISH_READY
+→ WAITING_FOR_NITIN
+→ gate = NITIN_PUBLISH_APPROVAL
+→ HARD STOP
+Do NOT create, infer or execute NITIN_PUBLISH_APPROVAL.
+If a blocker remains, persist an exact evidence-backed blocker containing:
+what is proven;
+what is missing;
+why it is required;
+whether Codex can resolve it autonomously;
+if not, the minimum single human decision/action required.
+Do not merely report a plan. Execute the authorized engineering work now, test it, persist the evidence/state, commit/push the result, and continue until a genuine human gate is reached.

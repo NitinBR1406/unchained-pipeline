@@ -1,0 +1,70 @@
+{
+  "source_commit": "9cb489782300231688cb085f7b38b31c528510ab",
+  "refs": [
+    {
+      "drive_file_id": "1J4EgUUFiJrlBP9lmcL-dYXB13Ph0ZzzU",
+      "sha256": "c4cce64a6eeedba3d11d3ead2d2ac211789d6001950f851fe61c83e5b490ccf6",
+      "relevant_excerpts": [
+        "\"original_IP_fields\": \"ABSENT (no ownership, rights, licensing, ISRC, publishing-split, or catalog-registration field; content is cover-focused. song_id/title are the only IP-adjacent identifiers)\""
+      ]
+    },
+    {
+      "drive_file_id": "10IrNuF7dlGGeXuA-o0ehxe5mms8nm3q7",
+      "sha256": "038c604bb4bb0bc200b969beb20aa874c807a232b268adc175c2c675e5c3a92f",
+      "relevant_excerpts": [
+        "\"purpose\": \"Canonical P0 data-governance architecture contract (identity/approval/publication/analytics-ready/attribution-ready/experiment-ready/state-separation/fingerprint/P0-P1-P2/migration/rollback). NOT permission to publish.\","
+      ]
+    },
+    {
+      "drive_file_id": "1AzC645I4xohWm4lgtvcgrhUWOX1Wr_Rd",
+      "sha256": "f2c253a03bacad9a4df0725a44cf5cb4b20c8c4cab37bcb94ff9d825998bf286",
+      "relevant_excerpts": [
+        "\"master_sha256\": \"hex (content fingerprint of the master)\"",
+        "\"isrc_rule\": \"isrc_code is REQUIRED only for an official original/master/release. NEVER required for cover content. Absence of ISRC MUST NOT block cover publication.\",",
+        "\"binding\": \"Each approval is bound to the approved artifact fingerprint (SHA-256). A changed artifact invalidates prior approval for the changed artifact.\",",
+        "\"reuse\": \"Reuses existing unpipe/approvals.py ApprovalStore (three-gate, SHA-bound). P0 HARDENS the publish gate (see publish_approval_eligibility).\"",
+        "\"fingerprint_contract\": {",
+        "\"definition\": \"Publish Approval binds to a material publication fingerprint = sha256 of the canonical basis {content_id, asset_sha256, platform, packaging_sha256, schedule_version}.\",",
+        "\"rule\": \"Any material change (asset, platform, packaging, schedule version) after approval yields a different fingerprint and INVALIDATES publication eligibility. Approval is never silently reused for materially changed content.\",",
+        "\"reference_impl\": \"publish_gate.compute_fingerprint (proven).\"",
+        "\"creative_approval == APPROVED (bound to current fingerprint)\",",
+        "\"final_video_approval == APPROVED (bound to current fingerprint)\",",
+        "\"publish_approval == APPROVE (bound to current fingerprint)\",",
+        "\"current fingerprint == approved fingerprint\",",
+        "\"approved_fingerprint\",",
+        "\"fingerprint binding\",",
+        "\"approved_fingerprint\",",
+        "\"fingerprint + platform-scope + schedule-scope binding enforced\","
+      ]
+    },
+    {
+      "repository_path": "docs/APPROVAL_GOVERNANCE.md",
+      "sha256": "938b5ba4cf2871c18015e5eb57763c79717fc20b7ab573fb47dd94d819fc9330"
+    },
+    {
+      "repository_path": "P0_SAFE_DAILY_PUBLISHING_IMPLEMENTATION_REPORT_V01.json",
+      "sha256": "c3dab8a564d43727cab9f3959bbc34d9fa10cbced1acd9351d9b07c8a1e7b942"
+    },
+    {
+      "repository_path": "campaigns/aakhri-ishq/state/DERIVATIVE_PLAN.json",
+      "sha256": "113a54dfba750bdd6ecd5a05ed4e69aa0df97ee9823ba09c768bc9d7184df06a"
+    },
+    {
+      "repository_path": "campaigns/aakhri-ishq/state/registry.json",
+      "sha256": "9fbcd5d0a164d00cc97da465929e16c3433f7bb89fee346f19ab6c0d4515068d"
+    },
+    {
+      "repository_path": "campaigns/aakhri-ishq/state/approvals.json",
+      "sha256": "3c27207443e809189e386e2fc7098d48017fa7cb8191b42b2e54bd1ea2b4cdd5"
+    },
+    {
+      "repository_path": "campaigns/aakhri-ishq/campaign.json",
+      "sha256": "e23faa391680ff17d7bbcdf1e698977b30767e1fb1ad5ee5ab90e2f82a213438"
+    }
+  ],
+  "findings": [
+    "Historical M02/M03/M08 final approval is reported per input, without matching exact SHA or source-cut receipt. It cannot grant exact-SHA derivative approval.",
+    "Governance model requires artifact fingerprint binding; ISRC absence must not block a cover.",
+    "Handoff records original IP fields absent; no composition licence or exact-asset Content ID outcome located."
+  ]
+}

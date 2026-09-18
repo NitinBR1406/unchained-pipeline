@@ -1,0 +1,1139 @@
+{
+  "queries": [
+    {
+      "query": "rights",
+      "result": {
+        "results": [
+          {
+            "url": "https://drive.google.com/file/d/1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm/view?usp=drivesdk",
+            "title": "P0E4_HUMAN_REVIEW_V07.md",
+            "id": "1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm",
+            "mime_type": "text/markdown",
+            "size": "3942",
+            "file_or_folder": "file",
+            "created_at": "2026-09-18T12:11:53.896Z",
+            "updated_at": "2026-09-18T12:11:53.896Z",
+            "viewedByMeTime": null,
+            "display_title": "P0E4_HUMAN_REVIEW_V07.md",
+            "display_url": "https://drive.google.com/file/d/1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm/view?usp=drivesdk",
+            "parent_ids": [
+              "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR"
+            ],
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+          },
+          {
+            "url": "https://docs.google.com/spreadsheets/d/1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag/edit?usp=drivesdk",
+            "title": "UnchainedNitin_MasterSheet",
+            "id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+            "mime_type": "application/vnd.google-apps.spreadsheet",
+            "size": "19218",
+            "file_or_folder": "file",
+            "created_at": "2026-06-29T13:36:30.624Z",
+            "updated_at": "2026-09-02T16:59:54.959Z",
+            "viewedByMeTime": "2026-09-02T20:10:35.870Z",
+            "display_title": "UnchainedNitin_MasterSheet",
+            "display_url": "https://docs.google.com/spreadsheets/d/1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag/edit?usp=drivesdk",
+            "parent_ids": [
+              "0AOa08v0OHcQ5Uk9PVA"
+            ],
+            "shared": false
+          },
+          {
+            "url": "https://docs.google.com/spreadsheets/d/19LSCU_BbRWpSWWDrJgC4YNQFzLXe3Rmd/edit?usp=drivesdk&ouid=100822969425138510712&rtpof=true&sd=true",
+            "title": "UnchainedNitin_MasterSheet_backup.xlsx",
+            "id": "19LSCU_BbRWpSWWDrJgC4YNQFzLXe3Rmd",
+            "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "size": "23600",
+            "file_or_folder": "file",
+            "created_at": "2026-06-29T13:36:06.442Z",
+            "updated_at": "2026-06-29T08:44:06.000Z",
+            "viewedByMeTime": "2026-06-29T13:36:19.144Z",
+            "display_title": "UnchainedNitin_MasterSheet_backup.xlsx",
+            "display_url": "https://docs.google.com/spreadsheets/d/19LSCU_BbRWpSWWDrJgC4YNQFzLXe3Rmd/edit?usp=drivesdk&ouid=100822969425138510712&rtpof=true&sd=true",
+            "parent_ids": [
+              "0AOa08v0OHcQ5Uk9PVA"
+            ],
+            "shared": false
+          }
+        ]
+      }
+    },
+    {
+      "query": "licence",
+      "result": {
+        "results": []
+      }
+    },
+    {
+      "query": "licensing",
+      "result": {
+        "results": [
+          {
+            "url": "https://drive.google.com/file/d/1WgFktYwHtBCut7XNTE2TE_wFeG39HwyD/view?usp=drivesdk",
+            "title": "P0E_ADR_001_TEMPORAL_CONTROL_PLANE.md",
+            "id": "1WgFktYwHtBCut7XNTE2TE_wFeG39HwyD",
+            "mime_type": "text/markdown",
+            "size": "2860",
+            "file_or_folder": "file",
+            "created_at": "2026-09-15T16:01:17.378Z",
+            "updated_at": "2026-09-15T16:01:17.378Z",
+            "viewedByMeTime": null,
+            "display_title": "P0E_ADR_001_TEMPORAL_CONTROL_PLANE.md",
+            "display_url": "https://drive.google.com/file/d/1WgFktYwHtBCut7XNTE2TE_wFeG39HwyD/view?usp=drivesdk",
+            "parent_ids": [
+              "1CzQOPbY44mhXu23aUgiGitQ_dSNPvhpg"
+            ],
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+          }
+        ]
+      }
+    },
+    {
+      "query": "composition",
+      "result": {
+        "results": []
+      }
+    },
+    {
+      "query": "backing",
+      "result": {
+        "results": [
+          {
+            "url": "https://drive.google.com/file/d/1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm/view?usp=drivesdk",
+            "title": "P0E4_HUMAN_REVIEW_V07.md",
+            "id": "1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm",
+            "mime_type": "text/markdown",
+            "size": "3942",
+            "file_or_folder": "file",
+            "created_at": "2026-09-18T12:11:53.896Z",
+            "updated_at": "2026-09-18T12:11:53.896Z",
+            "viewedByMeTime": null,
+            "display_title": "P0E4_HUMAN_REVIEW_V07.md",
+            "display_url": "https://drive.google.com/file/d/1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm/view?usp=drivesdk",
+            "parent_ids": [
+              "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR"
+            ],
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+          }
+        ]
+      }
+    },
+    {
+      "query": "Content ID",
+      "result": {
+        "results": [
+          {
+            "url": "https://docs.google.com/spreadsheets/d/1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag/edit?usp=drivesdk",
+            "title": "UnchainedNitin_MasterSheet",
+            "id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+            "mime_type": "application/vnd.google-apps.spreadsheet",
+            "size": "19218",
+            "file_or_folder": "file",
+            "created_at": "2026-06-29T13:36:30.624Z",
+            "updated_at": "2026-09-02T16:59:54.959Z",
+            "viewedByMeTime": "2026-09-02T20:10:35.870Z",
+            "display_title": "UnchainedNitin_MasterSheet",
+            "display_url": "https://docs.google.com/spreadsheets/d/1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag/edit?usp=drivesdk",
+            "parent_ids": [
+              "0AOa08v0OHcQ5Uk9PVA"
+            ],
+            "shared": false
+          },
+          {
+            "url": "https://docs.google.com/spreadsheets/d/19LSCU_BbRWpSWWDrJgC4YNQFzLXe3Rmd/edit?usp=drivesdk&ouid=100822969425138510712&rtpof=true&sd=true",
+            "title": "UnchainedNitin_MasterSheet_backup.xlsx",
+            "id": "19LSCU_BbRWpSWWDrJgC4YNQFzLXe3Rmd",
+            "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "size": "23600",
+            "file_or_folder": "file",
+            "created_at": "2026-06-29T13:36:06.442Z",
+            "updated_at": "2026-06-29T08:44:06.000Z",
+            "viewedByMeTime": "2026-06-29T13:36:19.144Z",
+            "display_title": "UnchainedNitin_MasterSheet_backup.xlsx",
+            "display_url": "https://docs.google.com/spreadsheets/d/19LSCU_BbRWpSWWDrJgC4YNQFzLXe3Rmd/edit?usp=drivesdk&ouid=100822969425138510712&rtpof=true&sd=true",
+            "parent_ids": [
+              "0AOa08v0OHcQ5Uk9PVA"
+            ],
+            "shared": false
+          },
+          {
+            "url": "https://drive.google.com/file/d/17ZjBMXVOHE9VH-orOUWsnbSG5E9EoYft/view?usp=drivesdk",
+            "title": "P0D_REAL_P1_WIRING_PLAN_V01.md",
+            "id": "17ZjBMXVOHE9VH-orOUWsnbSG5E9EoYft",
+            "mime_type": "text/markdown",
+            "size": "4133",
+            "file_or_folder": "file",
+            "created_at": "2026-09-14T14:27:30.519Z",
+            "updated_at": "2026-09-14T14:27:30.519Z",
+            "viewedByMeTime": null,
+            "display_title": "P0D_REAL_P1_WIRING_PLAN_V01.md",
+            "display_url": "https://drive.google.com/file/d/17ZjBMXVOHE9VH-orOUWsnbSG5E9EoYft/view?usp=drivesdk",
+            "parent_ids": [
+              "1OmS8lX_KNA1sPDEUhYWO5hYCa42qcWJw"
+            ],
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+          },
+          {
+            "url": "https://drive.google.com/file/d/1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm/view?usp=drivesdk",
+            "title": "P0E4_HUMAN_REVIEW_V07.md",
+            "id": "1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm",
+            "mime_type": "text/markdown",
+            "size": "3942",
+            "file_or_folder": "file",
+            "created_at": "2026-09-18T12:11:53.896Z",
+            "updated_at": "2026-09-18T12:11:53.896Z",
+            "viewedByMeTime": null,
+            "display_title": "P0E4_HUMAN_REVIEW_V07.md",
+            "display_url": "https://drive.google.com/file/d/1GQbHHdctg8XVq7vlkJdewUtteZ6Y6svm/view?usp=drivesdk",
+            "parent_ids": [
+              "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR"
+            ],
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA"
+          }
+        ]
+      }
+    }
+  ],
+  "folders": [
+    {
+      "id": "1de8Bi2fw1SM4pEYGYGXSXWB6LfBeY_cz",
+      "result": {
+        "files": [
+          {
+            "id": "1cXw8lWh1wc4HnR9W_QK3A5_pZWDpJ3OV",
+            "title": "Non-Canonical",
+            "mime_type": "application/vnd.google-apps.folder",
+            "size": null,
+            "url": "https://drive.google.com/drive/folders/1cXw8lWh1wc4HnR9W_QK3A5_pZWDpJ3OV",
+            "display_url": "https://drive.google.com/drive/folders/1cXw8lWh1wc4HnR9W_QK3A5_pZWDpJ3OV",
+            "file_or_folder": "folder",
+            "created_time": "2026-09-11T09:15:17.566Z",
+            "modified_time": "2026-09-11T09:42:45.231Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "12nUlDyuvuRxm5gC3gabwjtDpeL-uXGOQ",
+      "result": {
+        "files": []
+      }
+    },
+    {
+      "id": "1Yo_g4gfuBhmE5t82WZTsZygYEjuJrolj",
+      "result": {
+        "files": [
+          {
+            "id": "1Uk6Ru7wtU1Y3aCeOdYQwPhuTojHzDgN6",
+            "title": "AKI_SOURCE_0902_V01.mov",
+            "mime_type": "video/quicktime",
+            "size": "323607983",
+            "url": "https://drive.google.com/file/d/1Uk6Ru7wtU1Y3aCeOdYQwPhuTojHzDgN6/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Uk6Ru7wtU1Y3aCeOdYQwPhuTojHzDgN6/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T15:12:31.577Z",
+            "modified_time": "2026-09-05T15:12:56.914Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1SsCWkoLwrwaZAc2QJmTPMJQlhpwtYhLC",
+      "result": {
+        "files": [
+          {
+            "id": "10IrNuF7dlGGeXuA-o0ehxe5mms8nm3q7",
+            "title": "ARTIFACT_REGISTRY.json",
+            "mime_type": "application/json",
+            "size": "7444",
+            "url": "https://drive.google.com/file/d/10IrNuF7dlGGeXuA-o0ehxe5mms8nm3q7/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/10IrNuF7dlGGeXuA-o0ehxe5mms8nm3q7/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-14T00:05:27.279Z",
+            "modified_time": "2026-09-14T00:05:43.904Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1EKh-bR7G8frYuKmz_f6fSWJ0bTaXh2L0",
+            "title": "Handoffs",
+            "mime_type": "application/vnd.google-apps.folder",
+            "size": null,
+            "url": "https://drive.google.com/drive/folders/1EKh-bR7G8frYuKmz_f6fSWJ0bTaXh2L0",
+            "display_url": "https://drive.google.com/drive/folders/1EKh-bR7G8frYuKmz_f6fSWJ0bTaXh2L0",
+            "file_or_folder": "folder",
+            "created_time": "2026-09-13T21:57:22.890Z",
+            "modified_time": "2026-09-13T21:57:22.890Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": true
+          },
+          {
+            "id": "1OmS8lX_KNA1sPDEUhYWO5hYCa42qcWJw",
+            "title": "Architecture",
+            "mime_type": "application/vnd.google-apps.folder",
+            "size": null,
+            "url": "https://drive.google.com/drive/folders/1OmS8lX_KNA1sPDEUhYWO5hYCa42qcWJw",
+            "display_url": "https://drive.google.com/drive/folders/1OmS8lX_KNA1sPDEUhYWO5hYCa42qcWJw",
+            "file_or_folder": "folder",
+            "created_time": "2026-09-13T21:57:21.877Z",
+            "modified_time": "2026-09-13T21:57:21.877Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": true
+          },
+          {
+            "id": "1-U4I9T0qiVaH0TNmZ4deR9dn1POA9xhW",
+            "title": "Growth_Intelligence",
+            "mime_type": "application/vnd.google-apps.folder",
+            "size": null,
+            "url": "https://drive.google.com/drive/folders/1-U4I9T0qiVaH0TNmZ4deR9dn1POA9xhW",
+            "display_url": "https://drive.google.com/drive/folders/1-U4I9T0qiVaH0TNmZ4deR9dn1POA9xhW",
+            "file_or_folder": "folder",
+            "created_time": "2026-09-13T21:57:20.536Z",
+            "modified_time": "2026-09-13T21:57:20.536Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": true
+          },
+          {
+            "id": "1AskkJDY746HmdUxm3RWTcFeX7VozRV1U",
+            "title": "Security",
+            "mime_type": "application/vnd.google-apps.folder",
+            "size": null,
+            "url": "https://drive.google.com/drive/folders/1AskkJDY746HmdUxm3RWTcFeX7VozRV1U",
+            "display_url": "https://drive.google.com/drive/folders/1AskkJDY746HmdUxm3RWTcFeX7VozRV1U",
+            "file_or_folder": "folder",
+            "created_time": "2026-09-13T21:57:19.218Z",
+            "modified_time": "2026-09-13T21:57:19.218Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "1ExK7hMFeNpKrqmB56qujSDX3jnpCGt10",
+      "result": {
+        "files": [
+          {
+            "id": "1aXO1Nz1rxN7Z_XAB2JUO-hSGdev3YdTG",
+            "title": "AKI_SHOTSTACK_FULL_MASTER_V01_FROZEN_EDIT.json",
+            "mime_type": "application/json",
+            "size": "31175",
+            "url": "https://drive.google.com/file/d/1aXO1Nz1rxN7Z_XAB2JUO-hSGdev3YdTG/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1aXO1Nz1rxN7Z_XAB2JUO-hSGdev3YdTG/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-07T14:25:13.088Z",
+            "modified_time": "2026-09-07T14:25:13.089Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1MgBkar6YDKeZSa_PMhQpQYuKqpTcHpPH",
+      "result": {
+        "files": [
+          {
+            "id": "1yX0xkOlZjnDw8Nzq6DFAP8gxE3EP6LGZ",
+            "title": "AKI_AI_CLONE_REFERENCE_V01.mp4",
+            "mime_type": "video/mp4",
+            "size": "6971321",
+            "url": "https://drive.google.com/file/d/1yX0xkOlZjnDw8Nzq6DFAP8gxE3EP6LGZ/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1yX0xkOlZjnDw8Nzq6DFAP8gxE3EP6LGZ/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-09T11:28:01.274Z",
+            "modified_time": "2026-09-09T11:28:01.283Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu",
+            "title": "aakhri-ishq_DERIVATIVE_M08.mp4",
+            "mime_type": "video/mp4",
+            "size": "13125360",
+            "url": "https://drive.google.com/file/d/1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ea6v9VhbsechAK8xqwD9M31aWe9L2gCu/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-09T06:58:47.580Z",
+            "modified_time": "2026-09-09T06:59:41.442Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl",
+            "title": "aakhri-ishq_DERIVATIVE_M02.mp4",
+            "mime_type": "video/mp4",
+            "size": "19179667",
+            "url": "https://drive.google.com/file/d/1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ZUSYhV0_pUiipkI9ylrQRhAU03lMxfFl/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-09T06:52:33.880Z",
+            "modified_time": "2026-09-09T06:54:05.556Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW",
+            "title": "aakhri-ishq_DERIVATIVE_M03.mp4",
+            "mime_type": "video/mp4",
+            "size": "22670942",
+            "url": "https://drive.google.com/file/d/1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1dcASJTGUK_x9ImFPNz4kFhEMMsyDedGW/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-08T14:13:16.814Z",
+            "modified_time": "2026-09-08T14:24:05.002Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1xJht-COeHh3Orb6i2Y3v4YKEM33ZtVOy",
+      "result": {
+        "files": [
+          {
+            "id": "1WOpJ4diDfNhR1AW1VoQ82RzYGMxUCiww",
+            "title": "AKI_CLEANBASE_COLOR_FX_V02_IMPLEMENTATION.md",
+            "mime_type": "text/markdown",
+            "size": "2712",
+            "url": "https://drive.google.com/file/d/1WOpJ4diDfNhR1AW1VoQ82RzYGMxUCiww/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1WOpJ4diDfNhR1AW1VoQ82RzYGMxUCiww/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-06T17:34:58.718Z",
+            "modified_time": "2026-09-06T17:34:44.000Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1doIhJibhosISiMo6SEd1m2mcl-YscXNr",
+            "title": "AKI_CHATGPT_WORK_V03_FINAL_VALIDATION.md",
+            "mime_type": "text/markdown",
+            "size": "10486",
+            "url": "https://drive.google.com/file/d/1doIhJibhosISiMo6SEd1m2mcl-YscXNr/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1doIhJibhosISiMo6SEd1m2mcl-YscXNr/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T20:51:59.995Z",
+            "modified_time": "2026-09-05T20:51:59.995Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1OeTAJuGrcBXWrE6QRSE7znV0yshgGKSG",
+            "title": "AKI_CLEANBASE_FX_V03_IMPLEMENTATION.md",
+            "mime_type": "text/markdown",
+            "size": "4822",
+            "url": "https://drive.google.com/file/d/1OeTAJuGrcBXWrE6QRSE7znV0yshgGKSG/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1OeTAJuGrcBXWrE6QRSE7znV0yshgGKSG/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T20:40:32.875Z",
+            "modified_time": "2026-09-05T20:39:33.000Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1vbZUYfE1FxABFJtTP7Qmtd4qiGdOOjfd",
+            "title": "AKI_CHATGPT_WORK_V02_DELTA_REVIEW.md",
+            "mime_type": "text/markdown",
+            "size": "17612",
+            "url": "https://drive.google.com/file/d/1vbZUYfE1FxABFJtTP7Qmtd4qiGdOOjfd/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1vbZUYfE1FxABFJtTP7Qmtd4qiGdOOjfd/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T19:18:38.618Z",
+            "modified_time": "2026-09-05T19:18:38.618Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1FQAAzxfEKq82PL1DNXY79V2mrCqgOZRg",
+            "title": "AKI_MASTER_STATUS.md",
+            "mime_type": "text/markdown",
+            "size": "2485",
+            "url": "https://drive.google.com/file/d/1FQAAzxfEKq82PL1DNXY79V2mrCqgOZRg/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1FQAAzxfEKq82PL1DNXY79V2mrCqgOZRg/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T18:58:36.707Z",
+            "modified_time": "2026-09-05T18:55:57.000Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1uxYSm48Z2Ps32qHhWGE5kPKDZMT6oUyE",
+            "title": "AKI_CHATGPT_WORK_REVIEW_V01.md",
+            "mime_type": "text/markdown",
+            "size": "25136",
+            "url": "https://drive.google.com/file/d/1uxYSm48Z2Ps32qHhWGE5kPKDZMT6oUyE/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1uxYSm48Z2Ps32qHhWGE5kPKDZMT6oUyE/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T18:44:28.127Z",
+            "modified_time": "2026-09-05T18:44:28.127Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1u-qY25OD4qA3u-KeLoq7DpD-ab_t9HY0",
+            "title": "AKI_SMART_CUES_V01.json",
+            "mime_type": "application/json",
+            "size": "4284",
+            "url": "https://drive.google.com/file/d/1u-qY25OD4qA3u-KeLoq7DpD-ab_t9HY0/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1u-qY25OD4qA3u-KeLoq7DpD-ab_t9HY0/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T16:07:35.226Z",
+            "modified_time": "2026-09-05T16:07:35.226Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1l9sboXWBAjJ-OYDZ2fosymmRPEVmFXHb",
+            "title": "AKI_HITS_V01.json",
+            "mime_type": "application/json",
+            "size": "4353",
+            "url": "https://drive.google.com/file/d/1l9sboXWBAjJ-OYDZ2fosymmRPEVmFXHb/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1l9sboXWBAjJ-OYDZ2fosymmRPEVmFXHb/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T15:58:02.543Z",
+            "modified_time": "2026-09-05T15:58:02.543Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1_hFm-EAEuB8Myt6EAnjIGi45vrPJWGzT",
+      "result": {
+        "files": [
+          {
+            "id": "14xBApfpqqolW7UF0aCxpTL_O4bFZ_X1i",
+            "title": "AKI_VISUAL_LOCK_AUDIO_MASTER_V01.mp4",
+            "mime_type": "video/mp4",
+            "size": "150678664",
+            "url": "https://drive.google.com/file/d/14xBApfpqqolW7UF0aCxpTL_O4bFZ_X1i/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/14xBApfpqqolW7UF0aCxpTL_O4bFZ_X1i/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-06T18:54:55.162Z",
+            "modified_time": "2026-09-06T18:54:55.162Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1lPNvm2SRM4OxsWOozdZCxTGYXMIYHXZ0",
+            "title": "AKI_CLEANBASE_COLOR_FX_V02.mp4",
+            "mime_type": "video/mp4",
+            "size": "147027223",
+            "url": "https://drive.google.com/file/d/1lPNvm2SRM4OxsWOozdZCxTGYXMIYHXZ0/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1lPNvm2SRM4OxsWOozdZCxTGYXMIYHXZ0/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-06T17:30:42.610Z",
+            "modified_time": "2026-09-06T17:30:42.610Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1noCDIWeB6_IgxIDFOTyC8txbhVDZkhPI",
+            "title": "AKI_CLEANBASE_COLOR_FX_V01.mp4",
+            "mime_type": "video/mp4",
+            "size": "147130775",
+            "url": "https://drive.google.com/file/d/1noCDIWeB6_IgxIDFOTyC8txbhVDZkhPI/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1noCDIWeB6_IgxIDFOTyC8txbhVDZkhPI/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-06T17:05:42.883Z",
+            "modified_time": "2026-09-06T17:05:42.883Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1l0nhUpA21xfWPm8B14eWDjBntILjoaR4",
+            "title": "AKI_CLEANBASE_FX_V01.mp4_old",
+            "mime_type": "video/mp4",
+            "size": "151790846",
+            "url": "https://drive.google.com/file/d/1l0nhUpA21xfWPm8B14eWDjBntILjoaR4/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1l0nhUpA21xfWPm8B14eWDjBntILjoaR4/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T17:26:12.803Z",
+            "modified_time": "2026-09-06T17:02:24.325Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1xPrHchGWT-AKjXN3cuqmfrjrRm02vh8k",
+            "title": "AKI_CLEANBASE_COLOR_MASTER_V01.mp4",
+            "mime_type": "video/quicktime",
+            "size": "396729314",
+            "url": "https://drive.google.com/file/d/1xPrHchGWT-AKjXN3cuqmfrjrRm02vh8k/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1xPrHchGWT-AKjXN3cuqmfrjrRm02vh8k/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-06T15:41:16.356Z",
+            "modified_time": "2026-09-06T15:41:41.105Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1SnQA5nzJvxSKdfFRiSpmbiLHhIH945ht",
+            "title": "AKI_CLEANBASE_FX_V03.mp4",
+            "mime_type": "video/mp4",
+            "size": "153519892",
+            "url": "https://drive.google.com/file/d/1SnQA5nzJvxSKdfFRiSpmbiLHhIH945ht/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1SnQA5nzJvxSKdfFRiSpmbiLHhIH945ht/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T20:21:46.032Z",
+            "modified_time": "2026-09-05T20:21:46.032Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "17VVNlP3n5numYZN3yj0P3ELLAKuPOaVD",
+            "title": "AKI_CLEANBASE_FX_V02.mp4",
+            "mime_type": "video/mp4",
+            "size": "152266942",
+            "url": "https://drive.google.com/file/d/17VVNlP3n5numYZN3yj0P3ELLAKuPOaVD/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/17VVNlP3n5numYZN3yj0P3ELLAKuPOaVD/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T18:41:09.086Z",
+            "modified_time": "2026-09-05T18:41:09.086Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1ZDHITuBvh4P7oCLKBo5iqLwYEPe7x3me",
+            "title": "AKI_CLEANBASE_FX_V01.md",
+            "mime_type": "text/markdown",
+            "size": "1486",
+            "url": "https://drive.google.com/file/d/1ZDHITuBvh4P7oCLKBo5iqLwYEPe7x3me/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ZDHITuBvh4P7oCLKBo5iqLwYEPe7x3me/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T16:59:00.905Z",
+            "modified_time": "2026-09-05T16:59:00.905Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1DVHHfEKrzTyDUFXILXyOQJOrbjYSYDCA",
+            "title": "AKI_SHAKE_CUESHEET_V02_VALIDATED.md",
+            "mime_type": "text/markdown",
+            "size": "3551",
+            "url": "https://drive.google.com/file/d/1DVHHfEKrzTyDUFXILXyOQJOrbjYSYDCA/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1DVHHfEKrzTyDUFXILXyOQJOrbjYSYDCA/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T15:57:22.535Z",
+            "modified_time": "2026-09-05T15:57:22.535Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1tS10Pqz640GUT99WivJvJv5PzUByqbRU",
+            "title": "AKI_SHAKE_CUESHEET_V01.md",
+            "mime_type": "text/markdown",
+            "size": "4022",
+            "url": "https://drive.google.com/file/d/1tS10Pqz640GUT99WivJvJv5PzUByqbRU/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1tS10Pqz640GUT99WivJvJv5PzUByqbRU/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-05T15:17:06.555Z",
+            "modified_time": "2026-09-05T15:17:06.555Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          }
+        ]
+      }
+    },
+    {
+      "result": {
+        "files": [
+          {
+            "id": "1J4EgUUFiJrlBP9lmcL-dYXB13Ph0ZzzU",
+            "title": "GEMINI_HANDOFF_PACKAGE_V01.json",
+            "mime_type": "application/json",
+            "size": "20155",
+            "url": "https://drive.google.com/file/d/1J4EgUUFiJrlBP9lmcL-dYXB13Ph0ZzzU/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1J4EgUUFiJrlBP9lmcL-dYXB13Ph0ZzzU/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-13T22:06:26.596Z",
+            "modified_time": "2026-09-13T22:06:26.596Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          }
+        ]
+      }
+    },
+    {
+      "result": {
+        "files": [
+          {
+            "id": "1Gn5TVJRtoZQQbtDRo5QZn9u3rYOG1dok",
+            "title": "P0D_P1_PRE_V2_ROLLBACK_SNAPSHOT_V01.json",
+            "mime_type": "application/json",
+            "size": "10711",
+            "url": "https://drive.google.com/file/d/1Gn5TVJRtoZQQbtDRo5QZn9u3rYOG1dok/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1Gn5TVJRtoZQQbtDRo5QZn9u3rYOG1dok/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-14T15:09:04.569Z",
+            "modified_time": "2026-09-14T15:09:04.569Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1idpumujNkAJy1-IE9nQJ-KUjzeAmUTWd",
+            "title": "ARTIFACT_REGISTRY.json",
+            "mime_type": "application/json",
+            "size": "994",
+            "url": "https://drive.google.com/file/d/1idpumujNkAJy1-IE9nQJ-KUjzeAmUTWd/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1idpumujNkAJy1-IE9nQJ-KUjzeAmUTWd/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-14T14:29:14.680Z",
+            "modified_time": "2026-09-14T14:29:14.680Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "17ZjBMXVOHE9VH-orOUWsnbSG5E9EoYft",
+            "title": "P0D_REAL_P1_WIRING_PLAN_V01.md",
+            "mime_type": "text/markdown",
+            "size": "4133",
+            "url": "https://drive.google.com/file/d/17ZjBMXVOHE9VH-orOUWsnbSG5E9EoYft/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/17ZjBMXVOHE9VH-orOUWsnbSG5E9EoYft/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-14T14:27:30.519Z",
+            "modified_time": "2026-09-14T14:27:30.519Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1WECzIcTnLpjbxNQTz9mAgDHXRegKztd-",
+            "title": "P0C_COMPLETION_REPORT_V01.json",
+            "mime_type": "application/json",
+            "size": "4643",
+            "url": "https://drive.google.com/file/d/1WECzIcTnLpjbxNQTz9mAgDHXRegKztd-/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1WECzIcTnLpjbxNQTz9mAgDHXRegKztd-/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-14T14:26:28.015Z",
+            "modified_time": "2026-09-14T14:26:28.015Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1nhlu4Rc-R1FNGZy_1v5tZcMOiAkUwPHD",
+            "title": "P1_9627055_rollback_snapshot_pre-P0B.json",
+            "mime_type": "application/json",
+            "size": "3820",
+            "url": "https://drive.google.com/file/d/1nhlu4Rc-R1FNGZy_1v5tZcMOiAkUwPHD/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1nhlu4Rc-R1FNGZy_1v5tZcMOiAkUwPHD/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-14T11:58:10.298Z",
+            "modified_time": "2026-09-14T11:58:10.298Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1dcRWX5tq8b2MByeTgvg9gmVGTA9Z-msZ",
+            "title": "P0B_PRODUCTION_GATE_INTEGRATION_REPORT_V02.json",
+            "mime_type": "application/json",
+            "size": "4542",
+            "url": "https://drive.google.com/file/d/1dcRWX5tq8b2MByeTgvg9gmVGTA9Z-msZ/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1dcRWX5tq8b2MByeTgvg9gmVGTA9Z-msZ/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-14T11:53:43.170Z",
+            "modified_time": "2026-09-14T11:53:43.170Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1X-JkqPJVbXl6uNThOVhWGCtTKrOmCe3V",
+            "title": "P0B_PRODUCTION_GATE_INTEGRATION_REPORT_V01.json",
+            "mime_type": "application/json",
+            "size": "6827",
+            "url": "https://drive.google.com/file/d/1X-JkqPJVbXl6uNThOVhWGCtTKrOmCe3V/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1X-JkqPJVbXl6uNThOVhWGCtTKrOmCe3V/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-13T23:54:08.447Z",
+            "modified_time": "2026-09-13T23:54:08.447Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "146OCRk1kp2P_CT-GiBjnJolfO7Awwbe8",
+            "title": "P1_ROLLBACK_SNAPSHOT_9627055_V01.json",
+            "mime_type": "application/json",
+            "size": "6031",
+            "url": "https://drive.google.com/file/d/146OCRk1kp2P_CT-GiBjnJolfO7Awwbe8/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/146OCRk1kp2P_CT-GiBjnJolfO7Awwbe8/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-13T23:49:09.775Z",
+            "modified_time": "2026-09-13T23:49:09.775Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "19LMDXzq19lrUJCuun52sofRzt4JOoGEG",
+            "title": "P0_SAFE_DAILY_PUBLISHING_IMPLEMENTATION_REPORT_V01.json",
+            "mime_type": "application/json",
+            "size": "10553",
+            "url": "https://drive.google.com/file/d/19LMDXzq19lrUJCuun52sofRzt4JOoGEG/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/19LMDXzq19lrUJCuun52sofRzt4JOoGEG/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-13T23:27:42.698Z",
+            "modified_time": "2026-09-13T23:27:42.698Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          },
+          {
+            "id": "1AzC645I4xohWm4lgtvcgrhUWOX1Wr_Rd",
+            "title": "CANONICAL_FACTORY_DATA_GOVERNANCE_MODEL_V01.json",
+            "mime_type": "application/json",
+            "size": "10146",
+            "url": "https://drive.google.com/file/d/1AzC645I4xohWm4lgtvcgrhUWOX1Wr_Rd/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1AzC645I4xohWm4lgtvcgrhUWOX1Wr_Rd/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-13T23:19:36.080Z",
+            "modified_time": "2026-09-13T23:19:36.080Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          }
+        ]
+      }
+    },
+    {
+      "result": {
+        "files": [
+          {
+            "id": "1ksEbHC_OivCe6cneMMFPiJzUYscecWel",
+            "title": "GEMINI_10M_GROWTH_AUDIT_V01.json",
+            "mime_type": "application/json",
+            "size": "1621",
+            "url": "https://drive.google.com/file/d/1ksEbHC_OivCe6cneMMFPiJzUYscecWel/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/1ksEbHC_OivCe6cneMMFPiJzUYscecWel/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-13T22:42:30.262Z",
+            "modified_time": "2026-09-13T22:42:30.262Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          }
+        ]
+      }
+    },
+    {
+      "result": {
+        "files": [
+          {
+            "id": "17w4pKiba51tg8vqR2LKVIS-V1C7b1Yuf",
+            "title": "AKI_VISUAL_LOCK_AUDIO_MASTER_V01__NONCANONICAL__audio2d405b7b.mp4",
+            "mime_type": "video/mp4",
+            "size": "150682221",
+            "url": "https://drive.google.com/file/d/17w4pKiba51tg8vqR2LKVIS-V1C7b1Yuf/view?usp=drivesdk",
+            "display_url": "https://drive.google.com/file/d/17w4pKiba51tg8vqR2LKVIS-V1C7b1Yuf/view?usp=drivesdk",
+            "file_or_folder": "file",
+            "created_time": "2026-09-06T18:21:46.421Z",
+            "modified_time": "2026-09-11T13:53:11.282Z",
+            "parent_ids": null,
+            "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+            "current_user_can_share": null,
+            "has_augmented_permissions": null,
+            "shared": null,
+            "permissions": null,
+            "source_visibility_status": "access_not_verified",
+            "can_download": true,
+            "can_list_children": false
+          }
+        ]
+      }
+    }
+  ],
+  "limits": "Search operates on accessible provider index. Direct folder inventory covers JSON/media omitted by keyword search. No claim of universal absence. External My Drive spreadsheet hits are not promoted over authoritative repository/Shared Drive."
+}
