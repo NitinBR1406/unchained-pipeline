@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "remote_branch": "origin/p0e4/slice1-production-handoff",
+  "verified_remote_sha": "c27307565cd341b213d43cd405b23a282e1f9969",
+  "exact_tested_code_sha": "04d3e34af3e9fe65195a1a89b4d30c1424133522",
+  "state_version": 20,
+  "master_state_sha256": "bc56e1336a32844b04b7389967ac4c393380844da9f2911fe7a125ffbcd309ae",
+  "clean_checkout_readable": true,
+  "full_regression_passed": 53,
+  "manifest_checks": 257,
+  "deterministic_replay": {
+    "state_version": 20,
+    "replay": true,
+    "controller_acceptance": "CANONICAL_SHADOW_ACCEPTED_CUTOVER_BLOCKED"
+  },
+  "observed_at": "2026-09-19T00:04:27.367241+00:00",
+  "production_deployment_authorized": false,
+  "publication_authorized": false
+}
