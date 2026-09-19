@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "remote_branch": "origin/p0e4/slice1-production-handoff",
+  "remote_acceptance_sha": "f9c048d2becfef50daae03a4c1b74b955196cdca",
+  "exact_tested_code_sha": "5e081abcff35e249973051d82ebb755053ac226a",
+  "clean_checkout": true,
+  "state_version": 22,
+  "master_state_version": "V15.2",
+  "state_sha256": "bca5c04312c78c6a3e46ca133956a58448f61db958b2f96dfb1f2c05be8df23e",
+  "deterministic_replay": true,
+  "regression_suites": 59,
+  "manifest_entries": 318,
+  "frozen_components_changed": false,
+  "code_unchanged_since_tested_sha": true,
+  "real_codex_generated_outputs_remote_verified": true,
+  "automatic_next_ready_proven": true,
+  "always_on_dispatcher_proven": false,
+  "production_e2e_status": "BLOCKED_NOT_GREEN",
+  "publication_authorized": false
+}
