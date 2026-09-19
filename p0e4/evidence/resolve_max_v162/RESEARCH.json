@@ -1,0 +1,23 @@
+{
+  "local_execution_proven": false,
+  "observed_at": "2026-09-19",
+  "schema": "RESOLVE_PRIMARY_SOURCE_REVIEW",
+  "sources": [
+    {
+      "finding": "Studio documents Python/Lua, remote scripting and workflow integrations; individual callable methods unverified.",
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve/studio"
+    },
+    {
+      "finding": "Fusion documents script-fed graphics and Python/Lua; text and keyframe tooling supports the design. No installed API tested.",
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+    },
+    {
+      "finding": "Fairlight documents timeline automation and sync scrollers. Timeline automation is not evidence of an externally callable API.",
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
+    },
+    {
+      "finding": "Editing product surface supports finishing design; availability and method signatures require local verification.",
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    }
+  ]
+}

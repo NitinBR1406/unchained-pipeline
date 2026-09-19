@@ -1,0 +1,808 @@
+{
+  "attribution_policy": "CANONICAL_SYSTEM_OF_RECORD_ALL_14_GROUPS_PRESERVED",
+  "base": {
+    "canonical_sha256": "4c3a37618a2e94aac6db652c598652e6ecf3773355eec0817e20df8e110a66d9",
+    "capability_matrix_sha256": "4aa9af1aecbe8dd8978b60e85e2846df1dec892bb5baff85fc56b2a785340eca",
+    "content_id": "TEST_ONLY_GOLDEN",
+    "created_at": "2026-09-18T17:00:00Z",
+    "creative_sha256": "cd89dc75ad5be5c0cb2686bad66e4e6a8865f5585eecb8527ff5001a4467684f",
+    "evidence_refs": [
+      {
+        "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+        "uri": "fixture/evidence"
+      }
+    ],
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "input_authority": "INTEGRATION_TEST_INPUT_UNLESS_SEPARATELY_BOUND",
+    "inputs": [
+      {
+        "role": "raw_video",
+        "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+        "uri": "fixture/raw"
+      },
+      {
+        "role": "authoritative_audio",
+        "sha256": "10c2bfd8e05bf892c38eb5edbc5521a9526155c397e5dd489f0f31f4114ebb62",
+        "uri": "fixture/audio"
+      }
+    ],
+    "jobs": [
+      {
+        "blocking_reasons": [
+          "NITIN_AUDIO_SOURCE_BINDING_REQUIRED",
+          "OUTPUT_PROFILE_CODEC_SUPPORT_NOT_PROVEN",
+          "RESOLVE_INSTALLATION_AND_LOCAL_CAPABILITY_NOT_PROVEN"
+        ],
+        "canonical_groups": {
+          "aspect_ratios": "9:16",
+          "caption": "TEST_ONLY caption",
+          "cta": "TEST_ONLY save",
+          "derivatives": {
+            "derivative_id": "derivative:test",
+            "kind": "CLIP",
+            "output_asset": null,
+            "source_asset": {
+              "asset_id": "asset:0",
+              "authority": "INTEGRATION_TEST_INPUT",
+              "binding_evidence_id": null,
+              "content_id": "TEST_ONLY_GOLDEN",
+              "evidence_ids": [
+                "ev:test"
+              ],
+              "role": "INTEGRATION_TEST_INPUT",
+              "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+              "uri": "fixture/raw"
+            }
+          },
+          "edit_effects": {
+            "baseline_locked": true,
+            "duration_ms": 10000,
+            "effects": [],
+            "execution_mode": "RECOMMENDATION_ONLY",
+            "segments": [
+              {
+                "end_ms": 10000,
+                "performer_visible": true,
+                "source_end_ms": 10000,
+                "source_sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+                "source_start_ms": 0,
+                "start_ms": 0
+              }
+            ]
+          },
+          "experiments": {
+            "experiment": {
+              "campaign_id": "campaign:test",
+              "control_variant_id": null,
+              "evidence_ids": [
+                "ev:test"
+              ],
+              "experiment_id": "experiment:test",
+              "hypothesis_id": "hypothesis:test",
+              "primary_metric": "retention",
+              "status": "PLANNED",
+              "tested_variable": "opening_hook",
+              "variant_id": "variant:test"
+            },
+            "hypothesis": {
+              "content_id": "TEST_ONLY_GOLDEN",
+              "evidence_ids": [
+                "ev:test"
+              ],
+              "falsification_rule": "No improvement versus control",
+              "hypothesis_id": "hypothesis:test",
+              "predicted_metric": "retention",
+              "statement": "TEST_ONLY vocal-first hook improves retention"
+            }
+          },
+          "hashtags": [
+            "#TestOnly"
+          ],
+          "hooks": "TEST_ONLY vocal opening",
+          "platform_targeting": "youtube_shorts",
+          "provenance": {
+            "agents": [
+              {
+                "agent_id": "agent:test",
+                "agent_role": "GEMINI_INTELLIGENCE",
+                "authenticated_receipt_id": null,
+                "evidence_ids": [
+                  "ev:test"
+                ],
+                "model_id": null,
+                "observed_at": "2026-09-18T17:00:00Z",
+                "run_id": "TEST_ONLY_TEST_ONLY_GEMINI",
+                "source_agent_name": "TEST_ONLY_GEMINI"
+              }
+            ],
+            "content_id": "TEST_ONLY_GOLDEN",
+            "evidence_refs": [
+              {
+                "evidence_id": "ev:test",
+                "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+                "uri": "fixture/evidence"
+              }
+            ],
+            "package_id": "package:test",
+            "source_package_sha256": "cd89dc75ad5be5c0cb2686bad66e4e6a8865f5585eecb8527ff5001a4467684f"
+          },
+          "schedules": {
+            "schedule_timezone": "Europe/Amsterdam",
+            "schedule_version": 1,
+            "scheduled_at": null
+          },
+          "thumbnails_posters": {
+            "poster": null,
+            "thumbnail": null
+          },
+          "timestamps": {
+            "end_ms": 10000,
+            "start_ms": 0
+          },
+          "title": "TEST_ONLY title"
+        },
+        "cuts": [
+          {
+            "end_frame_exclusive": 250,
+            "performer_visible": true,
+            "source_end_frame_exclusive": 250,
+            "source_sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+            "source_start_frame": 0,
+            "start_frame": 0
+          }
+        ],
+        "derivative_id": "derivative:test",
+        "operations": [],
+        "package_id": "package:test",
+        "performance": {
+          "duration_ms": 10000,
+          "minimum_fraction": "4/5",
+          "visible_ms": 10000
+        },
+        "platform": "youtube_shorts",
+        "render_profile": {
+          "aspect_ratio": "9:16",
+          "audio_codec": "AAC",
+          "audio_sample_rate": 48000,
+          "codec_probe_required": true,
+          "container": "mp4",
+          "fps_denominator": 1,
+          "fps_numerator": 25,
+          "height": 1920,
+          "output_destination": "PRIVATE_LOCAL_STAGING_ONLY",
+          "profile_id": "LOCAL_REVIEW_H264_V01",
+          "quick_export_upload": false,
+          "video_codec": "H264",
+          "width": 1080
+        }
+      }
+    ],
+    "outputs": [],
+    "preflight_sha256": "a65f69b96ef43c91f2c0654eff9e09cd17ecf8226569a5c1e5847fa0ee76bd4c",
+    "producer": {
+      "agent": "CODEX_PLAN_ADAPTER",
+      "model": null
+    },
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "resolve_execution_proven": false,
+    "schema": "RESOLVE_EXECUTION_PLAN",
+    "schema_version": 1,
+    "status": "PLAN_ONLY_EXECUTION_BLOCKED"
+  },
+  "canonical_sha256": "4c3a37618a2e94aac6db652c598652e6ecf3773355eec0817e20df8e110a66d9",
+  "capability_routes": [
+    {
+      "canonical_mapping": "base.jobs[].cuts",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "cuts",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "operations.reframe",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "reframes",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "operations.zoom/push_in",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "zooms_push_ins",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "operations.shake",
+      "design_preference": "FUSION_FAIRLIGHT",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "shakes",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+    },
+    {
+      "canonical_mapping": "operations.caption",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "captions",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "finishing.lyric_cues",
+      "design_preference": "FUSION_FAIRLIGHT",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "lyric_text_emphasis",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+    },
+    {
+      "canonical_mapping": "operations.transition",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "transitions",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "operations.effect",
+      "design_preference": "FUSION_FAIRLIGHT",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "effects",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+    },
+    {
+      "canonical_mapping": "base.jobs[].cuts + source frame/sample intelligence",
+      "design_preference": "EXTERNAL_INTELLIGENCE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "timing",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "finishing.color_look",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "color_look",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio"
+    },
+    {
+      "canonical_mapping": "finishing.audio_sync",
+      "design_preference": "FUSION_FAIRLIGHT",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "audio_sync",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
+    },
+    {
+      "canonical_mapping": "base.jobs[].render_profile + operations.reframe",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "platform_crops",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "base.jobs[].render_profile",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "render_profiles",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio"
+    },
+    {
+      "canonical_mapping": "resolve.plan.review_candidate + independent QC package",
+      "design_preference": "EXTERNAL_INTELLIGENCE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "qc_rework",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
+    },
+    {
+      "canonical_mapping": "controlled readback checkpoints; no blind coordinate macros",
+      "design_preference": "GUI_ONLY",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "gui_fallback",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    }
+  ],
+  "content_id": "TEST_ONLY_GOLDEN",
+  "created_at": "2026-09-18T17:00:00Z",
+  "finishing": {
+    "audio_sync": {
+      "evidence_refs": [
+        {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        }
+      ],
+      "gain_millidb": 0,
+      "offset_samples": 0,
+      "preserve_pitch": true,
+      "preserve_rate": true,
+      "sample_rate": 48000,
+      "source_sha256": "10c2bfd8e05bf892c38eb5edbc5521a9526155c397e5dd489f0f31f4114ebb62"
+    },
+    "base_plan_sha256": "5771765506c3a67c950f1d131db2ff510e5bd9eb4604cb3707f9638dc6ccf167",
+    "color_look": {
+      "baseline_ref": {
+        "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+        "uri": "fixture/evidence"
+      },
+      "mode": "PRESERVE_LOCKED_BASELINE"
+    },
+    "lyric_cues": [
+      {
+        "cue_id": "TEST_ONLY_CUE",
+        "emphasis_spans": [
+          {
+            "end_character_exclusive": 4,
+            "start_character": 0
+          }
+        ],
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "package_id": "package:test",
+        "start_frame": 0,
+        "style_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "text": "TEST ONLY"
+      }
+    ],
+    "schema": "MASTER_FINISHING_DETAILS",
+    "schema_version": 1
+  },
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "matrix_sha256": "82d1ba991520308d656c9e613a65aed63f64802c6d32cedf2fd5d4f247de691f",
+  "operations": {
+    "base_plan_sha256": "5771765506c3a67c950f1d131db2ff510e5bd9eb4604cb3707f9638dc6ccf167",
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "operations": [
+      {
+        "blockers": [
+          "INSTALLATION_AND_OPERATION_CAPABILITY_SMOKE_REQUIRED",
+          "AUTHENTICATED_VISIBILITY_QC_REQUIRED"
+        ],
+        "execution_enabled": false,
+        "operation": {
+          "end_frame_exclusive": 25,
+          "evidence_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "kind": "cut",
+          "operation_id": "test:cut",
+          "package_id": "package:test",
+          "parameters": {
+            "cut_frames": [
+              10
+            ]
+          },
+          "performer_obscured": false,
+          "start_frame": 0
+        }
+      },
+      {
+        "blockers": [
+          "INSTALLATION_AND_OPERATION_CAPABILITY_SMOKE_REQUIRED",
+          "AUTHENTICATED_VISIBILITY_QC_REQUIRED"
+        ],
+        "execution_enabled": false,
+        "operation": {
+          "end_frame_exclusive": 25,
+          "evidence_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "kind": "reframe",
+          "operation_id": "test:reframe",
+          "package_id": "package:test",
+          "parameters": {
+            "bottom_millionths": 900000,
+            "left_millionths": 100000,
+            "right_millionths": 900000,
+            "top_millionths": 100000
+          },
+          "performer_obscured": false,
+          "start_frame": 0
+        }
+      },
+      {
+        "blockers": [
+          "INSTALLATION_AND_OPERATION_CAPABILITY_SMOKE_REQUIRED",
+          "AUTHENTICATED_VISIBILITY_QC_REQUIRED"
+        ],
+        "execution_enabled": false,
+        "operation": {
+          "end_frame_exclusive": 25,
+          "evidence_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "kind": "zoom",
+          "operation_id": "test:zoom",
+          "package_id": "package:test",
+          "parameters": {
+            "interpolation": "LINEAR",
+            "keyframes": [
+              {
+                "center": {
+                  "x_millionths": 500000,
+                  "y_millionths": 500000
+                },
+                "frame": 0,
+                "scale_millionths": 1000000
+              },
+              {
+                "center": {
+                  "x_millionths": 510000,
+                  "y_millionths": 500000
+                },
+                "frame": 24,
+                "scale_millionths": 1100000
+              }
+            ]
+          },
+          "performer_obscured": false,
+          "start_frame": 0
+        }
+      },
+      {
+        "blockers": [
+          "INSTALLATION_AND_OPERATION_CAPABILITY_SMOKE_REQUIRED",
+          "AUTHENTICATED_VISIBILITY_QC_REQUIRED"
+        ],
+        "execution_enabled": false,
+        "operation": {
+          "end_frame_exclusive": 25,
+          "evidence_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "kind": "push_in",
+          "operation_id": "test:push_in",
+          "package_id": "package:test",
+          "parameters": {
+            "interpolation": "LINEAR",
+            "keyframes": [
+              {
+                "center": {
+                  "x_millionths": 500000,
+                  "y_millionths": 500000
+                },
+                "frame": 0,
+                "scale_millionths": 1000000
+              },
+              {
+                "center": {
+                  "x_millionths": 510000,
+                  "y_millionths": 500000
+                },
+                "frame": 24,
+                "scale_millionths": 1100000
+              }
+            ]
+          },
+          "performer_obscured": false,
+          "start_frame": 0
+        }
+      },
+      {
+        "blockers": [
+          "INSTALLATION_AND_OPERATION_CAPABILITY_SMOKE_REQUIRED",
+          "AUTHENTICATED_VISIBILITY_QC_REQUIRED"
+        ],
+        "execution_enabled": false,
+        "operation": {
+          "end_frame_exclusive": 25,
+          "evidence_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "kind": "shake",
+          "operation_id": "test:shake",
+          "package_id": "package:test",
+          "parameters": {
+            "interpolation": "LINEAR",
+            "keyframes": [
+              {
+                "center": {
+                  "x_millionths": 500000,
+                  "y_millionths": 500000
+                },
+                "frame": 0,
+                "scale_millionths": 1000000
+              },
+              {
+                "center": {
+                  "x_millionths": 510000,
+                  "y_millionths": 500000
+                },
+                "frame": 24,
+                "scale_millionths": 1100000
+              }
+            ]
+          },
+          "performer_obscured": false,
+          "start_frame": 0
+        }
+      },
+      {
+        "blockers": [
+          "INSTALLATION_AND_OPERATION_CAPABILITY_SMOKE_REQUIRED",
+          "AUTHENTICATED_VISIBILITY_QC_REQUIRED",
+          "STYLE_BYTES_AND_SAFE_AREA_CAPABILITY_REQUIRED"
+        ],
+        "execution_enabled": false,
+        "operation": {
+          "end_frame_exclusive": 25,
+          "evidence_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "kind": "caption",
+          "operation_id": "test:caption",
+          "package_id": "package:test",
+          "parameters": {
+            "position": {
+              "x_millionths": 500000,
+              "y_millionths": 800000
+            },
+            "style_ref": {
+              "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+              "uri": "fixture/evidence"
+            },
+            "text": "TEST_ONLY"
+          },
+          "performer_obscured": false,
+          "start_frame": 0
+        }
+      },
+      {
+        "blockers": [
+          "INSTALLATION_AND_OPERATION_CAPABILITY_SMOKE_REQUIRED",
+          "AUTHENTICATED_VISIBILITY_QC_REQUIRED",
+          "STYLE_BYTES_AND_SAFE_AREA_CAPABILITY_REQUIRED"
+        ],
+        "execution_enabled": false,
+        "operation": {
+          "end_frame_exclusive": 25,
+          "evidence_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "kind": "text",
+          "operation_id": "test:text",
+          "package_id": "package:test",
+          "parameters": {
+            "position": {
+              "x_millionths": 500000,
+              "y_millionths": 100000
+            },
+            "style_ref": {
+              "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+              "uri": "fixture/evidence"
+            },
+            "text": "TEST_ONLY TITLE"
+          },
+          "performer_obscured": false,
+          "start_frame": 0
+        }
+      },
+      {
+        "blockers": [
+          "INSTALLATION_AND_OPERATION_CAPABILITY_SMOKE_REQUIRED",
+          "AUTHENTICATED_VISIBILITY_QC_REQUIRED",
+          "SOURCE_HANDLES_AND_TRANSITION_VISIBILITY_NOT_PROVEN"
+        ],
+        "execution_enabled": false,
+        "operation": {
+          "end_frame_exclusive": 25,
+          "evidence_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "kind": "transition",
+          "operation_id": "test:transition",
+          "package_id": "package:test",
+          "parameters": {
+            "duration_frames": 25,
+            "incoming_handle_frames": 25,
+            "outgoing_handle_frames": 25,
+            "type": "DISSOLVE"
+          },
+          "performer_obscured": false,
+          "start_frame": 0
+        }
+      },
+      {
+        "blockers": [
+          "INSTALLATION_AND_OPERATION_CAPABILITY_SMOKE_REQUIRED",
+          "AUTHENTICATED_VISIBILITY_QC_REQUIRED",
+          "PLUGIN_TEMPLATE_INSPECTION_AND_LICENSE_EVIDENCE_REQUIRED"
+        ],
+        "execution_enabled": false,
+        "operation": {
+          "end_frame_exclusive": 25,
+          "evidence_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "kind": "effect",
+          "operation_id": "test:effect",
+          "package_id": "package:test",
+          "parameters": {
+            "intent": "VISUAL_OVERLAY_NO_BASELINE_CHANGE",
+            "license_status": "UNKNOWN",
+            "plugin_id": "TEST_ONLY",
+            "template_ref": {
+              "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+              "uri": "fixture/evidence"
+            }
+          },
+          "performer_obscured": false,
+          "start_frame": 0
+        }
+      }
+    ],
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "resolve_execution_proven": false,
+    "schema": "RESOLVE_OPERATION_SUPPLEMENT",
+    "schema_version": 1,
+    "spec_sha256": "f5f1a4c627d75c11cd259c723fd050ded45ec8e1a7921a5bf8c638218ca617d1",
+    "status": "VALIDATED_PARAMETERS_EXECUTION_BLOCKED"
+  },
+  "producer": {
+    "agent": "CODEX_RESOLVE_ADAPTER",
+    "model": null
+  },
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "qc_checks": [
+    "look_match",
+    "audio_source_and_sample_offset",
+    "lip_sync",
+    "full_motion",
+    "safe_areas",
+    "lyric_text_exactness",
+    "80_percent_visible_per_derivative",
+    "output_sha256"
+  ],
+  "resolve_execution_proven": false,
+  "schema": "MASTER_FINISHING_EXECUTION_PLAN",
+  "schema_version": 1,
+  "status": "PLAN_ONLY_INSTALLATION_CAPABILITY_AND_HUMAN_BINDINGS_REQUIRED"
+}

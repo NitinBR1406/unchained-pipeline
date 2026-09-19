@@ -1,0 +1,11 @@
+ADD TO CURRENT AUTHORIZED V16 RESOLVE SCOPE — MAXIMUM CAPABILITY PRINCIPLE
+
+DaVinci Resolve is intended as the UNCHAINED NITIN Master Finishing Engine, not merely a renderer. Design ResolveAdapter to exploit the maximum reliable automation surface available through Resolve scripting/API, Fusion/Fairlight interfaces where callable, externally precomputed Gemini/audio intelligence and controlled Computer Use only where reliable API access is unavailable.
+
+Map the full canonical creative contract: cuts, reframes, zooms/push-ins, shakes, captions, lyric/text emphasis, transitions, effects, timing, color/look, audio sync, platform crops, render profiles and QC/rework.
+
+Prefer deterministic API/data-driven execution. Build a capability matrix: API_SCRIPTABLE / EXTERNAL_INTELLIGENCE / FUSION_FAIRLIGHT / GUI_ONLY / UNSUPPORTED_FAIL_CLOSED.
+
+Evaluate Resolve Free vs Studio specifically against the complete Factory + 10M growth requirements. Do not purchase/install anything and do not infer financial approval.
+
+Continue Catalog Bootstrap independently; do not restart or discard current catalog inventory work.

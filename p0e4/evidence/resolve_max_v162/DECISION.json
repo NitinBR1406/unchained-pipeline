@@ -1,0 +1,16 @@
+{
+  "schema": "NITIN_SCOPE_EXTENSION_RECORD",
+  "recorded_by": "codex",
+  "provider_signature": null,
+  "source": "USER_MESSAGE",
+  "source_ref": {
+    "uri": "p0e4/evidence/resolve_max_v162/NITIN_SCOPE_EXTENSION.txt",
+    "sha256": "4a3fa537f887b997480a69e056956881da06d11d86ed8220f49a28bf256a97d8"
+  },
+  "design_authorized": true,
+  "purchase_authorized": false,
+  "installation_authorized": false,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

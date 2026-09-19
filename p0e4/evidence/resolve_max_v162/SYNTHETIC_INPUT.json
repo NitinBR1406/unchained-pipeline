@@ -1,0 +1,539 @@
+{
+  "blobs_utf8": {
+    "fixture/audio": "TEST_ONLY_AUDIO_NOT_MEDIA",
+    "fixture/evidence": "TEST_ONLY_EVIDENCE",
+    "fixture/master": "TEST_ONLY_OUTPUT_NOT_MEDIA",
+    "fixture/raw": "TEST_ONLY_RAW_NOT_MEDIA"
+  },
+  "canonical": {
+    "AGENT_EVIDENCE": [
+      {
+        "agent_id": "agent:test",
+        "agent_role": "GEMINI_INTELLIGENCE",
+        "authenticated_receipt_id": null,
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "model_id": null,
+        "observed_at": "2026-09-18T17:00:00Z",
+        "run_id": "TEST_ONLY_TEST_ONLY_GEMINI",
+        "source_agent_name": "TEST_ONLY_GEMINI"
+      }
+    ],
+    "ANALYTICS": [],
+    "ASSETS": [
+      {
+        "asset_id": "asset:0",
+        "authority": "INTEGRATION_TEST_INPUT",
+        "binding_evidence_id": null,
+        "content_id": "TEST_ONLY_GOLDEN",
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "role": "INTEGRATION_TEST_INPUT",
+        "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+        "uri": "fixture/raw"
+      },
+      {
+        "asset_id": "asset:1",
+        "authority": "INTEGRATION_TEST_INPUT",
+        "binding_evidence_id": null,
+        "content_id": "TEST_ONLY_GOLDEN",
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "role": "INTEGRATION_TEST_INPUT",
+        "sha256": "10c2bfd8e05bf892c38eb5edbc5521a9526155c397e5dd489f0f31f4114ebb62",
+        "uri": "fixture/audio"
+      }
+    ],
+    "AUDIENCE_GROWTH": [],
+    "BUSINESS_FUNNEL": [],
+    "CAMPAIGNS": [
+      {
+        "campaign_id": "campaign:test",
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "name": "INTEGRATION_TEST_INPUT",
+        "objective": "Test attribution, no actual growth values"
+      }
+    ],
+    "CONTENT_MASTER": [
+      {
+        "campaign_id": "campaign:test",
+        "content_id": "TEST_ONLY_GOLDEN",
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "isrc_code": null,
+        "master_asset_id": null,
+        "song_id": "song:test",
+        "status": "INTEGRATION_TEST_INPUT",
+        "title": "INTEGRATION_TEST_INPUT",
+        "track_type": "COVER"
+      }
+    ],
+    "CREATIVE_INTELLIGENCE": [
+      {
+        "agent_id": "agent:test",
+        "content_id": "TEST_ONLY_GOLDEN",
+        "created_at": "2026-09-18T17:00:00Z",
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "hypothesis_id": "hypothesis:test",
+        "intelligence_id": "intelligence:test",
+        "recommendation": "TEST_ONLY recommendation",
+        "source_package_id": "TEST_ONLY_CREATIVE_INTELLIGENCE_PACKAGE",
+        "source_package_sha256": "cd89dc75ad5be5c0cb2686bad66e4e6a8865f5585eecb8527ff5001a4467684f"
+      }
+    ],
+    "DERIVATIVES": [
+      {
+        "aspect_ratio": "9:16",
+        "asset_id": null,
+        "content_id": "TEST_ONLY_GOLDEN",
+        "derivative_id": "derivative:test",
+        "end_ms": 10000,
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "experiment_id": "experiment:test",
+        "hook": "TEST_ONLY vocal opening",
+        "hypothesis_id": "hypothesis:test",
+        "kind": "CLIP",
+        "source_asset_id": "asset:0",
+        "start_ms": 0
+      }
+    ],
+    "EXPERIMENTS": [
+      {
+        "campaign_id": "campaign:test",
+        "control_variant_id": null,
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "experiment_id": "experiment:test",
+        "hypothesis_id": "hypothesis:test",
+        "primary_metric": "retention",
+        "status": "PLANNED",
+        "tested_variable": "opening_hook",
+        "variant_id": "variant:test"
+      }
+    ],
+    "HYPOTHESES": [
+      {
+        "content_id": "TEST_ONLY_GOLDEN",
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "falsification_rule": "No improvement versus control",
+        "hypothesis_id": "hypothesis:test",
+        "predicted_metric": "retention",
+        "statement": "TEST_ONLY vocal-first hook improves retention"
+      }
+    ],
+    "LEGACY_MAPPING": [],
+    "MONETIZATION": [],
+    "PLATFORM_PACKAGES": [
+      {
+        "caption": "TEST_ONLY caption",
+        "cta": "TEST_ONLY save",
+        "derivative_id": "derivative:test",
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "hashtags": [
+          "#TestOnly"
+        ],
+        "keywords": [
+          "test"
+        ],
+        "package_id": "package:test",
+        "platform": "youtube_shorts",
+        "poster_asset_id": null,
+        "schedule_timezone": "Europe/Amsterdam",
+        "schedule_version": 1,
+        "scheduled_at": null,
+        "status": "DRAFT",
+        "thumbnail_asset_id": null,
+        "title": "TEST_ONLY title"
+      }
+    ],
+    "PRODUCTION": [
+      {
+        "content_id": "TEST_ONLY_GOLDEN",
+        "creative_package_sha256": "cd89dc75ad5be5c0cb2686bad66e4e6a8865f5585eecb8527ff5001a4467684f",
+        "derivative_id": "derivative:test",
+        "edit_plan_sha256": "a747f7431b3d9c4e997ff3c49e4a3fa341855b0c4c3f416e26dd133de09992a6",
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "executor_agent_id": "agent:test",
+        "output_asset_id": null,
+        "production_id": "production:test",
+        "status": "NOT_DISPATCHED"
+      }
+    ],
+    "PUBLICATION": [
+      {
+        "attribution_code": null,
+        "evidence_ids": [
+          "ev:test"
+        ],
+        "package_id": "package:test",
+        "platform": "youtube_shorts",
+        "platform_post_id": null,
+        "publication_id": "publication:test",
+        "published_at": null,
+        "receipt_evidence_id": null,
+        "status": "NOT_PUBLISHED"
+      }
+    ],
+    "QC_APPROVALS": [],
+    "RIGHTS_RELEASE": [],
+    "content_id": "TEST_ONLY_GOLDEN",
+    "created_at": "2026-09-18T17:00:00Z",
+    "evidence_refs": [
+      {
+        "evidence_id": "ev:test",
+        "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+        "uri": "fixture/evidence"
+      }
+    ],
+    "governance": {
+      "first_real_poster": "PAUSED_BY_NITIN",
+      "minimum_performance_fraction": "4/5",
+      "production_deployment_authorized": false,
+      "publication_authorized": false
+    },
+    "mode": "SHADOW_ONLY",
+    "schema": "UNCHAINED_FACTORY_CANONICAL",
+    "schema_version": 1,
+    "source_package_sha256": "cd89dc75ad5be5c0cb2686bad66e4e6a8865f5585eecb8527ff5001a4467684f"
+  },
+  "creative": {
+    "content_id": "TEST_ONLY_GOLDEN",
+    "created_at": "2026-09-18T17:00:00Z",
+    "evidence_refs": [
+      {
+        "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+        "uri": "fixture/evidence"
+      }
+    ],
+    "inputs": [
+      {
+        "role": "raw_video",
+        "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+        "uri": "fixture/raw"
+      },
+      {
+        "role": "authoritative_audio",
+        "sha256": "10c2bfd8e05bf892c38eb5edbc5521a9526155c397e5dd489f0f31f4114ebb62",
+        "uri": "fixture/audio"
+      }
+    ],
+    "package_id": "TEST_ONLY_CREATIVE_INTELLIGENCE_PACKAGE",
+    "payload": {
+      "edit_plan": {
+        "baseline_locked": true,
+        "duration_ms": 10000,
+        "effects": [],
+        "execution_mode": "RECOMMENDATION_ONLY",
+        "segments": [
+          {
+            "end_ms": 10000,
+            "performer_visible": true,
+            "source_end_ms": 10000,
+            "source_sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+            "source_start_ms": 0,
+            "start_ms": 0
+          }
+        ]
+      }
+    },
+    "producer": {
+      "agent": "TEST_ONLY_GEMINI",
+      "model": null,
+      "run_id": "TEST_ONLY_TEST_ONLY_GEMINI"
+    },
+    "schema": "CREATIVE_INTELLIGENCE_PACKAGE",
+    "schema_version": 1
+  },
+  "finishing": {
+    "audio_sync": {
+      "evidence_refs": [
+        {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        }
+      ],
+      "gain_millidb": 0,
+      "offset_samples": 0,
+      "preserve_pitch": true,
+      "preserve_rate": true,
+      "sample_rate": 48000,
+      "source_sha256": "10c2bfd8e05bf892c38eb5edbc5521a9526155c397e5dd489f0f31f4114ebb62"
+    },
+    "base_plan_sha256": "5771765506c3a67c950f1d131db2ff510e5bd9eb4604cb3707f9638dc6ccf167",
+    "color_look": {
+      "baseline_ref": {
+        "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+        "uri": "fixture/evidence"
+      },
+      "mode": "PRESERVE_LOCKED_BASELINE"
+    },
+    "lyric_cues": [
+      {
+        "cue_id": "TEST_ONLY_CUE",
+        "emphasis_spans": [
+          {
+            "end_character_exclusive": 4,
+            "start_character": 0
+          }
+        ],
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "package_id": "package:test",
+        "start_frame": 0,
+        "style_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "text": "TEST ONLY"
+      }
+    ],
+    "schema": "MASTER_FINISHING_DETAILS",
+    "schema_version": 1
+  },
+  "operations": {
+    "base_plan_sha256": "5771765506c3a67c950f1d131db2ff510e5bd9eb4604cb3707f9638dc6ccf167",
+    "operations": [
+      {
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "kind": "cut",
+        "operation_id": "test:cut",
+        "package_id": "package:test",
+        "parameters": {
+          "cut_frames": [
+            10
+          ]
+        },
+        "performer_obscured": false,
+        "start_frame": 0
+      },
+      {
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "kind": "reframe",
+        "operation_id": "test:reframe",
+        "package_id": "package:test",
+        "parameters": {
+          "bottom_millionths": 900000,
+          "left_millionths": 100000,
+          "right_millionths": 900000,
+          "top_millionths": 100000
+        },
+        "performer_obscured": false,
+        "start_frame": 0
+      },
+      {
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "kind": "zoom",
+        "operation_id": "test:zoom",
+        "package_id": "package:test",
+        "parameters": {
+          "interpolation": "LINEAR",
+          "keyframes": [
+            {
+              "center": {
+                "x_millionths": 500000,
+                "y_millionths": 500000
+              },
+              "frame": 0,
+              "scale_millionths": 1000000
+            },
+            {
+              "center": {
+                "x_millionths": 510000,
+                "y_millionths": 500000
+              },
+              "frame": 24,
+              "scale_millionths": 1100000
+            }
+          ]
+        },
+        "performer_obscured": false,
+        "start_frame": 0
+      },
+      {
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "kind": "push_in",
+        "operation_id": "test:push_in",
+        "package_id": "package:test",
+        "parameters": {
+          "interpolation": "LINEAR",
+          "keyframes": [
+            {
+              "center": {
+                "x_millionths": 500000,
+                "y_millionths": 500000
+              },
+              "frame": 0,
+              "scale_millionths": 1000000
+            },
+            {
+              "center": {
+                "x_millionths": 510000,
+                "y_millionths": 500000
+              },
+              "frame": 24,
+              "scale_millionths": 1100000
+            }
+          ]
+        },
+        "performer_obscured": false,
+        "start_frame": 0
+      },
+      {
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "kind": "shake",
+        "operation_id": "test:shake",
+        "package_id": "package:test",
+        "parameters": {
+          "interpolation": "LINEAR",
+          "keyframes": [
+            {
+              "center": {
+                "x_millionths": 500000,
+                "y_millionths": 500000
+              },
+              "frame": 0,
+              "scale_millionths": 1000000
+            },
+            {
+              "center": {
+                "x_millionths": 510000,
+                "y_millionths": 500000
+              },
+              "frame": 24,
+              "scale_millionths": 1100000
+            }
+          ]
+        },
+        "performer_obscured": false,
+        "start_frame": 0
+      },
+      {
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "kind": "caption",
+        "operation_id": "test:caption",
+        "package_id": "package:test",
+        "parameters": {
+          "position": {
+            "x_millionths": 500000,
+            "y_millionths": 800000
+          },
+          "style_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "text": "TEST_ONLY"
+        },
+        "performer_obscured": false,
+        "start_frame": 0
+      },
+      {
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "kind": "text",
+        "operation_id": "test:text",
+        "package_id": "package:test",
+        "parameters": {
+          "position": {
+            "x_millionths": 500000,
+            "y_millionths": 100000
+          },
+          "style_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          },
+          "text": "TEST_ONLY TITLE"
+        },
+        "performer_obscured": false,
+        "start_frame": 0
+      },
+      {
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "kind": "transition",
+        "operation_id": "test:transition",
+        "package_id": "package:test",
+        "parameters": {
+          "duration_frames": 25,
+          "incoming_handle_frames": 25,
+          "outgoing_handle_frames": 25,
+          "type": "DISSOLVE"
+        },
+        "performer_obscured": false,
+        "start_frame": 0
+      },
+      {
+        "end_frame_exclusive": 25,
+        "evidence_ref": {
+          "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+          "uri": "fixture/evidence"
+        },
+        "kind": "effect",
+        "operation_id": "test:effect",
+        "package_id": "package:test",
+        "parameters": {
+          "intent": "VISUAL_OVERLAY_NO_BASELINE_CHANGE",
+          "license_status": "UNKNOWN",
+          "plugin_id": "TEST_ONLY",
+          "template_ref": {
+            "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9",
+            "uri": "fixture/evidence"
+          }
+        },
+        "performer_obscured": false,
+        "start_frame": 0
+      }
+    ],
+    "schema": "RESOLVE_OPERATION_DETAILS",
+    "schema_version": 1
+  }
+}

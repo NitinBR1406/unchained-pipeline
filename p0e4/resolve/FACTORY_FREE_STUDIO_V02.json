@@ -1,0 +1,74 @@
+{
+  "decision": "NITIN_ONLY_AFTER_LOCAL_CAPABILITY_AND_THROUGHPUT_EVIDENCE",
+  "growth_target": "10M_PLAN_NOT_A_FORECAST_OR_LICENSE_REQUIREMENT",
+  "installation_authorized": false,
+  "observed_at": "2026-09-19",
+  "purchase_authorized": false,
+  "requirements": [
+    {
+      "factory_implication": "Both need measured throughput, batch receipt and per-platform QC; daily volume is not yet measured.",
+      "free": "Edit, color, Fusion and Fairlight product tools documented; local edition/media smoke required",
+      "requirement_id": "daily_multiplatform_finishing",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "studio": "Same foundation with expanded features"
+    },
+    {
+      "factory_implication": "Studio is the stronger documented candidate for Factory external automation, contingent on actual callable tests.",
+      "free": "Remote scripting is not established by cited Free documentation",
+      "requirement_id": "external_deterministic_dispatch",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "Remote scripting API and Python/Lua explicitly documented"
+    },
+    {
+      "factory_implication": "Precompute word/frame data externally; parameterized graphics need no approval authority.",
+      "free": "Fusion scripting and title tooling documented at product-family level; Free scope must be tested",
+      "requirement_id": "lyric_typography_and_reusable_graphics",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fusion",
+      "studio": "Expanded Fusion/features; exact template/API/edition smoke still required"
+    },
+    {
+      "factory_implication": "Locked authoritative audio must not be remixed, pitch changed or normalized silently.",
+      "free": "Fairlight tools documented; host methods and exact edition limits unverified",
+      "requirement_id": "audio_sync_and_finishing",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fairlight",
+      "studio": "Extra audio/AI tools documented"
+    },
+    {
+      "factory_implication": "Gemini recommendations do not require purchasing Resolve AI equivalents; visibility QC still mandatory.",
+      "free": "External framing intelligence can supply deterministic data; native AI availability must be checked",
+      "requirement_id": "subject_crop_ai_conveniences",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "Additional Neural Engine functions documented"
+    },
+    {
+      "factory_implication": "10M is a growth target, not a requirement for high-resolution hardware or a license grant.",
+      "free": "Documented editing up to UHD 60fps; OS/codec support requires real-media probe",
+      "requirement_id": "codec_gpu_and_delivery_scale",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "Expanded acceleration/codec support and higher resolution/frame-rate documented"
+    },
+    {
+      "factory_implication": "Existing V11 control plane owns claims, leases, idempotency, staged outputs and exact-SHA receipts.",
+      "free": "Not supplied by edition choice",
+      "requirement_id": "retry_crash_and_receipts",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "Not supplied by edition choice"
+    },
+    {
+      "factory_implication": "Preserve hypothesis/campaign/content/derivative/package/publication/analytics/lead/live/revenue IDs in external canonical state.",
+      "free": "Resolve is not the authoritative business datastore",
+      "requirement_id": "experiments_catalog_and_revenue_attribution",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "Resolve is not the authoritative business datastore"
+    },
+    {
+      "factory_implication": "Never substitute Computer Use for durable Codex dispatch; reject ambiguous UI state and duplicate renders.",
+      "free": "Must establish stable version-specific automation and failure checkpoints",
+      "requirement_id": "controlled_gui_fallback",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "studio": "Same; Studio does not prove GUI reliability"
+    }
+  ],
+  "schema": "FACTORY_RESOLVE_EDITION_REQUIREMENTS",
+  "schema_version": 2
+}

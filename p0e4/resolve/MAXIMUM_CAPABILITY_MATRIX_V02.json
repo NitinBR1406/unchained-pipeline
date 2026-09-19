@@ -1,0 +1,262 @@
+{
+  "capabilities": [
+    {
+      "canonical_mapping": "base.jobs[].cuts",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "cuts",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "operations.reframe",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "reframes",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "operations.zoom/push_in",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "zooms_push_ins",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "operations.shake",
+      "design_preference": "FUSION_FAIRLIGHT",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "shakes",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+    },
+    {
+      "canonical_mapping": "operations.caption",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "captions",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "finishing.lyric_cues",
+      "design_preference": "FUSION_FAIRLIGHT",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "lyric_text_emphasis",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+    },
+    {
+      "canonical_mapping": "operations.transition",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "transitions",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "operations.effect",
+      "design_preference": "FUSION_FAIRLIGHT",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "effects",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+    },
+    {
+      "canonical_mapping": "base.jobs[].cuts + source frame/sample intelligence",
+      "design_preference": "EXTERNAL_INTELLIGENCE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "timing",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "finishing.color_look",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "color_look",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio"
+    },
+    {
+      "canonical_mapping": "finishing.audio_sync",
+      "design_preference": "FUSION_FAIRLIGHT",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "audio_sync",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
+    },
+    {
+      "canonical_mapping": "base.jobs[].render_profile + operations.reframe",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "platform_crops",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    },
+    {
+      "canonical_mapping": "base.jobs[].render_profile",
+      "design_preference": "API_SCRIPTABLE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "render_profiles",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio"
+    },
+    {
+      "canonical_mapping": "resolve.plan.review_candidate + independent QC package",
+      "design_preference": "EXTERNAL_INTELLIGENCE",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "qc_rework",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
+    },
+    {
+      "canonical_mapping": "controlled readback checkpoints; no blind coordinate macros",
+      "design_preference": "GUI_ONLY",
+      "documentation_scope": "PRODUCT_FAMILY_ONLY_NOT_OPERATION_API_PROOF",
+      "domain": "gui_fallback",
+      "effective_route": "UNSUPPORTED_FAIL_CLOSED",
+      "exact_callable_method": null,
+      "execution_enabled": false,
+      "required_evidence": [
+        "installed version/edition",
+        "developer method signature or exact data interface",
+        "nonpublishing synthetic smoke input/output hashes",
+        "deterministic readback and retry evidence"
+      ],
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    }
+  ],
+  "classes": [
+    "API_SCRIPTABLE",
+    "EXTERNAL_INTELLIGENCE",
+    "FUSION_FAIRLIGHT",
+    "GUI_ONLY",
+    "UNSUPPORTED_FAIL_CLOSED"
+  ],
+  "execution_proven": false,
+  "installed_version": null,
+  "intended_role": "MASTER_FINISHING_ENGINE",
+  "route_policy": [
+    "Validated external intelligence supplies typed data, never approvals.",
+    "Prefer verified Resolve API scripting and callable Fusion/Fairlight interfaces over GUI.",
+    "GUI only after reliable API absence is evidenced and a bounded repeatable checkpoint/readback smoke passes.",
+    "Never execute an unsupported field or silently substitute an effect."
+  ],
+  "schema": "RESOLVE_MAXIMUM_CAPABILITY_MATRIX",
+  "schema_version": 2
+}
