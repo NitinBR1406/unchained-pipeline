@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "remote_acceptance_sha": "7855f7f76c6ff14485b64cba4be87570f24891cc",
+  "exact_tested_code_sha": "af67b7a15730eecbe10ad42d5af61812f6c39d16",
+  "state_version": 24,
+  "master_state_version": "V15.4",
+  "state_sha256": "04ead6a4528f1d37a5210f53eded9508de06ea8682f526225772c9dbb5a039a8",
+  "clean_checkout": true,
+  "deterministic_replay": true,
+  "code_unchanged_since_tested_sha": true,
+  "regression_suites": 62,
+  "manifest_entries": 345,
+  "frozen_components_changed": false,
+  "claude_synthetic_groups_verified": 14,
+  "semantic_drift": false,
+  "transfer_gate_resolved": true,
+  "always_on_dispatcher_proven": false,
+  "publication_authorized": false
+}
