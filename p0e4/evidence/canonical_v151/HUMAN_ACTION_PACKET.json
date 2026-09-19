@@ -1,0 +1,44 @@
+{
+  "schema": "NITIN_CHANGE_DECISION_PACKET",
+  "schema_version": 1,
+  "status": "REQUIRED_BEFORE_LIVE_CUTOVER_ONLY",
+  "old_state": {
+    "sheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+    "operational_source": "My Drive",
+    "make_dependencies": "p0e4/evidence/canonical_v15/DEPENDENCY_MAP.json",
+    "n4": "inactive/invalid; index9 collision",
+    "n3": "inactive/invalid; no observed SHA approval gate"
+  },
+  "proposed_state": {
+    "phase_now": "Completed read-only aliases + isolated Shared Drive shadow; source retained",
+    "future_cutover": "New versioned canonical intake mapped to existing production consumers only after missing consumer implementations and non-publishing receipts pass. No scenario activation or publishing.",
+    "source_headers": "Keep unchanged; use scenario-qualified aliases",
+    "retry": "Keep N4 inactive; isolate retry counter in a separate versioned retry record, never overwrite hashtags",
+    "shared_drive_folder_id": "1O6hZrg1q52JyiT-4JUi7STOgRUGYu7IS"
+  },
+  "affected_dependencies": [
+    "N2:13,7",
+    "N4:2,28,22,31,41,51,23,32,42,52",
+    "N5:3",
+    "N6:2,5",
+    "N0-E:5",
+    "N0-C2:2,6",
+    "N7:3",
+    "N3 video approval boundary",
+    "P1 poster remains separate and paused"
+  ],
+  "validation_evidence": [
+    "MAPPING_CLOSURE_REVIEW.json",
+    "EXECUTION_COVERAGE.json",
+    "SHADOW_COMPARISON.json",
+    "DRIVE_PERSISTENCE_RECEIPT.json",
+    "REGRESSION.json"
+  ],
+  "rollback": "No cutover occurred. Keep operational source IDs and scenario configurations unchanged. For any future reviewed cutover, restore exact prechange blueprint/config snapshot and source pointer; retain shadow evidence, do not delete columns or records.",
+  "decision_requested": "Approve a future exact operational configuration diff only after 100% consumer coverage and non-publishing tests. This packet does not request publishing, scenario activation, a header rename, or secret values.",
+  "ready_for_live_cutover_approval": false,
+  "other_existing_gate": "NITIN_AUDIO_SOURCE_BINDING before actual production; known candidate remains INTEGRATION_TEST_INPUT",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

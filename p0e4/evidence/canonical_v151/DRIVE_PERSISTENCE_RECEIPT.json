@@ -1,0 +1,32 @@
+{
+  "accepted_input": "file_uri",
+  "success": true,
+  "id": "1ECR8Fo1AZu1iDToLlcXkir34HMvrImtT",
+  "title": "UNCHAINED_V15_1_CANONICAL_SHADOW_19aadd039652.zip",
+  "file_name": "UNCHAINED_V15_1_CANONICAL_SHADOW_19aadd039652.zip",
+  "mime_type": "application/zip",
+  "url": "https://drive.google.com/file/d/1ECR8Fo1AZu1iDToLlcXkir34HMvrImtT/view?usp=drivesdk",
+  "parent_id": "1O6hZrg1q52JyiT-4JUi7STOgRUGYu7IS",
+  "structuredContent": {
+    "accepted_input": "file_uri",
+    "success": true,
+    "id": "1ECR8Fo1AZu1iDToLlcXkir34HMvrImtT",
+    "title": "UNCHAINED_V15_1_CANONICAL_SHADOW_19aadd039652.zip",
+    "file_name": "UNCHAINED_V15_1_CANONICAL_SHADOW_19aadd039652.zip",
+    "mime_type": "application/zip",
+    "url": "https://drive.google.com/file/d/1ECR8Fo1AZu1iDToLlcXkir34HMvrImtT/view?usp=drivesdk",
+    "parent_id": "1O6hZrg1q52JyiT-4JUi7STOgRUGYu7IS"
+  },
+  "download": {
+    "id": "1ECR8Fo1AZu1iDToLlcXkir34HMvrImtT",
+    "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+    "parent_ids": [
+      "1O6hZrg1q52JyiT-4JUi7STOgRUGYu7IS"
+    ],
+    "file_size_bytes": 446234
+  },
+  "request_at": "2026-09-19T00:34:31.379Z",
+  "remote_sha256": "19aadd039652380fa3b153aec7e68b6185eea2384096f2a09ced7d0cb04557bb",
+  "download_bytes_equal": true,
+  "remote_readback_verified": true
+}

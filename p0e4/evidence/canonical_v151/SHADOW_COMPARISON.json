@@ -1,0 +1,10 @@
+{
+  "live_headers_equal": true,
+  "operational_data_rows_copied": false,
+  "reason": "Shadow preserves schema/dependencies and synthetic integration fixture only; operational rows remain at source",
+  "fixture_zero_drift": true,
+  "execution_coverage_complete": false,
+  "required_count": 14,
+  "projected_count": 3,
+  "source_sheet_unchanged": true
+}

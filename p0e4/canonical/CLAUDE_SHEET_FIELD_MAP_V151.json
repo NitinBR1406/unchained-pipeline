@@ -1,0 +1,259 @@
+{
+  "schema": "CLAUDE_SHEET_FIELD_MAP_EXTENSION",
+  "schema_version": "1.1",
+  "mode": "READ_ONLY_OBSERVATIONS",
+  "base_map": {
+    "uri": "p0e4/canonical/CLAUDE_SHEET_FIELD_MAP_V01.json",
+    "sha256": "6799df7e0983580bf1411a8d97fe5bd0c8947dc2e1179d1a441b369b55cd3886"
+  },
+  "evidence_refs": [
+    {
+      "uri": "p0e4/evidence/canonical_v151/CLAUDE_MAPPING_CLOSURE.json",
+      "sha256": "d88620194355c123017b13a7b4773dc9f39635d8e7ae98480085bd7e21eb9db1"
+    },
+    {
+      "uri": "p0e4/evidence/canonical_v151/LIVE_HEADERS.json",
+      "sha256": "326d0e744ab3bb64fd6aa70d7d0341d81a810a3667bec9585db82a35d13ce64a"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "CAPTIONS_PUBLISHING_INDEX9",
+      "tab": "Captions_Publishing",
+      "index": 9,
+      "claim_a": {
+        "meaning": "tiktok_hashtags",
+        "written_by": [
+          {
+            "scenario": "N2",
+            "module": 7,
+            "expr": "{{3.result.tiktok.hashtags}}"
+          },
+          {
+            "scenario": "N0-E",
+            "module": 4,
+            "expr": "{{1.`15`}} (N0_Master hashtags)"
+          },
+          {
+            "scenario": "V3-nonsecure",
+            "module": 7,
+            "expr": "{{5.tags}}"
+          }
+        ],
+        "format": "space-separated hashtag string, e.g. '#UnchainedNitin #Bollywood #FYP'"
+      },
+      "claim_b": {
+        "meaning": "retry_count",
+        "used_by": [
+          {
+            "scenario": "N4",
+            "module": 2,
+            "expr": "retry_count = {{parseNumber(if(1.`9`; 1.`9`; 0); \".\")}}"
+          },
+          {
+            "scenario": "N4",
+            "modules_write_increment": [
+              28,
+              22,
+              31,
+              41,
+              51
+            ],
+            "expr": "{{add(2.retry_count; 1)}}"
+          },
+          {
+            "scenario": "N4",
+            "modules_write_reset": [
+              23,
+              32,
+              42,
+              52
+            ],
+            "expr": "\"0\""
+          }
+        ]
+      },
+      "technical_resolution": "Index 9 is written by ACTIVE scenarios (N2/N0-E) as the TikTok hashtags string. N4 (INACTIVE + isinvalid) re-interprets the SAME physical column as a numeric retry counter (parseNumber) and would overwrite it with a number. No live corruption today because N4 is disabled; if reactivated as-is, N4 would destroy tiktok_hashtags on any retried row.",
+      "downstream_consumer_of_tiktok_hashtags": "NOT_PROVEN \u2014 N3's TikTok route (modules 60/62/66) uses only col8 (tiktok_caption); it does NOT read col9 when creating the TikTok draft or the notification email. So the hashtags stored in col9 have no proven live publish consumer.",
+      "severity": "HIGH if N4 reactivated; LATENT now",
+      "conflict_type": "semantic index reuse"
+    },
+    {
+      "id": "CAPTIONS_PUBLISHING_INDEX26",
+      "tab": "Captions_Publishing",
+      "index": 26,
+      "claim_a": {
+        "meaning": "published_at (per Codex header)"
+      },
+      "claim_b": {
+        "meaning": "facebook_reshare_status",
+        "written_by": [
+          {
+            "scenario": "N5",
+            "module": 3,
+            "expr": "\"RESHARE_NOTIFIED\" (literal)"
+          }
+        ],
+        "read_gate": "none observed"
+      },
+      "technical_resolution": "Live use is a STATUS FLAG: N5 writes the literal string 'RESHARE_NOTIFIED' after emailing the FB reshare prompt. No inspected scenario writes a timestamp/published_at to index 26, and none reads it. The 'published_at' header does not match the live value.",
+      "downstream_consumer": "NONE observed (terminal audit flag)",
+      "severity": "LOW (cosmetic/header mismatch)",
+      "conflict_type": "header-vs-value mismatch"
+    },
+    {
+      "id": "CAPTIONS_PUBLISHING_INDEX27",
+      "tab": "Captions_Publishing",
+      "index": 27,
+      "claim_a": {
+        "meaning": "blank header (per Codex)"
+      },
+      "claim_b": {
+        "meaning": "personal_reel_queue_flag",
+        "written_by": [
+          {
+            "scenario": "N6",
+            "module": 5,
+            "expr": "\"QUEUED\" (literal)"
+          }
+        ],
+        "read_gate": [
+          {
+            "scenario": "N6",
+            "module": 2,
+            "expr": "filter: ifempty(1.`27`)=='' (only act if not yet queued)"
+          }
+        ]
+      },
+      "technical_resolution": "Index 27 is a self-consumed operational flag: N6 selects Published rows where col27 is empty (and col25 fb_post_id present), emails the personal-reel prompt, then sets col27='QUEUED'. Blank header is acceptable; N6 is both producer and consumer.",
+      "downstream_consumer": "N6 (self-gate)",
+      "severity": "LOW",
+      "conflict_type": "unlabeled operational flag"
+    },
+    {
+      "id": "N0_MASTER_INDEX20",
+      "tab": "N0_Master",
+      "index": 20,
+      "claim_a": {
+        "meaning": "schedule (per Codex header)"
+      },
+      "claim_b": {
+        "meaning": "downstream_post_id_backreference",
+        "written_by": [
+          {
+            "scenario": "N0-E",
+            "module": 5,
+            "expr": "{{2.post_id}} (UASCE-<ts>-<slice>) written together with col0='Scheduled'"
+          }
+        ]
+      },
+      "technical_resolution": "N0-E writes the generated Content/Captions post_id into N0_Master index 20 as a back-reference when it flips the cover row to 'Scheduled'. The value is a post_id string, NOT a schedule timestamp. The Captions_Publishing schedule lives in cols 18-21 of the OTHER tab. Header 'schedule' mislabels this column.",
+      "downstream_consumer": "NOT_PROVEN \u2014 no inspected scenario reads N0_Master index 20 (audit/back-reference only)",
+      "severity": "LOW",
+      "conflict_type": "header-vs-value mismatch"
+    },
+    {
+      "id": "N0_MASTER_INDEX23",
+      "tab": "N0_Master",
+      "index": 23,
+      "claim_a": {
+        "meaning": "blank header (per Codex)"
+      },
+      "claim_b": {
+        "meaning": "karaoke_word_timings_json",
+        "written_by": [
+          {
+            "scenario": "N0-C2",
+            "module": 6,
+            "expr": "{{5.result.karaoke}} together with col0='Captioned'"
+          }
+        ],
+        "read_gate": [
+          {
+            "scenario": "N0-C2",
+            "module": 2,
+            "expr": "filter: ifempty(1.`23`)=='' (only if no karaoke yet)"
+          }
+        ]
+      },
+      "technical_resolution": "Index 23 stores a JSON-array STRING of word-timing objects {w,s,e} (w=romanized word, s/e = start/end in floating-point SECONDS), produced by the media service /wordtimings + OpenAI romanization. Requires the wider A1:X1 range (24 cols) that only N0-C2/N0-D1 declare.",
+      "downstream_consumer": "NOT_PROVEN in Make \u2014 no inspected Make module reads index 23 after N0-C2; likely consumed by the external render/visualizer service (base_url), which is outside blueprint visibility.",
+      "severity": "LOW (Make-internal); consumer external/unproven",
+      "conflict_type": "unlabeled operational field"
+    },
+    {
+      "id": "CONTENT_MASTER_INDEX8",
+      "tab": "Content_Master",
+      "index": 8,
+      "claim_a": {
+        "meaning": "data (per Codex header)"
+      },
+      "claim_b": {
+        "meaning": "md5_checksum",
+        "written_by": [
+          {
+            "scenario": "N2",
+            "module": 13,
+            "expr": "{{1.md5}} (Drive md5Checksum from N1 intake payload)"
+          }
+        ]
+      },
+      "technical_resolution": "N2 writes the Drive md5Checksum hex string into Content_Master index 8. The generic header 'data' does not describe the value. No inspected scenario reads index 8.",
+      "downstream_consumer": "NONE observed",
+      "severity": "LOW (cosmetic)",
+      "conflict_type": "header-vs-value mismatch"
+    }
+  ],
+  "transports": {
+    "hashtags": {
+      "format": "single space-separated string of '#Token' items; always includes #UnchainedNitin",
+      "example_shape": "'#UnchainedNitin #Bollywood #FYP'",
+      "evidence": "N2 module 3 OpenAI JSON schema (per-platform .hashtags) stored raw into cols 5/9/11/13; N6/V2 same shape",
+      "not_an_array": true
+    },
+    "keywords": {
+      "base_keywords": {
+        "format": "comma-separated string 'keyword1, keyword2'",
+        "column": "Captions_Publishing[3]"
+      },
+      "youtube_tags": {
+        "format": "comma-separated string 'bollywood, hindi music, cover'",
+        "column": "Captions_Publishing[7]"
+      },
+      "evidence": "N2 module 3 OpenAI JSON schema"
+    },
+    "schedule": {
+      "format": "'YYYY-MM-DD HH:mm:ss' wall-clock string",
+      "timezone": "Europe/Amsterdam",
+      "producer_evidence": "N2 module 2 next_slot = formatDate(...;'YYYY-MM-DD HH:mm:ss') with Amsterdam-hour branching (07:00/11:00/16:00 slots); N0-E module 2 slot = formatDate(now;'YYYY-MM-DD HH:mm:ss')",
+      "parser_evidence": "N7 module 3 filter = formatDate(parseDate(1.`18`; 'YYYY-MM-DD HH:mm:ss'; 'Europe/Amsterdam'); 'X') <= formatDate(now;'X'); P1 uses identical parseDate(scheduled_at;'YYYY-MM-DD HH:mm:ss';'Europe/Amsterdam')",
+      "comparison": "epoch seconds via formatDate(...;'X')",
+      "columns": "Captions_Publishing[18..21] per platform"
+    },
+    "karaoke_timings": {
+      "format": "JSON-array STRING of {\"w\":<romanized_word>,\"s\":<start_seconds float>,\"e\":<end_seconds float>}",
+      "column": "N0_Master[23]",
+      "evidence": "N0-C2 module 5 OpenAI instruction + example {\"karaoke\":\"[{\\\"w\\\":\\\"Utar\\\",\\\"s\\\":0.28,\\\"e\\\":1.14}]\"}"
+    },
+    "md5": {
+      "format": "Drive md5Checksum hex string",
+      "column": "Content_Master[8]",
+      "evidence": "N1 payload {{1.md5Checksum}} -> N2 {{1.md5}}"
+    }
+  },
+  "required_unmapped_execution_fields": [
+    "cta",
+    "hooks",
+    "timestamps",
+    "derivatives",
+    "aspect_ratios",
+    "edit_effects",
+    "thumbnails_posters",
+    "platform_targeting",
+    "schedules",
+    "experiments",
+    "provenance"
+  ],
+  "semantics": "Conflicting cells stay scenario-qualified observations; no guessed canonical production field, no legacy ID equated with content_id, md5 never SHA256",
+  "execution_authorized": false
+}

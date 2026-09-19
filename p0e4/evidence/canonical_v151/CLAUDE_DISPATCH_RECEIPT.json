@@ -1,0 +1,26 @@
+{
+  "schema": "CLAUDE_DISPATCH_RECEIPT",
+  "schema_version": 1,
+  "request_id": "P0E4_V151_MAPPING_CLOSURE_A",
+  "surface": "Claude Desktop Dispatch Beta",
+  "session_id": "d4d1d7d1-1eb9-4047-a092-217ca0feff33",
+  "provider_task_uuid": null,
+  "observed_states": [
+    "SUBMITTED_NEW_REQUEST",
+    "RUNNING_STOP_RESPONSE_VISIBLE",
+    "COMPLETED_RESPONSE_VISIBLE_ARTIFACT_PRESENT"
+  ],
+  "completion_observed_at": "2026-09-19T00:37:12.938881+00:00",
+  "request": {
+    "uri": "p0e4/evidence/canonical_v151/CLAUDE_REQUEST.txt",
+    "sha256": "eab9d5296a8a2b31528bb446accec3ad7de74cc62181c3773105f96f61131e9c"
+  },
+  "result": {
+    "uri": "p0e4/evidence/canonical_v151/CLAUDE_MAPPING_CLOSURE.json",
+    "sha256": "d88620194355c123017b13a7b4773dc9f39635d8e7ae98480085bd7e21eb9db1"
+  },
+  "nested_make_reads": "Claude-reported fresh scenario_get, not independently provider-signed",
+  "provider_signed_receipt": false,
+  "external_make_mutations": 0,
+  "publication_authorized": false
+}

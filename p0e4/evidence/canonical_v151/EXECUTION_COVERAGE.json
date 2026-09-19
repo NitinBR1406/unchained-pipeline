@@ -1,0 +1,128 @@
+{
+  "schema": "EXECUTION_COVERAGE_REPORT",
+  "schema_version": 1,
+  "canonical_sha256": "ff063dee4a8e75a1e87c12f6ca583442341b41340e24dee0c8a8c505ee1fd9b7",
+  "map_sha256": "29270af83054bfa59848c6b9eefec01a040fb6faed18b3c83243cb6e7a115063",
+  "required_count": 14,
+  "projected_count": 3,
+  "missing_count": 11,
+  "fields": [
+    {
+      "package_id": "package:test",
+      "field": "title",
+      "canonical_path": "PLATFORM_PACKAGES[*].title",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "PROJECTED_LEGACY_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "caption",
+      "canonical_path": "PLATFORM_PACKAGES[*].caption",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "PROJECTED_LEGACY_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "hashtags",
+      "canonical_path": "PLATFORM_PACKAGES[*].hashtags",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "PROJECTED_LEGACY_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "cta",
+      "canonical_path": "PLATFORM_PACKAGES[*].cta",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "hooks",
+      "canonical_path": "DERIVATIVES[*].hook",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "timestamps",
+      "canonical_path": "DERIVATIVES[*].start_ms,end_ms",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "derivatives",
+      "canonical_path": "DERIVATIVES",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "aspect_ratios",
+      "canonical_path": "DERIVATIVES[*].aspect_ratio",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "edit_effects",
+      "canonical_path": "creative_package.payload.edit_plan",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "thumbnails_posters",
+      "canonical_path": "PLATFORM_PACKAGES[*].thumbnail_asset_id,poster_asset_id",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "platform_targeting",
+      "canonical_path": "PLATFORM_PACKAGES[*].platform",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "schedules",
+      "canonical_path": "PLATFORM_PACKAGES[*].scheduled_at,schedule_timezone,schedule_version",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "experiments",
+      "canonical_path": "EXPERIMENTS",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    },
+    {
+      "package_id": "package:test",
+      "field": "provenance",
+      "canonical_path": "AGENT_EVIDENCE,evidence_refs,source_package_sha256",
+      "storage": "LOSSLESS_SHADOW",
+      "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+      "authenticated_live_execution": false
+    }
+  ],
+  "shadow_zero_drift": true,
+  "execution_coverage_complete": false,
+  "live_execution_proven": false,
+  "dispatch_authorized": false,
+  "status": "BLOCKED_REQUIRED_EXECUTION_COVERAGE"
+}

@@ -1,0 +1,79 @@
+{
+  "status": "TECHNICAL_SEMANTICS_RESOLVED_OPERATIONAL_CONSUMERS_BLOCKED",
+  "evidence_refs": [
+    {
+      "uri": "p0e4/evidence/canonical_v151/CLAUDE_MAPPING_CLOSURE.json",
+      "sha256": "d88620194355c123017b13a7b4773dc9f39635d8e7ae98480085bd7e21eb9db1"
+    },
+    {
+      "uri": "p0e4/evidence/canonical_v151/LIVE_HEADERS.json",
+      "sha256": "326d0e744ab3bb64fd6aa70d7d0341d81a810a3667bec9585db82a35d13ce64a"
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "id": "CAPTIONS_PUBLISHING_INDEX9",
+      "tab": "Captions_Publishing",
+      "column_index": 9,
+      "observed_semantics": "retry_count",
+      "resolution": "Scenario-qualified read-only alias; retain original header/index; no operational remap"
+    },
+    {
+      "id": "CAPTIONS_PUBLISHING_INDEX26",
+      "tab": "Captions_Publishing",
+      "column_index": 26,
+      "observed_semantics": "facebook_reshare_status",
+      "resolution": "Scenario-qualified read-only alias; retain original header/index; no operational remap"
+    },
+    {
+      "id": "CAPTIONS_PUBLISHING_INDEX27",
+      "tab": "Captions_Publishing",
+      "column_index": 27,
+      "observed_semantics": "personal_reel_queue_flag",
+      "resolution": "Scenario-qualified read-only alias; retain original header/index; no operational remap"
+    },
+    {
+      "id": "N0_MASTER_INDEX20",
+      "tab": "N0_Master",
+      "column_index": 20,
+      "observed_semantics": "downstream_post_id_backreference",
+      "resolution": "Scenario-qualified read-only alias; retain original header/index; no operational remap"
+    },
+    {
+      "id": "N0_MASTER_INDEX23",
+      "tab": "N0_Master",
+      "column_index": 23,
+      "observed_semantics": "karaoke_word_timings_json",
+      "resolution": "Scenario-qualified read-only alias; retain original header/index; no operational remap"
+    },
+    {
+      "id": "CONTENT_MASTER_INDEX8",
+      "tab": "Content_Master",
+      "column_index": 8,
+      "observed_semantics": "md5_checksum",
+      "resolution": "Scenario-qualified read-only alias; retain original header/index; no operational remap"
+    }
+  ],
+  "corrections_to_agent_report": [
+    "N0-E is INACTIVE per fresh_reads_this_task; the prose calling it ACTIVE is rejected.",
+    "No assertion of no historical corruption: current inactive N4 does not prove historical row integrity.",
+    "No deletion rollback: retain appended shadow records; restore only reviewed configuration from a prechange snapshot.",
+    "No need for human approval to implement safe local contracts/tests already requested; external operational cutover remains a genuine gate.",
+    "P1 approval consumer is not N3 approval proof.",
+    "Shared Drive shadow creation is already explicitly authorized; live source migration is not."
+  ],
+  "business_semantic_choices_required_now": [],
+  "unproven_consumers": {
+    "_method": "A capability is PROVEN only if a live blueprint module reads a per-row field for that purpose. Otherwise NOT_PROVEN (no consumer exists).",
+    "CTA": "NOT_PROVEN \u2014 no column consumed as a call-to-action by any publisher (N3/N4/P1).",
+    "hooks": "NOT_PROVEN \u2014 no hook/opening-line field consumed.",
+    "derivative_specs": "NOT_PROVEN \u2014 no per-row derivative/variant spec consumed.",
+    "aspect_ratios": "NOT_PROVEN as a field \u2014 aspect is HARDCODED (N0-B1 renderPref layoutAspectRatio='portrait'; N0-D2 width 1080 x height 1920). No per-row aspect column is read.",
+    "edit_effects_instructions": "NOT_PROVEN \u2014 no edit/effects instruction field consumed.",
+    "thumbnails_posters": "PARTIAL/SEPARATE \u2014 N0_Master[9] holds a thumbnail_uri (written by N0-B2) but NO publisher reads it. Posters are a separate pipeline (P1 / datastore 177455). For the N-series video publish path: NOT_PROVEN.",
+    "experiments_ab": "NOT_PROVEN \u2014 no experiment/variant-arm field consumed by inspected modules.",
+    "sha_provenance": "PROVEN ONLY for P1 (poster path): P1 modules 100/200 send content_id + asset_sha256 + packaging_sha256 + schedule_version to the external eligibility verifier and gate on VALID_PUBLISH_APPROVAL + eligible. The N3 video publisher has NO SHA/provenance consumer -> NOT_PROVEN for N3."
+  },
+  "source_header_changes": 0,
+  "execution_mapping_complete": false
+}

@@ -1,0 +1,17 @@
+# V15.1 shadow persistence and compatibility plan
+
+Source: spreadsheet `1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag` remains in My Drive, with all five tabs, headers and IDs unchanged. The existing 27-scenario / 68-module dependency inventory remains authoritative within its stated observation scope; seven fresh scenario reads refine the six conflicts. Direct live headers matched V15.
+
+Destination: Shared Drive `0AG0CqqUZ6YuXUk9PVA`, parent `1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR`, isolated shadow folder `1O6hZrg1q52JyiT-4JUi7STOgRUGYu7IS`. This folder receives inert, content-addressed canonical schema/fixture/evidence bundles, not operational queue rows. Source rows were not copied: the shadow is a contract/integration fixture, not a full operational-data backup. Remote bytes are downloaded and SHA256 compared before persistence is accepted.
+
+Six semantic conflicts are resolved as observed aliases scoped by scenario/module/index. No live header rename, column insert or ID reinterpretation is needed. In particular, MD5 remains MD5, N0 index20 is a post-ID backreference, Captions26 is a reshare flag, and N4's numeric retry interpretation must never overwrite TikTok hashtags. Retain the incompatible claims rather than choosing one silently. N4 remains inactive.
+
+The lossless sidecar holds every canonical table, source creative package and attribution IDs. `coverage.assess` separately measures the fixed fourteen execution field groups. Existing V1 can project title/caption/hashtags, but this is not proof of live publisher execution. Eleven groups still have no implemented, validated end-to-end adapter. The new pure codecs prove token and schedule transport only; they do not grant execution coverage. P1 poster SHA gates do not establish N3 video gating.
+
+The canonical schema includes hypotheses, campaigns, content, derivatives, packages, publications, analytics/audience, experiments, business funnel and monetization. Unobserved metrics remain absent. An attributed learning is a future evidence-backed interpretation of those observations, not an invented measurement or automatically approved strategy. V15.1 introduces no current revenue, analytics or learning verdict.
+
+Future migration sequence: snapshot complete operational data and exact blueprint versions at cutover time; implement missing consumers in a disposable non-publishing environment; replay all canonical fields against those consumers; reconcile legacy post IDs through source-bound crosswalks; prove all SHA/governance/80% validations; prepare exact configuration diff; obtain Nitin change approval; only then consider switching a source pointer. Current discovery reports are not complete executable blueprint backups. A migration date is not scheduled.
+
+Rollback: until cutover, no action is needed because source IDs/configuration are unchanged. After any separately approved future cutover, restore prechange configuration and source pointer, stop only the new route, and preserve shadow records/evidence. Never delete appended columns as an automatic rollback. Do not activate N3/N4 or P1. Publication remains false.
+
+V11 reconciliation revalidates its completed receipt with a transport that refuses new dispatch. The executor's bounded task list and crash/retry guarantees are unchanged. No always-on scheduler is claimed. Missing external production consumers cannot be dispatched through the existing fixture-only allowlist.

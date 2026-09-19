@@ -1,0 +1,428 @@
+{
+  "spreadsheetId": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag/edit?ouid=100822969425138510712",
+  "properties": {
+    "title": "UnchainedNitin_MasterSheet",
+    "locale": "nl_NL",
+    "timeZone": "America/Los_Angeles"
+  },
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 1259836610,
+        "title": "Captions_Publishing",
+        "index": 0,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1012,
+          "columnCount": 31,
+          "rowGroupControlAfter": true,
+          "columnGroupControlAfter": true
+        }
+      },
+      "data": [
+        {
+          "rowData": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Choose The Status"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "post_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "base_caption"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "base_keywords"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "caption_youtube"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "hashtags_youtube"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "youtube_title"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "youtube_keywords"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "caption_tiktok"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "hashtags_tiktok"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "caption_instagram"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "hashtags_instagram"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "caption_facebook"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "hashtags_facebook"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "publish_to_youtube"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "publish_to_tiktok"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "publish_to_instagram"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "publish_to_facebook"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "youtube_schedule"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "tiktok_schedule"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "instagram_schedule"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "facebook_schedule"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "youtube_post_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "tiktok_post_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "instagram_post_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "facebook_post_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "published_at"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 567039455,
+        "title": "Content_Master",
+        "index": 1,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1015,
+          "columnCount": 26,
+          "rowGroupControlAfter": true,
+          "columnGroupControlAfter": true
+        }
+      },
+      "data": [
+        {
+          "rowData": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "status"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "post_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "file_name"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "media_type"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "input_file_url"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "created_at"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "file_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "download_url"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "data"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 472188340,
+        "title": "Status_Logging",
+        "index": 2,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1005,
+          "columnCount": 26
+        }
+      },
+      "data": [
+        {
+          "rowData": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "post_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "status"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "schedule"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 311238625,
+        "title": "N0_Master",
+        "index": 3,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1003,
+          "columnCount": 26
+        }
+      },
+      "data": [
+        {
+          "rowData": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "status"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "n0_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "source_video_name"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "source_video_url"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "source_audio_url"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "prep_mp4_url"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "opus_project_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "clip_id"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "clip_export_url"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "clip_thumbnail_url"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "virality_score"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "clip_timerange"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "transcript_devanagari"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "caption_romanized"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "post_caption"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "hashtags"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "beats_json"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "bpm"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "render_url"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "thumbnail_final"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "schedule"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "approved"
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "notes"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 1659744327,
+        "title": "Poster_Schedule",
+        "index": 4,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 26
+        }
+      },
+      "data": [
+        {}
+      ]
+    }
+  ]
+}
