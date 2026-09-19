@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "master_state_version": "V14",
-  "state_version": 19,
-  "path": "p0e4/evidence/history_v14/UNCHAINED_MASTER_PROJECT_STATE_V14.json",
-  "sha256": "7c4aee9d56518bbf2aad7116e389156a7e25b219b115240d82a0702815d5d680",
-  "tested_sha": "1609f57476fab8b8b8ea95e33c5781a0409400f5",
-  "evidence_manifest": "p0e4/evidence/history_v14/SHA256SUMS.txt",
-  "scope_status": "HISTORICAL_CONTEXT_ACCEPTED_PRODUCTION_BLOCKED",
+  "master_state_version": "V15",
+  "state_version": 20,
+  "path": "p0e4/evidence/canonical_v15/UNCHAINED_MASTER_PROJECT_STATE_V15.json",
+  "sha256": "bc56e1336a32844b04b7389967ac4c393380844da9f2911fe7a125ffbcd309ae",
+  "tested_sha": "04d3e34af3e9fe65195a1a89b4d30c1424133522",
+  "evidence_manifest": "p0e4/evidence/canonical_v15/SHA256SUMS.txt",
+  "scope_status": "CANONICAL_SHADOW_ACCEPTED_CUTOVER_BLOCKED",
   "production_e2e_status": "BLOCKED_NOT_GREEN"
 }

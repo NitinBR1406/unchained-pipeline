@@ -1,0 +1,5 @@
+# V15 canonical factory contract
+
+Canonical schema V1 covers all requested domains plus campaigns/assets/hypotheses. No analytics or revenue values invented. Legacy sheet columns are preserved. Direct live Sheets metadata/headers and formula/validation inspection are joined to three new read-only Claude Dispatch requests; nested Make reads are Claude-reported observations, not independently signed provider receipts. Inventory spans 27 scenarios, 68 sheet modules, 64 header/index positions. Unknown fields and conflicting column meanings remain explicit.
+
+53/53 regression suites pass on the exact code SHA in REGRESSION.json; 228 prior manifest entries verified. Shadow-only fixture roundtrip/replay passes. V15 acceptance is CANONICAL_SHADOW_ACCEPTED_CUTOVER_BLOCKED: no live adapter execution, no cutover, no publication, no approval fabrication. Production remains BLOCKED_NOT_GREEN. Migration/rollback and minimal human change packet are persisted. Actual RAW/candidate hashes are registered only as INTEGRATION_TEST_INPUT, never final-audio authority.
