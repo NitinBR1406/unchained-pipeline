@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "task_id": "P0E4_V16_FACTORY_CONSUMERS",
+  "status": "READY",
+  "parent_state_version": 25,
+  "parent_state_sha256": "c80f8e6e154d2c407c2c9b75b456784220797f01bc0c42e68d8084981bf3f738",
+  "decision_ref": "p0e4/evidence/factory_v16_authorization/DECISION.json",
+  "decision_sha256": "64fc2db999750f01895a87d0485ece9dd94f6cc4a82c22ad1f530a9c18ddda06",
+  "scope": "Additive existing factory adapters; non-publishing integration and Shared Drive shadow only",
+  "controller_scope": "V11 limited to allowlisted JSON fixtures; general engineering remains current Codex executor, do not widen implicitly",
+  "human_gate_required_for_engineering": null,
+  "live_cutover_requires": "NITIN_CHANGE_APPROVAL",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

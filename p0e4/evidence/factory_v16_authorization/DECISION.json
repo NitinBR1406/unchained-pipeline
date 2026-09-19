@@ -1,0 +1,15 @@
+{
+  "schema": "NITIN_ENGINEERING_SCOPE_DECISION",
+  "schema_version": 1,
+  "recorded_by": "codex",
+  "recorded_at": "2026-09-19T11:15:15.050194+00:00",
+  "source": "Direct user message in current thread",
+  "source_sha256": "2e231f21fd6f9e5937278f03e1a77ac4b91eaaa4830a3b560a096567a1abd9c8",
+  "engineering_tranche": "V16",
+  "engineering_authorized": true,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "live_cutover_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "provider_signature": null
+}
