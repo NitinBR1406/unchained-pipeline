@@ -1,0 +1,1 @@
+{"coverage_scope":"CLAUDE_PREFLIGHT_ONLY","live_execution_proven":false,"required_groups":["title","caption","hashtags","cta","hooks","timestamps","derivatives","aspect_ratios","edit_effects","thumbnails_posters","platform_targeting","schedules","experiments","provenance"],"schema":"PREFLIGHT_REQUIRED_GROUPS","schema_version":1}
