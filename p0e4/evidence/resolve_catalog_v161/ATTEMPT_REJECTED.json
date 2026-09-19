@@ -1,0 +1,12 @@
+{
+  "attempt_commit": "99e7aa4",
+  "authoritative_pointer_advanced": false,
+  "master_state_created": false,
+  "reason": "UTC_TIMESTAMP_MUST_END_IN_Z",
+  "recovery": "New append-only acceptance directory; validate timestamp before append; preserve rejected ledger unchanged.",
+  "rejected_ledger_ref": {
+    "sha256": "69047313bb172f6a739cb4bde2d4fde22d3a5f425d5ac771139c347e74c01283",
+    "uri": "p0e4/evidence/resolve_catalog_v161/ENGINEERING_EVENT_LEDGER.jsonl"
+  },
+  "schema": "ACCEPTANCE_ATTEMPT_REJECTED"
+}

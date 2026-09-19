@@ -1,0 +1,56 @@
+{
+  "new_dispatches_during_recovery": 0,
+  "old_evidence_unchanged": true,
+  "old_manifest_ref": {
+    "sha256": "fb0f32ca5ed6222d1fdbcd087abe40a4397ad2f3d4c65d75f10d07d9f013cea9",
+    "uri": "p0e4/evidence/resolve_catalog_v161/SHA256SUMS.txt"
+  },
+  "rejected_attempt_ref": {
+    "sha256": "a02a039c2ee935a11a866f62af6f303b3d59bd99bdee017b2c03431f94f27664",
+    "uri": "p0e4/evidence/resolve_catalog_v161/ATTEMPT_REJECTED.json"
+  },
+  "runtime_refs": [
+    {
+      "sha256": "77a02f06c337a1afd281c1e48b3c5a3b900db5330cb12f539c34cbfa7f2f3b13",
+      "uri": "p0e4/evidence/resolve_catalog_v161/runtime/EVENT_LEDGER.jsonl"
+    },
+    {
+      "sha256": "66647d2a6fe2b1aa64824886fd93df1957ec921e53627084c8571e2523938f2b",
+      "uri": "p0e4/evidence/resolve_catalog_v161/runtime/commit.json"
+    },
+    {
+      "sha256": "ca97c3a85b9a9646a92b5e4bf99f6aee2bb750709de52582e6fa655bcb04b051",
+      "uri": "p0e4/evidence/resolve_catalog_v161/runtime/completion.json"
+    },
+    {
+      "sha256": "0138138a6388ae1168e07691df29972e08fe5afe6134acb699a859267a7acd88",
+      "uri": "p0e4/evidence/resolve_catalog_v161/runtime/events.jsonl"
+    },
+    {
+      "sha256": "fe53e2fbe8bb108fa46bbd4c407f76c4d2c8bedcb86e4c6ef67bb6cd78ff82de",
+      "uri": "p0e4/evidence/resolve_catalog_v161/runtime/exit.json"
+    },
+    {
+      "sha256": "893c0c82476b85c9d5b50164729ed2ec90819809afe82e8919a95316c567d869",
+      "uri": "p0e4/evidence/resolve_catalog_v161/runtime/intent.json"
+    },
+    {
+      "sha256": "5696fbb1bb6ed05f676e5580a9b0da461bef444f42cbfb02cb4cfda0f00c63d2",
+      "uri": "p0e4/evidence/resolve_catalog_v161/runtime/regression.json"
+    },
+    {
+      "sha256": "d8280bd5a43d3b4a4bdfa55c8185ad018af3dca767d7d92b6f6596851cdde871",
+      "uri": "p0e4/evidence/resolve_catalog_v161/runtime/state.json"
+    },
+    {
+      "sha256": "c3b7889f64800285a0e0544944c396c1eb7938c7027ea63eafec787b1d108b2c",
+      "uri": "p0e4/evidence/resolve_catalog_v161/runtime/task.json"
+    },
+    {
+      "sha256": "412f4c38dfd28defec0c63598fdb2de21f272a8ba414f79862fff5b8e218cd87",
+      "uri": "p0e4/evidence/resolve_catalog_v161/runtime/verified.json"
+    }
+  ],
+  "schema": "ACCEPTANCE_RECOVERY_RECEIPT",
+  "tested_sha": "783adea70ea64796c4f3850e9f6f328588da98dc"
+}
