@@ -1,0 +1,53 @@
+{
+  "schema": "CLAUDE_DISPATCH_RECEIPT",
+  "schema_version": 1,
+  "request_id": "P0E4_V16_FACTORY_INTEGRATION_A",
+  "status": "COMPLETED",
+  "observed_at": "2026-09-19T11:29:17.471558+00:00",
+  "surface": "Claude Desktop Dispatch Beta",
+  "session_id": "d4d1d7d1-1eb9-4047-a092-217ca0feff33",
+  "attachment_id": "08c8044c-118e-4502-b8f3-757828f055ff",
+  "actual_tools_observed_reported": [
+    "Read attachment",
+    "workspace.bash SHA256 and Python transform"
+  ],
+  "provider_signed": false,
+  "model": null,
+  "scope": "SYNTHETIC_TRANSFORM_ONLY",
+  "refs": {
+    "request": {
+      "uri": "p0e4/evidence/factory_v16/CLAUDE_INTEGRATION_REQUEST.txt",
+      "sha256": "220e0573fb9713bf1b1a299b71f2eb2a37cdc57307461dbfdb4a846bbd728dc0"
+    },
+    "attachment": {
+      "uri": "p0e4/evidence/factory_v16/SYNTHETIC_HANDOFF.json",
+      "sha256": "e04855daff599a260cbfa196c2dfaeb5ab611747586450fcab43bb7dcd83cb38"
+    },
+    "result": {
+      "uri": "p0e4/evidence/factory_v16/CLAUDE_FACTORY_INPUT.json",
+      "sha256": "33761c8e68a62a856cfaf90aefff7eb2fba6c91518dba0bc01ff039818e224dd"
+    },
+    "hash_followup": {
+      "uri": "p0e4/evidence/factory_v16/CLAUDE_HASH_FOLLOWUP.txt",
+      "sha256": "ce23a44350b233d76163f723eb8b2e1b844897321f5fd194973a7bbe7e3d2d3b"
+    },
+    "hash_verification": {
+      "uri": "p0e4/evidence/factory_v16/CLAUDE_HASH_VERIFICATION.json",
+      "sha256": "6dbae628f24cef98f21c866c52131a63e8b3adf5cdb4dde3e519af409fa2bbbd"
+    }
+  },
+  "publication_authorized": false,
+  "orchestrator_canonical_sha256": "985786af2f7959a5f7f321e2d9cffe2794db27cd839b269ad729fb06a98bff25",
+  "orchestrator_jobs_sha256": "f06bf54fe3ba9940316ef24495757856d81185ae107d7affa9a3f0f1795c0aab",
+  "claude_initial_hash_flag": "UNVERIFIED: compared jobs domain against canonical sidecar hash; clarification followup pending",
+  "independent_factory_validation": {
+    "status": "PASS",
+    "groups_per_package": 14,
+    "semantic_drift": false,
+    "scope": "EXISTING_FACTORY_OFFLINE_CONSUMERS",
+    "live_make_execution_proven": false,
+    "render_execution_proven": false,
+    "publication_authorized": false
+  },
+  "claude_hash_resolution": "RESOLVED by independent hash over entire sidecar; earlier domain mismatch retained"
+}

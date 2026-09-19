@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "evidence_refs": [
+    {
+      "uri": "p0e4/evidence/factory_v16/clip_source.txt",
+      "sha256": "c440ab2052f62e9a34b9d6b2ae770b05329b4c3d16dd8287b9c3735237c0d701"
+    },
+    {
+      "uri": "p0e4/evidence/factory_v16/brand_master_source.txt",
+      "sha256": "894b8a2348e1c6f0dfcbbf55bd12f3bb93c6f63c333c7cf9d6465a985dac0cd6"
+    },
+    {
+      "uri": "p0e4/evidence/factory_v16/SOURCE_VERIFICATION.json",
+      "sha256": "e43700d3a4624df13ae6bc8311dcf996872939afd97894ada9ab0393007927cb"
+    }
+  ],
+  "endpoint": "/clip",
+  "source_snapshot_only": true,
+  "live_parity_proven": false,
+  "source_sha_gate": false,
+  "monogram_sha_gate_is_not_media_sha_gate": true,
+  "public_output_side_effect": true,
+  "transport_implemented": false
+}

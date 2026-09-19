@@ -1,0 +1,137 @@
+def clip():
+    """POST /clip { video_url, audio_url?, hook_text?, brand_text?, song?, lyrics_url?,
+                    kick_zoom?, snare_shake?, fx? (bool), start?, duration? }
+    -> gebrande, beat-synced social-clip (1080x1920) in GCS. """
+    if not _authorized():
+        return jsonify(error="unauthorized"), 401
+    b = request.get_json(silent=True) or {}
+    video_url = b.get("video_url")
+    drive_file_id = b.get("drive_file_id")
+    if not video_url and not drive_file_id:
+        return jsonify(error="geen video_url of drive_file_id"), 400
+    audio_url = b.get("audio_url")
+    audio_drive_id = b.get("audio_drive_id")
+    intro_url = b.get("intro_url")
+    vid = tempfile.NamedTemporaryFile(delete=False, suffix=".vin").name
+    aud = tempfile.NamedTemporaryFile(delete=False, suffix=".ain").name if (audio_url or audio_drive_id) else None
+    intro = tempfile.NamedTemporaryFile(delete=False, suffix=".png").name if intro_url else None
+    out = tempfile.NamedTemporaryFile(delete=False, suffix=".mp4").name
+    # audio byte-identiek kopiëren uit een bestaande render (bv. V01)
+    audio_copy_url = b.get("audio_copy_url")
+    audio_copy_drive_id = b.get("audio_copy_drive_id")
+    acopy = tempfile.NamedTemporaryFile(delete=False, suffix=".acp.mp4").name if (audio_copy_url or audio_copy_drive_id) else None
+    pills = []
+    tmps = [vid, out] + ([aud] if aud else []) + ([intro] if intro else []) + ([acopy] if acopy else [])
+    # --- optionele Drive self-save (v11) -----------------------------------
+    # save_to_drive: bool ; drive_folder_id ; output_filename ; allow_version?
+    _save = bool(b.get("save_to_drive"))
+    _folder = b.get("drive_folder_id")
+    _outname = b.get("output_filename")
+    def _do_drive_save():
+        """Uploadt de zojuist gerenderde `out` naar Drive volgens veilige regels.
+        Retourneert een dict om in de JSON-respons te mergen (altijd onder key 'drive')."""
+        if not _save:
+            return {}
+        if not (_folder and _outname):
+            return {"drive": {"uploaded": False,
+                              "error": "save_to_drive vereist drive_folder_id + output_filename"}}
+        try:
+            r = _upload_to_drive(out, _folder, _outname, mime="video/mp4",
+                                 allow_version=bool(b.get("allow_version", False)))
+            return {"drive": r}
+        except Exception as e:
+            return {"drive": {"uploaded": False, "error": str(e)}}
+    try:
+        if drive_file_id:
+            _download_drive_api(drive_file_id, vid)
+        else:
+            download(video_url, vid)
+        if audio_drive_id:
+            _download_drive_api(audio_drive_id, aud)
+        elif audio_url:
+            download(audio_url, aud)
+        if intro_url:
+            download(intro_url, intro)
+        if audio_copy_drive_id:
+            # zelfde bron als de video? hergebruik de reeds gedownloade file (geen dubbele download)
+            if drive_file_id and audio_copy_drive_id == drive_file_id:
+                acopy = vid
+            else:
+                _download_drive_api(audio_copy_drive_id, acopy)
+        elif audio_copy_url:
+            download(audio_copy_url, acopy)
+        full_dur = _ffprobe_duration(vid)
+        start = float(b.get("start") or 0.0)
+        dur = float(b.get("duration") or (full_dur - start))
+        # --- CLEAN MODE + cues[] executor (backwards-compatible; branded path unchanged) ---
+        if bool(b.get("clean")) and b.get("cues"):
+            _polish = build_clean_cues(vid, out, cues=b["cues"], audio=aud, start=start, dur=dur,
+                                       copy_audio_from=acopy,
+                                       color_filters=b.get("color_filters"),
+                                       trim_black_tail=bool(b.get("trim_black_tail")))
+            obj = f"clips/{uuid.uuid4().hex}.mp4"
+            url = _upload_gcs(out, obj)
+            preview_url = None
+            try:
+                prev = tempfile.NamedTemporaryFile(delete=False, suffix=".jpg").name
+                tmps.append(prev)
+                _make_contact_sheet(out, prev)
+                preview_url = _upload_gcs(prev, obj[:-4] + "_preview.jpg", "image/jpeg")
+            except Exception:
+                preview_url = None
+            return jsonify(url=url, preview_url=preview_url, bucket=BUCKET_NAME, object=obj,
+                           size_mb=round(os.path.getsize(out) / (1 << 20), 1),
+                           duration=_ffprobe_duration(out), clean=True,
+                           audio_copied=bool(acopy), polish=_polish,
+                           cues=len(b["cues"]), version=APP_VERSION, **_do_drive_save())
+        # beat-detectie op de (studio-)audio die onder de clip komt
+        fxon = bool(b.get("fx", True))
+        kicks = snares = []
+        if fxon:
+            hits = FX.detect_hits(aud or vid)
+            kicks = FX.thin(FX.shift_and_window(hits["kick"], start, dur),
+                            min_gap=float(b.get("kick_gap", 0.40)), max_count=40)
+            snares = FX.thin(FX.shift_and_window(hits["snare"], start, dur),
+                             min_gap=float(b.get("snare_gap", 0.32)), max_count=40)
+        # lyrics (optioneel)
+        lyric_pngs = lyric_times = None
+        song = b.get("song"); lyrics_url = b.get("lyrics_url")
+        if song or lyrics_url:
+            lines, _ = _load_lyrics(lyrics_url=lyrics_url, song=song)
+            if lines:
+                lyric_pngs, lyric_times = _make_pill_pngs(lines, start, dur)
+                pills = list(lyric_pngs)
+        build_clip(vid, out, audio=aud,
+                   hook_text=b.get("hook_text"), brand_text=b.get("brand_text"),
+                   hook_y=b.get("hook_y"),
+                   intro_png=intro, intro_dur=float(b.get("intro_dur", 3.0)),
+                   lyric_pngs=lyric_pngs, lyric_times=lyric_times,
+                   kicks=kicks, snares=snares,
+                   kick_zoom=float(b.get("kick_zoom", 0.038)),
+                   snare_shake=float(b.get("snare_shake", 0.010)),
+                   fx=fxon, start=start, dur=dur)
+        obj = f"clips/{uuid.uuid4().hex}.mp4"
+        url = _upload_gcs(out, obj)
+        preview_url = None
+        try:
+            prev = tempfile.NamedTemporaryFile(delete=False, suffix=".jpg").name
+            tmps.append(prev)
+            _make_contact_sheet(out, prev)
+            preview_url = _upload_gcs(prev, obj[:-4] + "_preview.jpg", "image/jpeg")
+        except Exception:
+            preview_url = None
+        return jsonify(url=url, preview_url=preview_url, bucket=BUCKET_NAME, object=obj,
+                       size_mb=round(os.path.getsize(out) / (1 << 20), 1),
+                       duration=_ffprobe_duration(out),
+                       kicks=len(kicks), snares=len(snares),
+                       intro=bool(intro), version=APP_VERSION, **_do_drive_save())
+    except subprocess.CalledProcessError as e:
+        return jsonify(error=f"ffmpeg-fout: {e}"), 500
+    except Exception as e:
+        return jsonify(error=str(e)), 500
+    finally:
+        for p in tmps + pills:
+            try:
+                os.unlink(p)
+            except OSError:
+                pass

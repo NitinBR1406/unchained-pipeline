@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": "Claude outputs/beat-service/app.py",
+  "source_sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb",
+  "observed_at": "2026-09-19T11:23:32.138360+00:00",
+  "deployed_source_parity_proven": false,
+  "critical_corrections": [
+    "expected_un_sha256 verifies UN monogram asset, NOT source video SHA; never use as media lineage proof.",
+    "/clip always uploads output and preview to configured GCS, even save_to_drive=false. No private staging switch demonstrated.",
+    "fx defaults true; a no-effects request must explicitly disable it.",
+    "Only N0-D2 was freshly read this request; other Make references are earlier in-session evidence.",
+    "Claude artifact observed_at repeats prior 00:31 timestamp; use Orchestrator observation timestamp, not artifact time, for freshness."
+  ],
+  "external_render_calls": 0
+}

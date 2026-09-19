@@ -1,0 +1,32 @@
+{
+  "schema": "CLAUDE_DISPATCH_RECEIPT",
+  "schema_version": 1,
+  "request_id": "P0E4_V16_FACTORY_DISCOVERY_A",
+  "status": "COMPLETED",
+  "observed_at": "2026-09-19T11:28:12.323597+00:00",
+  "surface": "Claude Desktop Dispatch Beta",
+  "session_id": "d4d1d7d1-1eb9-4047-a092-217ca0feff33",
+  "provider_signed": false,
+  "model": null,
+  "scope": "READ_ONLY_DISCOVERY",
+  "historical_claims_are_current_evidence": false,
+  "freshness_limitations": [
+    "Only N0-D2 re-read this task; older in-session Make references preserved as historical",
+    "Artifact timestamp incorrect/stale; observed_at in this receipt is authoritative observation time"
+  ],
+  "refs": {
+    "request": {
+      "uri": "p0e4/evidence/factory_v16/CLAUDE_DISCOVERY_REQUEST.txt",
+      "sha256": "66a0dbac337b26e91cab0830b68636cb385df435758809c1fee5c8ac93b95a74"
+    },
+    "result": {
+      "uri": "p0e4/evidence/factory_v16/CLAUDE_DISCOVERY_RESULT.json",
+      "sha256": "53ea6dae3c20ca7691e71f1357ca7829f488be3d948dd6e70b9d16ec54a15535"
+    },
+    "source_verification": {
+      "uri": "p0e4/evidence/factory_v16/SOURCE_VERIFICATION.json",
+      "sha256": "e43700d3a4624df13ae6bc8311dcf996872939afd97894ada9ab0393007927cb"
+    }
+  },
+  "publication_authorized": false
+}

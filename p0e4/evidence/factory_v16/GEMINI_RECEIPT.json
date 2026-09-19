@@ -1,0 +1,27 @@
+{
+  "schema": "AUTHENTICATED_UI_INTELLIGENCE_RECEIPT",
+  "schema_version": 1,
+  "status": "COMPLETED",
+  "request_id": "P0E4_V16_GEMINI_INTELLIGENCE_A",
+  "source_url": "https://gemini.google.com/app/7be74f69c8e6a20a",
+  "account": "nitin@unchainednitin.com",
+  "observed_at": "2026-09-19T11:19:09.542827Z",
+  "transport": "Computer-use MCP / authenticated Chrome Gemini UI",
+  "model_label_observed": "Flash",
+  "exact_model_id": null,
+  "provider_signed": false,
+  "scope": "SYNTHETIC_RECOMMENDATIONS_ONLY",
+  "extraction": "Visible JSON response transcribed without semantic changes; stored JSON formatting normalized",
+  "refs": {
+    "request": {
+      "uri": "p0e4/evidence/factory_v16/GEMINI_REQUEST.txt",
+      "sha256": "4c932f795a485f951e804b5ff177b1ff14c13f687e1f0b4cc6aa6286a3afc4ba"
+    },
+    "result": {
+      "uri": "p0e4/evidence/factory_v16/GEMINI_RESULT.json",
+      "sha256": "716a95c70bb3a4fd27a8a59d5d9eac3c719c5deff386829a39af5431060c7d51"
+    }
+  },
+  "publication_authorized": false,
+  "real_media_review": false
+}

@@ -1,0 +1,31 @@
+{
+  "request_id": "P0E4_V16_GEMINI_INTELLIGENCE_A",
+  "edit_plan": {
+    "duration_ms": 10000,
+    "baseline_locked": true,
+    "execution_mode": "RECOMMENDATION_ONLY",
+    "segments": [
+      {
+        "start_ms": 0,
+        "end_ms": 10000,
+        "source_sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+        "source_start_ms": 0,
+        "source_end_ms": 10000,
+        "performer_visible": true
+      }
+    ],
+    "effects": []
+  },
+  "editorial": {
+    "title": "TEST_ONLY 10-Second Vocal Performance Showcase",
+    "caption": "TEST_ONLY Check out this quick 10-second vocal performance test fixture.",
+    "hashtags": [
+      "#TestOnly"
+    ],
+    "cta": "TEST_ONLY Rate this 10-second vocal performance in the comments below.",
+    "hook": "TEST_ONLY Can a 10-second vocal performance captivate an audience?",
+    "hypothesis": "TEST_ONLY A 10-second fully visible vocal performance fixture will achieve higher engagement retention over a standard non-visible audio test."
+  },
+  "publication_authorized": false,
+  "real_media_review": false
+}

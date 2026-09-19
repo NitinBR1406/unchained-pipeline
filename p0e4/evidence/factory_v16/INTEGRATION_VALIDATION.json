@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "groups_per_package": 14,
+  "semantic_drift": false,
+  "scope": "EXISTING_FACTORY_OFFLINE_CONSUMERS",
+  "live_make_execution_proven": false,
+  "render_execution_proven": false,
+  "publication_authorized": false,
+  "fresh_gemini_recommendations_proven": true,
+  "actual_claude_transform_proven": true,
+  "shared_drive_exact_readback": true,
+  "canonical_sha256": "985786af2f7959a5f7f321e2d9cffe2794db27cd839b269ad729fb06a98bff25",
+  "bundle_sha256": "4fd61453ce5943fef3e35bfc6ec5d088b470f40171ff2647387094a68f2012ba",
+  "real_media_qc_proven": false
+}

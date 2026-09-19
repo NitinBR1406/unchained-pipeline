@@ -1,0 +1,219 @@
+{
+  "schema": "UNCHAINED_FACTORY_CANONICAL",
+  "schema_version": 1,
+  "mode": "SHADOW_ONLY",
+  "content_id": "TEST_ONLY_GOLDEN",
+  "created_at": "2026-09-19T11:19:09.542827Z",
+  "source_package_sha256": "1558c099150c701512afd0063b28a58c1df72e4490edcc8c41baa69d247f46ad",
+  "evidence_refs": [
+    {
+      "evidence_id": "ev:test",
+      "uri": "fixture/evidence",
+      "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9"
+    },
+    {
+      "evidence_id": "ev:gemini-v16-response",
+      "uri": "p0e4/evidence/factory_v16/GEMINI_RESULT.json",
+      "sha256": "716a95c70bb3a4fd27a8a59d5d9eac3c719c5deff386829a39af5431060c7d51"
+    }
+  ],
+  "governance": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "minimum_performance_fraction": "4/5"
+  },
+  "CAMPAIGNS": [
+    {
+      "campaign_id": "campaign:test",
+      "name": "INTEGRATION_TEST_INPUT",
+      "objective": "Test attribution, no actual growth values",
+      "evidence_ids": [
+        "ev:test"
+      ]
+    }
+  ],
+  "ASSETS": [
+    {
+      "asset_id": "asset:0",
+      "content_id": "TEST_ONLY_GOLDEN",
+      "role": "INTEGRATION_TEST_INPUT",
+      "uri": "fixture/raw",
+      "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+      "authority": "INTEGRATION_TEST_INPUT",
+      "binding_evidence_id": null,
+      "evidence_ids": [
+        "ev:test"
+      ]
+    },
+    {
+      "asset_id": "asset:1",
+      "content_id": "TEST_ONLY_GOLDEN",
+      "role": "INTEGRATION_TEST_INPUT",
+      "uri": "fixture/audio",
+      "sha256": "10c2bfd8e05bf892c38eb5edbc5521a9526155c397e5dd489f0f31f4114ebb62",
+      "authority": "INTEGRATION_TEST_INPUT",
+      "binding_evidence_id": null,
+      "evidence_ids": [
+        "ev:test"
+      ]
+    }
+  ],
+  "CONTENT_MASTER": [
+    {
+      "content_id": "TEST_ONLY_GOLDEN",
+      "campaign_id": "campaign:test",
+      "song_id": "song:test",
+      "title": "INTEGRATION_TEST_INPUT",
+      "track_type": "COVER",
+      "master_asset_id": null,
+      "isrc_code": null,
+      "status": "INTEGRATION_TEST_INPUT",
+      "evidence_ids": [
+        "ev:test"
+      ]
+    }
+  ],
+  "CREATIVE_INTELLIGENCE": [
+    {
+      "intelligence_id": "intelligence:test",
+      "content_id": "TEST_ONLY_GOLDEN",
+      "source_package_id": "P0E4_V16_GEMINI_INTELLIGENCE_A",
+      "hypothesis_id": "hypothesis:test",
+      "recommendation": "TEST_ONLY A 10-second fully visible vocal performance fixture will achieve higher engagement retention over a standard non-visible audio test.",
+      "source_package_sha256": "1558c099150c701512afd0063b28a58c1df72e4490edcc8c41baa69d247f46ad",
+      "agent_id": "agent:test",
+      "created_at": "2026-09-19T11:19:09.542827Z",
+      "evidence_ids": [
+        "ev:test",
+        "ev:gemini-v16-response"
+      ]
+    }
+  ],
+  "HYPOTHESES": [
+    {
+      "hypothesis_id": "hypothesis:test",
+      "content_id": "TEST_ONLY_GOLDEN",
+      "statement": "TEST_ONLY A 10-second fully visible vocal performance fixture will achieve higher engagement retention over a standard non-visible audio test.",
+      "predicted_metric": "retention",
+      "falsification_rule": "No improvement versus control",
+      "evidence_ids": [
+        "ev:test",
+        "ev:gemini-v16-response"
+      ]
+    }
+  ],
+  "DERIVATIVES": [
+    {
+      "derivative_id": "derivative:test",
+      "content_id": "TEST_ONLY_GOLDEN",
+      "source_asset_id": "asset:0",
+      "asset_id": null,
+      "hypothesis_id": "hypothesis:test",
+      "experiment_id": "experiment:test",
+      "kind": "CLIP",
+      "start_ms": 0,
+      "end_ms": 10000,
+      "aspect_ratio": "9:16",
+      "hook": "TEST_ONLY Can a 10-second vocal performance captivate an audience?",
+      "evidence_ids": [
+        "ev:test",
+        "ev:gemini-v16-response"
+      ]
+    }
+  ],
+  "PLATFORM_PACKAGES": [
+    {
+      "package_id": "package:test",
+      "derivative_id": "derivative:test",
+      "platform": "youtube_shorts",
+      "title": "TEST_ONLY 10-Second Vocal Performance Showcase",
+      "caption": "TEST_ONLY Check out this quick 10-second vocal performance test fixture.",
+      "hashtags": [
+        "#TestOnly"
+      ],
+      "keywords": [
+        "test"
+      ],
+      "cta": "TEST_ONLY Rate this 10-second vocal performance in the comments below.",
+      "thumbnail_asset_id": null,
+      "poster_asset_id": null,
+      "scheduled_at": null,
+      "schedule_timezone": "Europe/Amsterdam",
+      "schedule_version": 1,
+      "status": "DRAFT",
+      "evidence_ids": [
+        "ev:test",
+        "ev:gemini-v16-response"
+      ]
+    }
+  ],
+  "PRODUCTION": [
+    {
+      "production_id": "production:test",
+      "content_id": "TEST_ONLY_GOLDEN",
+      "derivative_id": "derivative:test",
+      "creative_package_sha256": "1558c099150c701512afd0063b28a58c1df72e4490edcc8c41baa69d247f46ad",
+      "edit_plan_sha256": "a747f7431b3d9c4e997ff3c49e4a3fa341855b0c4c3f416e26dd133de09992a6",
+      "executor_agent_id": "agent:test",
+      "status": "NOT_DISPATCHED",
+      "output_asset_id": null,
+      "evidence_ids": [
+        "ev:test",
+        "ev:gemini-v16-response"
+      ]
+    }
+  ],
+  "QC_APPROVALS": [],
+  "RIGHTS_RELEASE": [],
+  "PUBLICATION": [
+    {
+      "publication_id": "publication:test",
+      "package_id": "package:test",
+      "platform": "youtube_shorts",
+      "platform_post_id": null,
+      "published_at": null,
+      "status": "NOT_PUBLISHED",
+      "receipt_evidence_id": null,
+      "attribution_code": null,
+      "evidence_ids": [
+        "ev:test"
+      ]
+    }
+  ],
+  "ANALYTICS": [],
+  "EXPERIMENTS": [
+    {
+      "experiment_id": "experiment:test",
+      "campaign_id": "campaign:test",
+      "hypothesis_id": "hypothesis:test",
+      "tested_variable": "opening_hook",
+      "variant_id": "variant:test",
+      "control_variant_id": null,
+      "primary_metric": "retention",
+      "status": "PLANNED",
+      "evidence_ids": [
+        "ev:test"
+      ]
+    }
+  ],
+  "AUDIENCE_GROWTH": [],
+  "MONETIZATION": [],
+  "BUSINESS_FUNNEL": [],
+  "AGENT_EVIDENCE": [
+    {
+      "agent_id": "agent:test",
+      "agent_role": "GEMINI_INTELLIGENCE",
+      "source_agent_name": "GEMINI_UI",
+      "model_id": null,
+      "run_id": "P0E4_V16_GEMINI_INTELLIGENCE_A",
+      "observed_at": "2026-09-19T11:19:09.542827Z",
+      "authenticated_receipt_id": null,
+      "evidence_ids": [
+        "ev:test",
+        "ev:gemini-v16-response"
+      ]
+    }
+  ],
+  "LEGACY_MAPPING": []
+}

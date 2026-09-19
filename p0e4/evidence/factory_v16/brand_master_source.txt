@@ -1,0 +1,181 @@
+def brand_master():
+    """POST /brand_master { drive_file_id, expected_un_sha256, events[], fps?,
+    crf?, preset?, save_to_drive?, drive_folder_id?, output_filename?, qc_frames? }
+    Burn-in van EV-overlays (tekst-PNG's met tracking+shadow + UN-monogram) op de
+    locked master. Video re-encode (libx264), audio -c:a copy. Gates: UN-sha256, fonts."""
+    if not _authorized():
+        return jsonify(error="unauthorized"), 401
+    b = request.get_json(silent=True) or {}
+    drive_file_id = b.get("drive_file_id")
+    video_url = b.get("video_url")
+    if not drive_file_id and not video_url:
+        return jsonify(error="geen drive_file_id/video_url"), 400
+    events = b.get("events") or []
+    fps = float(b.get("fps", 24.0))
+    crf = str(b.get("crf", "14"))
+    preset = str(b.get("preset", "slow"))
+    # --- font gate ---
+    for key, p in _FONT_MAP.items():
+        if not os.path.exists(p):
+            return jsonify(error="FONT_ASSET_GATE FAIL: ontbreekt %s (%s)" % (key, p),
+                           font_asset_gate="FAIL"), 409
+    # --- UN asset sha256 gate ---
+    if not os.path.exists(UN_ASSET_PATH):
+        return jsonify(error="UN_ASSET_GATE FAIL: monogram niet gevonden", un_asset_gate="FAIL"), 409
+    un_sha = _sha256_file(UN_ASSET_PATH)
+    exp = (b.get("expected_un_sha256") or "").lower().strip()
+    if exp and un_sha != exp:
+        return jsonify(error="UN_ASSET_GATE FAIL_HASH_MISMATCH", un_asset_gate="FAIL_HASH_MISMATCH",
+                       un_asset_sha256=un_sha, expected=exp), 409
+    vin = tempfile.NamedTemporaryFile(delete=False, suffix=".vin.mp4").name
+    out = tempfile.NamedTemporaryFile(delete=False, suffix=".mp4").name
+    tmps = [vin, out]
+    try:
+        if drive_file_id:
+            _download_drive_api(drive_file_id, vin)
+        else:
+            download(video_url, vin)
+        # source verificatie
+        probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0",
+                                "-show_entries", "stream=width,height,r_frame_rate,nb_frames,duration",
+                                "-of", "default=nw=1", vin], stdout=subprocess.PIPE).stdout.decode()
+        acodec = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a:0",
+                                 "-show_entries", "stream=codec_name", "-of", "default=nw=1:nk=1",
+                                 vin], stdout=subprocess.PIPE).stdout.decode().strip()
+        # prescale UN voor elke gevraagde image-breedte
+        un_scaled = {}
+        for ev in events:
+            if ev.get("type") == "image":
+                w = int(ev["width"])
+                if w not in un_scaled:
+                    un_scaled[w] = _scaled_image_png(UN_ASSET_PATH, w)
+        # bouw filtergraph
+        base_args = ["ffmpeg", "-v", "error", "-y", "-i", vin]
+        fc = ["[0:v]setsar=1[v0]"]
+        idx = 1
+        prev = "v0"
+        for ev in sorted(events, key=lambda e: (e.get("z", 0), e.get("start_f", 0))):
+            t0 = ev["start_f"] / fps
+            t1 = ev["end_f"] / fps
+            durs = (ev["end_f"] - ev["start_f"]) / fps
+            entry = ev.get("entry_f", 0) / fps
+            exit_ = ev.get("exit_f", 0) / fps
+            maxop = float(ev.get("max_opacity", 1.0))
+            if ev.get("type") == "text":
+                png, W, H = _render_text_png(ev["text"], _FONT_MAP[ev["font"]], int(ev["size"]),
+                                             float(ev.get("tracking", 0)), ev["color"],
+                                             shadow=bool(ev.get("shadow", True)))
+                tmps.append(png)
+            else:
+                png, W, H = un_scaled[int(ev["width"])]
+                tmps.append(png)
+            base_args += ["-loop", "1", "-t", "%.3f" % max(0.05, durs), "-i", png]
+            k = idx; idx += 1
+            if ev.get("anchor", "center") == "center":
+                X0 = int(round(ev["x"] - W / 2.0)); Y0 = int(round(ev["y"] - H / 2.0))
+            else:
+                X0 = int(ev["x"]); Y0 = int(ev["y"])
+            rise = int(ev.get("rise_px", 0))
+            fo_st = max(0.0, durs - exit_)
+            seg = "[%d:v]fps=%g,format=yuva420p,colorchannelmixer=aa=%.4f" % (k, fps, maxop)
+            if entry > 0:
+                seg += ",fade=t=in:st=0:d=%.4f:alpha=1" % entry
+            if exit_ > 0:
+                seg += ",fade=t=out:st=%.4f:d=%.4f:alpha=1" % (fo_st, exit_)
+            seg += ",setpts=PTS-STARTPTS+%.5f/TB[ov%d]" % (t0, k)
+            fc.append(seg)
+            if rise > 0 and entry > 0:
+                yexpr = "%d+%d*pow(max(0\\,1-((t-%.5f)/%.5f))\\,2)" % (Y0, rise, t0, entry)
+            else:
+                yexpr = "%d" % Y0
+            fc.append("[%s][ov%d]overlay=%d:%s:enable='gte(t\\,%.5f)*lt(t\\,%.5f)'[v%d]"
+                      % (prev, k, X0, yexpr, t0, t1, k))
+            prev = "v%d" % k
+        filter_complex = ";".join(fc)
+        cmd = base_args + ["-filter_complex", filter_complex, "-map", "[%s]" % prev, "-map", "0:a:0",
+                           "-c:v", "libx264", "-preset", preset, "-crf", crf, "-pix_fmt", "yuv420p",
+                           "-r", "%g" % fps, "-vsync", "cfr",
+                           "-colorspace", "bt709", "-color_primaries", "bt709",
+                           "-color_trc", "bt709", "-color_range", "tv",
+                           "-c:a", "copy", "-movflags", "+faststart", out]
+        r = subprocess.run(cmd, stderr=subprocess.PIPE)
+        if r.returncode != 0:
+            return jsonify(error="ffmpeg: " + r.stderr.decode(errors="replace")[-1200:]), 500
+        # metingen
+        vid_a_in = _video_stream_md5(vin)  # niet gebruikt voor gelijkheid (video re-encode)
+        aud_in = subprocess.run(["ffmpeg", "-v", "error", "-i", vin, "-map", "0:a:0", "-c", "copy",
+                                 "-f", "md5", "-"], stdout=subprocess.PIPE).stdout.decode().strip()
+        aud_out = subprocess.run(["ffmpeg", "-v", "error", "-i", out, "-map", "0:a:0", "-c", "copy",
+                                  "-f", "md5", "-"], stdout=subprocess.PIPE).stdout.decode().strip()
+        vprobe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-count_frames",
+                                 "-show_entries", "stream=width,height,r_frame_rate,nb_read_frames,"
+                                 "duration,pix_fmt,color_primaries,color_transfer,color_space,color_range",
+                                 "-of", "default=nw=1", out], stdout=subprocess.PIPE).stdout.decode()
+        aout = _audio_stream_info(out)
+        after_loud = _measure_audio(out)
+        # QC contact sheet op key-frames
+        qc_url = None
+        try:
+            qframes = b.get("qc_frames") or [30, 60, 1000, 1055, 1500, 2930, 3480, 3950, 4400, 4850, 4950, 5006]
+            from PIL import Image as _I
+            thumbs = []
+            for qf in qframes:
+                fp = tempfile.NamedTemporaryFile(delete=False, suffix=".png").name
+                tmps.append(fp)
+                subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", "%.3f" % (qf / fps), "-i", out,
+                                "-frames:v", "1", fp], check=False)
+                if os.path.exists(fp) and os.path.getsize(fp) > 0:
+                    thumbs.append((qf, fp))
+            if thumbs:
+                cols = 4
+                rows = int(math.ceil(len(thumbs) / cols))
+                tw, th = 270, 480
+                sheet = _I.new("RGB", (cols * tw, rows * th), (12, 12, 12))
+                from PIL import ImageDraw as _D
+                dd = _D.Draw(sheet)
+                for i, (qf, fp) in enumerate(thumbs):
+                    im = _I.open(fp).convert("RGB").resize((tw, th), _I.LANCZOS)
+                    sheet.paste(im, ((i % cols) * tw, (i // cols) * th))
+                    dd.text(((i % cols) * tw + 6, (i // cols) * th + 6), "f%d" % qf, fill=(255, 215, 0))
+                qp = tempfile.NamedTemporaryFile(delete=False, suffix=".jpg").name
+                tmps.append(qp)
+                sheet.save(qp, quality=90)
+                qc_url = _upload_gcs(qp, "clips/%s_brandqc.jpg" % uuid.uuid4().hex, "image/jpeg")
+        except Exception as e:
+            qc_url = "qc_error: %s" % e
+        obj = f"clips/{uuid.uuid4().hex}.mp4"
+        url = _upload_gcs(out, obj)
+        out_sha = _sha256_file(out)
+        drive = {}
+        if bool(b.get("save_to_drive")) and b.get("drive_folder_id") and b.get("output_filename"):
+            try:
+                drive = {"drive": _upload_to_drive(out, b["drive_folder_id"], b["output_filename"],
+                                                   mime="video/mp4",
+                                                   allow_version=bool(b.get("allow_version", False)))}
+            except Exception as e:
+                drive = {"drive": {"uploaded": False, "error": str(e)}}
+        n_text = sum(1 for e in events if e.get("type") == "text")
+        n_img = sum(1 for e in events if e.get("type") == "image")
+        return jsonify(version=APP_VERSION, url=url, qc_url=qc_url, bucket=BUCKET_NAME, object=obj,
+                       size_mb=round(os.path.getsize(out) / (1 << 20), 1),
+                       output_sha256=out_sha,
+                       source_probe=probe.strip(), source_audio_codec=acodec,
+                       output_probe=vprobe.strip(),
+                       audio_codec=aout.get("codec_name"), sample_rate=aout.get("sample_rate"),
+                       channels=aout.get("channels"),
+                       audio_stream_copy=(aud_in == aud_out),
+                       audio_md5_in=aud_in, audio_md5_out=aud_out,
+                       audio_after=after_loud,
+                       un_asset_gate="PASS", un_asset_sha256=un_sha,
+                       font_asset_gate="PASS",
+                       cinzel_fontfile=CINZEL_SEMIBOLD, montserrat_medium_fontfile=MONTSERRAT_MEDIUM,
+                       montserrat_regular_fontfile=MONTSERRAT_REGULAR,
+                       text_events=n_text, image_events=n_img, **drive)
+    except Exception as e:
+        return jsonify(error=str(e)), 500
+    finally:
+        for p in tmps:
+            try:
+                os.unlink(p)
+            except OSError:
+                pass

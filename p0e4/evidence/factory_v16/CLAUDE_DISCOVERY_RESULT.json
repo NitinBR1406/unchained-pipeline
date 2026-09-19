@@ -1,0 +1,98 @@
+{
+  "request_id": "P0E4_V16_FACTORY_DISCOVERY_A",
+  "task_identity": "P0-E4 V16 factory render/execution interface discovery (READ-ONLY, additive-engineering preflight)",
+  "observed_at": "2026-09-19T00:31Z",
+  "status": "COMPLETE",
+  "NON_PUBLISHING": true,
+  "external_writes_performed": 0,
+  "render_calls_performed": 0,
+  "publishes_performed": 0,
+  "secrets_exposed": false,
+  "gates": {"PRODUCTION_DEPLOYMENT_AUTHORIZED": false, "PUBLICATION_AUTHORIZED": false, "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"},
+  "actual_read_tools": [
+    {"tool": "workspace.bash grep/sed", "targets": "beat-service/app.py (2019 lines), shotstack_production_render.sh, build_full_master.py, render-report.example.json", "purpose": "render-service route + accepted-field extraction (fresh this task)"},
+    {"tool": "workspace.bash grep", "targets": "outputs tree for shotstack/plainly references", "purpose": "locate Shotstack scripts; confirm Plainly presence"},
+    {"tool": "make.scenarios_get", "id": 9508239, "name": "N0-D2 Creatomate render", "freshness": "re-read fresh THIS task", "result": "OK unchanged (lastEdit 2026-07-10)"},
+    {"tool": "make.scenarios_get (same session, fresh live, prior V15/V15.1 subtasks)", "ids": [9508104, 9508147, 9508207, 9508973, 9516688, 9516949, 9385197, 9385359, 9627055, 9571076], "note": "N0-B1/B2/D1/C2, V2/V1, N2, N3, P1, N7 — cited as fresh in-session live reads; N0-D2 re-read now confirms currency of the same live team blueprint set"}
+  ],
+  "observed_code_interface_paths": {
+    "media_render_service": {
+      "path": "outputs/beat-service/app.py (+ clip_fx.py, lyrics.py, Dockerfile)",
+      "kind": "Flask + FFmpeg (+ ffprobe, loudnorm) media/render microservice",
+      "auth": "X-API-Key header == env BEAT_API_KEY (value NOT read)",
+      "config_env": ["BEAT_API_KEY", "BUCKET_NAME (public GCS)", "OPENAI_API_KEY", "TRANSCRIBE_MODEL", "ROMANIZE_MODEL", "LUFS(default -14)", "LOGO_PATH", "FONT_BOLD/MED", "OUTRO_PATH/DUR"],
+      "base_url_source": "Make datastore 169690 {base_url, api_key} (NOT read)",
+      "output_sink": "public GCS bucket (unchained-nitin-media) — returns {url, bucket, object, sha256}",
+      "endpoints": ["/prep (774)", "/beats (745)", "/clip (1107)", "/visualizer (1433)", "/brand_master (513)", "/audio_master (400)", "/wordtimings (1609)", "/transcribe (1537)", "/hits (697)", "/host_asset (290)", "/stage_to_drive (310)", "/cutform,/cutsubmit,/review,/reviewdata,/reviewsubmit,/lyricsreview,/lyricssubmit (UIs)"]
+    },
+    "shotstack_render": {
+      "path": "outputs/shotstack_production_render.sh + build_full_master.py + render-report.example.json",
+      "endpoint": "https://api.shotstack.io/edit/v1/render (PRODUCTION, hardcoded)",
+      "auth": "X-Api-Key via chmod-600 temp curl config (value NOT read)",
+      "payload": "Shotstack Edit JSON (timeline/tracks/clips/output; output.range for --proof)",
+      "cost": "credits_billable (render-report shows credits) — CALLING = COST, not invoked",
+      "wired_into_make_factory": false,
+      "note": "AKI single-master edit path; manual script, separate from N-series"
+    },
+    "creatomate_render": {"via": "Make N0-D2 http", "endpoint": "https://api.creatomate.com/v1/renders", "auth": "Bearer from datastore 171100 (NOT read)", "cost": true},
+    "opusclip": {"via": "Make N0-B1/B2 http", "endpoint": "https://api.opus.pro/api/clip-projects | exportable-clips", "auth": "Bearer from datastore 169448 (NOT read)", "cost": true},
+    "plainly": {"present_in_code": false, "evidence": "'plainly' appears only in strategy/audit docs (Unchained-Content-System.md, Unchained-Nitin-System-Audit.md); NO adapter/endpoint/script found", "status": "NOT_IMPLEMENTED"}
+  },
+  "verified_fields_by_interface": {
+    "media_service_/clip": {"accepts": ["video_url|drive_file_id", "audio_url|audio_drive_id", "intro_url", "audio_copy_url|audio_copy_drive_id", "start", "duration", "clean", "cues", "color_filters", "trim_black_tail", "fx", "kick_gap", "snare_gap", "kick_zoom", "snare_shake", "song", "lyrics_url", "hook_text", "brand_text", "hook_y", "intro_dur", "save_to_drive", "drive_folder_id", "output_filename"], "returns": ["url", "preview_url", "bucket", "object"], "evidence": "beat-service/app.py L1107-1239 b.get(...)"},
+    "media_service_/visualizer": {"accepts": ["photo_url", "audio_url", "style(A/B/C/D/auto)", "index(style rotation)", "start", "duration", "title", "subtitle", "lyrics_url", "song", "require_approved(default 1)"], "returns": ["url", "style", "bucket", "object"], "evidence": "app.py L1433-1478"},
+    "media_service_/brand_master": {"accepts": ["drive_file_id|video_url", "expected_un_sha256(gate->409)", "events[]{type:text|image, text, font, size, color, tracking, shadow, x, y, z, anchor, start_f, end_f, entry_f, exit_f, max_opacity, rise_px, width}", "fps", "crf", "preset", "qc_frames", "save_to_drive", "drive_folder_id", "output_filename"], "returns": ["output_sha256", "un_asset_gate", "un_asset_sha256", "text_events", "image_events"], "evidence": "app.py L513-687"},
+    "media_service_/audio_master": {"accepts": ["drive_file_id|video_url|url", "target_i(LUFS)", "target_tp", "bitrate", "save_to_drive/drive_folder_id/output_filename"], "returns": ["loudness metrics", "sha256"], "evidence": "app.py L400-499"},
+    "media_service_/prep": {"accepts": ["video_url", "audio_url"], "returns": ["url", "bucket", "object"], "evidence": "app.py L774+"},
+    "media_service_/beats": {"accepts": ["audio_url|file", "every(default 4)"], "returns": ["duration", "bpm", "downbeats"], "evidence": "app.py L745+"},
+    "media_service_/wordtimings": {"accepts": ["project_id", "opus_key", "clip_id?"], "returns": ["per-word {w,s,e}"], "evidence": "app.py L1609+"},
+    "creatomate_render_body(as_used_by_N0-D2)": {"sends": ["output_format mp4", "width 1080", "height 1920", "element video source=N0_Master col8", "element text=N0_Master col13 romanized (fixed Montserrat/pos)"], "evidence": "N0-D2 module 3 jsonStringBodyContent (fresh)"},
+    "opusclip_body(as_used_by_N0-B1)": {"sends": ["videoUrl=N0_Master col5", "title", "curationPref.model ClipAnything", "renderPref.layoutAspectRatio portrait", "enableCaption false", "importPreference.sourceLang hi"], "evidence": "N0-B1 module 3"}
+  },
+  "v16_field_category_findings": {
+    "_legend": "ACCEPTS_render = render interface takes it; CONSUMED_live = a live Make module actually passes/reads it; NOT_PROVEN = no live consumer",
+    "CTA": {"render_accepts": "media /clip brand_text", "consumed_live": "NOT_PROVEN — no Make module passes a CTA; Captions_Publishing has no CTA column consumer"},
+    "hooks": {"render_accepts": "media /clip hook_text + hook_y; /visualizer subtitle/title", "consumed_live": "PARTIAL — V2 /visualizer passes title only; hook_text NOT passed by any live scenario"},
+    "timestamps": {"render_accepts": "media /clip + /visualizer start,duration (seconds)", "consumed_live": "PROVEN — V2 passes start,duration; DERIVATIVES start_ms/end_ms exist only in synthetic fixture"},
+    "derivative_specs": {"render_accepts": "OpusClip curationPref/renderPref (model, portrait)", "consumed_live": "PROVEN (fixed) — N0-B1 sends hardcoded ClipAnything+portrait; N0-B2 stores clip specs to N0_Master"},
+    "aspect_ratios": {"render_accepts": "HARDCODED — Creatomate 1080x1920; OpusClip 'portrait'; /visualizer fixed 9:16 (no aspect param)", "consumed_live": "NOT_PROVEN as a field — aspect is fixed in code, not a per-row input"},
+    "edit_effects": {"render_accepts": "media /brand_master events[] (full text/image overlay compositor w/ timing,opacity,tracking,color,shadow,anchor,z,rise); /clip cues,color_filters,fx,kick_zoom,snare_shake", "consumed_live": "NOT_PROVEN in N-series factory — N0-D2 sends one fixed text overlay only; /brand_master + /clip effects are NOT called by the live N0/N2/N3 flow (they are the AKI/clip path)"},
+    "thumbnails_posters": {"render_accepts": "media /host_asset (host arbitrary asset)", "consumed_live": "PARTIAL/SEPARATE — N0_Master col9 = OpusClip thumbnail_uri (unread by publishers); posters are P1 datastore image_url path; video publishers consume no thumbnail"},
+    "platform_schedules": {"render_accepts": "n/a", "consumed_live": "PROVEN — Captions_Publishing publish flags[14-17] + schedules[18-21] 'YYYY-MM-DD HH:mm:ss' Europe/Amsterdam consumed by N3/N7; P1 datastore scheduled_at/schedule_version/schedule_timezone"},
+    "experiments": {"render_accepts": "n/a", "consumed_live": "NOT_PROVEN — EXPERIMENTS/HYPOTHESES exist ONLY in the synthetic V15.1 fixture; no live Make module reads an experiment/variant field"},
+    "sha_provenance": {"render_accepts": "media /brand_master expected_un_sha256 gate + output_sha256; /audio_master + /host_asset sha256", "consumed_live": "PROVEN for P1 publish gate (asset_sha256+packaging_sha256+schedule_version -> external eligibility verifier, fail-closed) and for media-render asset gate; N3 video publisher has NO provenance gate"}
+  },
+  "callable_non_publishing_interfaces": [
+    {"interface": "media service (beat-service) endpoints via base_url + X-API-Key", "publishing": false, "cost": "compute only (self-hosted) + GCS storage; OpenAI on /transcribe,/wordtimings", "safe_for_v16_render_staging": true, "do_not_call_in_discovery": true},
+    {"interface": "Creatomate /v1/renders", "publishing": false, "cost": true},
+    {"interface": "OpusClip clip-projects/exportable-clips", "publishing": false, "cost": true},
+    {"interface": "Shotstack /edit/v1/render", "publishing": false, "cost": "credits_billable"},
+    {"interface": "Make scenarios_get (read-only inspection)", "publishing": false, "cost": false, "safe": true}
+  ],
+  "unproven_boundaries": [
+    "Whether the media service base_url is currently reachable/deployed (datastore 169690 not read; endpoint not called).",
+    "Live consumption of CTA, hook_text, edit/effects events[], per-row aspect, thumbnails, and experiments — NO live Make module passes these (NOT_PROVEN); they are latent render-service capabilities only.",
+    "Shotstack path integration into the N-series factory (currently a standalone manual script).",
+    "Plainly — not implemented anywhere in code (docs-only).",
+    "N3 (video multi-platform publish) has no SHA/provenance gate (only P1 poster path does).",
+    "External render services' exact response schemas beyond what Make maps (not called)."
+  ],
+  "smallest_safe_non_publishing_adapter_plan": {
+    "principle": "Additive only. Reuse the EXISTING media-service endpoints that already accept the rich fields; render to the GCS staging bucket and record to NEW append-only staging columns/datastore. Do NOT touch live Captions_Publishing publish flags, do NOT activate N3/P1, do NOT publish.",
+    "steps": [
+      "1. Build a thin 'canonical->render' adapter (new module/scenario, delivered DEACTIVATED) that maps canonical package fields to existing media endpoints: timestamps->/clip start,duration; hooks->/clip hook_text; CTA->/clip brand_text; edit/effects->/brand_master events[]; aspect->select endpoint (portrait fixed today); provenance->expected_un_sha256 + capture output_sha256.",
+      "2. Route all output to the GCS media bucket + a NEW staging datastore/sheet (append-only 'V16_STAGING'), never to live publish columns. Mode = RECOMMENDATION_ONLY / preflight.",
+      "3. Reuse the P1 external eligibility verifier (VALID_PUBLISH_APPROVAL + eligible, fail-closed) as the SINGLE publish authority; design (not enable) an equivalent gate for the video/N3 path so provenance parity exists before any future activation.",
+      "4. Keep all new scenarios DEACTIVATED and non-publishing; no new connector permissions; secrets stay in datastores.",
+      "5. Verify via read-only inspection + synthetic preflight (as in P0E4_V154) before any live render call."
+    ],
+    "rollback": "All additions are new modules + append-only staging columns/datastore; removal restores the current factory with zero change to frozen N0/N2/N3/P1/V scenarios. No index shifts on live tabs.",
+    "execution_status": "PLAN ONLY — NOT executed; requires Nitin approval before any render call, scenario build/activation, or publish."
+  },
+  "redactions": ["BEAT_API_KEY / OPENAI_API_KEY / Creatomate+OpusClip Bearer tokens / Shotstack X-Api-Key values", "media service base_url value (datastore 169690)", "all webhook URLs", "P1 verifier api key (auth 217337)"],
+  "limitations": [
+    "Render endpoints were NOT called (cost/side-effect prohibition); field lists are from source code (media service) and live blueprint request bodies (Creatomate/OpusClip), not runtime responses.",
+    "Consumer evidence for N2/N3/P1/V2/N0-B1/B2/C2/D1 is from fresh live reads performed earlier in THIS session; N0-D2 re-read now to anchor currency.",
+    "beat-service/app.py in outputs is the source-of-record copy; whether the deployed instance is byte-identical is UNPROVEN (deployment not inspected)."
+  ]
+}

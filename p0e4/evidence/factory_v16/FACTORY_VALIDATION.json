@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "groups_per_package": 14,
+  "semantic_drift": false,
+  "scope": "EXISTING_FACTORY_OFFLINE_CONSUMERS",
+  "live_make_execution_proven": false,
+  "render_execution_proven": false,
+  "publication_authorized": false
+}

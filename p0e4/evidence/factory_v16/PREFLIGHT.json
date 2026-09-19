@@ -1,0 +1,169 @@
+{
+  "schema": "CLAUDE_PRODUCTION_PREFLIGHT",
+  "schema_version": 1,
+  "canonical_sha256": "985786af2f7959a5f7f321e2d9cffe2794db27cd839b269ad729fb06a98bff25",
+  "creative_sha256": "1558c099150c701512afd0063b28a58c1df72e4490edcc8c41baa69d247f46ad",
+  "jobs": [
+    {
+      "package_id": "package:test",
+      "groups": {
+        "title": "TEST_ONLY 10-Second Vocal Performance Showcase",
+        "caption": "TEST_ONLY Check out this quick 10-second vocal performance test fixture.",
+        "hashtags": [
+          "#TestOnly"
+        ],
+        "cta": "TEST_ONLY Rate this 10-second vocal performance in the comments below.",
+        "hooks": "TEST_ONLY Can a 10-second vocal performance captivate an audience?",
+        "timestamps": {
+          "start_ms": 0,
+          "end_ms": 10000
+        },
+        "derivatives": {
+          "derivative_id": "derivative:test",
+          "kind": "CLIP",
+          "source_asset": {
+            "asset_id": "asset:0",
+            "content_id": "TEST_ONLY_GOLDEN",
+            "role": "INTEGRATION_TEST_INPUT",
+            "uri": "fixture/raw",
+            "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+            "authority": "INTEGRATION_TEST_INPUT",
+            "binding_evidence_id": null,
+            "evidence_ids": [
+              "ev:test"
+            ]
+          },
+          "output_asset": null
+        },
+        "aspect_ratios": "9:16",
+        "edit_effects": {
+          "duration_ms": 10000,
+          "baseline_locked": true,
+          "execution_mode": "RECOMMENDATION_ONLY",
+          "segments": [
+            {
+              "start_ms": 0,
+              "end_ms": 10000,
+              "source_sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+              "source_start_ms": 0,
+              "source_end_ms": 10000,
+              "performer_visible": true
+            }
+          ],
+          "effects": []
+        },
+        "thumbnails_posters": {
+          "thumbnail": null,
+          "poster": null
+        },
+        "platform_targeting": "youtube_shorts",
+        "schedules": {
+          "scheduled_at": null,
+          "schedule_timezone": "Europe/Amsterdam",
+          "schedule_version": 1
+        },
+        "experiments": {
+          "experiment": {
+            "experiment_id": "experiment:test",
+            "campaign_id": "campaign:test",
+            "hypothesis_id": "hypothesis:test",
+            "tested_variable": "opening_hook",
+            "variant_id": "variant:test",
+            "control_variant_id": null,
+            "primary_metric": "retention",
+            "status": "PLANNED",
+            "evidence_ids": [
+              "ev:test"
+            ]
+          },
+          "hypothesis": {
+            "hypothesis_id": "hypothesis:test",
+            "content_id": "TEST_ONLY_GOLDEN",
+            "statement": "TEST_ONLY A 10-second fully visible vocal performance fixture will achieve higher engagement retention over a standard non-visible audio test.",
+            "predicted_metric": "retention",
+            "falsification_rule": "No improvement versus control",
+            "evidence_ids": [
+              "ev:test",
+              "ev:gemini-v16-response"
+            ]
+          }
+        },
+        "provenance": {
+          "content_id": "TEST_ONLY_GOLDEN",
+          "package_id": "package:test",
+          "source_package_sha256": "1558c099150c701512afd0063b28a58c1df72e4490edcc8c41baa69d247f46ad",
+          "agents": [
+            {
+              "agent_id": "agent:test",
+              "agent_role": "GEMINI_INTELLIGENCE",
+              "source_agent_name": "GEMINI_UI",
+              "model_id": null,
+              "run_id": "P0E4_V16_GEMINI_INTELLIGENCE_A",
+              "observed_at": "2026-09-19T11:19:09.542827Z",
+              "authenticated_receipt_id": null,
+              "evidence_ids": [
+                "ev:test",
+                "ev:gemini-v16-response"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            {
+              "evidence_id": "ev:test",
+              "uri": "fixture/evidence",
+              "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9"
+            },
+            {
+              "evidence_id": "ev:gemini-v16-response",
+              "uri": "p0e4/evidence/factory_v16/GEMINI_RESULT.json",
+              "sha256": "716a95c70bb3a4fd27a8a59d5d9eac3c719c5deff386829a39af5431060c7d51"
+            }
+          ]
+        }
+      },
+      "wire": {
+        "hashtags": "#TestOnly",
+        "keywords": "test",
+        "amsterdam_schedule": null
+      },
+      "required_groups": [
+        "title",
+        "caption",
+        "hashtags",
+        "cta",
+        "hooks",
+        "timestamps",
+        "derivatives",
+        "aspect_ratios",
+        "edit_effects",
+        "thumbnails_posters",
+        "platform_targeting",
+        "schedules",
+        "experiments",
+        "provenance"
+      ],
+      "group_sha256": {
+        "title": "3b7b8bdab02a044de1eb9e16d79e4c81d1b91ff7a1a1d4141f1b8571ff926457",
+        "caption": "96aca2ed05dbbed1a217911ad4b4f3c0fd664b5234ee91bf2a8ec94e1d823867",
+        "hashtags": "c00fca132ee23415c5c5317bf9931074ca479b2cdba05ff3daed0b2e07d157d1",
+        "cta": "bdcfaefe72c0ea34ca7cc7149dce91c0fe846908676c9ee43bdbc81c8e9f4f81",
+        "hooks": "9ed352c94be2a05ef7bd800721e7ef952b033a62969394a7125a38b938088ba0",
+        "timestamps": "4ec88dfbca2f4f2d464f78d66e9a0b345b0630b16cc66eb2d8ab336fa35c2ec1",
+        "derivatives": "20d73eb7b3133602cae02995adc08ea9ef04f5b7e9496ad948140453c1977fc3",
+        "aspect_ratios": "8e22f972a30c4a20d6d18e1215ab25af1794dbe69eb9f06eec147c036c5ceb4e",
+        "edit_effects": "a747f7431b3d9c4e997ff3c49e4a3fa341855b0c4c3f416e26dd133de09992a6",
+        "thumbnails_posters": "916c3d141a34104dcc50df2c323a8f4f08db0f38d54814f8b44ec90c8cbec27b",
+        "platform_targeting": "5bd1a5acc8e9c032451244ddc44e5faf87a6d28225ce7f2760c6b777bdc765b3",
+        "schedules": "5b2dcda87fb139e9958759f522068ce5104a950905ecf023e369793783e470c5",
+        "experiments": "75a83b9efddb8b66ac767ca630811e2e3672e32c5f5354738c1fc036ecc8ff2d",
+        "provenance": "34a8b8a407019eb17a497d952c1e3aeabf78f5dbd9840abf537eaedf6d789ee8"
+      },
+      "status": "PREFLIGHT_ONLY_PRODUCTION_BLOCKED"
+    }
+  ],
+  "preflight_group_coverage": 14,
+  "live_legacy_execution_proven": false,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

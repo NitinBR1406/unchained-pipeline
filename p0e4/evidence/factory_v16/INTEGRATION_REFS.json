@@ -1,0 +1,62 @@
+{
+  "canonical": {
+    "uri": "p0e4/evidence/factory_v16/CANONICAL.json",
+    "sha256": "3a795501ce8a3a431e9e958123f4fcb7da0d36ddb056c98f25f0cf40945ad7fc"
+  },
+  "creative": {
+    "uri": "p0e4/evidence/factory_v16/CREATIVE_INTELLIGENCE_PACKAGE.json",
+    "sha256": "bf3b07d5b891e21953b19bb6e086a164c4094bd8acb92d8ef27095303cfe6371"
+  },
+  "claude": {
+    "uri": "p0e4/evidence/factory_v16/CLAUDE_FACTORY_INPUT.json",
+    "sha256": "33761c8e68a62a856cfaf90aefff7eb2fba6c91518dba0bc01ff039818e224dd"
+  },
+  "factory": {
+    "uri": "p0e4/evidence/factory_v16/FACTORY_PREPARATION.json",
+    "sha256": "9c330fc8df27eb163c10691e6d49bab6c7123f337a9cddd5d7ac41e902970e50"
+  },
+  "gemini": {
+    "uri": "p0e4/evidence/factory_v16/GEMINI_RESULT.json",
+    "sha256": "716a95c70bb3a4fd27a8a59d5d9eac3c719c5deff386829a39af5431060c7d51"
+  },
+  "gemini_receipt": {
+    "uri": "p0e4/evidence/factory_v16/GEMINI_RECEIPT.json",
+    "sha256": "926e29ceecffe3cdd3af2d485e7a92f56410b3c7fb6da08856a5707421ea2ebd"
+  },
+  "claude_receipt": {
+    "uri": "p0e4/evidence/factory_v16/CLAUDE_INTEGRATION_RECEIPT.json",
+    "sha256": "ea9137d86363ca7af321d23e74616c940acb7078582238c26fcdd831f1078ece"
+  },
+  "claude_hash": {
+    "uri": "p0e4/evidence/factory_v16/CLAUDE_HASH_VERIFICATION.json",
+    "sha256": "6dbae628f24cef98f21c866c52131a63e8b3adf5cdb4dde3e519af409fa2bbbd"
+  },
+  "handoff": {
+    "uri": "p0e4/evidence/factory_v16/SYNTHETIC_HANDOFF.json",
+    "sha256": "e04855daff599a260cbfa196c2dfaeb5ab611747586450fcab43bb7dcd83cb38"
+  },
+  "bundle": {
+    "uri": "p0e4/evidence/factory_v16/FACTORY_SHADOW.zip",
+    "sha256": "4fd61453ce5943fef3e35bfc6ec5d088b470f40171ff2647387094a68f2012ba"
+  },
+  "drive": {
+    "uri": "p0e4/evidence/factory_v16/DRIVE_RECEIPT.json",
+    "sha256": "715b385414635c32fd186f020ce6368a1fb361ed93d9476f7751e8943ebbafdd"
+  },
+  "field_map": {
+    "uri": "p0e4/canonical/CLAUDE_SHEET_FIELD_MAP_V01.json",
+    "sha256": "6799df7e0983580bf1411a8d97fe5bd0c8947dc2e1179d1a441b369b55cd3886"
+  },
+  "snapshot": {
+    "uri": "p0e4/evidence/canonical_v15/LIVE_SHEET_SNAPSHOT.json",
+    "sha256": "5c4de44614541a526539b1da49b2f3c07e52caabba1fdfbcaa7ed76b28e0b492"
+  },
+  "decision": {
+    "uri": "p0e4/evidence/factory_v16_authorization/DECISION.json",
+    "sha256": "64fc2db999750f01895a87d0485ece9dd94f6cc4a82c22ad1f530a9c18ddda06"
+  },
+  "decision_text": {
+    "uri": "p0e4/evidence/factory_v16_authorization/NITIN_AUTHORIZATION_EXACT.txt",
+    "sha256": "2e231f21fd6f9e5937278f03e1a77ac4b91eaaa4830a3b560a096567a1abd9c8"
+  }
+}

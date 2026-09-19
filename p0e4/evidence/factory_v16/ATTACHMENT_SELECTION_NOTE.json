@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "incorrect_initial_attachment": "regression_v154_remote.json",
+  "corrected_before_task_submission": true,
+  "action": "Removed incorrect unsent attachment from Claude composer; selected intended file via absolute path; verified filename before task submission",
+  "incorrect_attachment_may_have_uploaded_to_claude": true,
+  "incorrect_attachment_content": "Existing non-secret repository regression evidence, not used as V16 input",
+  "submitted_attachment": "V16_SYNTHETIC_HANDOFF.json",
+  "submitted_attachment_sha256": "e04855daff599a260cbfa196c2dfaeb5ab611747586450fcab43bb7dcd83cb38",
+  "submitted_attachment_id": "08c8044c-118e-4502-b8f3-757828f055ff"
+}

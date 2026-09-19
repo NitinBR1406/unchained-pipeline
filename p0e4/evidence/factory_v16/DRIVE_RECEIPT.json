@@ -1,0 +1,47 @@
+{
+  "upload": {
+    "accepted_input": "file_uri",
+    "success": true,
+    "id": "1QQaSuqBLN9AQFyQPWq1U_QoaBH5Thfl9",
+    "title": "UNCHAINED_V16_FACTORY_SHADOW_4fd61453ce59.zip",
+    "file_name": "UNCHAINED_V16_FACTORY_SHADOW_4fd61453ce59.zip",
+    "mime_type": "application/zip",
+    "url": "https://drive.google.com/file/d/1QQaSuqBLN9AQFyQPWq1U_QoaBH5Thfl9/view?usp=drivesdk",
+    "parent_id": "18e0lS9xvw7LO5a28HRP-fLrhQj0pvUrJ",
+    "structuredContent": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1QQaSuqBLN9AQFyQPWq1U_QoaBH5Thfl9",
+      "title": "UNCHAINED_V16_FACTORY_SHADOW_4fd61453ce59.zip",
+      "file_name": "UNCHAINED_V16_FACTORY_SHADOW_4fd61453ce59.zip",
+      "mime_type": "application/zip",
+      "url": "https://drive.google.com/file/d/1QQaSuqBLN9AQFyQPWq1U_QoaBH5Thfl9/view?usp=drivesdk",
+      "parent_id": "18e0lS9xvw7LO5a28HRP-fLrhQj0pvUrJ"
+    }
+  },
+  "metadata": {
+    "id": "1QQaSuqBLN9AQFyQPWq1U_QoaBH5Thfl9",
+    "title": "UNCHAINED_V16_FACTORY_SHADOW_4fd61453ce59.zip",
+    "mime_type": "application/zip",
+    "size": "25469",
+    "url": "https://drive.google.com/file/d/1QQaSuqBLN9AQFyQPWq1U_QoaBH5Thfl9/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/1QQaSuqBLN9AQFyQPWq1U_QoaBH5Thfl9/view?usp=drivesdk",
+    "file_or_folder": "file",
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "18e0lS9xvw7LO5a28HRP-fLrhQj0pvUrJ"
+    ],
+    "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "download_mode": "Existing bounded legacy compatibility readback; streaming reference not locally materialized",
+  "expected_sha256": "4fd61453ce5943fef3e35bfc6ec5d088b470f40171ff2647387094a68f2012ba",
+  "expected_bytes": 25469,
+  "remote_sha256": "4fd61453ce5943fef3e35bfc6ec5d088b470f40171ff2647387094a68f2012ba",
+  "remote_bytes_equal": true
+}

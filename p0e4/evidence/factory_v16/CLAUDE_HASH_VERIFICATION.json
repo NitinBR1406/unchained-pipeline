@@ -1,0 +1,21 @@
+{
+  "request_id": "P0E4_V16_FACTORY_INTEGRATION_A",
+  "artifact": "P0E4_V16_HASH_VERIFICATION.json",
+  "method": "hashlib.sha256(json.dumps(d,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest() where d = input sidecar object",
+  "computed_canonical_sha256": "985786af2f7959a5f7f321e2d9cffe2794db27cd839b269ad729fb06a98bff25",
+  "expected_canonical_sha256": "985786af2f7959a5f7f321e2d9cffe2794db27cd839b269ad729fb06a98bff25",
+  "canonical_match": true,
+  "input_attachment_sha256": "e04855daff599a260cbfa196c2dfaeb5ab611747586450fcab43bb7dcd83cb38",
+  "expected_attachment_sha256": "e04855daff599a260cbfa196c2dfaeb5ab611747586450fcab43bb7dcd83cb38",
+  "attachment_match": true,
+  "jobs_sha256": "f06bf54fe3ba9940316ef24495757856d81185ae107d7affa9a3f0f1795c0aab",
+  "jobs_sha256_method": "sha256 over output artifact jobs[] (sort_keys, compact, allow_nan=False)",
+  "prior_unverified_observation": "RESOLVED — canonical_sha256 now reproduced by the exact sidecar computation",
+  "output_artifact_unchanged": true,
+  "publication_authorized": false,
+  "gates": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

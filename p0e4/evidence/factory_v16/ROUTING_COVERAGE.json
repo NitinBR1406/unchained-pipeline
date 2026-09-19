@@ -1,0 +1,142 @@
+{
+  "schema": "FACTORY_CONSUMER_ROUTING",
+  "schema_version": 1,
+  "mode": "OFFLINE_PREPARATION",
+  "evidence_refs": [
+    {
+      "uri": "unpipe/adapters.py",
+      "sha256": "f5758eb6395aa63817da2aeee830cc40829cba0183e261a7f5e56cc5160ba6bc"
+    },
+    {
+      "uri": "p0e4/evidence/factory_v16/CLAUDE_DISCOVERY_RESULT.json",
+      "sha256": "53ea6dae3c20ca7691e71f1357ca7829f488be3d948dd6e70b9d16ec54a15535"
+    },
+    {
+      "uri": "p0e4/evidence/factory_v16/SOURCE_VERIFICATION.json",
+      "sha256": "e43700d3a4624df13ae6bc8311dcf996872939afd97894ada9ab0393007927cb"
+    },
+    {
+      "uri": "p0e4/canonical/CLAUDE_SHEET_FIELD_MAP_V01.json",
+      "sha256": "6799df7e0983580bf1411a8d97fe5bd0c8947dc2e1179d1a441b369b55cd3886"
+    },
+    {
+      "uri": "p0e4/canonical/RENDER_INTERFACE_V16.json",
+      "sha256": "c4da68ff4c9db59099b952851f5fb8af017d47c456a9846588607ff56d7cfbcd"
+    }
+  ],
+  "groups": [
+    {
+      "group": "title",
+      "target": "release.existing_package.title",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "caption",
+      "target": "release.existing_package.caption",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "hashtags",
+      "target": "release.existing_package.hashtags",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "cta",
+      "target": "release.existing_package.cta",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "hooks",
+      "target": "production.opening_hook",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "timestamps",
+      "target": "production.cut",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "derivatives",
+      "target": "production.assets",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "aspect_ratios",
+      "target": "production.aspect_ratio",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "edit_effects",
+      "target": "production.edit_plan",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "thumbnails_posters",
+      "target": "release.artwork",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "platform_targeting",
+      "target": "release.existing_package.platform",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "schedules",
+      "target": "release.schedule",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "experiments",
+      "target": "learning.experiment_context",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    },
+    {
+      "group": "provenance",
+      "target": "learning.provenance",
+      "implementation": "p0e4/canonical/factory.py",
+      "proven_scope": "OFFLINE_TYPED_CONSUMER",
+      "live_execution_proven": false
+    }
+  ],
+  "learning_domains": [
+    "CAMPAIGNS",
+    "HYPOTHESES",
+    "EXPERIMENTS",
+    "CREATIVE_INTELLIGENCE",
+    "PUBLICATION",
+    "ANALYTICS",
+    "AUDIENCE_GROWTH",
+    "BUSINESS_FUNNEL",
+    "MONETIZATION",
+    "AGENT_EVIDENCE"
+  ],
+  "legacy_live_column_changes": 0,
+  "production_deployment_authorized": false,
+  "publication_authorized": false
+}
