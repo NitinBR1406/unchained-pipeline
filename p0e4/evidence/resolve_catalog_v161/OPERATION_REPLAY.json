@@ -1,0 +1,15 @@
+{
+  "deterministic_replay": true,
+  "refs": [
+    {
+      "sha256": "f72885ab646a6c7ff34c1c75be872a0886a99ea00246249f89172001847065e0",
+      "uri": "p0e4/evidence/resolve_operations_v01/SYNTHETIC_OPERATION_DETAILS.json"
+    },
+    {
+      "sha256": "120a1ee39543bdb3bb10ec411d6192ae82bdbb15263158227fd26a8e77f6bae7",
+      "uri": "p0e4/evidence/resolve_operations_v01/SYNTHETIC_OPERATION_SUPPLEMENT.json"
+    }
+  ],
+  "resolve_execution_proven": false,
+  "status": "PASS"
+}

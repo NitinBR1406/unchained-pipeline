@@ -1,0 +1,68 @@
+{
+  "always_on_dispatcher_proven": false,
+  "blocked_tasks": [
+    {
+      "reason": "No Resolve installation, installed API, codec or safe local render capability proven; no purchase/install performed.",
+      "status": "WAITING_FOR_NITIN_INSTALL_SETUP",
+      "task_id": "RESOLVE_LOCAL_CAPABILITY_SMOKE"
+    },
+    {
+      "reason": "Finder metadata is available; directory and byte-read CLI attempts stalled. Read-only stat succeeded; cause remains unproven. No asset hashes or media QC claimed.",
+      "status": "WAITING_FOR_FILE_READ_SETUP",
+      "task_id": "CATALOG_ASSET_BYTE_VALIDATION"
+    },
+    {
+      "reason": "Folder/file names cannot establish original/cover/recreation, music/vocal/master completion, financial status or live readiness.",
+      "status": "WAITING_FOR_NITIN",
+      "task_id": "CATALOG_SEMANTIC_BINDINGS"
+    },
+    {
+      "reason": "Candidate MASTER filenames do not establish NITIN_AUDIO_SOURCE_BINDING.",
+      "status": "WAITING_FOR_NITIN",
+      "task_id": "AKI_AUTHORITATIVE_AUDIO_BINDING"
+    },
+    {
+      "reason": "Shared operational sheet design is offline; no live Sheet/Make cutover authorized.",
+      "status": "WAITING_FOR_NITIN_CHANGE_APPROVAL",
+      "task_id": "LIVE_OPERATIONAL_CUTOVER"
+    },
+    {
+      "reason": "Publication false and First Real Poster paused.",
+      "status": "WAITING_FOR_NITIN_PUBLISH_APPROVAL",
+      "task_id": "PUBLICATION"
+    }
+  ],
+  "catalog_refs": {
+    "inventory": {
+      "sha256": "fc4a4747f53b1ba9e1b037cbd8fcc01017e43746cb77a1de1d8d2a7047c4340f",
+      "uri": "p0e4/evidence/catalog_bootstrap_v01/CATALOG_INVENTORY_V01.json"
+    },
+    "outputs": {
+      "sha256": "b94e7e450f01b71a2a7765a8f71da3dcef2c0b771017d7da2c721b984ae1d2d6",
+      "uri": "p0e4/evidence/catalog_bootstrap_v01/CATALOG_OUTPUTS_V01.json"
+    }
+  },
+  "deterministic_replay": true,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "live_cutover_authorized": false,
+  "production_deployment_authorized": false,
+  "production_e2e_status": "BLOCKED_NOT_GREEN",
+  "publication_authorized": false,
+  "regression_ref": {
+    "sha256": "83778900614e937f4f7d748c8a7d3a8e9903e8c6491817ecdaf62770ab785eb4",
+    "uri": "p0e4/evidence/resolve_catalog_v161/REGRESSION.json"
+  },
+  "resolve_execution_proven": false,
+  "resolve_refs": {
+    "input": {
+      "sha256": "769744017dd90dbfd475d94c18a9421d1f19b33a8128ff318b3f47263747bd19",
+      "uri": "p0e4/evidence/resolve_preinstall_v01/SYNTHETIC_INPUT.json"
+    },
+    "plan": {
+      "sha256": "6f985a5cba4d60e6ef678d4e4481145e67241b4659b18c0acda250690a57054f",
+      "uri": "p0e4/evidence/resolve_preinstall_v01/RESOLVE_EXECUTION_PLAN_SYNTHETIC.json"
+    }
+  },
+  "status": "RESOLVE_PREINSTALL_AND_CATALOG_METADATA_ACCEPTED",
+  "tested_sha": "fefe2cd99c125d3b5aa6940da563ffb5611d8d15"
+}

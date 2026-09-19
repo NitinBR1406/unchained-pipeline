@@ -1,0 +1,46 @@
+{
+  "accepted_tasks": [
+    "V16_RESOLVE_PREINSTALL",
+    "FACTORY_CATALOG_BOOTSTRAP_V01",
+    "EC_V161_CATALOG_LIFECYCLE_CONTRACT"
+  ],
+  "backlog_note": "Approved expansion backlog retained; downstream catalog work requiring source content/semantics remains dependency-gated. No claim those engines are implemented.",
+  "backlog_ref": {
+    "sha256": "cfddfd5793d98e1ce40dee65ca64142635c7e0160715393bcebaa97469d5dca6",
+    "uri": "p0e4/evidence/catalog_bootstrap_v01/FACTORY_EXPANSION_BACKLOG_V01.json"
+  },
+  "ready_nonhuman_count": 0,
+  "schema_version": 1,
+  "tasks": [
+    {
+      "reason": "No Resolve installation, installed API, codec or safe local render capability proven; no purchase/install performed.",
+      "status": "WAITING_FOR_NITIN_INSTALL_SETUP",
+      "task_id": "RESOLVE_LOCAL_CAPABILITY_SMOKE"
+    },
+    {
+      "reason": "Finder metadata is available; directory and byte-read CLI attempts stalled. Read-only stat succeeded; cause remains unproven. No asset hashes or media QC claimed.",
+      "status": "WAITING_FOR_FILE_READ_SETUP",
+      "task_id": "CATALOG_ASSET_BYTE_VALIDATION"
+    },
+    {
+      "reason": "Folder/file names cannot establish original/cover/recreation, music/vocal/master completion, financial status or live readiness.",
+      "status": "WAITING_FOR_NITIN",
+      "task_id": "CATALOG_SEMANTIC_BINDINGS"
+    },
+    {
+      "reason": "Candidate MASTER filenames do not establish NITIN_AUDIO_SOURCE_BINDING.",
+      "status": "WAITING_FOR_NITIN",
+      "task_id": "AKI_AUTHORITATIVE_AUDIO_BINDING"
+    },
+    {
+      "reason": "Shared operational sheet design is offline; no live Sheet/Make cutover authorized.",
+      "status": "WAITING_FOR_NITIN_CHANGE_APPROVAL",
+      "task_id": "LIVE_OPERATIONAL_CUTOVER"
+    },
+    {
+      "reason": "Publication false and First Real Poster paused.",
+      "status": "WAITING_FOR_NITIN_PUBLISH_APPROVAL",
+      "task_id": "PUBLICATION"
+    }
+  ]
+}

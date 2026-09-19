@@ -1,0 +1,38 @@
+{
+  "actions": [
+    {
+      "action": "Nitin selects Free/Studio and installs if desired; consult the requirement matrix. No purchase has been made.",
+      "evidence": {
+        "sha256": "4c91193bc609349993dc197866358bf398ac213e5ca2288fae1263c7c5464ab8",
+        "uri": "p0e4/resolve/FREE_VS_STUDIO_REQUIREMENTS_V01.json"
+      },
+      "gate": "RESOLVE_INSTALL_SETUP"
+    },
+    {
+      "action": "Make the catalog originals readable to Codex without moving or renaming them. Metadata is visible but content reads stalled; no credential values requested and root cause unproven.",
+      "evidence": {
+        "sha256": "073cc42e1b5fcd6301b803a8cf3526ea9a75d39eeafb939cf43df30bc3e02578",
+        "uri": "p0e4/evidence/catalog_bootstrap_v01/DISCOVERY_RECEIPT.json"
+      },
+      "gate": "CATALOG_FILE_READ_SETUP"
+    },
+    {
+      "action": "Use the compact catalog review queue to identify actual song types/component status; bind authoritative Aakhri Ishq audio separately after its bytes can be hashed. No filename is promoted.",
+      "evidence": {
+        "sha256": "2a3777f08bdb4252a178c4883e121db02e06550d2edefec0601023f43a866507",
+        "uri": "p0e4/evidence/catalog_bootstrap_v01/NITIN_ACTION_QUEUE.json"
+      },
+      "gate": "CATALOG_SEMANTIC_AND_AUDIO_BINDING"
+    }
+  ],
+  "does_not_grant": [
+    "production_deployment",
+    "publication",
+    "rights_clearance",
+    "audio_binding",
+    "live_operational_cutover"
+  ],
+  "schema": "HUMAN_ACTION_PACKET",
+  "schema_version": 1,
+  "secret_names": []
+}
