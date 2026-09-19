@@ -1,0 +1,181 @@
+{
+  "status": "SCHEDULER_WAKE_ACCEPTED_EXTERNAL_EXECUTION_BLOCKED",
+  "tested_sha": "43d3c16c8d3ca54b36e7e4deb1362c21a1ecc031",
+  "deterministic_replay": true,
+  "real_media_qc_proven": false,
+  "durable_gui_dispatcher_proven": false,
+  "always_on_dispatcher_proven": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "production_e2e_status": "BLOCKED_NOT_GREEN",
+  "blocked_tasks": [
+    "EXPLICIT_PRIVATE_ARCHIVE_TRANSFER_APPROVAL",
+    "AUTHENTICATED_CLAUDE_PREFLIGHT_SMOKE",
+    "LIVE_MAKE_CONSUMERS_NOT_PROVEN",
+    "NITIN_AUDIO_SOURCE_BINDING"
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "live_cutover_authorized": false,
+  "live_adapter_proven": false,
+  "shadow_refs": {
+    "shadow": {
+      "uri": "p0e4/evidence/canonical_v15/SHADOW_FIXTURE.json",
+      "sha256": "23a1af578dc164ecded23d4b0d49f5d5e329049b22308f10d78fa59c79b7968b"
+    },
+    "field_map": {
+      "uri": "p0e4/canonical/CLAUDE_SHEET_FIELD_MAP_V01.json",
+      "sha256": "6799df7e0983580bf1411a8d97fe5bd0c8947dc2e1179d1a441b369b55cd3886"
+    },
+    "snapshot": {
+      "uri": "p0e4/evidence/canonical_v15/LIVE_SHEET_SNAPSHOT.json",
+      "sha256": "5c4de44614541a526539b1da49b2f3c07e52caabba1fdfbcaa7ed76b28e0b492"
+    }
+  },
+  "coverage": {
+    "schema": "EXECUTION_COVERAGE_REPORT",
+    "schema_version": 1,
+    "canonical_sha256": "ff063dee4a8e75a1e87c12f6ca583442341b41340e24dee0c8a8c505ee1fd9b7",
+    "map_sha256": "29270af83054bfa59848c6b9eefec01a040fb6faed18b3c83243cb6e7a115063",
+    "required_count": 14,
+    "projected_count": 3,
+    "missing_count": 11,
+    "fields": [
+      {
+        "package_id": "package:test",
+        "field": "title",
+        "canonical_path": "PLATFORM_PACKAGES[*].title",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "PROJECTED_LEGACY_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "caption",
+        "canonical_path": "PLATFORM_PACKAGES[*].caption",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "PROJECTED_LEGACY_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "hashtags",
+        "canonical_path": "PLATFORM_PACKAGES[*].hashtags",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "PROJECTED_LEGACY_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "cta",
+        "canonical_path": "PLATFORM_PACKAGES[*].cta",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "hooks",
+        "canonical_path": "DERIVATIVES[*].hook",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "timestamps",
+        "canonical_path": "DERIVATIVES[*].start_ms,end_ms",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "derivatives",
+        "canonical_path": "DERIVATIVES",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "aspect_ratios",
+        "canonical_path": "DERIVATIVES[*].aspect_ratio",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "edit_effects",
+        "canonical_path": "creative_package.payload.edit_plan",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "thumbnails_posters",
+        "canonical_path": "PLATFORM_PACKAGES[*].thumbnail_asset_id,poster_asset_id",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "platform_targeting",
+        "canonical_path": "PLATFORM_PACKAGES[*].platform",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "schedules",
+        "canonical_path": "PLATFORM_PACKAGES[*].scheduled_at,schedule_timezone,schedule_version",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "experiments",
+        "canonical_path": "EXPERIMENTS",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      },
+      {
+        "package_id": "package:test",
+        "field": "provenance",
+        "canonical_path": "AGENT_EVIDENCE,evidence_refs,source_package_sha256",
+        "storage": "LOSSLESS_SHADOW",
+        "execution": "REQUIRED_UNMAPPED_EXECUTION_FIELD",
+        "authenticated_live_execution": false
+      }
+    ],
+    "shadow_zero_drift": true,
+    "execution_coverage_complete": false,
+    "live_execution_proven": false,
+    "dispatch_authorized": false,
+    "status": "BLOCKED_REQUIRED_EXECUTION_COVERAGE"
+  },
+  "preflight_readback": {
+    "status": "PASS",
+    "groups_per_package": 14,
+    "zero_semantic_drift": true,
+    "scope": "LOCAL_CLAUDE_PREFLIGHT_CONTRACT",
+    "live_legacy_execution_proven": false
+  },
+  "automatic_next_ready_real_cli_proven": true,
+  "real_cli_tasks_completed": 2,
+  "idempotent_replay_without_dispatch": true,
+  "heartbeat_automation_active": true,
+  "scheduler_idle_wake_proven": true,
+  "scope_acceptance": "One actual native scheduler wake after prior final response, remote-state validation and unchanged completed queue replay accepted. No new READY execution task existed, no new CLI dispatch; no unlimited always-on or GUI execution claim.",
+  "wake_ref": {
+    "uri": "p0e4/evidence/wake_v153/WAKE_RECEIPT.json",
+    "sha256": "7ccb8fecb7b300a1085e0336ac5b04df34c72bac4252152b5c33c32f9c70ddbf"
+  },
+  "scheduler_idle_wake_new_task_dispatch_proven": false,
+  "real_cli_tasks_completed_this_wake": 0
+}

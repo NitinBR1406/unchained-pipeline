@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checkpoint_tested_sha": "43d3c16c8d3ca54b36e7e4deb1362c21a1ecc031",
+  "tasks": [
+    {
+      "task_id": "V152_SCHEDULER_IDLE_WAKE_PROOF",
+      "status": "COMPLETED_BOUNDED",
+      "evidence_ref": {
+        "uri": "p0e4/evidence/wake_v153/WAKE_RECEIPT.json",
+        "sha256": "7ccb8fecb7b300a1085e0336ac5b04df34c72bac4252152b5c33c32f9c70ddbf"
+      }
+    },
+    {
+      "task_id": "V152_AUTHENTICATED_CLAUDE_PREFLIGHT",
+      "status": "WAITING_FOR_EXPLICIT_TRANSFER_APPROVAL",
+      "action": "Only after explicit user approval submit the single bounded read-only archive preflight to Claude Dispatch, compare returned groups with PREFLIGHT.json, persist authenticated observation receipt and fail closed on differences."
+    },
+    {
+      "task_id": "AKI_AUTHORITATIVE_AUDIO_BINDING",
+      "status": "WAITING_FOR_NITIN",
+      "action": "Known media may remain INTEGRATION_TEST_INPUT only; never promote candidate container audio."
+    }
+  ],
+  "automatic_scheduler_id": "unchained-p0-e4-ready-continuation",
+  "no_duplicate_dispatch": true,
+  "publication_authorized": false,
+  "unchanged_wake_policy": "If no explicit approval or new authorized READY task exists, inspect status read-only, do not create repeated evidence/state commits, do not redispatch completed tasks, and remain quiet."
+}

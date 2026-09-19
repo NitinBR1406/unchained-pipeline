@@ -1,0 +1,69 @@
+{
+  "schema": "SCHEDULER_IDLE_WAKE_RECEIPT",
+  "schema_version": 1,
+  "automation_id": "unchained-p0-e4-ready-continuation",
+  "trigger": "SCHEDULER_WAKE",
+  "trigger_at": "2026-09-19T09:14:01.772Z",
+  "observed_at": "2026-09-19T09:15:33.331721Z",
+  "prior_checkpoint_sha256": "bca5c04312c78c6a3e46ca133956a58448f61db958b2f96dfb1f2c05be8df23e",
+  "prior_state_version": 22,
+  "remote_head": "e32a1a461b06d81073fd2cbe4552dbba01aaea02",
+  "source": "Actual heartbeat input on this task after prior final response; not inferred from configuration",
+  "provider_signed_trigger": false,
+  "idle_to_wake_observed": true,
+  "reconciliation": {
+    "status": "QUIESCENT",
+    "results": [
+      {
+        "commit": "e2e0b69edc352cb88919cea0080184923c3edf0a",
+        "events_sha256": "f179a018d3e3e5caea3448785cc1429d5dcee93f7a7f97eda08bcc18effd2d05",
+        "exit_sha256": "fe53e2fbe8bb108fa46bbd4c407f76c4d2c8bedcb86e4c6ef67bb6cd78ff82de",
+        "model": null,
+        "outputs": {
+          "p0e4/generated/execution_receipt.schema.json": "c8a7d253fde04c93489560809241b5478d1c6b173d5dc1db8645fa8fb570517a"
+        },
+        "remote_verified": true,
+        "status": "COMPLETED",
+        "task_id": "EC_V11_RECEIPT_SCHEMA",
+        "task_sha256": "5d11cbbbb6f5c6eeb1ca69ebd19eb76d149fb775a420945aa66dbe92769809f5",
+        "thread_id": "01a0b669-ab75-7ad2-8306-fa01c8139d4b"
+      },
+      {
+        "commit": "9bfc03a4144f81260089db19b2d2274b4f1d5d7e",
+        "events_sha256": "9b482d994fe088b5cddd687080894e240ac16f84516d7229dfd40d55a204909e",
+        "exit_sha256": "fe53e2fbe8bb108fa46bbd4c407f76c4d2c8bedcb86e4c6ef67bb6cd78ff82de",
+        "model": null,
+        "outputs": {
+          "p0e4/generated/v152_preflight_groups.json": "6229f7834373df4db1621068d93b8bb0b97794db4eb961d233754c73853a370f"
+        },
+        "remote_verified": false,
+        "status": "COMPLETED",
+        "task_id": "EC_V152_PREFLIGHT_GROUPS",
+        "task_sha256": "4679cac6fba189433931b59882a2442b9f513994c993019aaecd5d450cb22e85",
+        "thread_id": "01a0b8de-a2c4-7312-ba1c-32c944a784a1"
+      },
+      {
+        "commit": "5e081abcff35e249973051d82ebb755053ac226a",
+        "events_sha256": "6d80dc98b71e56c3009f406d3aa1c2c3ed6ae6af45bb4265e69dd4bef5aec4c9",
+        "exit_sha256": "fe53e2fbe8bb108fa46bbd4c407f76c4d2c8bedcb86e4c6ef67bb6cd78ff82de",
+        "model": null,
+        "outputs": {
+          "p0e4/generated/v152_wake_receipt.json": "27eaf2eb9f0be437628c2b22622a6dbfd21a4efb9310b5067a8bdce033d63df3"
+        },
+        "remote_verified": false,
+        "status": "COMPLETED",
+        "task_id": "EC_V152_WAKE_RECEIPT",
+        "task_sha256": "517d288c5b585f878a1e19b2a03d690d92956430a53696f77cedc2108b00d65e",
+        "thread_id": "01a0b8df-2432-79e1-8c57-8c37b0a872a7"
+      }
+    ],
+    "completed": 3,
+    "held": 0
+  },
+  "new_dispatches": 0,
+  "new_execution_commits": 0,
+  "runtime_ledgers_unchanged": true,
+  "always_on_dispatcher_proven": false,
+  "scope": "One observed native scheduler wake and durable queue resume. No new READY CLI task existed; combined idle/wake/new-task dispatch is not proven.",
+  "publication_authorized": false
+}

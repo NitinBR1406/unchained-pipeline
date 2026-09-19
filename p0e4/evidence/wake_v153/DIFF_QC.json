@@ -1,0 +1,10 @@
+{
+  "parent_remote_sha": "e32a1a461b06d81073fd2cbe4552dbba01aaea02",
+  "tested_sha": "43d3c16c8d3ca54b36e7e4deb1362c21a1ecc031",
+  "frozen_components_changed": false,
+  "executor_runtime_code_changed": false,
+  "new_dispatches": 0,
+  "new_production_runs": 0,
+  "external_writes": 0,
+  "source_change": "Additive V15.3 evidence projection and test only"
+}
