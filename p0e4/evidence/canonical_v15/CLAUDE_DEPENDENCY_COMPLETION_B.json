@@ -1,0 +1,147 @@
+{
+  "request_id": "P0E4_V15_DEPENDENCY_COMPLETION_B",
+  "task_identity": "P0-E4 V15 dependency completion (read-only)",
+  "observed_at": "2026-09-19",
+  "status": "COMPLETE",
+  "NON_PUBLISHING": true,
+  "external_writes_performed": 0,
+  "publishes_performed": 0,
+  "external_side_effects_performed": 0,
+  "secrets_exposed": false,
+  "gates": {"PRODUCTION_DEPLOYMENT_AUTHORIZED": false, "PUBLICATION_AUTHORIZED": false, "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"},
+  "read_calls": [
+    {"tool": "make.scenarios_get", "ids_fresh_reread": [9385197, 9385359, 9627055], "result": "OK — all three unchanged vs V15 (N2 lastEdit 2026-06-29, N3 2026-07-23 isinvalid+inactive, P1 2026-09-14)"},
+    {"tool": "make.scenarios_get", "ids_new": [9385364, 9397512, 9483892, 9571076, 9571262, 9508104, 9508147, 9508162, 9508973, 9508207, 9508239, 9508062, 9472289, 9465683, 9465685, 9591968, 9561890], "result": "OK (17 scenarios)"}
+  ],
+  "read_failures": [],
+  "coverage": {
+    "refreshed": ["N2 9385197", "N3 9385359", "P1 9627055"],
+    "newly_inspected": ["N4 9385364", "N5 9397512", "N6 9483892", "N7 9571076", "N8 9571262", "N0-B1 9508104", "N0-B2 9508147", "N0-C 9508162", "N0-C2 9508973", "N0-D1 9508207", "N0-D2 9508239", "N0-PREP-TEST 9508062", "N0-BEAT-TEST 9472289", "N0-B-TEST-clip 9465683", "N0-B-TEST-poll 9465685", "V1b 9591968", "V3-nonsecure 9561890"],
+    "already_covered_prior_V15_task": ["N1 9385192", "N0-E 9508460", "N0-REVIEW 9508282", "N0-REVIEW-APPROVE 9508279", "V1 9516949", "V2 9516688", "V3-SECURE 9796001"],
+    "all_target_scope_covered": true
+  },
+  "preserved_conflicts": [
+    {"tab": "N0_Master", "index": 20, "codex_live_header": "schedule", "observed_write_role": "N0-E (9508460) module 5 writes {{post_id}} into index 20 (status->Scheduled)", "status": "UNRESOLVED_CONFLICT — header says 'schedule' but N0-E writes a post_id there; do not infer, flag for reconciliation"},
+    {"tab": "Content_Master", "index": 8, "codex_live_header": "data", "observed_write_role": "N2 (9385197) module 13 writes {{md5}} into index 8", "status": "UNRESOLVED_CONFLICT — header 'data' vs md5 write"},
+    {"tab": "Captions_Publishing", "index": 9, "observed_roles": ["tiktok_hashtags (N2 module 7, N0-E module 4 write {{tiktok.hashtags}})", "retry_count (N4 module 2/updates read+write {{1.`9`}} as numeric retry counter)"], "status": "NEW_CONFLICT_FOUND — index 9 is written as tiktok_hashtags by N2/N0-E but read/written as retry_count by N4; same physical column, two incompatible meanings", "note": "cross-check against Codex live header for idx9"}
+  ],
+  "refreshed_scenarios": {
+    "N2_9385197": {"isActive": true, "isinvalid": false, "unchanged_vs_V15": true, "sheets": ["Content_Master(w)", "Status_Logging(w/r/u)", "Captions_Publishing(w: status=New, flags 14-17 TRUE, sched 18-21)"]},
+    "N3_9385359": {"isActive": false, "isinvalid": true, "unchanged_vs_V15": true, "sheets": ["Captions_Publishing(r New / u post-ids 22-25 / u status Published|Error)", "Content_Master(r)"], "publish_gate": "sheet-flag only; no approval verifier"},
+    "P1_9627055": {"isActive": true, "isinvalid": false, "unchanged_vs_V15": true, "sheets": [], "datastore": 177455, "publish_gate": "external fail-closed eligibility verifier (VALID_PUBLISH_APPROVAL + eligible)"}
+  },
+  "newly_inspected_scenarios": {
+    "N4_9385364": {
+      "isActive": false, "isinvalid": true, "scheduling": "indefinitely/3600s", "role": "retry failed publishes max 3 + email alert",
+      "sheet_modules": [
+        {"module_id": 1, "type": "filterRows", "tab": "Captions_Publishing", "range": "A1:CZ1", "filter": "col W(22)|X(23)|Y(24)|Z(25) == 'ERROR'"},
+        {"module_id": 4, "type": "filterRows", "tab": "Content_Master", "range": "A1:J1", "filter": "B == post_id"},
+        {"module_ids_update": [28,22,23,31,32,41,42,51,52], "type": "updateRow", "tab": "Captions_Publishing", "writes": {"9": "retry_count (add 1 / reset 0)", "22": "yt id|ERROR", "23": "tt id|ERROR", "24": "ig id|ERROR", "25": "fb id|ERROR"}}
+      ],
+      "reads_fields": {"9": "retry_count", "22-25": "platform post ids / ERROR sentinel", "6": "yt title", "4/5": "yt desc/hashtags", "8/10/12": "captions", "2": "filename (Content_Master col2)"},
+      "publish_modules": ["youtube:ActionUploadVideo(acct 14374103)", "http open.tiktokapis.com [HARDCODED BEARER TOKEN — REDACTED]", "instagram-business:CreateAReelPost(17841457677776171)", "facebook-pages:UploadVideo(page 839373332878305)"],
+      "security_finding": "N4 module 30 still contains a HARDCODED TikTok bearer token in the Authorization header (redacted here). Expired per prior evidence; nonetheless a plaintext-credential-in-blueprint risk.",
+      "error_store": "none (uses sheet ERROR sentinels + email)"
+    },
+    "N5_9397512": {
+      "isActive": true, "isinvalid": false, "scheduling": "immediately (hook 4201776)", "role": "email after FB upload + mark reshare",
+      "sheet_modules": [
+        {"module_id": 4, "type": "filterRows", "tab": "Captions_Publishing", "range": "A1:CZ1", "filter": "B == {{webhook.post_id}}"},
+        {"module_id": 3, "type": "updateRow", "tab": "Captions_Publishing", "writes": {"26": "'RESHARE_NOTIFIED'"}}
+      ],
+      "consumes_webhook_payload": ["post_id", "fb_video_id", "caption"],
+      "defines_field": "Captions_Publishing index 26 = facebook_personal_reshare status"
+    },
+    "N6_9483892": {
+      "isActive": true, "isinvalid": false, "scheduling": "indefinitely/840s", "role": "personal reel ready-to-post mail",
+      "sheet_modules": [
+        {"module_id": 1, "type": "filterRows", "tab": "Captions_Publishing", "range": "A1:AB1", "filter": "A == 'Published'"},
+        {"module_id": 2, "type": "filterRows", "tab": "Content_Master", "range": "A1:J1", "filter": "B == post_id AND (col25 fb_post_id not empty) AND (col27 empty)"},
+        {"module_id": 5, "type": "updateRow", "tab": "Captions_Publishing", "writes": {"27": "'QUEUED'"}}
+      ],
+      "reads_fields": {"25": "fb_post_id (gate)", "27": "queue flag (gate)", "12": "facebook_caption", "6": "youtube_title", "1": "post_id", "Content_Master.4": "drive_url"},
+      "defines_field": "Captions_Publishing index 27 = personal_reel_queue status (QUEUED)",
+      "download_link": "N8 proxy webhook [PRIVATE URL REDACTED]"
+    },
+    "N7_9571076": {
+      "isActive": true, "isinvalid": false, "scheduling": "indefinitely/900s", "role": "release scheduler",
+      "sheet_modules": [
+        {"module_id": 1, "type": "filterRows", "tab": "Captions_Publishing", "range": "A1:AB1", "filter": "A == 'Scheduled'"},
+        {"module_id": 3, "type": "updateRow", "tab": "Captions_Publishing", "gate": "col18 (youtube_schedule) epoch <= now", "writes": {"0": "'New'"}}
+      ],
+      "defines_status": "Captions_Publishing col0 enum includes 'Scheduled' (flips to 'New' at release time); col18 is the authoritative release timestamp"
+    },
+    "N8_9571262": {
+      "isActive": true, "isinvalid": false, "scheduling": "immediately (hook 4278827)", "role": "force-download proxy",
+      "sheet_modules": [], "datastore": [],
+      "detail": "webhook receives url+fn; ALLOWLIST filter: url must contain 'storage.googleapis.com/unchained-nitin-media/'; streams back as mp4 attachment. Media bucket = GCS unchained-nitin-media."
+    },
+    "N0-B1_9508104": {"isActive": false, "role": "OpusClip submit", "sheet": "N0_Master(r A=Prepped / u col0=Clipping,col6=opus_project_id,col22=err)", "reads": {"5": "prepped_url"}, "datastore": {"169448": "OpusClip config/api_key [REDACTED]", "168812": "error log"}, "http": "api.opus.pro/clip-projects"},
+    "N0-B2_9508147": {"isActive": false, "role": "OpusClip fetch clips", "sheet": "N0_Master(r A=Clipping / u parent col0=Clipped-done,col22=count / addRow per clip)", "clip_row_writes": {"0": "Clipped", "1": "n0_id-curationId", "2": "title", "5": "src_url", "6": "project_id", "7": "clip_id", "8": "uriForExport", "9": "uriForThumbnail", "10": "score", "11": "timeRange", "12": "text", "14": "description", "15": "hashtags"}, "datastore": {"169448": "opus"}, "http": "api.opus.pro/exportable-clips"},
+    "N0-C_9508162": {"isActive": false, "role": "romanize + caption", "sheet": "N0_Master(r A=Clipped col12 transcript / u col0=Romanized,col13=romanized,col14=caption_nl,col15=hashtags)", "openai": "gpt-4.1-mini (conn 14335039)"},
+    "N0-C2_9508973": {"isActive": false, "role": "karaoke word-timings", "sheet": "N0_Master(r A=Romanized range A1:X1 / u col0=Captioned,col23=karaoke_json,col22=err)", "reads": {"6": "project_id", "7": "clip_id"}, "datastore": {"169690": "media svc config base_url/api_key [REDACTED]", "169448": "opus key"}, "http": "{{base_url}}/wordtimings", "openai": "gpt-4.1-mini"},
+    "N0-D1_9508207": {"isActive": false, "role": "beats/bpm", "sheet": "N0_Master(r A=Captioned / u col0=BeatsDone,col16=downbeats,col17=bpm,col22=err)", "reads": {"8": "export_uri(audio)"}, "datastore": {"169690": "media svc config"}, "http": "{{base_url}}/beats"},
+    "N0-D2_9508239": {"isActive": false, "role": "Creatomate render", "sheet": "N0_Master(r A=BeatsDone / u col0=Rendered,col18=render_url,col22=err)", "reads": {"8": "export_uri(video)", "13": "romanized(text overlay)"}, "datastore": {"171100": "Creatomate config/api_key [REDACTED]"}, "http": "api.creatomate.com/v1/renders"},
+    "N0-PREP-TEST_9508062": {"isActive": false, "scheduling": "on-demand", "role": "media-service /prep test (FFmpeg)", "sheet": [], "datastore": {"169690": "config", "169451": "test log", "168812": "err"}, "http": "{{base_url}}/prep"},
+    "N0-BEAT-TEST_9472289": {"isActive": false, "scheduling": "on-demand", "role": "beat service test", "sheet": [], "datastore": {"169690": "config", "169451": "test log"}, "http": "{{base_url}}/beats"},
+    "N0-B-TEST-clip_9465683": {"isActive": false, "scheduling": "on-demand", "role": "OpusClip create test", "sheet": [], "datastore": {"169448": "opus", "169451": "test log", "168812": "err"}, "http": "api.opus.pro/clip-projects"},
+    "N0-B-TEST-poll_9465685": {"isActive": false, "scheduling": "on-demand", "role": "OpusClip poll test", "sheet": [], "datastore": {"169448": "opus", "169451": "test log"}, "http": "api.opus.pro/exportable-clips (x-opus-org-id header present)"},
+    "V1b_9591968": {"isActive": false, "isinvalid": true, "role": "lyrics transcribe + review mail", "sheet": [], "datastore": {"169690": "media svc config"}, "http": "{{base_url}}/transcribe", "writes_fields": "none (config read only)"},
+    "V3-nonsecure_9561890": {
+      "isActive": false, "isinvalid": false, "scheduling": "immediately (hook 4274789)", "role": "visualizer approve -> DIRECT publish-queue write",
+      "sheet_modules": [
+        {"module_id": 6, "type": "addRow", "tab": "Content_Master", "writes": {"0": "Ready", "1": "UNVIS-post_id", "2": "title", "3": "short_video", "4": "clip_url", "5": "slot"}},
+        {"module_id": 7, "type": "addRow", "tab": "Captions_Publishing", "writes": {"0": "Scheduled", "1": "post_id", "2-13": "caption/tags per platform", "14-17": "TRUE", "18-21": "slot"}}
+      ],
+      "datastore": {"171448": "visualizer job -> status=Scheduled"},
+      "CRITICAL_CONVERGENCE": "V3-nonsecure is the BRIDGE that writes visualizer clips directly into Content_Master + Captions_Publishing — the SAME tabs N3 (and N7) consume. It has NO ts/nonce hardening (unlike V3-SECURE 9796001 which only sets datastore status=VISUALIZER_APPROVED). Currently INACTIVE.",
+      "security_contrast": "V3-SECURE (9796001) = hardened approval, stops at VISUALIZER_APPROVED. V3-nonsecure (9561890) = writes straight to publish queue. Both inactive."
+    }
+  },
+  "consolidated_observed_column_roles": {
+    "_disclaimer": "OBSERVED from live read/write expressions; NOT header names (headers per Codex). Conflicts preserved above.",
+    "N0_Master": {"range_seen": "A1:W1 and A1:X1", "0": "status", "1": "n0_id", "2": "title", "3": "UNKNOWN", "4": "UNKNOWN", "5": "prepped_url", "6": "opus_project_id", "7": "clip_id", "8": "export_uri(video/audio)", "9": "thumbnail_uri", "10": "score", "11": "time_range", "12": "text/transcript", "13": "romanized", "14": "caption", "15": "hashtags", "16": "downbeats", "17": "bpm", "18": "render_url", "19": "UNKNOWN", "20": "CONFLICT: N0-E writes post_id / Codex header=schedule", "21": "UNKNOWN", "22": "error_msg", "23": "karaoke_timings"},
+    "Content_Master": {"range": "A1:J1", "0": "status(Ready)", "1": "post_id", "2": "filename", "3": "media_type", "4": "drive_url", "5": "created_at", "6": "drive_file_id", "7": "UNKNOWN", "8": "CONFLICT: N2 writes md5 / Codex header=data", "9": "UNKNOWN"},
+    "Captions_Publishing": {"range": "A1:AB1", "0": "status(Scheduled/New/Published/Error)", "1": "post_id", "2": "base_caption", "3": "base_keywords", "4": "youtube_description", "5": "youtube_hashtags", "6": "youtube_title", "7": "youtube_tags", "8": "tiktok_caption", "9": "CONFLICT: tiktok_hashtags (N2/N0-E) vs retry_count (N4)", "10": "instagram_caption", "11": "instagram_hashtags", "12": "facebook_caption", "13": "facebook_hashtags", "14": "publish_youtube", "15": "publish_tiktok", "16": "publish_instagram", "17": "publish_facebook", "18": "youtube_schedule (also N7 release gate)", "19": "tiktok_schedule", "20": "instagram_schedule", "21": "facebook_schedule", "22": "youtube_post_id (ERROR sentinel)", "23": "tiktok_post_id (ERROR sentinel)", "24": "instagram_post_id (ERROR sentinel)", "25": "facebook_post_id (ERROR sentinel)", "26": "facebook_reshare_status (N5)", "27": "personal_reel_queue (N6)"},
+    "Status_Logging": {"range": "A1:CZ1", "0": "post_id", "1": "stage(PARAMS_SET/CAPTIONS_READY)", "2": "slot"}
+  },
+  "status_state_machines": {
+    "N0_Master_col0": ["Prepped", "Clipping", "Clipped-done", "Clipped", "Romanized", "Captioned", "BeatsDone", "Rendered", "Review", "Approved", "Scheduled", "Error"],
+    "Captions_Publishing_col0": ["Scheduled", "New", "Published", "Error"],
+    "datastore_171448_status": ["New", "Rendered", "VISUALIZER_APPROVED", "Scheduled"],
+    "datastore_177455_status": ["New"]
+  },
+  "datastore_field_dependencies": {
+    "168757": {"used_by": ["N3"], "role": "TikTok bearer token store (key 'main'.access_token) — NOT read"},
+    "168812": {"used_by": ["N3", "P1", "N0-B1/B2/C2/D1/D2/tests"], "role": "error/DLQ log", "fields_written": ["post_id", "platform", "scenario", "error_type", "status_code", "error_message", "raw_error", "timestamp"]},
+    "169448": {"used_by": ["N0-B1", "N0-B2", "N0-C2", "N0-B-tests"], "role": "OpusClip config", "fields": ["api_key [REDACTED]"]},
+    "169451": {"used_by": ["N0 test scenarios"], "role": "test call log", "fields": ["ts", "note", "payload", "status_code"]},
+    "169690": {"used_by": ["N0-C2", "N0-D1", "V1", "V2", "V1b", "PREP/BEAT tests"], "role": "media/beat/visualizer service config", "fields": ["base_url", "api_key [REDACTED]"]},
+    "171100": {"used_by": ["N0-D2"], "role": "Creatomate config", "fields": ["api_key [REDACTED]"]},
+    "171448": {"used_by": ["V1", "V2", "V3-nonsecure", "V3-SECURE"], "role": "visualizer jobs", "fields": ["title", "status", "created", "song_id", "audio_url", "photo_url", "cuts_count", "done_count", "subfolder_id", "fragment_urls"]},
+    "177455": {"used_by": ["P1"], "role": "poster rows", "fields": ["status", "ig", "fb", "ig_post_id", "fb_post_id", "poster_id", "asset_sha256", "packaging_sha256", "schedule_version", "scheduled_at", "scheduled_at_epoch", "caption", "image_url"]},
+    "185338": {"used_by": ["V3-SECURE"], "role": "consumed-nonce store key=sha256(nonce)", "fields": ["ts", "content_id", "nonce_hash", "consumed_at"]}
+  },
+  "producer_consumer_edges_added": [
+    {"edge": "N4 <-> Captions_Publishing", "detail": "reads cols 22-25==ERROR + col9 retry_count; retries publish; writes post-ids/retry_count. INACTIVE+isinvalid."},
+    {"edge": "N5 -> Captions_Publishing col26", "detail": "webhook from N3; writes RESHARE_NOTIFIED"},
+    {"edge": "N6 -> Captions_Publishing col27", "detail": "reads Published+fb_post_id; writes QUEUED; emails N8 download link"},
+    {"edge": "N7 -> Captions_Publishing col0", "detail": "Scheduled->New when col18 time reached (release gate feeding N3)"},
+    {"edge": "N8", "detail": "download proxy for GCS unchained-nitin-media bucket; consumed by N6 email link"},
+    {"edge": "N0 cover chain", "detail": "N0_Master Prepped->Clipping->Clipped->Romanized->Captioned->BeatsDone->Rendered via N0-B1/B2/C/C2/D1/D2 (all INACTIVE) -> N0-REVIEW/APPROVE -> N0-E -> Content_Master+Captions"},
+    {"edge": "V3-nonsecure -> Content_Master + Captions_Publishing", "detail": "CONVERGENCE: visualizer approval writes directly into the N-series publish tabs (status Scheduled). INACTIVE. V3-SECURE alternative stops at datastore VISUALIZER_APPROVED."}
+  ],
+  "unknowns": [
+    "N0_Master indices 3,4,19,21 — not referenced by any inspected module (UNKNOWN).",
+    "Content_Master indices 7,9 — not referenced (UNKNOWN).",
+    "Exact live header NAMES — per Codex (not read here); conflicts at N0_Master[20], Content_Master[8], Captions_Publishing[9] preserved for reconciliation.",
+    "Datastore full schemas beyond fields seen in expressions.",
+    "Row VALUES / counts — not read."
+  ],
+  "redactions": ["N4 hardcoded TikTok bearer token", "N1/N2/N5/N6/N8/N0-REVIEW/V2/V3 webhook URLs", "OpusClip/Creatomate/media-service api_keys (datastores 169448/171100/169690)", "TikTok token datastore 168757", "P1 verifier API key (auth 217337)"],
+  "security_findings": [
+    "N4 (9385364) contains a HARDCODED plaintext TikTok bearer token in a blueprint HTTP header (redacted). INACTIVE+isinvalid, but a credential-hygiene risk if reactivated.",
+    "N3 sheet-flag-only publish gate vs P1 external fail-closed approval verifier — inconsistent gate strength across publishers (carried from V15).",
+    "Field-index reuse conflict at Captions_Publishing[9] (tiktok_hashtags vs retry_count) could cause data corruption if N4 and N2 both act on the same rows."
+  ]
+}

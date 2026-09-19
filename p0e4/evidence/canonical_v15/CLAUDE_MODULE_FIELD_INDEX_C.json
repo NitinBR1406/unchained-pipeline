@@ -1,0 +1,144 @@
+{
+  "request_id": "P0E4_V15_MODULE_INDEX_C",
+  "task_identity": "P0-E4 V15 per-sheet-module field index (LOCAL extraction from already-retrieved blueprints)",
+  "observed_at": "2026-09-19",
+  "status": "COMPLETE",
+  "source": "Sanitized blueprints retrieved earlier this session via make.scenarios_get (V13/V15/V15-completion). No new execution.",
+  "NON_PUBLISHING": true,
+  "external_writes_performed": 0,
+  "publishes_performed": 0,
+  "secrets_exposed": false,
+  "gates": {"PRODUCTION_DEPLOYMENT_AUTHORIZED": false, "PUBLICATION_AUTHORIZED": false, "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"},
+  "conventions": {
+    "spreadsheet_id_all_sheet_modules": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+    "sheets_connection_ref": "__IMTCONN__ 14383319 (non-secret Make connection reference)",
+    "direction": {"filterRows": "read", "addRow": "write", "updateRow": "update"},
+    "range_note": "range shown only for filterRows (tableFirstRow). addRow/updateRow are index-addressed (useColumnHeaders=false) with no declared range -> range=null.",
+    "error_branch": "true = module lives in an onerror handler",
+    "redaction": "No secrets appear inside sheet modules; token/auth/webhook redaction applies to non-sheet modules and is noted elsewhere."
+  },
+  "sheet_modules": [
+    {"scenario_id": 9385197, "scenario": "N2", "module_id": 13, "module_type": "google-sheets:addRow", "direction": "write", "tab": "Content_Master", "range": null, "error_branch": false,
+     "numeric_index_to_expression": {"0": "\"Ready\"", "1": "{{1.post_id}}", "2": "{{1.filename}}", "3": "{{1.media_type}}", "4": "{{1.drive_url}}", "5": "{{formatDate(now;\"YYYY-MM-DD HH:mm:ss\")}}", "6": "{{1.drive_file_id}}", "8": "{{1.md5}}"}},
+    {"scenario_id": 9385197, "scenario": "N2", "module_id": 14, "module_type": "google-sheets:addRow", "direction": "write", "tab": "Status_Logging", "range": null, "error_branch": false,
+     "numeric_index_to_expression": {"0": "{{1.post_id}}", "1": "\"PARAMS_SET\""}},
+    {"scenario_id": 9385197, "scenario": "N2", "module_id": 7, "module_type": "google-sheets:addRow", "direction": "write", "tab": "Captions_Publishing", "range": null, "error_branch": false,
+     "numeric_index_to_expression": {"0": "\"New\"", "1": "{{1.post_id}}", "2": "{{3.result.base_caption}}", "3": "{{3.result.base_keywords}}", "4": "{{3.result.youtube.description}}", "5": "{{3.result.youtube.hashtags}}", "6": "{{3.result.youtube.title}}", "7": "{{3.result.youtube.tags}}", "8": "{{3.result.tiktok.caption}}", "9": "{{3.result.tiktok.hashtags}}", "10": "{{3.result.instagram.caption}}", "11": "{{3.result.instagram.hashtags}}", "12": "{{3.result.facebook.caption}}", "13": "{{3.result.facebook.hashtags}}", "14": "TRUE", "15": "TRUE", "16": "TRUE", "17": "TRUE", "18": "{{2.next_slot}}", "19": "{{2.next_slot}}", "20": "{{2.next_slot}}", "21": "{{2.next_slot}}"}},
+    {"scenario_id": 9385197, "scenario": "N2", "module_id": 9, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "Status_Logging", "range": "A1:CZ1", "error_branch": false, "filter": "A == {{1.post_id}}"},
+    {"scenario_id": 9385197, "scenario": "N2", "module_id": 11, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Status_Logging", "range": null, "error_branch": false, "row_number_ref": "{{9.__ROW_NUMBER__}}",
+     "numeric_index_to_expression": {"1": "\"CAPTIONS_READY\"", "2": "{{2.next_slot}}"}},
+
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "Captions_Publishing", "range": "A1:AB1", "error_branch": false, "filter": "A == \"New\"", "limit": 5},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 3, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "Content_Master", "range": "A1:J1", "error_branch": false, "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)"},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 14, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"22": "{{ifempty(12.id;\"YT_POSTED\")}}"}},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 43, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"0": "\"Published\""}, "route": "youtube"},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 50, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"0": "\"Error\"", "22": "\"DL_ERR: {{error.message}}\""}},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 51, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"0": "\"Error\"", "22": "\"YT_ERR: {{error.message}}\""}},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 64, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"23": "{{ifempty(62.data.data.publish_id;\"TT_POSTED\")}}"}},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 65, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"0": "\"Published\""}, "route": "tiktok"},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 67, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"0": "\"Error\"", "23": "\"TT_DL_ERR: {{error.message}}\""}},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 68, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"0": "\"Error\"", "23": "\"TT_ERR: {{error.message}}\""}},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 70, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"0": "\"Error\"", "23": "\"TT_PUT_ERR: {{error.message}}\""}},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 32, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"24": "{{ifempty(30.id;\"IG_POSTED\")}}"}},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 45, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"0": "\"Published\""}, "route": "instagram"},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 85, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"0": "\"Error\"", "24": "\"IG_ERR: {{error.message}}\""}},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 42, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"25": "{{ifempty(49.video_id;\"FB_POSTED\")}}"}},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 46, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"0": "\"Published\""}, "route": "facebook"},
+    {"scenario_id": 9385359, "scenario": "N3", "module_id": 87, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"0": "\"Error\"", "25": "\"FB_ERR: {{error.message}}\""}},
+    {"scenario_id": 9385359, "scenario": "N3", "note_nonsheet": "module 47 http POST to N5 reshare webhook [PRIVATE URL REDACTED]; module 62/63 http to open.tiktokapis.com with Bearer from datastore 168757 [REDACTED]"},
+
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "Captions_Publishing", "range": "A1:CZ1", "error_branch": false, "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR", "limit": 50},
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 4, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "Content_Master", "range": "A1:J1", "error_branch": false, "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}"},
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 28, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"9": "{{add(2.retry_count;1)}}", "22": "\"ERROR\""}, "route": "youtube-download"},
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 22, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"9": "{{add(2.retry_count;1)}}", "22": "\"ERROR\""}, "route": "youtube-upload"},
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 23, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"9": "\"0\"", "22": "{{21.id}}"}, "route": "youtube-ok"},
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 31, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"9": "{{add(2.retry_count;1)}}", "23": "\"ERROR\""}, "route": "tiktok"},
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 32, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"9": "\"0\"", "23": "{{30.data.data.publish_id}}"}, "route": "tiktok-ok"},
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 41, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"9": "{{add(2.retry_count;1)}}", "24": "\"ERROR\""}, "route": "instagram"},
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 42, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"9": "\"0\"", "24": "{{40.id}}"}, "route": "instagram-ok"},
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 51, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": true, "numeric_index_to_expression": {"9": "{{add(2.retry_count;1)}}", "25": "\"ERROR\""}, "route": "facebook"},
+    {"scenario_id": 9385364, "scenario": "N4", "module_id": 52, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"9": "\"0\"", "25": "{{50.id}}"}, "route": "facebook-ok"},
+    {"scenario_id": 9385364, "scenario": "N4", "note_nonsheet": "module 2 util:SetVariables reads index 9 as retry_count and 22-25 as error flags; module 30 http open.tiktokapis.com has HARDCODED Bearer token [REDACTED]; module 60 email on max-retries"},
+
+    {"scenario_id": 9397512, "scenario": "N5", "module_id": 4, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "Captions_Publishing", "range": "A1:CZ1", "error_branch": false, "filter": "B == {{1.post_id}} (webhook payload)"},
+    {"scenario_id": 9397512, "scenario": "N5", "module_id": 3, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "row_number_ref": "{{4.__ROW_NUMBER__}}", "numeric_index_to_expression": {"26": "\"RESHARE_NOTIFIED\""}},
+
+    {"scenario_id": 9483892, "scenario": "N6", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "Captions_Publishing", "range": "A1:AB1", "error_branch": false, "filter": "A == \"Published\"", "limit": 10, "sort": "desc"},
+    {"scenario_id": 9483892, "scenario": "N6", "module_id": 2, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "Content_Master", "range": "A1:J1", "error_branch": false, "filter": "B == {{1.`1`}}", "pre_filter": "col25(fb_post_id) not empty AND col27 empty"},
+    {"scenario_id": 9483892, "scenario": "N6", "module_id": 5, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"27": "\"QUEUED\""}},
+
+    {"scenario_id": 9571076, "scenario": "N7", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "Captions_Publishing", "range": "A1:AB1", "error_branch": false, "filter": "A == \"Scheduled\"", "limit": 20},
+    {"scenario_id": 9571076, "scenario": "N7", "module_id": 3, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "gate": "parseDate(col18 youtube_schedule; Europe/Amsterdam) epoch <= now", "numeric_index_to_expression": {"0": "\"New\""}},
+
+    {"scenario_id": 9508460, "scenario": "N0-E", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:W1", "error_branch": false, "filter": "A == \"Approved\"", "limit": 2},
+    {"scenario_id": 9508460, "scenario": "N0-E", "module_id": 3, "module_type": "google-sheets:addRow", "direction": "write", "tab": "Content_Master", "range": null, "error_branch": false, "numeric_index_to_expression": {"0": "\"Ready\"", "1": "{{2.post_id}}", "2": "{{1.`2`}}", "3": "\"short_video\"", "4": "{{1.`18`}}", "5": "{{2.slot}}"}},
+    {"scenario_id": 9508460, "scenario": "N0-E", "module_id": 4, "module_type": "google-sheets:addRow", "direction": "write", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"0": "\"New\"", "1": "{{2.post_id}}", "2": "{{1.`14`}}", "4": "{{1.`14`}}", "5": "{{1.`15`}}", "6": "{{1.`2`}}", "8": "{{1.`14`}}", "9": "{{1.`15`}}", "10": "{{1.`14`}}", "11": "{{1.`15`}}", "12": "{{1.`14`}}", "13": "{{1.`15`}}", "14": "TRUE", "15": "TRUE", "16": "TRUE", "17": "TRUE", "18": "{{2.slot}}", "19": "{{2.slot}}", "20": "{{2.slot}}", "21": "{{2.slot}}"}},
+    {"scenario_id": 9508460, "scenario": "N0-E", "module_id": 5, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Scheduled\"", "20": "{{2.post_id}}"}, "conflict_flag": "index 20: writes post_id but Codex live header='schedule'"},
+
+    {"scenario_id": 9508282, "scenario": "N0-REVIEW", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:W1", "error_branch": false, "filter": "A == \"Rendered\"", "limit": 3},
+    {"scenario_id": 9508282, "scenario": "N0-REVIEW", "module_id": 3, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Review\""}},
+
+    {"scenario_id": 9508279, "scenario": "N0-REVIEW-APPROVE", "module_id": 2, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:W1", "error_branch": false, "filter": "B == {{1.n0_id}} (webhook payload)", "limit": 1},
+    {"scenario_id": 9508279, "scenario": "N0-REVIEW-APPROVE", "module_id": 3, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": false, "row_number_ref": "{{2.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Approved\""}},
+
+    {"scenario_id": 9508104, "scenario": "N0-B1", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:W1", "error_branch": false, "filter": "A == \"Prepped\"", "limit": 3, "pre_filter": "col5 not empty AND col6 empty"},
+    {"scenario_id": 9508104, "scenario": "N0-B1", "module_id": 20, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": true, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Error\"", "22": "\"OPUS_ERR: {{error.message}}\""}},
+    {"scenario_id": 9508104, "scenario": "N0-B1", "module_id": 4, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Clipping\"", "6": "{{3.data.id}}"}, "reads": {"5": "prepped_url (videoUrl)"}},
+
+    {"scenario_id": 9508147, "scenario": "N0-B2", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:W1", "error_branch": false, "filter": "A == \"Clipping\"", "limit": 2, "pre_filter": "col6 not empty"},
+    {"scenario_id": 9508147, "scenario": "N0-B2", "module_id": 20, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": true, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Error\"", "22": "\"OPUS_CLIPS_ERR: {{error.message}}\""}},
+    {"scenario_id": 9508147, "scenario": "N0-B2", "module_id": 10, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Clipped-done\"", "22": "\"clips: {{3.data.total}}\""}},
+    {"scenario_id": 9508147, "scenario": "N0-B2", "module_id": 5, "module_type": "google-sheets:addRow", "direction": "write", "tab": "N0_Master", "range": null, "error_branch": false, "note": "one new row per OpusClip clip (BasicFeeder module 4 over 3.data.data)",
+     "numeric_index_to_expression": {"0": "\"Clipped\"", "1": "{{1.`1`}}-{{4.curationId}}", "2": "{{1.`2`}}", "5": "{{1.`5`}}", "6": "{{1.`6`}}", "7": "{{4.id}}", "8": "{{4.uriForExport}}", "9": "{{4.uriForThumbnail}}", "10": "{{4.score}}", "11": "{{4.timeRanges[1][1]}}", "12": "{{4.text}}", "14": "{{4.description}}", "15": "{{4.hashtags}}"}},
+
+    {"scenario_id": 9508162, "scenario": "N0-C", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:W1", "error_branch": false, "filter": "A == \"Clipped\"", "limit": 3, "pre_filter": "col12 not empty AND col13 empty"},
+    {"scenario_id": 9508162, "scenario": "N0-C", "module_id": 3, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Romanized\"", "13": "{{2.result.romanized}}", "14": "{{2.result.caption_nl}}", "15": "{{2.result.hashtags}}"}, "reads": {"12": "transcript (OpenAI input)"}},
+
+    {"scenario_id": 9508973, "scenario": "N0-C2", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:X1", "error_branch": false, "filter": "A == \"Romanized\"", "limit": 2, "pre_filter": "col7 not empty AND col23 empty"},
+    {"scenario_id": 9508973, "scenario": "N0-C2", "module_id": 20, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": true, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"22": "\"KARAOKE_ERR: {{error.message}}\""}},
+    {"scenario_id": 9508973, "scenario": "N0-C2", "module_id": 6, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Captioned\"", "23": "{{5.result.karaoke}}"}, "reads": {"6": "project_id", "7": "clip_id"}},
+
+    {"scenario_id": 9508207, "scenario": "N0-D1", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:X1", "error_branch": false, "filter": "A == \"Captioned\"", "limit": 3, "pre_filter": "col8 not empty AND col17 empty"},
+    {"scenario_id": 9508207, "scenario": "N0-D1", "module_id": 20, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": true, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Error\"", "22": "\"BEATS_ERR: {{error.message}}\""}},
+    {"scenario_id": 9508207, "scenario": "N0-D1", "module_id": 4, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"BeatsDone\"", "16": "{{join(3.data.downbeats;\",\")}}", "17": "{{3.data.bpm}}"}, "reads": {"8": "export_uri (audio_url)"}},
+
+    {"scenario_id": 9508239, "scenario": "N0-D2", "module_id": 1, "module_type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:W1", "error_branch": false, "filter": "A == \"BeatsDone\"", "limit": 2, "pre_filter": "col8 not empty AND col13 not empty AND col18 empty"},
+    {"scenario_id": 9508239, "scenario": "N0-D2", "module_id": 20, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": true, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Error\"", "22": "\"RENDER_ERR: {{error.message}}\""}},
+    {"scenario_id": 9508239, "scenario": "N0-D2", "module_id": 4, "module_type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "range": null, "error_branch": false, "row_number_ref": "{{1.__ROW_NUMBER__}}", "numeric_index_to_expression": {"0": "\"Rendered\"", "18": "{{3.data[1].url}}"}, "reads": {"8": "export_uri (video)", "13": "romanized (text overlay)"}},
+
+    {"scenario_id": 9561890, "scenario": "V3-nonsecure", "module_id": 6, "module_type": "google-sheets:addRow", "direction": "write", "tab": "Content_Master", "range": null, "error_branch": false, "numeric_index_to_expression": {"0": "\"Ready\"", "1": "{{5.post_id}} (UNVIS-...)", "2": "{{2.title}}", "3": "\"short_video\"", "4": "{{5.clip_url}}", "5": "{{5.slot}}"}},
+    {"scenario_id": 9561890, "scenario": "V3-nonsecure", "module_id": 7, "module_type": "google-sheets:addRow", "direction": "write", "tab": "Captions_Publishing", "range": null, "error_branch": false, "numeric_index_to_expression": {"0": "\"Scheduled\"", "1": "{{5.post_id}}", "2": "{{5.caption}}", "3": "{{5.tags}}", "4": "{{5.caption}}", "5": "{{5.tags}}", "6": "{{2.title}}", "7": "{{5.tags}}", "8": "{{5.caption_tags}}", "9": "{{5.tags}}", "10": "{{5.caption}}", "11": "{{5.tags}}", "12": "{{5.caption_tags}}", "13": "{{5.tags}}", "14": "TRUE", "15": "TRUE", "16": "TRUE", "17": "TRUE", "18": "{{5.slot}}", "19": "{{5.slot}}", "20": "{{5.slot}}", "21": "{{5.slot}}"}, "note": "CONVERGENCE: visualizer clips written directly into the N-series publish queue"}
+  ],
+  "scenarios_with_no_sheet_modules": [
+    {"scenario_id": 9385192, "scenario": "N1", "reason": "google-drive watch + http to N2 webhook only"},
+    {"scenario_id": 9571262, "scenario": "N8", "reason": "gateway webhook + http proxy only"},
+    {"scenario_id": 9627055, "scenario": "P1", "reason": "datastore 177455 backed; no sheets"},
+    {"scenario_id": 9508062, "scenario": "N0-PREP-TEST", "reason": "datastore + http /prep only"},
+    {"scenario_id": 9472289, "scenario": "N0-BEAT-TEST", "reason": "datastore + http /beats only"},
+    {"scenario_id": 9465683, "scenario": "N0-B-TEST-clip", "reason": "datastore + http opus only"},
+    {"scenario_id": 9465685, "scenario": "N0-B-TEST-poll", "reason": "datastore + http opus only"},
+    {"scenario_id": 9516949, "scenario": "V1", "reason": "drive + datastore 171448 + email"},
+    {"scenario_id": 9516688, "scenario": "V2", "reason": "gateway + datastore 171448/169690 + http render + openai + email"},
+    {"scenario_id": 9591968, "scenario": "V1b", "reason": "drive + datastore 169690 + http transcribe + email"},
+    {"scenario_id": 9796001, "scenario": "V3-SECURE", "reason": "gateway + datastore 171448/185338 only (no sheets)"}
+  ],
+  "module_counts": {
+    "total_sheet_modules": 68,
+    "by_tab": {"Captions_Publishing": 35, "N0_Master": 24, "Content_Master": 6, "Status_Logging": 3},
+    "by_direction": {"read_filterRows": 18, "write_addRow": 8, "update_updateRow": 42},
+    "informational_note_records": 2,
+    "note": "Counts are of records carrying module_type; they exclude non-sheet modules (http/datastore/email/openai/gateway/util/builtin) and 2 informational note records (N3, N4 non-sheet notes). Verified programmatically."
+  },
+  "grouped_unknowns": [
+    {"group": "N0_Master unreferenced indices", "indices": [3, 4, 19, 21], "reason": "no inspected module reads/writes these; role UNKNOWN (not guessed)"},
+    {"group": "Content_Master unreferenced indices", "indices": [7, 9], "reason": "no inspected module references; UNKNOWN"},
+    {"group": "range for addRow/updateRow", "reason": "Make addRow/updateRow are index-addressed with no declared A1 range; range=null is accurate, not missing"},
+    {"group": "header names", "reason": "not read here (per Codex live headers). Field-index conflicts preserved: N0_Master[20], Content_Master[8], Captions_Publishing[9]"}
+  ],
+  "field_index_conflicts_carried": [
+    {"tab": "Captions_Publishing", "index": 9, "roles": ["tiktok_hashtags (N2 m7, N0-E m4, V3-nonsecure m7)", "retry_count (N4 m22/23/28/31/32/41/42/51/52)"]},
+    {"tab": "N0_Master", "index": 20, "roles": ["post_id write (N0-E m5)", "Codex header='schedule'"]},
+    {"tab": "Content_Master", "index": 8, "roles": ["md5 write (N2 m13)", "Codex header='data'"]}
+  ],
+  "redactions": ["all webhook URLs", "N4 hardcoded TikTok bearer", "datastore-sourced api_keys/tokens", "P1 verifier api key"]
+}

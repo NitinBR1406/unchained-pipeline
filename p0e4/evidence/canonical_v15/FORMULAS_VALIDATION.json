@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-18T23:51:10.649Z",
+  "source": "direct_google_sheets_MCP",
+  "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+  "tabs": [
+    {
+      "tab": "Captions_Publishing",
+      "range": "A1:AE1012",
+      "cell_fields": "userEnteredValue(formulaValue),dataValidation",
+      "formula_or_validation_cells": [],
+      "successful": true
+    },
+    {
+      "tab": "Content_Master",
+      "range": "A1:Z1015",
+      "cell_fields": "userEnteredValue(formulaValue),dataValidation",
+      "formula_or_validation_cells": [],
+      "successful": true
+    },
+    {
+      "tab": "Status_Logging",
+      "range": "A1:Z1005",
+      "cell_fields": "userEnteredValue(formulaValue),dataValidation",
+      "formula_or_validation_cells": [],
+      "successful": true
+    },
+    {
+      "tab": "N0_Master",
+      "range": "A1:Z1003",
+      "cell_fields": "userEnteredValue(formulaValue),dataValidation",
+      "formula_or_validation_cells": [],
+      "successful": true
+    },
+    {
+      "tab": "Poster_Schedule",
+      "range": "A1:Z1000",
+      "cell_fields": "userEnteredValue(formulaValue),dataValidation",
+      "formula_or_validation_cells": [],
+      "successful": true
+    }
+  ],
+  "interpretation": "No formulas or dataValidation returned in full metadata-bounded grids; scalar row values excluded by field mask. Status enums therefore come from observed values/Make filters, not declared sheet validation."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "fixture_classification": "INTEGRATION_TEST_INPUT_SYNTHETIC_NOT_MEDIA",
+  "canonical_sha256": "ff063dee4a8e75a1e87c12f6ca583442341b41340e24dee0c8a8c505ee1fd9b7",
+  "shadow_sha256": "d2b29f40b4d9417909f5fb08ce5c670d2aafca4c3a55c4f9c64360a65856a6eb",
+  "roundtrip_semantic_drift": false,
+  "deterministic_replay": true,
+  "external_writes": 0,
+  "actual_claude_adapter_execution": false,
+  "actual_gemini_generation": false,
+  "authoritative_audio_bound": false
+}

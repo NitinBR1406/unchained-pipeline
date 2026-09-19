@@ -1,0 +1,187 @@
+{
+  "observed_at": "2026-09-18T23:46:33.814Z",
+  "spreadsheet_id": "16H8aksqIX0xJ7OhrqoYAuNypR4_R440ZMHaVFMuIZdk",
+  "properties": {
+    "title": "Master Analysis Sheet",
+    "locale": "en_GB",
+    "timeZone": "Asia/Calcutta"
+  },
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 0,
+        "title": "Content_Master",
+        "index": 0,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1066,
+          "columnCount": 24
+        }
+      },
+      "headers": [
+        "SL_RANGE=|TOTAL_ROWS=0",
+        "post_id",
+        "file_name",
+        "media_type",
+        "input_file_url",
+        "created_at",
+        "file_id",
+        "download_url",
+        "data",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 271739612,
+        "title": "Captions_Publishing",
+        "index": 1,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1026,
+          "columnCount": 27
+        }
+      },
+      "headers": [
+        "Choose The Status",
+        "post_id",
+        "base_caption",
+        "base_keywords",
+        "caption_youtube",
+        "hashtags_youtube",
+        "youtube_title",
+        "youtube_keywords",
+        "caption_tiktok",
+        "hashtags_tiktok",
+        "caption_instagram",
+        "hashtags_instagram",
+        "caption_facebook",
+        "hashtags_facebook",
+        "publish_to_youtube",
+        "publish_to_tiktok",
+        "publish_to_instagram",
+        "publish_to_facebook",
+        "youtube_schedule",
+        "tiktok_schedule",
+        "instagram_schedule",
+        "facebook_schedule",
+        "youtube_post_id",
+        "tiktok_post_id",
+        "instagram_post_id",
+        "facebook_post_id",
+        "published_at"
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 912833691,
+        "title": "Status_Logging",
+        "index": 2,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1059,
+          "columnCount": 26
+        }
+      },
+      "headers": [
+        "ROW= B=",
+        "PARAMS_SET ",
+        "Youtube ",
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "Youtube Retry",
+        "TEMP_DUMP: ",
+        "Instagram Retry",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 350707780,
+        "title": "TickTok Post",
+        "index": 3,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1026,
+          "columnCount": 42
+        }
+      },
+      "headers": [
+        "Choose The Status",
+        "post_id",
+        "caption_tiktok",
+        "hashtags_tiktok",
+        "tiktok_schedule",
+        "tiktok_video_id",
+        "video_url",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "coverage": "Exact header row only; not assumed operational"
+}

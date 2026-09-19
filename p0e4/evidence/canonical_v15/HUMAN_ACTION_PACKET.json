@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "gate": "NITIN_CHANGE_APPROVAL",
+  "status": "REQUIRED_BEFORE_LEGACY_CUTOVER_ONLY",
+  "requested_action": "Review a separately prepared exact cutover/configuration diff before any operational sheet move or Make field remapping. V15 does not perform that change.",
+  "conflicts_to_resolve": ["N0_Master index20 schedule versus post_id", "Content_Master index8 data versus md5", "Captions_Publishing index9 hashtags_tiktok versus N4 retry_count", "Captions_Publishing index26 published_at versus N5 RESHARE_NOTIFIED", "Captions_Publishing index27 and N0_Master index23 lack headers", "Sheet America/Los_Angeles timezone versus Make Europe/Amsterdam", "Missing canonical execution fields and legacy ID crosswalk", "N3 approval/SHA gate absent in observed blueprint"],
+  "secret_values_requested": false,
+  "credential_action": "Review N4 plaintext credential finding via secure provider tooling; no credential value is included or requested here.",
+  "migration_plan": "p0e4/canonical/MIGRATION_PLAN.md",
+  "audio_gate": "Existing NITIN_AUDIO_SOURCE_BINDING remains pending; candidates are test inputs only.",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

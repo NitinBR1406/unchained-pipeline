@@ -1,0 +1,13 @@
+# Shared Drive migration — plan only, no cutover
+
+Target verified Shared Drive: Unchained Nitin — Master, 0AG0CqqUZ6YuXUk9PVA. Current operational sheet 1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag is reported with drive_id=null, shared=false and parent 0AOa08v0OHcQ5Uk9PVA. Do not move it: ownership/connection changes may break active N1/N2/N0/P1/V dependencies.
+
+1. Preserve read-only header, formula/validation and sanitized blueprint snapshots with observation timestamps and hashes. Export full operational backup only under approved data scope; current evidence is a structural snapshot, not a recoverable full-data backup.
+2. Reconcile each numeric Make column reference against actual sheet IDs and headers. Resolve N0 column20 schedule/post-ID conflict, Content_Master column8 data/md5 meaning, shifted historical row layouts, blank Poster_Schedule headers and timezone differences. Preserve existing columns.
+3. Keep canonical schema and shadow JSON in version control. Stage a separately named canonical shadow bundle in the verified Shared Drive after a controlled storage change is approved; no operational sheet replacement or ownership change in V15.
+4. Run lossless sidecar projection/readback and negative tests. Before any operational use, re-read live headers and blueprints, compare hashes, require complete required-field mappings and authenticated adapter receipt. Shadow evidence does not prove write permission or live execution.
+5. Prepare a specific cutover diff: exact file IDs, connector service account access, module IDs, old/new sheet targets, migration crosswalk, downtime and duplicate-suppression keys. Obtain NITIN_CHANGE_APPROVAL for that diff. Existing production and publication gates remain independent and closed.
+6. In an approved maintenance window: stop competing writers under separate authorization, capture final backup/checkpoint, create non-destructive copy in Shared Drive, replay to a new shadow, compare semantic hashes/counts and test explicitly permitted non-publishing routes. Switch one approved adapter target only after equality and receipt checks.
+7. Roll back on any mismatch: restore original target IDs/configuration from frozen snapshot, retain original sheet and connections, stop new-target processing, reconcile receipts/idempotency keys before any retry. Never replay publication or delete the old sheet. Validate counts, hashes and original connectivity before closing the change.
+
+Acceptance for migration is separate from canonical-contract tests. V15 requests no live cutover and creates no publish permission. Operational ambiguities remain blockers, not silently repaired data.

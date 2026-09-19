@@ -1,0 +1,291 @@
+{
+  "schema": "CLAUDE_CANONICAL_SHADOW",
+  "schema_version": 1,
+  "status": "SHADOW_ONLY_NOT_DISPATCHABLE",
+  "canonical_sha256": "ff063dee4a8e75a1e87c12f6ca583442341b41340e24dee0c8a8c505ee1fd9b7",
+  "map_sha256": "29270af83054bfa59848c6b9eefec01a040fb6faed18b3c83243cb6e7a115063",
+  "rows": [
+    {
+      "package_id": "package:test",
+      "platform": "youtube_shorts",
+      "cells": {
+        "youtube_title": "TEST_ONLY title",
+        "caption_youtube": "TEST_ONLY caption",
+        "hashtags_youtube": "#TestOnly"
+      },
+      "controls": {
+        "publish_to_youtube": "FALSE",
+        "publish_to_tiktok": "FALSE",
+        "publish_to_instagram": "FALSE",
+        "publish_to_facebook": "FALSE"
+      },
+      "cells_by_index": {
+        "6": "TEST_ONLY title",
+        "4": "TEST_ONLY caption",
+        "5": "#TestOnly",
+        "14": "FALSE",
+        "15": "FALSE",
+        "16": "FALSE",
+        "17": "FALSE"
+      },
+      "value_input_option": "RAW"
+    }
+  ],
+  "sidecar": {
+    "schema": "UNCHAINED_FACTORY_CANONICAL",
+    "schema_version": 1,
+    "mode": "SHADOW_ONLY",
+    "content_id": "TEST_ONLY_GOLDEN",
+    "created_at": "2026-09-18T17:00:00Z",
+    "source_package_sha256": "ffe74a7674d660328d14af29c9b74c9a7f3a73e1fed3a2d2ab8c617b979e1587",
+    "evidence_refs": [
+      {
+        "evidence_id": "ev:test",
+        "uri": "p0e4/evidence/canonical_v15/fixture/evidence",
+        "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9"
+      }
+    ],
+    "governance": {
+      "production_deployment_authorized": false,
+      "publication_authorized": false,
+      "first_real_poster": "PAUSED_BY_NITIN",
+      "minimum_performance_fraction": "4/5"
+    },
+    "CAMPAIGNS": [
+      {
+        "campaign_id": "campaign:test",
+        "name": "INTEGRATION_TEST_INPUT",
+        "objective": "Test attribution, no actual growth values",
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "ASSETS": [
+      {
+        "asset_id": "asset:0",
+        "content_id": "TEST_ONLY_GOLDEN",
+        "role": "INTEGRATION_TEST_INPUT",
+        "uri": "p0e4/evidence/canonical_v15/fixture/raw",
+        "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+        "authority": "INTEGRATION_TEST_INPUT",
+        "binding_evidence_id": null,
+        "evidence_ids": [
+          "ev:test"
+        ]
+      },
+      {
+        "asset_id": "asset:1",
+        "content_id": "TEST_ONLY_GOLDEN",
+        "role": "INTEGRATION_TEST_INPUT",
+        "uri": "p0e4/evidence/canonical_v15/fixture/audio",
+        "sha256": "10c2bfd8e05bf892c38eb5edbc5521a9526155c397e5dd489f0f31f4114ebb62",
+        "authority": "INTEGRATION_TEST_INPUT",
+        "binding_evidence_id": null,
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "CONTENT_MASTER": [
+      {
+        "content_id": "TEST_ONLY_GOLDEN",
+        "campaign_id": "campaign:test",
+        "song_id": "song:test",
+        "title": "INTEGRATION_TEST_INPUT",
+        "track_type": "COVER",
+        "master_asset_id": null,
+        "isrc_code": null,
+        "status": "INTEGRATION_TEST_INPUT",
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "CREATIVE_INTELLIGENCE": [
+      {
+        "intelligence_id": "intelligence:test",
+        "content_id": "TEST_ONLY_GOLDEN",
+        "source_package_id": "TEST_ONLY_CREATIVE_INTELLIGENCE_PACKAGE",
+        "hypothesis_id": "hypothesis:test",
+        "recommendation": "TEST_ONLY recommendation",
+        "source_package_sha256": "ffe74a7674d660328d14af29c9b74c9a7f3a73e1fed3a2d2ab8c617b979e1587",
+        "agent_id": "agent:test",
+        "created_at": "2026-09-18T17:00:00Z",
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "HYPOTHESES": [
+      {
+        "hypothesis_id": "hypothesis:test",
+        "content_id": "TEST_ONLY_GOLDEN",
+        "statement": "TEST_ONLY vocal-first hook improves retention",
+        "predicted_metric": "retention",
+        "falsification_rule": "No improvement versus control",
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "DERIVATIVES": [
+      {
+        "derivative_id": "derivative:test",
+        "content_id": "TEST_ONLY_GOLDEN",
+        "source_asset_id": "asset:0",
+        "asset_id": null,
+        "hypothesis_id": "hypothesis:test",
+        "experiment_id": "experiment:test",
+        "kind": "CLIP",
+        "start_ms": 0,
+        "end_ms": 10000,
+        "aspect_ratio": "9:16",
+        "hook": "TEST_ONLY vocal opening",
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "PLATFORM_PACKAGES": [
+      {
+        "package_id": "package:test",
+        "derivative_id": "derivative:test",
+        "platform": "youtube_shorts",
+        "title": "TEST_ONLY title",
+        "caption": "TEST_ONLY caption",
+        "hashtags": [
+          "#TestOnly"
+        ],
+        "keywords": [
+          "test"
+        ],
+        "cta": "TEST_ONLY save",
+        "thumbnail_asset_id": null,
+        "poster_asset_id": null,
+        "scheduled_at": null,
+        "schedule_timezone": "Europe/Amsterdam",
+        "schedule_version": 1,
+        "status": "DRAFT",
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "PRODUCTION": [
+      {
+        "production_id": "production:test",
+        "content_id": "TEST_ONLY_GOLDEN",
+        "derivative_id": "derivative:test",
+        "creative_package_sha256": "ffe74a7674d660328d14af29c9b74c9a7f3a73e1fed3a2d2ab8c617b979e1587",
+        "edit_plan_sha256": "a747f7431b3d9c4e997ff3c49e4a3fa341855b0c4c3f416e26dd133de09992a6",
+        "executor_agent_id": "agent:test",
+        "status": "NOT_DISPATCHED",
+        "output_asset_id": null,
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "QC_APPROVALS": [],
+    "RIGHTS_RELEASE": [],
+    "PUBLICATION": [
+      {
+        "publication_id": "publication:test",
+        "package_id": "package:test",
+        "platform": "youtube_shorts",
+        "platform_post_id": null,
+        "published_at": null,
+        "status": "NOT_PUBLISHED",
+        "receipt_evidence_id": null,
+        "attribution_code": null,
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "ANALYTICS": [],
+    "EXPERIMENTS": [
+      {
+        "experiment_id": "experiment:test",
+        "campaign_id": "campaign:test",
+        "hypothesis_id": "hypothesis:test",
+        "tested_variable": "opening_hook",
+        "variant_id": "variant:test",
+        "control_variant_id": null,
+        "primary_metric": "retention",
+        "status": "PLANNED",
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "AUDIENCE_GROWTH": [],
+    "MONETIZATION": [],
+    "BUSINESS_FUNNEL": [],
+    "AGENT_EVIDENCE": [
+      {
+        "agent_id": "agent:test",
+        "agent_role": "GEMINI_INTELLIGENCE",
+        "source_agent_name": "TEST_ONLY_GEMINI",
+        "model_id": null,
+        "run_id": "TEST_ONLY_TEST_ONLY_GEMINI",
+        "observed_at": "2026-09-18T17:00:00Z",
+        "authenticated_receipt_id": null,
+        "evidence_ids": [
+          "ev:test"
+        ]
+      }
+    ],
+    "LEGACY_MAPPING": []
+  },
+  "creative_package": {
+    "schema": "CREATIVE_INTELLIGENCE_PACKAGE",
+    "schema_version": 1,
+    "content_id": "TEST_ONLY_GOLDEN",
+    "package_id": "TEST_ONLY_CREATIVE_INTELLIGENCE_PACKAGE",
+    "created_at": "2026-09-18T17:00:00Z",
+    "producer": {
+      "agent": "TEST_ONLY_GEMINI",
+      "model": null,
+      "run_id": "TEST_ONLY_TEST_ONLY_GEMINI"
+    },
+    "inputs": [
+      {
+        "role": "raw_video",
+        "uri": "p0e4/evidence/canonical_v15/fixture/raw",
+        "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a"
+      },
+      {
+        "role": "authoritative_audio",
+        "uri": "p0e4/evidence/canonical_v15/fixture/audio",
+        "sha256": "10c2bfd8e05bf892c38eb5edbc5521a9526155c397e5dd489f0f31f4114ebb62"
+      }
+    ],
+    "evidence_refs": [
+      {
+        "uri": "p0e4/evidence/canonical_v15/fixture/evidence",
+        "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9"
+      }
+    ],
+    "payload": {
+      "edit_plan": {
+        "duration_ms": 10000,
+        "baseline_locked": true,
+        "execution_mode": "RECOMMENDATION_ONLY",
+        "segments": [
+          {
+            "start_ms": 0,
+            "end_ms": 10000,
+            "source_sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+            "source_start_ms": 0,
+            "source_end_ms": 10000,
+            "performer_visible": true
+          }
+        ],
+        "effects": []
+      }
+    }
+  },
+  "external_writes": 0
+}

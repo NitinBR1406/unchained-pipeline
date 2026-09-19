@@ -1,0 +1,199 @@
+{
+  "request_id": "P0E4_V15_LIVE_FIELDS_20260919_A",
+  "task_identity": "P0-E4 V15 LIVE LEGACY FIELD INVENTORY (read-only)",
+  "observed_at": "2026-09-19",
+  "status": "COMPLETE_WITH_DOCUMENTED_GAPS",
+  "NON_PUBLISHING": true,
+  "external_writes_performed": 0,
+  "publishes_performed": 0,
+  "external_side_effects_performed": 0,
+  "secrets_exposed": false,
+  "gates": {"PRODUCTION_DEPLOYMENT_AUTHORIZED": false, "PUBLICATION_AUTHORIZED": false, "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"},
+  "actual_read_calls": [
+    {"tool": "make.scenarios_get", "id": 9385192, "name": "N1", "result": "OK", "fabricated": false},
+    {"tool": "make.scenarios_get", "id": 9385197, "name": "N2", "result": "OK (from V13 boundary smoke, same session)", "fabricated": false},
+    {"tool": "make.scenarios_get", "id": 9385359, "name": "N3", "result": "OK (from V13 boundary smoke, same session)", "fabricated": false},
+    {"tool": "make.scenarios_get", "id": 9508460, "name": "N0-E", "result": "OK", "fabricated": false},
+    {"tool": "make.scenarios_get", "id": 9508282, "name": "N0-REVIEW", "result": "OK", "fabricated": false},
+    {"tool": "make.scenarios_get", "id": 9508279, "name": "N0-REVIEW-APPROVE", "result": "OK", "fabricated": false},
+    {"tool": "make.scenarios_get", "id": 9627055, "name": "P1", "result": "OK (from V13 boundary smoke, same session)", "fabricated": false},
+    {"tool": "make.scenarios_get", "id": 9516949, "name": "V1", "result": "OK", "fabricated": false},
+    {"tool": "make.scenarios_get", "id": 9516688, "name": "V2", "result": "OK", "fabricated": false},
+    {"tool": "make.scenarios_get", "id": 9796001, "name": "V3-SECURE", "result": "OK", "fabricated": false}
+  ],
+  "read_failures": [],
+  "spreadsheets": {
+    "live_operational": {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "referenced_by": ["N2", "N3", "N0-E", "N0-REVIEW", "N0-REVIEW-APPROVE"],
+      "tabs_observed": ["Content_Master", "Captions_Publishing", "Status_Logging", "N0_Master"],
+      "note": "Every live sheet-touching scenario inspected uses THIS spreadsheet."
+    },
+    "historical_only": {
+      "spreadsheet_id": "16H8aksqIX0xJ7OhrqoYAuNypR4_R440ZMHaVFMuIZdk",
+      "title_from_drive_metadata": "Master Analysis Sheet",
+      "referenced_by_live_scenarios": [],
+      "classification": "NOT referenced by any inspected live scenario — historical/reference only, not live evidence."
+    }
+  },
+  "header_name_mapping_status": "UNKNOWN_BY_DESIGN: exact column header NAMES were NOT read. All live sheet modules use useColumnHeaders=false and address columns by numeric index; obtaining header names would require exporting full sheet rows (Drive export returns all data rows), which would expose private sheet rows — prohibited. Index->role below is OBSERVED from live blueprint read/write expressions, NOT inferred from header names and NOT taken from historical memory.",
+  "scenarios": [
+    {
+      "id": 9385192, "name": "N1: Intake — Drive Watcher", "isActive": true, "isinvalid": false,
+      "scheduling": "indefinitely/1800s", "sheet_modules": [],
+      "modules": [
+        {"id": 1, "module": "google-drive:watchFilesInAFolder", "direction": "read", "watch_folder_id": "14di5ijzl5hVVj5PEvbpLE3TN294sd77e", "conn_ref": 14383570, "conn_type": "google-restricted ([CONTACT_REDACTED])", "select": "create", "mimeType": "all"},
+        {"id": 2, "module": "util:SetVariables", "filter": "mimeType contains 'video'", "produces": {"post_id": "UASCE-{{now:YYYYMMDDHHmmss}}-{{substring(fileId,0,6)}}", "media_type": "short_video", "drive_url": "https://drive.google.com/uc?id={{fileId}}&export=download&confirm=t"}},
+        {"id": 3, "module": "http:MakeRequest", "direction": "write_out", "target": "N2 intake webhook [PRIVATE URL REDACTED]", "payload_fields": ["post_id", "drive_file_id", "filename", "media_type", "drive_url", "md5"]}
+      ]
+    },
+    {
+      "id": 9385197, "name": "N2: Processing — Captions & Scheduling", "isActive": true, "isinvalid": false,
+      "scheduling": "immediately (webhook hookId 4197563)",
+      "sheet_modules": [
+        {"module_id": 13, "type": "google-sheets:addRow", "direction": "write", "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag", "tab": "Content_Master", "conn_ref": 14383319, "index_to_expression": {"0": "\"Ready\"", "1": "{{1.post_id}}", "2": "{{1.filename}}", "3": "{{1.media_type}}", "4": "{{1.drive_url}}", "5": "{{now:YYYY-MM-DD HH:mm:ss}}", "6": "{{1.drive_file_id}}", "8": "{{1.md5}}"}},
+        {"module_id": 14, "type": "google-sheets:addRow", "direction": "write", "tab": "Status_Logging", "index_to_expression": {"0": "{{1.post_id}}", "1": "\"PARAMS_SET\""}},
+        {"module_id": 7, "type": "google-sheets:addRow", "direction": "write", "tab": "Captions_Publishing", "value_input": "RAW", "index_to_expression": {"0": "\"New\"", "1": "post_id", "2": "base_caption", "3": "base_keywords", "4": "youtube.description", "5": "youtube.hashtags", "6": "youtube.title", "7": "youtube.tags", "8": "tiktok.caption", "9": "tiktok.hashtags", "10": "instagram.caption", "11": "instagram.hashtags", "12": "facebook.caption", "13": "facebook.hashtags", "14": "\"TRUE\"", "15": "\"TRUE\"", "16": "\"TRUE\"", "17": "\"TRUE\"", "18": "{{next_slot}}", "19": "{{next_slot}}", "20": "{{next_slot}}", "21": "{{next_slot}}"}, "note": "sets 4 publish flags (14-17) = TRUE and 4 schedule cols (18-21); NO approval gate here"},
+        {"module_id": 9, "type": "google-sheets:filterRows", "direction": "read", "tab": "Status_Logging", "range": "A1:CZ1", "filter": "A == {{post_id}}"},
+        {"module_id": 11, "type": "google-sheets:updateRow", "direction": "update", "tab": "Status_Logging", "index_to_expression": {"1": "\"CAPTIONS_READY\"", "2": "{{next_slot}}"}}
+      ],
+      "other_modules": [{"id": 2, "module": "util:SetVariables", "computes": "next_slot (07:00/11:00/16:00 Europe/Amsterdam next-slot logic)"}, {"id": 3, "module": "openai-gpt-3:createModelResponse", "model": "gpt-4.1-mini", "conn_ref": 14335039, "output": "JSON captions/hashtags/titles per platform"}]
+    },
+    {
+      "id": 9385359, "name": "N3: Publisher — Schedule-Aware (All Platforms)", "isActive": false, "isinvalid": true,
+      "scheduling": "indefinitely/960min",
+      "sheet_modules": [
+        {"module_id": 1, "type": "google-sheets:filterRows", "direction": "read", "tab": "Captions_Publishing", "range": "A1:AB1", "filter": "A == \"New\"", "limit": 5},
+        {"module_id": 3, "type": "google-sheets:filterRows", "direction": "read", "tab": "Content_Master", "range": "A1:J1", "filter": "B == {{caption_row.col1}} (post_id join)"},
+        {"module_id": 14, "type": "google-sheets:updateRow", "direction": "update", "tab": "Captions_Publishing", "index_to_expression": {"22": "{{youtube_upload.id | \"YT_POSTED\"}}"}},
+        {"module_id": 64, "type": "google-sheets:updateRow", "tab": "Captions_Publishing", "index_to_expression": {"23": "{{tiktok.publish_id | \"TT_POSTED\"}}"}},
+        {"module_id": 32, "type": "google-sheets:updateRow", "tab": "Captions_Publishing", "index_to_expression": {"24": "{{instagram.id | \"IG_POSTED\"}}"}},
+        {"module_id": 42, "type": "google-sheets:updateRow", "tab": "Captions_Publishing", "index_to_expression": {"25": "{{facebook.video_id | \"FB_POSTED\"}}"}},
+        {"module_ids_status": [43, 65, 45, 46], "type": "google-sheets:updateRow", "tab": "Captions_Publishing", "index_to_expression": {"0": "\"Published\""}},
+        {"module_ids_error": [50, 51, 67, 68, 70, 85, 87], "type": "google-sheets:updateRow", "tab": "Captions_Publishing", "index_to_expression": {"0": "\"Error\"", "22/23/24/25": "\"<PLATFORM>_ERR: {{error.message}}\""}}
+      ],
+      "publish_modules": [
+        {"platform": "youtube", "module": "youtube:ActionUploadVideo", "acct_ref": 14374103, "privacy": "public", "reads_cols": {"title": 6, "description": "4 + 5", "url_from": "Content_Master col 4"}},
+        {"platform": "tiktok", "module": "http:MakeRequest -> open.tiktokapis.com/v2/post/publish/inbox/video/init", "bearer_source": "datastore:GetRecord(168757) [token NOT read]"},
+        {"platform": "instagram", "module": "instagram-business:CreateAReelPost", "conn_ref": 14369479, "account_id": "17841457677776171", "caption": "col10 + col11"},
+        {"platform": "facebook", "module": "facebook-pages:uploadAReel", "conn_ref": 14363628, "page_id": "839373332878305", "then_posts_to": "N5 reshare webhook [PRIVATE URL REDACTED]"}
+      ],
+      "publish_gate": "Per-platform filter ONLY: col0==New AND publish_flag(14/15/16/17)==TRUE AND platform_post_id(22/23/24/25) empty AND schedule(18/19/20/21) not empty. NO approval/SHA verifier.",
+      "error_store": "datastore:AddRecord(168812)"
+    },
+    {
+      "id": 9508460, "name": "N0-E: Scheduler → Content_Master + Captions", "isActive": false, "isinvalid": false,
+      "scheduling": "indefinitely/900s",
+      "sheet_modules": [
+        {"module_id": 1, "type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:W1", "filter": "A == \"Approved\"", "limit": 2},
+        {"module_id": 3, "type": "google-sheets:addRow", "direction": "write", "tab": "Content_Master", "index_to_expression": {"0": "\"Ready\"", "1": "{{new post_id}}", "2": "{{N0_Master.col2}}", "3": "\"short_video\"", "4": "{{N0_Master.col18 (render url)}}", "5": "{{slot}}"}},
+        {"module_id": 4, "type": "google-sheets:addRow", "direction": "write", "tab": "Captions_Publishing", "index_to_expression": {"0": "\"New\"", "1": "post_id", "2": "N0_Master.col14", "4": "N0_Master.col14", "5": "N0_Master.col15", "6": "N0_Master.col2", "8": "col14", "9": "col15", "10": "col14", "11": "col15", "12": "col14", "13": "col15", "14": "\"TRUE\"", "15": "\"TRUE\"", "16": "\"TRUE\"", "17": "\"TRUE\"", "18-21": "{{slot}}"}},
+        {"module_id": 5, "type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "index_to_expression": {"0": "\"Scheduled\"", "20": "{{post_id}}"}}
+      ],
+      "note": "INACTIVE — cover-pipeline producer of Content_Master + Captions_Publishing from N0_Master(Approved). Chain currently broken here."
+    },
+    {
+      "id": 9508282, "name": "N0-REVIEW: Goedkeuringsmail", "isActive": true, "isinvalid": false,
+      "scheduling": "indefinitely/900s",
+      "sheet_modules": [
+        {"module_id": 1, "type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:W1", "filter": "A == \"Rendered\"", "limit": 3},
+        {"module_id": 3, "type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "index_to_expression": {"0": "\"Review\""}}
+      ],
+      "email_module": {"id": 2, "module": "email:ActionSendMeEmail", "to": "[CONTACT_REDACTED]", "reads_cols": {"song": 2, "virality_score": 10, "caption": 14, "hashtags": 15, "render_url": 18, "n0_id": 1}, "approve_link": "N0-REVIEW-APPROVE webhook [PRIVATE URL REDACTED]?n0_id={{col1}}"}
+    },
+    {
+      "id": 9508279, "name": "N0-REVIEW-APPROVE: goedkeur-webhook", "isActive": true, "isinvalid": false,
+      "scheduling": "immediately (webhook hookId 4251760)",
+      "sheet_modules": [
+        {"module_id": 2, "type": "google-sheets:filterRows", "direction": "read", "tab": "N0_Master", "range": "A1:W1", "filter": "B == {{webhook.n0_id}}", "limit": 1},
+        {"module_id": 3, "type": "google-sheets:updateRow", "direction": "update", "tab": "N0_Master", "index_to_expression": {"0": "\"Approved\""}}
+      ],
+      "response": "gateway:WebhookRespond 200 (human approval gate for COVER pipeline)"
+    },
+    {
+      "id": 9627055, "name": "P1: Poster Publisher (IG+FB, schedule-aware)", "isActive": true, "isinvalid": false,
+      "scheduling": "indefinitely/900s", "sheet_modules": [],
+      "backing_store": "datastore 177455 (poster rows) + datastore 168812 (errors)",
+      "datastore_fields_observed": ["status", "ig", "fb", "ig_post_id", "fb_post_id", "poster_id", "asset_sha256", "packaging_sha256", "schedule_version", "scheduled_at", "scheduled_at_epoch", "caption", "image_url"],
+      "publish_gate": "External fail-closed eligibility verifier POST .../v/publish-eligibility (auth 217337, rejectUnauthorized). Publishes ONLY if reason==VALID_PUBLISH_APPROVAL AND eligible==true; HTTP/parse errors fail closed.",
+      "publish_modules": [{"platform": "instagram", "module": "instagram-business:CreatePostPhoto", "account_id": "17841457677776171"}, {"platform": "facebook", "module": "facebook-pages:UploadPhoto", "page_id": "839373332878305"}],
+      "status_enum": "New -> (ig_post_id/fb_post_id set on success | *_ERR on failure)"
+    },
+    {
+      "id": 9516949, "name": "V1: Visualizer Intake", "isActive": true, "isinvalid": false,
+      "scheduling": "indefinitely/900s", "sheet_modules": [],
+      "watch_folder_id": "1gII_IBUYs7LolKtSlVjKbu0LaGDyflYN", "conn_ref": 14383570,
+      "backing_store": "datastore 171448 (visualizer jobs) + datastore 169690 (config: base_url/api_key [REDACTED])",
+      "datastore_171448_fields_written": ["title", "status(=New)", "created", "song_id", "audio_url", "photo_url", "cuts_count(=0)", "done_count(=0)", "subfolder_id", "fragment_urls(=\"\")"],
+      "email_module": "cutform link {{config.base_url}}/cutform?song={{id}}"
+    },
+    {
+      "id": 9516688, "name": "V2: Visualizer Cut -> Render", "isActive": true, "isinvalid": false,
+      "scheduling": "immediately (webhook hookId 4255297)", "sheet_modules": [],
+      "backing_store": "datastore 171448 (jobs) + datastore 169690 (config)",
+      "render": "POST {{base_url}}/visualizer (X-API-Key [REDACTED]) per cut; POST {{base_url}}/reviewdata",
+      "datastore_171448_update": {"status": "Rendered", "cuts_count": "len(cuts)", "done_count": "len(cuts)", "fragment_urls": "csv of render urls"},
+      "openai": {"module": "openai-gpt-3:createModelResponse", "conn_ref": 14335039, "output": "captions[]+hashtags JSON"},
+      "email_module": "review link {{base_url}}/review?song={{song_id}}"
+    },
+    {
+      "id": 9796001, "name": "V3-SECURE: Visualizer Approve -> VISUALIZER_APPROVED only", "isActive": false, "isinvalid": false,
+      "scheduling": "immediately (webhook hookId 4368839)", "sheet_modules": [],
+      "approval_gate": "HARDENED: timestamp validation (malformed<=0 ->400, future(> now+30s) ->403, stale(<= now-300s) ->410, fresh window accepted); content existence in datastore 171448 (unknown ->404); nonce anti-replay via datastore 185338 key=sha256(nonce) (missing ->400, replay ->409, new -> record nonce_hash+consumed_at); on success sets datastore 171448 status=VISUALIZER_APPROVED, responds 200.",
+      "note": "INACTIVE. Stops at VISUALIZER_APPROVED (no auto-publish). Mirrors P0-E1 human-auth (freshness + nonce + sha256). Non-secure sibling V3 (9561890 'Approve -> Publish') also inactive."
+    }
+  ],
+  "observed_column_roles_by_tab": {
+    "_disclaimer": "Roles below are OBSERVED from live read/write expressions across N2/N3/N0-E/N0-REVIEW/N0-REVIEW-APPROVE. They describe how each 0-based index is USED, not the sheet's header text (not read). Index gaps (e.g., Content_Master col 7) were not referenced by any inspected module.",
+    "Content_Master": {"range": "A1:J1", "0": "status (=Ready)", "1": "post_id", "2": "filename", "3": "media_type", "4": "drive_url (download)", "5": "created_at", "6": "drive_file_id", "8": "md5"},
+    "Captions_Publishing": {"range": "A1:AB1 (28 cols)", "0": "status (New/Published/Error)", "1": "post_id", "2": "base_caption", "3": "base_keywords", "4": "youtube_description", "5": "youtube_hashtags", "6": "youtube_title", "7": "youtube_tags", "8": "tiktok_caption", "9": "tiktok_hashtags", "10": "instagram_caption", "11": "instagram_hashtags", "12": "facebook_caption", "13": "facebook_hashtags", "14": "publish_youtube(TRUE/FALSE)", "15": "publish_tiktok", "16": "publish_instagram", "17": "publish_facebook", "18": "youtube_schedule", "19": "tiktok_schedule", "20": "instagram_schedule", "21": "facebook_schedule", "22": "youtube_post_id", "23": "tiktok_post_id", "24": "instagram_post_id", "25": "facebook_post_id"},
+    "Status_Logging": {"range": "A1:CZ1", "0": "post_id", "1": "stage (PARAMS_SET/CAPTIONS_READY)", "2": "slot/timestamp"},
+    "N0_Master": {"range": "A1:W1 (23 cols)", "0": "status (Rendered/Review/Approved/Scheduled)", "1": "n0_id", "2": "song/title", "10": "virality_score", "14": "caption", "15": "hashtags", "18": "render_url", "20": "scheduled_post_id"}
+  },
+  "status_enums": {
+    "Content_Master.col0": ["Ready"],
+    "Captions_Publishing.col0": ["New", "Published", "Error"],
+    "Status_Logging.col1": ["PARAMS_SET", "CAPTIONS_READY"],
+    "N0_Master.col0": ["Rendered", "Review", "Approved", "Scheduled"],
+    "datastore_171448.status": ["New", "Rendered", "VISUALIZER_APPROVED"],
+    "datastore_177455.status": ["New", "(post-id set on success)"]
+  },
+  "producer_consumer_edges": [
+    {"producer": "N1", "channel": "N2 webhook (4197563)", "fields": ["post_id", "drive_file_id", "filename", "media_type", "drive_url", "md5"], "consumer": "N2"},
+    {"producer": "N2", "writes": ["Content_Master(row)", "Status_Logging(row)", "Captions_Publishing(row status=New, flags TRUE, schedules)"], "consumer": "N3"},
+    {"producer": "N3", "consumes": ["Captions_Publishing(status=New)", "Content_Master(join on post_id)"], "writes_back": ["Captions_Publishing col22-25 platform post ids", "col0=Published/Error"], "errors": "datastore 168812", "state": "INACTIVE+isinvalid"},
+    {"producer": "N0-E", "consumes": "N0_Master(status=Approved)", "writes": ["Content_Master", "Captions_Publishing", "N0_Master status=Scheduled"], "state": "INACTIVE"},
+    {"producer": "N0-REVIEW", "consumes": "N0_Master(status=Rendered)", "writes": "N0_Master status=Review", "side_effect": "approval email"},
+    {"producer": "N0-REVIEW-APPROVE(webhook)", "consumes": "n0_id", "writes": "N0_Master status=Approved"},
+    {"producer": "P1", "consumes": "datastore 177455(status=New, due)", "gate": "external eligibility verifier", "writes": "datastore 177455 ig_post_id/fb_post_id"},
+    {"producer": "V1", "writes": "datastore 171448(status=New)", "consumer": "V2"},
+    {"producer": "V2(webhook 4255297)", "consumes": "datastore 171448 + cuts", "writes": "datastore 171448(status=Rendered, fragment_urls)", "render": "external base_url service"},
+    {"producer": "V3-SECURE(webhook 4368839)", "consumes": "datastore 171448 + nonce store 185338", "writes": "datastore 171448(status=VISUALIZER_APPROVED)", "state": "INACTIVE"}
+  ],
+  "datastores_referenced": {
+    "168757": "TikTok token store (N3) — NOT read",
+    "168812": "error/DLQ log (N3, P1) — NOT read",
+    "169690": "config: base_url + api_key (V-series) — key REDACTED, NOT read",
+    "171448": "visualizer jobs (V1/V2/V3) — fields observed via expressions",
+    "177455": "poster rows (P1) — fields observed via expressions",
+    "185338": "V3-SECURE consumed-nonce store (sha256(nonce)) — NOT read"
+  },
+  "coverage": {
+    "inspected_this_pass": ["N1", "N0-E", "N0-REVIEW", "N0-REVIEW-APPROVE", "V1", "V2", "V3-SECURE"],
+    "reused_from_same_session_V13": ["N2", "N3", "P1"],
+    "not_inspected_this_pass": ["N0-B1", "N0-B2", "N0-C", "N0-C2", "N0-D1", "N0-D2", "N0 test scenarios", "N4 (retry)", "N5 (reshare)", "N6", "N7", "N8", "V1b", "V3 (9561890 non-secure)", "TOOL Row Reset", "TOOL slick render", "MAIL", "TikTok Auth/Refresh"],
+    "sheet_field_bearing_surfaces_covered": "Content_Master, Captions_Publishing, Status_Logging, N0_Master — all live tabs referenced by the inspected sheet-touching scenarios."
+  },
+  "unknowns_and_gaps": [
+    "Exact sheet HEADER NAMES for all tabs — not read (would require exporting full sheet rows / private data). Only observed index->role from expressions provided.",
+    "Sheet-side FORMULAS and DATA VALIDATION rules — not observable from Make blueprints and not read from the sheet; UNKNOWN.",
+    "Index roles for columns never referenced by inspected modules (e.g., Content_Master col7, col9; N0_Master cols 3-9,11-13,16,17,19,21,22) — UNKNOWN.",
+    "Datastore full schemas (171448/177455) beyond fields seen in expressions — partial.",
+    "Whether not-inspected scenarios (N4-N8, remaining N0-*) touch additional tabs/columns — UNKNOWN this pass.",
+    "Actual row DATA / current values / counts in any tab — deliberately not read."
+  ],
+  "redactions": ["N1->N2 intake webhook URL", "N2 hook URL", "N0-REVIEW approve-link + N0-REVIEW-APPROVE webhook URL", "N3->N5 reshare webhook URL", "TikTok bearer (datastore 168757)", "V config api_key + X-API-Key (datastore 169690)", "P1 verifier API key (auth 217337)"],
+  "blocked_subreads": [
+    {"target": "operational spreadsheet header row / cells", "reason": "no read-only tool can fetch a single header row without exporting all rows (private-data exposure) — not attempted, per constraints"}
+  ]
+}

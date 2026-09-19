@@ -1,0 +1,21 @@
+# Canonical Factory V1 — shadow contract
+
+This additive P0-E4 layer extends the existing CANONICAL_FACTORY_DATA_GOVERNANCE_MODEL_V01.json. It does not replace frozen approval stores, rights routers or production adapters. Schema-only business domains hold no invented observations. All tables exist; absent data is an empty table or an explicitly nullable value, never a fabricated zero.
+
+Stable IDs are immutable opaque identifiers, independent of row position or caption text. Asset SHA identifies bytes; asset_id identifies a registered asset. Every record cites evidence IDs. Foreign keys, duplicate IDs, byte hashes, timestamps and source package lineage are checked. Legacy post_id is not automatically content_id; a reviewed crosswalk is needed before cutover.
+
+Revenue/booking/stream/ad/partnership records join via publication_id or funnel_id to PUBLICATION → PLATFORM_PACKAGES → DERIVATIVES → CONTENT_MASTER → CAMPAIGNS. DERIVATIVES links experiment_id and hypothesis_id. Null attribution is explicitly unattributed, not inferred. Generic observations capture metric definition, unit, window, source, granularity and availability. Business records capture minor-unit amount, currency, gross/net basis, cost, quantity and external reference; funnel records separate lead/booking/partnership IDs and stage. These fields support measurement of the long-term growth/business plan; they do not claim any 10M result or causal relationship.
+
+## Agent handoff and exact mapping
+
+Existing CREATIVE_INTELLIGENCE_PACKAGE V1 remains unchanged. Envelope content_id → CONTENT_MASTER.content_id; package_id → CREATIVE_INTELLIGENCE.source_package_id; producer agent/model/run → AGENT_EVIDENCE; inputs uri/SHA → ASSETS; created_at → creative created_at; evidence_refs → evidence registry. Full source package and edit_plan remain hash-bound in the shadow envelope. PRODUCTION stores source package and edit-plan hashes. Segment times remain integer milliseconds on the output timeline; source_start/end remain source offsets. Effects kind/start/end/intensity/obscuration are retained exactly. Existing validation enforces contiguous coverage, no retiming, no obscuring effects, locked baseline and >=80% performance.
+
+Gemini supplies recommendations only. Orchestrator validates schema, actual source bytes, lineage, identity references and governance. Claude receives the validated shadow envelope. It must never synthesize missing fields or convert statuses into approvals. Current V1 creative input contains edit_plan only; it does NOT supply title/caption/CTA/hashtags. An explicit editorial record is therefore required; assemble() never invents it. Future authenticated intelligence may supply such records through the versioned canonical schema.
+
+PLATFORM_PACKAGES stores exact title/caption/hashtag tokens/keywords/CTA/platform/thumbnail/poster/schedule timezone/version. DERIVATIVES stores source asset, hook, start/end, aspect and experiment/hypothesis. CLAUDE_SHEET_FIELD_MAP_V01.json identifies verified header/index targets and evidence. Captions/titles pass unchanged; hashtag tokens serialize using a single space. Keywords and schedules are UNMAPPED until delimiter/timezone behavior is reconciled. Separate CTA, edits, aspect, assets and experiment/provenance fields stay in the canonical sidecar; requiring them at the legacy execution boundary fails closed.
+
+A shadow row is one package-specific projection, not an insertable multi-platform legacy row. No row ID crosswalk or aggregation is guessed. All publish flags are FALSE, and no New/Ready status is emitted. No API client or live dispatch exists. Arbitrary legacy row import is unsupported: readback verifies the projection against retained canonical bytes and rejects any drift. Thus lossless readback requires the sidecar. It cannot recreate absent canonical semantics from a sheet row.
+
+## Reproduce
+
+Install p0e4/canonical/requirements.txt in the isolated test environment. Run p0e4/tests/test_factory_canonical.py. Fixtures are synthetic INTEGRATION_TEST_INPUT, with no external execution and no real approval. Test-only audio has no Nitin authority. Human final-audio binding remains required for real Aakhri Ishq production.

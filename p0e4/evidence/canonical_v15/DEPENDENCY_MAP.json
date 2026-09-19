@@ -1,0 +1,5889 @@
+{
+  "schema_version": 1,
+  "source": "Direct live sheet headers joined to Claude-observed current blueprints",
+  "sheet_modules": [
+    {
+      "scenario_id": 9385197,
+      "scenario": "N2",
+      "module_id": 13,
+      "module_type": "google-sheets:addRow",
+      "direction": "write",
+      "tab": "Content_Master",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "\"Ready\"",
+        "1": "{{1.post_id}}",
+        "2": "{{1.filename}}",
+        "3": "{{1.media_type}}",
+        "4": "{{1.drive_url}}",
+        "5": "{{formatDate(now;\"YYYY-MM-DD HH:mm:ss\")}}",
+        "6": "{{1.drive_file_id}}",
+        "8": "{{1.md5}}"
+      }
+    },
+    {
+      "scenario_id": 9385197,
+      "scenario": "N2",
+      "module_id": 14,
+      "module_type": "google-sheets:addRow",
+      "direction": "write",
+      "tab": "Status_Logging",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "{{1.post_id}}",
+        "1": "\"PARAMS_SET\""
+      }
+    },
+    {
+      "scenario_id": 9385197,
+      "scenario": "N2",
+      "module_id": 7,
+      "module_type": "google-sheets:addRow",
+      "direction": "write",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "\"New\"",
+        "1": "{{1.post_id}}",
+        "2": "{{3.result.base_caption}}",
+        "3": "{{3.result.base_keywords}}",
+        "4": "{{3.result.youtube.description}}",
+        "5": "{{3.result.youtube.hashtags}}",
+        "6": "{{3.result.youtube.title}}",
+        "7": "{{3.result.youtube.tags}}",
+        "8": "{{3.result.tiktok.caption}}",
+        "9": "{{3.result.tiktok.hashtags}}",
+        "10": "{{3.result.instagram.caption}}",
+        "11": "{{3.result.instagram.hashtags}}",
+        "12": "{{3.result.facebook.caption}}",
+        "13": "{{3.result.facebook.hashtags}}",
+        "14": "TRUE",
+        "15": "TRUE",
+        "16": "TRUE",
+        "17": "TRUE",
+        "18": "{{2.next_slot}}",
+        "19": "{{2.next_slot}}",
+        "20": "{{2.next_slot}}",
+        "21": "{{2.next_slot}}"
+      }
+    },
+    {
+      "scenario_id": 9385197,
+      "scenario": "N2",
+      "module_id": 9,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "Status_Logging",
+      "range": "A1:CZ1",
+      "error_branch": false,
+      "filter": "A == {{1.post_id}}"
+    },
+    {
+      "scenario_id": 9385197,
+      "scenario": "N2",
+      "module_id": 11,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Status_Logging",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{9.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "1": "\"CAPTIONS_READY\"",
+        "2": "{{2.next_slot}}"
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "Captions_Publishing",
+      "range": "A1:AB1",
+      "error_branch": false,
+      "filter": "A == \"New\"",
+      "limit": 5
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 3,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "Content_Master",
+      "range": "A1:J1",
+      "error_branch": false,
+      "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)"
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 14,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "22": "{{ifempty(12.id;\"YT_POSTED\")}}"
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 43,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "\"Published\""
+      },
+      "route": "youtube"
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 50,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "22": "\"DL_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 51,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "22": "\"YT_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 64,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "23": "{{ifempty(62.data.data.publish_id;\"TT_POSTED\")}}"
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 65,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "\"Published\""
+      },
+      "route": "tiktok"
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 67,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "23": "\"TT_DL_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 68,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "23": "\"TT_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 70,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "23": "\"TT_PUT_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 32,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "24": "{{ifempty(30.id;\"IG_POSTED\")}}"
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 45,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "\"Published\""
+      },
+      "route": "instagram"
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 85,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "24": "\"IG_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 42,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "25": "{{ifempty(49.video_id;\"FB_POSTED\")}}"
+      }
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 46,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "\"Published\""
+      },
+      "route": "facebook"
+    },
+    {
+      "scenario_id": 9385359,
+      "scenario": "N3",
+      "module_id": 87,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "25": "\"FB_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "Captions_Publishing",
+      "range": "A1:CZ1",
+      "error_branch": false,
+      "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+      "limit": 50
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 4,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "Content_Master",
+      "range": "A1:J1",
+      "error_branch": false,
+      "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}"
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 28,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "9": "{{add(2.retry_count;1)}}",
+        "22": "\"ERROR\""
+      },
+      "route": "youtube-download"
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 22,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "9": "{{add(2.retry_count;1)}}",
+        "22": "\"ERROR\""
+      },
+      "route": "youtube-upload"
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 23,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "9": "\"0\"",
+        "22": "{{21.id}}"
+      },
+      "route": "youtube-ok"
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 31,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "9": "{{add(2.retry_count;1)}}",
+        "23": "\"ERROR\""
+      },
+      "route": "tiktok"
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 32,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "9": "\"0\"",
+        "23": "{{30.data.data.publish_id}}"
+      },
+      "route": "tiktok-ok"
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 41,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "9": "{{add(2.retry_count;1)}}",
+        "24": "\"ERROR\""
+      },
+      "route": "instagram"
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 42,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "9": "\"0\"",
+        "24": "{{40.id}}"
+      },
+      "route": "instagram-ok"
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 51,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": true,
+      "numeric_index_to_expression": {
+        "9": "{{add(2.retry_count;1)}}",
+        "25": "\"ERROR\""
+      },
+      "route": "facebook"
+    },
+    {
+      "scenario_id": 9385364,
+      "scenario": "N4",
+      "module_id": 52,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "9": "\"0\"",
+        "25": "{{50.id}}"
+      },
+      "route": "facebook-ok"
+    },
+    {
+      "scenario_id": 9397512,
+      "scenario": "N5",
+      "module_id": 4,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "Captions_Publishing",
+      "range": "A1:CZ1",
+      "error_branch": false,
+      "filter": "B == {{1.post_id}} (webhook payload)"
+    },
+    {
+      "scenario_id": 9397512,
+      "scenario": "N5",
+      "module_id": 3,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{4.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "26": "\"RESHARE_NOTIFIED\""
+      }
+    },
+    {
+      "scenario_id": 9483892,
+      "scenario": "N6",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "Captions_Publishing",
+      "range": "A1:AB1",
+      "error_branch": false,
+      "filter": "A == \"Published\"",
+      "limit": 10,
+      "sort": "desc"
+    },
+    {
+      "scenario_id": 9483892,
+      "scenario": "N6",
+      "module_id": 2,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "Content_Master",
+      "range": "A1:J1",
+      "error_branch": false,
+      "filter": "B == {{1.`1`}}",
+      "pre_filter": "col25(fb_post_id) not empty AND col27 empty"
+    },
+    {
+      "scenario_id": 9483892,
+      "scenario": "N6",
+      "module_id": 5,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "27": "\"QUEUED\""
+      }
+    },
+    {
+      "scenario_id": 9571076,
+      "scenario": "N7",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "Captions_Publishing",
+      "range": "A1:AB1",
+      "error_branch": false,
+      "filter": "A == \"Scheduled\"",
+      "limit": 20
+    },
+    {
+      "scenario_id": 9571076,
+      "scenario": "N7",
+      "module_id": 3,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "gate": "parseDate(col18 youtube_schedule; Europe/Amsterdam) epoch <= now",
+      "numeric_index_to_expression": {
+        "0": "\"New\""
+      }
+    },
+    {
+      "scenario_id": 9508460,
+      "scenario": "N0-E",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "N0_Master",
+      "range": "A1:W1",
+      "error_branch": false,
+      "filter": "A == \"Approved\"",
+      "limit": 2
+    },
+    {
+      "scenario_id": 9508460,
+      "scenario": "N0-E",
+      "module_id": 3,
+      "module_type": "google-sheets:addRow",
+      "direction": "write",
+      "tab": "Content_Master",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "\"Ready\"",
+        "1": "{{2.post_id}}",
+        "2": "{{1.`2`}}",
+        "3": "\"short_video\"",
+        "4": "{{1.`18`}}",
+        "5": "{{2.slot}}"
+      }
+    },
+    {
+      "scenario_id": 9508460,
+      "scenario": "N0-E",
+      "module_id": 4,
+      "module_type": "google-sheets:addRow",
+      "direction": "write",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "\"New\"",
+        "1": "{{2.post_id}}",
+        "2": "{{1.`14`}}",
+        "4": "{{1.`14`}}",
+        "5": "{{1.`15`}}",
+        "6": "{{1.`2`}}",
+        "8": "{{1.`14`}}",
+        "9": "{{1.`15`}}",
+        "10": "{{1.`14`}}",
+        "11": "{{1.`15`}}",
+        "12": "{{1.`14`}}",
+        "13": "{{1.`15`}}",
+        "14": "TRUE",
+        "15": "TRUE",
+        "16": "TRUE",
+        "17": "TRUE",
+        "18": "{{2.slot}}",
+        "19": "{{2.slot}}",
+        "20": "{{2.slot}}",
+        "21": "{{2.slot}}"
+      }
+    },
+    {
+      "scenario_id": 9508460,
+      "scenario": "N0-E",
+      "module_id": 5,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Scheduled\"",
+        "20": "{{2.post_id}}"
+      },
+      "conflict_flag": "index 20: writes post_id but Codex live header='schedule'"
+    },
+    {
+      "scenario_id": 9508282,
+      "scenario": "N0-REVIEW",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "N0_Master",
+      "range": "A1:W1",
+      "error_branch": false,
+      "filter": "A == \"Rendered\"",
+      "limit": 3
+    },
+    {
+      "scenario_id": 9508282,
+      "scenario": "N0-REVIEW",
+      "module_id": 3,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Review\""
+      }
+    },
+    {
+      "scenario_id": 9508279,
+      "scenario": "N0-REVIEW-APPROVE",
+      "module_id": 2,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "N0_Master",
+      "range": "A1:W1",
+      "error_branch": false,
+      "filter": "B == {{1.n0_id}} (webhook payload)",
+      "limit": 1
+    },
+    {
+      "scenario_id": 9508279,
+      "scenario": "N0-REVIEW-APPROVE",
+      "module_id": 3,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{2.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Approved\""
+      }
+    },
+    {
+      "scenario_id": 9508104,
+      "scenario": "N0-B1",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "N0_Master",
+      "range": "A1:W1",
+      "error_branch": false,
+      "filter": "A == \"Prepped\"",
+      "limit": 3,
+      "pre_filter": "col5 not empty AND col6 empty"
+    },
+    {
+      "scenario_id": 9508104,
+      "scenario": "N0-B1",
+      "module_id": 20,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": true,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "22": "\"OPUS_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9508104,
+      "scenario": "N0-B1",
+      "module_id": 4,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Clipping\"",
+        "6": "{{3.data.id}}"
+      },
+      "reads": {
+        "5": "prepped_url (videoUrl)"
+      }
+    },
+    {
+      "scenario_id": 9508147,
+      "scenario": "N0-B2",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "N0_Master",
+      "range": "A1:W1",
+      "error_branch": false,
+      "filter": "A == \"Clipping\"",
+      "limit": 2,
+      "pre_filter": "col6 not empty"
+    },
+    {
+      "scenario_id": 9508147,
+      "scenario": "N0-B2",
+      "module_id": 20,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": true,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "22": "\"OPUS_CLIPS_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9508147,
+      "scenario": "N0-B2",
+      "module_id": 10,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Clipped-done\"",
+        "22": "\"clips: {{3.data.total}}\""
+      }
+    },
+    {
+      "scenario_id": 9508147,
+      "scenario": "N0-B2",
+      "module_id": 5,
+      "module_type": "google-sheets:addRow",
+      "direction": "write",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": false,
+      "note": "one new row per OpusClip clip (BasicFeeder module 4 over 3.data.data)",
+      "numeric_index_to_expression": {
+        "0": "\"Clipped\"",
+        "1": "{{1.`1`}}-{{4.curationId}}",
+        "2": "{{1.`2`}}",
+        "5": "{{1.`5`}}",
+        "6": "{{1.`6`}}",
+        "7": "{{4.id}}",
+        "8": "{{4.uriForExport}}",
+        "9": "{{4.uriForThumbnail}}",
+        "10": "{{4.score}}",
+        "11": "{{4.timeRanges[1][1]}}",
+        "12": "{{4.text}}",
+        "14": "{{4.description}}",
+        "15": "{{4.hashtags}}"
+      }
+    },
+    {
+      "scenario_id": 9508162,
+      "scenario": "N0-C",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "N0_Master",
+      "range": "A1:W1",
+      "error_branch": false,
+      "filter": "A == \"Clipped\"",
+      "limit": 3,
+      "pre_filter": "col12 not empty AND col13 empty"
+    },
+    {
+      "scenario_id": 9508162,
+      "scenario": "N0-C",
+      "module_id": 3,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Romanized\"",
+        "13": "{{2.result.romanized}}",
+        "14": "{{2.result.caption_nl}}",
+        "15": "{{2.result.hashtags}}"
+      },
+      "reads": {
+        "12": "transcript (OpenAI input)"
+      }
+    },
+    {
+      "scenario_id": 9508973,
+      "scenario": "N0-C2",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "N0_Master",
+      "range": "A1:X1",
+      "error_branch": false,
+      "filter": "A == \"Romanized\"",
+      "limit": 2,
+      "pre_filter": "col7 not empty AND col23 empty"
+    },
+    {
+      "scenario_id": 9508973,
+      "scenario": "N0-C2",
+      "module_id": 20,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": true,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "22": "\"KARAOKE_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9508973,
+      "scenario": "N0-C2",
+      "module_id": 6,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Captioned\"",
+        "23": "{{5.result.karaoke}}"
+      },
+      "reads": {
+        "6": "project_id",
+        "7": "clip_id"
+      }
+    },
+    {
+      "scenario_id": 9508207,
+      "scenario": "N0-D1",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "N0_Master",
+      "range": "A1:X1",
+      "error_branch": false,
+      "filter": "A == \"Captioned\"",
+      "limit": 3,
+      "pre_filter": "col8 not empty AND col17 empty"
+    },
+    {
+      "scenario_id": 9508207,
+      "scenario": "N0-D1",
+      "module_id": 20,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": true,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "22": "\"BEATS_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9508207,
+      "scenario": "N0-D1",
+      "module_id": 4,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"BeatsDone\"",
+        "16": "{{join(3.data.downbeats;\",\")}}",
+        "17": "{{3.data.bpm}}"
+      },
+      "reads": {
+        "8": "export_uri (audio_url)"
+      }
+    },
+    {
+      "scenario_id": 9508239,
+      "scenario": "N0-D2",
+      "module_id": 1,
+      "module_type": "google-sheets:filterRows",
+      "direction": "read",
+      "tab": "N0_Master",
+      "range": "A1:W1",
+      "error_branch": false,
+      "filter": "A == \"BeatsDone\"",
+      "limit": 2,
+      "pre_filter": "col8 not empty AND col13 not empty AND col18 empty"
+    },
+    {
+      "scenario_id": 9508239,
+      "scenario": "N0-D2",
+      "module_id": 20,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": true,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Error\"",
+        "22": "\"RENDER_ERR: {{error.message}}\""
+      }
+    },
+    {
+      "scenario_id": 9508239,
+      "scenario": "N0-D2",
+      "module_id": 4,
+      "module_type": "google-sheets:updateRow",
+      "direction": "update",
+      "tab": "N0_Master",
+      "range": null,
+      "error_branch": false,
+      "row_number_ref": "{{1.__ROW_NUMBER__}}",
+      "numeric_index_to_expression": {
+        "0": "\"Rendered\"",
+        "18": "{{3.data[1].url}}"
+      },
+      "reads": {
+        "8": "export_uri (video)",
+        "13": "romanized (text overlay)"
+      }
+    },
+    {
+      "scenario_id": 9561890,
+      "scenario": "V3-nonsecure",
+      "module_id": 6,
+      "module_type": "google-sheets:addRow",
+      "direction": "write",
+      "tab": "Content_Master",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "\"Ready\"",
+        "1": "{{5.post_id}} (UNVIS-...)",
+        "2": "{{2.title}}",
+        "3": "\"short_video\"",
+        "4": "{{5.clip_url}}",
+        "5": "{{5.slot}}"
+      }
+    },
+    {
+      "scenario_id": 9561890,
+      "scenario": "V3-nonsecure",
+      "module_id": 7,
+      "module_type": "google-sheets:addRow",
+      "direction": "write",
+      "tab": "Captions_Publishing",
+      "range": null,
+      "error_branch": false,
+      "numeric_index_to_expression": {
+        "0": "\"Scheduled\"",
+        "1": "{{5.post_id}}",
+        "2": "{{5.caption}}",
+        "3": "{{5.tags}}",
+        "4": "{{5.caption}}",
+        "5": "{{5.tags}}",
+        "6": "{{2.title}}",
+        "7": "{{5.tags}}",
+        "8": "{{5.caption_tags}}",
+        "9": "{{5.tags}}",
+        "10": "{{5.caption}}",
+        "11": "{{5.tags}}",
+        "12": "{{5.caption_tags}}",
+        "13": "{{5.tags}}",
+        "14": "TRUE",
+        "15": "TRUE",
+        "16": "TRUE",
+        "17": "TRUE",
+        "18": "{{5.slot}}",
+        "19": "{{5.slot}}",
+        "20": "{{5.slot}}",
+        "21": "{{5.slot}}"
+      },
+      "note": "CONVERGENCE: visualizer clips written directly into the N-series publish queue"
+    }
+  ],
+  "legacy_fields": [
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 0,
+      "actual_header": "Choose The Status",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "\"New\"",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 43,
+          "expression": "\"Published\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 50,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 51,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 65,
+          "expression": "\"Published\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 67,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 68,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 70,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 45,
+          "expression": "\"Published\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 85,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 46,
+          "expression": "\"Published\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 87,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 3,
+          "expression": "\"New\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "\"New\"",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "\"Scheduled\"",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "status(Scheduled/New/Published/Error)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 1,
+      "actual_header": "post_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{1.post_id}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{2.post_id}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.post_id}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "post_id",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 2,
+      "actual_header": "base_caption",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.base_caption}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{1.`14`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.caption}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "base_caption",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 3,
+      "actual_header": "base_keywords",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.base_keywords}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.tags}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "base_keywords",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 4,
+      "actual_header": "caption_youtube",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.youtube.description}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{1.`14`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.caption}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "youtube_description",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 5,
+      "actual_header": "hashtags_youtube",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.youtube.hashtags}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{1.`15`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.tags}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "youtube_hashtags",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 6,
+      "actual_header": "youtube_title",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.youtube.title}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{1.`2`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{2.title}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "youtube_title",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 7,
+      "actual_header": "youtube_keywords",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.youtube.tags}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.tags}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "youtube_tags",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 8,
+      "actual_header": "caption_tiktok",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.tiktok.caption}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{1.`14`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.caption_tags}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "tiktok_caption",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 9,
+      "actual_header": "hashtags_tiktok",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.tiktok.hashtags}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 28,
+          "expression": "{{add(2.retry_count;1)}}",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 22,
+          "expression": "{{add(2.retry_count;1)}}",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 23,
+          "expression": "\"0\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 31,
+          "expression": "{{add(2.retry_count;1)}}",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 32,
+          "expression": "\"0\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 41,
+          "expression": "{{add(2.retry_count;1)}}",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 42,
+          "expression": "\"0\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 51,
+          "expression": "{{add(2.retry_count;1)}}",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 52,
+          "expression": "\"0\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{1.`15`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.tags}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "CONFLICT: tiktok_hashtags (N2/N0-E) vs retry_count (N4)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 10,
+      "actual_header": "caption_instagram",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.instagram.caption}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{1.`14`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.caption}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "instagram_caption",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 11,
+      "actual_header": "hashtags_instagram",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.instagram.hashtags}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{1.`15`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.tags}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "instagram_hashtags",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 12,
+      "actual_header": "caption_facebook",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.facebook.caption}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{1.`14`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.caption_tags}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "facebook_caption",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 13,
+      "actual_header": "hashtags_facebook",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{3.result.facebook.hashtags}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{1.`15`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.tags}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "facebook_hashtags",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 14,
+      "actual_header": "publish_to_youtube",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "TRUE",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "TRUE",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "TRUE",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "publish_youtube",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 15,
+      "actual_header": "publish_to_tiktok",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "TRUE",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "TRUE",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "TRUE",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "publish_tiktok",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 16,
+      "actual_header": "publish_to_instagram",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "TRUE",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "TRUE",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "TRUE",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "publish_instagram",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 17,
+      "actual_header": "publish_to_facebook",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "TRUE",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "TRUE",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "TRUE",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "publish_facebook",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 18,
+      "actual_header": "youtube_schedule",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{2.next_slot}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{2.slot}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.slot}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "youtube_schedule (also N7 release gate)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 19,
+      "actual_header": "tiktok_schedule",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{2.next_slot}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{2.slot}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.slot}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "tiktok_schedule",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 20,
+      "actual_header": "instagram_schedule",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{2.next_slot}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{2.slot}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.slot}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "instagram_schedule",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 21,
+      "actual_header": "facebook_schedule",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 7,
+          "expression": "{{2.next_slot}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 4,
+          "expression": "{{2.slot}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 7,
+          "expression": "{{5.slot}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "facebook_schedule",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 22,
+      "actual_header": "youtube_post_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 14,
+          "expression": "{{ifempty(12.id;\"YT_POSTED\")}}",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 50,
+          "expression": "\"DL_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 51,
+          "expression": "\"YT_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 28,
+          "expression": "\"ERROR\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 22,
+          "expression": "\"ERROR\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 23,
+          "expression": "{{21.id}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "youtube_post_id (ERROR sentinel)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 23,
+      "actual_header": "tiktok_post_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 64,
+          "expression": "{{ifempty(62.data.data.publish_id;\"TT_POSTED\")}}",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 67,
+          "expression": "\"TT_DL_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 68,
+          "expression": "\"TT_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 70,
+          "expression": "\"TT_PUT_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 31,
+          "expression": "\"ERROR\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 32,
+          "expression": "{{30.data.data.publish_id}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "tiktok_post_id (ERROR sentinel)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 24,
+      "actual_header": "instagram_post_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 32,
+          "expression": "{{ifempty(30.id;\"IG_POSTED\")}}",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 85,
+          "expression": "\"IG_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 41,
+          "expression": "\"ERROR\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 42,
+          "expression": "{{40.id}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "instagram_post_id (ERROR sentinel)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 25,
+      "actual_header": "facebook_post_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 42,
+          "expression": "{{ifempty(49.video_id;\"FB_POSTED\")}}",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385359,
+          "module_id": 87,
+          "expression": "\"FB_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 51,
+          "expression": "\"ERROR\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 52,
+          "expression": "{{50.id}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "facebook_post_id (ERROR sentinel)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 26,
+      "actual_header": "published_at",
+      "producer_expressions": [
+        {
+          "scenario_id": 9397512,
+          "module_id": 3,
+          "expression": "\"RESHARE_NOTIFIED\"",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "facebook_reshare_status (N5)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 1259836610,
+      "tab": "Captions_Publishing",
+      "column_index": 27,
+      "actual_header": null,
+      "producer_expressions": [
+        {
+          "scenario_id": 9483892,
+          "module_id": 5,
+          "expression": "\"QUEUED\"",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"New\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 1,
+          "range": "A1:CZ1",
+          "filter": "W(22)==ERROR OR X(23)==ERROR OR Y(24)==ERROR OR Z(25)==ERROR",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9397512,
+          "module_id": 4,
+          "range": "A1:CZ1",
+          "filter": "B == {{1.post_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Published\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9571076,
+          "module_id": 1,
+          "range": "A1:AB1",
+          "filter": "A == \"Scheduled\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "personal_reel_queue (N6)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 567039455,
+      "tab": "Content_Master",
+      "column_index": 0,
+      "actual_header": "status",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 13,
+          "expression": "\"Ready\"",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 3,
+          "expression": "\"Ready\"",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 6,
+          "expression": "\"Ready\"",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 3,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 4,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 2,
+          "range": "A1:J1",
+          "filter": "B == {{1.`1`}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "status(Ready)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 567039455,
+      "tab": "Content_Master",
+      "column_index": 1,
+      "actual_header": "post_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 13,
+          "expression": "{{1.post_id}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 3,
+          "expression": "{{2.post_id}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 6,
+          "expression": "{{5.post_id}} (UNVIS-...)",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 3,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 4,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 2,
+          "range": "A1:J1",
+          "filter": "B == {{1.`1`}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "post_id",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 567039455,
+      "tab": "Content_Master",
+      "column_index": 2,
+      "actual_header": "file_name",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 13,
+          "expression": "{{1.filename}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 3,
+          "expression": "{{1.`2`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 6,
+          "expression": "{{2.title}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 3,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 4,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 2,
+          "range": "A1:J1",
+          "filter": "B == {{1.`1`}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "filename",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 567039455,
+      "tab": "Content_Master",
+      "column_index": 3,
+      "actual_header": "media_type",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 13,
+          "expression": "{{1.media_type}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 3,
+          "expression": "\"short_video\"",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 6,
+          "expression": "\"short_video\"",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 3,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 4,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 2,
+          "range": "A1:J1",
+          "filter": "B == {{1.`1`}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "media_type",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 567039455,
+      "tab": "Content_Master",
+      "column_index": 4,
+      "actual_header": "input_file_url",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 13,
+          "expression": "{{1.drive_url}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 3,
+          "expression": "{{1.`18`}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 6,
+          "expression": "{{5.clip_url}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 3,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 4,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 2,
+          "range": "A1:J1",
+          "filter": "B == {{1.`1`}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "drive_url",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 567039455,
+      "tab": "Content_Master",
+      "column_index": 5,
+      "actual_header": "created_at",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 13,
+          "expression": "{{formatDate(now;\"YYYY-MM-DD HH:mm:ss\")}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508460,
+          "module_id": 3,
+          "expression": "{{2.slot}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9561890,
+          "module_id": 6,
+          "expression": "{{5.slot}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 3,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 4,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 2,
+          "range": "A1:J1",
+          "filter": "B == {{1.`1`}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "created_at",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 567039455,
+      "tab": "Content_Master",
+      "column_index": 6,
+      "actual_header": "file_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 13,
+          "expression": "{{1.drive_file_id}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 3,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 4,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 2,
+          "range": "A1:J1",
+          "filter": "B == {{1.`1`}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "drive_file_id",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 567039455,
+      "tab": "Content_Master",
+      "column_index": 7,
+      "actual_header": "download_url",
+      "producer_expressions": [],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 3,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 4,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 2,
+          "range": "A1:J1",
+          "filter": "B == {{1.`1`}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "UNKNOWN",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 567039455,
+      "tab": "Content_Master",
+      "column_index": 8,
+      "actual_header": "data",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 13,
+          "expression": "{{1.md5}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385359,
+          "module_id": 3,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}} (post_id join)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9385364,
+          "module_id": 4,
+          "range": "A1:J1",
+          "filter": "B == {{ifempty(1.`1`;\"__NOOP__\")}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9483892,
+          "module_id": 2,
+          "range": "A1:J1",
+          "filter": "B == {{1.`1`}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "CONFLICT: N2 writes md5 / Codex header=data",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 472188340,
+      "tab": "Status_Logging",
+      "column_index": 0,
+      "actual_header": "post_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 14,
+          "expression": "{{1.post_id}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 9,
+          "range": "A1:CZ1",
+          "filter": "A == {{1.post_id}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "post_id",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 472188340,
+      "tab": "Status_Logging",
+      "column_index": 1,
+      "actual_header": "status",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 14,
+          "expression": "\"PARAMS_SET\"",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9385197,
+          "module_id": 11,
+          "expression": "\"CAPTIONS_READY\"",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 9,
+          "range": "A1:CZ1",
+          "filter": "A == {{1.post_id}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "stage(PARAMS_SET/CAPTIONS_READY)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 472188340,
+      "tab": "Status_Logging",
+      "column_index": 2,
+      "actual_header": "schedule",
+      "producer_expressions": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 11,
+          "expression": "{{2.next_slot}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9385197,
+          "module_id": 9,
+          "range": "A1:CZ1",
+          "filter": "A == {{1.post_id}}",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "slot",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 0,
+      "actual_header": "status",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 5,
+          "expression": "\"Scheduled\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 3,
+          "expression": "\"Review\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 3,
+          "expression": "\"Approved\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 20,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 4,
+          "expression": "\"Clipping\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 20,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 10,
+          "expression": "\"Clipped-done\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "\"Clipped\"",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 3,
+          "expression": "\"Romanized\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 6,
+          "expression": "\"Captioned\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 20,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 4,
+          "expression": "\"BeatsDone\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 20,
+          "expression": "\"Error\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 4,
+          "expression": "\"Rendered\"",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "status",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 1,
+      "actual_header": "n0_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{1.`1`}}-{{4.curationId}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "n0_id",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 2,
+      "actual_header": "source_video_name",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{1.`2`}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "title",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 3,
+      "actual_header": "source_video_url",
+      "producer_expressions": [],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "UNKNOWN",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 4,
+      "actual_header": "source_audio_url",
+      "producer_expressions": [],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "UNKNOWN",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 5,
+      "actual_header": "prep_mp4_url",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{1.`5`}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "prepped_url",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 6,
+      "actual_header": "opus_project_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508104,
+          "module_id": 4,
+          "expression": "{{3.data.id}}",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{1.`6`}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "opus_project_id",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 7,
+      "actual_header": "clip_id",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{4.id}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "clip_id",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 8,
+      "actual_header": "clip_export_url",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{4.uriForExport}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "export_uri(video/audio)",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 9,
+      "actual_header": "clip_thumbnail_url",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{4.uriForThumbnail}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "thumbnail_uri",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 10,
+      "actual_header": "virality_score",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{4.score}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "score",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 11,
+      "actual_header": "clip_timerange",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{4.timeRanges[1][1]}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "time_range",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 12,
+      "actual_header": "transcript_devanagari",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{4.text}}",
+          "direction": "write"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "text/transcript",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 13,
+      "actual_header": "caption_romanized",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508162,
+          "module_id": 3,
+          "expression": "{{2.result.romanized}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "romanized",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 14,
+      "actual_header": "post_caption",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{4.description}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 3,
+          "expression": "{{2.result.caption_nl}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "caption",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 15,
+      "actual_header": "hashtags",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508147,
+          "module_id": 5,
+          "expression": "{{4.hashtags}}",
+          "direction": "write"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 3,
+          "expression": "{{2.result.hashtags}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "hashtags",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 16,
+      "actual_header": "beats_json",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508207,
+          "module_id": 4,
+          "expression": "{{join(3.data.downbeats;\",\")}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "downbeats",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 17,
+      "actual_header": "bpm",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508207,
+          "module_id": 4,
+          "expression": "{{3.data.bpm}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "bpm",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 18,
+      "actual_header": "render_url",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508239,
+          "module_id": 4,
+          "expression": "{{3.data[1].url}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "render_url",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 19,
+      "actual_header": "thumbnail_final",
+      "producer_expressions": [],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "UNKNOWN",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 20,
+      "actual_header": "schedule",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 5,
+          "expression": "{{2.post_id}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "CONFLICT: N0-E writes post_id / Codex header=schedule",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 21,
+      "actual_header": "approved",
+      "producer_expressions": [],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "UNKNOWN",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 22,
+      "actual_header": "notes",
+      "producer_expressions": [
+        {
+          "scenario_id": 9508104,
+          "module_id": 20,
+          "expression": "\"OPUS_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 20,
+          "expression": "\"OPUS_CLIPS_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 10,
+          "expression": "\"clips: {{3.data.total}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 20,
+          "expression": "\"KARAOKE_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 20,
+          "expression": "\"BEATS_ERR: {{error.message}}\"",
+          "direction": "update"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 20,
+          "expression": "\"RENDER_ERR: {{error.message}}\"",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "error_msg",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    },
+    {
+      "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+      "sheet_id": 311238625,
+      "tab": "N0_Master",
+      "column_index": 23,
+      "actual_header": null,
+      "producer_expressions": [
+        {
+          "scenario_id": 9508973,
+          "module_id": 6,
+          "expression": "{{5.result.karaoke}}",
+          "direction": "update"
+        }
+      ],
+      "row_readers": [
+        {
+          "scenario_id": 9508460,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Approved\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508282,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Rendered\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508279,
+          "module_id": 2,
+          "range": "A1:W1",
+          "filter": "B == {{1.n0_id}} (webhook payload)",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508104,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Prepped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508147,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipping\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508162,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"Clipped\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508973,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Romanized\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508207,
+          "module_id": 1,
+          "range": "A1:X1",
+          "filter": "A == \"Captioned\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        },
+        {
+          "scenario_id": 9508239,
+          "module_id": 1,
+          "range": "A1:W1",
+          "filter": "A == \"BeatsDone\"",
+          "scope": "row_read_not_proof_every_column_consumed"
+        }
+      ],
+      "observed_role": "karaoke_timings",
+      "canonical_path": null,
+      "mapping_status": "UNMAPPED_UNTIL_EXPLICIT_FIELD_RULE"
+    }
+  ],
+  "datastore_dependencies": {
+    "168757": {
+      "used_by": [
+        "N3"
+      ],
+      "role": "TikTok bearer token store (key 'main'.access_token) \u2014 NOT read"
+    },
+    "168812": {
+      "used_by": [
+        "N3",
+        "P1",
+        "N0-B1/B2/C2/D1/D2/tests"
+      ],
+      "role": "error/DLQ log",
+      "fields_written": [
+        "post_id",
+        "platform",
+        "scenario",
+        "error_type",
+        "status_code",
+        "error_message",
+        "raw_error",
+        "timestamp"
+      ]
+    },
+    "169448": {
+      "used_by": [
+        "N0-B1",
+        "N0-B2",
+        "N0-C2",
+        "N0-B-tests"
+      ],
+      "role": "OpusClip config",
+      "fields": [
+        "api_key [REDACTED]"
+      ]
+    },
+    "169451": {
+      "used_by": [
+        "N0 test scenarios"
+      ],
+      "role": "test call log",
+      "fields": [
+        "ts",
+        "note",
+        "payload",
+        "status_code"
+      ]
+    },
+    "169690": {
+      "used_by": [
+        "N0-C2",
+        "N0-D1",
+        "V1",
+        "V2",
+        "V1b",
+        "PREP/BEAT tests"
+      ],
+      "role": "media/beat/visualizer service config",
+      "fields": [
+        "base_url",
+        "api_key [REDACTED]"
+      ]
+    },
+    "171100": {
+      "used_by": [
+        "N0-D2"
+      ],
+      "role": "Creatomate config",
+      "fields": [
+        "api_key [REDACTED]"
+      ]
+    },
+    "171448": {
+      "used_by": [
+        "V1",
+        "V2",
+        "V3-nonsecure",
+        "V3-SECURE"
+      ],
+      "role": "visualizer jobs",
+      "fields": [
+        "title",
+        "status",
+        "created",
+        "song_id",
+        "audio_url",
+        "photo_url",
+        "cuts_count",
+        "done_count",
+        "subfolder_id",
+        "fragment_urls"
+      ]
+    },
+    "177455": {
+      "used_by": [
+        "P1"
+      ],
+      "role": "poster rows",
+      "fields": [
+        "status",
+        "ig",
+        "fb",
+        "ig_post_id",
+        "fb_post_id",
+        "poster_id",
+        "asset_sha256",
+        "packaging_sha256",
+        "schedule_version",
+        "scheduled_at",
+        "scheduled_at_epoch",
+        "caption",
+        "image_url"
+      ]
+    },
+    "185338": {
+      "used_by": [
+        "V3-SECURE"
+      ],
+      "role": "consumed-nonce store key=sha256(nonce)",
+      "fields": [
+        "ts",
+        "content_id",
+        "nonce_hash",
+        "consumed_at"
+      ]
+    }
+  },
+  "coverage": {
+    "refreshed": [
+      "N2 9385197",
+      "N3 9385359",
+      "P1 9627055"
+    ],
+    "newly_inspected": [
+      "N4 9385364",
+      "N5 9397512",
+      "N6 9483892",
+      "N7 9571076",
+      "N8 9571262",
+      "N0-B1 9508104",
+      "N0-B2 9508147",
+      "N0-C 9508162",
+      "N0-C2 9508973",
+      "N0-D1 9508207",
+      "N0-D2 9508239",
+      "N0-PREP-TEST 9508062",
+      "N0-BEAT-TEST 9472289",
+      "N0-B-TEST-clip 9465683",
+      "N0-B-TEST-poll 9465685",
+      "V1b 9591968",
+      "V3-nonsecure 9561890"
+    ],
+    "already_covered_prior_V15_task": [
+      "N1 9385192",
+      "N0-E 9508460",
+      "N0-REVIEW 9508282",
+      "N0-REVIEW-APPROVE 9508279",
+      "V1 9516949",
+      "V2 9516688",
+      "V3-SECURE 9796001"
+    ],
+    "all_target_scope_covered": true
+  },
+  "source_caveat": "Make reads are authenticated Claude Dispatch reports, not independently signed Make receipts; direct headers/formulas independently verified",
+  "conflicts": [
+    {
+      "tab": "N0_Master",
+      "index": 20,
+      "codex_live_header": "schedule",
+      "observed_write_role": "N0-E (9508460) module 5 writes {{post_id}} into index 20 (status->Scheduled)",
+      "status": "UNRESOLVED_CONFLICT \u2014 header says 'schedule' but N0-E writes a post_id there; do not infer, flag for reconciliation"
+    },
+    {
+      "tab": "Content_Master",
+      "index": 8,
+      "codex_live_header": "data",
+      "observed_write_role": "N2 (9385197) module 13 writes {{md5}} into index 8",
+      "status": "UNRESOLVED_CONFLICT \u2014 header 'data' vs md5 write"
+    },
+    {
+      "tab": "Captions_Publishing",
+      "index": 9,
+      "observed_roles": [
+        "tiktok_hashtags (N2 module 7, N0-E module 4 write {{tiktok.hashtags}})",
+        "retry_count (N4 module 2/updates read+write {{1.`9`}} as numeric retry counter)"
+      ],
+      "status": "NEW_CONFLICT_FOUND \u2014 index 9 is written as tiktok_hashtags by N2/N0-E but read/written as retry_count by N4; same physical column, two incompatible meanings",
+      "note": "cross-check against Codex live header for idx9"
+    },
+    {
+      "tab": "Captions_Publishing",
+      "index": 26,
+      "header": "published_at",
+      "observed_role": "RESHARE_NOTIFIED",
+      "status": "CONFLICT"
+    },
+    {
+      "tab": "Captions_Publishing",
+      "index": 27,
+      "header": null,
+      "observed_role": "QUEUED",
+      "status": "UNNAMED_COLUMN"
+    },
+    {
+      "tab": "N0_Master",
+      "index": 23,
+      "header": null,
+      "observed_role": "karaoke_timings",
+      "status": "UNNAMED_COLUMN"
+    }
+  ]
+}

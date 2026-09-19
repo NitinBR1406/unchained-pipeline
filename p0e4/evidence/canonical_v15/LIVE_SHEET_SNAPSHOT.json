@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-18T23:42:15.262Z",
+  "source": "direct_google_drive_get_spreadsheet_cells",
+  "spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+  "properties": {
+    "title": "UnchainedNitin_MasterSheet",
+    "locale": "nl_NL",
+    "timeZone": "America/Los_Angeles"
+  },
+  "coverage": "Header and first two data rows only; formulas/validations outside this range UNKNOWN",
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 1259836610,
+        "title": "Captions_Publishing",
+        "index": 0,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1012,
+          "columnCount": 31,
+          "rowGroupControlAfter": true,
+          "columnGroupControlAfter": true
+        }
+      },
+      "headers": [
+        "Choose The Status",
+        "post_id",
+        "base_caption",
+        "base_keywords",
+        "caption_youtube",
+        "hashtags_youtube",
+        "youtube_title",
+        "youtube_keywords",
+        "caption_tiktok",
+        "hashtags_tiktok",
+        "caption_instagram",
+        "hashtags_instagram",
+        "caption_facebook",
+        "hashtags_facebook",
+        "publish_to_youtube",
+        "publish_to_tiktok",
+        "publish_to_instagram",
+        "publish_to_facebook",
+        "youtube_schedule",
+        "tiktok_schedule",
+        "instagram_schedule",
+        "facebook_schedule",
+        "youtube_post_id",
+        "tiktok_post_id",
+        "instagram_post_id",
+        "facebook_post_id",
+        "published_at"
+      ],
+      "sample_cell_types": [
+        [
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "blank",
+          "blank",
+          "blank",
+          "stringValue",
+          "blank",
+          "blank",
+          "blank",
+          "stringValue"
+        ],
+        [
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "blank",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "blank",
+          "stringValue",
+          "stringValue",
+          "stringValue"
+        ]
+      ],
+      "observed_status_samples": [
+        "Processing",
+        "Processing"
+      ],
+      "formulas": [],
+      "validations": []
+    },
+    {
+      "properties": {
+        "sheetId": 567039455,
+        "title": "Content_Master",
+        "index": 1,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1015,
+          "columnCount": 26,
+          "rowGroupControlAfter": true,
+          "columnGroupControlAfter": true
+        }
+      },
+      "headers": [
+        "status",
+        "post_id",
+        "file_name",
+        "media_type",
+        "input_file_url",
+        "created_at",
+        "file_id",
+        "download_url",
+        "data"
+      ],
+      "sample_cell_types": [
+        [
+          "blank",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue"
+        ],
+        [
+          "blank",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue"
+        ]
+      ],
+      "observed_status_samples": [
+        null,
+        null
+      ],
+      "formulas": [],
+      "validations": []
+    },
+    {
+      "properties": {
+        "sheetId": 472188340,
+        "title": "Status_Logging",
+        "index": 2,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1005,
+          "columnCount": 26
+        }
+      },
+      "headers": [
+        "post_id",
+        "status",
+        "schedule"
+      ],
+      "sample_cell_types": [
+        [
+          "stringValue",
+          "stringValue",
+          "numberValue"
+        ],
+        [
+          "stringValue",
+          "stringValue",
+          "blank"
+        ]
+      ],
+      "observed_status_samples": [
+        "UASCE-20260629200137-1BfKsV",
+        "TMPTEST"
+      ],
+      "formulas": [],
+      "validations": []
+    },
+    {
+      "properties": {
+        "sheetId": 311238625,
+        "title": "N0_Master",
+        "index": 3,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1003,
+          "columnCount": 26
+        }
+      },
+      "headers": [
+        "status",
+        "n0_id",
+        "source_video_name",
+        "source_video_url",
+        "source_audio_url",
+        "prep_mp4_url",
+        "opus_project_id",
+        "clip_id",
+        "clip_export_url",
+        "clip_thumbnail_url",
+        "virality_score",
+        "clip_timerange",
+        "transcript_devanagari",
+        "caption_romanized",
+        "post_caption",
+        "hashtags",
+        "beats_json",
+        "bpm",
+        "render_url",
+        "thumbnail_final",
+        "schedule",
+        "approved",
+        "notes"
+      ],
+      "sample_cell_types": [
+        [
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "blank",
+          "stringValue",
+          "stringValue",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "stringValue"
+        ],
+        [
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "blank",
+          "blank",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "numberValue",
+          "numberValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "stringValue",
+          "numberValue",
+          "stringValue"
+        ]
+      ],
+      "observed_status_samples": [
+        "Clipped-done",
+        "Approved"
+      ],
+      "formulas": [],
+      "validations": []
+    },
+    {
+      "properties": {
+        "sheetId": 1659744327,
+        "title": "Poster_Schedule",
+        "index": 4,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 26
+        }
+      },
+      "headers": [],
+      "sample_cell_types": [
+        [
+          "stringValue",
+          "blank",
+          "blank",
+          "stringValue",
+          "stringValue",
+          "blank",
+          "blank",
+          "stringValue",
+          "stringValue"
+        ],
+        [
+          "blank",
+          "blank",
+          "blank",
+          "blank",
+          "stringValue"
+        ]
+      ],
+      "observed_status_samples": [
+        "Published",
+        null
+      ],
+      "formulas": [],
+      "validations": []
+    }
+  ]
+}
