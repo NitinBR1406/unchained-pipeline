@@ -24,7 +24,10 @@ def verify_external(result,data,creative,resolver,archive_bytes,decision):
         require(decision[flag] is False,'decision scope escalated')
     require(result['request_id']==REQUEST_ID,'wrong dispatch request')
     require(result['input_archive_sha256']==ARCHIVE_SHA,'returned archive mismatch')
-    require(result['status'] in ('PASS','COMPLETE','COMPLETED'),'preflight did not succeed')
+    require(result['status'] in ('PASS','COMPLETE','COMPLETED','PREFLIGHT_OK'),'preflight did not succeed')
+    if 'gates' in result:
+        require(canonical(result['gates'])==canonical(dict(PRODUCTION_DEPLOYMENT_AUTHORIZED=False,PUBLICATION_AUTHORIZED=False,FIRST_REAL_POSTER='PAUSED_BY_NITIN')),'reported gate escalation')
+    if 'NON_PUBLISHING' in result:require(result['NON_PUBLISHING'] is True,'publishing result forbidden')
     expected=compile_preflight(data,creative,resolver)
     jobs=[{'package_id':j['package_id'],'groups':j['groups']} for j in expected['jobs']]
     # Serialized equality rejects bool/int, int/float, null/default and ordering drift.

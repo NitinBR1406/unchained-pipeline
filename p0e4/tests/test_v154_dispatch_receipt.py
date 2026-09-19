@@ -20,6 +20,11 @@ class Receipt(unittest.TestCase):
   task=next(t for t in seed['tasks'] if t['task_id']=='EC_V154_PREFLIGHT_VALIDATION_SCHEMA')
   schema=next(iter(task['outputs'].values()));Draft202012Validator.check_schema(schema)
   Draft202012Validator(schema).validate(self.verify())
+ def test_observed_status_and_reported_gates(self):
+  self.result['status']='PREFLIGHT_OK';self.result['NON_PUBLISHING']=True
+  self.result['gates']=dict(PRODUCTION_DEPLOYMENT_AUTHORIZED=False,PUBLICATION_AUTHORIZED=False,FIRST_REAL_POSTER='PAUSED_BY_NITIN')
+  self.verify();self.result['gates']['PUBLICATION_AUTHORIZED']=True
+  with self.assertRaises(ValueError):self.verify()
  def test_wrong_archive_and_request(self):
   for field in ('input_archive_sha256','request_id','status'):
    self.setUp();self.result[field]='WRONG'
