@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "executor": "Current authorized Codex engineering turn",
+  "v11_controller_runtime_unchanged": true,
+  "v11_scope": "Allowlisted JSON output fixture tasks only; this multi-file adapter/UI integration exceeds that proven scope",
+  "new_v11_dispatches": 0,
+  "duplicate_dispatches": 0,
+  "always_on_general_executor_proven": false
+}

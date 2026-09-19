@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "WAITING_FOR_EXTERNAL_SETUP_OR_NITIN_CHANGE_APPROVAL",
+  "current_state": "Existing /clip always uploads GCS; source-video SHA gate and deployed/source parity are unproven; production deployment remains unauthorized.",
+  "proposed_state": "Provide an already authorized private non-production render endpoint/sink with verified deployment hash and no new billing, or separately authorize a concrete isolated staging deployment under change control. Do not use public GCS production endpoint as smoke.",
+  "setup_actions": [
+    "Identify approved private staging render surface and prove its output access controls and code SHA.",
+    "Provision BEAT_API_KEY through the secret manager only if required; never paste values.",
+    "Bind exact RAW/final-audio source hashes before real Aakhri Ishq production. Integration candidates retain INTEGRATION_TEST_INPUT."
+  ],
+  "secret_names_only": [
+    "BEAT_API_KEY"
+  ],
+  "affected_make_dependencies": [
+    "N0 render consumers and N-series video path remain unchanged",
+    "N3 and P1 remain unactivated by this tranche"
+  ],
+  "validation_evidence": [
+    "SOURCE_VERIFICATION.json",
+    "INTEGRATION_VALIDATION.json",
+    "DRIVE_RECEIPT.json"
+  ],
+  "rollback": "No live changes were made. Revert additive p0e4 adapters or stop referencing the V16 shadow bundle; original Make/Sheet indices and files remain intact.",
+  "grants_inferred": false,
+  "production_deployment_authorized": false,
+  "publication_authorized": false
+}

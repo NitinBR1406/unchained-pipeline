@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "checkpoint_tested_sha": "f7d4f4d205e4dee753d06b70640c41514d996244",
+  "completed_task_ids": [
+    "P0E4_V16_FACTORY_CONSUMERS_OFFLINE_SLICE"
+  ],
+  "authorized_tranche": "P0E4_V16_FACTORY_CONSUMERS",
+  "tranche_status": "SCOPED_ACCEPTANCE_EXTERNAL_SETUP_BLOCKED",
+  "ready_nonhuman_count": 0,
+  "tasks": [
+    {
+      "task_id": "V16_PRIVATE_RENDER_SETUP",
+      "status": "WAITING_FOR_EXTERNAL_SETUP",
+      "packet": "HUMAN_ACTION_PACKET.json"
+    },
+    {
+      "task_id": "AKI_AUTHORITATIVE_AUDIO_BINDING",
+      "status": "WAITING_FOR_NITIN"
+    },
+    {
+      "task_id": "LIVE_MAKE_CUTOVER",
+      "status": "WAITING_FOR_NITIN_CHANGE_APPROVAL"
+    }
+  ],
+  "next_action": "On a new authorized staging capability, resume V16 live proof using this existing adapter; do not repeat discovery or synthetic integration. Reconcile unchanged heartbeat quietly.",
+  "publication_authorized": false
+}

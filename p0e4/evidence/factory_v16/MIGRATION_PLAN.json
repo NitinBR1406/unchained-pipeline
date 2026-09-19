@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "mode": "SHADOW_ONLY",
+  "source_spreadsheet_id": "1QK0h9VjYttHBMjfEqPX8K1LLlEfvX4W-CcDItroc-Ag",
+  "legacy_columns_changed": 0,
+  "source_inventory": "p0e4/evidence/canonical_v151/SOURCE_INVENTORY.json",
+  "dependency_map": "p0e4/evidence/canonical_v151/CLAUDE_MAPPING_CLOSURE.json",
+  "fresh_discovery": "CLAUDE_DISCOVERY_RESULT.json",
+  "destination_drive_id": "0AG0CqqUZ6YuXUk9PVA",
+  "destination_folder_id": "18e0lS9xvw7LO5a28HRP-fLrhQj0pvUrJ",
+  "shadow_file_id": "1QQaSuqBLN9AQFyQPWq1U_QoaBH5Thfl9",
+  "validation": "INTEGRATION_VALIDATION.json",
+  "rollback": "Keep original operational spreadsheet and all scenarios unchanged. Retain immutable shadow for audit; future adapter switch can revert to previous bundle by exact hash.",
+  "live_cutover_executed": false,
+  "live_cutover_gate": "NITIN_CHANGE_APPROVAL"
+}

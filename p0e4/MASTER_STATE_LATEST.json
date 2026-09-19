@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "master_state_version": "V15.5",
-  "state_version": 25,
-  "path": "p0e4/evidence/wake_dispatch_v155/UNCHAINED_MASTER_PROJECT_STATE_V15_5.json",
-  "sha256": "c80f8e6e154d2c407c2c9b75b456784220797f01bc0c42e68d8084981bf3f738",
-  "tested_sha": "f29fc9a09a9b1f3d8f62310a0da06de72f4c4607",
-  "evidence_manifest": "p0e4/evidence/wake_dispatch_v155/SHA256SUMS.txt",
-  "scope_status": "BOUNDED_WAKE_DISPATCH_ACCEPTED_PRODUCTION_BLOCKED",
+  "master_state_version": "V16",
+  "state_version": 26,
+  "path": "p0e4/evidence/factory_v16/UNCHAINED_MASTER_PROJECT_STATE_V16.json",
+  "sha256": "a466c8837812f2a17a1f4e39cf5f2669ca9a0046d299570578d2b64e9dfef741",
+  "tested_sha": "f7d4f4d205e4dee753d06b70640c41514d996244",
+  "evidence_manifest": "p0e4/evidence/factory_v16/SHA256SUMS.txt",
+  "scope_status": "FACTORY_OFFLINE_INTEGRATION_ACCEPTED_LIVE_RENDER_BLOCKED",
   "production_e2e_status": "BLOCKED_NOT_GREEN"
 }
