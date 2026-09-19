@@ -1,0 +1,162 @@
+{
+  "schema": "CLAUDE_PRODUCTION_PREFLIGHT",
+  "schema_version": 1,
+  "canonical_sha256": "ff063dee4a8e75a1e87c12f6ca583442341b41340e24dee0c8a8c505ee1fd9b7",
+  "creative_sha256": "ffe74a7674d660328d14af29c9b74c9a7f3a73e1fed3a2d2ab8c617b979e1587",
+  "jobs": [
+    {
+      "package_id": "package:test",
+      "groups": {
+        "title": "TEST_ONLY title",
+        "caption": "TEST_ONLY caption",
+        "hashtags": [
+          "#TestOnly"
+        ],
+        "cta": "TEST_ONLY save",
+        "hooks": "TEST_ONLY vocal opening",
+        "timestamps": {
+          "start_ms": 0,
+          "end_ms": 10000
+        },
+        "derivatives": {
+          "derivative_id": "derivative:test",
+          "kind": "CLIP",
+          "source_asset": {
+            "asset_id": "asset:0",
+            "content_id": "TEST_ONLY_GOLDEN",
+            "role": "INTEGRATION_TEST_INPUT",
+            "uri": "p0e4/evidence/canonical_v15/fixture/raw",
+            "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+            "authority": "INTEGRATION_TEST_INPUT",
+            "binding_evidence_id": null,
+            "evidence_ids": [
+              "ev:test"
+            ]
+          },
+          "output_asset": null
+        },
+        "aspect_ratios": "9:16",
+        "edit_effects": {
+          "duration_ms": 10000,
+          "baseline_locked": true,
+          "execution_mode": "RECOMMENDATION_ONLY",
+          "segments": [
+            {
+              "start_ms": 0,
+              "end_ms": 10000,
+              "source_sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+              "source_start_ms": 0,
+              "source_end_ms": 10000,
+              "performer_visible": true
+            }
+          ],
+          "effects": []
+        },
+        "thumbnails_posters": {
+          "thumbnail": null,
+          "poster": null
+        },
+        "platform_targeting": "youtube_shorts",
+        "schedules": {
+          "scheduled_at": null,
+          "schedule_timezone": "Europe/Amsterdam",
+          "schedule_version": 1
+        },
+        "experiments": {
+          "experiment": {
+            "experiment_id": "experiment:test",
+            "campaign_id": "campaign:test",
+            "hypothesis_id": "hypothesis:test",
+            "tested_variable": "opening_hook",
+            "variant_id": "variant:test",
+            "control_variant_id": null,
+            "primary_metric": "retention",
+            "status": "PLANNED",
+            "evidence_ids": [
+              "ev:test"
+            ]
+          },
+          "hypothesis": {
+            "hypothesis_id": "hypothesis:test",
+            "content_id": "TEST_ONLY_GOLDEN",
+            "statement": "TEST_ONLY vocal-first hook improves retention",
+            "predicted_metric": "retention",
+            "falsification_rule": "No improvement versus control",
+            "evidence_ids": [
+              "ev:test"
+            ]
+          }
+        },
+        "provenance": {
+          "content_id": "TEST_ONLY_GOLDEN",
+          "package_id": "package:test",
+          "source_package_sha256": "ffe74a7674d660328d14af29c9b74c9a7f3a73e1fed3a2d2ab8c617b979e1587",
+          "agents": [
+            {
+              "agent_id": "agent:test",
+              "agent_role": "GEMINI_INTELLIGENCE",
+              "source_agent_name": "TEST_ONLY_GEMINI",
+              "model_id": null,
+              "run_id": "TEST_ONLY_TEST_ONLY_GEMINI",
+              "observed_at": "2026-09-18T17:00:00Z",
+              "authenticated_receipt_id": null,
+              "evidence_ids": [
+                "ev:test"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            {
+              "evidence_id": "ev:test",
+              "uri": "p0e4/evidence/canonical_v15/fixture/evidence",
+              "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9"
+            }
+          ]
+        }
+      },
+      "wire": {
+        "hashtags": "#TestOnly",
+        "keywords": "test",
+        "amsterdam_schedule": null
+      },
+      "required_groups": [
+        "title",
+        "caption",
+        "hashtags",
+        "cta",
+        "hooks",
+        "timestamps",
+        "derivatives",
+        "aspect_ratios",
+        "edit_effects",
+        "thumbnails_posters",
+        "platform_targeting",
+        "schedules",
+        "experiments",
+        "provenance"
+      ],
+      "group_sha256": {
+        "title": "2cd76a7281a5683d966d065d6a6ddf8a030e9553f33b29a9dde0d8b20d29c641",
+        "caption": "c150eabb152f6fef607cea4258bacf8ddba0f992745bdf6861a65f89c6fa1ed2",
+        "hashtags": "c00fca132ee23415c5c5317bf9931074ca479b2cdba05ff3daed0b2e07d157d1",
+        "cta": "dbab02266035361dd7d4c501680a396391f2f6f4d3226f67a86556d32d12d8db",
+        "hooks": "95b806b3c473f63bb60875683db816335f6eb44f07975857062c96bfb91696ac",
+        "timestamps": "4ec88dfbca2f4f2d464f78d66e9a0b345b0630b16cc66eb2d8ab336fa35c2ec1",
+        "derivatives": "eced2ad368b0b980e955f9eea66942f5ce2135e18ead4270d24792e67f73c331",
+        "aspect_ratios": "8e22f972a30c4a20d6d18e1215ab25af1794dbe69eb9f06eec147c036c5ceb4e",
+        "edit_effects": "a747f7431b3d9c4e997ff3c49e4a3fa341855b0c4c3f416e26dd133de09992a6",
+        "thumbnails_posters": "916c3d141a34104dcc50df2c323a8f4f08db0f38d54814f8b44ec90c8cbec27b",
+        "platform_targeting": "5bd1a5acc8e9c032451244ddc44e5faf87a6d28225ce7f2760c6b777bdc765b3",
+        "schedules": "5b2dcda87fb139e9958759f522068ce5104a950905ecf023e369793783e470c5",
+        "experiments": "08e008b5eff0b5ced6bc7ddbe54f353e817ebeea9c3425d78172fe1e76010f3f",
+        "provenance": "e43241abb4c8582eafa37ed7e4a9d138e10c6da9d5dab15b9805e610b26cbe27"
+      },
+      "status": "PREFLIGHT_ONLY_PRODUCTION_BLOCKED"
+    }
+  ],
+  "preflight_group_coverage": 14,
+  "live_legacy_execution_proven": false,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

@@ -1,0 +1,10 @@
+version = 1
+id = "unchained-p0-e4-ready-continuation"
+kind = "heartbeat"
+name = "UNCHAINED P0-E4 READY continuation"
+prompt = "Resume UNCHAINED NITIN P0-E4 autonomously from authoritative GitHub branch p0e4/slice1-production-handoff in NitinBR1406/unchained-pipeline. Inspect remote HEAD, MASTER_STATE_LATEST, manifests and persisted NEXT_READY. Respect running claims and leases; never duplicate dispatch or authoritative runs. Execute READY non-human engineering using the proven controller where applicable through tests, regression, replay, evidence, exact tested SHA, narrow commit/push and remote verification. On the first actual scheduler wake after this task becomes idle, persist an honest idle/wake receipt with observed time, trigger and prior checkpoint; creating this schedule is not always-on proof. Continue to next READY work. Frozen P0-E0–E3 unchanged. PRODUCTION_DEPLOYMENT_AUTHORIZED=false; PUBLICATION_AUTHORIZED=false; FIRST_REAL_POSTER=PAUSED_BY_NITIN. No publication, fabricated approval, destructive operational Make/Sheet mutation, secret exposure or new costs. Stop dependent work only at genuine human/credential/setup/financial/governance gates and finish independent READY work. Stay quiet on unchanged/non-actionable state; notify only accepted progress, failure or required human action."
+status = "ACTIVE"
+rrule = "FREQ=MINUTELY;INTERVAL=15"
+target_thread_id = "01a0b580-2f00-7f32-a6cb-4426d85bb1b9"
+created_at = 1789807739771
+updated_at = 1789807739771

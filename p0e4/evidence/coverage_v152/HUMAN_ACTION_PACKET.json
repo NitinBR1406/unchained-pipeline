@@ -1,0 +1,19 @@
+{
+  "gate": "EXPLICIT_PRIVATE_ARCHIVE_TRANSFER_APPROVAL",
+  "status": "AWAITING_USER_RESPONSE",
+  "requested_action": "Authorize Claude Desktop Dispatch to read private Shared Drive archive UNCHAINED_V15_1_MAPPING_CLOSURE_e2edfbfa1b48.zip for a non-publishing synthetic preflight only",
+  "archive_id": "1QEuftSGTn94j0SPRkyq3Ewutl6V8-Qkf",
+  "archive_sha256": "e2edfbfa1b4840f1204e0ed9e9213e17798c0a8f7169a92dd53fba814cf4bbdd",
+  "includes": [
+    "synthetic fixture",
+    "canonical schema",
+    "mapping and project evidence"
+  ],
+  "blocked_by": "AUTOMATIC_APPROVAL_REVIEW",
+  "reason": "Specific authorization for transmitting private archive/project details to Claude was required by automatic review",
+  "no_workaround_attempted": true,
+  "external_submission_confirmed": false,
+  "make_sheet_mutation_allowed": false,
+  "publication_authorized": false,
+  "secret_values_requested": false
+}

@@ -1,0 +1,14 @@
+{
+  "automation_id": "unchained-p0-e4-ready-continuation",
+  "status": "ACTIVE",
+  "configured": true,
+  "interval_minutes": 15,
+  "target_thread_id": "01a0b580-2f00-7f32-a6cb-4426d85bb1b9",
+  "observed_at": "2026-09-19T08:54:20.986942+00:00",
+  "scheduler_wake_observed": false,
+  "always_on_dispatcher_proven": false,
+  "first_idle_wake_test": "PENDING_ACTUAL_SCHEDULER_TRIGGER_AFTER_CURRENT_TURN",
+  "configuration_sha256": "a2c5457e7b0877345c9703246693b9de306fa72395d8fd9957ca79e587508294",
+  "platform_requirement": "Host powered on and desktop app running",
+  "official_source": "https://learn.chatgpt.com/docs/automations?surface=app"
+}

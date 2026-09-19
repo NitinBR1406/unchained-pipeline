@@ -1,0 +1,21 @@
+{
+  "parent_remote_sha": "835c97af82c5b48ad5233c82df3aa1bdc46b1cfe",
+  "tested_sha": "5e081abcff35e249973051d82ebb755053ac226a",
+  "changed_paths": [
+    "p0e4/canonical/consumer.py",
+    "p0e4/controller/READY_WRITES_V01.json",
+    "p0e4/controller/project_v152.py",
+    "p0e4/generated/v152_preflight_groups.json",
+    "p0e4/generated/v152_wake_receipt.json",
+    "p0e4/tests/test_v152_consumer.py",
+    "p0e4/tests/test_v152_projection.py",
+    "p0e4/tests/test_v152_ready_scope.py"
+  ],
+  "frozen_components_changed": false,
+  "existing_v11_executor_code_changed": false,
+  "external_sheet_writes": 0,
+  "external_make_mutations": 0,
+  "new_authoritative_production_runs": 0,
+  "real_bounded_codex_dispatches": 2,
+  "claude_submission_blocked_by_automatic_approval": true
+}

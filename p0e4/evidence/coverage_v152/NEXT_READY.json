@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "checkpoint_tested_sha": "5e081abcff35e249973051d82ebb755053ac226a",
+  "tasks": [
+    {
+      "task_id": "V152_SCHEDULER_IDLE_WAKE_PROOF",
+      "status": "READY_AFTER_CURRENT_TURN_IDLE",
+      "action": "On an actual heartbeat trigger record the trigger context, observed UTC time and this checkpoint hash. Validate remote state, receipts and idempotent controller resume, then append evidence. Do not infer a wake from the automation configuration or manually invoked tools."
+    },
+    {
+      "task_id": "V152_AUTHENTICATED_CLAUDE_PREFLIGHT",
+      "status": "WAITING_FOR_EXPLICIT_TRANSFER_APPROVAL",
+      "action": "Only after explicit user approval submit the single bounded read-only archive preflight to Claude Dispatch, compare returned groups with PREFLIGHT.json, persist authenticated observation receipt and fail closed on differences."
+    },
+    {
+      "task_id": "AKI_AUTHORITATIVE_AUDIO_BINDING",
+      "status": "WAITING_FOR_NITIN",
+      "action": "Known media may remain INTEGRATION_TEST_INPUT only; never promote candidate container audio."
+    }
+  ],
+  "automatic_scheduler_id": "unchained-p0-e4-ready-continuation",
+  "no_duplicate_dispatch": true,
+  "publication_authorized": false
+}
