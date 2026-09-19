@@ -1,0 +1,11 @@
+{
+  "parent_remote_sha": "9b5da0691d578d6dd421f80f7d3bbc30130c1388",
+  "tested_sha": "af67b7a15730eecbe10ad42d5af61812f6c39d16",
+  "frozen_components_changed": false,
+  "existing_executor_runtime_code_changed": false,
+  "external_make_sheet_mutations": 0,
+  "new_production_runs": 0,
+  "new_claude_preflight_requests": 1,
+  "attachment_followups_same_request": 1,
+  "publication_authorized": false
+}

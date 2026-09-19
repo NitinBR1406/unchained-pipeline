@@ -1,0 +1,39 @@
+{
+  "schema": "CLAUDE_DISPATCH_RECEIPT",
+  "schema_version": 1,
+  "request_id": "P0E4_V154_PREFLIGHT_A",
+  "surface": "Claude Desktop Dispatch Beta",
+  "session_id": "d4d1d7d1-1eb9-4047-a092-217ca0feff33",
+  "provider_task_uuid": null,
+  "observed_states": [
+    "NEW_REQUEST_SUBMITTED",
+    "RUNNING",
+    "EXACT_ARCHIVE_ATTACHED_TO_SAME_TASK",
+    "COMPLETION_OBSERVED"
+  ],
+  "observed_at": "2026-09-19T09:40:17.271845+00:00",
+  "request": {
+    "uri": "p0e4/evidence/claude_v154/CLAUDE_REQUEST.txt",
+    "sha256": "97df132312923995f91844f0ea395c441b5add535887450bd0848795d6123d68"
+  },
+  "attachment_followup": {
+    "uri": "p0e4/evidence/claude_v154/CLAUDE_ATTACHMENT_FOLLOWUP.txt",
+    "sha256": "fbfc55954d7b67514704de0b86bd5e3253f28dc593b3c594e069e13125f4909d"
+  },
+  "archive_sha256": "e2edfbfa1b4840f1204e0ed9e9213e17798c0a8f7169a92dd53fba814cf4bbdd",
+  "claude_attachment_file_id": "323e5866-da87-455b-93c8-748877152e3b",
+  "result": {
+    "uri": "p0e4/evidence/claude_v154/CLAUDE_RESULT.json",
+    "sha256": "69ae314cf77991eb5be9f9e1bf6945c95053bebf59a30edf52014a61959edd4c"
+  },
+  "validation": {
+    "uri": "p0e4/evidence/claude_v154/SEMANTIC_VALIDATION.json",
+    "sha256": "c3320a7773a17afa9d5d841d58744acc43cc3ee0860d70fbb530b9e3445863a0"
+  },
+  "authenticated_session_observed": true,
+  "provider_signed_receipt": false,
+  "model_identity": null,
+  "scope": "SYNTHETIC_PREFLIGHT_ONLY",
+  "publication_authorized": false,
+  "production_deployment_authorized": false
+}

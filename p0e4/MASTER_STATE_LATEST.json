@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "master_state_version": "V15.3",
-  "state_version": 23,
-  "path": "p0e4/evidence/wake_v153/UNCHAINED_MASTER_PROJECT_STATE_V15_3.json",
-  "sha256": "cd8a29fb74f30247652544f7580db0a0279ab9c98e2a782cdda8a7dfd854851f",
-  "tested_sha": "43d3c16c8d3ca54b36e7e4deb1362c21a1ecc031",
-  "evidence_manifest": "p0e4/evidence/wake_v153/SHA256SUMS.txt",
-  "scope_status": "SCHEDULER_WAKE_ACCEPTED_EXTERNAL_EXECUTION_BLOCKED",
+  "master_state_version": "V15.4",
+  "state_version": 24,
+  "path": "p0e4/evidence/claude_v154/UNCHAINED_MASTER_PROJECT_STATE_V15_4.json",
+  "sha256": "04ead6a4528f1d37a5210f53eded9508de06ea8682f526225772c9dbb5a039a8",
+  "tested_sha": "af67b7a15730eecbe10ad42d5af61812f6c39d16",
+  "evidence_manifest": "p0e4/evidence/claude_v154/SHA256SUMS.txt",
+  "scope_status": "CLAUDE_SYNTHETIC_PREFLIGHT_ACCEPTED_PRODUCTION_BLOCKED",
   "production_e2e_status": "BLOCKED_NOT_GREEN"
 }

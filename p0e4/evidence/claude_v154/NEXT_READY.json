@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checkpoint_tested_sha": "af67b7a15730eecbe10ad42d5af61812f6c39d16",
+  "tasks": [
+    {
+      "task_id": "EC_V154_PREFLIGHT_VALIDATION_SCHEMA",
+      "status": "READY",
+      "scope": "p0e4_nonproduction_contract_fixture",
+      "execution_window": "NEXT_ACTUAL_SCHEDULER_WAKE_AFTER_THIS_TURN_IDLE",
+      "purpose": "Generate the strict machine-readable schema used to validate the newly proven Claude preflight receipt; genuine bounded next engineering artifact.",
+      "action": "On a genuine scheduler heartbeat, verify remote checkpoint and committed READY list. Run existing V11 engineering.run_ready with WriteCLI, capture CLAIMED/RUNNING/HEARTBEAT/completion plus full regression, verify generated schema against SEMANTIC_VALIDATION.json, persist idle/wake/dispatch/receipt/reducer/next_READY chain and push. Do not call this wake proof during the initiating user turn."
+    },
+    {
+      "task_id": "AKI_AUTHORITATIVE_AUDIO_BINDING",
+      "status": "WAITING_FOR_NITIN",
+      "action": "Known candidate remains INTEGRATION_TEST_INPUT only; do not infer final audio."
+    },
+    {
+      "task_id": "LIVE_MAKE_INTEGRATION",
+      "status": "BLOCKED_NOT_GREEN",
+      "action": "Synthetic Claude preflight is accepted; no live Make consumers/cutover may be claimed or activated under this archive-transfer approval."
+    }
+  ],
+  "scheduler_id": "unchained-p0-e4-ready-continuation",
+  "transfer_gate_resolved": true,
+  "always_on_dispatcher_proven": false,
+  "publication_authorized": false
+}

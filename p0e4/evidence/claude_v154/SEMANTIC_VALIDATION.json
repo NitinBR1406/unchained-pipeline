@@ -1,0 +1,16 @@
+{
+  "schema": "CLAUDE_PREFLIGHT_VALIDATION",
+  "schema_version": 1,
+  "status": "PASS",
+  "request_id": "P0E4_V154_PREFLIGHT_A",
+  "input_archive_sha256": "e2edfbfa1b4840f1204e0ed9e9213e17798c0a8f7169a92dd53fba814cf4bbdd",
+  "result_sha256": "56383a03fdc59f54f5d5f282d6ecb07091986d353ea790c8c1ae0de512ebbdbc",
+  "expected_jobs_sha256": "fff8431665a0544ab3d31815cc3fd9c84c16112efb4179426f6426811226ddcf",
+  "groups_per_package": 14,
+  "packages": 1,
+  "semantic_drift": false,
+  "scope": "SYNTHETIC_PREFLIGHT_ONLY",
+  "live_make_execution_proven": false,
+  "fresh_gemini_execution_proven": false,
+  "publication_authorized": false
+}

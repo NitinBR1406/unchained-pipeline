@@ -1,0 +1,155 @@
+{
+  "request_id": "P0E4_V154_PREFLIGHT_A",
+  "input_archive_sha256": "e2edfbfa1b4840f1204e0ed9e9213e17798c0a8f7169a92dd53fba814cf4bbdd",
+  "status": "PREFLIGHT_OK",
+  "NON_PUBLISHING": true,
+  "gates": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "fixture_marking": {
+    "synthetic": true,
+    "test_only": true,
+    "schema": "CLAUDE_CANONICAL_SHADOW",
+    "schema_version": 1,
+    "status_in_fixture": "SHADOW_ONLY_NOT_DISPATCHABLE",
+    "external_writes_in_fixture": 0
+  },
+  "counts": {
+    "platform_packages": 1,
+    "derivatives": 1,
+    "assets": 2,
+    "experiments": 1,
+    "hypotheses": 1,
+    "jobs": 1
+  },
+  "actual_tools_used": [
+    "gdrive.get_file_metadata(1QEuftSGTn94j0SPRkyq3Ewutl6V8-Qkf): 478622 bytes zip, title UNCHAINED_V15_1_MAPPING_CLOSURE_e2edfbfa1b48.zip",
+    "gdrive.download_file_content: returned 638307-char base64 saved to host tool-results file (could not cross into bash sandbox directly)",
+    "subagent(general-purpose): moved bytes + cross-checked byte-identical authorized copy in uploads; base64/sha256/unzip via workspace bash",
+    "uploads attachment 6d04b266-...-UNCHAINED_V15_1_MAPPING_CLOSURE_e2edfbfa1b48.zip: byte-identical, SHA256 verified MATCH",
+    "workspace.bash: sha256sum archive.zip (MATCH e2edfbfa1b48...), unzip, python3 exact transform",
+    "NO external writes/runs/publishing/costs"
+  ],
+  "limitations": [
+    "SHADOW_FIXTURE is SYNTHETIC TEST_ONLY (schema 'CLAUDE_CANONICAL_SHADOW', external_writes=0) — NOT fresh Gemini output or media QC.",
+    "Only preflight CONSUMPTION of the fixture is proven; live Make execution/write-back remains UNPROVEN.",
+    "Drive base64 result (638307 chars) exceeded the tool context cap and was not routed verbatim; byte integrity established via SHA256 match on the decoded/attached zip (defense against transcription corruption).",
+    "hypothesis join uses DERIVATIVES.hypothesis_id (drow.hypothesis_id); in this fixture it equals EXPERIMENTS.hypothesis_id.",
+    "No QC_APPROVALS / RIGHTS_RELEASE / final-audio binding consumed; those tables are empty in the fixture and no approval is fabricated."
+  ],
+  "jobs": [
+    {
+      "package_id": "package:test",
+      "groups": {
+        "title": "TEST_ONLY title",
+        "caption": "TEST_ONLY caption",
+        "hashtags": [
+          "#TestOnly"
+        ],
+        "cta": "TEST_ONLY save",
+        "hooks": "TEST_ONLY vocal opening",
+        "timestamps": {
+          "start_ms": 0,
+          "end_ms": 10000
+        },
+        "derivatives": {
+          "derivative_id": "derivative:test",
+          "kind": "CLIP",
+          "source_asset": {
+            "asset_id": "asset:0",
+            "content_id": "TEST_ONLY_GOLDEN",
+            "role": "INTEGRATION_TEST_INPUT",
+            "uri": "p0e4/evidence/canonical_v15/fixture/raw",
+            "sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+            "authority": "INTEGRATION_TEST_INPUT",
+            "binding_evidence_id": null,
+            "evidence_ids": [
+              "ev:test"
+            ]
+          },
+          "output_asset": null
+        },
+        "aspect_ratios": "9:16",
+        "edit_effects": {
+          "duration_ms": 10000,
+          "baseline_locked": true,
+          "execution_mode": "RECOMMENDATION_ONLY",
+          "segments": [
+            {
+              "start_ms": 0,
+              "end_ms": 10000,
+              "source_sha256": "ba6f8ba849b1ede1f8f8c0b6afeffa8a2d8743d8918b02b3ebc6b5791ab7740a",
+              "source_start_ms": 0,
+              "source_end_ms": 10000,
+              "performer_visible": true
+            }
+          ],
+          "effects": []
+        },
+        "thumbnails_posters": {
+          "thumbnail": null,
+          "poster": null
+        },
+        "platform_targeting": "youtube_shorts",
+        "schedules": {
+          "scheduled_at": null,
+          "schedule_timezone": "Europe/Amsterdam",
+          "schedule_version": 1
+        },
+        "experiments": {
+          "experiment": {
+            "experiment_id": "experiment:test",
+            "campaign_id": "campaign:test",
+            "hypothesis_id": "hypothesis:test",
+            "tested_variable": "opening_hook",
+            "variant_id": "variant:test",
+            "control_variant_id": null,
+            "primary_metric": "retention",
+            "status": "PLANNED",
+            "evidence_ids": [
+              "ev:test"
+            ]
+          },
+          "hypothesis": {
+            "hypothesis_id": "hypothesis:test",
+            "content_id": "TEST_ONLY_GOLDEN",
+            "statement": "TEST_ONLY vocal-first hook improves retention",
+            "predicted_metric": "retention",
+            "falsification_rule": "No improvement versus control",
+            "evidence_ids": [
+              "ev:test"
+            ]
+          }
+        },
+        "provenance": {
+          "content_id": "TEST_ONLY_GOLDEN",
+          "package_id": "package:test",
+          "source_package_sha256": "ffe74a7674d660328d14af29c9b74c9a7f3a73e1fed3a2d2ab8c617b979e1587",
+          "agents": [
+            {
+              "agent_id": "agent:test",
+              "agent_role": "GEMINI_INTELLIGENCE",
+              "source_agent_name": "TEST_ONLY_GEMINI",
+              "model_id": null,
+              "run_id": "TEST_ONLY_TEST_ONLY_GEMINI",
+              "observed_at": "2026-09-18T17:00:00Z",
+              "authenticated_receipt_id": null,
+              "evidence_ids": [
+                "ev:test"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            {
+              "evidence_id": "ev:test",
+              "uri": "p0e4/evidence/canonical_v15/fixture/evidence",
+              "sha256": "3b6df24f1167e35f546a6ba319d3fb0021b7fbcdd944c5e0a8b55c10db87f4f9"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "SCOPED_HUMAN_TRANSFER_DECISION",
+  "schema_version": 1,
+  "source": "Direct user message in this Codex task",
+  "recorded_by": "codex",
+  "decision_author": "Nitin",
+  "signature": null,
+  "recorded_at": "2026-09-19T09:28:08.400629+00:00",
+  "exact_quote_sha256": "72d510064b60bed47a61cf7472e0af4545d82db852cfbd91b60424f814e810ae",
+  "archive_sha256": "e2edfbfa1b4840f1204e0ed9e9213e17798c0a8f7169a92dd53fba814cf4bbdd",
+  "source_drive": "Unchained Nitin \u2014 Master",
+  "destination": "Claude Desktop Dispatch",
+  "allowed_purpose": "NON_PUBLISHING_SYNTHETIC_P0E4_PREFLIGHT",
+  "transfer_authorized": true,
+  "production_deployment_authorized": false,
+  "make_sheet_mutation_authorized": false,
+  "cutover_authorized": false,
+  "publication_authorized": false,
+  "rights_clearance_granted": false,
+  "final_audio_binding_granted": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "control_plane_approval_event_created": false
+}
