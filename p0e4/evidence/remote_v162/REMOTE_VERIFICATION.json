@@ -1,0 +1,12 @@
+{
+  "schema": "REMOTE_CLEAN_CHECKOUT_VERIFICATION",
+  "remote_head": "c2f72f94a5c902f0391fe84ef81fb61a014bb85a",
+  "master_state_version": "V16.2",
+  "state_version": 28,
+  "master_state_sha256": "a41764d6955f5153ba9cd3d4033c5521eb41037a9c801e53469135d1cfdde2eb",
+  "exact_tested_code_sha": "927229cfdebcc3a0b9c9408582f04e1fb38db717",
+  "deterministic_replay": true,
+  "clean_checkout": true,
+  "post_test_changes_evidence_only": true,
+  "publication_authorized": false
+}
