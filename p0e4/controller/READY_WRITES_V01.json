@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "master_state_path": "p0e4/evidence/canonical_v151/UNCHAINED_MASTER_PROJECT_STATE_V15_1.json",
-  "master_state_sha256": "0a96318f6379960a08c0f0921f912f3e7355dbdbc336638cc97db1c4ec55b0ed",
+  "master_state_path": "p0e4/evidence/wake_v153/UNCHAINED_MASTER_PROJECT_STATE_V15_3.json",
+  "master_state_sha256": "cd8a29fb74f30247652544f7580db0a0279ab9c98e2a782cdda8a7dfd854851f",
   "tasks": [
     {
       "task_id": "EC_V11_RECEIPT_SCHEMA",
@@ -158,6 +158,83 @@
             },
             "publication_authorized": {
               "const": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "task_id": "EC_V154_PREFLIGHT_VALIDATION_SCHEMA",
+      "status": "READY",
+      "human_gate_required": null,
+      "scope": "p0e4_nonproduction_contract_fixture",
+      "commit_time": "2026-09-19T09:30:00Z",
+      "outputs": {
+        "p0e4/generated/v154_preflight_validation.schema.json": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "schema",
+            "schema_version",
+            "status",
+            "request_id",
+            "input_archive_sha256",
+            "result_sha256",
+            "expected_jobs_sha256",
+            "groups_per_package",
+            "packages",
+            "semantic_drift",
+            "scope",
+            "live_make_execution_proven",
+            "fresh_gemini_execution_proven",
+            "publication_authorized"
+          ],
+          "properties": {
+            "schema": {
+              "const": "CLAUDE_PREFLIGHT_VALIDATION"
+            },
+            "schema_version": {
+              "const": 1
+            },
+            "status": {
+              "const": "PASS"
+            },
+            "request_id": {
+              "const": "P0E4_V154_PREFLIGHT_A"
+            },
+            "input_archive_sha256": {
+              "const": "e2edfbfa1b4840f1204e0ed9e9213e17798c0a8f7169a92dd53fba814cf4bbdd"
+            },
+            "groups_per_package": {
+              "const": 14
+            },
+            "semantic_drift": {
+              "const": false
+            },
+            "scope": {
+              "const": "SYNTHETIC_PREFLIGHT_ONLY"
+            },
+            "live_make_execution_proven": {
+              "const": false
+            },
+            "fresh_gemini_execution_proven": {
+              "const": false
+            },
+            "publication_authorized": {
+              "const": false
+            },
+            "result_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "expected_jobs_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "packages": {
+              "type": "integer",
+              "minimum": 1
             }
           }
         }
