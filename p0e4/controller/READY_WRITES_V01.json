@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "master_state_path": "p0e4/evidence/controller_v10/UNCHAINED_MASTER_PROJECT_STATE_V10.json",
-  "master_state_sha256": "aaf49a4f158039a14af587845300e1775d0c1b5036e6acc62efcbcd59d330042",
+  "master_state_path": "p0e4/evidence/canonical_v151/UNCHAINED_MASTER_PROJECT_STATE_V15_1.json",
+  "master_state_sha256": "0a96318f6379960a08c0f0921f912f3e7355dbdbc336638cc97db1c4ec55b0ed",
   "tasks": [
     {
       "task_id": "EC_V11_RECEIPT_SCHEMA",
@@ -81,6 +81,80 @@
                   }
                 }
               }
+            },
+            "publication_authorized": {
+              "const": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "task_id": "EC_V152_PREFLIGHT_GROUPS",
+      "status": "READY",
+      "human_gate_required": null,
+      "scope": "p0e4_nonproduction_contract_fixture",
+      "commit_time": "2026-09-19T01:00:00Z",
+      "outputs": {
+        "p0e4/generated/v152_preflight_groups.json": {
+          "schema": "PREFLIGHT_REQUIRED_GROUPS",
+          "schema_version": 1,
+          "required_groups": [
+            "title",
+            "caption",
+            "hashtags",
+            "cta",
+            "hooks",
+            "timestamps",
+            "derivatives",
+            "aspect_ratios",
+            "edit_effects",
+            "thumbnails_posters",
+            "platform_targeting",
+            "schedules",
+            "experiments",
+            "provenance"
+          ],
+          "coverage_scope": "CLAUDE_PREFLIGHT_ONLY",
+          "live_execution_proven": false
+        }
+      }
+    },
+    {
+      "task_id": "EC_V152_WAKE_RECEIPT",
+      "status": "READY",
+      "human_gate_required": null,
+      "scope": "p0e4_nonproduction_contract_fixture",
+      "commit_time": "2026-09-19T01:00:00Z",
+      "outputs": {
+        "p0e4/generated/v152_wake_receipt.json": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "schema_version",
+            "trigger",
+            "checkpoint_sha256",
+            "observed_at",
+            "publication_authorized"
+          ],
+          "properties": {
+            "schema_version": {
+              "const": 1
+            },
+            "trigger": {
+              "enum": [
+                "SCHEDULER_WAKE",
+                "CLI_POLL_TEST"
+              ]
+            },
+            "checkpoint_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "observed_at": {
+              "type": "string",
+              "format": "date-time"
             },
             "publication_authorized": {
               "const": false
