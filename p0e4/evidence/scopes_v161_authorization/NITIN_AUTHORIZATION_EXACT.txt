@@ -1,0 +1,50 @@
+NITIN AUTHORIZATION — CONTINUE AUTONOMOUSLY: V16 RESOLVE TRACK + FACTORY CATALOG BOOTSTRAP
+
+Continue from authoritative V16/state_version 26 and first reconcile remote HEAD/Master State.
+
+Nitin explicitly authorizes two parallel NON-PUBLISHING engineering scopes:
+
+A — V16 RESOLVE TRACK
+Treat DaVinci Resolve as the intended Master Finishing Engine. Build the Resolve integration contracts/adapters that can safely be built before installation: canonical edit/effects → RESOLVE_EXECUTION_PLAN, cuts, reframes, zooms/push-ins, shakes, captions/text, transitions, effects, timing, platform aspect ratios, render profiles, input/output SHA lineage, capability matrix, fail-closed unsupported-operation handling, QC receipt and rework loop. Distinguish native/scriptable Resolve operations, externally precomputed intelligence and GUI/Fusion-only operations. Do not claim actual Resolve execution until installation/capability is proven. Do not purchase software or incur costs. Persist an exact Free-vs-Studio requirement matrix for Nitin’s later purchasing decision.
+
+B — FACTORY EXPANSION / CATALOG BOOTSTRAP V01
+Read-only inspect the existing iCloud Drive music catalogue where each song has its own folder. DO NOT rename, move, delete or reorganize any iCloud asset.
+
+Build evidence-backed:
+CATALOG_INVENTORY_V01
+→ MASTER_CATALOG_V01
+→ CATALOG_GAP_REPORT_V01
+→ NITIN_ACTION_QUEUE
+→ VATSAL_ACTION_QUEUE
+→ LIVE_READY_QUEUE
+→ CATALOG_REACTIVATION_QUEUE.
+
+Detect from actual files where possible: song/title, original/cover/2008-recreation/unknown, music, lyrics, vocals, tuning, mix, master, instrumental/backing, stems, MIDI/project files, BPM/key, video/content assets and other relevant evidence. Unknown semantics MUST remain UNKNOWN; never infer completion merely from filenames where evidence is insufficient.
+
+Include lifecycle support for:
+MUSIC_READY_VOCAL_PENDING,
+VOCALS_READY_VATSAL_PENDING,
+REVISION_REQUIRED,
+STEMS_REQUIRED,
+LIVE_READY,
+CATALOG_REACTIVATION_READY,
+RECREATION_2008_LYRICS_REVIEW,
+COVER_SWAP_CANDIDATE.
+
+Design the shared Nitin × Vatsal Master Catalog/Production Sheet as an operational view over the canonical Factory schema, including NEXT_ACTION, ACTION_OWNER, production status, financial stages, assets/stems and LIVE_PERFORMANCE_READY.
+
+Also persist the approved Factory-expansion backlog: Master Catalog & Song Lifecycle Engine, Catalog Reactivation Engine, Legacy Cover/Vocal Pending Workflow, 2008 Recreation Workflow, Live Performance Library, Setlist Intelligence Engine, Historical Content→New Content Engine, governed Digital Twin Catalog Content, and Song→Live→Revenue attribution.
+
+AUTONOMY
+After persisting these scopes as READY work, use the proven bounded scheduler/Codex execution lifecycle and continue through every subsequent READY non-human task without waiting for Nitin. Human-gated work MUST NOT block independent READY work.
+
+Complete each accepted tranche through implementation → tests → regression → deterministic replay → evidence/manifests → versioned Master State → narrow commit/push → remote clean-checkout verification → NEXT_READY.
+
+Stop only when genuinely required for: NITIN_CHANGE_APPROVAL, NITIN_AUDIO_SOURCE_BINDING, Resolve purchase/install or credential/setup requiring Nitin, destructive production mutation, financial commitment, or NITIN_PUBLISH_APPROVAL.
+
+Frozen P0-E0–E3 unchanged.
+PRODUCTION_DEPLOYMENT_AUTHORIZED=false
+PUBLICATION_AUTHORIZED=false
+FIRST_REAL_POSTER=PAUSED_BY_NITIN
+
+No publication.

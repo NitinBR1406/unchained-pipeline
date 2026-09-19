@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "recorded_by": "codex",
+  "source": "Direct user message",
+  "recorded_at": "2026-09-19T14:59:54.990703+00:00",
+  "source_sha256": "a9c27ce15c34bce3113908918b2fb8c3e242537ff103c3dc97afe8cde4d39038",
+  "parent_state_version": 26,
+  "engineering_authorized": true,
+  "scopes": [
+    "V16_RESOLVE_PREINSTALL",
+    "FACTORY_CATALOG_BOOTSTRAP_V01"
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "live_cutover_authorized": false,
+  "purchase_authorized": false,
+  "icloud_mutation_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "provider_signature": null
+}
