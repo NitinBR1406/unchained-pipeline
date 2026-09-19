@@ -1,0 +1,123 @@
+{
+  "schema": "BOUNDED_SCHEDULER_DISPATCH_RECEIPT",
+  "schema_version": 1,
+  "automation_id": "unchained-p0-e4-ready-continuation",
+  "trigger": "ACTUAL_NATIVE_HEARTBEAT",
+  "trigger_at": "2026-09-19T09:58:26.833Z",
+  "recorded_at": "2026-09-19T10:04:53.012041+00:00",
+  "prior_remote_head": "ecf98deb8b2f98d6b24b598dd854dc55028f1700",
+  "prior_state_version": 24,
+  "idle_to_wake_observed": true,
+  "observation_basis": "Heartbeat delivered after preceding user turn finalized, with new READY task persisted in V15.4; observed input, not scheduler configuration. Exact idle start and provider-signed trigger unavailable.",
+  "provider_signed_trigger": false,
+  "new_dispatches": 1,
+  "restart_dispatches": 0,
+  "runtime_ledgers_unchanged_on_restart": true,
+  "reconciliation": {
+    "status": "QUIESCENT",
+    "results": [
+      {
+        "commit": "e2e0b69edc352cb88919cea0080184923c3edf0a",
+        "events_sha256": "f179a018d3e3e5caea3448785cc1429d5dcee93f7a7f97eda08bcc18effd2d05",
+        "exit_sha256": "fe53e2fbe8bb108fa46bbd4c407f76c4d2c8bedcb86e4c6ef67bb6cd78ff82de",
+        "model": null,
+        "outputs": {
+          "p0e4/generated/execution_receipt.schema.json": "c8a7d253fde04c93489560809241b5478d1c6b173d5dc1db8645fa8fb570517a"
+        },
+        "remote_verified": true,
+        "status": "COMPLETED",
+        "task_id": "EC_V11_RECEIPT_SCHEMA",
+        "task_sha256": "5d11cbbbb6f5c6eeb1ca69ebd19eb76d149fb775a420945aa66dbe92769809f5",
+        "thread_id": "01a0b669-ab75-7ad2-8306-fa01c8139d4b"
+      },
+      {
+        "commit": "9bfc03a4144f81260089db19b2d2274b4f1d5d7e",
+        "events_sha256": "9b482d994fe088b5cddd687080894e240ac16f84516d7229dfd40d55a204909e",
+        "exit_sha256": "fe53e2fbe8bb108fa46bbd4c407f76c4d2c8bedcb86e4c6ef67bb6cd78ff82de",
+        "model": null,
+        "outputs": {
+          "p0e4/generated/v152_preflight_groups.json": "6229f7834373df4db1621068d93b8bb0b97794db4eb961d233754c73853a370f"
+        },
+        "remote_verified": false,
+        "status": "COMPLETED",
+        "task_id": "EC_V152_PREFLIGHT_GROUPS",
+        "task_sha256": "4679cac6fba189433931b59882a2442b9f513994c993019aaecd5d450cb22e85",
+        "thread_id": "01a0b8de-a2c4-7312-ba1c-32c944a784a1"
+      },
+      {
+        "commit": "5e081abcff35e249973051d82ebb755053ac226a",
+        "events_sha256": "6d80dc98b71e56c3009f406d3aa1c2c3ed6ae6af45bb4265e69dd4bef5aec4c9",
+        "exit_sha256": "fe53e2fbe8bb108fa46bbd4c407f76c4d2c8bedcb86e4c6ef67bb6cd78ff82de",
+        "model": null,
+        "outputs": {
+          "p0e4/generated/v152_wake_receipt.json": "27eaf2eb9f0be437628c2b22622a6dbfd21a4efb9310b5067a8bdce033d63df3"
+        },
+        "remote_verified": false,
+        "status": "COMPLETED",
+        "task_id": "EC_V152_WAKE_RECEIPT",
+        "task_sha256": "517d288c5b585f878a1e19b2a03d690d92956430a53696f77cedc2108b00d65e",
+        "thread_id": "01a0b8df-2432-79e1-8c57-8c37b0a872a7"
+      },
+      {
+        "commit": "ce0fb881067e03c3573e217052daa4d76eb3a201",
+        "events_sha256": "0833e16d356edadd49244b9e880fa715a2f3cc27ae4a5fc0c767519fa6b3fff2",
+        "exit_sha256": "fe53e2fbe8bb108fa46bbd4c407f76c4d2c8bedcb86e4c6ef67bb6cd78ff82de",
+        "model": null,
+        "outputs": {
+          "p0e4/generated/v154_preflight_validation.schema.json": "b5e5c1e2493cf3465ef48c0a56bee20ac7625ae3b27cc0db67a0b2a8a69a879a"
+        },
+        "remote_verified": false,
+        "status": "COMPLETED",
+        "task_id": "EC_V154_PREFLIGHT_VALIDATION_SCHEMA",
+        "task_sha256": "8c6afa6e39ee3b5351627537378393fe240eef92405918b76ebb7113c14462ce",
+        "thread_id": "01a0b91e-05d6-7fe3-8b8f-f75bbfea570d"
+      }
+    ],
+    "completed": 4,
+    "held": 0
+  },
+  "refs": {
+    "completion": {
+      "uri": "p0e4/evidence/wake_dispatch_v155/runtime/completion.json",
+      "sha256": "10ddd5a8aabf396a49e6ee197bba84d9eeed1b55a8fcf5fde5e14a2c2dd022a2"
+    },
+    "events": {
+      "uri": "p0e4/evidence/wake_dispatch_v155/runtime/events.jsonl",
+      "sha256": "0833e16d356edadd49244b9e880fa715a2f3cc27ae4a5fc0c767519fa6b3fff2"
+    },
+    "exit": {
+      "uri": "p0e4/evidence/wake_dispatch_v155/runtime/exit.json",
+      "sha256": "fe53e2fbe8bb108fa46bbd4c407f76c4d2c8bedcb86e4c6ef67bb6cd78ff82de"
+    },
+    "ledger": {
+      "uri": "p0e4/evidence/wake_dispatch_v155/runtime/EVENT_LEDGER.jsonl",
+      "sha256": "303c6394f88820a3f4e103073b8de40150f3ed7a767fc115da8c26a87fede8cf"
+    },
+    "state": {
+      "uri": "p0e4/evidence/wake_dispatch_v155/runtime/state.json",
+      "sha256": "e7e7004f8f9694a69e51f9965c16ccf7798555b52b35b7a7c47559ec786f7ea0"
+    },
+    "task": {
+      "uri": "p0e4/evidence/wake_dispatch_v155/runtime/task.json",
+      "sha256": "d6fc8fbfb7dab3348516c344994e214e15c20735b8afd8b0594ee679443f3b3d"
+    },
+    "regression": {
+      "uri": "p0e4/evidence/wake_dispatch_v155/runtime/regression.json",
+      "sha256": "396068677ef300310e8b2f0862f039927ff386bf2557a9e55e83fd5a2d073bfc"
+    },
+    "schema": {
+      "uri": "p0e4/generated/v154_preflight_validation.schema.json",
+      "sha256": "b5e5c1e2493cf3465ef48c0a56bee20ac7625ae3b27cc0db67a0b2a8a69a879a"
+    },
+    "validation": {
+      "uri": "p0e4/evidence/claude_v154/SEMANTIC_VALIDATION.json",
+      "sha256": "c3320a7773a17afa9d5d841d58744acc43cc3ee0860d70fbb530b9e3445863a0"
+    },
+    "prior_next_ready": {
+      "uri": "p0e4/evidence/claude_v154/NEXT_READY.json",
+      "sha256": "98e2459a6274d7f6e3667c7e84eaddb195231e892140ca49d40aca9180ca7c0c"
+    }
+  },
+  "always_on_dispatcher_proven": false,
+  "publication_authorized": false
+}

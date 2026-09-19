@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "ONE_NATIVE_WAKE_ONE_ALLOWLISTED_CLI_TASK",
+  "task_id": "EC_V154_PREFLIGHT_VALIDATION_SCHEMA",
+  "thread_id": "01a0b91e-05d6-7fe3-8b8f-f75bbfea570d",
+  "commit": "ce0fb881067e03c3573e217052daa4d76eb3a201",
+  "heartbeat_count": 46,
+  "runtime_replay": true,
+  "schema_validation": true,
+  "duplicate_dispatches": 0,
+  "always_on_dispatcher_proven": false
+}
