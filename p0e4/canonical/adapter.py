@@ -24,7 +24,7 @@ def shadow(data,creative,field_map,snapshot,resolver,required_fields=('caption',
     for p in data['PLATFORM_PACKAGES']:
         mappings=[m for m in field_map['fields'] if m['platform']==p['platform'] and m['status']=='VERIFIED']
         available={m['canonical_field'] for m in mappings}
-        require(set(required_fields)<=available,'REQUIRED_UNMAPPED_FIELDS')
+        require(({'caption','hashtags','title'} | set(required_fields))<=available,'REQUIRED_UNMAPPED_FIELDS')
         cells={}
         for m in mappings:
             require(m['spreadsheet_id']==snapshot['spreadsheet_id'] and m['tab']==sheet['properties']['title'],'target mismatch')
