@@ -1,0 +1,66 @@
+{
+  "engines": [
+    {
+      "engine_id": "engine:9e21f4d01977576adf3b4806",
+      "name": "Master Catalog & Song Lifecycle Engine",
+      "status": "AUTHORIZED_BACKLOG_NOT_IMPLEMENTED"
+    },
+    {
+      "engine_id": "engine:442d82f102483b2173bfba23",
+      "name": "Catalog Reactivation Engine",
+      "status": "AUTHORIZED_BACKLOG_NOT_IMPLEMENTED"
+    },
+    {
+      "engine_id": "engine:35f6847fdb010458a63efd6b",
+      "name": "Legacy Cover/Vocal Pending Workflow",
+      "status": "AUTHORIZED_BACKLOG_NOT_IMPLEMENTED"
+    },
+    {
+      "engine_id": "engine:ed7f3b45d23266e5810b12fd",
+      "name": "2008 Recreation Workflow",
+      "status": "AUTHORIZED_BACKLOG_NOT_IMPLEMENTED"
+    },
+    {
+      "engine_id": "engine:f850f02e3a06d838dfd5ddb6",
+      "name": "Live Performance Library",
+      "status": "AUTHORIZED_BACKLOG_NOT_IMPLEMENTED"
+    },
+    {
+      "engine_id": "engine:7d7b0736a3b6a42a278fec2c",
+      "name": "Setlist Intelligence Engine",
+      "status": "AUTHORIZED_BACKLOG_NOT_IMPLEMENTED"
+    },
+    {
+      "engine_id": "engine:1238eb5135e87e629c226666",
+      "name": "Historical Content→New Content Engine",
+      "status": "AUTHORIZED_BACKLOG_NOT_IMPLEMENTED"
+    },
+    {
+      "engine_id": "engine:4f949d20290db14ea4f294a9",
+      "name": "governed Digital Twin Catalog Content",
+      "status": "AUTHORIZED_BACKLOG_NOT_IMPLEMENTED"
+    },
+    {
+      "engine_id": "engine:534122ed34c4f9969771a6fa",
+      "name": "Song→Live→Revenue attribution",
+      "status": "AUTHORIZED_BACKLOG_NOT_IMPLEMENTED"
+    }
+  ],
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "inventory_sha256": "30696f2001bc2acd503503855445c3e1c0ffa64eda185a98d369f554ce82c2d6",
+  "lifecycle_states": [
+    "MUSIC_READY_VOCAL_PENDING",
+    "VOCALS_READY_VATSAL_PENDING",
+    "REVISION_REQUIRED",
+    "STEMS_REQUIRED",
+    "LIVE_READY",
+    "CATALOG_REACTIVATION_READY",
+    "RECREATION_2008_LYRICS_REVIEW",
+    "COVER_SWAP_CANDIDATE"
+  ],
+  "observed_at": "2026-09-19T15:12:14.029Z",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "schema": "FACTORY_EXPANSION_BACKLOG_V01",
+  "schema_version": 1
+}

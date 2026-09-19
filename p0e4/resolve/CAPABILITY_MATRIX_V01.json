@@ -1,0 +1,99 @@
+{
+  "actual_resolve_execution_proven": false,
+  "export_policy": {
+    "destination": "PRIVATE_LOCAL_STAGING_ONLY",
+    "quick_export_cloud_or_social_upload": false
+  },
+  "external_intelligence": {
+    "approval_authority": false,
+    "owner": "Gemini recommendations -> Orchestrator validation",
+    "tasks": [
+      "subject/framing recommendations",
+      "beat/hook/timing recommendations",
+      "caption text and visual-treatment recommendations"
+    ]
+  },
+  "installed_version": null,
+  "local_capability_proven": false,
+  "observed_at": "2026-09-19",
+  "operations": {
+    "caption": {
+      "api_verification": "NOT_PROVEN_REQUIRES_INSTALLED_DEVELOPER_DOC_AND_SAFE_SMOKE",
+      "execution_enabled": false,
+      "parameter_requirements": "exact text, timed cue list, layout/font and safe-area policy required",
+      "product_documentation_source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "route_class": "NATIVE_SUBTITLE_OR_FUSION_TITLE",
+      "scriptable_api_method": null
+    },
+    "cut": {
+      "api_verification": "NOT_PROVEN_REQUIRES_INSTALLED_DEVELOPER_DOC_AND_SAFE_SMOKE",
+      "execution_enabled": false,
+      "parameter_requirements": "segments contain exact source/timeline bounds; effect kind cut alone does not define extra cut points",
+      "product_documentation_source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "route_class": "NATIVE_EDIT",
+      "scriptable_api_method": null
+    },
+    "effects": {
+      "api_verification": "NOT_PROVEN_REQUIRES_INSTALLED_DEVELOPER_DOC_AND_SAFE_SMOKE",
+      "execution_enabled": false,
+      "parameter_requirements": "unknown plugin/license/preset must fail closed; exact operation and capability proof required",
+      "product_documentation_source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "route_class": "GUI_FUSION_OR_OPENFX",
+      "scriptable_api_method": null
+    },
+    "grade": {
+      "api_verification": "NOT_PROVEN_REQUIRES_INSTALLED_DEVELOPER_DOC_AND_SAFE_SMOKE",
+      "execution_enabled": false,
+      "parameter_requirements": "locked baseline: color change requires separate creative/change control; no automatic grading",
+      "product_documentation_source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "route_class": "NATIVE_COLOR_GUI",
+      "scriptable_api_method": null
+    },
+    "reframe": {
+      "api_verification": "NOT_PROVEN_REQUIRES_INSTALLED_DEVELOPER_DOC_AND_SAFE_SMOKE",
+      "execution_enabled": false,
+      "parameter_requirements": "explicit crop geometry, subject safe area and interpolation required; no inferred smart reframe",
+      "product_documentation_source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "route_class": "NATIVE_TRANSFORM_WITH_EXTERNAL_INTELLIGENCE",
+      "scriptable_api_method": null
+    },
+    "shake": {
+      "api_verification": "NOT_PROVEN_REQUIRES_INSTALLED_DEVELOPER_DOC_AND_SAFE_SMOKE",
+      "execution_enabled": false,
+      "parameter_requirements": "exact bounded transform keyframes or verified Fusion template hash required; intensity is insufficient",
+      "product_documentation_source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "route_class": "GUI_FUSION_WORKFLOW_CANDIDATE",
+      "scriptable_api_method": null
+    },
+    "text": {
+      "api_verification": "NOT_PROVEN_REQUIRES_INSTALLED_DEVELOPER_DOC_AND_SAFE_SMOKE",
+      "execution_enabled": false,
+      "parameter_requirements": "not accepted as a distinct current canonical kind; exact text/style/positions required",
+      "product_documentation_source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "route_class": "NATIVE_TITLE_OR_FUSION",
+      "scriptable_api_method": null
+    },
+    "transition": {
+      "api_verification": "NOT_PROVEN_REQUIRES_INSTALLED_DEVELOPER_DOC_AND_SAFE_SMOKE",
+      "execution_enabled": false,
+      "parameter_requirements": "not accepted by current canonical edit schema; exact type, duration, handles and approved schema extension required",
+      "product_documentation_source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "route_class": "NATIVE_TRANSITION_GUI",
+      "scriptable_api_method": null
+    },
+    "zoom": {
+      "api_verification": "NOT_PROVEN_REQUIRES_INSTALLED_DEVELOPER_DOC_AND_SAFE_SMOKE",
+      "execution_enabled": false,
+      "parameter_requirements": "explicit scale/position keyframes and easing required for push-in",
+      "product_documentation_source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "route_class": "NATIVE_KEYFRAME_OR_FUSION",
+      "scriptable_api_method": null
+    }
+  },
+  "schema": "RESOLVE_CAPABILITY_MATRIX",
+  "schema_version": 1,
+  "sources": [
+    "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+    "https://www.blackmagicdesign.com/products/davinciresolve/studio"
+  ]
+}

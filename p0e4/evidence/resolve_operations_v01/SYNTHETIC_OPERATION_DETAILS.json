@@ -1,0 +1,226 @@
+{
+  "base_plan_sha256": "5771765506c3a67c950f1d131db2ff510e5bd9eb4604cb3707f9638dc6ccf167",
+  "operations": [
+    {
+      "end_frame_exclusive": 25,
+      "evidence_ref": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "uri": "TEST_ONLY/style"
+      },
+      "kind": "cut",
+      "operation_id": "test:cut",
+      "package_id": "package:test",
+      "parameters": {
+        "cut_frames": [
+          10
+        ]
+      },
+      "performer_obscured": false,
+      "start_frame": 0
+    },
+    {
+      "end_frame_exclusive": 25,
+      "evidence_ref": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "uri": "TEST_ONLY/style"
+      },
+      "kind": "reframe",
+      "operation_id": "test:reframe",
+      "package_id": "package:test",
+      "parameters": {
+        "bottom_millionths": 900000,
+        "left_millionths": 100000,
+        "right_millionths": 900000,
+        "top_millionths": 100000
+      },
+      "performer_obscured": false,
+      "start_frame": 0
+    },
+    {
+      "end_frame_exclusive": 25,
+      "evidence_ref": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "uri": "TEST_ONLY/style"
+      },
+      "kind": "zoom",
+      "operation_id": "test:zoom",
+      "package_id": "package:test",
+      "parameters": {
+        "interpolation": "LINEAR",
+        "keyframes": [
+          {
+            "center": {
+              "x_millionths": 500000,
+              "y_millionths": 500000
+            },
+            "frame": 0,
+            "scale_millionths": 1000000
+          },
+          {
+            "center": {
+              "x_millionths": 510000,
+              "y_millionths": 500000
+            },
+            "frame": 24,
+            "scale_millionths": 1100000
+          }
+        ]
+      },
+      "performer_obscured": false,
+      "start_frame": 0
+    },
+    {
+      "end_frame_exclusive": 25,
+      "evidence_ref": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "uri": "TEST_ONLY/style"
+      },
+      "kind": "push_in",
+      "operation_id": "test:push_in",
+      "package_id": "package:test",
+      "parameters": {
+        "interpolation": "LINEAR",
+        "keyframes": [
+          {
+            "center": {
+              "x_millionths": 500000,
+              "y_millionths": 500000
+            },
+            "frame": 0,
+            "scale_millionths": 1000000
+          },
+          {
+            "center": {
+              "x_millionths": 510000,
+              "y_millionths": 500000
+            },
+            "frame": 24,
+            "scale_millionths": 1100000
+          }
+        ]
+      },
+      "performer_obscured": false,
+      "start_frame": 0
+    },
+    {
+      "end_frame_exclusive": 25,
+      "evidence_ref": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "uri": "TEST_ONLY/style"
+      },
+      "kind": "shake",
+      "operation_id": "test:shake",
+      "package_id": "package:test",
+      "parameters": {
+        "interpolation": "LINEAR",
+        "keyframes": [
+          {
+            "center": {
+              "x_millionths": 500000,
+              "y_millionths": 500000
+            },
+            "frame": 0,
+            "scale_millionths": 1000000
+          },
+          {
+            "center": {
+              "x_millionths": 510000,
+              "y_millionths": 500000
+            },
+            "frame": 24,
+            "scale_millionths": 1100000
+          }
+        ]
+      },
+      "performer_obscured": false,
+      "start_frame": 0
+    },
+    {
+      "end_frame_exclusive": 25,
+      "evidence_ref": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "uri": "TEST_ONLY/style"
+      },
+      "kind": "caption",
+      "operation_id": "test:caption",
+      "package_id": "package:test",
+      "parameters": {
+        "position": {
+          "x_millionths": 500000,
+          "y_millionths": 800000
+        },
+        "style_ref": {
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "uri": "TEST_ONLY/style"
+        },
+        "text": "TEST_ONLY"
+      },
+      "performer_obscured": false,
+      "start_frame": 0
+    },
+    {
+      "end_frame_exclusive": 25,
+      "evidence_ref": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "uri": "TEST_ONLY/style"
+      },
+      "kind": "text",
+      "operation_id": "test:text",
+      "package_id": "package:test",
+      "parameters": {
+        "position": {
+          "x_millionths": 500000,
+          "y_millionths": 100000
+        },
+        "style_ref": {
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "uri": "TEST_ONLY/style"
+        },
+        "text": "TEST_ONLY TITLE"
+      },
+      "performer_obscured": false,
+      "start_frame": 0
+    },
+    {
+      "end_frame_exclusive": 25,
+      "evidence_ref": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "uri": "TEST_ONLY/style"
+      },
+      "kind": "transition",
+      "operation_id": "test:transition",
+      "package_id": "package:test",
+      "parameters": {
+        "duration_frames": 25,
+        "incoming_handle_frames": 25,
+        "outgoing_handle_frames": 25,
+        "type": "DISSOLVE"
+      },
+      "performer_obscured": false,
+      "start_frame": 0
+    },
+    {
+      "end_frame_exclusive": 25,
+      "evidence_ref": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "uri": "TEST_ONLY/style"
+      },
+      "kind": "effect",
+      "operation_id": "test:effect",
+      "package_id": "package:test",
+      "parameters": {
+        "intent": "VISUAL_OVERLAY_NO_BASELINE_CHANGE",
+        "license_status": "UNKNOWN",
+        "plugin_id": "TEST_ONLY",
+        "template_ref": {
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "uri": "TEST_ONLY/style"
+        }
+      },
+      "performer_obscured": false,
+      "start_frame": 0
+    }
+  ],
+  "schema": "RESOLVE_OPERATION_DETAILS",
+  "schema_version": 1
+}

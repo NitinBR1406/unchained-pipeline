@@ -1,0 +1,83 @@
+{
+  "decision": "NITIN_PURCHASE_INSTALL_GATE",
+  "not_proven": [
+    "local installation",
+    "exact Python/Lua methods",
+    "Free console behavior",
+    "codec support on this host",
+    "GPU suitability",
+    "GUI/Fusion operation automation",
+    "any rendered artifact"
+  ],
+  "observed_at": "2026-09-19",
+  "purchase_or_install_performed": false,
+  "recommendation": "Free manual trial may establish media compatibility; Studio is documented for remote scripting. Do not purchase until installed-version API/requirements and desired operation set are confirmed.",
+  "rows": [
+    {
+      "factory_implication": "Free candidate for manual synthetic cuts; local codec/timing smoke still required",
+      "free": "DOCUMENTED_UP_TO_UHD_60FPS",
+      "requirement_id": "basic_edit_finish",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "DOCUMENTED"
+    },
+    {
+      "factory_implication": "Studio is the documented automation route; installed version API and successful no-write smoke required",
+      "free": "NOT_DOCUMENTED_AS_FREE_CAPABILITY",
+      "requirement_id": "remote_scripting_workflow_integration",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "DOCUMENTED"
+    },
+    {
+      "factory_implication": "Do not assume external scripting works in Free or installed Studio",
+      "free": "CONSOLE_SCOPE_UNVERIFIED",
+      "requirement_id": "python_lua_scripting",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "DOCUMENTED"
+    },
+    {
+      "factory_implication": "Optional AI conveniences; externally computed recommendations do not require these Resolve AI tools",
+      "free": "STUDIO_FEATURE",
+      "requirement_id": "smart_reframe_magic_mask_speed_warp",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "DOCUMENTED"
+    },
+    {
+      "factory_implication": "No requested automatic change to locked color/audio baseline",
+      "free": "STUDIO_FEATURE",
+      "requirement_id": "temporal_ai_noise_reduction",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "DOCUMENTED"
+    },
+    {
+      "factory_implication": "Inspect real media profile and installed codec support before choosing license",
+      "free": "OS_CODEC_DEPENDENT_VERIFY",
+      "requirement_id": "codec_bit_depth_hardware_acceleration",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "EXPANDED_DOCUMENTED_SUPPORT"
+    },
+    {
+      "factory_implication": "Not required by this 1080p <=60fps preparation profile",
+      "free": "OUTSIDE_DOCUMENTED_FREE_LIMIT",
+      "requirement_id": "above_uhd_or_above_60fps",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "DOCUMENTED_UP_TO_32K_120FPS"
+    },
+    {
+      "factory_implication": "No per-operation scripting method verified",
+      "free": "PRODUCT_GUI_DOCUMENTED_EDITION_SMOKE_REQUIRED",
+      "requirement_id": "basic_keyframes_titles_subtitles_transitions",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+      "studio": "PRODUCT_GUI_DOCUMENTED_EDITION_SMOKE_REQUIRED"
+    },
+    {
+      "factory_implication": "No blanket license/callability claim; inspect template and effects individually",
+      "free": "EXACT_TEMPLATE_UNVERIFIED",
+      "requirement_id": "fusion_shake_custom_templates",
+      "source": "https://www.blackmagicdesign.com/products/davinciresolve/studio",
+      "studio": "EXACT_TEMPLATE_UNVERIFIED"
+    }
+  ],
+  "schema": "RESOLVE_FREE_STUDIO_REQUIREMENTS",
+  "schema_version": 1,
+  "source_product_page_version": "21"
+}

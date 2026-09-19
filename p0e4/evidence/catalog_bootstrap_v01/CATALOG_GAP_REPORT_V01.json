@@ -1,0 +1,1906 @@
+{
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "inventory_sha256": "30696f2001bc2acd503503855445c3e1c0ffa64eda185a98d369f554ce82c2d6",
+  "observed_at": "2026-09-19T15:12:14.029Z",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "records": [
+    {
+      "catalog_source_id": "catalog_source:c216254fe307370bd087c1e1",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:87e81c30b4a7840457d1e909",
+        "asset:aca2effd59f47831eab03528",
+        "asset:8aeac2c3017ede5fd2fb5105",
+        "asset:9a872c4ebe8566a275c847b8",
+        "asset:28dfbd55eceaac31031609a3",
+        "asset:3927d655d99dfdcce65b98d7",
+        "asset:6a7a6b67876bb1547d8bb40d"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:c07f466e9b0e13461a5ab551",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:6bed330c818c30a9ee1d4016",
+        "asset:3a1ff4fb081b4f541cd2425f"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:1a788ca30505a96eddc93890",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:0cec8006a87666cf28564141",
+        "asset:b925b85fec19f8a2d9e017c1"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:d86c1313c3524dddb33d09ea",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:5fb02844df7b5bdb39c4579b",
+        "asset:917234a83f1dba4aad7e58de",
+        "asset:8b09da834f02d67062f30e29",
+        "asset:fee0961568020b6ae2c8c2e3",
+        "asset:86be5cd44dfaca7cbeaf9fe8",
+        "asset:8aa4aef43d4b97f875742a13",
+        "asset:a0a7317975c84ed8f230964d",
+        "asset:be4e412b9afb1f3206605c60",
+        "asset:99c53dd3d2af05d125d00f10"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:9910e4b4dc4787e865bd9e35",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:fb2e34badbb0274f1ae2607f",
+        "asset:c9f5172153ab64ad35cadbe4",
+        "asset:8c03a195732c8e94ec62f55b",
+        "asset:938ccc43f3e8449c6fe60052",
+        "asset:90e30dceacb9e53314508c8d",
+        "asset:362d5b35c0bba256bc8f9323",
+        "asset:c1f18364a15f4fffa20d1349",
+        "asset:734ac036f9488c5b071e393b",
+        "asset:71270b0bfc5a67bf580b3bdb",
+        "asset:7709a2bb6199df4ccfa46189",
+        "asset:217809edfbdd31b6c01d64e4"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:b7ff3a3cdaec117d627e58ee",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:098f42d4b310fad3bf51d433",
+        "asset:4989ea663371ff6d8385e333",
+        "asset:92a01b0fa77f99d83dc7c76b"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:27289a8e49a0546bb5236da8",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:cf0b27ec019b1fc4591a8955",
+        "asset:33f5c600fb18952cc4a25ce2",
+        "asset:1b5b53c3d30c08b1496d5f79",
+        "asset:aca3b0fe2d4823de4c01ccd2",
+        "asset:a23ae22f0258c8bb940157ab",
+        "asset:efc598dceab8632414353442",
+        "asset:882cce4cdf17bd2aa4725554",
+        "asset:49e72e170a8509d0b3fde6c2"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:bfdf6d5e3cb2bb2349c8d751",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:6811d1e3d378a7f2cbc3720a",
+        "asset:15a3e54c7acca7a8a4fc39fa",
+        "asset:f2c66e653ee03ae73565baa7",
+        "asset:7f3e6317d8bcc59626938e9d",
+        "asset:b3740671f5d2109573e113d0",
+        "asset:88722790eb9509b77dfa2a2f",
+        "asset:ee43fc74b68033fa3a43aecd"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:e78f9c2807c89d7d73fe1910",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:9ddd0df4f9728ddff3443b25",
+        "asset:7e55aee8db66269a3fc18dac",
+        "asset:56013536ac2eac4423dfdda7",
+        "asset:339e20182216b254cfebd540"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:78093a7d77248c014433e492",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:dd930920110c293b94d08fdb",
+        "asset:cc5e4892d1f54568940ea8a4",
+        "asset:6356a5da1e234625f309ea02",
+        "asset:090c7c2a180bab85ccb531f6",
+        "asset:4f27caa71ed81709d4e219ce",
+        "asset:8e9503b792bc7b58eb9f2d51",
+        "asset:bfa067545f9fd128e8b7e20d",
+        "asset:c5398c52bd10107cd3d231da",
+        "asset:db69e2bdd5fd720ced8ba955"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:fefe7bb8f30d5a6376c0c477",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:3e166ef6b6d66fc5f564500b",
+        "asset:60a9df42cc62157f98c51cbf",
+        "asset:f421b9bccb411033eff341c0",
+        "asset:867bdfe28d7e9945f1d8e362",
+        "asset:c633cc7acfcc39fefa808a21",
+        "asset:d9ec5d7b4baa1cde1216eb53",
+        "asset:8c56ca2789492dde61c3985e"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:9f2fa05795f9f666c50f0e3f",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:b66227811978ed5ce4705ee7",
+        "asset:1e64a44293a0ce8a177151dc",
+        "asset:b56070596d4a30a33c3ec9a2",
+        "asset:1bf6ebccf022c0d558a21bdf",
+        "asset:5c11f169a3f1627a757f3816",
+        "asset:d89dec6e4f378211463de052"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:c9e8aca8eae8f6b56a0c34a2",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:21c49c2c187a6014ac575cef",
+        "asset:f435cff4a2c3d2698165c1c4",
+        "asset:e878dc6a2edac7dcaede60c6"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:d6b4b835dc8b4931a22437eb",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:0bc8c54c72a78dad85f7805b",
+        "asset:43f96e104577c4e8edca5c60",
+        "asset:c621ec5be1927f604c901b39",
+        "asset:ff89c8e03de4e039190ce716",
+        "asset:d3d6489d87aa3cdfc52ca308",
+        "asset:64160c41272fc687740fe48b",
+        "asset:ac95f39d5879a60ff0e2fdf5",
+        "asset:4b2c1f07d968dd6efcff43e3",
+        "asset:fbc597ff76743f731abd378b",
+        "asset:73848c7ece62c2bacb742428",
+        "asset:8b2f270a6a815d52cdbdfe93",
+        "asset:e4f7cd176d2835bc1ce6c6ee",
+        "asset:f007f17c6afbfe8938cd9f32"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:e0a37a697dafe34786cd1cb7",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:c8d20c0dac02fb20e435760f"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:20797102b9f26768499dee81",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:7ffa6a780c7ac91e6fa497b3",
+        "asset:da44e9b3be847719624327e3",
+        "asset:61d04f6cc7543e9699e11261",
+        "asset:d94248e155e3c363777cd798"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:edc659d6b87c281b4af5404b",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:b08c0334428a7a45dbd30432",
+        "asset:a2f5a005416fd10d6a8d7020",
+        "asset:c53604e22a6771ad41a736a1",
+        "asset:f67ccdcbfe8b47b22c5a9211",
+        "asset:aee74a9e8130c43ef02e6b90",
+        "asset:8ab50a6ce7fc2f4660a66eb4",
+        "asset:f61d9618a3a63b8a095a47b9"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:978be4addda0824db16c058f",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:63c8ace26dbc99ba2f63f878",
+        "asset:c62109ca1912954df34179d2",
+        "asset:4af5a12fa7a601d71667ec75",
+        "asset:afcc69d82ba82934099c1640",
+        "asset:e048134da6e953f1dee2d1b3",
+        "asset:ce12fba505208e10bb8331fb",
+        "asset:5e26cda6bcda4bcccfe56a44"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:61230e0b722132b3e293bb90",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:c0ea4ada8cab1813c59df635",
+        "asset:cd7040501ed4069bf0080a43"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:93f26e6d4344c92f981513b9",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:5238cbce15297ba6e3a1bc6d",
+        "asset:f4e5f696330f7721724a5759",
+        "asset:4140ff34591f29a22bf99365",
+        "asset:3070cea28a77a50a5d85cc95",
+        "asset:4f1f137fe0ca09ce6f0fd7e2"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:e6aefb0c0ad6a7af0311b02a",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:7490b2df9d9527ac53d4d9bb",
+        "asset:ca47c4d2c171463ef9baa51d",
+        "asset:37fc77369eace1f2a7eb9be0"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:da555af952032896b5a813a8",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:3b0ffce091eec8b6a45a0c5b",
+        "asset:d770b42b75ee0821dce37244",
+        "asset:e9c388233e5400cceb70d52c",
+        "asset:b7567cf198ab97eb9ba8db01",
+        "asset:9a2dbf39ae1de30e88fbebc2",
+        "asset:c57975c3b49ab6fb4fa476c2",
+        "asset:aedd4190d8ea9137683285ab",
+        "asset:7f5f3d8552e61acaf89e26c1"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:2f1ef365aab0672d96bbe271",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:561b314ae8e1412431ad0509",
+        "asset:b3a7b0cb7691150650e361cf",
+        "asset:67e716d33c4d55427a9ab379",
+        "asset:e9116fbbd5cc0db80681b7ef"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:b19d4a99c15702f1c9c23293",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:43a722eab2b251d1144d7912",
+        "asset:38e81d761385991d1f2ad25f",
+        "asset:ed48c150e61ea5c66ca95ddc",
+        "asset:a548809fe3d425acb9331c2a"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:6094999106528b394d2292b7",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:d953ffb0776f3e414ffa39fa",
+        "asset:849c9654dbcdc80b29315664",
+        "asset:5786c9919317ea52b857e49f"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:265e80fa64b1b949ed062dea",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:aadf33b4ef76ff598bfbfd53",
+        "asset:db3310ef02f84321536aa831",
+        "asset:5e6ecc03622ed7540e9cc7d1",
+        "asset:8a5c5a1f1b07b6eee19cdc25",
+        "asset:c8e9b8c1aa0b6dbdaf5a3cc0",
+        "asset:133347798318bcdf2f62b287",
+        "asset:086f24f080c419eb3b859169",
+        "asset:dac33a8fca344cad75c30d09",
+        "asset:1050c25ed0eef17522843abc",
+        "asset:82e46d477bd21a233f67e524",
+        "asset:34985e7ca6f502ab16d876f2"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:20475d09b2a1e8821644ddd7",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:47136b503a3862c25856cb06"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:4ab7b7b101b36521f11ff989",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:b50a541ef05178b4e8c63d69",
+        "asset:fdf1fff252cb79bb6f69ba13",
+        "asset:4c301ebb7603b19e50890820",
+        "asset:5482234ec402549215cb2b43",
+        "asset:d717c204a84b44fefef20d20",
+        "asset:9e09468b43a732f0e5d0b3d9",
+        "asset:658488a203776233abaed7d8",
+        "asset:fff17bf713d2cd871a54167a",
+        "asset:b10aaf3c185d1390670a7957"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:f0c1861a133e31010a88da52",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:bede6787a4d7d9d3af210ba1",
+        "asset:4d089d7b4e6da5a8f3475568",
+        "asset:6aba8b536b34b7898fadb6dd",
+        "asset:2a143771dd7b43b14b180b09",
+        "asset:f0374a2b0104502927792480",
+        "asset:d9dfd5d1ebdb54f71eb7502a",
+        "asset:9c7fbda82e13fc9719b5ffbf"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:a6f0b23ed513f4f321c98ff2",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:a6e75cb784eecbea0ab5545b",
+        "asset:6a67ce0a076edaaf269af086",
+        "asset:3d26c329edd007f32300289c",
+        "asset:559d9310c59bbe538b031105",
+        "asset:12f767a95f37bc5a7366c938",
+        "asset:33f5c2561cd0c5a483881b76",
+        "asset:4295ec1d0907a352f6467de3",
+        "asset:40eeb15355744d271047bd48",
+        "asset:74d602fc512d0b3ef7b18e94",
+        "asset:bb12e7e439e02e27f173c90d"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:f7cf2d0bc58d24c43df8a093",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:67d42dc83af7366265720861",
+        "asset:15965740ca7524f10f3fc679",
+        "asset:df6e602c723ede3bf37ac244",
+        "asset:0cdabce571a0ac625a7e34c2",
+        "asset:f8a821d68057527be7cc531f",
+        "asset:07f61fef0e51c6d7ed027c90",
+        "asset:526591214c8cd849e298aefc",
+        "asset:0934cdddcc61175397594592",
+        "asset:eb56b93320aa453d87b8b884",
+        "asset:96729b9e8c9bc8734ad1823b",
+        "asset:e1d711e8b0a0ec1f51ab7b50",
+        "asset:cdbc43d697862cd79ed69f28",
+        "asset:2b6c32c7c588e45a06b35db7",
+        "asset:0ed104ecfd5c5a99756123f0"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:27cce6b5d73f5ae2ef35a7cb",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:4d1127576932d6a39240b7f5",
+        "asset:80ab3876a5a1f05916d7cb85",
+        "asset:0be2033db11b0c7c85e70280",
+        "asset:c10406f1df152d55685e3915",
+        "asset:006d0d5ed6222f5db752c34c",
+        "asset:315bbdf3e0f9fa7311062fb0",
+        "asset:eb838f702e164a2e8686fb00",
+        "asset:2df9fedae91f90695ea00fad",
+        "asset:c6259f55a458d7d2abfdd1de",
+        "asset:f2eed264f916fa50c6af744f",
+        "asset:940543cfb972a74c18bb5199",
+        "asset:4a825ac8e5bb64ef4841afa0"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:74a0f021c20b462166c21b57",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:33198c8a6aaf6939ce8395bd",
+        "asset:93a1815b9521d38859f88242"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:a2613f151d977b20cc832362",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:edcb49bce9655c535e4d6809",
+        "asset:90400750f227ae81d6298021",
+        "asset:778096c46c5aeb2724f2eb98",
+        "asset:1ff85548b2e202c95a9597c9",
+        "asset:93bd513ce74c8982ba6ec06a",
+        "asset:bd0393e09eb5c25501afbcf8",
+        "asset:de3a4a67626f36933f24e623",
+        "asset:cb3d81ce66a02de5a14a3859",
+        "asset:7783eb6c12ca732dd4cc6b82",
+        "asset:f931245f0afeed8c80737e69",
+        "asset:c8dd6ce5721757005e6f7074",
+        "asset:8cc3e3aad8cf747f01b4fc16",
+        "asset:ba0d328d386fc93956f4b12a"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:2a27d8a1475320e7979442ff",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:84b1c13e53196beadb403fe4",
+        "asset:1cde71cd7bf287d8f51e21dc",
+        "asset:ef199071f55859ff34448e75",
+        "asset:40f55b5b7243e8d7e7ae9738",
+        "asset:973a44607ab912af1aca4935",
+        "asset:8f2f5e467cb2655078def54a",
+        "asset:4e00f47deac76f3b3916862a",
+        "asset:2e00dff027cc8ba4d1cb2168",
+        "asset:0fd87d498b8d3cffca74f2dd",
+        "asset:1fff5b6946aaecb966663d25",
+        "asset:3642669ebec2b0667bdcb602",
+        "asset:feee57b499e4b2df5d87f708",
+        "asset:24c6ed357b9a1c40f3c08462",
+        "asset:4d67c6981112b54367d54896",
+        "asset:1c4f980af0e81b630d869f46"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:fbc0c38d8f0d37bb225fc397",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:4ca8544c08057ab3bed4a37e",
+        "asset:bbab8b2ab7a385aca2ab1134",
+        "asset:f36478cd4bfecd8f60b79632",
+        "asset:dcc08c374b989e4a5baaacc4",
+        "asset:7f8958f454f85cda2398e147",
+        "asset:b820461ddd32fac0c5356f18",
+        "asset:ff94f372953de223bf19afce",
+        "asset:0a831929c4053db441af833f",
+        "asset:988ec999a61623aa979766df"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:08b1d9f45fc7a6fe30ac34f8",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:43b0dd59c86c214caa4bbc9e",
+        "asset:9a73bf8450aade0a4d64323a",
+        "asset:1ca0f553a6d8eb1d8a2ed628",
+        "asset:a2511c20f0e371f990aea680",
+        "asset:a5a9914599a27e751d15f0c9",
+        "asset:164af35c3fee4afc8ae1c72a",
+        "asset:bbec5663f3725b78ddee3dc5",
+        "asset:ba57216b916543a7aa982c8c",
+        "asset:8073c4b79ef02f547b7d60d4",
+        "asset:c10d94ac68bb393c85b1cd6b",
+        "asset:0fb4760547e53631a837064f",
+        "asset:1f1820dff386e0db49d90a5b",
+        "asset:6bf683ec4ce38fe194b9618e"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:335c890c0fad07cb6fdd946b",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:b8dbcc2b79f850f90b6b2c14",
+        "asset:fbcb20565ee5563d5f2ff653",
+        "asset:9832b3ba4e66c281c8c62ef6"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:a998b12d34419c81d63cf450",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:c92d290577a91db6780e726f",
+        "asset:63d4a20682c069e1e302823e"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:e300c843df94607692b7a8be",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:ca8b92dae839ead813688690",
+        "asset:e1da3fcdc88655ec14d96669"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:e77e35612fa2e5bffd64fc88",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:2112221eac635b56a4b9f845",
+        "asset:d221f827840b8b6a2ca0b3b1",
+        "asset:641bee4dbf736aacbad061f1",
+        "asset:c186218b50dc55f5651cc388",
+        "asset:45272aaa7bb7e0ab75ac41fb"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:f922df9ea7de24965021bcdd",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:4be7f6ff44ae2a7a63da3561",
+        "asset:73bb80aec533f1c1c31fee53",
+        "asset:7ad30b72391e63cb5059b3d7",
+        "asset:b04520202e38a7f22af4d36b",
+        "asset:8765d8bc65f618fa67b5e82b",
+        "asset:90b705c03846d8625953c0e4",
+        "asset:0205b94ae8481d8db49ef973",
+        "asset:92f8842b9c0ce21bb073a4ab",
+        "asset:25304f89781cbaa3d729b336",
+        "asset:1af68b3df60e4444d3b8897a",
+        "asset:b126bbc33529681749e795eb"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:e1a63349c7fbc9e3b3340146",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:c7fc315f456e33acb51c37bd",
+        "asset:49d1830a2d9d4c88f015daa1",
+        "asset:0cbae713131640709e4b44aa",
+        "asset:b557e32daf84a1127faa856a",
+        "asset:38981ca5aaca949725c905ce",
+        "asset:f3d11287ddfc189960accc7d",
+        "asset:9e8dee3ae2683b3c885faf5b",
+        "asset:01aa39c53223566340a9330a"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:b72297fff96091d0f777e168",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:f9c0c48afc2c6ebf15ce29c2",
+        "asset:e3ed2625bd3685d2649bd109",
+        "asset:4bdec5435bfd87f23df1e116",
+        "asset:2fa333aa9a473e2f5a52f0cf",
+        "asset:e79cd3ec774f50462fff1aab",
+        "asset:77357a888d1f9ee491d7846b",
+        "asset:10f11e128dfe3f074f743f7d",
+        "asset:0ca3ffcf3504a3aca61930dc"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:729641dda50baf26d93f8d1b",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:3681fa5100e28b8e62400a9a",
+        "asset:64b6662d0022282abb3e9106",
+        "asset:8dde23abce2514ffa1a89758",
+        "asset:263c75ba9a49a13ea15c7d53",
+        "asset:be0e521dd2f8cbe6305e7c56",
+        "asset:56238861bb2f5c60ef5fa8b5",
+        "asset:cc79d23243e2f2c2e5e06bb6",
+        "asset:d12415fdf0241d9869775e15",
+        "asset:0b799fc085871f0d2a28885d"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:7d7a377bf150c965cb2fd57a",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:abe569c75c12131a69b2f262",
+        "asset:be5dfa5fa1b06e9e158924c7",
+        "asset:a86996c05d5f424b843c483c"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:3d325d0c1389e8a5125eba37",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:59d320c650ec1990004fb4d4",
+        "asset:b5824034530e16ff98dcc742",
+        "asset:5597feed00aed44d7a6f36bf",
+        "asset:1329b003c75bef9d662d8ab8",
+        "asset:98f3c8a04319729958fa3f25",
+        "asset:e07bda514b757ec7739dec76"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:9eab6b67413cf70ba86f079f",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:ec4171b08484e27801eb457a",
+        "asset:098be4ff3538e8582ca41fc4",
+        "asset:58f24089c1e6a63614519f36",
+        "asset:cd2ea4bd1bdb301b436a3258",
+        "asset:f69ccda0bb55b311e3d310ed",
+        "asset:0d1699c08c8e8560b2263fcd"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:1bad1f98477ce18f230cfa8e",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:79014d9f0e2b2a3ee33f6a01",
+        "asset:2cbf84f5595dcc7c96aff89d",
+        "asset:bc791140c7eac46fe26065e9",
+        "asset:5e2f920474f3f6d47cfc3b5e",
+        "asset:e98692ba8127b875f17dfb72",
+        "asset:fe51b671a4907210e125baf1"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:55dd19809b64f22a979b14bc",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:42a7b1c65a10c0b50042c9eb",
+        "asset:52299d68d8283fd0edf04c74",
+        "asset:99b99f3091ebb807a3e1a049",
+        "asset:75a226f022891aad5b755806",
+        "asset:dfa96f727f163baa4e34799b"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:0bd0bf059155f05d49ae7d7b",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:e3b5b859e9165538789ace6d",
+        "asset:bac9b4630acd312c31b51e34",
+        "asset:3bf37902a60ce158dcf2a1d5",
+        "asset:4744af3fc83496a803891d50",
+        "asset:1e3c9bffdc55e750506500f7"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:51829a94a4dc92b1fe5198d7",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:80f7881eb5d3c99daa6c8124",
+        "asset:31e46f76640229562df157a3",
+        "asset:61b97758e09ec62548bdd1cc"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:54f12388140d76f954d7c12f",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:293f6b86b04a11bb3493b45a",
+        "asset:05961ea2faa6f58597b9b95f",
+        "asset:3897147c9effaee1be36ce53",
+        "asset:b6cf20d615de3b1949b7d44f",
+        "asset:75b43cebe7e6676b11e0b55d",
+        "asset:8a6292f90b1925128016de9a"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:c593cc3d2300c91c13b41811",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:40818d308bc5577176ad97eb",
+        "asset:c70846a1bb27be2ddc2d9101",
+        "asset:27f39e09c9155da0531dca43",
+        "asset:e3b2bf74298bb8a97c73cc80",
+        "asset:f97f8d9be7aab470e5affabb"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:4345205f6c31668b5f45ae97",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:e496fa51e2ed4a2f9e84dd96",
+        "asset:33815b350b956c3e9374c126",
+        "asset:58ba6d912d699c7448cfe425",
+        "asset:3d0104d0ad77e646cf10787e",
+        "asset:f7411294ae3667a1fadb04ff"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:f61c67a2e6189833c461e7b4",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:8fb51f6106d09e4dfb56e0d6",
+        "asset:159d15f4c54c3e3be447c88e",
+        "asset:427bc2d4841cc3f65491fa4c",
+        "asset:2fb5153395b17fa55c858e69"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:5db28053ea8cb432a0dffee2",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:43fc007095b72ddfe97df4ed",
+        "asset:c4808f0fb48681b664a6c5d0",
+        "asset:bc9fd29fc8ccac189f355571",
+        "asset:168a7a5d77c8dcf8f23a89ba",
+        "asset:f1433e630a0a83a94a4132ee",
+        "asset:10e3bb634f9ce8345ff418e3",
+        "asset:f7472da788b519293d7b9a72",
+        "asset:d4c9ae6ef391057cf5d6ed2c",
+        "asset:3bbde94a21d04b7f28d49a82",
+        "asset:4370bae9ce5fe986ebdded8a",
+        "asset:1716ccbb75db8c761fbd49ac",
+        "asset:4e51728553221fca14c3b8dd",
+        "asset:f507d6a4668501921c1283dc",
+        "asset:b80366a2dced816ed0b85bfd",
+        "asset:41baa49da6ebbd1439dda402",
+        "asset:2efa54ddc717dbe4a9dbaf4b",
+        "asset:c45b45222b35de989749b79b",
+        "asset:95055f51b64910d6808f9623",
+        "asset:48f5be47f456e7aa3ed6ca9d",
+        "asset:a176aedc896d38798d1fc0a4",
+        "asset:cafecc7d985b5cc426233c58",
+        "asset:666dbb4ced60d7e19879c34d",
+        "asset:b997854124fe194cc29de7e6",
+        "asset:6092bfa39ee58b3718cec2aa",
+        "asset:537f5a77636a73309d2b0d92",
+        "asset:7b41cf7ec47da413b3c1f6ad",
+        "asset:1db5abe2403f37233c00913e",
+        "asset:301afdf553de4265faeab0b4",
+        "asset:3dd01d155856e6632166772f",
+        "asset:f6620e67839661e024b60dac",
+        "asset:de28b9fade0da44216757171",
+        "asset:038f0016ea0369f408cf1ea2"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:c93efc69386be42f9bad599c",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:67b1d2100986ac82fcf89e0d",
+        "asset:a76397fa7874822c3a2d7384",
+        "asset:dd80ed95a6e3987fcd58a244",
+        "asset:ed0a2d84c6a59a94b0c5636a"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:0a42d472ccca0ecfd2f9eac6",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:4b6764182f032a652adf64d2",
+        "asset:a7cd4ea46b77023327bec8bd",
+        "asset:ae8430f890c2bc5c2aa97331",
+        "asset:e965bc75af3f2f189bf848fc",
+        "asset:181bbcfbe523871c109ca66b"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:5f054e1d2fc9f09ae1153150",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:254e2ea64420c93a6a223190"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:d3d2e09968af2672697188ec",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:8d3953568add621aa30a1620",
+        "asset:e0b8b544ae96afe7daf41b15",
+        "asset:122036f6309fc2bf811a5ecf",
+        "asset:e1fe9fbd4e581fe38b8d3a22",
+        "asset:5225f2b4c6d8e56aedf3a10d",
+        "asset:2bc8ac2ad3413465f5b48aba",
+        "asset:1e9308226fb6721f7ec37c62",
+        "asset:1d7a9e2270adc09684f2a419",
+        "asset:30397372d6026525fd23346e"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:fdbad3334cccfa87218bc32f",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:19b3dc1358c058e08d0ad247",
+        "asset:8bbe080b9960161ea4e6276b",
+        "asset:a67f3897525326f9be430325",
+        "asset:11a2808eb4aef37752bd0a2b"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:a50c01b802a56e8f310b269c",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:9d72ade7e2238c843dce7375",
+        "asset:0e0e7528221d1bb50f1e050b",
+        "asset:faa83205086652af00743cdf"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:c5142aeff82eb82a16b2d0d9",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:c2d305500d13f0a518b0035e",
+        "asset:406fe4937da03c2b59f75fee",
+        "asset:b55d4acdf028aee86118a376",
+        "asset:d0989eea51430dc905ca6ddf",
+        "asset:7d4e7c629459f039fc66fada",
+        "asset:547d01251d1ad3ef724fae54",
+        "asset:a29cbef9b089be6d80521760",
+        "asset:f62dda0d56e931def113962e",
+        "asset:0d31aa245285b040bf3b91fb",
+        "asset:ca64410a8001ec65185fafc4",
+        "asset:e27523d7110a39c949437e8b",
+        "asset:f7b5cea7de596e67674c3f2f"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:64e5d47a4a4760039a1f5e9f",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:e1fe797c654c5b65e6b9269a",
+        "asset:f9ae3610b870492fa3ba537f",
+        "asset:94c2c43597cd7aefd54aa982",
+        "asset:311f7c18995231e26cd2b405",
+        "asset:03c5b4c7610dfde78a73d8f2",
+        "asset:43ecea89155fc88f45e39449",
+        "asset:60a88d61501ba84c26ae66b7",
+        "asset:a3eee5e20667165915f90fec",
+        "asset:910b4e8faac8abce1c6d1240"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:21c9a8b412c80897e54eca0b",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:0a8b00b933df3500cd033779",
+        "asset:adeb2724b13ffd8537f6072d",
+        "asset:8cab58b6145468d3d70595db"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:b2b8933c20a71b60271b0e14",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:67937ac05c4c0fbdca5ee92e",
+        "asset:d3846a66832e2116fe7aea83",
+        "asset:93819142ed77245bdeb3da53",
+        "asset:a6e3cbc925d78fe4a4d7168d"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:379a197a97e825e1a8bfbdc5",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:7ff338e65367518049947bf7",
+        "asset:34acded353718536a52d5d6a"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    },
+    {
+      "catalog_source_id": "catalog_source:c0e08f8dd5fa6789602a82a9",
+      "identity_unresolved": true,
+      "inventory_incomplete": true,
+      "unhashed_assets": [
+        "asset:97c39a1d0ca49ed535a4178f"
+      ],
+      "unknown_components": [
+        "music",
+        "lyrics",
+        "vocals",
+        "tuning",
+        "mix",
+        "master",
+        "instrumental_backing",
+        "stems",
+        "midi_project",
+        "bpm",
+        "key",
+        "video_content"
+      ]
+    }
+  ],
+  "schema": "CATALOG_GAP_REPORT_V01",
+  "schema_version": 1
+}

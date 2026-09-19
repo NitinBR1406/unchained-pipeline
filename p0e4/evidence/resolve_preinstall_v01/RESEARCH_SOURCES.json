@@ -1,0 +1,28 @@
+{
+  "inference_boundary": "Native GUI availability does not establish scriptability, installed host support or successful execution.",
+  "method": "Official Blackmagic web pages read through web tool; no local installed API verified",
+  "observed_at": "2026-09-19",
+  "page_byte_snapshots_available": false,
+  "schema_version": 1,
+  "sources": [
+    {
+      "findings": "Official product page shows version 21; Studio documents remote scripting and Python/Lua workflow integration. Free editing limit is UHD/60 fps. Host codec/license verification remains required.",
+      "sections": [
+        "DaVinci Resolve Studio",
+        "Scripting and Automation",
+        "DaVinci AI Neural Engine"
+      ],
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve/studio"
+    },
+    {
+      "findings": "Native editing UI includes transforms, keyframes, titles and timed subtitles. Quick Export can upload to external accounts; this adapter forbids that route. Exact scripting methods were not established.",
+      "sections": [
+        "Transitions and Effects Library",
+        "Animate Any Clip or Effect Setting",
+        "Subtitles and Closed Captioning",
+        "Deliver for Web Broadcast or Cinema"
+      ],
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+    }
+  ]
+}

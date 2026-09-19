@@ -1,0 +1,56 @@
+{
+  "asset_bytes_read": false,
+  "asset_sha256_proven": false,
+  "byte_read_probe": {
+    "cause": "UNPROVEN",
+    "hash_status": "STALLED_TERMINATED_AFTER_FOUR_MINUTES",
+    "path": "Aakhri Ishq/AAKHRI ISHQ MASTER 2.wav",
+    "sha256": null,
+    "source_authority": "UNBOUND_CANDIDATE",
+    "stat_flags": "-",
+    "stat_size_bytes": 61749398
+  },
+  "cloud_only": 377,
+  "deterministic_replay": true,
+  "entry_count": 446,
+  "excluded_subfolder": {
+    "media_extension_matches": 0,
+    "observed_entry_count": 33,
+    "path": "Saiyaara/CAT docs",
+    "reason": "NON_MEDIA_DOCUMENT_CONTENT_NOT_INSPECTED_OR_COPIED"
+  },
+  "filename_transcription_chars": 13225,
+  "filename_transcription_fnv1a_utf16": 4257888556,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "folder_count": 69,
+  "inventory_sha256": "30696f2001bc2acd503503855445c3e1c0ffa64eda185a98d369f554ce82c2d6",
+  "limitations": [
+    "Folder labels are candidate identities, not verified song titles or original/cover classifications.",
+    "All 16 observed nested directories were listed; 15 music subfolders persisted, non-media CAT docs excluded. Archive contents remain uninspected.",
+    "Read-only system Python directory listing stalled; bounded escalated attempt terminated with alarm exit 142. Cause unproven.",
+    "No cloud media was deliberately opened or downloaded; file byte sizes, SHA, decoding, BPM/key and musical completion remain unverified.",
+    "Computer-use TextEdit evidence export attempt timed out; no saved artifact relied upon; only verified shell-persisted observation transcription accepted."
+  ],
+  "media_opened": false,
+  "method": "Computer-use MCP Finder directory listings",
+  "nested_music_directories": 15,
+  "nested_music_entries": 47,
+  "nested_source_ref": {
+    "sha256": "0807355487b4496920c7506383e56ca640f62528e3fc9b7b7f16b4171f9e8328",
+    "uri": "p0e4/evidence/catalog_bootstrap_v01/FINDER_NESTED_PATH_OBSERVATIONS.json"
+  },
+  "observed_at": "2026-09-19T15:12:14.029Z",
+  "outputs_sha256": "d7807d68edae360644321db5be8f5e1947eff570315b240f240d64d49ceda644",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "recursive": true,
+  "schema": "CATALOG_DISCOVERY_RECEIPT",
+  "schema_version": 1,
+  "source_assets_mutated": false,
+  "source_ref": {
+    "sha256": "505614484302aaaceaf666d76b88f10cc195eea7aa35548db11f643ae247a3b5",
+    "uri": "p0e4/evidence/catalog_bootstrap_v01/FINDER_PATH_OBSERVATIONS.json"
+  },
+  "transcription_checksum_scope": "ACCIDENTAL_TRANSCRIPTION_CHECK_NOT_CRYPTOGRAPHIC_ASSET_PROOF",
+  "unknown_availability": 69
+}

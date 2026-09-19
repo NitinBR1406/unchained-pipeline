@@ -1,0 +1,12 @@
+{
+  "actual_media_rendered": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "plan_sha256": "5771765506c3a67c950f1d131db2ff510e5bd9eb4604cb3707f9638dc6ccf167",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "resolve_execution_proven": false,
+  "scope": "OFFLINE_PLAN_ONLY",
+  "second_build_sha256": "5771765506c3a67c950f1d131db2ff510e5bd9eb4604cb3707f9638dc6ccf167",
+  "status": "PASS",
+  "zero_semantic_drift": true
+}

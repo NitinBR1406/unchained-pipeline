@@ -1,0 +1,36 @@
+{
+  "actual_resolve_execution_proven": false,
+  "changed_source_sha256": {
+    "p0e4/resolve/CAPABILITY_MATRIX_V01.json": "b25ecf2bab4b41ad664e55f8d729d0af5688aeb8a3ca97d90d8ab9467ed4bcd0",
+    "p0e4/resolve/CONTRACT.md": "256b2c0374f24cf0e30d582b1fae10a58193a512f0192db5e80d71ec0b435a19",
+    "p0e4/resolve/FREE_VS_STUDIO_REQUIREMENTS_V01.json": "4c91193bc609349993dc197866358bf398ac213e5ca2288fae1263c7c5464ab8",
+    "p0e4/resolve/__init__.py": "eccdc2cab3bbf4329182be8ccb0fb99f4cc7680919ffc3a8f34e9aebf9300158",
+    "p0e4/resolve/plan.py": "eeecf1f7b6a46a215ccfcc697cc95ae945521ddf0494963e5c5c0726ab9ad4f8",
+    "p0e4/tests/test_resolve_plan.py": "98a8eaeca7d2117f1ece58bbbdf76964b9ed4e8fa44280fbb5c4da1ee6ed5583"
+  },
+  "commit_binding": "Root executor binds final code commit and regression later",
+  "scope": "LOCAL_PREINSTALL_CONTRACT_TESTS",
+  "tested_commit_sha": null,
+  "tests": [
+    {
+      "exit_code": 0,
+      "path": "p0e4/tests/test_resolve_plan.py",
+      "tests": 9
+    },
+    {
+      "exit_code": 0,
+      "path": "p0e4/tests/test_integration_contracts.py",
+      "tests": 8
+    },
+    {
+      "exit_code": 0,
+      "path": "p0e4/tests/test_factory_canonical.py",
+      "tests": 11
+    },
+    {
+      "exit_code": 0,
+      "path": "p0e4/tests/test_v16_factory.py",
+      "tests": 6
+    }
+  ]
+}

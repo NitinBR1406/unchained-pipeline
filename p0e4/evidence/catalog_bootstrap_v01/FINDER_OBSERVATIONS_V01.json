@@ -1,0 +1,2584 @@
+{
+  "schema": "FINDER_OBSERVATIONS_V01",
+  "observed_at": "2026-09-19T15:12:14.029Z",
+  "source_root": "/Users/nitinramdaras/Library/Mobile Documents/com~apple~CloudDocs",
+  "method": "Computer-use MCP Finder directory listing",
+  "scope": "DIRECTORY_METADATA_ONLY",
+  "observations": [
+    {
+      "folder": "Toh Phir Aao",
+      "entries": [
+        {
+          "path": "Toh Phir Aao/TO PHIR AAO.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Dooriyan",
+      "entries": [
+        {
+          "path": "Dooriyan/DOORIYAAN 01.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Dooriyan/DOORIYAAN ONLY VOCALS.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Dooriyan/DOORIYAN FOR GUITARS",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Dooriyan/DOORIYAN FOR GUITARS.zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Dooriyan/DOORIYAN REF GUITAR (T94 , Fm).wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Dooriyan/DOORIYAN FOR GUITARS/DOORIYAN REF GUITAR (T94 , Fm).wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Dooriyan/DOORIYAN FOR GUITARS/DOORIYAN REF WITHOUT GUITAR (T94 , Fm).wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Chand Mera dil",
+      "entries": [
+        {
+          "path": "Chand Mera dil/Chand Mera Dil (Title Track).mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Chand Mera dil/CHAND MERA DIL 01.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Chand Mera dil/CHAND MERA DIL IT NEW.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Tujhe ko",
+      "entries": [
+        {
+          "path": "Tujhe ko/Tujhko (Video) Shahid, Rashmika, Kriti  Pritam, Arijit Singh, Sunidhi C, Amitabh B  Cocktail 2.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Tujhe ko/TUJHKO FOR DUB IT 75.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Tujhe ko/TUJHKO FOR DUB.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Tujhe ko/TUJHKO VOC REF.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Ghar Kab Aaoge",
+      "entries": [
+        {
+          "path": "Ghar Kab Aaoge/BORDER 2_ Ghar Kab Aaoge (Lyrical) Sunny D Anu,Mithoon,Sonu, Roop,Arijit,Vishal,Diljit,Javed,Manoj.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Ghar Kab Aaoge/GHAR KAB AAOGE CHECK.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Ghar Kab Aaoge/GHAR KAB AAOGE REF.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Ghar Kab Aaoge/GHAR KAB MASTER 1.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Aakhri Ishq",
+      "entries": [
+        {
+          "path": "Aakhri Ishq/Aakhri Ishq (Audio) Dhurandhar The Revenge  Ranveer Singh  Shashwat S,Jubin N,Irshad K.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Aakhri Ishq/Aakhri Ishq (Audio) Dhurandhar The Revenge  Ranveer Singh  Shashwat S,Jubin N,Irshad K.mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Aakhri Ishq/AAKHRI ISHQ 1.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Aakhri Ishq/AAKHRI ISHQ IT T75.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Aakhri Ishq/AAKHRI ISHQ MASTER 1.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Aakhri Ishq/AAKHRI ISHQ MASTER 2.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Aakhri Ishq/AAKHRI ISHQ VOCALS.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Jaate hue lamhon",
+      "entries": [
+        {
+          "path": "Jaate hue lamhon/JAATE HUE for tuning.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaate hue lamhon/JAATE HUE LAMHO IT T69.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaate hue lamhon/JAATE HUE LAMHO REF T69.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaate hue lamhon/JAATE HUE LAMHO VOCALS T69.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaate hue lamhon/Jaate Hue Lamhon.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaate hue lamhon/JAATE HUE MASTER 01.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Jaate hue lamhon/JAATE HUE MASTER 02.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Gehra Hua",
+      "entries": [
+        {
+          "path": "Gehra Hua/GEHRA HUA 1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Gehra Hua/GEHRA HUA 01.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Gehra Hua/GEHRA HUA 02.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Video-Opnames ",
+      "entries": [
+        {
+          "path": "Video-Opnames /A001_02171651_C002.mov",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Video-Opnames /A001_02171653_C003.mov",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Video-Opnames /A001_02171654_C004.mov",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Video-Opnames /A001_02171712_C005.mov",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Kahani Suno",
+      "entries": [
+        {
+          "path": "Kahani Suno/KAHANI SUNO ( IT WITHOUT GTR) AS ON 16_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/Kahani suno (1).mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/KAHANI SUNO (WITHOUT GTR) AS ON 16_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/KAHANI SUNO 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/KAHANI SUNO AS ON 14_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/KAHANI SUNO MASTER INTRO LOUD CHECK.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/Kahani suno mp3.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/KAHANI SUNO STORY.mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/Kahani Suno Tuned V1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/Kahani Suno Tuned V2.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/Kahani Suno Tuned Vocals.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kahani Suno/KAHANI SUNO WARM & OPEN.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Ranjhaan",
+      "entries": [
+        {
+          "path": "Ranjhaan/RANJHAAN 01.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Ranjhaan/RANJHAAN MASTER 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Ranjhaan/RANJHAAN TUNED.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "DHUN",
+      "entries": [
+        {
+          "path": "DHUN/DHUN 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "DHUN/DHUN MASTER 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "DHUN/DHUN MASTER 03.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "DHUN/DHUN MASTER OPTION butter MIX1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Qayde Se",
+      "entries": [
+        {
+          "path": "Qayde Se/QAYDE SE 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Qayde Se/QAYDE SE MASTER 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Qayde Se/QAYDE SE MASTER 02.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Qayde Se/QAYDE SE NEW MASTER 01.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Qayde Se/QYDE SE TUNING.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Chand mera dil mash up",
+      "entries": [
+        {
+          "path": "Chand mera dil mash up/CHAND MERA DIL AS ON 05_09_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/CHAND MERA DIL AS ON 09_09_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/CHAND MERA DIL IT AS ON 10_09_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/CHAND MERA DIL REF AS ON 10_09_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/CHAND MERA WITH TUNING.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/CHAND MERA WITHOUT TUNING.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/FILES FOR DUB",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/FILES FOR DUB.zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/FILES FOR DUB/CHAND MERA DIL IT AS ON 10_09_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/FILES FOR DUB/CHAND MERA DIL IT WITHOUT GTR AS ON 10_09_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/FILES FOR DUB/CHAND MERA DIL REF AS ON 10_09_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/FILES FOR DUB/CHAND MERA DIL VOX REF AS ON 10_09_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chand mera dil mash up/FILES FOR DUB/TEMPO TRACK.smt",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "NITIN 2008",
+      "entries": [
+        {
+          "path": "NITIN 2008/asma mastered_01.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "NITIN 2008/KHAN KHAN MASTERED.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "NITIN 2008/KHILTA GHUL MASTERED.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "NITIN 2008/khud se mastered.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "NITIN 2008/raeena mastered.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "NITIN 2008/SANIYA MASTERED_00.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "NITIN 2008/tum sabse mastered.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "NITIN 2008/ye raat mastered_00.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Saiyaara",
+      "entries": [
+        {
+          "path": "Saiyaara/CAT docs",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Saiyaara/SAIYAARA AS ON 26_07_2025.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Saiyaara/SAIYAARA MASTER 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Saiyaara/Saiyaara part1_unchained nitin (1).mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Saiyaara/SAIYAARA TUNING.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Ek Mulaqat",
+      "entries": [
+        {
+          "path": "Ek Mulaqat/EK MULAKAAT LIVE FOR VIDEO LENGTH.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Ek Mulaqat/EK MULAKAAT LIVE FOR VIDEO.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Ek Mulaqat/EK MULAQAT 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Ek Mulaqat/EK MULAQAT AS ON 05_05_2025.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Ek Mulaqat/UnchainedNitin__.mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Love mashups ",
+      "entries": [
+        {
+          "path": "Love mashups /LOVE MASHUP AS ON 08-7-25.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Love mashups /LOVE MASHUP AS ON 21_06_2025.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Love mashups /LOVE MASHUP.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Chunar 2025",
+      "entries": [
+        {
+          "path": "Chunar 2025/CHUNAR AS ON 14_05_2025.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Songs voor 2022",
+      "entries": [
+        {
+          "path": "Songs voor 2022/1080p.mov",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Ae Dil Hai Mushkil",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/AE DIL HAI MUSHKIL 2-5-2017 MASTER.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Chunar",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/CHUNAR MASTER 2-5-2017.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Deewana.mov",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/FINAL MASTERS & IT.zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Main Hoon Deewana Tera - V1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/MAIN TENU SAMJHAWA Master 2-5-2017.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Mein Tenu",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/RASH E QAMAR rgh.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/SAAJNA - MASTER - MP3.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Surili Akhiyon",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/SURILI ANKHIYO MASTER 44_16.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Tere mast mast 76bpm C# fOR dUB.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Tere Sang Yara",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/TERE SANG YARA MASTER 44_116.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Ae Dil Hai Mushkil/AE DIL HAI MUSHKIL IT 44.16.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Ae Dil Hai Mushkil/AE DIL HAI MUSHKIL MASTER 44_16.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Ae Dil Hai Mushkil/AE DIL HAI MUSHKIL MASTER 48_24.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Chunar/CHUNAR IT 44_16.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Chunar/CHUNAR MASTER 44_16.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Chunar/CHUNAR MASTER 48_24.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Mein Tenu/MAIN TENU SAMJHAWA IT 44.16.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Mein Tenu/MAIN TENU SAMJHAWA MASTER 44_16.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Mein Tenu/MAIN TENU SAMJHAWA MASTER 48_24.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Surili Akhiyon/SURILI ANKHIYO IT 44.16.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Surili Akhiyon/SURILI ANKHIYO MASTER 44_16.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Surili Akhiyon/SURILI ANKHIYO MASTER 48_24.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Tere Sang Yara/TERE SANG YARA IT 44.16.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Tere Sang Yara/TERE SANG YARA MASTER 44_116.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Songs voor 2022/Tere Sang Yara/TERE SANG YARA MASTER 48_24.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Optreden 10 mei oefening en opname",
+      "entries": [
+        {
+          "path": "Optreden 10 mei oefening en opname/Live Mix master.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Optreden 10 mei oefening en opname/R_20250507-221426.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Optreden 10 mei oefening en opname/R_20250507-222230.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Optreden 10 mei oefening en opname/R_20250507-223217.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Optreden 10 mei oefening en opname/R_20250507-224121.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Optreden 10 mei oefening en opname/R_20250507-224345.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Jee Le Zara",
+      "entries": [
+        {
+          "path": "Jee Le Zara/JEE LE ZARA AS ON 01_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jee Le Zara/JEE LE ZARA AS ON 05_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jee Le Zara/JEE LE ZARA AS ON 13_04_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jee Le Zara/JEE LE ZARA AS ON 18_04_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jee Le Zara/JEE LE ZARA AS ON 25_04_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jee Le Zara/JEE LE ZARA IT AS ON 10_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jee Le Zara/JEE LE ZARA MASHUP NEW MP3.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jee Le Zara/JEE LE ZARA MASHUP.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jee Le Zara/JEE LE ZARA REF AS ON 10_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jee Le Zara/TEMPO TRACK.smt",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Abhi Mujhme Kahin",
+      "entries": [
+        {
+          "path": "Abhi Mujhme Kahin/ABHI MUJHME KAHIN 01 AS ON 20_04_2025.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Abhi Mujhme Kahin/AMK TUNED 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Earned It",
+      "entries": [
+        {
+          "path": "Earned It/EARNED IT LIVE VIBE MIX VOCALS.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Earned It/EARNED IT LIVE VIBE.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Jaanam",
+      "entries": [
+        {
+          "path": "Jaanam/JAANAM 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Jaanam/JAANAM AS ON 16_08_2024.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaanam/JAANAM FOR DUB",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaanam/JAANAM FOR DUB (Fm,T-98).zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaanam/JANAM TUNING 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaanam/JANAM TUNING 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaanam/JAANAM FOR DUB/JAANAM 01 AS ON 16_08_2024.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaanam/JAANAM FOR DUB/JAANAM IT (Fm , T-98).wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jaanam/JAANAM FOR DUB/VOCALS.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Khoobsurat",
+      "entries": [
+        {
+          "path": "Khoobsurat/KHOOBSURAT AS ON 28_08_2024.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHOOBSURAT FOR DUB",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHOOBSURAT FOR DUB (C,T-144).zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHOOBSURAT FOR DUB 2",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHOOBSURAT FOR TUNING.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHUBSOORAT MASTER 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHUBSOORAT MASTER 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Khoobsurat/KHOOBSURAT FOR DUB/KHOOBSURAT IT (C ,T-144).wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHOOBSURAT FOR DUB/KHOOBSURAT REF.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHOOBSURAT FOR DUB/VOCALS.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHOOBSURAT FOR DUB 2/KHOOBSURAT IT (C ,T-144).wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHOOBSURAT FOR DUB 2/KHOOBSURAT REF.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khoobsurat/KHOOBSURAT FOR DUB 2/VOCALS.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Agar Ho Tum",
+      "entries": [
+        {
+          "path": "Agar Ho Tum/AGAR HO TUM AS ON 03_06_2024.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Agar Ho Tum/AGAR HO TUM AS ON 22_11_2024.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Agar Ho Tum/AGAR HO TUM FILES FOR DUB",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Agar Ho Tum/AGAR HO TUM FILES FOR DUB.zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Agar Ho Tum/AGAR HO TUM MASTER 01.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Agar Ho Tum/AGAR HO TUM MASTER 02.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Agar Ho Tum/AGAR HO TUM FILES FOR DUB/AGAR HO TUM IT (A , T-76).wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Agar Ho Tum/AGAR HO TUM FILES FOR DUB/AGAR HO TUM REF.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Agar Ho Tum/AGAR HO TUM FILES FOR DUB/VOCALS.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Jenna Sikha De",
+      "entries": [
+        {
+          "path": "Jenna Sikha De/FILES FOR DUB (F#m , T-81)",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/FILES FOR DUB (F#m , T-81).zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/JEENA SEEKHA DE MASTER 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/JEENA SEEKHA DE MASTER 02 option2.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Jenna Sikha De/JEENA SEEKHA DE MASTER 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Jenna Sikha De/JEENA SEEKHA DE TUNING new.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/JEENA SEEKHA DE TUNING.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/JEENA SIKHA DE AS ON 16_05_2024 2.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/JEENA SIKHA DE AS ON 16_05_2024.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/FILES FOR DUB (F#m , T-81)/JEENA SIKHA DE IT ( WITHOUT FLUTE).wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/FILES FOR DUB (F#m , T-81)/JEENA SIKHA DE IT (F#m , T-81).wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/FILES FOR DUB (F#m , T-81)/JEENA SIKHA DE IT WITHOUT GUITARS.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/FILES FOR DUB (F#m , T-81)/JEENA SIKHA DE REF.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Jenna Sikha De/FILES FOR DUB (F#m , T-81)/VOX REF.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Roya Jab Tu",
+      "entries": [
+        {
+          "path": "Roya Jab Tu/FILES FOR DUB",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Roya Jab Tu/FILES FOR DUB.zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Roya Jab Tu/ROYA JAB TU AS ON 30_05_2024.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Roya Jab Tu/FILES FOR DUB/ROYA JAB TU AS REF.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Roya Jab Tu/FILES FOR DUB/ROYA JAB TU IT (A , T-69).wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Roya Jab Tu/FILES FOR DUB/VOCALS.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Tere Sang Ishq ",
+      "entries": [
+        {
+          "path": "Tere Sang Ishq /TERE SANG ISHQ 01.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tere Sang Ishq /TERE SANG ISHQ 02.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tere Sang Ishq /TERE SANG ISHQ 03.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tere Sang Ishq /TERE SANG ISHQ AS ON 13_03_2024.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tere Sang Ishq /TERE SANG ISHQ AS ON 26_03_2024.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Aye Khuda",
+      "entries": [
+        {
+          "path": "Aye Khuda/AYE KHUDA AS ON 18_12_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Aye Khuda/AYE KHUDA AS ON 30_01_2024.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Aye Khuda/Aye Khuda MP3.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Aye Khuda/AYE KHUDA REF GUITAR T79 4_4.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Aye Khuda/AYE KHUDA SONG PART 2.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Aye Khuda/AYE KHUDA SONG.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Aye Khuda/AYE KHUDA VOCALS.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Aye Khuda/AYE KHUDA WITH LYRICS.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Pehle Bhi Main",
+      "entries": [
+        {
+          "path": "Pehle Bhi Main/PEHLE BHI MAIN REF.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Pehle Bhi Main/PEHLE BHI MEIN 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Pehle Bhi Main/PEHLE BHI MEIN IT T77.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Pehle Bhi Main/PEHLE BHI MEIN REF T77.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Pehle Bhi Main/PEHLE BHI MEIN SAD.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Pehle Bhi Main/PEHLE BHI MEIN VISHAL VOCALS.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "O Maahi",
+      "entries": [
+        {
+          "path": "O Maahi/O MAAHI 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "O Maahi/O MAAHI 02 SCALE DOWN.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "O Maahi/O MAAHI IT.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "O Maahi/O MAAHI MASTER 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "O Maahi/O MAAHI MASTER 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "O Maahi/O MAAHI MASTER 03.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "O Maahi/O MAAHI VOC TUNING 001.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "O Maahi/O MAAHI VOC TUNING 002.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "O Maahi/REF VOCALS.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Satranga",
+      "entries": [
+        {
+          "path": "Satranga/MicrosoftTeams-image (36).png",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Satranga/SATRANGA 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Satranga/SATRANGA AS ON 19_11_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Satranga/satranga tuning.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Bhool Jaa",
+      "entries": [
+        {
+          "path": "Bhool Jaa/Bhool Ja .wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bhool Jaa/BHOOL JA 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bhool Jaa/BHOOL JA FOR GUITAR DUB",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bhool Jaa/BHOOL JA FOR GUITAR DUB.zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bhool Jaa/Bhool Ja.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bhool Jaa/BHOOL JA FOR GUITAR DUB/BHOOL JA CLICKS T125.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bhool Jaa/BHOOL JA FOR GUITAR DUB/BHOOL JA T125 FOR GUITARS.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Saari Duniya",
+      "entries": [
+        {
+          "path": "Saari Duniya/SAARI DUNIYA 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Saari Duniya/SAARI DUNIYA 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Saari Duniya/SAARI DUNIYA MUSIC.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Saari Duniya/SAARI DUNIYA VOC TUNING.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Saari Duniya/SAARI DUNIYA VOC.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Hua Mein",
+      "entries": [
+        {
+          "path": "Hua Mein/Friday 1.mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Hua Mein/HUA MAIN 01 2.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Hua Mein/HUA MAIN 01 WARM VOCALS UPDATED.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Hua Mein/HUA MAIN 01 WARM VOCALS.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Hua Mein/HUA MAIN 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Hua Mein/hua Main 2.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Hua Mein/HUA MAIN VOC WILL TUNE.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Hua Mein/hua Main.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Hua Mein/MicrosoftTeams-image (41).png",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Hua Mein/MicrosoftTeams-image (42).png",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Hua Mein/Thursday 1.mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Ya Ali",
+      "entries": [
+        {
+          "path": "Ya Ali/YA ALI AS ON 14_11_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Chaleya",
+      "entries": [
+        {
+          "path": "Chaleya/01 Chaleya (From _Jawan_) [music].wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chaleya/01 Chaleya (From _Jawan_) [vocals].wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chaleya/01 Chaleya (From _Jawan_).mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chaleya/CHALEYA 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chaleya/CHALEYA VOCALS CHECK ORIGINAL.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Chaleya/CHALEYA VOCALS CHECK.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "TUMHE KITNA PYAAR",
+      "entries": [
+        {
+          "path": "TUMHE KITNA PYAAR/TUMHE KITNA PYAAR 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "TUMHE KITNA PYAAR/TUMHE KITNA PYAAR IT T102.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "TUMHE KITNA PYAAR/Tumhe Kitna Pyaar Tuned V1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "TUMHE KITNA PYAAR/TUMHE KITNA PYAAR.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Heeriye",
+      "entries": [
+        {
+          "path": "Heeriye/HEERIYE 01.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Heeriye/HEERIYE IT FOR DUBBING T105 F#.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Heeriye/HEERIYE REF FOR DUBBING T105 F#.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Tum Kya Mile",
+      "entries": [
+        {
+          "path": "Tum Kya Mile/KAHANI SUNO STORY (1).mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/TUM KYA MILE 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/TUM KYA MILE 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/TUM KYA MILE iREF T90.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/TUM KYA MILE IT T90.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/TUM KYA MILE STORY (1).mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/TUM KYA MILE STORY.mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/TUM KYA MILE.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/Tum kya Miley Tuned V2.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/Tum kya Miley Tuned V3.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/Tum kya Miley Tuned Vocals.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum Kya Mile/Tum kya Miley Tuned.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Mere Mehboob",
+      "entries": [
+        {
+          "path": "Mere Mehboob/MERE MEHBOOB 01 AS ON 20_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere Mehboob/MERE MEHBOOB 02 AS ON 20_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere Mehboob/MERE MEHBOOB AS ON 24_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere Mehboob/MERE MEHBOOB IT AS ON 25_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere Mehboob/MERE MEHBOOB MASTER 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere Mehboob/MERE MEHBOOB MASTER 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere Mehboob/MERE MEHBOOB MASTER 03.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere Mehboob/MERE MEHBOOB REF AS ON 25_05_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere Mehboob/MERE MEHBOOB STORY.mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere Mehboob/Mere Mehboob Tuned V1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere Mehboob/Mere Mehboob Tuned Vocals.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Tum Jo Mil Gaye",
+      "entries": [
+        {
+          "path": "Tum Jo Mil Gaye/Tum jo Mil gaye  IT AS ON 15_08_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Tum Jo Mil Gaye/Tum jo Mil gaye AS ON 09_08_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Tum Jo Mil Gaye/Tum jo mil gaye ho.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Main Gira",
+      "entries": [
+        {
+          "path": "Main Gira/MAIN GIRA 01 AS ON 15_08_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Main Gira/MAIN GIRA NEW GROOVE AS ON 15_08_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Ae zindagi gale laga le",
+      "entries": [
+        {
+          "path": "Ae zindagi gale laga le/AE Zindagi (IT) As on 06_03_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Ae zindagi gale laga le/AE Zindagi As on 05_03_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Apna bana le",
+      "entries": [
+        {
+          "path": "Apna bana le/Apna Bana Le (Bb , T-90) AS ON 11_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Apna bana le/APNA BANA LE 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Apna bana le/APNA BANA LE 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Apna bana le/APNA BANA LE 23-02-2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Apna bana le/APNA BANA LE AS ON 07_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Apna bana le/APNA BANA LE AS ON 09_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Apna bana le/APNA BANA LE AS ON 17_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Apna bana le/Apna Bana Le Tuned V3.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Apna bana le/Apna Bana Le Tuned Vocals.zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Apna bana le/Apna Bana Le Tuned.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Apna bana le/apna banale Mp3.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Arijit Dance Mashup",
+      "entries": [
+        {
+          "path": "Arijit Dance Mashup/ARIJIT DANCE MASHUP 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Arijit Dance Mashup/ARIJIT DANCE MASHUP 6 SONGS.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Arijit Dance Mashup/ARIJIT DANCE MASHUP ALL 8 SONGS.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Baarish - Half girlfriend",
+      "entries": [
+        {
+          "path": "Baarish - Half girlfriend/BAARISH 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Baarish - Half girlfriend/BAARISH 23-02-2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Baarish - Half girlfriend/BAARISH AS ON 04_10_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Baarish - Half girlfriend/BAARISH AS ON 12_11_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Baarish - Half girlfriend/BAARISH IT AS ON 12_11_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Baarish - Half girlfriend/Baarish Tuned V1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Baarish - Half girlfriend/Baarish Tuned Vx.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Baarish-Kabhi jo badal",
+      "entries": [
+        {
+          "path": "Baarish-Kabhi jo badal/Baarish X Kabhi Jo Badal Barse Full Demo 4 08-04-22.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Baarish-Kabhi jo badal/Baarish X Kabhi Jo Badal Barse Full Demo 4 IT.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Baarish-Kabhi jo badal/Baarish X Kabhi Jo Badal Barse Full Demo ref.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Baarish-Kabhi jo badal/Baarish X Kabhi Jo Badal Barse Full IT.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Bekhayali",
+      "entries": [
+        {
+          "path": "Bekhayali/AUDIO-2022-06-18-00-24-40.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bekhayali/BEKHAYALI  AS ON 07_06_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bekhayali/BEKHAYALI 01 AS ON 01_05_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bekhayali/BEKHAYALI 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bekhayali/BEKHAYALI 25-02-2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Bekhayali/BEKHAYALI IT  AS ON 09_11_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bekhayali/Bekhayali Tuned V1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bekhayali/Bekhayali Tuned Vx.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Bekhayali/Guitar AUDIO-2022-06-18-00-24-40.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Dua",
+      "entries": [
+        {
+          "path": "Dua/DUA  (IT) AS ON 22_05_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Dua/DUA  IT AS ON 12_10_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Dua/DUA  REF AS ON 12_10_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Dua/DUA AS ON 12_05_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Dua/DUA AS ON 16_05_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Dua/DUA IT ( Cm , T- 154).mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Dua/DUA REF ( Cm , T- 154).mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Gerua medley",
+      "entries": [
+        {
+          "path": "Gerua medley/GERUA 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Gerua medley/GERUA 25-02-2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Gerua medley/Gerua Tuned Vx.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Gerua medley/Gerua Tuned.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Gerua medley/GERUA XRASIYAXKABIRA (IT) WITHOUHT GTR SLOW.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Gerua medley/GERUA XRASIYAXKABIRA 01  AS ON 03_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Gerua medley/GERUA XRASIYAXKABIRA AS ON 03_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Gerua medley/GERUA XRASIYAXKABIRA REF WITHOUHT GTR FINAL.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Har kisi ko",
+      "entries": [
+        {
+          "path": "Har kisi ko/HAR KISKO (A Maj)  REF AS ON 24_03_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Har kisi ko/HAR KISKO (A Maj) IT AS ON 24_03_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Har kisi ko/HAR KISKO AS ON 15_03_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Har kisi ko/HAR KISKO IT AS ON 16_03_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Intro beat",
+      "entries": [
+        {
+          "path": "Intro beat/KHAIRIYAT INTRO (01) AS ON 21_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Kaise Hua",
+      "entries": [
+        {
+          "path": "Kaise Hua/KAISE HUA AS ON  30_10_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Kaise Hua/Kaise Hua guitar raw.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Kalank",
+      "entries": [
+        {
+          "path": "Kalank/KALANK 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/KALANK 24-02-2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Kalank/KALANK AS ON 06_09_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/KALANK AS ON 22_08_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/KALANK IT  AS ON 21_09_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/KALANK REF  AS ON 21_09_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/Kalank Tuned V2.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/Kalank Tuned Vox",
+          "kind": "DIRECTORY_OBSERVED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/Kalank Tuned Vox.zip",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/Kalank Tuned.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/Kalank Tuned Vox/Kalank Tuned Vx 1.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/Kalank Tuned Vox/Kalank Tuned Vx 2 DT.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kalank/Kalank Tuned Vox/Kalank Tuned Vx 2.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Kesariya",
+      "entries": [
+        {
+          "path": "Kesariya/KESARIYA  AS ON 28_12_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/Kesariya (T-89 , C) AS ON 21_12_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/KESARIYA 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/KESARIYA 24-02-2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/KESARIYA AS ON 09_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/KESARIYA IT  AS ON 28_12_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/Kesariya IT (T-89 , C) AS ON 21_12_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/KESARIYA IT AS ON 03_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/KESARIYA IT WITHOUT GUITARS AS ON 03_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/KESARIYA REF AS ON 03_01_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/Kesariya Tuned V2.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/Kesariya Tuned Vx.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/Kesariya Tuned.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/Ksariya guitar final.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Kesariya/Ksariya.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Khairiyat",
+      "entries": [
+        {
+          "path": "Khairiyat/Khairiyat - Nitin Ramdards 1st Draft.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khairiyat/Khairiyat - Nitin Ramdards MixMaster 1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khairiyat/Khairiyat - With guide.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khairiyat/KHAIRIYAT 25-02-2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khairiyat/Khairiyat flute.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khairiyat/KHAIRIYAT MASTER 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khairiyat/KHAIRIYAT MASTER 02.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khairiyat/Khairiyat Tuned Vx New.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Khairiyat/Khairiyat Tuned.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Mann Ki Lagan",
+      "entries": [
+        {
+          "path": "Mann Ki Lagan/MANN KI LAGAN  AS ON 01_04_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mann Ki Lagan/MANN KI LAGAN 01 AS ON 29_03_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Mehram",
+      "entries": [
+        {
+          "path": "Mehram/MEHRAM (IT) AS ON 21_10_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mehram/MEHRAM AS ON 21_10_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mehram/MEHRAM IT AS ON 03_11_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mehram/MEHRAM REF AS ON 03_11_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mehram/Mehram Tuned V1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Mere bina Labon ko",
+      "entries": [
+        {
+          "path": "Mere bina Labon ko/mere bina.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere bina Labon ko/MERE BINA (IT) AS ON 14_07_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere bina Labon ko/MERE BINA AS ON 14_07_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere bina Labon ko/MERE BINA AS ON 21_07_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Mere bina Labon ko/MERE BINA GMAJ IT WITH GUITARS.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Mere bina Labon ko/MERE BINA GMAJ WITH GUITARS.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Mere bina Labon ko/MERE BINA IT (G , 70).mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Mere bina Labon ko/MERE BINA REF (G , 70).mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "O Re Piya",
+      "entries": [
+        {
+          "path": "O Re Piya/O RE PIYA  AS ON 16_03_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "O Re Piya/O RE PIYA (IT) AS ON 21_03_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "O Re Piya/O RE PIYA 01 AS ON 11_03_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Phil Moh",
+      "entries": [
+        {
+          "path": "Phil Moh/PHIR MOHABBAT  (IT)  AS ON 21_05_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Phil Moh/PHIR MOHABBAT  AS ON 19_04_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Phil Moh/PHIR MOHABBAT 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Phil Moh/PHIR MOHABBAT 25-02-2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Phil Moh/Phir Mohobbat Tuned v1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Phil Moh/Phir Mohobbat Tuned Vx.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Phir aur Kya chaiye ",
+      "entries": [
+        {
+          "path": "Phir aur Kya chaiye /PHIR AUR KYA CHAIYE AS ON 28_07_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Phir aur Kya chaiye /PHIR AUR kya X TERE HAWALE (IT) AS ON 03_07_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Phir aur Kya chaiye /PHIR AUR kya X TERE HAWALE 01 AS ON 02_07_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Phir aur Kya chaiye /PHIR AUR kya X TERE HAWALE AS ON 02_07_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Phir aur Kya chaiye /Tempo track.smt",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Tujhe kitna G-70",
+      "entries": [
+        {
+          "path": "Tujhe kitna G-70/TUJHE KITNA  AS ON 22_09_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tujhe kitna G-70/TUJHE KITNA 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tujhe kitna G-70/TUJHE KITNA AS ON 15_08_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tujhe kitna G-70/TUJHE KITNA IT AS ON 02_09_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tujhe kitna G-70/TUJHE KITNA IT AS ON 15_08_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tujhe kitna G-70/TUJHE KITNA IT AS ON 22_09_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tujhe kitna G-70/TUJHE KITNA REF AS ON 02_09_2022.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tujhe kitna G-70/Tujhe Kitna Tuned V1.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tujhe kitna G-70/Tujhe Kitna Tuned vx.wav",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Tum se hi ",
+      "entries": [
+        {
+          "path": "Tum se hi /TEMPO.smt",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum se hi /TUM SE HI 01 AS ON 08_06_2023-2.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum se hi /TUM SE HI AS ON 01_06_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum se hi /TUM SE HI AS ON 02_06_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum se hi /TUM SE HI FOR GUITAR AS ON 19_06_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum se hi /TUM SE HI IT AS ON 19_06_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum se hi /TUM SE HI REF AS ON 19_06_2023.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Tum se hi /TUMSE HI Mp3 acoustics .mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Tum se hi /TUMSE HI Mp3.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        }
+      ]
+    },
+    {
+      "folder": "Ve Kamleya",
+      "entries": [
+        {
+          "path": "Ve Kamleya/VE KAMLEYA 01.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Ve Kamleya/VE KAMLEYA EDITED.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        },
+        {
+          "path": "Ve Kamleya/Ve Kamleya Tuned.mp3",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    },
+    {
+      "folder": "Video’s",
+      "entries": [
+        {
+          "path": "Video’s/Khairiyat Reel.mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "UNKNOWN_NO_CLOUD_ICON"
+        },
+        {
+          "path": "Video’s/STORY - Mere Mehboob.mp4",
+          "kind": "FILE_OBSERVED_FORMAT_UNVERIFIED",
+          "availability": "CLOUD_ONLY_UI_OBSERVED"
+        }
+      ]
+    }
+  ]
+}

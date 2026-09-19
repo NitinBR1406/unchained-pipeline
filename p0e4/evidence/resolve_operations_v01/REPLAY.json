@@ -1,0 +1,8 @@
+{
+  "actual_execution": false,
+  "second_build_sha256": "d65cf3faaf96a3407331dac28c061e0c60589996ea6d8391e29211cffe7ec880",
+  "spec_sha256": "2861d33bc68307b692376904b6eed6a663da79261882edcb38d30c887823dbca",
+  "status": "PASS",
+  "supplement_sha256": "d65cf3faaf96a3407331dac28c061e0c60589996ea6d8391e29211cffe7ec880",
+  "tests": 5
+}
