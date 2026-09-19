@@ -42,4 +42,11 @@ class Projection(unittest.TestCase):
   reg=json.loads(self.blobs['reg']);reg['passed']=0;self.blobs['reg']=canonical(reg);self.a['regression_ref']['sha256']=digest(self.blobs['reg'])
   with self.assertRaisesRegex(ValueError,'regression'):self.project()
 
+class InputTime(unittest.TestCase):
+ def test_invalid_timestamp_rejected_before_writes(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   output=Path(tmp)/'must_not_exist'
+   with self.assertRaises(ValueError):p.main(output,'2026-09-19T15:00:00+00:00')
+   self.assertFalse(output.exists())
+
 if __name__=='__main__':unittest.main()

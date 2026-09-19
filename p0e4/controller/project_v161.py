@@ -62,6 +62,7 @@ def project(parent,ledger,prefix,resolver):
 
 
 def main(directory,at):
+ timestamp(at) # Reject invalid event time before any append-only ledger mutation.
  out=Path(directory).resolve();require(out.is_relative_to(ROOT/'p0e4/evidence'),'evidence output scope')
  a=json.loads((out/'ACCEPTANCE.json').read_bytes());r=json.loads((out/'REGRESSION.json').read_bytes())
  require(a['regression_ref']=={'uri':str((out/'REGRESSION.json').relative_to(ROOT)),'sha256':digest((out/'REGRESSION.json').read_bytes())},'regression ref location')
