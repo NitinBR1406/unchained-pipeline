@@ -1,0 +1,31 @@
+{
+  "remote_head": "92701ca47d361f8f85f5bb18d2fd8c4cf1f593b4",
+  "clean_checkout": true,
+  "master_state_version": "V16",
+  "state_version": 26,
+  "master_state_sha256": "a466c8837812f2a17a1f4e39cf5f2669ca9a0046d299570578d2b64e9dfef741",
+  "exact_tested_code_sha": "f7d4f4d205e4dee753d06b70640c41514d996244",
+  "deterministic_master_replay": true,
+  "post_test_delta": [
+    "p0e4/MASTER_STATE_LATEST.json",
+    "p0e4/evidence/factory_v16/ACCEPTANCE.json",
+    "p0e4/evidence/factory_v16/DIFF_QC.json",
+    "p0e4/evidence/factory_v16/ENGINEERING_EVENT_LEDGER.jsonl",
+    "p0e4/evidence/factory_v16/EXECUTION_SCOPE.json",
+    "p0e4/evidence/factory_v16/HUMAN_ACTION_PACKET.json",
+    "p0e4/evidence/factory_v16/MIGRATION_PLAN.json",
+    "p0e4/evidence/factory_v16/NEXT_READY.json",
+    "p0e4/evidence/factory_v16/README.md",
+    "p0e4/evidence/factory_v16/REGRESSION.json",
+    "p0e4/evidence/factory_v16/SHA256SUMS.txt",
+    "p0e4/evidence/factory_v16/UNCHAINED_MASTER_PROJECT_STATE_V16.json"
+  ],
+  "publication_authorized": false,
+  "verified_at": "2026-09-19T11:36:04.028395+00:00",
+  "regression_suites": 66,
+  "manifest_entries": 406,
+  "frozen_components_changed": false,
+  "existing_factory_sources_unchanged": true,
+  "actual_render_execution_proven": false,
+  "actual_live_make_execution_proven": false
+}
