@@ -1,0 +1,38 @@
+[
+  {
+    "sha256": "fa85b9513b5825d9d776b53bff6eed506be7a059f0dfaa4f96bdcd81556e5113",
+    "uri": "p0e4/evidence/resolve_max_v162/CATALOG_TECHNICAL_REVIEW_QUEUE.json"
+  },
+  {
+    "sha256": "e2e44475d774c3e98ad5fbcc0498f3b91261da60c8384c72444189a8987cd81c",
+    "uri": "p0e4/evidence/resolve_max_v162/DECISION.json"
+  },
+  {
+    "sha256": "f5b7878e144df873f23e3b7ffdf80273fa7698dbf6bea902c13eeb92325dd558",
+    "uri": "p0e4/evidence/resolve_max_v162/MASTER_FINISHING_PLAN.json"
+  },
+  {
+    "sha256": "4a3fa537f887b997480a69e056956881da06d11d86ed8220f49a28bf256a97d8",
+    "uri": "p0e4/evidence/resolve_max_v162/NITIN_SCOPE_EXTENSION.txt"
+  },
+  {
+    "sha256": "cd2cb1e1516b6445d7574845954c92acc98eceed5811a6203895476d0ef65eac",
+    "uri": "p0e4/evidence/resolve_max_v162/RESEARCH.json"
+  },
+  {
+    "sha256": "8872800b2ac1403e22e9719322ccaf9e99a8ec13e61e211ed9d9e3d87fb3aee2",
+    "uri": "p0e4/evidence/resolve_max_v162/SHA256SUMS.txt"
+  },
+  {
+    "sha256": "7a8af7bfb1dd215a03d70644fb961e51e7950a75bcd6cca7bbe19d16d84a1911",
+    "uri": "p0e4/evidence/resolve_max_v162/SYNTHETIC_INPUT.json"
+  },
+  {
+    "sha256": "ce4739d070d4ff48832984a526c085ffb990adf6b326363a1773526f8459b26f",
+    "uri": "p0e4/resolve/MAXIMUM_CAPABILITY_MATRIX_V02.json"
+  },
+  {
+    "sha256": "a4f906f19ad1e487bc98d49ada0e39a3809418426814b9016293c7b3593adf5f",
+    "uri": "p0e4/resolve/FACTORY_FREE_STUDIO_V02.json"
+  }
+]

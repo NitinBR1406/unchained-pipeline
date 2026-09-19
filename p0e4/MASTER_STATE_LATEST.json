@@ -1,11 +1,11 @@
 {
-  "evidence_manifest": "p0e4/evidence/resolve_catalog_v161_accepted/SHA256SUMS.txt",
-  "master_state_version": "V16.1",
-  "path": "p0e4/evidence/resolve_catalog_v161_accepted/UNCHAINED_MASTER_PROJECT_STATE_V16_1.json",
+  "evidence_manifest": "p0e4/evidence/resolve_max_v162_acceptance/SHA256SUMS.txt",
+  "master_state_version": "V16.2",
+  "path": "p0e4/evidence/resolve_max_v162_acceptance/UNCHAINED_MASTER_PROJECT_STATE_V16_2.json",
   "production_e2e_status": "BLOCKED_NOT_GREEN",
   "schema_version": 1,
-  "scope_status": "RESOLVE_PREINSTALL_AND_CATALOG_METADATA_ACCEPTED",
-  "sha256": "ffaa9110369773cb8e50d751f236a49b7abf4448eb9bdf33515d04daf517967e",
-  "state_version": 27,
-  "tested_sha": "783adea70ea64796c4f3850e9f6f328588da98dc"
+  "scope_status": "MASTER_FINISHING_DESIGN_ACCEPTED_EXECUTION_BLOCKED",
+  "sha256": "a41764d6955f5153ba9cd3d4033c5521eb41037a9c801e53469135d1cfdde2eb",
+  "state_version": 28,
+  "tested_sha": "927229cfdebcc3a0b9c9408582f04e1fb38db717"
 }

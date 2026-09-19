@@ -1,0 +1,30 @@
+{
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "refs": {
+    "catalog_review": {
+      "sha256": "fa85b9513b5825d9d776b53bff6eed506be7a059f0dfaa4f96bdcd81556e5113",
+      "uri": "p0e4/evidence/resolve_max_v162/CATALOG_TECHNICAL_REVIEW_QUEUE.json"
+    },
+    "fixture": {
+      "sha256": "7a8af7bfb1dd215a03d70644fb961e51e7950a75bcd6cca7bbe19d16d84a1911",
+      "uri": "p0e4/evidence/resolve_max_v162/SYNTHETIC_INPUT.json"
+    },
+    "inventory": {
+      "sha256": "fc4a4747f53b1ba9e1b037cbd8fcc01017e43746cb77a1de1d8d2a7047c4340f",
+      "uri": "p0e4/evidence/catalog_bootstrap_v01/CATALOG_INVENTORY_V01.json"
+    },
+    "plan": {
+      "sha256": "f5b7878e144df873f23e3b7ffdf80273fa7698dbf6bea902c13eeb92325dd558",
+      "uri": "p0e4/evidence/resolve_max_v162/MASTER_FINISHING_PLAN.json"
+    },
+    "regression": {
+      "sha256": "2edf7112598ab41ecee746e8ffec58ff139c2b51900f2cca4d2ed24506f3cddb",
+      "uri": "p0e4/evidence/resolve_max_v162_acceptance/REGRESSION.json"
+    }
+  },
+  "resolve_execution_proven": false,
+  "status": "MASTER_FINISHING_DESIGN_ACCEPTED_EXECUTION_BLOCKED",
+  "tested_sha": "927229cfdebcc3a0b9c9408582f04e1fb38db717"
+}

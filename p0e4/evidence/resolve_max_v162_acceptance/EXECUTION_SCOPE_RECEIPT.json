@@ -1,0 +1,10 @@
+{
+  "always_on_dispatcher_proven": false,
+  "bounded_v11_json_dispatches": 0,
+  "computer_use_dispatcher_claimed": false,
+  "execution_context": "CURRENT_CODEX_ENGINEERING_CONTEXT",
+  "reason": "New Python adapter and projection are outside the proven JSON-only child-write scope. Existing controller guarantees unchanged.",
+  "resolve_execution_proven": false,
+  "schema": "ENGINEERING_SCOPE_RECEIPT",
+  "tested_sha": "927229cfdebcc3a0b9c9408582f04e1fb38db717"
+}

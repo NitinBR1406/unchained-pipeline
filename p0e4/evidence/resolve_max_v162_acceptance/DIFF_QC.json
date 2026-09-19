@@ -1,0 +1,25 @@
+{
+  "base_sha": "e32b8f731cef9fca62b8a0fd0dfd3c39d82cf9da",
+  "changed_paths": [
+    "p0e4/catalog/review.py",
+    "p0e4/controller/project_v162.py",
+    "p0e4/evidence/resolve_max_v162/CATALOG_TECHNICAL_REVIEW_QUEUE.json",
+    "p0e4/evidence/resolve_max_v162/DECISION.json",
+    "p0e4/evidence/resolve_max_v162/MASTER_FINISHING_PLAN.json",
+    "p0e4/evidence/resolve_max_v162/NITIN_SCOPE_EXTENSION.txt",
+    "p0e4/evidence/resolve_max_v162/RESEARCH.json",
+    "p0e4/evidence/resolve_max_v162/SHA256SUMS.txt",
+    "p0e4/evidence/resolve_max_v162/SYNTHETIC_INPUT.json",
+    "p0e4/resolve/FACTORY_FREE_STUDIO_V02.json",
+    "p0e4/resolve/MAXIMUM_CAPABILITY_CONTRACT.md",
+    "p0e4/resolve/MAXIMUM_CAPABILITY_MATRIX_V02.json",
+    "p0e4/resolve/adapter.py",
+    "p0e4/tests/test_resolve_maximum.py"
+  ],
+  "existing_catalog_inventory_unchanged": true,
+  "frozen_components_unchanged": true,
+  "purchases_made": false,
+  "software_installed": false,
+  "source_assets_mutated": false,
+  "tested_sha": "927229cfdebcc3a0b9c9408582f04e1fb38db717"
+}
