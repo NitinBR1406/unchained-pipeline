@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "checkpoint_tested_sha": "f29fc9a09a9b1f3d8f62310a0da06de72f4c4607",
+  "tasks": [
+    {
+      "task_id": "AKI_AUTHORITATIVE_AUDIO_BINDING",
+      "status": "WAITING_FOR_NITIN",
+      "action": "Known candidate remains INTEGRATION_TEST_INPUT only; do not infer final audio."
+    },
+    {
+      "task_id": "LIVE_MAKE_INTEGRATION",
+      "status": "BLOCKED_NOT_GREEN",
+      "action": "Synthetic Claude preflight is accepted; no live Make consumers/cutover may be claimed or activated under this archive-transfer approval."
+    }
+  ],
+  "scheduler_id": "unchained-p0-e4-ready-continuation",
+  "transfer_gate_resolved": true,
+  "always_on_dispatcher_proven": false,
+  "publication_authorized": false,
+  "completed_task_ids": [
+    "EC_V154_PREFLIGHT_VALIDATION_SCHEMA"
+  ],
+  "ready_nonhuman_count": 0,
+  "bounded_idle_wake_dispatch_proven": true,
+  "next_action": "Wait for new independently authorized READY work or exact Nitin audio-source binding. On unchanged heartbeats reconcile quietly; do not invent work or re-dispatch completed tasks. Live Make consumers/cutover remain outside accepted synthetic scope."
+}

@@ -1,0 +1,28 @@
+{
+  "parent_remote_sha": "ecf98deb8b2f98d6b24b598dd854dc55028f1700",
+  "tested_sha": "f29fc9a09a9b1f3d8f62310a0da06de72f4c4607",
+  "changed_paths": [
+    "p0e4/controller/project_v155.py",
+    "p0e4/controller/wake_chain.py",
+    "p0e4/evidence/wake_dispatch_v155/CHAIN_VALIDATION.json",
+    "p0e4/evidence/wake_dispatch_v155/WAKE_DISPATCH_RECEIPT.json",
+    "p0e4/evidence/wake_dispatch_v155/runtime/EVENT_LEDGER.jsonl",
+    "p0e4/evidence/wake_dispatch_v155/runtime/commit.json",
+    "p0e4/evidence/wake_dispatch_v155/runtime/completion.json",
+    "p0e4/evidence/wake_dispatch_v155/runtime/events.jsonl",
+    "p0e4/evidence/wake_dispatch_v155/runtime/exit.json",
+    "p0e4/evidence/wake_dispatch_v155/runtime/intent.json",
+    "p0e4/evidence/wake_dispatch_v155/runtime/regression.json",
+    "p0e4/evidence/wake_dispatch_v155/runtime/state.json",
+    "p0e4/evidence/wake_dispatch_v155/runtime/task.json",
+    "p0e4/evidence/wake_dispatch_v155/runtime/verified.json",
+    "p0e4/generated/v154_preflight_validation.schema.json",
+    "p0e4/tests/test_v155_wake_chain.py"
+  ],
+  "frozen_components_changed": false,
+  "existing_executor_runtime_code_changed": false,
+  "external_make_sheet_mutations": 0,
+  "new_production_runs": 0,
+  "new_bounded_cli_dispatches": 1,
+  "publication_authorized": false
+}
