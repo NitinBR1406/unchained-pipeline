@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": [
+    "all_three_freeze_manifests",
+    "JSON_parse",
+    "registry_unique_ids",
+    "zone_membership_mode_and_bpm",
+    "zone_denominators",
+    "no_numeric_predictive_scores",
+    "governance_unchanged",
+    "delivery_index_paths",
+    "readable_local_links"
+  ],
+  "json_files_checked": 39,
+  "references_n": 32,
+  "zones_n": 10,
+  "local_links_checked": 10,
+  "limitations": "Integrity, membership and policy checks; not audio verification or certification of every source claim."
+}

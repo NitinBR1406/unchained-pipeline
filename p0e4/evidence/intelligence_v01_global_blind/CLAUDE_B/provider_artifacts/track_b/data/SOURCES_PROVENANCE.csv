@@ -1,0 +1,12 @@
+id,name,url,as_of,observed,note
+W1,Wikipedia – List of most-viewed YouTube videos,https://en.wikipedia.org/wiki/List_of_most-viewed_YouTube_videos,2026-08-30,2026-09-22,views rounded to nearest 10M; 30-row table
+K4,kworb.net – Most viewed music videos of all time,https://kworb.net/youtube/topvideos.html,,2026-09-22,exact view counts; page prints no update date; 'Yesterday' = views gained previous day (undated)
+S2,Wikipedia – List of Spotify streaming records (most-streamed songs),https://en.wikipedia.org/wiki/List_of_Spotify_streaming_records,2026-09-13,2026-09-22,"streams in billions, 3 dp"
+B3,Wikipedia – Billboard Hot 100 chart achievements (most total weeks at #1),https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_chart_achievements_and_milestones,2026-01-03 (chart dated; caveat: one 2026 entry present),2026-09-22,weeks at #1
+WI,Wikipedia – List of most-viewed Indian YouTube videos,https://en.wikipedia.org/wiki/List_of_most-viewed_Indian_YouTube_videos,2026-02-18,2026-09-22,"exact counts on page, transcribed as billions (3 dp); film status inferred from 'from <Film>' annotation"
+KI,kworb.net – Most viewed music videos by Indian artists,https://kworb.net/youtube/topvideos_indian.html,,2026-09-22,no update date printed
+SI,kworb.net – Spotify India daily chart totals,https://kworb.net/spotify/country/in_daily_totals.html,2026-08-26,2026-09-22,'Total' = streams accumulated on days the song was in the India daily top-200 since 2019-02-27 — NOT lifetime streams; Days = chart days; Pk = peak position; PkStreams = best single-day streams
+BI,Wikipedia – India Songs (Billboard) number ones,https://en.wikipedia.org/wiki/India_Songs,2022 rows only,2026-09-22,chart launched Feb 2022; page lists 2022 number-ones only
+TB,Tunebat – Shape of You (Spotify-derived features),https://tunebat.com/Info/Shape-of-You-Ed-Sheeran/7qiZfU4dY1lWllzX7mPBI3,,2026-09-22,secondary estimate (Spotify audio features)
+SB,SongBPM – Shape of You,https://songbpm.com/@ed-sheeran/shape-of-you,,2026-09-22,secondary estimate; states 'Song data provided by Spotify'
+GB,GetSongBPM – Shape of You,https://getsongbpm.com/song/shape-of-you/x6gjyP,,2026-09-22,secondary estimate; sources MusicBrainz/Last.fm/Spotify

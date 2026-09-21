@@ -1,0 +1,56 @@
+{
+  "name": "VOCAL_KEY_OPTIMIZER",
+  "version": "V01",
+  "status": "DESIGN_ONLY_UNCALIBRATED",
+  "current_nitin_measurements": null,
+  "NITIN_FIT_SCORE": null,
+  "required_inputs": {
+    "melody": "Original melody note events: MIDI pitch, onset, duration, lyric vowel, section, register intention",
+    "voice": "Consented comfortable phrase takes, sustained tessitura, register behavior, effort, diction and repeatability",
+    "reference": "Version-bound tonic/mode, interval contour envelope and beat unit; not copied protected melody"
+  },
+  "algorithm": [
+    "Select a comfortable baseline key with Nitin and Vatsal.",
+    "Enumerate integer semitone shifts only within demonstrated comfortable limits. For every note, new_midi = original_midi + shift; tonic = (original_tonic + shift) mod 12.",
+    "Preserve intervals and mode under uniform transposition. Calculate duration-weighted pitch distribution by verse/chorus/climax, not merely min/max.",
+    "Check sustained demands, phrase endings, register transitions, vowel clarity, breath and repeated performance; range endpoints alone do not determine fit.",
+    "Audition a small number of nearby keys at comparable gain and tempo with rests; stop an uncomfortable take. Repeat the favored key on another occasion.",
+    "Select creative fit by listening with Nitin; instrument tone and arrangement may need adaptation after transposition."
+  ],
+  "prohibited_shortcuts": [
+    "No population hit key as Nitin target",
+    "No max-note/breaking-point test",
+    "No fixed safe semitone offset for all voices",
+    "No universal 2–5-semitone chorus-rise rule",
+    "No numerical fit without observations and an explicitly defined scoring protocol"
+  ],
+  "outputs": {
+    "candidate_keys": [],
+    "recommended_key": null,
+    "transposition_semitones": null,
+    "NITIN_FIT_SCORE": null,
+    "reason": "No Nitin audition measurements supplied"
+  },
+  "pitch_invariants": [
+    "Equal semitone shift preserves all pairwise intervals",
+    "Enharmonic spelling handled separately",
+    "Octave rewrites and mode changes require separate arrangement decisions"
+  ],
+  "event_fields": [
+    "audition_id",
+    "song_id",
+    "recording_version_id",
+    "take_asset_sha256",
+    "key",
+    "shift_semitones",
+    "phrase_id",
+    "pitch_events",
+    "comfortable",
+    "effort_self_report",
+    "diction_review",
+    "tone_review",
+    "repeatability_review",
+    "observed_at",
+    "evidence_id"
+  ]
+}

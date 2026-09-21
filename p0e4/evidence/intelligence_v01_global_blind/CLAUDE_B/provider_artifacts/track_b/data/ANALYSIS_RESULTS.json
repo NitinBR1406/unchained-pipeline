@@ -1,0 +1,1294 @@
+{
+ "track": "CLAUDE_B",
+ "version": "FROZEN_V01",
+ "observed": "2026-09-22",
+ "n_rows_total": 168,
+ "cohort_n": {
+  "GLOBAL_SUCCESS": 85,
+  "HINDI_INDIAN_SUCCESS": 83,
+  "GLOBAL_HINDI_CROSSOVER": 0,
+  "UNCHAINED_NITIN_OWN_DATA": 0
+ },
+ "feature_missingness": {
+  "bpm": {
+   "n_present": 25,
+   "n_null": 143
+  },
+  "key": {
+   "n_present": 24,
+   "n_null": 144
+  },
+  "mode": {
+   "n_present": 24,
+   "n_null": 144
+  },
+  "song_duration_sec": {
+   "n_present": 25,
+   "n_null": 143
+  },
+  "energy": {
+   "n_present": 24,
+   "n_null": 144
+  },
+  "intro_length_sec": {
+   "n_present": 0,
+   "n_null": 168
+  },
+  "first_vocal_sec": {
+   "n_present": 0,
+   "n_null": 168
+  },
+  "first_hook_sec": {
+   "n_present": 0,
+   "n_null": 168
+  },
+  "chorus_arrival_sec": {
+   "n_present": 0,
+   "n_null": 168
+  },
+  "hook_repetitions": {
+   "n_present": 0,
+   "n_null": 168
+  },
+  "structure": {
+   "n_present": 0,
+   "n_null": 168
+  },
+  "vocal_range_measured": {
+   "n_present": 10,
+   "n_null": 158
+  },
+  "tessitura": {
+   "n_present": 0,
+   "n_null": 168
+  },
+  "climax_placement": {
+   "n_present": 0,
+   "n_null": 168
+  },
+  "meter": {
+   "n_present": 17,
+   "n_null": 151
+  }
+ },
+ "global": {
+  "source_cells": {
+   "youtube_K4": 38,
+   "spotify_S2": 40,
+   "hot100_B3": 15,
+   "youtube_and_spotify_overlap": 5,
+   "youtube_and_hot100_overlap": 2,
+   "spotify_and_hot100_overlap": 1
+  },
+  "youtube_views_exact_K4": {
+   "n": 38,
+   "min": 3115587644,
+   "p25": 3305221037.0,
+   "median": 3928895799.0,
+   "p75": 4415019161.0,
+   "max": 9126588087,
+   "mean": 4288751143.579
+  },
+  "youtube_upload_year_W1": {
+   "2017": {
+    "n": 3,
+    "share": 0.176
+   },
+   "2015": {
+    "n": 3,
+    "share": 0.176
+   },
+   "2012": {
+    "n": 2,
+    "share": 0.118
+   },
+   "2014": {
+    "n": 2,
+    "share": 0.118
+   },
+   "2018": {
+    "n": 2,
+    "share": 0.118
+   },
+   "2010": {
+    "n": 2,
+    "share": 0.118
+   },
+   "2013": {
+    "n": 2,
+    "share": 0.118
+   },
+   "2009": {
+    "n": 1,
+    "share": 0.059
+   }
+  },
+  "youtube_upload_age_days": {
+   "n": 17,
+   "min": 3036,
+   "p25": 3540.0,
+   "median": 4325,
+   "p75": 5172.0,
+   "max": 6307,
+   "mean": 4476.235
+  },
+  "youtube_descriptive_views_per_day_since_upload": {
+   "n": 17,
+   "min": 619516,
+   "p25": 922565.0,
+   "median": 1041973,
+   "p75": 1364975.0,
+   "max": 2578132,
+   "mean": 1250657
+  },
+  "youtube_yesterday_views_K4": {
+   "n": 38,
+   "min": 216909,
+   "p25": 527889.75,
+   "median": 674093.5,
+   "p75": 865808.5,
+   "max": 2630802,
+   "mean": 811233.737
+  },
+  "spotify_streams_bn_S2": {
+   "n": 40,
+   "min": 3.391,
+   "p25": 3.508,
+   "median": 3.823,
+   "p75": 4.014,
+   "max": 5.588,
+   "mean": 3.919
+  },
+  "spotify_release_decade_S2": {
+   "2010s": {
+    "n": 30,
+    "share": 0.75
+   },
+   "2020s": {
+    "n": 5,
+    "share": 0.125
+   },
+   "2000s": {
+    "n": 3,
+    "share": 0.075
+   },
+   "1980s": {
+    "n": 1,
+    "share": 0.025
+   },
+   "1990s": {
+    "n": 1,
+    "share": 0.025
+   }
+  },
+  "spotify_release_year_S2": {
+   "n": 40,
+   "min": 1983,
+   "p25": 2012.75,
+   "median": 2016.0,
+   "p75": 2018.25,
+   "max": 2024,
+   "mean": 2014.3
+  },
+  "spotify_share_released_2012_or_later": 0.825,
+  "hot100_weeks_at_1_B3": {
+   "n": 15,
+   "min": 14,
+   "p25": 14.0,
+   "median": 15,
+   "p75": 17.5,
+   "max": 22,
+   "mean": 16.133
+  },
+  "notes": [
+   "views/day = exact K4 views / days between W1 upload date and 2026-09-22; K4 page undated so ratio is approximate; NOT watch time.",
+   "Spotify top-40 is dominated by 2012-2022 releases with a catalog tail (1983, 1998, 2000, 2003, 2008) — a hit-only, survivorship-biased frame."
+  ]
+ },
+ "hindi_indian": {
+  "source_cells": {
+   "youtube_WI_or_KI": 40,
+   "spotify_india_SI": 37,
+   "india_songs_BI": 7,
+   "youtube_and_spotify_overlap": 0,
+   "spotify_and_billboard_overlap": 1
+  },
+  "youtube_language_WI": {
+   "Hindi": {
+    "n": 24,
+    "share": 0.6
+   },
+   "Punjabi": {
+    "n": 7,
+    "share": 0.175
+   },
+   "Haryanvi": {
+    "n": 2,
+    "share": 0.05
+   },
+   "Hindi/Punjabi": {
+    "n": 2,
+    "share": 0.05
+   },
+   "null": {
+    "n": 2,
+    "share": 0.05
+   },
+   "Tamil": {
+    "n": 1,
+    "share": 0.025
+   },
+   "Hindi/Bengali": {
+    "n": 1,
+    "share": 0.025
+   },
+   "Bhojpuri": {
+    "n": 1,
+    "share": 0.025
+   }
+  },
+  "youtube_film_status": {
+   "film": {
+    "n": 24,
+    "share": 0.6
+   },
+   "non-film": {
+    "n": 16,
+    "share": 0.4
+   }
+  },
+  "youtube_film_status_hindi_only": {
+   "film": {
+    "n": 20,
+    "share": 0.741
+   },
+   "non-film": {
+    "n": 7,
+    "share": 0.259
+   }
+  },
+  "youtube_uploader_WI": {
+   "T-Series": {
+    "n": 18,
+    "share": 0.45
+   },
+   "Zee Music Company": {
+    "n": 4,
+    "share": 0.1
+   },
+   "Yash Raj Films": {
+    "n": 2,
+    "share": 0.05
+   },
+   "null": {
+    "n": 2,
+    "share": 0.05
+   },
+   "Geet MP3": {
+    "n": 1,
+    "share": 0.025
+   },
+   "Desi Records": {
+    "n": 1,
+    "share": 0.025
+   },
+   "The Folk & Soul Studio": {
+    "n": 1,
+    "share": 0.025
+   },
+   "Wunderbar Films": {
+    "n": 1,
+    "share": 0.025
+   },
+   "T-Series Apna Punjab": {
+    "n": 1,
+    "share": 0.025
+   },
+   "Tips Industries": {
+    "n": 1,
+    "share": 0.025
+   },
+   "VIP Records": {
+    "n": 1,
+    "share": 0.025
+   },
+   "Desi Melodies": {
+    "n": 1,
+    "share": 0.025
+   },
+   "VATS RECORDS": {
+    "n": 1,
+    "share": 0.025
+   },
+   "Ishtar Punjabi": {
+    "n": 1,
+    "share": 0.025
+   },
+   "Sony Music India": {
+    "n": 1,
+    "share": 0.025
+   },
+   "Riddhi Music World": {
+    "n": 1,
+    "share": 0.025
+   },
+   "DM - Desi Melodies": {
+    "n": 1,
+    "share": 0.025
+   },
+   "Saregama Music": {
+    "n": 1,
+    "share": 0.025
+   }
+  },
+  "youtube_upload_year": {
+   "2019": {
+    "n": 9,
+    "share": 0.237
+   },
+   "2018": {
+    "n": 7,
+    "share": 0.184
+   },
+   "2017": {
+    "n": 5,
+    "share": 0.132
+   },
+   "2020": {
+    "n": 4,
+    "share": 0.105
+   },
+   "2016": {
+    "n": 4,
+    "share": 0.105
+   },
+   "2014": {
+    "n": 2,
+    "share": 0.053
+   },
+   "2021": {
+    "n": 1,
+    "share": 0.026
+   },
+   "2011": {
+    "n": 1,
+    "share": 0.026
+   },
+   "2012": {
+    "n": 1,
+    "share": 0.026
+   },
+   "2009": {
+    "n": 1,
+    "share": 0.026
+   },
+   "2022": {
+    "n": 1,
+    "share": 0.026
+   },
+   "2015": {
+    "n": 1,
+    "share": 0.026
+   },
+   "2024": {
+    "n": 1,
+    "share": 0.026
+   }
+  },
+  "youtube_views_WI_bn": {
+   "n": 38,
+   "min": 1.006,
+   "p25": 1.115,
+   "median": 1.23,
+   "p75": 1.415,
+   "max": 1.835,
+   "mean": 1.293
+  },
+  "youtube_views_KI_exact": {
+   "n": 38,
+   "min": 1060255714,
+   "p25": 1174914826.25,
+   "median": 1286857902.5,
+   "p75": 1500035114.5,
+   "max": 1870804491,
+   "mean": 1342943151.289
+  },
+  "youtube_upload_age_days": {
+   "n": 38,
+   "min": 790,
+   "p25": 2538.75,
+   "median": 2928.0,
+   "p75": 3516.5,
+   "max": 6131,
+   "mean": 3116.763
+  },
+  "youtube_descriptive_views_per_day_since_upload": {
+   "n": 36,
+   "min": 211833,
+   "p25": 362264.0,
+   "median": 436208.0,
+   "p75": 532956.5,
+   "max": 1358605,
+   "mean": 485685.028
+  },
+  "youtube_views_per_day_by_film_status": {
+   "film": {
+    "n": 22,
+    "min": 211833,
+    "p25": 329936.5,
+    "median": 379416.5,
+    "p75": 520833.75,
+    "max": 1358605,
+    "mean": 465629.455
+   },
+   "non-film": {
+    "n": 14,
+    "min": 345647,
+    "p25": 392951.5,
+    "median": 466267.0,
+    "p75": 624320.0,
+    "max": 819343,
+    "mean": 517200.929
+   }
+  },
+  "spotify_india_film_tag_in_title": {
+   "no film tag (non-film or untagged)": {
+    "n": 27,
+    "share": 0.73
+   },
+   "film (From \"...\" tag)": {
+    "n": 10,
+    "share": 0.27
+   }
+  },
+  "spotify_india_chart_days": {
+   "n": 37,
+   "min": 421,
+   "p25": 863.0,
+   "median": 1156,
+   "p75": 2131.0,
+   "max": 2644,
+   "mean": 1426.135
+  },
+  "spotify_india_top10_days": {
+   "n": 31,
+   "min": 3,
+   "p25": 131.5,
+   "median": 251,
+   "p75": 300.0,
+   "max": 514,
+   "mean": 239.581
+  },
+  "spotify_india_peak_position": {
+   "1": {
+    "n": 17,
+    "share": 0.459
+   },
+   "4": {
+    "n": 5,
+    "share": 0.135
+   },
+   "2": {
+    "n": 4,
+    "share": 0.108
+   },
+   "3": {
+    "n": 2,
+    "share": 0.054
+   },
+   "20": {
+    "n": 2,
+    "share": 0.054
+   },
+   "5": {
+    "n": 1,
+    "share": 0.027
+   },
+   "7": {
+    "n": 1,
+    "share": 0.027
+   },
+   "13": {
+    "n": 1,
+    "share": 0.027
+   },
+   "15": {
+    "n": 1,
+    "share": 0.027
+   },
+   "18": {
+    "n": 1,
+    "share": 0.027
+   },
+   "30": {
+    "n": 1,
+    "share": 0.027
+   },
+   "8": {
+    "n": 1,
+    "share": 0.027
+   }
+  },
+  "spotify_india_peak_day_streams": {
+   "n": 37,
+   "min": 399527,
+   "p25": 615073.0,
+   "median": 1033472,
+   "p75": 1417932.0,
+   "max": 2295124,
+   "mean": 1089578.162
+  },
+  "spotify_india_chart_total_streams": {
+   "n": 37,
+   "min": 336840988,
+   "p25": 390632280.0,
+   "median": 436414693,
+   "p75": 482243234.0,
+   "max": 653520827,
+   "mean": 442891063.568
+  },
+  "spotify_india_avg_streams_per_chart_day": {
+   "n": 37,
+   "min": 147901,
+   "p25": 215383.0,
+   "median": 346011,
+   "p75": 500495.0,
+   "max": 1101512,
+   "mean": 391763.324
+  },
+  "spotify_india_longevity_vs_peak": {
+   "n_peak1_songs": 17,
+   "chart_days_peak1": {
+    "n": 17,
+    "min": 421,
+    "p25": 676.0,
+    "median": 863,
+    "p75": 1154.0,
+    "max": 2224,
+    "mean": 983.588
+   },
+   "chart_days_never_top3": {
+    "n": 14,
+    "min": 930,
+    "p25": 1603.0,
+    "median": 2185.0,
+    "p75": 2353.5,
+    "max": 2630,
+    "mean": 1954.5
+   },
+   "reading": "Two routes into the all-time chart-total top-40: (a) peak-1 songs with high daily streams over ~1-3 years, (b) songs that never peaked near #1 but stayed on the top-200 for 5-7 years (catalog longevity). Descriptive only."
+  },
+  "india_songs_2022_weeks_at_1": {
+   "n": 7,
+   "min": 1,
+   "p25": 2.5,
+   "median": 6,
+   "p75": 11.5,
+   "max": 18,
+   "mean": 7.571
+  },
+  "notes": [
+   "Hindi YouTube list is multi-language: Punjabi/Haryanvi/Tamil/Bhojpuri rows kept and labelled; Hindi-only cells reported separately.",
+   "kworb Spotify India 'Total' counts only chart days since 2019-02-27; older catalog (e.g. 2007-2015 film songs) is under-counted relative to lifetime streams.",
+   "Film status for YouTube rows is inferred from Wikipedia 'from <Film>' annotation; for Spotify rows from the '(From \"Film\")' title tag — untagged rows may still be film songs (e.g. Kesariya, Tum Se Hi, Kabira are film songs but carry no tag in the kworb title)."
+  ]
+ },
+ "global_feature_cell_G00": {
+  "n": 25,
+  "selection": "first 25 rows of the GLOBAL YouTube-derived list (G001-G025); NOT random; no Spotify-only or Hot-100-only rows; era 2009-2018 uploads",
+  "bpm_as_recorded": {
+   "n": 25,
+   "min": 75.0,
+   "p25": 91.0,
+   "median": 110.0,
+   "p75": 130.0,
+   "max": 190.0,
+   "mean": 112.92
+  },
+  "bpm_source": {
+   "wikipedia_sheet_music_quote": {
+    "n": 17,
+    "share": 0.68
+   },
+   "spotify_derived_site": {
+    "n": 8,
+    "share": 0.32
+   }
+  },
+  "bpm_band": {
+   "90-109": {
+    "n": 7,
+    "share": 0.28
+   },
+   "110-129": {
+    "n": 6,
+    "share": 0.24
+   },
+   "<90": {
+    "n": 5,
+    "share": 0.2
+   },
+   "130-149": {
+    "n": 5,
+    "share": 0.2
+   },
+   ">=150": {
+    "n": 2,
+    "share": 0.08
+   }
+  },
+  "rows_with_half_or_double_time_alternative_stated": 23,
+  "tempo_change_rows": [
+   "Counting Stars"
+  ],
+  "mode": {
+   "major": {
+    "n": 14,
+    "share": 0.56
+   },
+   "minor": {
+    "n": 8,
+    "share": 0.32
+   },
+   "null": {
+    "n": 1,
+    "share": 0.04
+   },
+   "modal (dorian)": {
+    "n": 1,
+    "share": 0.04
+   },
+   "modal (mixolydian)": {
+    "n": 1,
+    "share": 0.04
+   }
+  },
+  "mode_source": {
+   "wikipedia_sheet_music_quote": {
+    "n": 16,
+    "share": 0.64
+   },
+   "spotify_derived_site": {
+    "n": 8,
+    "share": 0.32
+   },
+   "null": {
+    "n": 1,
+    "share": 0.04
+   }
+  },
+  "key_mode_conflict_spotify_site_vs_sheet_music": {
+   "n_conflict": 7,
+   "n_compared": 14,
+   "reading": "Spotify-derived key detection often returns the relative major/minor of the published key; site-only mode values are unreliable."
+  },
+  "key_pitch_class": {
+   "D": {
+    "n": 5,
+    "share": 0.2
+   },
+   "B": {
+    "n": 3,
+    "share": 0.12
+   },
+   "Bb": {
+    "n": 3,
+    "share": 0.12
+   },
+   "Eb": {
+    "n": 3,
+    "share": 0.12
+   },
+   "G": {
+    "n": 3,
+    "share": 0.12
+   },
+   "C#": {
+    "n": 2,
+    "share": 0.08
+   },
+   "Ab": {
+    "n": 2,
+    "share": 0.08
+   },
+   "null": {
+    "n": 1,
+    "share": 0.04
+   },
+   "Db": {
+    "n": 1,
+    "share": 0.04
+   },
+   "C": {
+    "n": 1,
+    "share": 0.04
+   },
+   "F": {
+    "n": 1,
+    "share": 0.04
+   }
+  },
+  "duration_sec": {
+   "n": 25,
+   "min": 145,
+   "p25": 212.0,
+   "median": 224,
+   "p75": 236.0,
+   "max": 281,
+   "mean": 222.92
+  },
+  "duration_source": {
+   "wikipedia_infobox": {
+    "n": 25,
+    "share": 1.0
+   }
+  },
+  "energy_spotify_derived": {
+   "n": 24,
+   "min": 45.0,
+   "p25": 57.75,
+   "median": 74.0,
+   "p75": 81.25,
+   "max": 94.0,
+   "mean": 70.417
+  },
+  "danceability_spotify_derived": {
+   "n": 24,
+   "min": 51.0,
+   "p25": 60.75,
+   "median": 68.0,
+   "p75": 77.25,
+   "max": 89.0,
+   "mean": 69.25
+  },
+  "valence_spotify_derived": {
+   "n": 15,
+   "min": 17.0,
+   "p25": 28.0,
+   "median": 45.0,
+   "p75": 75.0,
+   "max": 96.0,
+   "mean": 52.333
+  },
+  "loudness_db_spotify_derived": {
+   "n": 15,
+   "min": -8.0,
+   "p25": -7.0,
+   "median": -6.0,
+   "p75": -4.0,
+   "max": -3.0,
+   "mean": -5.4
+  },
+  "vocal_range_semitones_sheet_music": {
+   "n": 10,
+   "min": 15,
+   "p25": 17.5,
+   "median": 22.0,
+   "p75": 25.5,
+   "max": 39,
+   "mean": 22.8
+  },
+  "vocal_range_low_midi": {
+   "n": 10,
+   "min": 47,
+   "p25": 47.5,
+   "median": 52.0,
+   "p75": 54.75,
+   "max": 58,
+   "mean": 51.7
+  },
+  "vocal_range_high_midi": {
+   "n": 10,
+   "min": 69,
+   "p25": 71.25,
+   "median": 73.0,
+   "p75": 75.75,
+   "max": 86,
+   "mean": 74.5
+  },
+  "vocal_range_rows": [
+   {
+    "title": "Despacito",
+    "range": "F♯3-B4",
+    "semitones": 17,
+    "citation": "Wikipedia ref [35] (citation text not readable in fetched page)"
+   },
+   {
+    "title": "Shape of You",
+    "range": "G♯3-G♯5",
+    "semitones": 24,
+    "citation": "Musicnotes.com"
+   },
+   {
+    "title": "Uptown Funk",
+    "range": "B2-D6",
+    "semitones": 39,
+    "citation": "Wikipedia ref [38] (citation text not readable in fetched page)"
+   },
+   {
+    "title": "Counting Stars",
+    "range": "B2-C♯5",
+    "semitones": 26,
+    "citation": "Wikipedia ref [13] (citation text not readable in fetched page)"
+   },
+   {
+    "title": "Sugar",
+    "range": "D♭3-F♭5",
+    "semitones": 27,
+    "citation": "Kobalt Music Publishing digital sheet music (Wikipedia refs 14,15)"
+   },
+   {
+    "title": "Dark Horse",
+    "range": "B♭3-D♭5",
+    "semitones": 15,
+    "citation": "Musicnotes.com sheet music (Wikipedia ref 23)"
+   },
+   {
+    "title": "Sorry",
+    "range": "E♭3-B♭4",
+    "semitones": 19,
+    "citation": "Wikipedia ref [19] (citation text not readable in fetched page)"
+   },
+   {
+    "title": "Thinking Out Loud",
+    "range": "B2-A4",
+    "semitones": 22,
+    "citation": "Wikipedia ref [19] (citation text not readable in fetched page)"
+   },
+   {
+    "title": "Baby",
+    "range": "G3-C5",
+    "semitones": 17,
+    "citation": "Musicnotes / Alfred Publishing (per fetched summary of refs 8,9)"
+   },
+   {
+    "title": "Let It Go",
+    "range": "F3-E♭5",
+    "semitones": 22,
+    "citation": "Musicnotes.com sheet music (Wikipedia ref 27, cite_note-mn-27)"
+   }
+  ],
+  "structural_timing_observed": [
+   {
+    "title": "Blank Space",
+    "note": "Wikipedia: \"begins with two bars of drum machine beats\" (no time given)"
+   },
+   {
+    "title": "Shake It Off",
+    "note": "Wikipedia: bridge runs \"from 2:18 to 2:42\" (refs 21, 27)"
+   }
+  ],
+  "meter": {
+   "4/4": {
+    "n": 17,
+    "share": 0.68
+   },
+   "null": {
+    "n": 8,
+    "share": 0.32
+   }
+  },
+  "notes": [
+   "Values are secondary estimates: Spotify-derived features republished by third-party sites, and sheet-music key/tempo/range as quoted on Wikipedia (Musicnotes/Kobalt citations). Sheet-music vocal ranges describe the published arrangement, not a measured recording.",
+   "Frequencies among 25 mega-hits; no comparison group; no association claims."
+  ]
+ },
+ "crossover": {
+  "n": 0,
+  "finding": "No song appears in both the GLOBAL and HINDI/INDIAN success cohorts. Non-Indian songs present in Indian sources (Starboy, Perfect on Spotify India chart totals; Pink Venom on India Songs 2022) are the only observed cross-market presence, and it runs global->India, not India->global. No Hindi-language recording was observed in any global top list fetched.",
+  "observed_cross_presence": [
+   {
+    "song": "Starboy",
+    "artist": "The Weeknd",
+    "india_signal": "kworb Spotify India chart total 353,039,859 (rank 37), 1,852 chart days, peak 9"
+   },
+   {
+    "song": "Perfect",
+    "artist": "Ed Sheeran",
+    "india_signal": "kworb Spotify India chart total 335,472,026 (rank 40), 2,085 chart days, peak 24"
+   },
+   {
+    "song": "Pink Venom",
+    "artist": "Blackpink",
+    "india_signal": "Billboard India Songs #1, 1 week, 2022-09-03"
+   }
+  ]
+ },
+ "measured_feature_rows": [
+  {
+   "id": "G001",
+   "title": "Despacito",
+   "bpm": 89.0,
+   "bpm_alt": "tunebat 429 on 3 attempts; songbpm: \"can also be used double-time at 178 BPM\"; songbpm duration 3:48; getsongbpm time signature 4/4",
+   "key": "B",
+   "mode": "minor",
+   "song_duration_sec": 227,
+   "energy": 82.0,
+   "groove": "danceability 66",
+   "emotion": null,
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G002",
+   "title": "See You Again",
+   "bpm": 80.0,
+   "bpm_alt": "songbpm: \"can also be used double-time at 160 BPM\"",
+   "key": "Bb",
+   "mode": "major",
+   "song_duration_sec": 230,
+   "energy": 48.0,
+   "groove": "danceability 69",
+   "emotion": "valence/happiness 29",
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G003",
+   "title": "Shape of You",
+   "bpm": 96.0,
+   "bpm_alt": "songbpm: \"can also be used double-time at 192 BPM\"",
+   "key": "C#",
+   "mode": "minor",
+   "song_duration_sec": 234,
+   "energy": 65.0,
+   "groove": "danceability 83",
+   "emotion": "valence/happiness 93",
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G004",
+   "title": "Axel F",
+   "bpm": 136.0,
+   "bpm_alt": "tunebat 429 on 2 attempts; songbpm: \"can also be used half-time at 69 BPM or double-time at 276 BPM\" (songbpm bpm 138 vs getsongbpm 136); getsongbpm time signature 4/4; no key given on either site",
+   "key": null,
+   "mode": null,
+   "song_duration_sec": 174,
+   "energy": 91.0,
+   "groove": "danceability 87",
+   "emotion": null,
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "low-medium (single secondary site)"
+  },
+  {
+   "id": "G005",
+   "title": "Gangnam Style",
+   "bpm": 132.0,
+   "bpm_alt": "songbpm: \"can also be used half-time at 66 BPM or double-time at 264 BPM\"",
+   "key": "B",
+   "mode": "minor",
+   "song_duration_sec": 219,
+   "energy": 94.0,
+   "groove": "danceability 73",
+   "emotion": "valence/happiness 76",
+   "meter": null,
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "low-medium (single secondary site)"
+  },
+  {
+   "id": "G006",
+   "title": "Uptown Funk",
+   "bpm": 115.0,
+   "bpm_alt": "songbpm: half-time at 58 BPM or double-time at 230 BPM",
+   "key": "D",
+   "mode": "dorian",
+   "song_duration_sec": 270,
+   "energy": 61.0,
+   "groove": "danceability 86",
+   "emotion": "valence/happiness 93",
+   "meter": null,
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G007",
+   "title": "Dame Tu Cosita",
+   "bpm": 110.0,
+   "bpm_alt": "songbpm: \"can also be used half-time at 55 BPM or double-time at 220 BPM\"",
+   "key": "D",
+   "mode": "major",
+   "song_duration_sec": 145,
+   "energy": 93.0,
+   "groove": "danceability 89",
+   "emotion": "valence/happiness 69",
+   "meter": null,
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "low-medium (single secondary site)"
+  },
+  {
+   "id": "G008",
+   "title": "Waka Waka (This Time for Africa)",
+   "bpm": 127.0,
+   "bpm_alt": "songbpm: \"can also be used half-time at 64 BPM or double-time at 254 BPM\"; songbpm duration 3:24; NOTE feature sites say B minor while Wikipedia says D major (relative keys)",
+   "key": "D",
+   "mode": "major",
+   "song_duration_sec": 202,
+   "energy": 87.0,
+   "groove": "danceability 77",
+   "emotion": "valence/happiness 74",
+   "meter": null,
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G009",
+   "title": "Counting Stars",
+   "bpm": 122.0,
+   "bpm_alt": "tunebat 429 on 3 attempts; songbpm: \"can also be used half-time at 61 BPM or double-time at 244 BPM\" (songbpm 122 vs getsongbpm 123); getsongbpm time signature 4/4",
+   "key": "C#",
+   "mode": "minor",
+   "song_duration_sec": 257,
+   "energy": 71.0,
+   "groove": "danceability 67",
+   "emotion": null,
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G010",
+   "title": "Sugar",
+   "bpm": 120.0,
+   "bpm_alt": "tunebat 403 then 429 on 3 attempts; getsongbpm lists 58 BPM (Largo) = half-time of songbpm 120; songbpm: \"can also be used half-time at 60 BPM or double-time at 240 BPM\"; songbpm duration 3:56; getsongbpm time signature 4/4",
+   "key": "Db",
+   "mode": "major",
+   "song_duration_sec": 235,
+   "energy": 79.0,
+   "groove": "danceability 75",
+   "emotion": null,
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G011",
+   "title": "Roar",
+   "bpm": 88.0,
+   "bpm_alt": "tunebat 429 on 3 attempts; songbpm: \"Can be used double-time at 180 BPM\" (songbpm 90 vs getsongbpm 88); songbpm duration 3:44; getsongbpm time signature 4/4; NOTE songbpm key G minor vs Wikipedia B♭ major (relative keys)",
+   "key": "Bb",
+   "mode": "major",
+   "song_duration_sec": 223,
+   "energy": 78.0,
+   "groove": "danceability 56",
+   "emotion": null,
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G012",
+   "title": "Dark Horse",
+   "bpm": 132.0,
+   "bpm_alt": "tunebat 429 on 3 attempts; songbpm: \"can also be used half-time at 66 BPM or double-time at 264 BPM\"; songbpm duration 3:36; getsongbpm time signature 4/4; NOTE songbpm F♯/G♭ major vs Wikipedia B♭ minor (relative keys)",
+   "key": "Bb",
+   "mode": "minor",
+   "song_duration_sec": 215,
+   "energy": 59.0,
+   "groove": "danceability 65",
+   "emotion": null,
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G013",
+   "title": "Perfect",
+   "bpm": 190.0,
+   "bpm_alt": "songbpm: \"can also be used double-time at 194 BPM\"; CAUTION songbpm entry shows duration 3:45 and key G major, which does not match the 4:23 album track (possibly a different version/entry); tunebat 95 BPM is half of Wikipedia's 190 BPM (12/8)",
+   "key": "Ab",
+   "mode": "major",
+   "song_duration_sec": 263,
+   "energy": 45.0,
+   "groove": "danceability 60",
+   "emotion": "valence/happiness 17",
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G014",
+   "title": "Sorry",
+   "bpm": 100.0,
+   "bpm_alt": "tunebat 429 on 2 attempts; songbpm: \"can also be used double-time at 200 BPM\"; songbpm duration 3:18; getsongbpm time signature 4/4; NOTE songbpm C minor vs Wikipedia E♭ major (relative keys)",
+   "key": "Eb",
+   "mode": "major",
+   "song_duration_sec": 200,
+   "energy": 77.0,
+   "groove": "danceability 61",
+   "emotion": null,
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G015",
+   "title": "Let Her Go",
+   "bpm": 75.0,
+   "bpm_alt": "songbpm: \"can also be used double-time at 150 BPM\"; getsongbpm (https://getsongbpm.com/song/let-her-go/YvMVv9) lists 152 BPM (double-time), energy 55, danceability 48, acousticness 37, 4/4, 2012, album All the Little Lights",
+   "key": "G",
+   "mode": "major",
+   "song_duration_sec": 252,
+   "energy": 54.0,
+   "groove": "danceability 51",
+   "emotion": "valence/happiness 24",
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "low-medium (single secondary site)"
+  },
+  {
+   "id": "G016",
+   "title": "Girls Like You",
+   "bpm": 125.0,
+   "bpm_alt": "songbpm: \"can also be used half-time at 63 BPM or double-time at 250 BPM\" (Cardi B Version on both sites)",
+   "key": "C",
+   "mode": "major",
+   "song_duration_sec": 236,
+   "energy": 54.0,
+   "groove": "danceability 78",
+   "emotion": "valence/happiness 45",
+   "meter": null,
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "low-medium (single secondary site)"
+  },
+  {
+   "id": "G017",
+   "title": "Thinking Out Loud",
+   "bpm": 79.0,
+   "bpm_alt": "songbpm: \"can also be used double-time at 158 BPM\"",
+   "key": "D",
+   "mode": "major",
+   "song_duration_sec": 281,
+   "energy": 45.0,
+   "groove": "danceability 78",
+   "emotion": "valence/happiness 59",
+   "meter": null,
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G018",
+   "title": "Faded",
+   "bpm": 90.0,
+   "bpm_alt": "no songbpm/getsongbpm page surfaced in search; NOTE tunebat F♯ major vs Wikipedia E♭ minor",
+   "key": "Eb",
+   "mode": "minor",
+   "song_duration_sec": 212,
+   "energy": 65.0,
+   "groove": "danceability 59",
+   "emotion": "valence/happiness 17",
+   "meter": null,
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G019",
+   "title": "Lean On",
+   "bpm": 98.0,
+   "bpm_alt": "getsongbpm lists 49 BPM (= half-time of 98); getsongbpm energy 81, danceability 73, acousticness 1, 4/4, 2015, album Peace is the Mission; other tunebat URL (2YWjW3wwQIBLNhxWKBQd16) returned 429",
+   "key": "G",
+   "mode": "minor",
+   "song_duration_sec": 177,
+   "energy": 81.0,
+   "groove": "danceability 72",
+   "emotion": "valence/happiness 27",
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "low-medium (single secondary site)"
+  },
+  {
+   "id": "G020",
+   "title": "Bailando",
+   "bpm": 91.0,
+   "bpm_alt": "tunebat entry is \"Bailando - Spanish Version\"; getsongbpm energy 78, danceability 73, acousticness 5, 4/4, 2014, album Sex and Love",
+   "key": "D",
+   "mode": "major",
+   "song_duration_sec": 243,
+   "energy": 78.0,
+   "groove": "danceability 70",
+   "emotion": "valence/happiness 96",
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "low-medium (single secondary site)"
+  },
+  {
+   "id": "G021",
+   "title": "Blank Space",
+   "bpm": 96.0,
+   "bpm_alt": "tunebat 403; songbpm: \"can also be used double-time at 192 BPM\"; getsongbpm energy 68, danceability 76, acousticness 9, duration 3:51, 4/4, 2014, album 1989",
+   "key": "F",
+   "mode": "major",
+   "song_duration_sec": 232,
+   "energy": null,
+   "groove": null,
+   "emotion": null,
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G022",
+   "title": "Baby",
+   "bpm": 130.0,
+   "bpm_alt": "tunebat 429 on 2 attempts; songbpm lists 65 BPM: \"can also be used double-time at 130 BPM\" (getsongbpm 130 = double of songbpm 65); getsongbpm time signature 4/4; NOTE songbpm F minor vs Wikipedia E♭ major",
+   "key": "Eb",
+   "mode": "major",
+   "song_duration_sec": 214,
+   "energy": 85.0,
+   "groove": "danceability 66",
+   "emotion": null,
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G023",
+   "title": "Let It Go",
+   "bpm": 137.0,
+   "bpm_alt": "tunebat entry is 'Let It Go - From \"Frozen\"/Soundtrack Version'; songbpm: \"can also be used half-time at 69 BPM or double-time at 274 BPM\"; songbpm duration 3:42",
+   "key": "Ab",
+   "mode": "major",
+   "song_duration_sec": 224,
+   "energy": 49.0,
+   "groove": "danceability 54",
+   "emotion": "valence/happiness 37",
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G024",
+   "title": "Shake It Off",
+   "bpm": 160.0,
+   "bpm_alt": "tunebat 429 on 2 attempts; songbpm: \"can also be used half-time at 80 BPM\" (songbpm 160 vs getsongbpm 162); getsongbpm time signature 4/4",
+   "key": "G",
+   "mode": "mixolydian",
+   "song_duration_sec": 219,
+   "energy": 79.0,
+   "groove": "danceability 65",
+   "emotion": null,
+   "meter": "4/4",
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  },
+  {
+   "id": "G025",
+   "title": "Mi Gente",
+   "bpm": 105.0,
+   "bpm_alt": "songbpm: \"can also be used half-time at 53 BPM or double-time at 210 BPM\"",
+   "key": "B",
+   "mode": "minor",
+   "song_duration_sec": 189,
+   "energy": 70.0,
+   "groove": "danceability 55",
+   "emotion": "valence/happiness 29",
+   "meter": null,
+   "feature_method": "Collector batch G00 (2026-09-22): Spotify-derived features via Tunebat/SongBPM/GetSongBPM + Wikipedia Composition quotes (sheet-music citations). Site keys frequently disagree with sheet music by relative major/minor; sheet-music value preferred when present.",
+   "feature_confidence": "medium"
+  }
+ ]
+}

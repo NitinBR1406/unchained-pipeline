@@ -1,0 +1,200 @@
+[
+  {
+    "source_id": "S01",
+    "title": "IFPI 2024 global singles",
+    "url": "https://www.ifpi.org/benson-boones-beautiful-things-confirmed-by-ifpi-as-biggest-selling-global-single-of-the-year/",
+    "type": "primary_chart",
+    "published_date": "2025-02-20",
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S02",
+    "title": "IFPI 2025 global singles",
+    "url": "https://www.ifpi.org/our-industry/global-charts/",
+    "type": "primary_chart",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S03",
+    "title": "India Spotify Wrapped 2023 reporting",
+    "url": "https://indianexpress.com/article/entertainment/bollywood/spotify-wrapped-2023-arijit-singh-becomes-most-streamed-artist-9047077/",
+    "type": "secondary_chart",
+    "published_date": "2023-11-29",
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S04",
+    "title": "Spotify India 2024 winner",
+    "url": "https://newsroom.spotify.com/2024-12-06/go-inside-the-global-celebrations-for-spotifys-biggest-wrapped-yet/",
+    "type": "primary_platform",
+    "published_date": "2024-12-06",
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S05",
+    "title": "Spotify Indian export songs 2024",
+    "url": "https://newsroom.spotify.com/2025-04-15/indian-artists-are-reaching-more-global-fans-than-ever-before-and-the-data-proves-it/",
+    "type": "primary_platform",
+    "published_date": "2025-04-15",
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S06",
+    "title": "Spotify diaspora songs 2023",
+    "url": "https://newsroom.spotify.com/2023-08-07/broadcasting-desi-music-to-new-homes-around-the-world/",
+    "type": "primary_platform",
+    "published_date": "2023-08-07",
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S07",
+    "title": "HSD US number-one report 2025",
+    "url": "https://www.hitsongsdeconstructed.com/wp-content/uploads/2026/02/Hit-Songs-Deconstructed-2025-1-Hit-Report.pdf",
+    "type": "primary_analyst_report",
+    "published_date": "2026-02",
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S08",
+    "title": "Maan Meri Jaan metrics",
+    "url": "https://songbpm.com/@king/maan-meri-jaan-x4YXpdKL2V",
+    "type": "secondary_estimate",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "low_to_medium",
+    "dependency": "SongBPM identifies Spotify upstream; Tunebat agreement not assumed independent"
+  },
+  {
+    "source_id": "S09",
+    "title": "Kesariya metrics",
+    "url": "https://songbpm.com/@pritam/kesariya-from-brahmastra-auHbcTRXSi",
+    "type": "secondary_estimate",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "low_to_medium",
+    "dependency": "SongBPM identifies Spotify upstream; Tunebat agreement not assumed independent"
+  },
+  {
+    "source_id": "S10",
+    "title": "Sajni metrics",
+    "url": "https://songbpm.com/@ram-sampath/sajni-from-laapataa-ladies-lomdOgZ_wi",
+    "type": "secondary_estimate",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "low_to_medium",
+    "dependency": "SongBPM identifies Spotify upstream; Tunebat agreement not assumed independent"
+  },
+  {
+    "source_id": "S11",
+    "title": "Pehle Bhi Main metrics",
+    "url": "https://tunebat.com/Info/Pehle-Bhi-Main-Vishal-Mishra-Raj-Shekhar/7yDHHVKLbvDmVw1XXhDDIO",
+    "type": "secondary_estimate",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "low_to_medium",
+    "dependency": "SongBPM identifies Spotify upstream; Tunebat agreement not assumed independent"
+  },
+  {
+    "source_id": "S12",
+    "title": "Espresso metrics",
+    "url": "https://tunebat.com/Info/Espresso-Sabrina-Carpenter/2qSkIjg1o9h3YT9RAgYN75",
+    "type": "secondary_estimate",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "low_to_medium",
+    "dependency": "SongBPM identifies Spotify upstream; Tunebat agreement not assumed independent"
+  },
+  {
+    "source_id": "S13",
+    "title": "Beautiful Things metrics",
+    "url": "https://songbpm.com/%40benson-boone/beautiful-things-geazf",
+    "type": "secondary_estimate",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "low_to_medium",
+    "dependency": "SongBPM identifies Spotify upstream; Tunebat agreement not assumed independent"
+  },
+  {
+    "source_id": "S14",
+    "title": "Beautiful Things audition arrangement",
+    "url": "https://www.musicnotes.com/sheetmusic/benson-boone/beautiful-things/MN0307720_D1",
+    "type": "arrangement_metadata",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S15",
+    "title": "Pehle Bhi Main drum arrangement",
+    "url": "https://www.playdrumsonline.com/songs/vishal-mishra/pehle-bhi-main",
+    "type": "arrangement_metadata",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S16",
+    "title": "Pehle Bhi Main piano arrangement",
+    "url": "https://philicpiano.com/product/pehle-bhi-main-piano-notes-sheets-midi/",
+    "type": "arrangement_metadata",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S17",
+    "title": "Historical HSD structural trends",
+    "url": "https://editorial.hitsongsdeconstructed.com/articles/the-hit-songs-deconstructed-trend-report/",
+    "type": "primary_analyst_report",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  },
+  {
+    "source_id": "S18",
+    "title": "Wrecking Ball analysis (fetch failed)",
+    "url": "https://editorial.hitsongsdeconstructed.com/song_report/miley-cyruswrecking-ball-deconstructed/",
+    "type": "not_used_timeout",
+    "published_date": null,
+    "accessed_date": "2026-09-22",
+    "access_method": "web search/open",
+    "confidence": "source_claim_only",
+    "dependency": null
+  }
+]

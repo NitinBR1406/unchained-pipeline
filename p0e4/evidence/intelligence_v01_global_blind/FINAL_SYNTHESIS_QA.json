@@ -1,0 +1,158 @@
+{
+  "status": "CORRECTIONS_REQUIRED_BEFORE_FINAL_PACKAGE",
+  "scope": "Bounded final consistency QA; no edits to provider raw or synthesis. No new independent study.",
+  "reviewed_file_sha256": {
+    "SONG_SUCCESS_INTELLIGENCE_V01.md": "0fb2d0557fceb494db20e0965481dced8df2b35b1f610db258a6bb2cf785ef95",
+    "VATSAL_ORIGINAL_PRODUCTION_REFERENCE_BRIEF_V01.md": "5e07cab04777db1c720f7c1c0c1908e5e2e26458e8434c5e23bffe1718169303",
+    "TOP_REFERENCE_ZONES_V01.json": "f99313c5bcb44792a74a7b14d421eba9da79cc3aab0edf1c1f9c7586ac1595fe",
+    "SONG_SUCCESS_INTELLIGENCE_ENGINE_V01.json": "659f679baff2eb995f1f31abc79e5d02fc8d527ce0b4e0af7884478be52b29f8",
+    "REFERENCE_REGISTRY_V01.json": "26682261b9996b1799af27988fab8ab62480188951a2a964b15c125b7952b351"
+  },
+  "required_corrections": [
+    {
+      "id": "QA01",
+      "severity": "HIGH",
+      "files": [
+        "REFERENCE_REGISTRY_V01.json",
+        "TOP_REFERENCE_ZONES_V01.json",
+        "VATSAL_ORIGINAL_PRODUCTION_REFERENCE_BRIEF_V01.md"
+      ],
+      "finding": "Binary-only source conflict flag incorrectly reused as complete key/mode disagreement flag.",
+      "evidence": "B_G006 has reported D Dorian and source-site C major; B_G024 has reported G Mixolydian and source-site G major. Registry says false and sets both alternative fields null for each. Raw B preserves these labels. Z07 says zero key conflicts and brief has no disagreement marker.",
+      "required_action": "Preserve tonic/mode alternatives from raw even when modal; set a broadly named disagreement flag appropriately or explicitly expose the narrower binary-mode flag. Update Z07 count/caveat and brief marker. No canonical value should be selected."
+    },
+    {
+      "id": "QA02",
+      "severity": "MEDIUM",
+      "files": [
+        "REFERENCE_REGISTRY_V01.json"
+      ],
+      "finding": "Known scoped tempo conflicts are dropped from curated C references.",
+      "evidence": "CHATGPT_C/RAW_DATASET.json conflicts has Beautiful Things 105 BPM/3 beats vs a transposed audition arrangement at 72; Pehle Bhi Main 77 from chosen track metadata vs tutorial/arrangement reports 139 and 60. Registry has generic verification caveats only, despite source report and zone caveats acknowledging conflicts.",
+      "required_action": "Attach raw conflict records or explicit source-linked reported alternatives with version/arrangement scope. Keep Beautiful Things reported BPM null and all canonical BPM fields null; do not average values or call different arrangements contradictory measurements of one master."
+    },
+    {
+      "id": "QA03",
+      "severity": "LOW",
+      "files": [
+        "TOP_REFERENCE_ZONES_V01.json",
+        "VATSAL_ORIGINAL_PRODUCTION_REFERENCE_BRIEF_V01.md"
+      ],
+      "finding": "Track identifier C can be misread as musical key C.",
+      "evidence": "Z06 caveat: Maan Meri Jaan is 96 in C and is outside this zone. The same materials correctly report F-sharp/G-flat minor.",
+      "required_action": "Replace with: Maan Meri Jaan is reported at 96 BPM in Track C, below this zone tempo range."
+    }
+  ],
+  "optional_improvements": [
+    {
+      "id": "QA04",
+      "finding": "C_beautiful-things field provenance confidence is low, while generic registry confidence says low_to_medium_metadata.",
+      "suggestion": "Preserve row-specific confidence or mark the summary as a generic source-type label; field confidence remains authoritative."
+    }
+  ],
+  "verified_consistency": {
+    "B_rows": 168,
+    "B_global": 85,
+    "B_hindi_indian": 83,
+    "B_exact_hindi_film": {
+      "film": 19,
+      "denominator": 24
+    },
+    "B_bpm": 25,
+    "B_key_mode": 24,
+    "C_entities": 42,
+    "C_observations": 49,
+    "C_unique_global": 24,
+    "C_global_observations": 30,
+    "C_unique_india": 11,
+    "C_unique_export": 8,
+    "C_india_export_overlap": [
+      "C_kesariya"
+    ],
+    "C_annotated_entities": 7,
+    "C_bpm": 6,
+    "registry_rows": 32,
+    "zones": [
+      {
+        "zone": "Z01",
+        "reference_n_matches": true,
+        "bpm_membership_within_proposed_range": true,
+        "views_per_day_n_matches": true,
+        "views_per_day_median_matches": true
+      },
+      {
+        "zone": "Z02",
+        "reference_n_matches": true,
+        "bpm_membership_within_proposed_range": true,
+        "views_per_day_n_matches": true,
+        "views_per_day_median_matches": true
+      },
+      {
+        "zone": "Z03",
+        "reference_n_matches": true,
+        "bpm_membership_within_proposed_range": true,
+        "views_per_day_n_matches": true,
+        "views_per_day_median_matches": true
+      },
+      {
+        "zone": "Z04",
+        "reference_n_matches": true,
+        "bpm_membership_within_proposed_range": true,
+        "views_per_day_n_matches": true,
+        "views_per_day_median_matches": true
+      },
+      {
+        "zone": "Z05",
+        "reference_n_matches": true,
+        "bpm_membership_within_proposed_range": true,
+        "views_per_day_n_matches": true,
+        "views_per_day_median_matches": true
+      },
+      {
+        "zone": "Z06",
+        "reference_n_matches": true,
+        "bpm_membership_within_proposed_range": true,
+        "views_per_day_n_matches": true,
+        "views_per_day_median_matches": true
+      },
+      {
+        "zone": "Z07",
+        "reference_n_matches": true,
+        "bpm_membership_within_proposed_range": true,
+        "views_per_day_n_matches": true,
+        "views_per_day_median_matches": true
+      },
+      {
+        "zone": "Z08",
+        "reference_n_matches": true,
+        "bpm_membership_within_proposed_range": true,
+        "views_per_day_n_matches": true,
+        "views_per_day_median_matches": true
+      },
+      {
+        "zone": "Z09",
+        "reference_n_matches": true,
+        "bpm_membership_within_proposed_range": true,
+        "views_per_day_n_matches": true,
+        "views_per_day_median_matches": true
+      },
+      {
+        "zone": "Z10",
+        "reference_n_matches": true,
+        "bpm_membership_within_proposed_range": "not_applicable_compound_meter_zone",
+        "views_per_day_n_matches": true,
+        "views_per_day_median_matches": true
+      }
+    ],
+    "canonical_keys_and_bpm_all_null": true,
+    "governance": "No production/publication authorization claimed; engine design-only, operational writes false; First Real Poster paused; causal and retention boundaries explicit."
+  },
+  "limitations": [
+    "This is a consistency audit of bounded deliverables and frozen evidence, not exhaustive revalidation of every external source.",
+    "Architecture linkage compared with ARCHITECTURE_BINDING_REVIEW.json; repository contract itself not independently reread in this QA.",
+    "Provider identity/receipt assertions were not independently re-audited; parent verifies freeze and package."
+  ],
+  "writes": [
+    "FINAL_SYNTHESIS_QA.json"
+  ]
+}

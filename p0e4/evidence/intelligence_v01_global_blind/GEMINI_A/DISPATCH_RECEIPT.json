@@ -1,0 +1,31 @@
+{
+  "track": "GEMINI_A",
+  "url": "https://gemini.google.com/app/204d886c9b34a593",
+  "surface": "Authenticated Gemini, nitinramdaras23@gmail.com, 3.6 Flash",
+  "observed_at": "2026-09-21T22:56:15.950263+00:00",
+  "prompt_sha256": "299f61c6e9dcdd8097f30233f6a1fab20fe8551111d1357d357f476db93e94a0",
+  "new_conversation": true,
+  "other_track_findings_supplied": false,
+  "status": "RUNNING",
+  "attempts": 3,
+  "initial_error": "I seem to be encountering an error. Can I try something else for you?",
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "mode": "3.6 Flash",
+      "result": "provider_error"
+    },
+    {
+      "attempt": 2,
+      "mode": "3.6 Flash",
+      "result": "same_provider_error"
+    },
+    {
+      "attempt": 3,
+      "mode": "3.1 Pro",
+      "result": "RUNNING",
+      "same_frozen_prompt": true
+    }
+  ],
+  "updated_at": "2026-09-21T22:57:31.960515+00:00"
+}

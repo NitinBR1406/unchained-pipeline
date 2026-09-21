@@ -1,0 +1,11 @@
+{
+  "track": "GEMINI_A",
+  "status": "FROZEN_V01",
+  "observed_at": "2026-09-21T23:01:07.249639+00:00",
+  "surface": "Gemini 3.1 Pro authenticated UI",
+  "other_track_results_supplied": false,
+  "raw_capture": "Rendered DOM text transcribed; whitespace normalized and JSON compacted. Not a native byte-identical provider export.",
+  "dataset_rows": 4,
+  "claims_verified": false,
+  "provenance_addendum_requested": true
+}

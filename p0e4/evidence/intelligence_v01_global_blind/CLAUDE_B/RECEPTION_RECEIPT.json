@@ -1,0 +1,12 @@
+{
+  "track": "CLAUDE_B",
+  "status": "FROZEN_V01",
+  "received_at": "2026-09-21T23:39:49.165085+00:00",
+  "provider_surface": "Authenticated Claude Cowork desktop",
+  "session_url": "https://claude.ai/cowork/cse_01MAdE6jkoR5Vg1pJWZRT2Fu",
+  "raw_prompt_sha256": "299f61c6e9dcdd8097f30233f6a1fab20fe8551111d1357d357f476db93e94a0",
+  "zip_sha256": "ddc0666d8eec8809d0aeb5b7be6746451c8fd06c0cdd6bb78ca42e9cc4fe7507",
+  "provider_hashes_verified_n": 14,
+  "other_track_findings_supplied": false,
+  "scope_limit": "Collection boundary stopped endpoint loops and requested completion of attainable work; provider disclosed partial feature batch and memory snapshot exposure. No outcome was supplied."
+}

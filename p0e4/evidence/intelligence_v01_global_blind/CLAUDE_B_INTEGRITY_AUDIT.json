@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-09-21T23:39:49.165085+00:00",
+  "provider_hashes_verified_n": 14,
+  "zip_sha256": "ddc0666d8eec8809d0aeb5b7be6746451c8fd06c0cdd6bb78ca42e9cc4fe7507",
+  "replay_outputs_byte_equal": {
+    "SOURCES_PROVENANCE.csv": true,
+    "RAW_DATASET.json": true,
+    "LITERATURE_EVIDENCE.csv": true,
+    "COLLECTOR_BATCH_G00_RAW.txt": true,
+    "ANALYSIS_RESULTS.json": true,
+    "MACHINE_READABLE_RESULT.json": true,
+    "RAW_DATASET.csv": true
+  },
+  "temporary_replay_path": "/var/folders/tz/gk0spkg11t56hvttd34wd_cc0000gn/T/intelligence_b_replay_c0g3xa8a",
+  "caveat": "Reproducibility of received claims, not factual validation"
+}

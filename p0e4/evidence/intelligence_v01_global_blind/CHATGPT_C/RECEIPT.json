@@ -1,0 +1,59 @@
+{
+  "track": "CHATGPT_C",
+  "actual_provider_family": "OpenAI GPT",
+  "execution_surface": "GPT-based Codex delegated agent; not consumer ChatGPT web UI",
+  "status": "FROZEN_V01",
+  "observed_date": "2026-09-22",
+  "actual_tools": [
+    "functions.exec orchestration",
+    "web.run public search/open/find/screenshot requests",
+    "exec_command cat/cp/python3",
+    "apply_patch artifact creation"
+  ],
+  "independence": {
+    "project_files_read": [
+      "../FROZEN_PROMPT.txt"
+    ],
+    "sibling_tracks_read": [],
+    "memory_files_read": [],
+    "unavoidable_exposure": "Parent task context includes project instructions and injected memory summary; no prior results used as research evidence.",
+    "comparison_performed": false
+  },
+  "selection_counts": {
+    "song_entities": 42,
+    "success_observations": 49,
+    "global_observations": 30,
+    "india_observations": 11,
+    "export_observations": 8,
+    "unique_global": 24,
+    "unique_india": 11,
+    "unique_export": 8,
+    "partially_musically_annotated_entities": 7,
+    "measured_audio_entities": 0,
+    "private_metric_records": 0,
+    "own_data_rows": 0
+  },
+  "missingness": {
+    "bpm_null": 36,
+    "key_null": 35,
+    "mode_null": 35,
+    "duration_null": 35,
+    "first_chorus_null": 41,
+    "vocal_range_null": 42,
+    "tessitura_null": 42,
+    "retention_null": 42,
+    "official_youtube_views_null": 42
+  },
+  "limitations": [
+    "Purposive hit-only recent sample, not causal or predictive.",
+    "No verified original audio measurements.",
+    "Export cohort is broader than Hindi and may be diaspora-driven.",
+    "HSD structural aggregates concern US charts only.",
+    "Source metadata and arrangements disagree.",
+    "No claimed exhaustive 10–15-year coverage."
+  ],
+  "freeze": "Manifest hashes actual delivered payload bytes; manifest excludes itself. Coordinator must independently recompute hashes. Freeze is not claim certification.",
+  "production_mutations": false,
+  "purchases": false,
+  "published": false
+}

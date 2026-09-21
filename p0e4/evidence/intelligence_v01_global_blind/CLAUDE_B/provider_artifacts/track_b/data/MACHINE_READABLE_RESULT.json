@@ -1,0 +1,741 @@
+{
+ "track": "CLAUDE_B",
+ "version": "FROZEN_V01",
+ "observed": "2026-09-22",
+ "cohorts": {
+  "GLOBAL_SUCCESS": 85,
+  "HINDI_INDIAN_SUCCESS": 83,
+  "GLOBAL_HINDI_CROSSOVER": 0,
+  "UNCHAINED_NITIN_OWN_DATA": 0
+ },
+ "GLOBAL_FINDINGS": [
+  {
+   "finding": "Per-song feature cell (25 YouTube mega-hits, G001-G025, uploads 2009-2018; secondary estimates): BPM as recorded median 110 (p25 91, p75 130; range 75-190 where 190 is a 12/8 count for 'Perfect'); 23/25 feature pages state a half- or double-time alternative, so perceived pulse is ambiguous for almost every hit; bands: <90 20%, 90-109 28%, 110-129 24%, 130-149 20%, >=150 8%.",
+   "evidence_kind": "frequency (hit-only cell)",
+   "evidence_ids": [
+    "COLLECTOR_BATCH_G00"
+   ],
+   "supporting_n": 25,
+   "confidence": "medium (secondary; sheet-music tempo for 17/25)"
+  },
+  {
+   "finding": "Mode in the same cell: major 56% (14), minor 32% (8), modal 8% (D Dorian 'Uptown Funk', G Mixolydian 'Shake It Off'), null 1. Where both a Spotify-derived site key and a published sheet-music key were available (n=14), they disagreed in 7 cases, almost always by relative major/minor — site-only mode values are unreliable.",
+   "evidence_kind": "frequency + data-quality finding",
+   "evidence_ids": [
+    "COLLECTOR_BATCH_G00"
+   ],
+   "supporting_n": 25,
+   "confidence": "medium"
+  },
+  {
+   "finding": "Duration in the cell (Wikipedia infobox, n=25): median 3:44 (224 s), p25 3:32, p75 3:56, min 2:25 ('Dame Tu Cosita'), max 4:41 ('Thinking Out Loud'). These 2009-2018 video mega-hits are longer than the 2024 Spotify charting average (~3:00, L07).",
+   "evidence_kind": "frequency",
+   "evidence_ids": [
+    "COLLECTOR_BATCH_G00",
+    "L07"
+   ],
+   "supporting_n": 25,
+   "confidence": "high for the cell"
+  },
+  {
+   "finding": "Published sheet-music vocal ranges (n=10, quoted on Wikipedia; not measured from recordings): span median 22 semitones (p25 17.5, p75 25.5; min 15 'Dark Horse', max 39 'Uptown Funk' incl. falsetto/ad-libs); lowest notes B2-B♭3 (median MIDI 52 ≈ E3), highest notes A4-D6 (median MIDI 73 ≈ C#5). Typical male-lead hits sit roughly E3-C#5 on paper.",
+   "evidence_kind": "frequency (secondary, arrangement-level)",
+   "evidence_ids": [
+    "COLLECTOR_BATCH_G00"
+   ],
+   "supporting_n": 10,
+   "confidence": "low-medium (sheet-music, small n)"
+  },
+  {
+   "finding": "Spotify-derived energy median 74 (n=24), danceability median 68 (n=24), valence median 45 (n=15, bimodal: 17-29 vs 69-96), loudness median -6 dB (n=15). Structural timing was stated on a page for only 2/25 songs (Blank Space: two-bar drum intro; Shake It Off: bridge 2:18-2:42); chorus arrival remains null for all rows.",
+   "evidence_kind": "frequency / missingness",
+   "evidence_ids": [
+    "COLLECTOR_BATCH_G00"
+   ],
+   "supporting_n": 24,
+   "confidence": "medium"
+  },
+  {
+   "finding": "Among the 40 most-streamed Spotify songs (as of 2026-09-13), 82.5% were released in 2012 or later; median release year 2016; a catalog tail (1983-2008) of 5 songs exists.",
+   "evidence_kind": "frequency (hit-only sample)",
+   "evidence_ids": [
+    "S2"
+   ],
+   "supporting_n": 40,
+   "confidence": "high (directly observed)"
+  },
+  {
+   "finding": "The 38 most-viewed music videos on YouTube (kworb) all exceed 3.1 bn views; median upload age of the 17 dated ones is ~4,325 days (~11.8 yr); descriptive views/day since upload median ~1.04 M. Longevity, not launch spikes, dominates all-time totals.",
+   "evidence_kind": "frequency / descriptive",
+   "evidence_ids": [
+    "W1",
+    "K4"
+   ],
+   "supporting_n": 38,
+   "confidence": "high for counts; medium for views/day (K4 undated)"
+  },
+  {
+   "finding": "Cross-source overlap is thin: only 5 songs are in both the YouTube top-38 and Spotify top-40; only 1 (As It Was) is in both Spotify top-40 and the Hot 100 longest-#1 list. 'Exceptional performance' is platform-specific.",
+   "evidence_kind": "frequency",
+   "evidence_ids": [
+    "W1",
+    "K4",
+    "S2",
+    "B3"
+   ],
+   "supporting_n": 85,
+   "confidence": "high"
+  },
+  {
+   "finding": "Hits shortened: Hot 100 avg ~3:30 by 2018 (-20 s in 5 yr); Spotify charting avg ~3:00 in 2024 (-30 s vs 2019); UK #1s back near 3:00 by 2022.",
+   "evidence_kind": "secondary aggregate (journalism/industry)",
+   "evidence_ids": [
+    "L06",
+    "L07",
+    "L10"
+   ],
+   "supporting_n": null,
+   "confidence": "medium (consistent across 3 independent analyses; none peer-reviewed)"
+  },
+  {
+   "finding": "Instrumental intros shrank from >20 s (mid-1980s) to ~5 s (2015) in US top-10 singles (n=303); tempo rose ~8% over the same period; but within-artist popular-vs-less-popular comparison showed no such pattern.",
+   "evidence_kind": "peer-reviewed trend; null within-artist result",
+   "evidence_ids": [
+    "L01",
+    "L02",
+    "L03"
+   ],
+   "supporting_n": 303,
+   "confidence": "high for trend; trend is an era effect, not a success effect"
+  },
+  {
+   "finding": "Late-2010s US top-5 hits averaged ~93 BPM (2017: 93.2; 2018: 92.6; modal 78-80 BPM); 43% of 2010s #1s were below 100 BPM vs 25% in 1960-1989. Half/double-time ambiguity is unresolved in these sources.",
+   "evidence_kind": "secondary aggregate",
+   "evidence_ids": [
+    "L15",
+    "L11"
+   ],
+   "supporting_n": null,
+   "confidence": "medium"
+  },
+  {
+   "finding": "Minor-key share among US #1s rose from ~25% (pre-2000) to ~55% (post-2000); UK #1s 55-58% minor in 2019-2022. But #1s vs other charting songs differ little in mode (65/35 vs 63/37 major/minor) and tempo (117 vs 120 BPM).",
+   "evidence_kind": "secondary aggregate; blog datasets",
+   "evidence_ids": [
+    "L11",
+    "L10",
+    "L14"
+   ],
+   "supporting_n": null,
+   "confidence": "medium for era shift; low for any success association"
+  },
+  {
+   "finding": "Key changes nearly vanished (~25% of #1s in 1960s-90s; one in 2010-2020); fade-outs vanished after 2011 in UK #1s.",
+   "evidence_kind": "secondary aggregate",
+   "evidence_ids": [
+    "L12",
+    "L10"
+   ],
+   "supporting_n": null,
+   "confidence": "medium"
+  },
+  {
+   "finding": "Lyrical repetition rose 1958-2017 and top-10 songs were more repetitive than the rest in every year; chorus repetition associated with higher probability of #1 and faster climb, with diminishing returns for excessive word repetition.",
+   "evidence_kind": "peer-reviewed association + blog dataset",
+   "evidence_ids": [
+    "L23",
+    "L24"
+   ],
+   "supporting_n": 15000,
+   "confidence": "medium-high (association, not causation)"
+  },
+  {
+   "finding": "Hits are 'optimally differentiated': moderately atypical relative to the preceding 52 weeks' charting songs outperform highly typical ones (inverted-U).",
+   "evidence_kind": "peer-reviewed association",
+   "evidence_ids": [
+    "L05"
+   ],
+   "supporting_n": 27000,
+   "confidence": "medium-high"
+  },
+  {
+   "finding": "Successful UK songs 1985-2015 were happier, more danceable/party-like, less relaxed and more 'female' than the average release, while the market as a whole trended sadder and less bright.",
+   "evidence_kind": "peer-reviewed association",
+   "evidence_ids": [
+    "L04"
+   ],
+   "supporting_n": 14536,
+   "confidence": "medium-high"
+  },
+  {
+   "finding": "Melodies of US top-5 hits since 2000: ~2.8 notes/s, mean interval ~2 semitones, two-thirds of pitches within ~5.5 semitones (narrow tessitura); choruses use fewer notes and larger intervals than verses.",
+   "evidence_kind": "peer-reviewed frequency",
+   "evidence_ids": [
+    "L21",
+    "L22"
+   ],
+   "supporting_n": 366,
+   "confidence": "high (descriptive of hits only)"
+  },
+  {
+   "finding": "Tempo variability in hits collapsed after 1979 (median yearly CV 1.51 in 1972 to 0.03 in 1994): modern hits are grid-tight.",
+   "evidence_kind": "peer-reviewed",
+   "evidence_ids": [
+    "L16"
+   ],
+   "supporting_n": 255,
+   "confidence": "high"
+  }
+ ],
+ "HINDI_FINDINGS": [
+  {
+   "finding": "India's most-viewed music videos (Wikipedia, as of 2026-02-18; n=40 song rows) are multilingual: Hindi 60%, Punjabi 17.5%, Haryanvi 5%, plus Tamil/Bhojpuri/Bengali mixes. Among Hindi-language rows, 74% are film songs; overall 60% film / 40% non-film.",
+   "evidence_kind": "frequency",
+   "evidence_ids": [
+    "WI",
+    "KI"
+   ],
+   "supporting_n": 40,
+   "confidence": "high"
+  },
+  {
+   "finding": "Label concentration: T-Series uploaded 45% of the top-40 Indian music videos (18/40); Zee Music 10%; YRF 5%.",
+   "evidence_kind": "frequency",
+   "evidence_ids": [
+    "WI"
+   ],
+   "supporting_n": 40,
+   "confidence": "high"
+  },
+  {
+   "finding": "Upload years cluster 2016-2020 (2019 alone 24%); median upload age ~2,928 days (~8 yr); descriptive views/day median ~436 k — roughly 40% of the global top-video median.",
+   "evidence_kind": "frequency / descriptive",
+   "evidence_ids": [
+    "WI",
+    "KI"
+   ],
+   "supporting_n": 38,
+   "confidence": "medium (KI undated)"
+  },
+  {
+   "finding": "Non-film videos show a slightly higher median views/day (466 k, n=14) than film videos (379 k, n=22) in this hit-only list; the cells are small and confounded by era and star presence — reported as frequency, not association.",
+   "evidence_kind": "descriptive, stratified by film status",
+   "evidence_ids": [
+    "WI",
+    "KI"
+   ],
+   "supporting_n": 36,
+   "confidence": "low"
+  },
+  {
+   "finding": "Spotify India all-time chart totals (2019-02-27 to 2026-08-26, n=37 Indian songs in top-40) show two longevity archetypes: 17 peak-#1 songs (median chart days ~863) versus never-top-3 songs that stayed on the top-200 for 1,900-2,600 days (catalog ballads such as Tum Se Hi, Kabira, Tera Hone Laga Hoon, Dil Diyan Gallan).",
+   "evidence_kind": "frequency / descriptive",
+   "evidence_ids": [
+    "SI"
+   ],
+   "supporting_n": 37,
+   "confidence": "high for observed counts"
+  },
+  {
+   "finding": "73% of Spotify India top-40 titles carry no '(From \"Film\")' tag; the tag is unreliable as a film indicator (several untagged titles are film songs), so film-share on Spotify is unidentifiable from this source.",
+   "evidence_kind": "missingness note",
+   "evidence_ids": [
+    "SI"
+   ],
+   "supporting_n": 37,
+   "confidence": "n/a"
+  },
+  {
+   "finding": "YouTube-view leaders and Spotify-India-stream leaders do not overlap (0 shared songs): Indian YouTube rewards dance/party and Punjabi/Haryanvi video hits; Spotify India totals are dominated by romantic ballads and independent singer-songwriters (Anuv Jain x3, King x2, Shubh x2).",
+   "evidence_kind": "frequency",
+   "evidence_ids": [
+    "WI",
+    "SI"
+   ],
+   "supporting_n": 77,
+   "confidence": "high"
+  },
+  {
+   "finding": "Bollywood hits 1953-2013 (n=310): ~25% Asavari (natural-minor type), ~25% Bilawal (major), ~25% Bhairavi/Kafi/Khamaj (Phrygian/Dorian/Mixolydian-type), 8% pentatonic, 4% Kalyan; Kalyan declined since the 1960s, Bhairavi rose.",
+   "evidence_kind": "peer-reviewed frequency",
+   "evidence_ids": [
+    "L18"
+   ],
+   "supporting_n": 310,
+   "confidence": "high"
+  },
+  {
+   "finding": "Hindi film songs shortened from 8+ min examples (1970s-80s) to 'often fade out after the four-minute mark'; no quantified India-specific duration dataset was found.",
+   "evidence_kind": "journalism, anecdotal",
+   "evidence_ids": [
+    "L20"
+   ],
+   "supporting_n": null,
+   "confidence": "low"
+  },
+  {
+   "finding": "Billboard India Songs 2022 #1s: 9 titles on the page (7 in cohort after excluding Hanuman Chalisa and Pink Venom); longest runs were Punjabi (295: 18 wk; The Last Ride: 14 wk) and Telugu film (Srivalli: 9 wk); Hindi film Kesariya 3 wk. Only 2022 data are public on Wikipedia.",
+   "evidence_kind": "frequency",
+   "evidence_ids": [
+    "BI"
+   ],
+   "supporting_n": 7,
+   "confidence": "medium (single year)"
+  }
+ ],
+ "CROSSOVER_FINDINGS": [
+  {
+   "finding": "No Hindi/Indian recording appears in any global top list fetched (YouTube top-30/kworb top-40, Spotify top-40, Hot 100 longest #1s). Observed cross-market presence runs global->India only (Starboy, Perfect, Pink Venom).",
+   "evidence_kind": "frequency",
+   "evidence_ids": [
+    "W1",
+    "K4",
+    "S2",
+    "B3",
+    "SI",
+    "BI"
+   ],
+   "supporting_n": 0,
+   "confidence": "high for absence in these lists; says nothing about mid-tier crossover"
+  },
+  {
+   "finding": "Devotional recitation 'Shree Hanuman Chalisa' is the only Indian upload in the global top-30 (5.67 bn, W1); excluded from the song cohort but it is the strongest evidence that Indian repertoire can reach global-scale view counts through domestic volume plus daily repeat use (4.4 M views 'yesterday' on kworb).",
+   "evidence_kind": "frequency / interpretation",
+   "evidence_ids": [
+    "W1",
+    "K4"
+   ],
+   "supporting_n": 1,
+   "confidence": "medium"
+  },
+  {
+   "finding": "GLOBAL_HINDI_CROSSOVER cohort is therefore empty (n=0). Reference principles for crossover below are editorial test directions, not empirical zones.",
+   "evidence_kind": "cohort status",
+   "evidence_ids": [],
+   "supporting_n": 0,
+   "confidence": "n/a"
+  }
+ ],
+ "TOP_REFERENCE_ZONES": {
+  "empirical_zones": [
+   {
+    "zone_id": "Z1",
+    "name": "Slow-groove minor pop (half-time feel)",
+    "bpm": "78-96 (perceived; verify half/double-time)",
+    "mode": "minor (Aeolian/Dorian)",
+    "emotion": "melancholic-yet-danceable",
+    "hook_structure": "chorus by 0:30-0:45; intro <=10 s; repeated 1-2 bar hook; no key change; hard ending",
+    "production": "grid-tight, loud (-3 to -6 LUFS-range masters as republished), sparse verses",
+    "global_examples": [
+     "Shape of You (96 BPM, C# minor, 3:54, range G#3-G#5)",
+     "Despacito (89 BPM, B minor, 3:47, range F#3-B4)",
+     "Faded (90, Eb minor)",
+     "Lean On (98, G minor)",
+     "Sorry (100, Eb major, range Eb3-Bb4)",
+     "Mi Gente (105, B minor)"
+    ],
+    "hindi_examples": [
+     "candidate: Asavari-type ballads in SI top-40 (untested)"
+    ],
+    "supporting_n": "L15 (Top-5 2017-18), L11 (>1100 #1s), L02 (303), G003 (1)",
+    "confidence": "medium",
+    "kind": "empirical (secondary aggregate)"
+   },
+   {
+    "zone_id": "Z2",
+    "name": "Mid-tempo major-key feel-good pop (100-120 BPM)",
+    "bpm": "100-120",
+    "mode": "major",
+    "emotion": "happy/party-like, high danceability",
+    "hook_structure": "title in first 20-30 s; high chorus repetition; short verses",
+    "production": "bright, danceable; era 2013-2018 dominant in YouTube top list",
+    "global_examples": [
+     "Uptown Funk (115, D Dorian, 4:30, range B2-D6)",
+     "Sugar (120, Db major, 3:55, range Db3-Fb5)",
+     "Girls Like You (125, C major)",
+     "Dame Tu Cosita (110, D major, 2:25)"
+    ],
+    "hindi_examples": [
+     "Bilawal-type party songs (Bom Diggy Diggy, Kala Chashma) — mode not measured"
+    ],
+    "supporting_n": "L04 (14,536 UK), L14 (3,054), K4/W1 (38)",
+    "confidence": "medium",
+    "kind": "empirical"
+   },
+   {
+    "zone_id": "Z3",
+    "name": "Acoustic/piano ballad with wide emotional arc",
+    "bpm": "60-80 (or 120-160 double-time count)",
+    "mode": "major or minor with borrowed chords",
+    "emotion": "sad/romantic",
+    "hook_structure": "delayed but strongly repeated chorus; big final chorus/climax at ~70-80% of duration (hypothesis)",
+    "production": "minimal intro, vocal-forward",
+    "global_examples": [
+     "Perfect (190 in 12/8 = 95 felt, Ab major, 4:23)",
+     "Let Her Go (75, G major, 4:12)",
+     "Thinking Out Loud (79, D major, 4:41, range B2-A4)",
+     "Someone You Loved (unmeasured)"
+    ],
+    "hindi_examples": [
+     "Agar Tum Saath Ho (SI #1 total)",
+     "Tujhe Kitna Chahne Lage",
+     "Tum Se Hi",
+     "Kabira"
+    ],
+    "supporting_n": "S2 (40) + SI (37) frequency; features NOT measured",
+    "confidence": "low-medium (structure unmeasured)",
+    "kind": "empirical frequency + hypothesis on climax"
+   },
+   {
+    "zone_id": "Z4",
+    "name": "Catalog-longevity romantic ballad (India Spotify)",
+    "bpm": "unknown",
+    "mode": "Asavari/Bhairavi-type expected (L18) — unmeasured",
+    "emotion": "romantic longing",
+    "hook_structure": "mukhda-antara form; long chart life (1,900-2,600 chart days) without peaking near #1",
+    "production": "film-era 2007-2015 productions",
+    "global_examples": [],
+    "hindi_examples": [
+     "Tum Se Hi",
+     "Kabira",
+     "Tera Hone Laga Hoon",
+     "Dil Diyan Gallan",
+     "Saibo",
+     "Baarishein"
+    ],
+    "supporting_n": "SI (10 never-top-3 songs with >1,900 chart days)",
+    "confidence": "medium (observed longevity), low (features)",
+    "kind": "empirical (success-signal shape only)"
+   },
+   {
+    "zone_id": "Z5",
+    "name": "Independent singer-songwriter Hindi (streaming-native)",
+    "bpm": "unknown",
+    "mode": "unknown",
+    "emotion": "intimate/romantic",
+    "hook_structure": "unknown; songs reached #1 with 100+ days at peak",
+    "production": "non-film, single-artist brand",
+    "global_examples": [],
+    "hindi_examples": [
+     "Jo Tum Mere Ho (105 days at #1)",
+     "Sahiba (124)",
+     "Maan Meri Jaan (123)",
+     "Excuses (101)",
+     "Husn",
+     "Finding Her"
+    ],
+    "supporting_n": "SI (17 peak-1 songs; 6 with >=100 days at #1)",
+    "confidence": "medium (observed), features null",
+    "kind": "empirical (success-signal shape only)"
+   },
+   {
+    "zone_id": "Z6",
+    "name": "Punjabi/Haryanvi dance video hit",
+    "bpm": "unknown",
+    "mode": "unknown",
+    "emotion": "celebratory",
+    "hook_structure": "unknown",
+    "production": "video-led, regional label channels",
+    "global_examples": [],
+    "hindi_examples": [
+     "Lehanga",
+     "52 Gaj Ka Daman",
+     "Laung Laachi",
+     "High Rated Gabru",
+     "Daru Badnaam"
+    ],
+    "supporting_n": "WI (11 Punjabi/Haryanvi rows in top-40); BI (295, The Last Ride)",
+    "confidence": "medium (observed), features null",
+    "kind": "empirical (success-signal shape only)"
+   },
+   {
+    "zone_id": "Z7",
+    "name": "Repetition-forward hook design",
+    "bpm": "any",
+    "mode": "any",
+    "emotion": "any",
+    "hook_structure": "high chorus repetition; moderate word repetition; title-as-hook",
+    "production": "n/a",
+    "global_examples": [
+     "(L23 examples) Around the World 98% compressible"
+    ],
+    "hindi_examples": [],
+    "supporting_n": "L23 (15,000), L24 (Hot 100 1958-2012)",
+    "confidence": "medium-high (association)",
+    "kind": "empirical (literature)"
+   },
+   {
+    "zone_id": "Z8",
+    "name": "Optimal differentiation",
+    "bpm": "n/a",
+    "mode": "n/a",
+    "emotion": "n/a",
+    "hook_structure": "one salient atypical element (instrument, rhythm, language mix) against an otherwise typical feature profile",
+    "production": "n/a",
+    "global_examples": [
+     "(L05 population-level)"
+    ],
+    "hindi_examples": [
+     "Hinglish lyric mix trend (L19)"
+    ],
+    "supporting_n": "L05 (~27,000)",
+    "confidence": "medium-high",
+    "kind": "empirical (literature)"
+   }
+  ],
+  "count_empirical": 8,
+  "note": "Ten fully-supported empirical zones are NOT available; 8 zones are listed with mixed support (3 literature-backed, 5 success-signal-shape only with null features). Editorial test directions are separate.",
+  "editorial_test_directions": [
+   {
+    "test_id": "E1",
+    "direction": "Hindi/Urdu lyric ballad in Z1 tempo band (78-96, half-time) with English hook phrase — crossover probe",
+    "status": "editorial hypothesis; no empirical crossover cohort exists"
+   },
+   {
+    "test_id": "E2",
+    "direction": "Chorus-first edit (hook within 0-10 s) vs. 30-45 s chorus arrival — A/B on the same recording",
+    "status": "L17 weakly suggests 30-60 s outperforms immediate; L09 shows industry drift to earlier; unresolved"
+   },
+   {
+    "test_id": "E3",
+    "direction": "Duration 2:45-3:15 master vs. 3:45+ extended for streaming vs YouTube video",
+    "status": "L06/L07 era trend, not a success effect"
+   },
+   {
+    "test_id": "E4",
+    "direction": "Asavari (natural minor) vs Bilawal (major) melodic framing of the same lyric — Hindi-market mode test",
+    "status": "L18 frequency only"
+   },
+   {
+    "test_id": "E5",
+    "direction": "Climax at 70-80% of duration with a top-of-tessitura sustained note — measure retention curve",
+    "status": "pure hypothesis; no source measured climax placement"
+   }
+  ]
+ },
+ "VOCAL_KEY_OPTIMIZER": {
+  "purpose": "Transpose a reference zone to Nitin's measured voice while preserving mode, interval structure, contour, groove, and structural principles. Absolute key of any reference song is NOT a recommendation.",
+  "inputs": {
+   "reference_mode": "string (e.g. Aeolian, Dorian, Asavari, Bilawal)",
+   "reference_intervals_or_contour": "relative pitch sequence (semitones from tonic) — no protected melody copied; used only as a range envelope",
+   "reference_chorus_peak_rel": "semitones above tonic at chorus/climax peak",
+   "reference_verse_floor_rel": "semitones above/below tonic at verse floor",
+   "nitin_comfortable_tessitura": "[low_note, high_note] MIDI, measured — CURRENTLY NULL",
+   "nitin_climax_ceiling": "highest note sustainable for >=2 s at full intensity, measured — CURRENTLY NULL",
+   "nitin_passaggio": "MIDI note(s), measured — CURRENTLY NULL",
+   "groove_bpm": "unchanged by transposition",
+   "structure": "unchanged"
+  },
+  "algorithm": [
+   "1. Express the reference zone's verse floor, verse ceiling, chorus peak and climax peak as semitone offsets from its tonic (mode preserved).",
+   "2. For candidate tonics T in the 12 pitch classes across plausible octaves, map each offset to absolute MIDI notes.",
+   "3. Constraint A (hard): all verse notes within nitin_comfortable_tessitura.",
+   "4. Constraint B (hard): climax peak <= nitin_climax_ceiling.",
+   "5. Preference C: chorus peak sits 2-5 semitones above the verse ceiling but below passaggio, or fully above passaggio if the artist's measured mix is stable there.",
+   "6. Preference D: guitar/keyboard-friendly tonic if live performance matters (L13 shows key distribution skew, not a success effect).",
+   "7. Output ranked tonics with a FIT score = null until measurements exist; report the transposition interval only."
+  ],
+  "nitin_fit_score": null,
+  "audition_protocol": {
+   "safety": "Warm up 10-15 min; no pushing past discomfort; stop at strain; sessions <=30 min; hydration; measure on 3 separate days at different times.",
+   "measurements": [
+    "Lowest comfortable sustained note (>=3 s, stable pitch) — piano/tuner reference",
+    "Highest comfortable sustained note in chest/mix at speaking-level dynamic",
+    "Highest comfortable belt/mix note at performance dynamic (>=2 s)",
+    "Highest head-voice note usable in the song's style",
+    "Passaggio region: sing a 5-note ascending scale on /a/ and note where the voice wants to flip",
+    "Tessitura test: sing a 3-minute known song in three keys (original, -2, +2) and rate fatigue 1-5 after each",
+    "Record each take (44.1 kHz WAV) with a metronome tag; log MIDI note numbers, date, time, and fatigue rating"
+   ],
+   "output": "nitin_comfortable_tessitura, nitin_climax_ceiling, nitin_passaggio; recorded in UNCHAINED_NITIN_OWN_DATA with recording_id and metric_timestamp"
+  },
+  "studyable_without_copying": [
+   "chorus arrival time",
+   "hook repetition count",
+   "section lengths and proportions",
+   "contour direction of hook (ascending/descending/arch)",
+   "tessitura width in semitones",
+   "climax placement as % of duration",
+   "tempo/half-time feel",
+   "mode and scale-degree emphasis",
+   "ending type (hard vs fade)"
+  ],
+  "not_studied": [
+   "protected melodies",
+   "lyrics"
+  ]
+ },
+ "SCORING_ENGINE_DESIGN": {
+  "status": "DESIGN ONLY — not executed; no hit probability; no calibrated prediction (hit-only samples cannot calibrate).",
+  "inputs": [
+   "key",
+   "mode",
+   "bpm",
+   "perceived_pulse (half/double flag)",
+   "song_duration_sec",
+   "emotion",
+   "energy",
+   "vocal_range (measured, MIDI)",
+   "hook_characteristics {chorus_arrival_sec, hook_repetitions, title_in_hook, intro_sec, first_vocal_sec}",
+   "release_type (film/non-film/independent/cover)",
+   "target_platform (youtube/spotify/jiosaavn/instagram)",
+   "structural_features {section_list, climax_pct, ending_type, key_change}"
+  ],
+  "outputs": {
+   "SUCCESS_SIGNAL_SCORE": {
+    "definition": "count-based alignment with evidence-supported zones (Z1-Z8): +1 per satisfied zone criterion with supporting_n>=300, +0.5 per criterion with lower n; reported as 'k of m criteria', never a probability",
+    "calibration": "none — reported with EVIDENCE_CONFIDENCE"
+   },
+   "EVIDENCE_CONFIDENCE": {
+    "definition": "min over used criteria of {high, medium-high, medium, low}; plus n_null inputs"
+   },
+   "REFERENCE_MATCH_SCORE": {
+    "definition": "per zone: fraction of zone fields (bpm band, mode, chorus arrival band, duration band, repetition band) matched by the input; returns null for zones whose fields are null"
+   },
+   "NITIN_FIT_SCORE": {
+    "definition": "from VOCAL_KEY_OPTIMIZER; null until tessitura measured"
+   },
+   "EXPECTED_RETENTION_PROFILE": {
+    "definition": "emitted ONLY if UNCHAINED_NITIN_OWN_DATA contains observed YouTube retention curves for >=5 prior publications; otherwise null with reason 'no observed retention data'"
+   },
+   "RISKS": {
+    "definition": "list: e.g. 'chorus arrival >60 s (L09/L17)', 'duration >4:00 vs streaming era trend (L07)', 'key change present (L12)', 'excessive word repetition (L24)', 'highly typical profile (L05)', 'climax above measured ceiling'"
+   },
+   "COMPARABLE_SONGS": {
+    "definition": "nearest rows in RAW_DATASET by available fields; with feature fields null for 167/168 rows the comparables are by success-signal shape and release_type only"
+   }
+  },
+  "explicitly_not_output": [
+   "hit probability",
+   "view forecast",
+   "any numeric score without listed evidence ids"
+  ]
+ },
+ "ID_AND_ATTRIBUTION_CHAIN": {
+  "note": "Proposed schema only. No access to, or claim about, any existing private architecture.",
+  "entities": {
+   "recording_id": "one audio master (versioned: recording_id + version)",
+   "song_id": "composition (many recordings per song)",
+   "content_id": "derivative asset (video edit, short, lyric video, live clip) -> recording_id",
+   "publication_id": "content_id x platform x upload timestamp x official flag",
+   "campaign_id": "paid/organic push window -> publication_ids",
+   "experiment_id": "A/B or sequential test -> publication_ids, hypothesis, pre-registered metric",
+   "lead_id": "inbound inquiry -> attributed publication_id(s) with evidence type (link click, stated source, UTM)",
+   "booking_id": "confirmed gig -> lead_id",
+   "revenue_event_id": "payout/stream royalty/booking fee -> booking_id or publication_id, amount, currency, timestamp"
+  },
+  "metrics": {
+   "publication_metric": "(publication_id, metric_name, value, metric_timestamp, source_api) — views, watch_hours, avg_view_duration, retention_curve, subscribers_gained, streams, saves, skips",
+   "attribution_evidence": "(from_id, to_id, evidence_type, confidence, timestamp)"
+  },
+  "flow": "musical parameters (recording_id) -> song_id -> content_id -> publication_id -> publication_metrics (views, watch hours, retention, subscriber conversion) -> streams (publication/recording) -> lead_id -> booking_id -> revenue_event_id",
+  "rules": [
+   "watch hours only from platform analytics exports, never views x duration",
+   "retention only from observed curves",
+   "every metric row carries metric_timestamp and source"
+  ]
+ },
+ "analysis_results_ref": "ANALYSIS_RESULTS.json",
+ "raw_dataset_ref": "RAW_DATASET.csv / RAW_DATASET.json",
+ "literature_ref": "LITERATURE_EVIDENCE.csv",
+ "RECEIPT": {
+  "track": "CLAUDE_B",
+  "provider": "Anthropic (Claude, Cowork session)",
+  "version": "FROZEN_V01",
+  "observation_date_utc": "2026-09-22",
+  "tools_used": [
+   "WebSearch",
+   "WebFetch (via 3 collector subagents + lead analyst)",
+   "Python 3 (build_dataset.py, literature.py, analyze.py, machine_result.py)",
+   "no paid tools, no downloads of copyrighted audio, no credentials"
+  ],
+  "prior_exposure_disclosure": "The session's memory snapshot exposed the analyst to: Nitin's name, the channel name 'Unchained Nitin - The Indestructible Voice', producer Vatsal Chevli's name, and that Nitin works in software/testing. No previous UNCHAINED reports, project files, chat histories, or other tracks' findings were read. Song lists were built from public sources only; singer/film attributions the lead analyst added to the sample file from recall were NOT used in the dataset (dataset uses only fetched values).",
+  "selection_counts": {
+   "data_list_pages_fetched_success": 13,
+   "data_list_pages_failed": 6,
+   "literature_pages_fetch_failed": 7,
+   "global_rows": 85,
+   "hindi_indian_rows": 83,
+   "crossover_rows": 0,
+   "own_data_rows": 0,
+   "rows_with_features": 25,
+   "rows_with_sheet_music_vocal_range": 10,
+   "collector_batch_pages_fetched_ok": 74,
+   "collector_batch_pages_failed_or_degraded": 14,
+   "literature_sources_verified": 24,
+   "literature_not_verified_cited": 5
+  },
+  "feature_collection_status": "HALTED by operator instruction on 2026-09-22. Of six parallel per-song collectors, ONE (batch G00, GLOBAL rows G001-G025) completed and wrote its output before the halt registered; its raw output is preserved as data/COLLECTOR_BATCH_G00_RAW.txt and merged. The other five (G01, G02, H00, H01, H02) did not run. Result: 25/168 rows have bpm/key/mode/duration; 10/168 have a published sheet-music vocal range; 0/168 have chorus-arrival or intro timing; 0/83 Hindi/Indian rows have any musical feature.",
+  "missingness_summary": {
+   "bpm": {
+    "n_present": 25,
+    "n_null": 143
+   },
+   "key": {
+    "n_present": 24,
+    "n_null": 144
+   },
+   "mode": {
+    "n_present": 24,
+    "n_null": 144
+   },
+   "song_duration_sec": {
+    "n_present": 25,
+    "n_null": 143
+   },
+   "energy": {
+    "n_present": 24,
+    "n_null": 144
+   },
+   "intro_length_sec": {
+    "n_present": 0,
+    "n_null": 168
+   },
+   "first_vocal_sec": {
+    "n_present": 0,
+    "n_null": 168
+   },
+   "first_hook_sec": {
+    "n_present": 0,
+    "n_null": 168
+   },
+   "chorus_arrival_sec": {
+    "n_present": 0,
+    "n_null": 168
+   },
+   "hook_repetitions": {
+    "n_present": 0,
+    "n_null": 168
+   },
+   "structure": {
+    "n_present": 0,
+    "n_null": 168
+   },
+   "vocal_range_measured": {
+    "n_present": 10,
+    "n_null": 158
+   },
+   "tessitura": {
+    "n_present": 0,
+    "n_null": 168
+   },
+   "climax_placement": {
+    "n_present": 0,
+    "n_null": 168
+   },
+   "meter": {
+    "n_present": 17,
+    "n_null": 151
+   }
+  },
+  "independence": "No cross-track synthesis. No coordinator conclusions read.",
+  "not_claimed": [
+   "causal effects",
+   "calibrated prediction",
+   "watch time",
+   "retention",
+   "Nitin's vocal range"
+  ],
+  "hashes": "SHA-256 of delivered files computed by the analyst over final bytes and listed in HASHES.txt; coordinator should recompute over received bytes."
+ }
+}

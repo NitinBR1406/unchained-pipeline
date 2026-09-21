@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-09-21T23:52:26.437207+00:00",
+  "freeze_gate": "../THREE_TRACK_FREEZE_GATE.json",
+  "independent_agent_outputs_not_independent_source_studies": true,
+  "rows": [
+    {
+      "question": "Absolute key predicts success",
+      "GEMINI_A": "A initially implied a privileged C# key; not established",
+      "CLAUDE_B": "24 reported keys in 168 rows; several arrangement/database conflicts",
+      "CHATGPT_C": "7 reported keys in 42 entities; no controls",
+      "decision": "REJECT",
+      "accepted_statement": "No defensible winning key. Transpose for the voice."
+    },
+    {
+      "question": "Winning tempo pocket",
+      "GEMINI_A": "A asserted 94–96; broad claim retracted",
+      "CLAUDE_B": "25 global feature rows; median 110, heterogeneous beat units",
+      "CHATGPT_C": "6 BPM values in 42; sparse recent coverage",
+      "decision": "NOT_IDENTIFIED",
+      "accepted_statement": "No age/artist-adjusted BPM effect; zone ranges are proposals."
+    },
+    {
+      "question": "Shorter/earlier always improves retention",
+      "GEMINI_A": "A 200-second algorithmic claim retracted",
+      "CLAUDE_B": "Historical duration/intro trends; unsupported deadlines in zones",
+      "CHATGPT_C": "2025 US examples include later chorus arrivals",
+      "decision": "REJECT_UNIVERSAL_RULE",
+      "accepted_statement": "No private retention. Structure has several workable forms."
+    },
+    {
+      "question": "Major versus minor",
+      "GEMINI_A": "Tiny unverified A list",
+      "CLAUDE_B": "14 major,8 minor,2 modal,1 unknown in selected global feature cell",
+      "CHATGPT_C": "Reported Hindi examples include both labels",
+      "decision": "DESCRIPTIVE_ONLY",
+      "accepted_statement": "Era, market, source and selection differ; no preferred mode inferred."
+    },
+    {
+      "question": "Indian crossover exists",
+      "GEMINI_A": "No adequate defined export cohort",
+      "CLAUDE_B": "0 intersection in selected all-time top lists",
+      "CHATGPT_C": "8 named Indian export/diaspora examples",
+      "decision": "DEFINITION_DIFFERENCE",
+      "accepted_statement": "Top-list absence does not imply no export. Export does not prove broad non-diaspora adoption."
+    },
+    {
+      "question": "Repeatability/replay",
+      "GEMINI_A": "No observed repeat-listener data",
+      "CLAUDE_B": "Chart longevity and repetition literature",
+      "CHATGPT_C": "Annual recurrence/export presence",
+      "decision": "PROXY_ONLY",
+      "accepted_statement": "Population persistence is not individual replay rate."
+    },
+    {
+      "question": "Age normalization",
+      "GEMINI_A": "No valid timestamped official counter join",
+      "CLAUDE_B": "Approximate lifetime views/day for dated rows, undated counters",
+      "CHATGPT_C": "Annual outcome windows, not release-age normalization",
+      "decision": "PARTIAL",
+      "accepted_statement": "No validated launch-window comparison or regression across tracks."
+    },
+    {
+      "question": "Vocal selection",
+      "GEMINI_A": "Unsafe breaking-point idea retracted",
+      "CLAUDE_B": "Arrangement ranges and proposed hard constraints",
+      "CHATGPT_C": "Comfortable phrase-based audition; no observed Nitin range",
+      "decision": "VOICE_FIRST_REQUIREMENT",
+      "accepted_statement": "Prompt agreement is not independent scientific evidence; no numerical Nitin fit."
+    },
+    {
+      "question": "Production and structure",
+      "GEMINI_A": "Sparse unsourced production generalizations",
+      "CLAUDE_B": "No measured per-song hook/chorus timing; aggregate literature",
+      "CHATGPT_C": "One report-based chorus boundary; most fields missing",
+      "decision": "HYPOTHESIS_WORKBENCH",
+      "accepted_statement": "Annotate exact recordings before claiming reference structure as measured."
+    }
+  ]
+}

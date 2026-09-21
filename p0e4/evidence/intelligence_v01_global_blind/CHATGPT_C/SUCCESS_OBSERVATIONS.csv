@@ -1,0 +1,50 @@
+observation_id,song_id,cohort,period,source_id,rank,value,unit,signal,observation_date,source_period_end_exact,version_scope
+C_OBS_001,C_beautiful-things,GLOBAL_SUCCESS,2024,S01,1,2.11,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_002,C_espresso,GLOBAL_SUCCESS,2024,S01,2,1.79,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_003,C_lose-control,GLOBAL_SUCCESS,2024,S01,3,1.7,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_004,C_birds-of-a-feather,GLOBAL_SUCCESS,2024,S01,4,1.52,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_005,C_a-bar-song-tipsy,GLOBAL_SUCCESS,2024,S01,5,1.51,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_006,C_too-sweet,GLOBAL_SUCCESS,2024,S01,6,1.35,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_007,C_i-had-some-help-feat-morgan-wallen,GLOBAL_SUCCESS,2024,S01,7,1.33,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_008,C_not-like-us,GLOBAL_SUCCESS,2024,S01,8,1.28,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_009,C_cruel-summer,GLOBAL_SUCCESS,2024,S01,9,1.17,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_010,C_stick-season,GLOBAL_SUCCESS,2024,S01,10,1.14,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_011,C_good-luck-babe,GLOBAL_SUCCESS,2024,S01,11,1.12,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_012,C_please-please-please,GLOBAL_SUCCESS,2024,S01,12,1.12,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_013,C_million-dollar-baby,GLOBAL_SUCCESS,2024,S01,13,1.11,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_014,C_die-with-a-smile,GLOBAL_SUCCESS,2024,S01,14,1.08,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_015,C_i-like-the-way-you-kiss-me,GLOBAL_SUCCESS,2024,S01,15,1.03,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_016,C_i-remember-everything-feat-kacey-musgraves,GLOBAL_SUCCESS,2024,S01,16,1.02,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_017,C_apt,GLOBAL_SUCCESS,2024,S01,17,1,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_018,C_greedy,GLOBAL_SUCCESS,2024,S01,18,0.99,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_019,C_gata-only,GLOBAL_SUCCESS,2024,S01,19,0.98,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_020,C_we-can-t-be-friends-wait-for-your-love,GLOBAL_SUCCESS,2024,S01,20,0.93,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_021,C_apt,GLOBAL_SUCCESS,2025,S02,1,2.06,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_022,C_golden,GLOBAL_SUCCESS,2025,S02,2,2,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_023,C_ordinary,GLOBAL_SUCCESS,2025,S02,3,1.9,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_024,C_die-with-a-smile,GLOBAL_SUCCESS,2025,S02,4,1.86,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_025,C_beautiful-things,GLOBAL_SUCCESS,2025,S02,5,1.35,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_026,C_birds-of-a-feather,GLOBAL_SUCCESS,2025,S02,6,1.29,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_027,C_lose-control,GLOBAL_SUCCESS,2025,S02,7,1.24,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_028,C_luther,GLOBAL_SUCCESS,2025,S02,8,1.18,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_029,C_that-s-so-true,GLOBAL_SUCCESS,2025,S02,9,1.07,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_030,C_not-like-us,GLOBAL_SUCCESS,2025,S02,10,1.06,IFPI_global_subscription_stream_equivalents_billions,annual_top_chart,2026-09-22,,includes remixes and alternative versions
+C_OBS_031,C_maan-meri-jaan,HINDI_INDIAN_SUCCESS,2023,S03,1,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_032,C_kahani-suno-2-0,HINDI_INDIAN_SUCCESS,2023,S03,,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_033,C_kesariya,HINDI_INDIAN_SUCCESS,2023,S03,,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_034,C_malang-sajna,HINDI_INDIAN_SUCCESS,2023,S03,,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_035,C_cheques,HINDI_INDIAN_SUCCESS,2023,S03,,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_036,C_heeriye,HINDI_INDIAN_SUCCESS,2023,S03,,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_037,C_chaleya,HINDI_INDIAN_SUCCESS,2023,S03,,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_038,C_phir-aur-kya-chahiye,HINDI_INDIAN_SUCCESS,2023,S03,,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_039,C_agar-tum-saath-ho,HINDI_INDIAN_SUCCESS,2023,S03,,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_040,C_daku,HINDI_INDIAN_SUCCESS,2023,S03,,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_041,C_pehle-bhi-main,HINDI_INDIAN_SUCCESS,2024,S04,1,,,Spotify_India_Wrapped_winner_or_named_high_streaming_song,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_042,C_big-dawgs,GLOBAL_HINDI_CROSSOVER,2024,S05,,,,Spotify_named_export_success,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_043,C_akhiyaan-gulaab,GLOBAL_HINDI_CROSSOVER,2024,S05,,,,Spotify_named_export_success,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_044,C_naina,GLOBAL_HINDI_CROSSOVER,2024,S05,,,,Spotify_named_export_success,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_045,C_sajni,GLOBAL_HINDI_CROSSOVER,2024,S05,,,,Spotify_named_export_success,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_046,C_tauba-tauba,GLOBAL_HINDI_CROSSOVER,2024,S05,,,,Spotify_named_export_success,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_047,C_kesariya,GLOBAL_HINDI_CROSSOVER,2023,S06,,,,Spotify_named_export_success,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_048,C_besharam-rang,GLOBAL_HINDI_CROSSOVER,2023,S06,,,,Spotify_named_export_success,2026-09-22,,source does not establish exact recording aggregation
+C_OBS_049,C_jhoome-jo-pathaan,GLOBAL_HINDI_CROSSOVER,2023,S06,,,,Spotify_named_export_success,2026-09-22,,source does not establish exact recording aggregation

@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-09-21T23:52:26.437207+00:00",
+  "freeze_gate": {
+    "synthesis_allowed": true,
+    "tracks": {
+      "GEMINI_A": {
+        "frozen_bytes_verified": true,
+        "issues": []
+      },
+      "CLAUDE_B": {
+        "frozen_bytes_verified": true,
+        "issues": []
+      },
+      "CHATGPT_C": {
+        "frozen_bytes_verified": true,
+        "issues": []
+      }
+    },
+    "caveat": "Freeze does not validate research claims.",
+    "observed_at": "2026-09-21T23:39:49.165085+00:00"
+  },
+  "outputs": {
+    "GEMINI_INDEPENDENT_REPORT_V01": "../GEMINI_A/RAW_REPORT.md",
+    "GEMINI_CORRECTION_ADDENDUM": "../GEMINI_A/ADDENDUM.md",
+    "CLAUDE_INDEPENDENT_REPORT_V01": "../CLAUDE_B/provider_artifacts/track_b/REPORT_CLAUDE_B_FROZEN_V01.md",
+    "CHATGPT_INDEPENDENT_REPORT_V01": "../CHATGPT_C/REPORT.md",
+    "CROSS_VALIDATION_MATRIX_V01": "CROSS_VALIDATION_MATRIX_V01.json",
+    "CONSENSUS_AND_DISAGREEMENT_V01": "CONSENSUS_AND_DISAGREEMENT_V01.json",
+    "SONG_SUCCESS_INTELLIGENCE_V01": "SONG_SUCCESS_INTELLIGENCE_V01.md",
+    "VOCAL_KEY_OPTIMIZER_V01": "VOCAL_KEY_OPTIMIZER_V01.json",
+    "VATSAL_ORIGINAL_PRODUCTION_REFERENCE_BRIEF_V01": "VATSAL_ORIGINAL_PRODUCTION_REFERENCE_BRIEF_V01.md"
+  },
+  "raw_track_packages": {
+    "GEMINI_A": "../GEMINI_A/",
+    "CLAUDE_B": "../CLAUDE_B/",
+    "CHATGPT_C": "../CHATGPT_C/"
+  },
+  "limitations": "Three independent dispatches with disclosed prior context; source independence and claim quality are assessed separately. A is inadequate for quantitative inference. B/C freeze integrity and code replay verified."
+}

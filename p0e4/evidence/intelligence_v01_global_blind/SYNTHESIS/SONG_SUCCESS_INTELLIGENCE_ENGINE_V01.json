@@ -1,0 +1,136 @@
+{
+  "name": "SONG_SUCCESS_INTELLIGENCE_ENGINE",
+  "version": "V01",
+  "status": "DESIGN_ONLY_NOT_DEPLOYED",
+  "cohorts": [
+    "GLOBAL_SUCCESS",
+    "HINDI_INDIAN_SUCCESS",
+    "GLOBAL_HINDI_CROSSOVER",
+    "UNCHAINED_NITIN_OWN_DATA"
+  ],
+  "required_input_fields": [
+    "key",
+    "mode",
+    "bpm",
+    "song_duration",
+    "emotion",
+    "energy",
+    "vocal_range",
+    "hook_characteristics",
+    "release_type",
+    "target_platform"
+  ],
+  "additional_inputs": [
+    "recording_version_id",
+    "beat_unit",
+    "perceived_pulse",
+    "tempo_segments",
+    "time_signature",
+    "intro_duration",
+    "first_vocal_time",
+    "first_hook_time",
+    "first_chorus_time",
+    "hook_repetitions",
+    "section_boundaries",
+    "melodic_contour",
+    "tessitura",
+    "climax_time",
+    "arrangement_annotations",
+    "release_date",
+    "upload_date",
+    "market",
+    "language",
+    "artist_prior_popularity_window",
+    "film_status",
+    "promotion_exposure"
+  ],
+  "field_record": {
+    "value": null,
+    "unit": null,
+    "kind": "measured|secondary_estimate|interpretation|hypothesis|unknown",
+    "source_url": null,
+    "source_id": null,
+    "evidence_id": null,
+    "observed_at": null,
+    "recording_version_id": null,
+    "method": null,
+    "confidence": null,
+    "missing_reason": null
+  },
+  "outputs": {
+    "SUCCESS_SIGNAL_SCORE": {
+      "value": null,
+      "meaning": "Optional retrospective outcome percentile within a predeclared platform/market/age-window cohort; never predicted success from key/BPM.",
+      "requirements": [
+        "Observed outcomes, defined denominator and window",
+        "Direction and scaling documented",
+        "No mixing revenue, streams and views without an explicit utility model"
+      ]
+    },
+    "EVIDENCE_CONFIDENCE": {
+      "value": "INSUFFICIENT_FOR_PREDICTION",
+      "dimensions": [
+        "source_quality",
+        "version_binding",
+        "field_coverage",
+        "source_independence",
+        "measurement_agreement",
+        "market_transfer",
+        "bias_risk"
+      ]
+    },
+    "REFERENCE_MATCH_SCORE": {
+      "value": null,
+      "meaning": "Descriptive feature similarity, not success likelihood",
+      "method": "Compare only jointly observed compatible features; report weights, distance, coverage and exclusions. Reject incompatible beat units/version mixtures. Never fill missing values with zero."
+    },
+    "NITIN_FIT_SCORE": {
+      "value": null,
+      "depends_on": "VOCAL_KEY_OPTIMIZER_V01"
+    },
+    "EXPECTED_RETENTION_PROFILE": {
+      "value": null,
+      "reason": "No observed own retention curves or calibrated held-out model",
+      "future_requirement": "Versioned model with declared training n, uncertainty, calibration and temporal/artist leakage checks; no arbitrary five-curve activation threshold"
+    },
+    "RISKS": [
+      "Sparse and nonrandom musical metadata",
+      "Unresolved recording identity",
+      "Artist/exposure confounding",
+      "Mixed date windows",
+      "Tempo beat-unit ambiguity",
+      "Unmeasured vocal demands"
+    ],
+    "COMPARABLE_SONGS": {
+      "registry": "REFERENCE_REGISTRY_V01.json",
+      "selection": "Return source-linked matches with explicit limitations; no deterministic rank of likely hits"
+    }
+  },
+  "score_policy": "No score emitted from musical criteria alone. No automatic penalty for chorus after 60s, long duration, minor/major choice or key changes.",
+  "ten_million_architecture_binding": {
+    "authority": "../ARCHITECTURE_BINDING_REVIEW.json",
+    "scope": "Additive research sidecar only; existing schema unchanged",
+    "music_parameter_version": "Attach through CONTENT_MASTER.song_id and content_id with evidence_ids",
+    "experiment": "DERIVATIVES.derivative_id, hypothesis_id, experiment_id, content_id",
+    "distribution": "PUBLICATION -> PLATFORM_PACKAGES -> DERIVATIVES -> CONTENT_MASTER -> CAMPAIGNS",
+    "metrics": "Link timestamped platform-post observations through publication_id/platform_post_id; preserve metric unit, window, denominator, source and availability",
+    "business": "BUSINESS_FUNNEL and MONETIZATION through publication_id/funnel_id using the canonical contract; preserve lead_id/booking_id/attribution_method/code",
+    "unknown_attribution": null,
+    "causal_claim": "An attribution join is not proof that a musical feature caused a booking or revenue.",
+    "goal_not_result": "10M is architectural context, not an achieved reach claim"
+  },
+  "future_study": [
+    "Prospectively include modest performers and failures; select releases before seeing outcomes.",
+    "Bind master, language version, remix, video and audio uploads; cluster related recordings and repeated artists.",
+    "Use matched exposure windows (e.g. first 7/28 days), market and platform; separately report recent velocity and lifetime accumulation.",
+    "Control artist prior success from a pre-release window, film context, era, duration and promotion where observed; do not use current popularity as prior popularity.",
+    "Use temporal holdout, artist grouping, prespecified hypotheses, multiple-comparison control and clustered uncertainty where inferential assumptions hold.",
+    "Join song to derivative and packaging decisions; performance of a short-form edit is not automatically performance of the master."
+  ],
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "writes_to_operational_state": false
+  }
+}

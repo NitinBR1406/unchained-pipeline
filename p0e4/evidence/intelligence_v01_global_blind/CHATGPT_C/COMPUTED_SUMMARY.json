@@ -1,0 +1,213 @@
+{
+  "unique_songs": 42,
+  "success_observations": 49,
+  "cohorts": {
+    "GLOBAL_HINDI_CROSSOVER": {
+      "observations_n": 8,
+      "unique_songs_n": 8,
+      "period_counts": {
+        "2024": 5,
+        "2023": 3
+      },
+      "feature_known_n": {
+        "bpm": 2,
+        "perceived_pulse": 0,
+        "tempo_changes": 0,
+        "key": 2,
+        "mode": 2,
+        "emotion": 2,
+        "energy": 2,
+        "groove": 2,
+        "meter": 2,
+        "duration_seconds": 2,
+        "intro_seconds": 0,
+        "first_vocal_seconds": 0,
+        "first_hook_seconds": 0,
+        "first_chorus_seconds": 0,
+        "hook_repetitions": 0,
+        "structure": 0,
+        "melodic_contour": 0,
+        "vocal_range": 0,
+        "tessitura": 0,
+        "climax": 0,
+        "arrangement_production": 0
+      },
+      "film_known_true_n": 6,
+      "film_unknown_n": 2
+    },
+    "GLOBAL_SUCCESS": {
+      "observations_n": 30,
+      "unique_songs_n": 24,
+      "period_counts": {
+        "2024": 20,
+        "2025": 10
+      },
+      "feature_known_n": {
+        "bpm": 2,
+        "perceived_pulse": 0,
+        "tempo_changes": 0,
+        "key": 3,
+        "mode": 3,
+        "emotion": 0,
+        "energy": 0,
+        "groove": 0,
+        "meter": 0,
+        "duration_seconds": 3,
+        "intro_seconds": 0,
+        "first_vocal_seconds": 0,
+        "first_hook_seconds": 0,
+        "first_chorus_seconds": 1,
+        "hook_repetitions": 0,
+        "structure": 1,
+        "melodic_contour": 0,
+        "vocal_range": 0,
+        "tessitura": 0,
+        "climax": 0,
+        "arrangement_production": 0
+      },
+      "film_known_true_n": 0,
+      "film_unknown_n": 24
+    },
+    "HINDI_INDIAN_SUCCESS": {
+      "observations_n": 11,
+      "unique_songs_n": 11,
+      "period_counts": {
+        "2023": 10,
+        "2024": 1
+      },
+      "feature_known_n": {
+        "bpm": 3,
+        "perceived_pulse": 0,
+        "tempo_changes": 0,
+        "key": 3,
+        "mode": 3,
+        "emotion": 2,
+        "energy": 2,
+        "groove": 2,
+        "meter": 2,
+        "duration_seconds": 3,
+        "intro_seconds": 0,
+        "first_vocal_seconds": 0,
+        "first_hook_seconds": 0,
+        "first_chorus_seconds": 0,
+        "hook_repetitions": 0,
+        "structure": 0,
+        "melodic_contour": 0,
+        "vocal_range": 0,
+        "tessitura": 0,
+        "climax": 0,
+        "arrangement_production": 0
+      },
+      "film_known_true_n": 5,
+      "film_unknown_n": 6
+    }
+  },
+  "feature_coverage_unique_entities": {
+    "bpm": {
+      "known_n": 6,
+      "missing_n": 36,
+      "total_n": 42
+    },
+    "perceived_pulse": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    },
+    "tempo_changes": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    },
+    "key": {
+      "known_n": 7,
+      "missing_n": 35,
+      "total_n": 42
+    },
+    "mode": {
+      "known_n": 7,
+      "missing_n": 35,
+      "total_n": 42
+    },
+    "emotion": {
+      "known_n": 3,
+      "missing_n": 39,
+      "total_n": 42
+    },
+    "energy": {
+      "known_n": 3,
+      "missing_n": 39,
+      "total_n": 42
+    },
+    "groove": {
+      "known_n": 3,
+      "missing_n": 39,
+      "total_n": 42
+    },
+    "meter": {
+      "known_n": 3,
+      "missing_n": 39,
+      "total_n": 42
+    },
+    "duration_seconds": {
+      "known_n": 7,
+      "missing_n": 35,
+      "total_n": 42
+    },
+    "intro_seconds": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    },
+    "first_vocal_seconds": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    },
+    "first_hook_seconds": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    },
+    "first_chorus_seconds": {
+      "known_n": 1,
+      "missing_n": 41,
+      "total_n": 42
+    },
+    "hook_repetitions": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    },
+    "structure": {
+      "known_n": 1,
+      "missing_n": 41,
+      "total_n": 42
+    },
+    "melodic_contour": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    },
+    "vocal_range": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    },
+    "tessitura": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    },
+    "climax": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    },
+    "arrangement_production": {
+      "known_n": 0,
+      "missing_n": 42,
+      "total_n": 42
+    }
+  },
+  "own_data_n": 0
+}

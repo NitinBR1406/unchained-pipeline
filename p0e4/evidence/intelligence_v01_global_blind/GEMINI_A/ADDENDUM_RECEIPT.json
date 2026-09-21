@@ -1,0 +1,17 @@
+{
+  "status": "ADDENDUM_FROZEN",
+  "claims_certified": false,
+  "capture": "Rendered response transcription, normalized whitespace, table expressed in prose and JSON compacted.",
+  "findings": [
+    "Original high confidence explicitly downgraded by provider",
+    "Unsupported algorithmic retention, universal tempo and deterministic revenue claims retracted",
+    "Addendum changes Chaleya BPM from 95 to 102 without a measurement method",
+    "Addendum loses identities for three original rows",
+    "Counter timestamp differs between displayed table and JSON",
+    "Authorization status of reupload is a provider claim, not independently established"
+  ],
+  "files": {
+    "ADDENDUM.md": "69862c0297229c3ccdd7c3e9e1bbfc9ae7aabe1631dcb4ee3ef6d41db5ff21ac",
+    "ADDENDUM_PROMPT.txt": "0b86c0f6e8c8a2e124cf23c105e206de87cd38d037ec988bbd671d6081b93514"
+  }
+}

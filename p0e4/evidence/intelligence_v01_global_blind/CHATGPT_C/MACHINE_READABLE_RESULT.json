@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "track": "CHATGPT_C",
+  "design_only": true,
+  "inputs": {
+    "key": null,
+    "mode": null,
+    "bpm": null,
+    "song_duration": null,
+    "emotion": null,
+    "energy": null,
+    "vocal_range": null,
+    "hook_characteristics": null,
+    "release_type": null,
+    "target_platform": null,
+    "structural_features": null,
+    "recording_version": null,
+    "measurement_provenance": []
+  },
+  "outputs": {
+    "SUCCESS_SIGNAL_SCORE": null,
+    "EVIDENCE_CONFIDENCE": "insufficient_for_feature_outcome_inference",
+    "REFERENCE_MATCH_SCORE": null,
+    "NITIN_FIT_SCORE": null,
+    "EXPECTED_RETENTION_PROFILE": null,
+    "RISKS": [
+      "hit_only_selection",
+      "sparse_features",
+      "version_aggregation",
+      "source_dependence",
+      "missing_private_outcomes"
+    ],
+    "COMPARABLE_SONGS": []
+  },
+  "output_contract": {
+    "SUCCESS_SIGNAL_SCORE": "Keep null; expose sourced chart rank/period/market as separate descriptive facts, never hit probability.",
+    "EVIDENCE_CONFIDENCE": "Qualitative coverage, provenance, measurement and transfer judgments with reasons and denominators.",
+    "REFERENCE_MATCH_SCORE": "Keep null until input observed; optional future descriptive distance may compare tempo with explicit half/double ambiguity, mode and structural timings. Never label similarity predicted success. No invented weights.",
+    "NITIN_FIT_SCORE": "Null until observed repeated singer audition data and explicit scoring rubric.",
+    "EXPECTED_RETENTION_PROFILE": "Null unless comparable platform-specific retention curves, denominators, timestamps and content versions are actually observed. Structural expectations alone are hypotheses.",
+    "COMPARABLE_SONGS": "Return only version-scoped matches with known-field coverage, source IDs, unresolved conflicts and cohort."
+  },
+  "vocal_key_optimizer": {
+    "nitin_measured_range": null,
+    "nitin_tessitura": null,
+    "fit_score": null,
+    "required_inputs": [
+      "authorized original melody MIDI or measured pitch contour",
+      "per-note duration and vowel",
+      "comfortable repeatable register observations",
+      "chorus and climax demands",
+      "multiple comparable audition takes"
+    ],
+    "candidate_generation": "Add one integer semitone offset to every pitched note; retain mode, contour, intervals, groove, meter and structure.",
+    "constraints": [
+      "no extrapolation from artist reference key",
+      "no extrapolation from isolated extreme notes",
+      "exclude uncomfortable candidates",
+      "compare instrumental timbre after transpose"
+    ],
+    "protocol": [
+      "Measure comfortable phrase first.",
+      "Audition proposed chorus and climax at comparable moderate intensity.",
+      "Test nearby keys with breaks and self-reported effort.",
+      "Log actual pitches, duration, diction, stability and register behavior.",
+      "Repeat preferred takes another occasion.",
+      "Nitin and Vatsal select creative fit after audition."
+    ],
+    "note": "No clinical vocal assessment or automatic key recommendation is claimed."
+  },
+  "future_data_model": {
+    "entities": {
+      "song_id": "composition",
+      "recording_id": "specific audio version",
+      "content_id": "derivative edit bound to recording",
+      "publication_id": "platform upload",
+      "campaign_id": "coordinated release activity",
+      "experiment_id": "predefined comparison or randomized allocation",
+      "lead_id": "documented prospect",
+      "booking_id": "confirmed engagement record",
+      "revenue_event_id": "actual monetary event"
+    },
+    "links": [
+      [
+        "song_id",
+        "recording_id"
+      ],
+      [
+        "recording_id",
+        "content_id"
+      ],
+      [
+        "content_id",
+        "publication_id"
+      ],
+      [
+        "campaign_id",
+        "publication_id"
+      ],
+      [
+        "experiment_id",
+        "publication_id"
+      ],
+      [
+        "lead_id",
+        "booking_id"
+      ],
+      [
+        "booking_id",
+        "revenue_event_id"
+      ]
+    ],
+    "metric_record_required": [
+      "metric_id",
+      "entity_type",
+      "entity_id",
+      "platform",
+      "metric_name",
+      "value",
+      "unit",
+      "period_start",
+      "period_end",
+      "observed_at",
+      "source_url_or_export_hash",
+      "denominator",
+      "attribution_method",
+      "attribution_evidence_id"
+    ],
+    "attribution": "A shared ID establishes lineage, not causality. Link streams, subscribers, leads, bookings and revenue only with observed evidence; otherwise attribution is unknown. Separate gross/refund/net/currency. Deduplicate revenue events.",
+    "experiment_design": "Pre-register edits, platform, audience/traffic allocation, time window and outcome; compare within recording where possible. Use actual exposure denominators. Do not pool short-video completion and full-song retention."
+  },
+  "UNCHAINED_NITIN_OWN_DATA": [],
+  "governance": "No publication, deployment, private architecture claim, purchase, credentials or approval inferred."
+}

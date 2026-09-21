@@ -1,0 +1,9 @@
+{
+  "observed_at": "2026-09-21T23:23:40.066959+00:00",
+  "reason": "Repeated New Rules endpoint variants after roughly 28 minutes of collection",
+  "action": "Stop response clicked once; same session processing existing follow-up and visibly creating file",
+  "new_research_dispatch": false,
+  "other_track_findings_shared": false,
+  "frozen_question_changed": false,
+  "remaining_unavailable_fields": "must remain null"
+}

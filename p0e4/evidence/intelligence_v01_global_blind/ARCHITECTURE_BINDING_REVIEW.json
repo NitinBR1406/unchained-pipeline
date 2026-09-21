@@ -1,0 +1,14 @@
+{
+  "purpose": "Read-only existing architecture binding, not research synthesis",
+  "authoritative_branch_head_observed": "78a13862fff1f0895a528bd126ab49f13c1edce8",
+  "references": {
+    "p0e4/canonical/FACTORY_SCHEMA_V01.json": "69d7d35fcd26dbc5eb297589f8d75bb14518224d337a921b6d976a41bc0e8a8d",
+    "p0e4/canonical/CONTRACT.md": "ad866e64e56e6042e954e2d7b344cd5ebdde087648d28bdd666bd3ea37786ad0"
+  },
+  "existing_path": "PUBLICATION -> PLATFORM_PACKAGES -> DERIVATIVES -> CONTENT_MASTER -> CAMPAIGNS",
+  "song_binding": "CONTENT_MASTER.song_id",
+  "experiment_binding": "DERIVATIVES.experiment_id and hypothesis_id",
+  "business_binding": "MONETIZATION / BUSINESS_FUNNEL via publication_id or funnel_id as specified in canonical contract",
+  "unattributed_policy": "null is unattributed; do not infer causal musical effects from IDs",
+  "governance": "Design-only additive sidecar; no new production rows or schema mutation"
+}

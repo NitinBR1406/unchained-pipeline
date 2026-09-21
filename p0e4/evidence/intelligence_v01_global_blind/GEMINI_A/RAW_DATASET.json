@@ -1,0 +1,62 @@
+[
+  {
+    "id": "REC_001_GLOBAL",
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "era": 2019,
+    "market": "GLOBAL_SUCCESS",
+    "bpm": 171,
+    "key": "C#",
+    "mode": "Major",
+    "song_duration_sec": 202,
+    "spotify_streams": "5B+",
+    "first_vocal_time": null,
+    "first_hook_time": null,
+    "measured_vocal_range": null
+  },
+  {
+    "id": "REC_002_GLOBAL",
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "era": 2017,
+    "market": "GLOBAL_SUCCESS",
+    "bpm": 96,
+    "key": "C#",
+    "mode": "Minor",
+    "song_duration_sec": 234,
+    "spotify_streams": "5B+",
+    "first_vocal_time": null,
+    "first_hook_time": null,
+    "measured_vocal_range": null
+  },
+  {
+    "id": "REC_003_HINDI",
+    "title": "Tum Hi Ho",
+    "artist": "Arijit Singh, Mithoon",
+    "era": 2013,
+    "market": "HINDI_INDIAN_SUCCESS",
+    "bpm": 94,
+    "key": "F",
+    "mode": "Minor",
+    "song_duration_sec": 262,
+    "youtube_views": "504M+",
+    "first_vocal_time": null,
+    "first_hook_time": null,
+    "measured_vocal_range": null
+  },
+  {
+    "id": "REC_004_CROSSOVER",
+    "title": "Chaleya",
+    "artist": "Anirudh Ravichander, Arijit Singh, Shilpa Rao",
+    "era": 2023,
+    "market": "GLOBAL_HINDI_CROSSOVER",
+    "bpm": 95,
+    "key": "C",
+    "mode": "Major",
+    "song_duration_sec": 200,
+    "youtube_views": "664M+",
+    "first_vocal_time": null,
+    "first_hook_time": null,
+    "measured_vocal_range": null
+  }
+]

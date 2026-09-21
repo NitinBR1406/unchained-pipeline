@@ -1,0 +1,11 @@
+{
+  "track": "CHATGPT_C",
+  "returncode": 0,
+  "byte_equal": {
+    "RAW_DATASET.csv": true,
+    "SUCCESS_OBSERVATIONS.csv": true,
+    "COMPUTED_SUMMARY.json": true
+  },
+  "prompt_equal": true,
+  "claims_independently_validated": false
+}

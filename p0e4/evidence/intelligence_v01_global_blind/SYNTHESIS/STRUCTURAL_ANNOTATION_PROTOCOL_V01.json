@@ -1,0 +1,18 @@
+{
+  "status": "PROTOCOL_NOT_EXECUTED",
+  "unit": "exact recording/version and exact upload; audio and video timelines separate",
+  "fields": {
+    "intro_duration": "First substantive lead-vocal onset minus audio start; log opening adlibs separately.",
+    "first_vocal_time": "Earliest human vocal sound; distinguish lyric-bearing lead, sample, adlib and backing vocal.",
+    "first_hook_time": "First agreed salient recurring motif (vocal/instrumental); do not define automatically as chorus.",
+    "first_chorus_time": "Section boundary by two annotators; for mukhda/antara or non-chorus forms retain original labels and null chorus if inappropriate.",
+    "hook_repetitions": "Complete motif occurrences with timestamp spans; partial variants separately.",
+    "tempo": "Meter plus beat unit, perceptual pulse and segment boundaries; math half/double alternatives are not evidence of listening ambiguity.",
+    "key_mode": "Tonic evidence, pitch collection, harmony and melodic behavior; major/minor is not automatically a raga label.",
+    "emotion_energy_groove": "Keep subjective labels, acoustic measurement and platform scores separate with their respective units.",
+    "vocal_range_tessitura": "Measured lead-vocal notes with confidence and duration-weighted register occupancy; exclude or separately tag backing vocals and adlibs.",
+    "climax": "Timestamp and criterion (intensity, texture, pitch, lyric); do not equate highest pitch with climax automatically.",
+    "duration": "Exact version length; exclude pre-roll credits only under a recorded rule."
+  },
+  "quality": "Disagreement adjudicated with evidence and inter-rater agreement; no invented timestamps for unplayed songs."
+}

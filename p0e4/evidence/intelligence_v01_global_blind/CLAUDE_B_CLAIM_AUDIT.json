@@ -1,0 +1,187 @@
+{
+  "track": "CLAUDE_B",
+  "status": "AUDIT_COMPLETE_WITH_MATERIAL_CORRECTIONS",
+  "audit_date": "2026-09-22",
+  "scope": "Read-only audit of frozen B report, data and code; three consequential literature checks; not a new independent study. No other tracks inspected.",
+  "raw_root": "research/intelligence_v01_global_blind/CLAUDE_B/provider_artifacts/track_b",
+  "raw_modified": false,
+  "summary": {
+    "rows": 168,
+    "global": 85,
+    "hindi_indian": 83,
+    "musical_bpm_rows": 25,
+    "key_mode_rows": 24,
+    "hindi_musical_feature_rows": 0,
+    "findings": 15
+  },
+  "findings": [
+    {
+      "id": "B01",
+      "severity": "HIGH",
+      "title": "Hindi-only denominator is actually Hindi-inclusive",
+      "evidence": "analyze.py tests whether \"Hindi\" is a substring. Its 20 film / 27 rows includes Hindi/Punjabi and Hindi/Bengali. Exact language == Hindi returns 19 film / 24 rows (79.17%), not 74%.",
+      "required_interpretation": "Rename existing figure Hindi-inclusive; use 19/24 only when reporting exact Hindi labels. These remain upload-row frequencies.",
+      "source_urls": []
+    },
+    {
+      "id": "B02",
+      "severity": "MEDIUM",
+      "title": "Key and mode coverage overstated",
+      "evidence": "Report section 3 says bpm/key/mode/duration present 25, null 143. RAW_DATASET and ANALYSIS_RESULTS show key and mode present 24, null 144; G004 Axel F has neither.",
+      "required_interpretation": "Separate field denominators. Preserve BPM and duration n=25.",
+      "source_urls": []
+    },
+    {
+      "id": "B03",
+      "severity": "HIGH",
+      "title": "Z1 violates its own membership rule",
+      "evidence": "Z1 says 78–96 perceived BPM and minor, but lists Lean On 98, Sorry 100 and major, Mi Gente 105. Pulse has not been listened to or consistently normalized.",
+      "required_interpretation": "Treat Z1 as an editorial mixed reference set; it is not an empirical minor 78–96 cluster.",
+      "source_urls": []
+    },
+    {
+      "id": "B04",
+      "severity": "HIGH",
+      "title": "Structure prescriptions exceed observations",
+      "evidence": "All 168 first-hook/chorus timing, hook repetition, tessitura and climax fields are null. Z1 specifies chorus 30–45 seconds, intro <=10 seconds, 1–2 bar hook, ending and grid tightness; Z4 assigns mukhda–antara and expected scales.",
+      "required_interpretation": "Label each unmeasured field as a hypothesis. Literature trends cannot establish this joint recipe, especially for Hindi songs with zero musical measurements.",
+      "source_urls": []
+    },
+    {
+      "id": "B05",
+      "severity": "HIGH",
+      "title": "Unit of analysis mixes uploads, recordings and releases",
+      "evidence": "H015/H033 are explicitly lyrical/video uploads of Aankh Maarey. G083 is a double-title chart single. Methods admit platform-dependent units but also call the unit one recording. No recording_id or canonical audio/version join supports recording-level deduplication.",
+      "required_interpretation": "168 means source records, not 168 verified unique recordings. Preserve both uploads, link their song/recording identities separately, and do not count them as independent musical examples. No claim of bit-identical audio is made.",
+      "source_urls": []
+    },
+    {
+      "id": "B06",
+      "severity": "HIGH",
+      "title": "Platform reward claim is not identified",
+      "evidence": "Zero YouTube/Spotify-India overlap is a property of these truncated, differently timed leader lists. No audio was played, Indian features/language for Spotify rows are null, and no genre coding protocol exists.",
+      "required_interpretation": "The assertion that YouTube rewards dance and Spotify rewards romantic ballads is an untested interpretation; zero overlap alone cannot identify platform preference. Note the overlap code checks WI but omits KI-only rows, a latent join bug even if the current zero remains unchanged.",
+      "source_urls": []
+    },
+    {
+      "id": "B07",
+      "severity": "HIGH",
+      "title": "Current India/West scale contrast exceeds L18",
+      "evidence": "L18 supports approximately one quarter each Asavari and Bilawal, not an exhaustive 50/50 major/minor result. Its 310 historical hits are composer-enriched; two experts double-label only 50, one labels the rest. Authors caution against strong claims.",
+      "required_interpretation": "Retain the historical scale frequencies with sampling caveats. Remove the current India-vs-post-2000-West comparison: periods, selection and scale taxonomies differ; pentatonic/modal cases cannot silently be forced into binary mode.",
+      "source_urls": [
+        "https://archives.ismir.net/ismir2013/paper/000103.pdf"
+      ]
+    },
+    {
+      "id": "B08",
+      "severity": "MEDIUM",
+      "title": "Repetition caveat is generalized across outcomes",
+      "evidence": "L24 reports greater chorus and word repetition associated with #1 versus never-above-#90 songs, and chorus repetition with faster ascent among #1s. The excessive-word attenuation concerns Top-40 debut specifically.",
+      "required_interpretation": "Keep these outcomes separate. Z7 moderate-word advice is a test hypothesis, not a universal optimum. Lab fluency experiments do not establish a causal field success effect.",
+      "source_urls": [
+        "https://msbfile03.usc.edu/digitalmeasures/jnunes/intellcont/Power%20of%20Repetition%20Final-1.pdf"
+      ]
+    },
+    {
+      "id": "B09",
+      "severity": "MEDIUM",
+      "title": "Typicality association is sound; one-element prescription is not",
+      "evidence": "L05 supports an inverted-U association, using genre-weighted multidimensional similarity and a preceding-52-week comparison. Main regression n is 25,077; near-27,000 describes the broader chart dataset.",
+      "required_interpretation": "Retain historical conditional association. Z8 one salient atypical element is an editorial translation, not a measured optimum or a directly transferable Hindi success rule.",
+      "source_urls": [
+        "https://business.columbia.edu/sites/default/files-efs/pubfiles/25509/Mauskapf_productfeatures.pdf"
+      ]
+    },
+    {
+      "id": "B10",
+      "severity": "HIGH",
+      "title": "Vocal-range medians are not male tessitura",
+      "evidence": "The 10 arrangement ranges include Dark Horse and Let It Go. E3 and C-sharp5 are separately pooled endpoint medians of all 10. Neither is a measured sustained register, male-only estimate, or a range occurring in a representative singer.",
+      "required_interpretation": "Remove male-lead/tessitura inference; retain explicitly arrangement-level endpoint/span descriptives. Nitin fit remains null.",
+      "source_urls": []
+    },
+    {
+      "id": "B11",
+      "severity": "MEDIUM",
+      "title": "Meter/pulse alternatives are collapsed",
+      "evidence": "G013 source quote explicitly permits 12/8 or 4/4 with triplets. merge_batch_g00.py selects 4/4 first on any matching token, yielding 190 BPM plus plain 4/4. A 23/25 half/double alternative count reflects website text, not perceptual validation.",
+      "required_interpretation": "Preserve beat unit and alternate notation; plain 4/4 is not disproved, but the uncertainty is lost. Generic half/double text is not independent evidence that each song has perceptually ambiguous pulse.",
+      "source_urls": []
+    },
+    {
+      "id": "B12",
+      "severity": "MEDIUM",
+      "title": "Secondary features lack recording/arrangement binding",
+      "evidence": "Perfect records a fallback site with mismatched 3:45 duration/G major versus 4:23 album source. Sheet music, Wikipedia duration and third-party feature pages are combined by title. Some third-party sites mirror the same upstream feature source.",
+      "required_interpretation": "Treat third-party corroboration as dependent and version-sensitive. Validate ISRC/version/audio identity before using song-level numeric features as recording targets; arrangement range cannot substitute for audio measurement.",
+      "source_urls": []
+    },
+    {
+      "id": "B13",
+      "severity": "MEDIUM",
+      "title": "Key disagreement statistic actually counts mode disagreement",
+      "evidence": "merge_batch_g00.py conflict flag tests wiki_mode != site_mode, restricted to major/minor. It never compares tonic. Thus 7/14 is not a complete key-disagreement rate; modal comparisons are excluded.",
+      "required_interpretation": "Label it mode disagreement in the eligible binary-mode subset; do not infer overall key accuracy or relative-major/minor agreement without tonic-aware comparison.",
+      "source_urls": []
+    },
+    {
+      "id": "B14",
+      "severity": "HIGH",
+      "title": "Success scoring risks unsupported normative penalties",
+      "evidence": "Design lists chorus >60 sec, duration >4:00, key change and high typicality as risks, although report says relevant era trends do not distinguish winners and provides no calibrated combined predictor. Five retention curves are an arbitrary sufficiency threshold.",
+      "required_interpretation": "Use a descriptive evidence checklist only. Do not turn these into success penalties, predicted retention or ranking weights until prospectively validated within a defined market and outcome.",
+      "source_urls": []
+    },
+    {
+      "id": "B15",
+      "severity": "MEDIUM",
+      "title": "Zone confidence and support counts are not membership counts",
+      "evidence": "Z5 says independent Hindi singer-songwriter and 100+ days at #1, yet its support is all 17 peak-#1 SI rows and six long-#1 rows, including film songs outside that archetype. Language/film data are null for many examples. Z6 combines WI regional examples with BI #1 longevity from different songs.",
+      "required_interpretation": "Attach row-level membership/evidence for each property; mixed-source support cannot certify a coherent musical zone. Keep genre/emotion and independence claims unresolved where unmeasured.",
+      "source_urls": []
+    }
+  ],
+  "literature_verification": [
+    {
+      "id": "L18",
+      "url": "https://archives.ismir.net/ismir2013/paper/000103.pdf",
+      "access": "Official ISMIR full PDF read",
+      "verdict": "Approximate frequencies supported; generalized major/minor and cross-market contrast unsupported"
+    },
+    {
+      "id": "L24",
+      "url": "https://msbfile03.usc.edu/digitalmeasures/jnunes/intellcont/Power%20of%20Repetition%20Final-1.pdf",
+      "access": "USC-hosted primary article indexed passages read via search; direct PDF open returned 502. Publisher direct open failed.",
+      "verdict": "Core association supported; excessive-word caveat outcome-specific"
+    },
+    {
+      "id": "L05",
+      "url": "https://business.columbia.edu/sites/default/files-efs/pubfiles/25509/Mauskapf_productfeatures.pdf",
+      "access": "Columbia-hosted author full paper read; publisher abstract also checked",
+      "verdict": "Core typicality association supported; one-element recipe untested"
+    }
+  ],
+  "raw_sha256_observed": {
+    "REPORT_CLAUDE_B_FROZEN_V01.md": "0df5cf39c5d0acb9648fd8e37b9ee14339edbeeee57081429afc00d1be9758b4",
+    "README_FREEZE.txt": "1d9fc7a8fe223575cd796ed9443a5707173ae89d449c2f87c219d655c01f0720",
+    "HASHES.txt": "cb60751eaf81ead3d46178fbd97df71816b556cc81c977be25912c75b4de2253",
+    "code/merge_batch_g00.py": "2c253e7c281b36fcd20eeba50203c839517e1d9f7229f4d93cf7a5e229d7f7dd",
+    "code/literature.py": "5551510f102ce5fcdf913db81fc29bec49185cc5df8c123e26aa4d651e5c7ea3",
+    "code/build_dataset.py": "e3c1713e5031f6cd86d3a0a5a0e40e4feee283ed70b413a0f4dd50d3c1520da0",
+    "code/machine_result.py": "7749e266763d00776a5842db2cd7ef939a21aced53edd95b648b3bfc599f7631",
+    "code/analyze.py": "971bfd4b1cc8102c5a928ac0c2ed5edd604791d4dfe00e34a8c804a0884fad41",
+    "data/SOURCES_PROVENANCE.csv": "aaca2705638e56c67c320c326d204e50ac2201ff0ce23402bda5fffbf6953762",
+    "data/RAW_DATASET.json": "a5f2f8c2a4a0e31610a13c0f4e756c04f73b5c4656ada67472e9a9e34a7a9633",
+    "data/LITERATURE_EVIDENCE.csv": "5cd82b5e7c5b917636b7076b8c0a4644ad98df4cc1d6672c709442ff3b4b18d9",
+    "data/COLLECTOR_BATCH_G00_RAW.txt": "348598b654a765d70bfdacc12b0bac7111b46e3174755eb7ff88e1c6a14c2fe3",
+    "data/ANALYSIS_RESULTS.json": "cec011bcdbf90377f94ebdbe03192f52c707040d43785b702df11d5cbf7e6f26",
+    "data/MACHINE_READABLE_RESULT.json": "78a194c53cc07945f55a34dd1710a27bbd29f5f41771e64ee345423c7dd73cd9",
+    "data/RAW_DATASET.csv": "825898ca5948688fe63bed6fd05c7ae225684a540bf697d17c2d0b4094ad909b"
+  },
+  "limitations": [
+    "No audio inspection or version identity validation.",
+    "No claim that all success counts or 24 literature entries were independently reverified.",
+    "Audit does not authorize production or publication."
+  ]
+}

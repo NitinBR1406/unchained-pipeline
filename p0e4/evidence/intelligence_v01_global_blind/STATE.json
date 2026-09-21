@@ -1,0 +1,18 @@
+{
+  "round": "INTELLIGENCE_V01_GLOBAL_BLIND",
+  "created_at": "2026-09-21T22:56:15.950263+00:00",
+  "tracks": {
+    "GEMINI_A": "FROZEN_WITH_RETRACTIONS_UNVERIFIED",
+    "CLAUDE_B": "FROZEN_BYTES_AND_REPLAY_VERIFIED",
+    "CHATGPT_C": "FROZEN_BYTES_AND_REPLAY_VERIFIED"
+  },
+  "prior_hindi_round_adopted": false,
+  "synthesis_allowed": true,
+  "production_mutation": false,
+  "publication": false,
+  "updated_at": "2026-09-21T23:51:53.251655+00:00",
+  "phase": "BOUNDED_RESEARCH_AND_SYNTHESIS_COMPLETE",
+  "outputs_status": "READABLE_AND_MACHINE_READABLE_VALIDATED",
+  "claims_status": "NO_PREDICTIVE_OR_CAUSAL_MODEL",
+  "next_research": "Version-bind and annotate selected recordings; collect own vocal auditions and authorized audience outcomes."
+}

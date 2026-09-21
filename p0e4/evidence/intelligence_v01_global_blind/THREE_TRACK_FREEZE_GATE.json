@@ -1,0 +1,19 @@
+{
+  "synthesis_allowed": true,
+  "tracks": {
+    "GEMINI_A": {
+      "frozen_bytes_verified": true,
+      "issues": []
+    },
+    "CLAUDE_B": {
+      "frozen_bytes_verified": true,
+      "issues": []
+    },
+    "CHATGPT_C": {
+      "frozen_bytes_verified": true,
+      "issues": []
+    }
+  },
+  "caveat": "Freeze does not validate research claims.",
+  "observed_at": "2026-09-21T23:39:49.165085+00:00"
+}
