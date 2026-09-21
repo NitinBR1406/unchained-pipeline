@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-09-21T22:51:02.183464+00:00",
+  "previous_checkpoint_sha": "68dad9a07e1e1cf756a56dbb73713a2d0237d078",
+  "previous_checkpoint_artifact_hashes_verified": 36,
+  "synthesis_allowed": false,
+  "publication": false,
+  "production_mutation": false,
+  "track_b_code_replay_byte_equal": [
+    "dataset_CLAUDE_V01.json",
+    "dataset_CLAUDE_V01.csv",
+    "analysis_results_CLAUDE_V01.json"
+  ],
+  "track_c_external_output_missing": true
+}
