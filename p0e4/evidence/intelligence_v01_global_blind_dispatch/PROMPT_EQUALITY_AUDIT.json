@@ -1,0 +1,10 @@
+{
+  "prompt_sha256": "299f61c6e9dcdd8097f30233f6a1fab20fe8551111d1357d357f476db93e94a0",
+  "identical_persisted_prompts": {
+    "GEMINI_A": true,
+    "CLAUDE_B": true,
+    "CHATGPT_C": true
+  },
+  "synthesis_started": false,
+  "prior_round_outputs_supplied": false
+}
