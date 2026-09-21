@@ -1,0 +1,15 @@
+{
+  "track": "A",
+  "status": "DISPATCH_OBSERVED_RUNNING",
+  "observed_at": "2026-09-21T22:06:37.046365+00:00",
+  "prompt_sha256": "e156e913d5f3f5ea95224b63b4b5f98b32c890f9fb963972de068f367e4997ef",
+  "surface": "Chrome tab 1368660717",
+  "displayed_model": "3.6 Flash",
+  "evidence": "Submitted prompt visible; Stop response and Gemini is typing observed",
+  "fresh_conversation": true,
+  "other_track_results_supplied": false,
+  "completion_observed": false,
+  "receipt_type": "LOCAL_UI_OBSERVATION_NOT_PROVIDER_SIGNED",
+  "confirmed_conversation_url": "https://gemini.google.com/app/a0d468ae25471eca",
+  "conversation_url_observed_at": "2026-09-21T22:07:17.867380+00:00"
+}

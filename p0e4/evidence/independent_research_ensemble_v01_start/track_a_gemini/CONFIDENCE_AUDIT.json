@@ -1,0 +1,12 @@
+{
+  "provider_row_confidence": "High on all 15 rows",
+  "orchestrator_evidence_status": "UNVERIFIED_DO_NOT_INGEST_AS_MEASURED",
+  "within_track_issues": [
+    "No per-row URLs, video IDs or upload dates",
+    "Zone n>=18 and n>=22 exceed displayed 15-row corpus without extra dataset",
+    "No statistical calculations or age normalization shown",
+    "Retention and replay generalizations lack observations",
+    "Nitin-specific pitch advice lacks measured voice data"
+  ],
+  "cross_track_comparison_performed": false
+}

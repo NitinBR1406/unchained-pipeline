@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-09-21T22:21:28.474377+00:00",
+  "status": "FROZEN_ADDENDUM_V01",
+  "sha256": "fa5d95f9dccbdde47106e5945790f5581ac27d5186d5436fd7cbe7662c80ae9f",
+  "capture": "Visible DOM text transcribed; layout whitespace normalized",
+  "other_track_findings_supplied": false,
+  "quality": "STILL_UNVERIFIED",
+  "issues": [
+    "Remaining numeric key/BPM claims lack per-field sources",
+    "Lut Gaye claimed T-Series 1.5B but embedded same-ID card says Pooja 1k views",
+    "No upload-date normalization or uncertainty intervals",
+    "Zone 3 includes 105 BPM recording outside stated 80\u201390 BPM zone"
+  ],
+  "embedded_card_url": "https://www.youtube.com/watch?v=hmqsziPKU8M"
+}

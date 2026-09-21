@@ -1,0 +1,10 @@
+Sample Selection Rule
+
+Timeframe: Released between January 2011 and September 2026.
+
+Commercial Milestone: ≥ 300 Million views on official YouTube video uploads and/or top-tier Spotify India streaming figures.
+
+Traceability: Verified against official audio/music video metadata, DSP registrations, and verified harmonic transcribers (Tunebat, Songstats, Chordify verified sheets, acoustic pitch detection).
+
+Deduplication: Film audio duplicates, slowed/reverb remixes, lofi versions, and unauthorized uploads were purged; only original master releases are analyzed.
+

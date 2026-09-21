@@ -1,0 +1,15 @@
+{
+  "track": "B",
+  "status": "DISPATCH_OBSERVED_RUNNING",
+  "observed_at": "2026-09-21T22:06:37.046365+00:00",
+  "prompt_sha256": "e156e913d5f3f5ea95224b63b4b5f98b32c890f9fb963972de068f367e4997ef",
+  "surface": "https://claude.ai/cowork/local_224f86bb-b377-4398-8fe8-02e1d8d09f2a",
+  "displayed_model": "Fable 5.1 Medium",
+  "evidence": "Message 1 of 1 user prompt visible; Running and Working on it observed",
+  "fresh_conversation": true,
+  "other_track_results_supplied": false,
+  "completion_observed": false,
+  "receipt_type": "LOCAL_UI_OBSERVATION_NOT_PROVIDER_SIGNED",
+  "confirmed_conversation_url": "https://claude.ai/cowork/cse_01QFY8k1GdVcjofDbWH48F5s",
+  "conversation_url_observed_at": "2026-09-21T22:07:17.867380+00:00"
+}

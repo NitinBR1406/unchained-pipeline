@@ -1,0 +1,9 @@
+{
+  "google_drive_connector": "403 on Gemini-created private document; no permissions expanded",
+  "google_docs_export": "Saved-to-Drive observed in browser; local download not located, no success claimed",
+  "raw_capture": "Browser-visible content manually persisted, whitespace normalized; provider export URL retained",
+  "browser_downloads_page": "Blocked by browser policy; no bypass attempted",
+  "native_textedit": "Timed out twice",
+  "terminal_ui": "Rejected; no terminal UI action executed",
+  "musicstax_persistent_access": "Auto-review rejected persistent grant; narrower Allow once used"
+}

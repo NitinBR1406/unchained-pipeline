@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-21T22:08:24.451127+00:00",
+  "track": "A",
+  "event": "PROVIDER_RESPONSE_FAILED_RETRY_OBSERVED",
+  "error_text": "Sorry, something went wrong. Please try your request again.",
+  "recovery": "Same conversation Redo > Try again; Stop response and Gemini is typing observed",
+  "new_conversation": false,
+  "prompt_changed": false,
+  "failed_partial_response_is_frozen_report": false
+}
