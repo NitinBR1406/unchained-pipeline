@@ -1,0 +1,12 @@
+{
+  "status": "RESEARCH_ARTIFACT_VALIDATION_PASSED",
+  "tested_payload_sha": "12c52c7ffbc0602292a2b6e647fa0472e80556d9",
+  "observed_at": "2026-09-21T23:52:59.102998+00:00",
+  "validation": "python3 p0e4/evidence/intelligence_v01_global_blind/validate_delivery.py",
+  "full_manifest_verified_files": 77,
+  "worktree_clean_after_validation": true,
+  "scope": "Research-only artifact integrity and consistency; not certification of research claims or production acceptance.",
+  "production_code_changed": false,
+  "publication": false,
+  "payload_manifest_sha256": "e7c739d35716f2af5de553ff53c26d4ffae6055719e29c6ba215001ac8cfe01d"
+}
