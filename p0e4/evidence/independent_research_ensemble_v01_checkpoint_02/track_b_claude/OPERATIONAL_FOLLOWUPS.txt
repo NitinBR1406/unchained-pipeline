@@ -1,0 +1,5 @@
+FOLLOWUP_01
+Operational collection guidance only; the frozen research question is unchanged. Do not bypass access restrictions or use encoded URL variants to evade failed endpoints. Stop repeated endpoint-variant probes. Mark unavailable sources and fields explicitly null with reasons. Complete the strongest attainable independent report, dataset, provenance and confidence assessment using evidence actually retrieved; do not pad the sample. Freeze CLAUDE_INDEPENDENT_REPORT_V01 and provide downloadable machine-readable artifacts. No findings from any other track have been supplied.
+
+FOLLOWUP_02_AFTER_INTERRUPTION
+Continue in this same research run from evidence already collected. The source-probing loop was interrupted; do not restart it or dispatch duplicate research agents. Finish the report and downloadable dataset/provenance/receipt now with obtainable verified evidence, explicitly null unavailable fields and state any sample-size limitations. Preserve the original frozen question and independence. Output and freeze CLAUDE_INDEPENDENT_REPORT_V01; a limitation report is preferable to unsupported values.

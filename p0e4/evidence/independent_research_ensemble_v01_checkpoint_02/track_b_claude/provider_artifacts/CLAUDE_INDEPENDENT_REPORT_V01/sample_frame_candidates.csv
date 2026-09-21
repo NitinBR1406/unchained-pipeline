@@ -1,0 +1,165 @@
+song_id,stratum,title,film,year_hint,artist_hint,frame_source
+A01,A,Zaroori Tha,non-film,2014,Rahat Fateh Ali Khan,wiki_mostviewed
+A02,A,Vaaste,non-film,2019,Dhvani Bhanushali,wiki_mostviewed
+A03,A,Dilbar,Satyameva Jayate,2018,Neha Kakkar,wiki_mostviewed
+A04,A,Lut Gaye,non-film,2021,Jubin Nautiyal,wiki_mostviewed
+A05,A,Bum Bum Bole,Taare Zameen Par,2007,Shaan,wiki_mostviewed
+A06,A,Tujh Mein Rab Dikhta Hai,Rab Ne Bana Di Jodi,2008,Roop Kumar Rathod,wiki_mostviewed
+A07,A,Mile Ho Tum (Reprise),Fever,2016,Neha Kakkar Tony Kakkar,wiki_mostviewed
+A08,A,Cham Cham,Baaghi,2016,Monali Thakur,wiki_mostviewed
+A09,A,Bom Diggy Diggy,Sonu Ke Titu Ki Sweety,2018,Zack Knight Jasmin Walia,wiki_mostviewed
+A10,A,Aankh Marey,Simmba,2018,Neha Kakkar Mika Singh Kumar Sanu,wiki_mostviewed
+A11,A,Dil Laga Liya,Dil Hai Tumhaara,2002,Udit Narayan Alka Yagnik,wiki_mostviewed
+A12,A,Khairiyat,Chhichhore,2019,Arijit Singh,wiki_mostviewed
+A13,A,Tum Hi Aana,Marjaavaan,2019,Jubin Nautiyal,wiki_mostviewed
+A14,A,Jhoome Jo Pathaan,Pathaan,2022,Arijit Singh Sukriti Kakar,wiki_mostviewed
+A15,A,Humnava Mere,non-film,2018,Jubin Nautiyal,wiki_mostviewed
+A16,A,Abhi Toh Party Shuru Hui Hai,Khoobsurat,2014,Badshah Aastha Gill,wiki_mostviewed
+A17,A,Phir Bhi Tumko Chaahunga,Half Girlfriend,2017,Arijit Singh Shashaa Tirupati,wiki_mostviewed
+A18,A,Filhall,non-film,2019,B Praak,wiki_mostviewed
+A19,A,Kala Chashma,Baar Baar Dekho,2016,Badshah Neha Kakkar Amar Arshi,wiki_mostviewed
+A20,A,Galti Se Mistake,Jagga Jasoos,2017,Arijit Singh Amit Mishra,wiki_mostviewed
+A21,A,Jaha Tum Rahoge,Maheruh,2017,Altamash Faridi,wiki_mostviewed
+A22,A,Leja Re,non-film,2018,Dhvani Bhanushali,wiki_mostviewed
+A23,A,Genda Phool,non-film,2020,Badshah Payal Dev,wiki_mostviewed
+A24,A,O Saki Saki,Batla House,2019,Neha Kakkar Tulsi Kumar B Praak,wiki_mostviewed
+A25,A,Prem Ratan Dhan Payo,Prem Ratan Dhan Payo,2015,Palak Muchhal,wiki_mostviewed
+A26,A,Aaj Ki Raat,Stree 2,2024,Madhubanti Bagchi,wiki_mostviewed
+B01,B,Jo Bhi Main,Rockstar,2011,Mohit Chauhan,filmfare_male
+B02,B,Chammak Challo,Ra.One,2011,Akon,filmfare_male
+B03,B,Sadda Haq,Rockstar,2011,Mohit Chauhan,filmfare_male
+B04,B,Teri Meri,Bodyguard,2011,Rahat Fateh Ali Khan Shreya Ghoshal,filmfare_male_female
+B05,B,Dildaara,Ra.One,2011,Shafqat Amanat Ali,filmfare_male
+B06,B,Pani Da Rang,Vicky Donor,2012,Ayushmann Khurrana,filmfare_male
+B07,B,Ala Barfi,Barfi!,2012,Mohit Chauhan,filmfare_male
+B08,B,Main Kya Karoon,Barfi!,2012,Nikhil Paul George,filmfare_male
+B09,B,Challa,Jab Tak Hai Jaan,2012,Rabbi Shergill,filmfare_male
+B10,B,Abhi Mujh Mein Kahin,Agneepath,2012,Sonu Nigam,filmfare_male
+B11,B,Tum Hi Ho,Aashiqui 2,2013,Arijit Singh,filmfare_male
+B12,B,Manja,Kai Po Che!,2013,Amit Trivedi,filmfare_male
+B13,B,Sunn Raha Hai,Aashiqui 2,2013,Ankit Tiwari,filmfare_male_female
+B14,B,Badtameez Dil,Yeh Jawaani Hai Deewani,2013,Benny Dayal,filmfare_male
+B15,B,Zinda,Bhaag Milkha Bhaag,2013,Siddharth Mahadevan,filmfare_male
+B16,B,Galliyan,Ek Villain,2014,Ankit Tiwari,filmfare_male
+B17,B,Suno Na Sangemarmar,Youngistaan,2014,Arijit Singh,filmfare_male
+B18,B,Mast Magan,2 States,2014,Arijit Singh,filmfare_male
+B19,B,Locha-E-Ulfat,2 States,2014,Benny Dayal,filmfare_male
+B20,B,Zehnaseeb,Hasee Toh Phasee,2014,Shekhar Ravjiani Chinmayi,filmfare_male
+B21,B,Sooraj Dooba Hain,Roy,2015,Arijit Singh Aditi Singh Sharma,filmfare_male
+B22,B,Tu Hai Ke Nahi,Roy,2015,Ankit Tiwari,filmfare_male
+B23,B,Gerua,Dilwale,2015,Arijit Singh Antara Mitra,filmfare_male
+B24,B,Jeena Jeena,Badlapur,2015,Atif Aslam,filmfare_male
+B25,B,Moh Moh Ke Dhaage,Dum Laga Ke Haisha,2015,Papon Monali Thakur,filmfare_male_female
+B26,B,Gulaabo,Shaandaar,2015,Vishal Dadlani Anusha Mani,filmfare_male_female
+B27,B,Ae Dil Hai Mushkil,Ae Dil Hai Mushkil,2016,Arijit Singh,filmfare_male
+B28,B,Bulleya,Ae Dil Hai Mushkil,2016,Amit Mishra,filmfare_male
+B29,B,Channa Mereya,Ae Dil Hai Mushkil,2016,Arijit Singh,filmfare_male
+B30,B,Tere Sang Yaara,Rustom,2016,Atif Aslam,filmfare_male
+B31,B,Jag Ghoomeya,Sultan,2016,Rahat Fateh Ali Khan Neha Bhasin,filmfare_male_female
+B32,B,Roke Na Ruke Naina,Badrinath Ki Dulhania,2017,Arijit Singh,filmfare_male
+B33,B,Humsafar,Badrinath Ki Dulhania,2017,Akhil Sachdeva,filmfare_male
+B34,B,Zaalima,Raees,2017,Arijit Singh Harshdeep Kaur,filmfare_male
+B35,B,Nazm Nazm,Bareilly Ki Barfi,2017,Arko,filmfare_male
+B36,B,Baarish,Half Girlfriend,2017,Ash King Shashaa Tirupati,filmfare_male
+B37,B,Kho Diya,Bhoomi,2017,Sachin Sanghvi,filmfare_male
+B38,B,Ae Watan,Raazi,2018,Arijit Singh Sunidhi Chauhan,filmfare_male_female
+B39,B,Mera Naam Tu,Zero,2018,Abhay Jodhpurkar,filmfare_male
+B40,B,Binte Dil,Padmaavat,2018,Arijit Singh,filmfare_male
+B41,B,Tera Yaar Hoon Main,Sonu Ke Titu Ki Sweety,2018,Arijit Singh,filmfare_male
+B42,B,Tareefan,Veere Di Wedding,2018,Badshah,filmfare_male
+B43,B,Dilbaro,Raazi,2018,Harshdeep Kaur Vibha Saraf Shankar Mahadevan,filmfare_male_female
+B44,B,Kalank (Title Track),Kalank,2019,Arijit Singh,filmfare_male
+B45,B,Ve Maahi,Kesari,2019,Arijit Singh Asees Kaur,filmfare_male
+B46,B,Teri Mitti,Kesari,2019,B Praak,filmfare_male
+B47,B,Slow Motion,Bharat,2019,Nakash Aziz Shreya Ghoshal,filmfare_male
+B48,B,Bekhayali,Kabir Singh,2019,Sachet Tandon,filmfare_male
+B49,B,Ek Tukda Dhoop,Thappad,2020,Raghav Chaitanya,filmfare_male
+B50,B,Shayad,Love Aaj Kal,2020,Arijit Singh,filmfare_male
+B51,B,Aabaad Barbaad,Ludo,2020,Arijit Singh,filmfare_male
+B52,B,Mere Liye Tum Kaafi Ho,Shubh Mangal Zyada Saavdhan,2020,Ayushmann Khurrana,filmfare_male
+B53,B,Mehrama,Love Aaj Kal,2020,Darshan Raval Antara Mitra,filmfare_male_female
+B54,B,Mann Bharryaa 2.0,Shershaah,2021,B Praak,filmfare_male
+B55,B,Lehra Do,83,2021,Arijit Singh,filmfare_male
+B56,B,Rait Zara Si,Atrangi Re,2021,Arijit Singh Shashaa Tirupati,filmfare_male
+B57,B,Lakeeran,Haseen Dillruba,2021,Devender Pal Singh Asees Kaur,filmfare_male_female
+B58,B,Raataan Lambiyan,Shershaah,2021,Jubin Nautiyal Asees Kaur,filmfare_male_female
+B59,B,Kesariya,Brahmastra,2022,Arijit Singh,filmfare_male
+B60,B,Maange Manzooriyan,Badhaai Do,2022,Abhay Jodhpurkar,filmfare_male
+B61,B,Apna Bana Le,Bhediya,2022,Arijit Singh,filmfare_male
+B62,B,Deva Deva,Brahmastra,2022,Arijit Singh Jonita Gandhi,filmfare_male_female
+B63,B,Main Ki Karaan,Laal Singh Chaddha,2022,Sonu Nigam,filmfare_male
+B64,B,Arjan Vailly,Animal,2023,Bhupinder Babbal,filmfare_male
+B65,B,Lutt Putt Gaya,Dunki,2023,Arijit Singh,filmfare_male
+B66,B,Satranga,Animal,2023,Arijit Singh,filmfare_male
+B67,B,Kudmayi,Rocky Aur Rani Kii Prem Kahaani,2023,Shahid Mallya,filmfare_male
+B68,B,Nikle The Kabhi Hum Ghar Se,Dunki,2023,Sonu Nigam,filmfare_male
+B69,B,Tere Vaaste,Zara Hatke Zara Bachke,2023,Varun Jain Sachin-Jigar,filmfare_male
+B70,B,Sajni,Laapataa Ladies,2024,Arijit Singh,filmfare_male
+B71,B,Mirza,Maidaan,2024,Javed Ali,filmfare_male
+B72,B,Tauba Tauba,Bad Newz,2024,Karan Aujla,filmfare_male
+B73,B,Aayi Nai,Stree 2,2024,Pawan Singh,filmfare_male
+B74,B,Mere Dholna 3.0,Bhool Bhulaiyaa 3,2024,Sonu Nigam,filmfare_male
+B75,B,Darling,7 Khoon Maaf,2011,Usha Uthup Rekha Bhardwaj,filmfare_female
+B76,B,Khwabon Ke Parindey,Zindagi Na Milegi Dobara,2011,Alyssa Mendonsa,filmfare_female
+B77,B,Katiya Karun,Rockstar,2011,Harshdeep Kaur,filmfare_female
+B78,B,Saibo,Shor In The City,2011,Shreya Ghoshal Tochi Raina,filmfare_female
+B79,B,Pareshaan,Ishaqzaade,2012,Shalmali Kholgade,filmfare_female
+B80,B,Tumhi Ho Bandhu,Cocktail,2012,Kavita Seth Neeraj Shridhar,filmfare_female
+B81,B,Jiya Re,Jab Tak Hai Jaan,2012,Neeti Mohan,filmfare_female
+B82,B,Saans,Jab Tak Hai Jaan,2012,Shreya Ghoshal Mohit Chauhan,filmfare_female
+B83,B,Chikni Chameli,Agneepath,2012,Shreya Ghoshal,filmfare_female
+B84,B,Sawaar Loon,Lootera,2013,Monali Thakur,filmfare_female
+B85,B,Titli,Chennai Express,2013,Chinmayi Gopi Sundar,filmfare_female
+B86,B,Balam Pichkari,Yeh Jawaani Hai Deewani,2013,Shalmali Kholgade Vishal Dadlani,filmfare_female
+B87,B,Nagada Sang Dhol,Goliyon Ki Raasleela Ram-Leela,2013,Shreya Ghoshal Osman Mir,filmfare_female
+B88,B,Baby Doll,Ragini MMS 2,2014,Kanika Kapoor Meet Bros,filmfare_female
+B89,B,Patakha Guddi,Highway,2014,Nooran Sisters,filmfare_female
+B90,B,Hamari Atariya,Dedh Ishqiya,2014,Rekha Bhardwaj,filmfare_female
+B91,B,Manwa Laage,Happy New Year,2014,Shreya Ghoshal Arijit Singh,filmfare_female
+B92,B,Naina,Khoobsurat,2014,Sona Mohapatra Armaan Malik,filmfare_female
+B93,B,Deewani Mastani,Bajirao Mastani,2015,Shreya Ghoshal,filmfare_female
+B94,B,Agar Tum Saath Ho,Tamasha,2015,Alka Yagnik Arijit Singh,filmfare_female
+B95,B,Sun Saathiya,ABCD 2,2015,Priya Saraiya Divya Kumar,filmfare_female
+B96,B,Kaun Tujhe,M.S. Dhoni: The Untold Story,2016,Palak Muchhal,filmfare_female
+B97,B,The Breakup Song,Ae Dil Hai Mushkil,2016,Jonita Gandhi Arijit Singh Badshah Nakash Aziz,filmfare_female
+B98,B,Da Da Dasse,Udta Punjab,2016,Kanika Kapoor Babu Haabi,filmfare_female
+B99,B,Sau Aasmaan,Baar Baar Dekho,2016,Neeti Mohan Armaan Malik,filmfare_female
+B100,B,Kaari Kaari,Pink,2016,Qurat-ul-Ain Balouch,filmfare_female
+B101,B,Nachdi Phira,Secret Superstar,2017,Meghna Mishra,filmfare_female
+B102,B,Khol De Baahein,Meri Pyaari Bindu,2017,Monali Thakur,filmfare_female
+B103,B,Ghar,Jab Harry Met Sejal,2017,Nikhita Gandhi Mohit Chauhan,filmfare_female
+B104,B,Rafu,Tumhari Sulu,2017,Ronkini Gupta,filmfare_female
+B105,B,Kanha,Shubh Mangal Saavdhan,2017,Shashaa Tirupati,filmfare_female
+B106,B,Thodi Der,Half Girlfriend,2017,Shreya Ghoshal Farhan Saeed,filmfare_female
+B107,B,Ghoomar,Padmaavat,2018,Shreya Ghoshal Swaroop Khan,filmfare_female
+B108,B,Ahista,Laila Majnu,2018,Jonita Gandhi Arijit Singh,filmfare_female
+B109,B,Chaav Laaga,Sui Dhaaga,2018,Ronkini Gupta Papon,filmfare_female
+B110,B,Manwaa,October,2018,Sunidhi Chauhan,filmfare_female
+B111,B,Ghungroo,War,2019,Shilpa Rao Arijit Singh,filmfare_female
+B112,B,Chashni,Bharat,2019,Neha Bhasin Abhijeet Srivastava,filmfare_female
+B113,B,Mere Sohneya,Kabir Singh,2019,Parampara Thakur Sachet Tandon,filmfare_female
+B114,B,Yeh Aaina,Kalank,2019,Shreya Ghoshal,filmfare_female
+B115,B,Ghar More Pardesiya,Kalank,2019,Shreya Ghoshal Vaishali Mhade,filmfare_female
+B116,B,Baby Gold,Saand Ki Aankh,2019,Sona Mohapatra Jyotica Tangri,filmfare_female
+B117,B,Hui Malang,Malang,2020,Asees Kaur,filmfare_female
+B118,B,Mann Ki Dori,Gunjan Saxena,2020,Palak Muchhal,filmfare_female
+B119,B,Mar Jayein Hum,Shikara,2020,Shraddha Mishra Papon,filmfare_female
+B120,B,Paas Nahi Toh Fail,Shakuntala Devi,2020,Sunidhi Chauhan,filmfare_female
+B121,B,Param Sundari,Mimi,2021,Shreya Ghoshal,filmfare_female
+B122,B,Matlabi Yariyan,The Girl on the Train,2021,Neha Kakkar,filmfare_female
+B123,B,Kalle Kalle,Chandigarh Kare Aashiqui,2021,Priya Saraiya Sachin-Jigar,filmfare_female
+B124,B,Chaka Chak,Atrangi Re,2021,Shreya Ghoshal,filmfare_female
+B125,B,Rangisari,Jugjugg Jeeyo,2022,Kavita Seth Kanishk Seth,filmfare_female
+B126,B,Dholida,Gangubai Kathiawadi,2022,Janhvi Shrimankar Sanjay Leela Bhansali,filmfare_female
+B127,B,Jab Saiyaan,Brahmastra,2022,Shreya Ghoshal,filmfare_female
+B128,B,Tere Hawaale,Laal Singh Chaddha,2022,Shilpa Rao Arijit Singh,filmfare_female
+B129,B,Besharam Rang,Pathaan,2022,Shilpa Rao Caralisa Monteiro,filmfare_female
+B130,B,Chaleya,Jawan,2023,Shilpa Rao Arijit Singh,filmfare_female
+B131,B,Aararaari Raaro,Mrs Chatterjee vs Norway,2023,Deepthi Suresh,filmfare_female
+B132,B,Hey Fikar,8 A.M. Metro,2023,Jonita Gandhi,filmfare_female
+B133,B,Tum Kya Mile,Rocky Aur Rani Kii Prem Kahaani,2023,Shreya Ghoshal Arijit Singh,filmfare_female
+B134,B,Ve Kamleya,Rocky Aur Rani Kii Prem Kahaani,2023,Shreya Ghoshal Arijit Singh,filmfare_female
+B135,B,Tenu Sang Rakhna,Jigra,2024,Anumita Nadesan,filmfare_female
+B136,B,Nikat,Kill,2024,Rekha Bhardwaj,filmfare_female
+B137,B,Ishq Jaisa Kuch,Fighter,2024,Shilpa Rao Vishal-Shekhar,filmfare_female
+B138,B,Dheeme Dheeme,Laapataa Ladies,2024,Shreya Ghoshal,filmfare_female

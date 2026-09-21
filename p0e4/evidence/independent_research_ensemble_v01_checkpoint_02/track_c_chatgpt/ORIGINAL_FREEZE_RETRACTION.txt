@@ -1,0 +1,31 @@
+Correct. **De oorspronkelijke frozen UTF-8 artifactbytes zijn niet daadwerkelijk behouden.** De GitHub-write mislukte met HTTP 403 voordat er een persistent artifact bestond. Daardoor kan ik het eerder genoemde SHA256
+
+`22f1fae526457be330d1fbf80992ba8465c67fd7e22e79ff07aec4635e8822d1`
+
+**niet cryptografisch onderbouwen als hash van een behouden origineel bestand. Die SHA mag daarom niet als authoritative artifact hash worden gebruikt.**
+
+Dit betekent ook dat ik nu niet alsnog bytes mag reconstrueren en doen alsof ze het origineel met die SHA zijn. Dat zou precies de provenance-regel overtreden die we proberen af te dwingen.
+
+### Correcte governance-status
+
+`CHATGPT_C_ORIGINAL_BYTES_RETAINED = FALSE`
+
+`CLAIMED_SHA_VERIFIABLE = FALSE`
+
+`CLAIMED_SHA_STATUS = INVALID_FOR_ACCEPTANCE`
+
+`CHATGPT_C_PERSISTENCE = BLOCKED_MISSING_ORIGINAL_BYTES`
+
+`SYNTHESIS_AUTHORIZED = FALSE`
+
+De inhoud die ik vóór de mislukte GitHub-write had samengesteld is nog wel als **conversation/tool-call context** aanwezig, inclusief datasetrecords, methodology, field-level provenance identifiers, confidence, Hindi zones, global context en limitations. Maar als we daar opnieuw JSON van maken, is dat formeel een:
+
+**`CHATGPT_INDEPENDENT_REPORT_V01_RECONSTRUCTED`**
+
+met een **nieuwe werkelijk berekende SHA256**, een reconstruction receipt en expliciete lineage naar de mislukte eerste persistence-poging. Het mag niet worden voorgesteld als byte-identiek aan een origineel dat niet is behouden.
+
+Ook belangrijk: enkele provenance-items in die poging waren interne web-resultaat-ID's (`turn...`) in plaats van volledig duurzaam opgeslagen bron-URL's. Een governance-correcte reconstruction moet die provenance dus opnieuw binden aan de werkelijk geraadpleegde bronnen en dit als reconstruction/enrichment markeren — niet stilzwijgend het “frozen origineel” verbeteren.
+
+**Codex moet daarom de oude claimed SHA niet persisteren.** De correcte vervolgstap is een nieuwe onafhankelijke/reconstructed Track-C artifact generation met exact vastgelegde raw prompt + dataset + methodology + volledige URLs/provenance + confidence → bytes eerst lokaal/persistent opslaan → SHA256 over die exacte bytes berekenen → freeze receipt → daarna narrow GitHub persistence.
+
+Totdat dat gebeurd is, beschouw ik **ChatGPT Track C niet als acceptance-grade frozen** en mag de A/B/C-synthese niet starten.

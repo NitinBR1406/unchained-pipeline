@@ -1,0 +1,18 @@
+{
+  "check": "Provider code replay with input/output path substitutions only",
+  "returncode": 0,
+  "byte_equal": {
+    "dataset_CLAUDE_V01.json": true,
+    "dataset_CLAUDE_V01.csv": true,
+    "analysis_results_CLAUDE_V01.json": true
+  },
+  "source_claims_independently_verified": false,
+  "limitations": [
+    "Secondary estimates share an analyser family; source agreement is not independent audio verification.",
+    "Code uses upload year as release_year for stratum A, explicitly unsuitable as verified release year.",
+    "Code marks official=True based on secondary list; only one direct video ID is present.",
+    "164 frame rows are not 164 complete observations.",
+    "Watch hours, retention, streaming and vocal range unavailable."
+  ],
+  "stderr": ""
+}

@@ -1,0 +1,99 @@
+{
+ "counts": {
+  "frame_total": 164,
+  "stratum_A": 26,
+  "stratum_B": 138,
+  "with_views": 26,
+  "with_key_and_bpm": 11,
+  "with_bpm_only": 1,
+  "with_key_bpm_and_views": 8,
+  "with_two_concordant_key_sources": 4,
+  "unresolved_conflicts": 1,
+  "frame_only_no_data": 135
+ },
+ "mode_frequency_all_with_key": {
+  "major": 6,
+  "minor": 5
+ },
+ "key_frequency_all_with_key": {
+  "Bb major": 2,
+  "F minor": 2,
+  "Ab minor": 1,
+  "F major": 1,
+  "A minor": 1,
+  "Ab major": 1,
+  "B minor": 1,
+  "Db major": 1,
+  "C major": 1
+ },
+ "tempo_zone_frequency_all_with_bpm": {
+  "mid 85-99": 5,
+  "upper-mid 100-114": 4,
+  "slow <85": 2,
+  "fast 115+": 1
+ },
+ "bpm_summary_all_with_bpm": {
+  "n": 12,
+  "min": 80,
+  "median": 94.5,
+  "max": 121,
+  "mean": 96.6
+ },
+ "cells_mode_x_tempo": {
+  "major \u00d7 mid 85-99": 4,
+  "minor \u00d7 upper-mid 100-114": 3,
+  "minor \u00d7 slow <85": 1,
+  "major \u00d7 upper-mid 100-114": 1,
+  "minor \u00d7 mid 85-99": 1,
+  "major \u00d7 slow <85": 1
+ },
+ "stratum_A_views_per_day": {
+  "n": 26,
+  "median": 394816,
+  "min": 206210,
+  "max": 1282262
+ },
+ "stratum_A_views_per_day_by_mode": {
+  "minor": {
+   "n": 4,
+   "median": 411333,
+   "values": [
+    385548,
+    513142,
+    374876,
+    437117
+   ]
+  },
+  "major": {
+   "n": 4,
+   "median": 499874,
+   "values": [
+    630184,
+    745042,
+    265593,
+    369564
+   ]
+  }
+ },
+ "stratum_A_views_per_day_by_tempo_zone": {
+  "upper-mid 100-114": {
+   "n": 4,
+   "median": 411333
+  },
+  "mid 85-99": {
+   "n": 3,
+   "median": 630184
+  },
+  "fast 115+": {
+   "n": 1,
+   "median": 259592
+  },
+  "slow <85": {
+   "n": 1,
+   "median": 374876
+  }
+ },
+ "ci_statement": "No confidence intervals computed: per-cell n \u2264 3 in every key/mode \u00d7 tempo cell; bootstrap intervals on such cells would be uninformative and could be misread as evidence.",
+ "top_ten_supported": false,
+ "top_ten_reason": "Only 8 recordings have key, BPM and a views figure; no stratum-B (non-billion-view) recording has views, so frequency cannot be separated from performance association. A ten-zone empirical ranking is not supported."
+}

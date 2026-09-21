@@ -1,0 +1,12 @@
+{
+  "provider_named_sources": [
+    "Public Chart Metadata",
+    "Tunebat Acoustic Index",
+    "Songstats",
+    "Chordify Verified Transcriptions",
+    "YouTube Video Catalog"
+  ],
+  "source_urls": [],
+  "field_level_provenance": null,
+  "note": "No source URLs supplied by the provider in this report. Names are unverified provider claims."
+}

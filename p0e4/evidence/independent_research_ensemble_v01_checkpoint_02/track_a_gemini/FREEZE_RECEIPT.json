@@ -1,0 +1,35 @@
+{
+  "report_id": "GEMINI_INDEPENDENT_REPORT_V01",
+  "status": "FROZEN_V01",
+  "observed_at": "2026-09-21T22:18:50.669537+00:00",
+  "artifacts": {
+    "raw_report": {
+      "path": "RAW_RESPONSE_TEXT.txt",
+      "sha256": "6c87d86b4d8a260dddee3ee5bc5cc040be385258d67c63fea47325d19f74c805"
+    },
+    "dataset": {
+      "path": "DATASET_AS_RETURNED.json",
+      "sha256": "f57eb32255fdb844f73c3830dec18f32f6b4a6487afb36ce37092292292b95e8"
+    },
+    "sources": {
+      "path": "SOURCES_AS_RETURNED.json",
+      "sha256": "a91c052cac988e4fc74fddaf820365774f3543abe807d22c6efe87c537898731"
+    },
+    "methodology": {
+      "path": "METHODOLOGY_AS_RETURNED.txt",
+      "sha256": "4eeb3dba2d4811a72b7cced8d098651e96a3d381c382523d2fb1918f1067b63b"
+    },
+    "confidence": {
+      "path": "CONFIDENCE_AUDIT.json",
+      "sha256": "8c6ad322aaca339f9f9b2c22bc8431c32e864dc9ba312f4ac64885ff66043bf4"
+    }
+  },
+  "other_track_results_supplied": false,
+  "provider_independence_declared": true,
+  "independence_technically_attested": false,
+  "quality_status": "UNVERIFIED_PROVENANCE_ADDENDUM_REQUESTED",
+  "raw_capture_method": "Visible browser DOM text transcribed; JSON whitespace compacted, displayed contents retained. Not a provider-byte-identical export. Original saved Google Doc is separate.",
+  "original_export_url": "https://docs.google.com/document/d/1Kbm-I5EXeKLav9H8CiD1zNxTfgxnnriOg3YyRl91GmY/edit",
+  "connector_readback": "403; browser confirmed Saved to Drive and report outline",
+  "raw_report_is_not_validated_research": true
+}

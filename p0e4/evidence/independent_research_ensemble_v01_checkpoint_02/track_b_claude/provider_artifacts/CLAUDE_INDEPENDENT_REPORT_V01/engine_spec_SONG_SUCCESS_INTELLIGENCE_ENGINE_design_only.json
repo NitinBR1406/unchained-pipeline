@@ -1,0 +1,47 @@
+{
+ "spec_id": "SSIE-DESIGN-CLAUDE-V01",
+ "status": "DESIGN ONLY — no implementation, no live system mutation, no calibration data exists yet",
+ "purpose": "Score a candidate song's musical parameters against an evidence base of comparable Hindi recordings and return descriptive signals with explicit evidence confidence. It never returns a 'hit probability' until a calibration set with held-out outcomes exists.",
+ "inputs": {
+  "key": {"type":"string","enum":"C, Db, D, Eb, E, F, F#, G, Ab, A, Bb, B","required":true},
+  "mode": {"type":"string","enum":["major","minor","modal:<name>"],"required":true},
+  "bpm": {"type":"number","range":[40,220],"required":true,"note":"engine stores felt tempo and a half/double flag; both 90 and 180 are checked against the evidence base"},
+  "song_duration": {"type":"seconds","required":true},
+  "emotion": {"type":"string","enum":["romance","heartbreak","uplifting","dance","devotional","cinematic","other"],"required":true},
+  "energy": {"type":"number 0–1","required":false,"note":"analyst or analyser estimate; source recorded"},
+  "vocal_range": {"type":"{lowest_note, highest_note, tessitura_centre}","required":false,"note":"never inferred; null until measured from a recording of the singer"},
+  "hook_characteristics": {"type":"{first_hook_at_seconds, hook_repetitions, hook_length_bars, hook_syllable_density, hook_interval_span_semitones}","required":false},
+  "release_type": {"type":"string","enum":["film","non-film","cover","derivative"],"required":true},
+  "target_platform": {"type":"string","enum":["youtube_long","youtube_shorts","spotify","instagram_reels","live"],"required":true}
+ },
+ "outputs": {
+  "SUCCESS_SIGNAL_SCORE": {"type":"number 0–100 or null","rule":"null unless the matched evidence cell has n ≥ 30 recordings with outcome data AND a documented calibration run (calibration_id) exists; otherwise the field is null and REASON_NULL explains. Never a probability."},
+  "EVIDENCE_CONFIDENCE": {"type":"enum [none, low, medium, high]","rule":"none: matched cell n < 5; low: 5–29 or single-source key/BPM; medium: ≥30 with ≥2 concordant sources; high: ≥100 with at least one independently measured key/BPM per recording and outcome data with timestamps"},
+  "REFERENCE_MATCH_SCORE": {"type":"number 0–100","rule":"distance-based similarity to the evidence base on (mode, tempo zone, duration band, emotion, release_type); descriptive only, computable at any n, always accompanied by matched_n"},
+  "EXPECTED_RETENTION_PROFILE": {"type":"object or null","rule":"null until first-party YouTube Analytics retention curves (audience retention export) exist for ≥ 20 own uploads; public views are never converted into retention"},
+  "RISKS": {"type":"list of strings","examples":["single-source key estimate","tempo ambiguity (half/double)","cell n < 5","absolute key outside singer's measured comfortable range","emotion tag is analyst judgement"]},
+  "COMPARABLE_SONGS": {"type":"list of {song_id, title, key, mode, bpm, evidence_ids, outcome_fields_available}","rule":"only recordings present in the frozen dataset with provenance; max 10"}
+ },
+ "evidence_chain_design": {
+  "description": "Every hop is a separate table keyed by its own id and linked to the previous hop; nothing is inferred across a missing hop.",
+  "hops": [
+   {"from":"musical_parameters","to":"song","keys":["song_id","evidence_ids"],"fields":["key","mode","bpm","duration","emotion","measurement_method","confidence"]},
+   {"from":"song","to":"derivative/content","keys":["song_id","derivative_id","experiment_id"],"fields":["derivative_type (full video, lyrical, short, live, cover-key transposition)","transposition_semitones","chorus_repeat_variant"]},
+   {"from":"derivative","to":"publication","keys":["derivative_id","publication_id","campaign_id"],"fields":["platform","publish_ts","title_variant","thumbnail_variant"]},
+   {"from":"publication","to":"performance","keys":["publication_id"],"fields":["views (with observation_ts)","watch_hours (first-party analytics only)","avg_view_duration","retention_curve","replays (first-party only)","likes","comments"],"rule":"every metric row carries observation_ts and source; views × duration is never stored as watch time"},
+   {"from":"performance","to":"subscriber_conversion","keys":["publication_id"],"fields":["subs_gained_from_video (first-party)","conversion_rate"]},
+   {"from":"publication","to":"streams","keys":["song_id","publication_id"],"fields":["platform","streams","observation_ts"]},
+   {"from":"streams/performance","to":"leads","keys":["lead_id","publication_id?","campaign_id"],"fields":["lead_source","attribution_method (self-reported, UTM, last-touch)","confidence"]},
+   {"from":"leads","to":"bookings","keys":["lead_id","booking_id"],"fields":["booking_type","date"]},
+   {"from":"bookings","to":"revenue","keys":["booking_id","revenue_id"],"fields":["amount","currency","attribution_share","attribution_method"]}
+  ],
+  "attribution_rule": "Attribution shares are recorded with their method and are never summed across methods. A hop with no recorded link returns null downstream, not an estimate."
+ },
+ "experiment_design_hooks": {
+  "experiment_id": "one per controlled comparison (e.g., same song, two keys; same chorus, 2 vs 3 repetitions)",
+  "minimum": "pre-registered hypothesis text, primary metric, observation window, and the evidence_ids the hypothesis was drawn from",
+  "analysis": "descriptive difference with bootstrap CI when n ≥ 20 publications per arm; below that, report raw values only"
+ },
+ "hit_probability_policy": "Disabled by design. A field named HIT_PROBABILITY does not exist in the schema. It may be added only after a calibration run with a held-out set, a Brier score, and a calibration plot are stored under a calibration_id.",
+ "mutation_policy": "Read-only design. No live system (Make.com, Sheets, YouTube, Spotify) is read or written by this specification."
+}
