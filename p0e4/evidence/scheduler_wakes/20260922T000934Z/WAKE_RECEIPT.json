@@ -1,0 +1,71 @@
+{
+  "schema": "SCHEDULER_IDLE_WAKE_RECEIPT",
+  "schema_version": 1,
+  "automation_id": "unchained-p0-e4-ready-continuation",
+  "trigger": "ACTUAL_NATIVE_HEARTBEAT",
+  "trigger_at": "2026-09-22T00:09:34.876Z",
+  "observed_at": "2026-09-22T00:11:31.755254+00:00",
+  "prior_checkpoint_sha": "770e587716bb515fc1ba63a1ac08580c7d067535",
+  "prior_checkpoint": "Completed intelligence research delivery; preceding assistant final response before this heartbeat.",
+  "idle_to_wake_observed": true,
+  "idle_start_exact": null,
+  "provider_signed_trigger": false,
+  "always_on_dispatcher_proven": false,
+  "remote_head_verified": "770e587716bb515fc1ba63a1ac08580c7d067535",
+  "master_state_version": "V16.2",
+  "state_version": 28,
+  "master_state_hash_verified": "a41764d6955f5153ba9cd3d4033c5521eb41037a9c801e53469135d1cfdde2eb",
+  "latest_manifest_entries_verified": 8,
+  "next_ready_sha256": "3ed0aff7e6bfdf52e19bbe1dc7da419143e618d762b49e50461be81bd4e4e49a",
+  "ready_nonhuman_count": 0,
+  "local_runtime_claim_observations": [
+    {
+      "task_id": "EC_V161_CATALOG_LIFECYCLE_CONTRACT",
+      "lease_expires_at": 1789832219.758718,
+      "lease_unexpired_at_observation": false,
+      "completion_present": true,
+      "status": "COMPLETED",
+      "completion_sha256": "ca97c3a85b9a9646a92b5e4bf99f6aee2bb750709de52582e6fa655bcb04b051"
+    },
+    {
+      "task_id": "EC_V11_RECEIPT_SCHEMA",
+      "lease_expires_at": 1789766808.399893,
+      "lease_unexpired_at_observation": false,
+      "completion_present": true,
+      "status": "COMPLETED",
+      "completion_sha256": "aeeda605c86089b40e4ef66d274557ed2b29a48739fe7f5e68066390b9e2d0c5"
+    },
+    {
+      "task_id": "EC_V152_PREFLIGHT_GROUPS",
+      "lease_expires_at": 1789808023.228374,
+      "lease_unexpired_at_observation": false,
+      "completion_present": true,
+      "status": "COMPLETED",
+      "completion_sha256": "85777e5ea91dddc2f1ea97bcf0c9c8936cf1685d7d6c93f4d4444345ddac0024"
+    },
+    {
+      "task_id": "EC_V152_WAKE_RECEIPT",
+      "lease_expires_at": 1789808056.883857,
+      "lease_unexpired_at_observation": false,
+      "completion_present": true,
+      "status": "COMPLETED",
+      "completion_sha256": "1e875e38e8109ced27e9a9fad4e03f1a591599a2dbe8b5906d4f1df1265ba3c4"
+    },
+    {
+      "task_id": "EC_V154_PREFLIGHT_VALIDATION_SCHEMA",
+      "lease_expires_at": 1789812180.391559,
+      "lease_unexpired_at_observation": false,
+      "completion_present": true,
+      "status": "COMPLETED",
+      "completion_sha256": "10ddd5a8aabf396a49e6ee197bba84d9eeed1b55a8fcf5fde5e14a2c2dd022a2"
+    }
+  ],
+  "live_multihost_claim_inventory_verified": false,
+  "new_dispatches": 0,
+  "lease_reclaims": 0,
+  "decision": "NO_READY_WORK_NO_DISPATCH",
+  "research_status": "Frozen research complete; own vocal/audio measurements remain unavailable.",
+  "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+  "PUBLICATION_AUTHORIZED": false,
+  "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+}
