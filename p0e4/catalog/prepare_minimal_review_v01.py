@@ -1,5 +1,9 @@
 """Offline projection of frozen discovery; never accesses iCloud or production."""
 import csv, hashlib, json
+try:
+    from .batch_semantics import apply_batch
+except ImportError:
+    from batch_semantics import apply_batch
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT/'p0e4/evidence/catalog_discovery_v02'
@@ -89,6 +93,17 @@ def build():
         result['applied_semantic_events']=[{'event_id':event['event_id'],'path':str(event_path.relative_to(ROOT)),'sha256':hashlib.sha256(event_path.read_bytes()).hexdigest()}]
         result['counts']['nitin_2008_identities_confirmed']=8
         result['counts']['nitin_2008_readiness_confirmed']=0
+    batch_path=ROOT/'p0e4/evidence/catalog_semantic_events/NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01.json'
+    if batch_path.exists():
+        result,receipt,queues=apply_batch(result,json.loads(batch_path.read_text()))
+        rows=result['rows'];counts=result['counts']
+        result['applied_semantic_events'].append({'event_id':receipt['event_id'],'path':str(batch_path.relative_to(ROOT)),'sha256':hashlib.sha256(batch_path.read_bytes()).hexdigest()})
+        write('BATCH_SEMANTIC_VALIDATION_RECEIPT',receipt)
+        for name,queue in queues.items():
+            write(name,queue)
+            export_fields=['candidate_id','name','path','TYPE','MUSIC_READY','VOCALS_READY','LYRICS_READY','MIX_MASTER_READY','REVISION_REQUIRED','LIVE_READY','PRIORITY','NEXT_ACTION','ACTION_OWNER']
+            with (OUT/(name+'.csv')).open('w',newline='') as stream:
+                writer=csv.DictWriter(stream,export_fields,extrasaction='ignore',lineterminator='\n');writer.writeheader();writer.writerows(queue['rows'])
     write('NITIN_MINIMAL_SEMANTIC_REVIEW_V01',result)
     write('REVIEW_REDUCTION_AUDIT',{'counts':counts,'candidate_dispositions':dispositions,'categories':categories,'original_exclusions':read('NON_SONG_EXCLUSIONS'),'existing_containers':read('COLLECTIONS_AND_CHILDREN'),'exact_hash_links':links,'unassigned_duplicate_alias_groups':duplicate_only,'unassigned_representatives':unassigned,'admin_embedded_media_retained':retained_admin_media,'limitations':['No identity merges on names or sizes. No new iCloud reads.','75 immediate semantic rows remain because readiness is not technically provable.','Two conditional rows and six media folders need identity decisions; no candidates silently dropped.']})
     fields=['candidate_id','name','path','block','identity_confirmed',*allowed]
@@ -97,8 +112,11 @@ def build():
     assert len(dispositions)==88 and len({x['candidate_id'] for x in dispositions})==88
     assert len(rows)==77 and counts['immediate_semantic_rows']==75 and len(links)==2
     assert sum(r['block']=='nitin_2008_children' for r in rows)==8
-    assert all(r[f]=='UNKNOWN' for r in rows for f in ['MUSIC_READY','LYRICS_READY','VOCALS_READY','MIX_MASTER_READY','REVISION_REQUIRED','LIVE_READY','PRIORITY'])
-    write('NEXT_READY',{'status':'WAITING_FOR_NITIN','task':'Receive remaining semantic readiness/priority review and unresolved identity decisions; NITIN 2008 identity and TYPE already confirmed','MASTER_CATALOG_V01_created':False,'publication_authorized':False,'production_mutation':False})
+    assert all(r[f]=='UNKNOWN' for r in rows for f in ['LYRICS_READY','MIX_MASTER_READY','REVISION_REQUIRED','LIVE_READY','PRIORITY'])
+    next_ready={'status':'WAITING_FOR_NITIN','ready_nonhuman_count':0,'task':'Receive remaining semantic review','MASTER_CATALOG_V01_created':False,'publication_authorized':False,'production_mutation':False}
+    if batch_path.exists():
+        next_ready.update(status='WAITING_FOR_NITIN_CONTROL_TOTAL_RECONCILIATION',task='Confirm explicit-row totals 36 ready / 31 vocal-pending, or name four regular jn-to-jj corrections.',remaining_questions=[{'priority':1,'question':'Resolve row answers versus stated 40/23 regular totals; do not resend the whole batch.'},{'priority':2,'question':'For the next selected vocal session only, specify priority and owner if needed. Other unknown semantics may remain UNKNOWN.'},{'priority':3,'question':'When relevant, confirm Intro beat association and remaining download identities; Chunar stays separate and NITIN 2008 identity is already confirmed.'}],unconfirmed_semantics=['LYRICS_READY','MIX_MASTER_READY','REVISION_REQUIRED','LIVE_READY','PRIORITY'],untouched_readiness_rows=['Aakhri Ishq','Intro beat','NITIN 2008 (8 children)'])
+    write('NEXT_READY',next_ready)
     template=(ROOT/'p0e4/catalog/minimal_review_template.html').read_text()
     embedded=json.dumps(result,ensure_ascii=False).replace('<','\\u003c')
     (OUT/'NITIN_MINIMAL_SEMANTIC_REVIEW_V01.html').write_text(template.replace('__DATA__',embedded))

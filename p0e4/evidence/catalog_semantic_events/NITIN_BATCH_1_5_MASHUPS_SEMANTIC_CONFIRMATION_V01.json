@@ -1,0 +1,860 @@
+{
+  "event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01",
+  "event_type": "NITIN_SUPPLIED_SEMANTIC_CONFIRMATION",
+  "recorded_at": "2026-09-23T12:36:27.968366+00:00",
+  "source": "Explicit Nitin user message: CATALOG SEMANTIC REVIEW — NITIN BATCH 1–5 + MASHUPS — AUTHORITATIVE USER INPUT",
+  "source_message_time": "NOT_EXPOSED",
+  "source_assignments_transcription": "BATCH 1\nAbhi Mujhme Kahin=jj\nAe zindagi gale laga le=jn\nAgar Ho Tum=jj\nApna bana le=jj\nAye Khuda=jn;TYPE=ORIGINAL\nBaarish - Half girlfriend=jj\nBaarish-Kabhi jo badal=jn\nBekhayali=jj\nBhool Jaa=jn\nChaleya=jn\nChand Mera dil=jn\nChunar 2025=jn\nDHUN=jj;TYPE=UNKNOWN\nDooriyan=jn;TYPE=ORIGINAL\nDua=jn\nBATCH 2\nEarned It=jn\nEk Mulaqat=jj\nGehra Hua=jj\nGhar Kab Aaoge=jj\nHar kisi ko=jn\nHeeriye=jn\nHua Mein=jj\nJaanam=jj\nJaate hue lamhon=jj\nJee Le Zara=jj\nJenna Sikha De=jj\nKahani Suno=jj\nKaise Hua=jn\nKalank=jj\nKesariya=jj\nBATCH 3\nKhairiyat=jj\nKhoobsurat=jj\nMain Gira=jn\nMann Ki Lagan=jn\nMehram=jn\nMere bina Labon ko=jn\nMere Mehboob=jj\nO Maahi=jj\nO Re Piya=jn\nPehle Bhi Main=jj\nPhil Moh=jj\nPhir aur Kya chaiye=jn\nQayde Se=jj\nRanjhaan=jj\nRoya Jab Tu=jn\nBATCH 4\nSaari Duniya=jj\nSaiyaara=jj\nSatranga=jj\nSongs voor 2022/Ae Dil Hai Mushkil=jj\nSongs voor 2022/Chunar=jj\nSongs voor 2022/Mein Tenu=jj\nSongs voor 2022/Surili Akhiyon=jj\nSongs voor 2022/Tere Sang Yara=jj\nTere Sang Ishq=jj\nToh Phir Aao=jn\nTujhe kitna G-70=jj\nTujhe ko=jn\nTum Jo Mil Gaye=jn\nTum Kya Mile=jj\nTum se hi=jn\nBATCH 5\nTUMHE KITNA PYAAR=jn\nVe Kamleya=jn\nYa Ali=jn\nMASHUP/MEDLEY ITEMS\nArijit Dance Mashup=jn;TYPE=MASHUP\nChand mera dil mash up=jn;TYPE=MASHUP\nGerua medley=jn;TYPE=MEDLEY\nLove mashups=jn;TYPE=MASHUP\n",
+  "transcription_format": "Formatting-normalized assignment text; user constraints preserved below; not a byte-exact chat export",
+  "prior_checkpoint_sha": "f1f9eff0666436eeb1d628090117b1cfdce2c15a",
+  "prior_review_sha256": "60936b0ea64e0ee20b275367cd52848e09a7acc4ddb2e459b52693755c42290e",
+  "code_meanings": {
+    "jj": {
+      "MUSIC_READY": "YES",
+      "VOCALS_READY": "YES"
+    },
+    "jn": {
+      "MUSIC_READY": "YES",
+      "VOCALS_READY": "NO"
+    }
+  },
+  "items": [
+    {
+      "candidate_id": "cat2_dff77f896868c6a5",
+      "path": "Abhi Mujhme Kahin",
+      "input_name": "Abhi Mujhme Kahin",
+      "batch": "BATCH 1",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_0a43a98fdcab8228",
+      "path": "Ae zindagi gale laga le",
+      "input_name": "Ae zindagi gale laga le",
+      "batch": "BATCH 1",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_4f90946f01f9c8b6",
+      "path": "Agar Ho Tum",
+      "input_name": "Agar Ho Tum",
+      "batch": "BATCH 1",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_79290af7b58ddb34",
+      "path": "Apna bana le",
+      "input_name": "Apna bana le",
+      "batch": "BATCH 1",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_52b5d698fedd26ee",
+      "path": "Aye Khuda",
+      "input_name": "Aye Khuda",
+      "batch": "BATCH 1",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO",
+        "TYPE": "ORIGINAL"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_88801f0acb7cfd7f",
+      "path": "Baarish - Half girlfriend",
+      "input_name": "Baarish - Half girlfriend",
+      "batch": "BATCH 1",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_85ea53f51681416a",
+      "path": "Baarish-Kabhi jo badal",
+      "input_name": "Baarish-Kabhi jo badal",
+      "batch": "BATCH 1",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_b8bfe2f530324a99",
+      "path": "Bekhayali",
+      "input_name": "Bekhayali",
+      "batch": "BATCH 1",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_d651bf20e95a2c82",
+      "path": "Bhool Jaa",
+      "input_name": "Bhool Jaa",
+      "batch": "BATCH 1",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_32a10e31b5306fed",
+      "path": "Chaleya",
+      "input_name": "Chaleya",
+      "batch": "BATCH 1",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_dd841dc54a2bcce3",
+      "path": "Chand Mera dil",
+      "input_name": "Chand Mera dil",
+      "batch": "BATCH 1",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_f7e8d7c3fa1d08fa",
+      "path": "Chunar 2025",
+      "input_name": "Chunar 2025",
+      "batch": "BATCH 1",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_0ff14234a5b7d399",
+      "path": "DHUN",
+      "input_name": "DHUN",
+      "batch": "BATCH 1",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES",
+        "TYPE": "UNKNOWN"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_db127447f49cdd57",
+      "path": "Dooriyan",
+      "input_name": "Dooriyan",
+      "batch": "BATCH 1",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO",
+        "TYPE": "ORIGINAL"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_2f98b7212c6aa641",
+      "path": "Dua",
+      "input_name": "Dua",
+      "batch": "BATCH 1",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_6b16dcdf6822a8f7",
+      "path": "Earned It",
+      "input_name": "Earned It",
+      "batch": "BATCH 2",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_2390ca74cbb0727e",
+      "path": "Ek Mulaqat",
+      "input_name": "Ek Mulaqat",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_d2160dfdd0ebaa5b",
+      "path": "Gehra Hua",
+      "input_name": "Gehra Hua",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_5a750b7f5d14f375",
+      "path": "Ghar Kab Aaoge",
+      "input_name": "Ghar Kab Aaoge",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_f8d34f150d2fb8c0",
+      "path": "Har kisi ko",
+      "input_name": "Har kisi ko",
+      "batch": "BATCH 2",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_25bdfeaf7d790f69",
+      "path": "Heeriye",
+      "input_name": "Heeriye",
+      "batch": "BATCH 2",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_9f471552913e7785",
+      "path": "Hua Mein",
+      "input_name": "Hua Mein",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_8226399e711d0a9e",
+      "path": "Jaanam",
+      "input_name": "Jaanam",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_19e92cf29661d9ff",
+      "path": "Jaate hue lamhon",
+      "input_name": "Jaate hue lamhon",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_9c703ca993d3bd73",
+      "path": "Jee Le Zara",
+      "input_name": "Jee Le Zara",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_dfa717181359d1ff",
+      "path": "Jenna Sikha De",
+      "input_name": "Jenna Sikha De",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_2fe20d4c7721b634",
+      "path": "Kahani Suno",
+      "input_name": "Kahani Suno",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_72021be2452fdf27",
+      "path": "Kaise Hua",
+      "input_name": "Kaise Hua",
+      "batch": "BATCH 2",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_a2a636a02c99c082",
+      "path": "Kalank",
+      "input_name": "Kalank",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_c880f769b3999d0b",
+      "path": "Kesariya",
+      "input_name": "Kesariya",
+      "batch": "BATCH 2",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_f07c6976c30a8456",
+      "path": "Khairiyat",
+      "input_name": "Khairiyat",
+      "batch": "BATCH 3",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_b642a520783d1ddc",
+      "path": "Khoobsurat",
+      "input_name": "Khoobsurat",
+      "batch": "BATCH 3",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_f0cbbcd0f7d53566",
+      "path": "Main Gira",
+      "input_name": "Main Gira",
+      "batch": "BATCH 3",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_49b256ae53f5b65b",
+      "path": "Mann Ki Lagan",
+      "input_name": "Mann Ki Lagan",
+      "batch": "BATCH 3",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_19ffb1e90e957e5a",
+      "path": "Mehram",
+      "input_name": "Mehram",
+      "batch": "BATCH 3",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_d97ef8bda61557fa",
+      "path": "Mere bina Labon ko",
+      "input_name": "Mere bina Labon ko",
+      "batch": "BATCH 3",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_091f4fce6f889c00",
+      "path": "Mere Mehboob",
+      "input_name": "Mere Mehboob",
+      "batch": "BATCH 3",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_35549f8c6f426681",
+      "path": "O Maahi",
+      "input_name": "O Maahi",
+      "batch": "BATCH 3",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_ac22922e887b8dc4",
+      "path": "O Re Piya",
+      "input_name": "O Re Piya",
+      "batch": "BATCH 3",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_34c4090bdc6b70b0",
+      "path": "Pehle Bhi Main",
+      "input_name": "Pehle Bhi Main",
+      "batch": "BATCH 3",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_ce207aedcec807c8",
+      "path": "Phil Moh",
+      "input_name": "Phil Moh",
+      "batch": "BATCH 3",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_c56f7f16c0194218",
+      "path": "Phir aur Kya chaiye ",
+      "input_name": "Phir aur Kya chaiye",
+      "batch": "BATCH 3",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_dd9806cb61943182",
+      "path": "Qayde Se",
+      "input_name": "Qayde Se",
+      "batch": "BATCH 3",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_8259ba7267e4e89a",
+      "path": "Ranjhaan",
+      "input_name": "Ranjhaan",
+      "batch": "BATCH 3",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_2cf6a8cf1de575d7",
+      "path": "Roya Jab Tu",
+      "input_name": "Roya Jab Tu",
+      "batch": "BATCH 3",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_2e57fd59f550db5e",
+      "path": "Saari Duniya",
+      "input_name": "Saari Duniya",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_093ac13865586a20",
+      "path": "Saiyaara",
+      "input_name": "Saiyaara",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_28cbe448ddf09936",
+      "path": "Satranga",
+      "input_name": "Satranga",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_f7697ee3c3bb86a6",
+      "path": "Songs voor 2022/Ae Dil Hai Mushkil",
+      "input_name": "Songs voor 2022/Ae Dil Hai Mushkil",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_e64844bc7095d5c1",
+      "path": "Songs voor 2022/Chunar",
+      "input_name": "Songs voor 2022/Chunar",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_eb056311e6761841",
+      "path": "Songs voor 2022/Mein Tenu",
+      "input_name": "Songs voor 2022/Mein Tenu",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_d504d8e4f57b8a77",
+      "path": "Songs voor 2022/Surili Akhiyon",
+      "input_name": "Songs voor 2022/Surili Akhiyon",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_11f221664e7b149a",
+      "path": "Songs voor 2022/Tere Sang Yara",
+      "input_name": "Songs voor 2022/Tere Sang Yara",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_008a538f6f9b4553",
+      "path": "Tere Sang Ishq ",
+      "input_name": "Tere Sang Ishq",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_4371054f29c55215",
+      "path": "Toh Phir Aao",
+      "input_name": "Toh Phir Aao",
+      "batch": "BATCH 4",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_360cae7d26003f10",
+      "path": "Tujhe kitna G-70",
+      "input_name": "Tujhe kitna G-70",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_624bc8b7a6462970",
+      "path": "Tujhe ko",
+      "input_name": "Tujhe ko",
+      "batch": "BATCH 4",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_b8046d1988d73287",
+      "path": "Tum Jo Mil Gaye",
+      "input_name": "Tum Jo Mil Gaye",
+      "batch": "BATCH 4",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_58267979d8b6ad17",
+      "path": "Tum Kya Mile",
+      "input_name": "Tum Kya Mile",
+      "batch": "BATCH 4",
+      "code": "jj",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "YES"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_166608e1cbdb963e",
+      "path": "Tum se hi ",
+      "input_name": "Tum se hi",
+      "batch": "BATCH 4",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_f110c9f9abd99452",
+      "path": "TUMHE KITNA PYAAR",
+      "input_name": "TUMHE KITNA PYAAR",
+      "batch": "BATCH 5",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_1e590f0a69014da7",
+      "path": "Ve Kamleya",
+      "input_name": "Ve Kamleya",
+      "batch": "BATCH 5",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_b070da9b59558720",
+      "path": "Ya Ali",
+      "input_name": "Ya Ali",
+      "batch": "BATCH 5",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_e7ea53db72331a7d",
+      "path": "Arijit Dance Mashup",
+      "input_name": "Arijit Dance Mashup",
+      "batch": "MASHUP/MEDLEY ITEMS",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO",
+        "TYPE": "MASHUP"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_7e7ce65ea1fc51f2",
+      "path": "Chand mera dil mash up",
+      "input_name": "Chand mera dil mash up",
+      "batch": "MASHUP/MEDLEY ITEMS",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO",
+        "TYPE": "MASHUP"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_72248a635568cd4f",
+      "path": "Gerua medley",
+      "input_name": "Gerua medley",
+      "batch": "MASHUP/MEDLEY ITEMS",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO",
+        "TYPE": "MEDLEY"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    },
+    {
+      "candidate_id": "cat2_685800823f5c325e",
+      "path": "Love mashups ",
+      "input_name": "Love mashups",
+      "batch": "MASHUP/MEDLEY ITEMS",
+      "code": "jn",
+      "set_fields": {
+        "MUSIC_READY": "YES",
+        "VOCALS_READY": "NO",
+        "TYPE": "MASHUP"
+      },
+      "match_method": "EXACT_PATH_EXCEPT_OUTER_WHITESPACE"
+    }
+  ],
+  "expected_control_totals": {
+    "regular_items": 63,
+    "regular_music_yes": 63,
+    "regular_vocals_yes": 40,
+    "regular_vocals_no": 23,
+    "mashup_medley_items": 4,
+    "mashup_medley_music_yes": 4,
+    "mashup_medley_vocals_no": 4,
+    "total_items": 67,
+    "vocal_pending": 27
+  },
+  "explicit_constraints": [
+    "Aye Khuda and Dooriyan are ORIGINAL; DHUN TYPE remains UNKNOWN.",
+    "Conditional MASHUP TYPE assignments fail closed if existing semantics conflict; never guess.",
+    "Preserve Songs voor 2022 historical grouping; Chunar is a separate historical item/version, not merged with Chunar 2025.",
+    "Eight NITIN 2008 recreations excluded from these 67 readiness answers; preserve previous identity/TYPE/actions; readiness UNKNOWN.",
+    "No inference of lyrics, mix/master, revision, live readiness, stems, rights, publication, priority, ownership or unspecified fields.",
+    "Derived queues express only music and vocals readiness; do not treat as publish-ready.",
+    "No falsely complete Master Catalog; no production or publication mutation."
+  ],
+  "reconciliation_status": "EXPLICIT_ROWS_RECORDED_CONTROL_TOTAL_DISCREPANCY_AWAITING_NITIN",
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
