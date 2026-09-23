@@ -1,26 +1,27 @@
 {
-  "schema": "PRIVATE_REAL_MEDIA_NEXT_READY_V01",
-  "schema_version": 1,
-  "status": "WAITING_FOR_NITIN_RESOLVE_SAFE_RESTART",
-  "ready_nonhuman_count": 0,
+  "blocked": [
+    "GEMINI_INDEPENDENT_REAL_OUTPUT_QC",
+    "PRIVATE_REAL_MEDIA_E2E_ACCEPTANCE",
+    "POST_READY"
+  ],
   "completed": [
     "PRIVATE_REAL_MEDIA_ACCEPTANCE_CONTRACT",
     "EXECUTION_CONTEXT_GOVERNANCE",
     "PROMPT_GOVERNANCE_LINT_AND_EQUIVALENCE",
     "BOUND_MEDIA_REHASH",
     "HASH_IDENTICAL_PRIVATE_STAGING",
-    "CLAUDE_PRIVATE_PRODUCTION_TRANSLATION"
-  ],
-  "blocked": [
+    "CLAUDE_PRIVATE_PRODUCTION_TRANSLATION",
     "PRIVATE_RESOLVE_REAL_MEDIA_RENDER",
-    "TECHNICAL_OUTPUT_DECODE",
-    "GEMINI_INDEPENDENT_REAL_OUTPUT_QC",
-    "PRIVATE_REAL_MEDIA_E2E_ACCEPTANCE"
+    "TECHNICAL_OUTPUT_DECODE"
   ],
-  "human_gate": "RESOLVE_SAFE_RESTART",
-  "smallest_human_action": "Save any unrelated unsaved work in DaVinci Resolve Studio, then quit and reopen Resolve. Do not start a render.",
-  "resume_task": "PRIVATE_RESOLVE_REAL_MEDIA_RENDER_RUN3_FROM_HASH_IDENTICAL_LOCAL_STAGING",
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "human_gate": "GEMINI_BROWSER_FILE_UPLOAD_ACCESS",
   "production_deployment_authorized": false,
   "publication_authorized": false,
-  "first_real_poster": "PAUSED_BY_NITIN"
+  "ready_nonhuman_count": 0,
+  "resume_task": "GEMINI_INDEPENDENT_REAL_OUTPUT_QC_FROM_RUN4_SHA_7F5B96E8",
+  "schema": "PRIVATE_REAL_MEDIA_NEXT_READY_V01",
+  "schema_version": 1,
+  "smallest_human_action": "Open chrome://extensions, click Details for the ChatGPT browser extension, and enable Allow access to file URLs. Do not upload or submit the video manually.",
+  "status": "WAITING_FOR_NITIN_GEMINI_UPLOAD_ACCESS"
 }

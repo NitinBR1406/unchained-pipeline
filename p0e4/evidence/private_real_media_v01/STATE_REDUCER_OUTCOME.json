@@ -1,15 +1,16 @@
 {
-  "schema": "PRIVATE_REAL_MEDIA_STATE_REDUCER_OUTCOME_V01",
-  "schema_version": 1,
+  "base_master_state_sha256": "c8f9f5ffc29e430ac7b39142b609ad55949ed908b36c3332dcc83b53a9a73ced",
   "base_master_state_version": "V16.3",
   "base_state_version": 29,
-  "base_master_state_sha256": "c8f9f5ffc29e430ac7b39142b609ad55949ed908b36c3332dcc83b53a9a73ced",
-  "event": "PRIVATE_REAL_MEDIA_ACCEPTANCE_GO_V01",
-  "derived_private_state": "WAITING_FOR_NITIN_RESOLVE_SAFE_RESTART",
+  "candidate_sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501",
+  "derived_private_state": "WAITING_FOR_NITIN_GEMINI_UPLOAD_ACCESS",
+  "event": "PRIVATE_REAL_MEDIA_RENDER_RUN4_TECHNICAL_GREEN",
+  "first_real_poster": "PAUSED_BY_NITIN",
   "master_state_advanced": false,
-  "reason": "Private contract accepted, but no rendered candidate exists; a false GREEN or state-version advance is forbidden.",
-  "production_e2e_status": "BLOCKED_NOT_GREEN",
   "production_deployment_authorized": false,
+  "production_e2e_status": "BLOCKED_NOT_GREEN",
   "publication_authorized": false,
-  "first_real_poster": "PAUSED_BY_NITIN"
+  "reason": "The exact bound private candidate rendered and decoded GREEN, but independent Gemini real-output QC is blocked by local file-upload access; POST_READY cannot be asserted.",
+  "schema": "PRIVATE_REAL_MEDIA_STATE_REDUCER_OUTCOME_V01",
+  "schema_version": 1
 }

@@ -1,0 +1,16 @@
+{
+  "contract_event_id": "PRIVATE_REAL_MEDIA_ACCEPTANCE_GO_V01",
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "output": {
+    "bytes": 382264829,
+    "classification": "PRIVATE_LOCAL_REVIEW_ONLY",
+    "sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501",
+    "uri": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/UNCHAINED_AKI_PRIVATE_V01_RUN4.mp4"
+  },
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "run_id": "UNCHAINED_AKI_PRIVATE_V01_RUN4",
+  "schema": "PRIVATE_REAL_MEDIA_TECHNICAL_ACCEPTANCE_V01",
+  "schema_version": 1,
+  "status": "TECHNICAL_GREEN_EXTERNAL_QC_PENDING"
+}
