@@ -1,0 +1,30 @@
+{
+  "acceptance_manifest_entries_verified": 33,
+  "branch": "p0e4/slice1-production-handoff",
+  "diff_qc": "Code and structured evidence clean. Raw FFmpeg CAPTIONS_DECODE.txt retains original trailing spaces; its SHA-bound bytes intentionally preserved.",
+  "exact_match": true,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "local_sha": "9d35a09257e49879c49a1f02f94aeb32537776b3",
+  "master_state": {
+    "evidence_manifest": "p0e4/evidence/resolve_studio_v163/SHA256SUMS.txt",
+    "master_state_version": "V16.3",
+    "path": "p0e4/evidence/resolve_studio_v163/UNCHAINED_MASTER_PROJECT_STATE_V16_3.json",
+    "production_e2e_status": "BLOCKED_NOT_GREEN",
+    "schema_version": 1,
+    "scope_status": "INSTALLED_SYNTHETIC_CAPABILITIES_ACCEPTED_PRODUCTION_BLOCKED",
+    "sha256": "c8f9f5ffc29e430ac7b39142b609ad55949ed908b36c3332dcc83b53a9a73ced",
+    "state_version": 29,
+    "tested_sha": "2af66e8884cd17fb39b02838798e41337c3e78bb"
+  },
+  "no_new_authoritative_live_runs": true,
+  "no_rendered_media_in_commit": true,
+  "prior_manifest_entries_verified": 483,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "regression_suites_passed": 74,
+  "remote": "NitinBR1406/unchained-pipeline",
+  "remote_sha": "9d35a09257e49879c49a1f02f94aeb32537776b3",
+  "tracked_worktree_clean": true,
+  "verified_at": "2026-09-23T08:51:47.033713+00:00",
+  "versioned_projection_replay": "PASS"
+}
