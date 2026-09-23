@@ -1,6 +1,6 @@
 {
   "artifact": "NITIN_MINIMAL_SEMANTIC_REVIEW_V01",
-  "status": "PARTIAL_REVIEW_RECEIVED_REMAINING_FIELDS_UNKNOWN",
+  "status": "WAITING_FOR_NITIN_CONTROL_TOTAL_RECONCILIATION",
   "source": "CATALOG_DISCOVERY_V02",
   "parent_master_state_version": 29,
   "counts": {
@@ -17,7 +17,8 @@
     "remaining_original_unassigned_representatives": 103,
     "admin_embedded_media_held_separately": 1,
     "nitin_2008_identities_confirmed": 8,
-    "nitin_2008_readiness_confirmed": 0
+    "nitin_2008_readiness_confirmed": 0,
+    "batch_readiness_confirmed": 67
   },
   "allowed_values": {
     "TYPE": [
@@ -129,9 +130,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -139,7 +140,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 2,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_0a43a98fdcab8228",
@@ -148,9 +150,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -158,7 +160,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 2,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_4f90946f01f9c8b6",
@@ -167,9 +170,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -177,7 +180,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 8,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_79290af7b58ddb34",
@@ -186,9 +190,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -196,7 +200,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 11,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_e7ea53db72331a7d",
@@ -204,10 +209,10 @@
       "path": "Arijit Dance Mashup",
       "block": "mashup_medley_named_folders",
       "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "TYPE": "MASHUP",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -215,7 +220,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_52b5d698fedd26ee",
@@ -223,10 +229,10 @@
       "path": "Aye Khuda",
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "TYPE": "ORIGINAL",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -234,7 +240,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 8,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_88801f0acb7cfd7f",
@@ -243,9 +250,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -253,7 +260,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 7,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_85ea53f51681416a",
@@ -262,9 +270,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -272,7 +280,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 4,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_b8bfe2f530324a99",
@@ -281,9 +290,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -291,7 +300,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 9,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_d651bf20e95a2c82",
@@ -300,9 +310,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -310,7 +320,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 6,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_32a10e31b5306fed",
@@ -319,9 +330,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -329,7 +340,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 6,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_dd841dc54a2bcce3",
@@ -338,9 +350,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -348,7 +360,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_7e7ce65ea1fc51f2",
@@ -356,10 +369,10 @@
       "path": "Chand mera dil mash up",
       "block": "mashup_medley_named_folders",
       "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "TYPE": "MASHUP",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -367,7 +380,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 12,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_f7e8d7c3fa1d08fa",
@@ -376,9 +390,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -386,7 +400,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 1,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_0ff14234a5b7d399",
@@ -395,9 +410,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -405,7 +420,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 4,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_db127447f49cdd57",
@@ -413,10 +429,10 @@
       "path": "Dooriyan",
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "TYPE": "ORIGINAL",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -424,7 +440,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 6,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_2f98b7212c6aa641",
@@ -433,9 +450,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -443,7 +460,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 7,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_6b16dcdf6822a8f7",
@@ -452,9 +470,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -462,7 +480,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 2,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_2390ca74cbb0727e",
@@ -471,9 +490,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -481,7 +500,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 5,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_d2160dfdd0ebaa5b",
@@ -490,9 +510,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -500,7 +520,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_72248a635568cd4f",
@@ -508,10 +529,10 @@
       "path": "Gerua medley",
       "block": "mashup_medley_named_folders",
       "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "TYPE": "MEDLEY",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -519,7 +540,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 8,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_5a750b7f5d14f375",
@@ -528,9 +550,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -538,7 +560,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 4,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_f8d34f150d2fb8c0",
@@ -547,9 +570,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -557,7 +580,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 4,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_25bdfeaf7d790f69",
@@ -566,9 +590,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -576,7 +600,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_9f471552913e7785",
@@ -585,9 +610,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -595,7 +620,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 11,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_b3ce77feab47711c",
@@ -623,9 +649,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -633,7 +659,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 8,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_19e92cf29661d9ff",
@@ -642,9 +669,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -652,7 +679,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 7,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_9c703ca993d3bd73",
@@ -661,9 +689,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -671,7 +699,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 10,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_dfa717181359d1ff",
@@ -680,9 +709,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -690,7 +719,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 13,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_2fe20d4c7721b634",
@@ -699,9 +729,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -709,7 +739,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 12,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_72021be2452fdf27",
@@ -718,9 +749,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -728,7 +759,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 2,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_a2a636a02c99c082",
@@ -737,9 +769,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -747,7 +779,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 12,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_c880f769b3999d0b",
@@ -756,9 +789,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -766,7 +799,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 15,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_f07c6976c30a8456",
@@ -775,9 +809,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -785,7 +819,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 9,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_b642a520783d1ddc",
@@ -794,9 +829,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -804,7 +839,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 11,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_685800823f5c325e",
@@ -812,10 +848,10 @@
       "path": "Love mashups ",
       "block": "mashup_medley_named_folders",
       "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "TYPE": "MASHUP",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -823,7 +859,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_f0cbbcd0f7d53566",
@@ -832,9 +869,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -842,7 +879,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 2,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_49b256ae53f5b65b",
@@ -851,9 +889,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -861,7 +899,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 2,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_19ffb1e90e957e5a",
@@ -870,9 +909,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -880,7 +919,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 5,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_d97ef8bda61557fa",
@@ -889,9 +929,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -899,7 +939,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 8,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_091f4fce6f889c00",
@@ -908,9 +949,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -918,7 +959,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 11,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_823dcfaf0a8be169",
@@ -1087,9 +1129,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1097,7 +1139,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 9,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_ac22922e887b8dc4",
@@ -1106,9 +1149,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1116,7 +1159,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_34c4090bdc6b70b0",
@@ -1125,9 +1169,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1135,7 +1179,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 6,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_ce207aedcec807c8",
@@ -1144,9 +1189,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1154,7 +1199,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 6,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_c56f7f16c0194218",
@@ -1163,9 +1209,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1173,7 +1219,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 5,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_dd9806cb61943182",
@@ -1182,9 +1229,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1192,7 +1239,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 5,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_8259ba7267e4e89a",
@@ -1201,9 +1249,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1211,7 +1259,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_2cf6a8cf1de575d7",
@@ -1220,9 +1269,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1230,7 +1279,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 5,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_2e57fd59f550db5e",
@@ -1239,9 +1289,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1249,7 +1299,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 5,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_093ac13865586a20",
@@ -1258,9 +1309,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1268,7 +1319,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 4,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_28cbe448ddf09936",
@@ -1277,9 +1329,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1287,7 +1339,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 4,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_f7697ee3c3bb86a6",
@@ -1296,9 +1349,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1306,7 +1359,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_e64844bc7095d5c1",
@@ -1315,9 +1369,9 @@
       "block": "ambiguous_identity",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1325,7 +1379,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm whether separate item or existing-song arrangement/version before readiness review."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_eb056311e6761841",
@@ -1334,9 +1389,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1344,7 +1399,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_d504d8e4f57b8a77",
@@ -1353,9 +1409,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1363,7 +1419,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_11f221664e7b149a",
@@ -1372,9 +1429,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1382,7 +1439,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_008a538f6f9b4553",
@@ -1391,9 +1449,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1401,7 +1459,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 5,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_4371054f29c55215",
@@ -1410,9 +1469,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1420,7 +1479,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 1,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_360cae7d26003f10",
@@ -1429,9 +1489,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1439,7 +1499,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 9,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_624bc8b7a6462970",
@@ -1448,9 +1509,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1458,7 +1519,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 4,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_b8046d1988d73287",
@@ -1467,9 +1529,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1477,7 +1539,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_58267979d8b6ad17",
@@ -1486,9 +1549,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "YES",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1496,7 +1559,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 12,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_166608e1cbdb963e",
@@ -1505,9 +1569,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1515,7 +1579,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 9,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_f110c9f9abd99452",
@@ -1524,9 +1589,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1534,7 +1599,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 4,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_1e590f0a69014da7",
@@ -1543,9 +1609,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1553,7 +1619,8 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 3,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_b070da9b59558720",
@@ -1562,9 +1629,9 @@
       "block": "clear_song_folders",
       "identity_confirmed": "UNKNOWN",
       "TYPE": "UNKNOWN",
-      "MUSIC_READY": "UNKNOWN",
+      "MUSIC_READY": "YES",
       "LYRICS_READY": "UNKNOWN",
-      "VOCALS_READY": "UNKNOWN",
+      "VOCALS_READY": "NO",
       "MIX_MASTER_READY": "UNKNOWN",
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
@@ -1572,10 +1639,17 @@
       "NEXT_ACTION": "UNKNOWN",
       "ACTION_OWNER": "UNKNOWN",
       "asset_count": 1,
-      "question": "Confirm/correct identity and only the semantic facts you know."
+      "question": "Music/vocals answers recorded from Nitin; other fields remain unconfirmed. Control totals await reconciliation.",
+      "semantic_evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     }
   ],
   "identity_questions": [
+    {
+      "id": "BATCH_CONTROL_TOTALS",
+      "question": "Explicit answers produce 36 regular jj and 27 regular jn, plus 4 mashup/medley jn: 31 vocal-pending. Confirm row-based totals or specify four jn-to-jj corrections; no answers changed to force totals.",
+      "answer": "UNKNOWN",
+      "evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
+    },
     {
       "id": "N2008",
       "names": [
@@ -1647,8 +1721,9 @@
         "Songs voor 2022/Chunar",
         "Chunar 2025"
       ],
-      "question": "One song with different versions, or separate catalog items? Do not answer readiness twice if one song.",
-      "answer": "UNKNOWN"
+      "question": "Historical Songs voor 2022/Chunar retained separately from Chunar 2025; no merge authorized.",
+      "answer": "KEEP_SEPARATE_HISTORICAL_VERSION",
+      "evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "id": "LOOSE_MEDIA",
@@ -1668,6 +1743,63 @@
       "event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01",
       "path": "p0e4/evidence/catalog_semantic_events/NITIN_2008_SEMANTIC_CONFIRMATION_V01.json",
       "sha256": "9fcc6c1ba24ccb97e80dbb0abdb118c12ac1560098d3c079cd0739d118d5db91"
+    },
+    {
+      "event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01",
+      "path": "p0e4/evidence/catalog_semantic_events/NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01.json",
+      "sha256": "6da0dc5e8d141e12098c35c6d453866d8b3416b97714600be7aa3cadba61f54a"
     }
-  ]
+  ],
+  "batch_semantic_validation": {
+    "schema_version": 1,
+    "event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01",
+    "candidate_id_path_validation": "PASS",
+    "explicit_fields_validation": "PASS",
+    "unrelated_fields_and_rows_unchanged": "PASS",
+    "nitin_2008_unchanged": "PASS",
+    "expected_control_totals": {
+      "regular_items": 63,
+      "regular_music_yes": 63,
+      "regular_vocals_yes": 40,
+      "regular_vocals_no": 23,
+      "mashup_medley_items": 4,
+      "mashup_medley_music_yes": 4,
+      "mashup_medley_vocals_no": 4,
+      "total_items": 67,
+      "vocal_pending": 27
+    },
+    "observed_control_totals": {
+      "regular_items": 63,
+      "regular_music_yes": 63,
+      "regular_vocals_yes": 36,
+      "regular_vocals_no": 27,
+      "mashup_medley_items": 4,
+      "mashup_medley_music_yes": 4,
+      "mashup_medley_vocals_no": 4,
+      "total_items": 67,
+      "vocal_pending": 31
+    },
+    "control_total_mismatches": {
+      "regular_vocals_yes": {
+        "expected": 40,
+        "observed": 36
+      },
+      "regular_vocals_no": {
+        "expected": 23,
+        "observed": 27
+      },
+      "vocal_pending": {
+        "expected": 27,
+        "observed": 31
+      }
+    },
+    "type_conflicts": [],
+    "status": "WAITING_FOR_NITIN_CONTROL_TOTAL_RECONCILIATION",
+    "row_assignments_applied": 67,
+    "all_checks_passed": false
+  },
+  "historical_grouping_constraints": {
+    "Songs voor 2022": "PRESERVE",
+    "Songs voor 2022/Chunar": "KEEP_SEPARATE_FROM_CHUNAR_2025_WITHOUT_EXPLICIT_IDENTITY_EVIDENCE"
+  }
 }

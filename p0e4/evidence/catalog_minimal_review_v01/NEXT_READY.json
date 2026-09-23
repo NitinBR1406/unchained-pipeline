@@ -1,7 +1,34 @@
 {
-  "status": "WAITING_FOR_NITIN",
-  "task": "Receive remaining semantic readiness/priority review and unresolved identity decisions; NITIN 2008 identity and TYPE already confirmed",
+  "status": "WAITING_FOR_NITIN_CONTROL_TOTAL_RECONCILIATION",
+  "ready_nonhuman_count": 0,
+  "task": "Confirm explicit-row totals 36 ready / 31 vocal-pending, or name four regular jn-to-jj corrections.",
   "MASTER_CATALOG_V01_created": false,
   "publication_authorized": false,
-  "production_mutation": false
+  "production_mutation": false,
+  "remaining_questions": [
+    {
+      "priority": 1,
+      "question": "Resolve row answers versus stated 40/23 regular totals; do not resend the whole batch."
+    },
+    {
+      "priority": 2,
+      "question": "For the next selected vocal session only, specify priority and owner if needed. Other unknown semantics may remain UNKNOWN."
+    },
+    {
+      "priority": 3,
+      "question": "When relevant, confirm Intro beat association and remaining download identities; Chunar stays separate and NITIN 2008 identity is already confirmed."
+    }
+  ],
+  "unconfirmed_semantics": [
+    "LYRICS_READY",
+    "MIX_MASTER_READY",
+    "REVISION_REQUIRED",
+    "LIVE_READY",
+    "PRIORITY"
+  ],
+  "untouched_readiness_rows": [
+    "Aakhri Ishq",
+    "Intro beat",
+    "NITIN 2008 (8 children)"
+  ]
 }

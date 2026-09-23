@@ -1,10 +1,10 @@
 {
-  "tested_sha": "01723ba1cd83c7bd51d80cc49840fb53974db42e",
-  "observed_at": "2026-09-23T09:43:41.791082+00:00",
+  "tested_sha": "2bce3b56873c62cec7a2e9977531d51fd2df1a64",
+  "observed_at": "2026-09-23T12:39:17.808203+00:00",
   "source_manifest_verified": true,
   "all_88_candidates_accounted_for": true,
   "all_semantic_defaults_unknown": false,
-  "catalog_tests_passed": 10,
+  "catalog_tests_passed": 17,
   "javascript_syntax": "PASS",
   "isolated_javascript_smoke": "PASS: render 77 rows, selected-only batch assignment, export action",
   "browser_visual_test": "NOT_PERFORMED",
@@ -14,8 +14,13 @@
   "master_state_version": 29,
   "csv_line_endings": "LF",
   "unconfirmed_semantic_fields_unknown": true,
-  "semantic_rows_updated": 8,
-  "other_rows_unchanged": 69,
-  "semantic_confirmation_event": "NITIN_2008_SEMANTIC_CONFIRMATION_V01",
-  "semantic_projection_check": "PASS exact four-field update plus provenance/question; no readiness or priority inferred"
+  "semantic_rows_updated": 67,
+  "other_rows_unchanged": 10,
+  "semantic_confirmation_event": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01",
+  "semantic_projection_check": "PASS: only explicit fields plus provenance/question; eight NITIN 2008 rows unchanged",
+  "control_total_check": "MISMATCH_AWAITING_NITIN",
+  "control_total_validation_receipt": "BATCH_SEMANTIC_VALIDATION_RECEIPT.json",
+  "all_acceptance_checks_passed": false,
+  "derived_vocal_pending_count": 31,
+  "derived_music_vocals_ready_count": 36
 }

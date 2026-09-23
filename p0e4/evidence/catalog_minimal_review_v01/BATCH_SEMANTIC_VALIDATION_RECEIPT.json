@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01",
+  "candidate_id_path_validation": "PASS",
+  "explicit_fields_validation": "PASS",
+  "unrelated_fields_and_rows_unchanged": "PASS",
+  "nitin_2008_unchanged": "PASS",
+  "expected_control_totals": {
+    "regular_items": 63,
+    "regular_music_yes": 63,
+    "regular_vocals_yes": 40,
+    "regular_vocals_no": 23,
+    "mashup_medley_items": 4,
+    "mashup_medley_music_yes": 4,
+    "mashup_medley_vocals_no": 4,
+    "total_items": 67,
+    "vocal_pending": 27
+  },
+  "observed_control_totals": {
+    "regular_items": 63,
+    "regular_music_yes": 63,
+    "regular_vocals_yes": 36,
+    "regular_vocals_no": 27,
+    "mashup_medley_items": 4,
+    "mashup_medley_music_yes": 4,
+    "mashup_medley_vocals_no": 4,
+    "total_items": 67,
+    "vocal_pending": 31
+  },
+  "control_total_mismatches": {
+    "regular_vocals_yes": {
+      "expected": 40,
+      "observed": 36
+    },
+    "regular_vocals_no": {
+      "expected": 23,
+      "observed": 27
+    },
+    "vocal_pending": {
+      "expected": 27,
+      "observed": 31
+    }
+  },
+  "type_conflicts": [],
+  "status": "WAITING_FOR_NITIN_CONTROL_TOTAL_RECONCILIATION",
+  "row_assignments_applied": 67,
+  "all_checks_passed": false
+}
