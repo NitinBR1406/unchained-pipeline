@@ -1,0 +1,29 @@
+# NITIN_MINIMAL_SEMANTIC_REVIEW_V01
+
+Begin in het HTML-reviewformulier bij het aparte **NITIN 2008**-blok. Er zijn acht kinderen: asma, KHAN KHAN, KHILTA GHUL, khud se, raeena, SANIYA, tum sabse en ye raat (zie de exacte bestandsnamen in het formulier). Bevestig/corrigeer of dit de acht original-song recreations zijn. TYPE blijft UNKNOWN tot die bevestiging. Gereedheid wordt afzonderlijk gevraagd.
+
+## Wat is verminderd?
+
+De 88 oorspronkelijke kandidaten zijn volledig verantwoord in REVIEW_REDUCTION_AUDIT.json:
+
+- **63 duidelijke songgerichte mappen**: 59 top-level mappen en vier oudere child-songmappen. De technische groepering staat vast; identiteit, TYPE en gereedheid zijn niet automatisch bewezen.
+- **8 NITIN 2008-kinderen**, apart reviewblok.
+- **4 mashup-/medleybenamingen**, apart blok; TYPE niet uit de naam ingevuld.
+- **2 ambigue items**: Intro beat mogelijk bij Khairiyat; oudere Chunar mogelijk een versie van Chunar 2025. Eerst identiteit, pas daarna eventueel afzonderlijke gereedheid.
+- **11 downloadkandidaten uit de gereedheidsreview gehaald**: vier gemengde containers, zes mogelijke bestaande-songmediafolders en één werk-/administratiemap (Stater). De ene muziekfile in Stater blijft apart bewaard in de audit; de parent wordt geen song.
+
+Er blijven **75 directe semantische regels en 2 voorwaardelijke identiteitsregels**. Verder terugbrengen zou onbewezen songidentiteiten of gereedheid aannemen. Dit is geen claim dat 75 unieke songs zijn vastgesteld. Batchantwoorden voor expliciet geselecteerde regels verminderen invoer; UNKNOWN mag blijven staan. Zes bestaande containers en 19 bestaande uitsluitingen blijven buiten songgereedheid.
+
+## Technische koppelingen en duplicaten
+
+Twee downloads zijn met exacte SHA256-gelijkheid gekoppeld aan een asset in een bestaande songmap: Chand Mera dil en Tujhe ko. Dit koppelt bytes aan een map, niet auteurschap, zangidentiteit of gereedheid. Een derde hashgroep bevat drie gelijke Downloads-bestanden: één representant, twee aliassen, songidentiteit UNKNOWN. Hierdoor blijven van de oorspronkelijke 107 losse mediakandidaten 103 niet-gekoppelde representanten over. Eén admin-ingebed mediarecord blijft daarnaast apart bewaard.
+
+Identieke namen/groottes van de twee Apna-transferbundels zijn geen bytebewijs: cloudbestanden zijn niet gelezen. Bovendien bevatten beide bundels meerdere songs. Geen automatische foldermerge. Vermoedelijke links (HUA MAIN/Hua Mein, phir-mohabbat/Phil Moh, Baarish, Saari Duniya) worden gebundeld ter bevestiging aangeboden. Geen formulier per losse download; die blijven buiten het songcatalogusbesluit tot relevantie/identiteit bekend is.
+
+## Gebruik
+
+HTML: selecteer de bedoelde regels, kies een veld/waarde en pas het toe. Vul desgewenst individueel aan. Download antwoorden als JSON vóór afsluiten; geen automatische opslag of verzending. CSV en JSON zijn alternatieven. Alle tien gevraagde velden zijn aanwezig. Toegestane waarden staan machineleesbaar in allowed_values; TYPE, PRIORITY en ACTION_OWNER zijn dropdowns. ACTION_OWNER betekent actie-uitvoerder, geen rechtenhouder. NEXT_ACTION=OTHER kan met een opmerking worden verduidelijkt.
+
+Alle semantische velden starten UNKNOWN. Master V16.3/state29 bevat een exact-SHA final-video-approval voor Aakhri Ishq; die is geen bewijs voor de tien catalogusvelden en is daarom niet als algemene gereedheid overgenomen. De gebruiker vraagt nog expliciet bevestiging van de acht recreatie-identiteiten, dus ook die zijn niet alvast goedgekeurd.
+
+Deze projectie gebruikt uitsluitend de gehashte Discovery V02-evidence. Geen nieuwe iCloud-toegang, cloudhydratie of bronmutatie. Master State en oude discovery blijven ongewijzigd. Geen MASTER_CATALOG_V01 aangemaakt; voorbereiding daarvan wacht op ontvangen Nitin-review. Geen productie- of publicatiemutatie.

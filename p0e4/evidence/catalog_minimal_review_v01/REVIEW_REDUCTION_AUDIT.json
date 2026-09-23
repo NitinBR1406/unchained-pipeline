@@ -1,0 +1,2237 @@
+{
+  "counts": {
+    "source_candidates": 88,
+    "semantic_rows": 77,
+    "immediate_semantic_rows": 75,
+    "conditional_identity_rows": 2,
+    "download_candidates_removed_from_readiness": 11,
+    "admin_candidates_excluded": 1,
+    "additional_mixed_containers": 4,
+    "download_media_folders_identity_first": 6,
+    "exact_hash_links": 2,
+    "redundant_unassigned_aliases": 2,
+    "remaining_original_unassigned_representatives": 103,
+    "admin_embedded_media_held_separately": 1
+  },
+  "candidate_dispositions": [
+    {
+      "candidate_id": "cat2_3f01d3ab7b9b176a",
+      "path": "Aakhri Ishq",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_dff77f896868c6a5",
+      "path": "Abhi Mujhme Kahin",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_0a43a98fdcab8228",
+      "path": "Ae zindagi gale laga le",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_4f90946f01f9c8b6",
+      "path": "Agar Ho Tum",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_79290af7b58ddb34",
+      "path": "Apna bana le",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_e7ea53db72331a7d",
+      "path": "Arijit Dance Mashup",
+      "category": "mashup_medley_named_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_52b5d698fedd26ee",
+      "path": "Aye Khuda",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_88801f0acb7cfd7f",
+      "path": "Baarish - Half girlfriend",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_85ea53f51681416a",
+      "path": "Baarish-Kabhi jo badal",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_b8bfe2f530324a99",
+      "path": "Bekhayali",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_d651bf20e95a2c82",
+      "path": "Bhool Jaa",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_32a10e31b5306fed",
+      "path": "Chaleya",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_dd841dc54a2bcce3",
+      "path": "Chand Mera dil",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_7e7ce65ea1fc51f2",
+      "path": "Chand mera dil mash up",
+      "category": "mashup_medley_named_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_f7e8d7c3fa1d08fa",
+      "path": "Chunar 2025",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_0ff14234a5b7d399",
+      "path": "DHUN",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_db127447f49cdd57",
+      "path": "Dooriyan",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_40574d82388dafa6",
+      "path": "Downloads/Apna Bana Levideo’s",
+      "category": "ambiguous_identity",
+      "reason": "Possible media/version folder for an existing song; identity mapping requires confirmation, no independent readiness row."
+    },
+    {
+      "candidate_id": "cat2_abeb504688b08a50",
+      "path": "Downloads/Baarish videos",
+      "category": "ambiguous_identity",
+      "reason": "Possible media/version folder for an existing song; identity mapping requires confirmation, no independent readiness row."
+    },
+    {
+      "candidate_id": "cat2_d9019b5bf4c303af",
+      "path": "Downloads/Final videos ",
+      "category": "collections_containers",
+      "reason": "Multiple distinct song-labelled assets; not one song."
+    },
+    {
+      "candidate_id": "cat2_2b0741d93ac55409",
+      "path": "Downloads/HUA MAIN",
+      "category": "ambiguous_identity",
+      "reason": "Possible media/version folder for an existing song; identity mapping requires confirmation, no independent readiness row."
+    },
+    {
+      "candidate_id": "cat2_8b914d5c77516674",
+      "path": "Downloads/Stater",
+      "category": "non_song_admin",
+      "reason": "Work/admin hierarchy; one embedded media asset is retained separately, not proof that the parent is a song."
+    },
+    {
+      "candidate_id": "cat2_88f13d8beaaf48ef",
+      "path": "Downloads/wetransfer_apna-bana-le-mp4_2023-10-03_1015",
+      "category": "collections_containers",
+      "reason": "Multiple distinct song-labelled assets; not one song."
+    },
+    {
+      "candidate_id": "cat2_d67f645e6c16f81c",
+      "path": "Downloads/wetransfer_apna-bana-le-mp4_2023-10-03_1015 2",
+      "category": "collections_containers",
+      "reason": "Multiple distinct song-labelled assets; not one song."
+    },
+    {
+      "candidate_id": "cat2_5bdccd42ae70852e",
+      "path": "Downloads/wetransfer_bekhayali-mp4_2023-11-22_2238",
+      "category": "collections_containers",
+      "reason": "Multiple distinct song-labelled assets; not one song."
+    },
+    {
+      "candidate_id": "cat2_8077a9512772ef50",
+      "path": "Downloads/wetransfer_hua-main-vertical-part-1-mp4_2023-12-04_1601",
+      "category": "ambiguous_identity",
+      "reason": "Possible media/version folder for an existing song; identity mapping requires confirmation, no independent readiness row."
+    },
+    {
+      "candidate_id": "cat2_c9488745928c14dc",
+      "path": "Downloads/wetransfer_phir-mohabbat-mp4_2023-10-03_1157",
+      "category": "ambiguous_identity",
+      "reason": "Possible media/version folder for an existing song; identity mapping requires confirmation, no independent readiness row."
+    },
+    {
+      "candidate_id": "cat2_308e143afc59a57c",
+      "path": "Downloads/wetransfer_saari-duniya-v2-mp4_2023-12-22_2007",
+      "category": "ambiguous_identity",
+      "reason": "Possible media/version folder for an existing song; identity mapping requires confirmation, no independent readiness row."
+    },
+    {
+      "candidate_id": "cat2_2f98b7212c6aa641",
+      "path": "Dua",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_6b16dcdf6822a8f7",
+      "path": "Earned It",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_2390ca74cbb0727e",
+      "path": "Ek Mulaqat",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_d2160dfdd0ebaa5b",
+      "path": "Gehra Hua",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_72248a635568cd4f",
+      "path": "Gerua medley",
+      "category": "mashup_medley_named_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_5a750b7f5d14f375",
+      "path": "Ghar Kab Aaoge",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_f8d34f150d2fb8c0",
+      "path": "Har kisi ko",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_25bdfeaf7d790f69",
+      "path": "Heeriye",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_9f471552913e7785",
+      "path": "Hua Mein",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_b3ce77feab47711c",
+      "path": "Intro beat",
+      "category": "ambiguous_identity",
+      "reason": "Confirm whether separate item or existing-song arrangement/version before readiness review."
+    },
+    {
+      "candidate_id": "cat2_8226399e711d0a9e",
+      "path": "Jaanam",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_19e92cf29661d9ff",
+      "path": "Jaate hue lamhon",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_9c703ca993d3bd73",
+      "path": "Jee Le Zara",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_dfa717181359d1ff",
+      "path": "Jenna Sikha De",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_2fe20d4c7721b634",
+      "path": "Kahani Suno",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_72021be2452fdf27",
+      "path": "Kaise Hua",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_a2a636a02c99c082",
+      "path": "Kalank",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_c880f769b3999d0b",
+      "path": "Kesariya",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_f07c6976c30a8456",
+      "path": "Khairiyat",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_b642a520783d1ddc",
+      "path": "Khoobsurat",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_685800823f5c325e",
+      "path": "Love mashups ",
+      "category": "mashup_medley_named_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_f0cbbcd0f7d53566",
+      "path": "Main Gira",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_49b256ae53f5b65b",
+      "path": "Mann Ki Lagan",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_19ffb1e90e957e5a",
+      "path": "Mehram",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_d97ef8bda61557fa",
+      "path": "Mere bina Labon ko",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_091f4fce6f889c00",
+      "path": "Mere Mehboob",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_823dcfaf0a8be169",
+      "path": "NITIN 2008/asma mastered_01.wav",
+      "category": "nitin_2008_children",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_e526065897b54f07",
+      "path": "NITIN 2008/KHAN KHAN MASTERED.wav",
+      "category": "nitin_2008_children",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_b51082b1c9ad2a98",
+      "path": "NITIN 2008/KHILTA GHUL MASTERED.wav",
+      "category": "nitin_2008_children",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_9e83d55d3d3b9604",
+      "path": "NITIN 2008/khud se mastered.wav",
+      "category": "nitin_2008_children",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_91a182b555222b59",
+      "path": "NITIN 2008/raeena mastered.wav",
+      "category": "nitin_2008_children",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_a771c4c946c5174e",
+      "path": "NITIN 2008/SANIYA MASTERED_00.wav",
+      "category": "nitin_2008_children",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_e33fdd193b68cbe2",
+      "path": "NITIN 2008/tum sabse mastered.wav",
+      "category": "nitin_2008_children",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_0f2352dc32122b2e",
+      "path": "NITIN 2008/ye raat mastered_00.wav",
+      "category": "nitin_2008_children",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_35549f8c6f426681",
+      "path": "O Maahi",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_ac22922e887b8dc4",
+      "path": "O Re Piya",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_34c4090bdc6b70b0",
+      "path": "Pehle Bhi Main",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_ce207aedcec807c8",
+      "path": "Phil Moh",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_c56f7f16c0194218",
+      "path": "Phir aur Kya chaiye ",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_dd9806cb61943182",
+      "path": "Qayde Se",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_8259ba7267e4e89a",
+      "path": "Ranjhaan",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_2cf6a8cf1de575d7",
+      "path": "Roya Jab Tu",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_2e57fd59f550db5e",
+      "path": "Saari Duniya",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_093ac13865586a20",
+      "path": "Saiyaara",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_28cbe448ddf09936",
+      "path": "Satranga",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_f7697ee3c3bb86a6",
+      "path": "Songs voor 2022/Ae Dil Hai Mushkil",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_e64844bc7095d5c1",
+      "path": "Songs voor 2022/Chunar",
+      "category": "ambiguous_identity",
+      "reason": "Confirm whether separate item or existing-song arrangement/version before readiness review."
+    },
+    {
+      "candidate_id": "cat2_eb056311e6761841",
+      "path": "Songs voor 2022/Mein Tenu",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_d504d8e4f57b8a77",
+      "path": "Songs voor 2022/Surili Akhiyon",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_11f221664e7b149a",
+      "path": "Songs voor 2022/Tere Sang Yara",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_008a538f6f9b4553",
+      "path": "Tere Sang Ishq ",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_4371054f29c55215",
+      "path": "Toh Phir Aao",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_360cae7d26003f10",
+      "path": "Tujhe kitna G-70",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_624bc8b7a6462970",
+      "path": "Tujhe ko",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_b8046d1988d73287",
+      "path": "Tum Jo Mil Gaye",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_58267979d8b6ad17",
+      "path": "Tum Kya Mile",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_166608e1cbdb963e",
+      "path": "Tum se hi ",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_f110c9f9abd99452",
+      "path": "TUMHE KITNA PYAAR",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_1e590f0a69014da7",
+      "path": "Ve Kamleya",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    },
+    {
+      "candidate_id": "cat2_b070da9b59558720",
+      "path": "Ya Ali",
+      "category": "clear_song_folders",
+      "reason": "Song-oriented file grouping; semantic type and readiness unproven."
+    }
+  ],
+  "categories": {
+    "clear_song_folders": [
+      "cat2_3f01d3ab7b9b176a",
+      "cat2_dff77f896868c6a5",
+      "cat2_0a43a98fdcab8228",
+      "cat2_4f90946f01f9c8b6",
+      "cat2_79290af7b58ddb34",
+      "cat2_52b5d698fedd26ee",
+      "cat2_88801f0acb7cfd7f",
+      "cat2_85ea53f51681416a",
+      "cat2_b8bfe2f530324a99",
+      "cat2_d651bf20e95a2c82",
+      "cat2_32a10e31b5306fed",
+      "cat2_dd841dc54a2bcce3",
+      "cat2_f7e8d7c3fa1d08fa",
+      "cat2_0ff14234a5b7d399",
+      "cat2_db127447f49cdd57",
+      "cat2_2f98b7212c6aa641",
+      "cat2_6b16dcdf6822a8f7",
+      "cat2_2390ca74cbb0727e",
+      "cat2_d2160dfdd0ebaa5b",
+      "cat2_5a750b7f5d14f375",
+      "cat2_f8d34f150d2fb8c0",
+      "cat2_25bdfeaf7d790f69",
+      "cat2_9f471552913e7785",
+      "cat2_8226399e711d0a9e",
+      "cat2_19e92cf29661d9ff",
+      "cat2_9c703ca993d3bd73",
+      "cat2_dfa717181359d1ff",
+      "cat2_2fe20d4c7721b634",
+      "cat2_72021be2452fdf27",
+      "cat2_a2a636a02c99c082",
+      "cat2_c880f769b3999d0b",
+      "cat2_f07c6976c30a8456",
+      "cat2_b642a520783d1ddc",
+      "cat2_f0cbbcd0f7d53566",
+      "cat2_49b256ae53f5b65b",
+      "cat2_19ffb1e90e957e5a",
+      "cat2_d97ef8bda61557fa",
+      "cat2_091f4fce6f889c00",
+      "cat2_35549f8c6f426681",
+      "cat2_ac22922e887b8dc4",
+      "cat2_34c4090bdc6b70b0",
+      "cat2_ce207aedcec807c8",
+      "cat2_c56f7f16c0194218",
+      "cat2_dd9806cb61943182",
+      "cat2_8259ba7267e4e89a",
+      "cat2_2cf6a8cf1de575d7",
+      "cat2_2e57fd59f550db5e",
+      "cat2_093ac13865586a20",
+      "cat2_28cbe448ddf09936",
+      "cat2_f7697ee3c3bb86a6",
+      "cat2_eb056311e6761841",
+      "cat2_d504d8e4f57b8a77",
+      "cat2_11f221664e7b149a",
+      "cat2_008a538f6f9b4553",
+      "cat2_4371054f29c55215",
+      "cat2_360cae7d26003f10",
+      "cat2_624bc8b7a6462970",
+      "cat2_b8046d1988d73287",
+      "cat2_58267979d8b6ad17",
+      "cat2_166608e1cbdb963e",
+      "cat2_f110c9f9abd99452",
+      "cat2_1e590f0a69014da7",
+      "cat2_b070da9b59558720"
+    ],
+    "nitin_2008_children": [
+      "cat2_823dcfaf0a8be169",
+      "cat2_e526065897b54f07",
+      "cat2_b51082b1c9ad2a98",
+      "cat2_9e83d55d3d3b9604",
+      "cat2_91a182b555222b59",
+      "cat2_a771c4c946c5174e",
+      "cat2_e33fdd193b68cbe2",
+      "cat2_0f2352dc32122b2e"
+    ],
+    "mashup_medley_named_folders": [
+      "cat2_e7ea53db72331a7d",
+      "cat2_7e7ce65ea1fc51f2",
+      "cat2_72248a635568cd4f",
+      "cat2_685800823f5c325e"
+    ],
+    "collections_containers": [
+      "cat2_d9019b5bf4c303af",
+      "cat2_88f13d8beaaf48ef",
+      "cat2_d67f645e6c16f81c",
+      "cat2_5bdccd42ae70852e"
+    ],
+    "non_song_admin": [
+      "cat2_8b914d5c77516674"
+    ],
+    "ambiguous_identity": [
+      "cat2_40574d82388dafa6",
+      "cat2_abeb504688b08a50",
+      "cat2_2b0741d93ac55409",
+      "cat2_8077a9512772ef50",
+      "cat2_c9488745928c14dc",
+      "cat2_308e143afc59a57c",
+      "cat2_b3ce77feab47711c",
+      "cat2_e64844bc7095d5c1"
+    ]
+  },
+  "original_exclusions": [
+    {
+      "path": ".DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "10722-030821-bestektekeningen.pdf",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Agar Ho Tum/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Automatiseringsocialmedia",
+      "reason": "AUTOMATION_ADMIN",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Bhool Jaa/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Chand mera dil mash up/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Dooriyan/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Downloads/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "ING docs",
+      "reason": "ADMIN_FINANCIAL",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Jaanam/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Jenna Sikha De/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Kalank/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Khoobsurat/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "RGSoftwareHuurovereenkomst.pdf",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Roya Jab Tu/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Saiyaara/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Saiyaara/CAT docs",
+      "reason": "ADMIN_DOCUMENTS",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Songs voor 2022/.DS_Store",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    },
+    {
+      "path": "Tickets Louvre.pdf",
+      "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+      "basis": "name/type routing only; contents not read",
+      "reversible": true
+    }
+  ],
+  "existing_containers": [
+    {
+      "path": "Downloads",
+      "classification": "COLLECTION_OR_SPECIAL_CONTAINER",
+      "children": [
+        "cat2_40574d82388dafa6",
+        "cat2_abeb504688b08a50",
+        "cat2_d9019b5bf4c303af",
+        "cat2_2b0741d93ac55409",
+        "cat2_8b914d5c77516674",
+        "cat2_88f13d8beaaf48ef",
+        "cat2_d67f645e6c16f81c",
+        "cat2_5bdccd42ae70852e",
+        "cat2_8077a9512772ef50",
+        "cat2_c9488745928c14dc",
+        "cat2_308e143afc59a57c"
+      ],
+      "asset_count": 530,
+      "is_song": false,
+      "unassigned_asset_candidate_ids": [
+        "cat2_d290a1533165c76c",
+        "cat2_eef131fde9bab9fe",
+        "cat2_2362dc05d7bee513",
+        "cat2_7662764a1a2cc08b",
+        "cat2_05b0ba3e75f708b7",
+        "cat2_f7ae99fdefebfb37",
+        "cat2_922066cbdccf6875",
+        "cat2_d0ab880a78bb3a07",
+        "cat2_1028952b6a81ce5c",
+        "cat2_834f3dfeb7ae372d",
+        "cat2_5a840774f1af5ba6",
+        "cat2_5cdf7247d6177c4c",
+        "cat2_6a2371592ab99706",
+        "cat2_7e08f1c5f464864e",
+        "cat2_2f7be947dacf51c8",
+        "cat2_5c618eac1010e314",
+        "cat2_7a5573eb904153e9",
+        "cat2_eca46c817803b721",
+        "cat2_a8aa67b9e6d7d306",
+        "cat2_b4700e3dfbcc6844",
+        "cat2_72c6e096f275b5b9",
+        "cat2_f6512111cdfa81cd",
+        "cat2_0c10bee543de6898",
+        "cat2_c133d25561877b42",
+        "cat2_ee51f0500f80b349",
+        "cat2_fe9079ffae7ecfb3",
+        "cat2_e15f5ea45c870133",
+        "cat2_168cbebad7b9f364",
+        "cat2_4a90a0d4aae18c17",
+        "cat2_a63473f05da3d0d9",
+        "cat2_9a5a27fce8e0d00f",
+        "cat2_4931a5f35b0016fe",
+        "cat2_b58a04828ad59bf8",
+        "cat2_a67f28e2143e18b5",
+        "cat2_45efce6460cf49dd",
+        "cat2_c803b647e9756815",
+        "cat2_5a48df1178c7779b",
+        "cat2_cb2319511a395fa6",
+        "cat2_49d5065a07edcec4",
+        "cat2_a7a867f15f62bb9f",
+        "cat2_cd3781798505f5b6",
+        "cat2_ea027d0b5d35e786",
+        "cat2_491cd4ab4f29e622",
+        "cat2_fede4b3301f691e4",
+        "cat2_064ae1f056c0f488",
+        "cat2_ba17a63659bbef73",
+        "cat2_7d6f4802a810ec07",
+        "cat2_df66d66da9ada3aa",
+        "cat2_973f39694681e3f5",
+        "cat2_593f6f75c914e9b4",
+        "cat2_ded5fba0660620e0",
+        "cat2_65c31fc9077b9da6",
+        "cat2_f9649f8bfc22532b",
+        "cat2_c06369949606410b",
+        "cat2_f36759712ba9d0e4",
+        "cat2_ad8a5df2c479bd3b",
+        "cat2_422ea51fd3eb511f",
+        "cat2_95fc7d935e458612",
+        "cat2_5ef04f66072e5fc8",
+        "cat2_ea8345700e44e6b0",
+        "cat2_f3e67d7cbe111604",
+        "cat2_eb1dc2680a6b016b",
+        "cat2_0212c2f565d9b061",
+        "cat2_765a2a51402cee2b",
+        "cat2_20fe93186a192152",
+        "cat2_37e79f7302c922ff",
+        "cat2_288cbae949f8ea5c",
+        "cat2_c005baa7380ae433",
+        "cat2_6ef9c8ad6b02a0e5",
+        "cat2_7fb4f39d75f6c7d0",
+        "cat2_69012e5422a48127",
+        "cat2_d8ad0e846f29d785",
+        "cat2_50636e19cccdf8de",
+        "cat2_9fecadb7b43af9a8",
+        "cat2_b0cebab71b7e2d9e",
+        "cat2_c4d4aa404773da56",
+        "cat2_3d5fc0cfa9bd5f51",
+        "cat2_5189cabb2e7fba13",
+        "cat2_5d9901885056fb65",
+        "cat2_640a09a83f50078f",
+        "cat2_4e3e38c419735080",
+        "cat2_3c345aa57142b21d",
+        "cat2_9f996411e86c3feb"
+      ]
+    },
+    {
+      "path": "NITIN 2008",
+      "classification": "COLLECTION_OR_SPECIAL_CONTAINER",
+      "children": [
+        "cat2_823dcfaf0a8be169",
+        "cat2_e526065897b54f07",
+        "cat2_b51082b1c9ad2a98",
+        "cat2_9e83d55d3d3b9604",
+        "cat2_91a182b555222b59",
+        "cat2_a771c4c946c5174e",
+        "cat2_e33fdd193b68cbe2",
+        "cat2_0f2352dc32122b2e"
+      ],
+      "asset_count": 8,
+      "is_song": false,
+      "unassigned_asset_candidate_ids": []
+    },
+    {
+      "path": "Optreden 10 mei oefening en opname",
+      "classification": "COLLECTION_OR_SPECIAL_CONTAINER",
+      "children": [],
+      "asset_count": 6,
+      "is_song": false,
+      "unassigned_asset_candidate_ids": [
+        "cat2_8e5f2a2ccbbaacca",
+        "cat2_f7137827b65a2ce9",
+        "cat2_34ecb979f068b748",
+        "cat2_5c21e72e9bfd3156",
+        "cat2_afca30d11c8863ba",
+        "cat2_21e87ef42904df59"
+      ]
+    },
+    {
+      "path": "Songs voor 2022",
+      "classification": "COLLECTION_OR_SPECIAL_CONTAINER",
+      "children": [
+        "cat2_f7697ee3c3bb86a6",
+        "cat2_e64844bc7095d5c1",
+        "cat2_eb056311e6761841",
+        "cat2_d504d8e4f57b8a77",
+        "cat2_11f221664e7b149a"
+      ],
+      "asset_count": 27,
+      "is_song": false,
+      "unassigned_asset_candidate_ids": [
+        "cat2_4a2770e88c9f9c93",
+        "cat2_609f014bc4140ced",
+        "cat2_57d25980714e391e",
+        "cat2_33719278d5854293",
+        "cat2_920f43fdaf26d772",
+        "cat2_de4b9045eb7e5283",
+        "cat2_029e4e4ba819931d",
+        "cat2_0e322874be42a8ae",
+        "cat2_fb81d51f9864532f",
+        "cat2_e1ad0ae0560dc214",
+        "cat2_51d0fe82cdb3268c"
+      ]
+    },
+    {
+      "path": "Video-Opnames ",
+      "classification": "COLLECTION_OR_SPECIAL_CONTAINER",
+      "children": [],
+      "asset_count": 4,
+      "is_song": false,
+      "unassigned_asset_candidate_ids": [
+        "cat2_bb78f8624c5bf13e",
+        "cat2_2cea2b52e69e5aed",
+        "cat2_57ac9c42e725ab8e",
+        "cat2_3daa7a4a8edf30fb"
+      ]
+    },
+    {
+      "path": "Video’s",
+      "classification": "COLLECTION_OR_SPECIAL_CONTAINER",
+      "children": [],
+      "asset_count": 2,
+      "is_song": false,
+      "unassigned_asset_candidate_ids": [
+        "cat2_3e01a0d1edc3667e",
+        "cat2_a0469ff067f868da"
+      ]
+    }
+  ],
+  "exact_hash_links": [
+    {
+      "asset_path": "Downloads/Chand Mera Dil (Title Track).mp3",
+      "candidate_id": "cat2_dd841dc54a2bcce3",
+      "sha256": "588c74e9ef9da47309ea300e4315d25914d951b754e56aa18a9cec4ee30ae490",
+      "basis": "EXACT_BYTE_EQUALITY_TO_ASSET_ALREADY_IN_FOLDER",
+      "semantic_identity_or_readiness_inferred": false
+    },
+    {
+      "asset_path": "Downloads/Tujhko (Video) Shahid, Rashmika, Kriti  Pritam, Arijit Singh, Sunidhi C, Amitabh B  Cocktail 2.mp3",
+      "candidate_id": "cat2_624bc8b7a6462970",
+      "sha256": "765995f59cc137d0868b20f58123140955b4a55a5b39741d5d28de3a2539a6d3",
+      "basis": "EXACT_BYTE_EQUALITY_TO_ASSET_ALREADY_IN_FOLDER",
+      "semantic_identity_or_readiness_inferred": false
+    }
+  ],
+  "unassigned_duplicate_alias_groups": [
+    {
+      "representative": "Downloads/comment an r&b song that we missed 2.mp3",
+      "alias_paths": [
+        "Downloads/comment an r&b song that we missed.mp3",
+        "Downloads/ssstik.io_1785349136850.mp3"
+      ],
+      "sha256": "79c1a23b4b356889b01f378cbc834788160211aed962567c923d2e3066731923",
+      "song_identity": "UNKNOWN"
+    }
+  ],
+  "unassigned_representatives": [
+    {
+      "candidate_id": "cat2_d290a1533165c76c",
+      "path": "Downloads/af57a431317d487495dca2a572f5eda0.mp4",
+      "label": "af57a431317d487495dca2a572f5eda0.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_d290a1533165c76c"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_eef131fde9bab9fe",
+      "path": "Downloads/Afbeelding 031 2.avi",
+      "label": "Afbeelding 031 2.avi",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_eef131fde9bab9fe"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_2362dc05d7bee513",
+      "path": "Downloads/Afbeelding 031.avi",
+      "label": "Afbeelding 031.avi",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_2362dc05d7bee513"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_7662764a1a2cc08b",
+      "path": "Downloads/Alvida(ishat @kklivenow).mp3",
+      "label": "Alvida(ishat @kklivenow).mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_7662764a1a2cc08b"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_05b0ba3e75f708b7",
+      "path": "Downloads/APNA BANA LE 2.mp4",
+      "label": "APNA BANA LE 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_05b0ba3e75f708b7"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_f7ae99fdefebfb37",
+      "path": "Downloads/Apna Bana le Promotion Reel.mp4",
+      "label": "Apna Bana le Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_f7ae99fdefebfb37"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_922066cbdccf6875",
+      "path": "Downloads/arijit singh cried in live concert of chunar abcd 2 live..DY PATIL STADIUM.mp3",
+      "label": "arijit singh cried in live concert of chunar abcd 2 live..DY PATIL STADIUM.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_922066cbdccf6875"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_d0ab880a78bb3a07",
+      "path": "Downloads/Baarish Promotion Reel.mp4",
+      "label": "Baarish Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_d0ab880a78bb3a07"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_1028952b6a81ce5c",
+      "path": "Downloads/BARISH KABHI JO BADAL rgh.mp3",
+      "label": "BARISH KABHI JO BADAL rgh.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_1028952b6a81ce5c"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_834f3dfeb7ae372d",
+      "path": "Downloads/Bekhayali - Reel 2.mp4",
+      "label": "Bekhayali - Reel 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_834f3dfeb7ae372d"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_5a840774f1af5ba6",
+      "path": "Downloads/BEKHAYALI.mp4",
+      "label": "BEKHAYALI.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_5a840774f1af5ba6"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_5cdf7247d6177c4c",
+      "path": "Downloads/BORDER 2_ Ghar Kab Aaoge (Lyrical) Sunny D Anu,Mithoon,Sonu, Roop,Arijit,Vishal,Diljit,Javed,Manoj.mp3",
+      "label": "BORDER 2_ Ghar Kab Aaoge (Lyrical) Sunny D Anu,Mithoon,Sonu, Roop,Arijit,Vishal,Diljit,Javed,Manoj.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_5cdf7247d6177c4c"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_7e08f1c5f464864e",
+      "path": "Downloads/Chunar Promotion Reel 2.mp4",
+      "label": "Chunar Promotion Reel 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_7e08f1c5f464864e"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_2f7be947dacf51c8",
+      "path": "Downloads/Chunar Promotion Reel.mp4",
+      "label": "Chunar Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_2f7be947dacf51c8"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_5c618eac1010e314",
+      "path": "Downloads/comment an r&b song that we missed 2.mp3",
+      "label": "comment an r&b song that we missed 2.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_5c618eac1010e314"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_eca46c817803b721",
+      "path": "Downloads/Demo+1.mp3",
+      "label": "Demo+1.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_eca46c817803b721"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_a8aa67b9e6d7d306",
+      "path": "Downloads/DUNKI DROP 5 (O MAAHI).mp4.mov",
+      "label": "DUNKI DROP 5 (O MAAHI).mp4.mov",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_a8aa67b9e6d7d306"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_b4700e3dfbcc6844",
+      "path": "Downloads/Edit 2 V3.mp4",
+      "label": "Edit 2 V3.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_b4700e3dfbcc6844"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_72c6e096f275b5b9",
+      "path": "Downloads/Edit 2.mp4",
+      "label": "Edit 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_72c6e096f275b5b9"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_f6512111cdfa81cd",
+      "path": "Downloads/Edit 3.mp4",
+      "label": "Edit 3.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_f6512111cdfa81cd"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_0c10bee543de6898",
+      "path": "Downloads/Edit 4.mp4",
+      "label": "Edit 4.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_0c10bee543de6898"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_c133d25561877b42",
+      "path": "Downloads/Edit 5.mp4",
+      "label": "Edit 5.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_c133d25561877b42"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_ee51f0500f80b349",
+      "path": "Downloads/Gehra Hua Song  Arijit Singh  Dhurandhar  Shashwat Sachdev  Irshad Kamil  Arman Khan.mp3",
+      "label": "Gehra Hua Song  Arijit Singh  Dhurandhar  Shashwat Sachdev  Irshad Kamil  Arman Khan.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_ee51f0500f80b349"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_fe9079ffae7ecfb3",
+      "path": "Downloads/hua Main 2.mp4",
+      "label": "hua Main 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_fe9079ffae7ecfb3"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_e15f5ea45c870133",
+      "path": "Downloads/hua Main 6.mp4",
+      "label": "hua Main 6.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_e15f5ea45c870133"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_168cbebad7b9f364",
+      "path": "Downloads/Hua Main Promotion Reel.mp4",
+      "label": "Hua Main Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_168cbebad7b9f364"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_4a90a0d4aae18c17",
+      "path": "Downloads/hua Main.mp4",
+      "label": "hua Main.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_4a90a0d4aae18c17"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_a63473f05da3d0d9",
+      "path": "Downloads/IMG_9171.MOV",
+      "label": "IMG_9171.MOV",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_a63473f05da3d0d9"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_9a5a27fce8e0d00f",
+      "path": "Downloads/ISHQ SUFIYANA rgh.mp3",
+      "label": "ISHQ SUFIYANA rgh.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_9a5a27fce8e0d00f"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_4931a5f35b0016fe",
+      "path": "Downloads/Jaate Hue Lamhon.mp3",
+      "label": "Jaate Hue Lamhon.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_4931a5f35b0016fe"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_b58a04828ad59bf8",
+      "path": "Downloads/Jaate Hue Lamhon.mp4",
+      "label": "Jaate Hue Lamhon.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_b58a04828ad59bf8"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_a67f28e2143e18b5",
+      "path": "Downloads/Kahani Suno - Reel 2.mp4",
+      "label": "Kahani Suno - Reel 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_a67f28e2143e18b5"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_45efce6460cf49dd",
+      "path": "Downloads/Kalank - Reel 1.mp4",
+      "label": "Kalank - Reel 1.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_45efce6460cf49dd"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_c803b647e9756815",
+      "path": "Downloads/Kalank - Reel 2.mp4",
+      "label": "Kalank - Reel 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_c803b647e9756815"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_5a48df1178c7779b",
+      "path": "Downloads/Kalank Promotion Reel.mp4",
+      "label": "Kalank Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_5a48df1178c7779b"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_cb2319511a395fa6",
+      "path": "Downloads/Kesariya Promotion Reel.mp4",
+      "label": "Kesariya Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_cb2319511a395fa6"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_49d5065a07edcec4",
+      "path": "Downloads/Mere Khuda(ishat @kklivenow).mp3",
+      "label": "Mere Khuda(ishat @kklivenow).mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_49d5065a07edcec4"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_a7a867f15f62bb9f",
+      "path": "Downloads/Mere Mehboob Promotion Reel.mp4",
+      "label": "Mere Mehboob Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_a7a867f15f62bb9f"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_cd3781798505f5b6",
+      "path": "Downloads/Mujhko Pehchaanlo(iSHAT FB@KKlivenow).mp3",
+      "label": "Mujhko Pehchaanlo(iSHAT FB@KKlivenow).mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_cd3781798505f5b6"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_ea027d0b5d35e786",
+      "path": "Downloads/Nitin Stories - Promotion (1).mp4",
+      "label": "Nitin Stories - Promotion (1).mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_ea027d0b5d35e786"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_491cd4ab4f29e622",
+      "path": "Downloads/Nitin Stories - Promotion (2).mp4",
+      "label": "Nitin Stories - Promotion (2).mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_491cd4ab4f29e622"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_fede4b3301f691e4",
+      "path": "Downloads/Nitin Stories - Promotion.mp4",
+      "label": "Nitin Stories - Promotion.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_fede4b3301f691e4"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_064ae1f056c0f488",
+      "path": "Downloads/O MAAHI (1) Reel 3.mp4",
+      "label": "O MAAHI (1) Reel 3.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_064ae1f056c0f488"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_ba17a63659bbef73",
+      "path": "Downloads/O MAAHI - REEL 4.mp4",
+      "label": "O MAAHI - REEL 4.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_ba17a63659bbef73"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_7d6f4802a810ec07",
+      "path": "Downloads/O Maahi Reel 1.mp4",
+      "label": "O Maahi Reel 1.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_7d6f4802a810ec07"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_df66d66da9ada3aa",
+      "path": "Downloads/O Maahi Reel 2.mp4",
+      "label": "O Maahi Reel 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_df66d66da9ada3aa"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_973f39694681e3f5",
+      "path": "Downloads/O MAAHI.mp4",
+      "label": "O MAAHI.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_973f39694681e3f5"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_593f6f75c914e9b4",
+      "path": "Downloads/Opname 24 september 2020.mp3",
+      "label": "Opname 24 september 2020.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_593f6f75c914e9b4"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_ded5fba0660620e0",
+      "path": "Downloads/Pehle bhi Main - Reel 1.mp4",
+      "label": "Pehle bhi Main - Reel 1.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_ded5fba0660620e0"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_65c31fc9077b9da6",
+      "path": "Downloads/Pehle bhi Main - Reel 2.mp4",
+      "label": "Pehle bhi Main - Reel 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_65c31fc9077b9da6"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_f9649f8bfc22532b",
+      "path": "Downloads/Pehle bhi Main - Reel 3.mp4",
+      "label": "Pehle bhi Main - Reel 3.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_f9649f8bfc22532b"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_c06369949606410b",
+      "path": "Downloads/Phir Mohabbat Promotion Reel.mp4",
+      "label": "Phir Mohabbat Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_c06369949606410b"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_f36759712ba9d0e4",
+      "path": "Downloads/PHIR MOHABBAT.mp4",
+      "label": "PHIR MOHABBAT.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_f36759712ba9d0e4"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_ad8a5df2c479bd3b",
+      "path": "Downloads/PYAR KARLIYA - BASIS NEW.mp3",
+      "label": "PYAR KARLIYA - BASIS NEW.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_ad8a5df2c479bd3b"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_422ea51fd3eb511f",
+      "path": "Downloads/PYAR KARLIYA - GUIDE.mp3",
+      "label": "PYAR KARLIYA - GUIDE.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_422ea51fd3eb511f"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_95fc7d935e458612",
+      "path": "Downloads/RASH E QAMAR rgh.mp3",
+      "label": "RASH E QAMAR rgh.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_95fc7d935e458612"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_5ef04f66072e5fc8",
+      "path": "Downloads/SAARI DUNIYA 2.mp4",
+      "label": "SAARI DUNIYA 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_5ef04f66072e5fc8"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_ea8345700e44e6b0",
+      "path": "Downloads/SAARI DUNIYA.mp4",
+      "label": "SAARI DUNIYA.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_ea8345700e44e6b0"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_f3e67d7cbe111604",
+      "path": "Downloads/Sab Kuch Jalaa Denge Promotion Reel.mp4",
+      "label": "Sab Kuch Jalaa Denge Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_f3e67d7cbe111604"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_eb1dc2680a6b016b",
+      "path": "Downloads/Sajda{iSHAT @KKlivenow}.mp3",
+      "label": "Sajda{iSHAT @KKlivenow}.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_eb1dc2680a6b016b"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_0212c2f565d9b061",
+      "path": "Downloads/Satranga - Reel 1 (1).mp4",
+      "label": "Satranga - Reel 1 (1).mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_0212c2f565d9b061"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_765a2a51402cee2b",
+      "path": "Downloads/Satranga - Reel 2 (1).mp4",
+      "label": "Satranga - Reel 2 (1).mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_765a2a51402cee2b"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_20fe93186a192152",
+      "path": "Downloads/SATRANGA - Reel 3.mp4",
+      "label": "SATRANGA - Reel 3.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_20fe93186a192152"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_37e79f7302c922ff",
+      "path": "Downloads/SATRANGA - UNCHAINED NITIN (1).mp4",
+      "label": "SATRANGA - UNCHAINED NITIN (1).mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_37e79f7302c922ff"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_288cbae949f8ea5c",
+      "path": "Downloads/Satranga Promotion Reel.mp4",
+      "label": "Satranga Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_288cbae949f8ea5c"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_c005baa7380ae433",
+      "path": "Downloads/SATRANGA zonder omkadering.mp4",
+      "label": "SATRANGA zonder omkadering.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_c005baa7380ae433"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_6ef9c8ad6b02a0e5",
+      "path": "Downloads/SATRANGA.mp4",
+      "label": "SATRANGA.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_6ef9c8ad6b02a0e5"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_69012e5422a48127",
+      "path": "Downloads/story (1).mp4",
+      "label": "story (1).mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_69012e5422a48127"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_d8ad0e846f29d785",
+      "path": "Downloads/story.mp4",
+      "label": "story.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_d8ad0e846f29d785"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_50636e19cccdf8de",
+      "path": "Downloads/Tere mast mast 76bpm C# fOR dUB.mp3",
+      "label": "Tere mast mast 76bpm C# fOR dUB.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_50636e19cccdf8de"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_9fecadb7b43af9a8",
+      "path": "Downloads/teri meri.mp3",
+      "label": "teri meri.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_9fecadb7b43af9a8"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_b0cebab71b7e2d9e",
+      "path": "Downloads/Tujhe Kitna Chahein Aur Hum - Reel 2.mp4",
+      "label": "Tujhe Kitna Chahein Aur Hum - Reel 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_b0cebab71b7e2d9e"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_c4d4aa404773da56",
+      "path": "Downloads/Tujhe Kitna Chahne Lage... (1).mp4",
+      "label": "Tujhe Kitna Chahne Lage... (1).mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_c4d4aa404773da56"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_3d5fc0cfa9bd5f51",
+      "path": "Downloads/Tujhe Kitna part 1.mp4",
+      "label": "Tujhe Kitna part 1.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_3d5fc0cfa9bd5f51"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_5189cabb2e7fba13",
+      "path": "Downloads/Tujhe Kitna part 2.mp4",
+      "label": "Tujhe Kitna part 2.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_5189cabb2e7fba13"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_640a09a83f50078f",
+      "path": "Downloads/Tum Kya Mile Promotion Reel.mp4",
+      "label": "Tum Kya Mile Promotion Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_640a09a83f50078f"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_4e3e38c419735080",
+      "path": "Downloads/Ve Kamleya  Rocky Aur Rani Kii Prem Kahaani  Ranveer  Alia  Pritam  Amitabh  Arijit  Shreya.mp3",
+      "label": "Ve Kamleya  Rocky Aur Rani Kii Prem Kahaani  Ranveer  Alia  Pritam  Amitabh  Arijit  Shreya.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_4e3e38c419735080"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_3c345aa57142b21d",
+      "path": "Downloads/Ya ali.mp4",
+      "label": "Ya ali.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_3c345aa57142b21d"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_9f996411e86c3feb",
+      "path": "Downloads/Yaadein(ishat @kklivenow).mp3",
+      "label": "Yaadein(ishat @kklivenow).mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_9f996411e86c3feb"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_8e5f2a2ccbbaacca",
+      "path": "Optreden 10 mei oefening en opname/Live Mix master.wav",
+      "label": "Live Mix master.wav",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_8e5f2a2ccbbaacca"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_f7137827b65a2ce9",
+      "path": "Optreden 10 mei oefening en opname/R_20250507-221426.wav",
+      "label": "R_20250507-221426.wav",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_f7137827b65a2ce9"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_34ecb979f068b748",
+      "path": "Optreden 10 mei oefening en opname/R_20250507-222230.wav",
+      "label": "R_20250507-222230.wav",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_34ecb979f068b748"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_5c21e72e9bfd3156",
+      "path": "Optreden 10 mei oefening en opname/R_20250507-223217.wav",
+      "label": "R_20250507-223217.wav",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_5c21e72e9bfd3156"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_afca30d11c8863ba",
+      "path": "Optreden 10 mei oefening en opname/R_20250507-224121.wav",
+      "label": "R_20250507-224121.wav",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_afca30d11c8863ba"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_21e87ef42904df59",
+      "path": "Optreden 10 mei oefening en opname/R_20250507-224345.wav",
+      "label": "R_20250507-224345.wav",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_21e87ef42904df59"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_4a2770e88c9f9c93",
+      "path": "Songs voor 2022/1080p.mov",
+      "label": "1080p.mov",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_4a2770e88c9f9c93"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_609f014bc4140ced",
+      "path": "Songs voor 2022/AE DIL HAI MUSHKIL 2-5-2017 MASTER.mp3",
+      "label": "AE DIL HAI MUSHKIL 2-5-2017 MASTER.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_609f014bc4140ced"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_57d25980714e391e",
+      "path": "Songs voor 2022/CHUNAR MASTER 2-5-2017.mp3",
+      "label": "CHUNAR MASTER 2-5-2017.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_57d25980714e391e"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_33719278d5854293",
+      "path": "Songs voor 2022/Deewana.mov",
+      "label": "Deewana.mov",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_33719278d5854293"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_920f43fdaf26d772",
+      "path": "Songs voor 2022/Main Hoon Deewana Tera - V1.mp3",
+      "label": "Main Hoon Deewana Tera - V1.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_920f43fdaf26d772"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_de4b9045eb7e5283",
+      "path": "Songs voor 2022/MAIN TENU SAMJHAWA Master 2-5-2017.mp3",
+      "label": "MAIN TENU SAMJHAWA Master 2-5-2017.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_de4b9045eb7e5283"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_029e4e4ba819931d",
+      "path": "Songs voor 2022/RASH E QAMAR rgh.mp3",
+      "label": "RASH E QAMAR rgh.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_029e4e4ba819931d"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_0e322874be42a8ae",
+      "path": "Songs voor 2022/SAAJNA - MASTER - MP3.mp3",
+      "label": "SAAJNA - MASTER - MP3.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_0e322874be42a8ae"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_fb81d51f9864532f",
+      "path": "Songs voor 2022/SURILI ANKHIYO MASTER 44_16.mp3",
+      "label": "SURILI ANKHIYO MASTER 44_16.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_fb81d51f9864532f"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_e1ad0ae0560dc214",
+      "path": "Songs voor 2022/Tere mast mast 76bpm C# fOR dUB.mp3",
+      "label": "Tere mast mast 76bpm C# fOR dUB.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_e1ad0ae0560dc214"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_51d0fe82cdb3268c",
+      "path": "Songs voor 2022/TERE SANG YARA MASTER 44_116.mp3",
+      "label": "TERE SANG YARA MASTER 44_116.mp3",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_51d0fe82cdb3268c"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_bb78f8624c5bf13e",
+      "path": "Video-Opnames /A001_02171651_C002.mov",
+      "label": "A001_02171651_C002.mov",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_bb78f8624c5bf13e"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_2cea2b52e69e5aed",
+      "path": "Video-Opnames /A001_02171653_C003.mov",
+      "label": "A001_02171653_C003.mov",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_2cea2b52e69e5aed"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_57ac9c42e725ab8e",
+      "path": "Video-Opnames /A001_02171654_C004.mov",
+      "label": "A001_02171654_C004.mov",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_57ac9c42e725ab8e"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_3daa7a4a8edf30fb",
+      "path": "Video-Opnames /A001_02171712_C005.mov",
+      "label": "A001_02171712_C005.mov",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_3daa7a4a8edf30fb"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_3e01a0d1edc3667e",
+      "path": "Video’s/Khairiyat Reel.mp4",
+      "label": "Khairiyat Reel.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_3e01a0d1edc3667e"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_a0469ff067f868da",
+      "path": "Video’s/STORY - Mere Mehboob.mp4",
+      "label": "STORY - Mere Mehboob.mp4",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_a0469ff067f868da"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    },
+    {
+      "candidate_id": "cat2_72d543f9e4988773",
+      "path": "demo.aiff",
+      "label": "demo.aiff",
+      "classification": "UNASSIGNED_MEDIA_CANDIDATE",
+      "classification_confidence": "PROVISIONAL",
+      "asset_ids": [
+        "cat2_72d543f9e4988773"
+      ],
+      "TYPE": "UNKNOWN",
+      "not_canonical_song_identity": true
+    }
+  ],
+  "admin_embedded_media_retained": [
+    {
+      "asset_id": "cat2_a91cb9e5ed8ca7ff",
+      "path": "Downloads/Stater/STAT-814662/BORDER 2_ Ghar Kab Aaoge (Lyrical) Sunny D Anu,Mithoon,Sonu, Roop,Arijit,Vishal,Diljit,Javed,Manoj.mp3",
+      "size_bytes": 11160165,
+      "mtime_ns": 1769442224000000000,
+      "flags": 1073741920,
+      "allocated_blocks": 0,
+      "extension": ".mp3",
+      "sha256": null,
+      "availability": "NOT_LOCAL_AVAILABLE",
+      "technical": {},
+      "semantic_completion": "UNKNOWN"
+    }
+  ],
+  "limitations": [
+    "No identity merges on names or sizes. No new iCloud reads.",
+    "75 immediate semantic rows remain because readiness is not technically provable.",
+    "Two conditional rows and six media folders need identity decisions; no candidates silently dropped."
+  ]
+}
