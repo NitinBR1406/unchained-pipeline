@@ -52,8 +52,11 @@ def route(reconciliation, production_deployment_authorized=False,
 def bind_authoritative_audio(reconciliation, event, observation):
     """Bind one exact observed file from an explicit Nitin selection event."""
     require(reconciliation['authoritative_audio'] is None, 'audio already bound')
-    keys(event, 'event_id event_type selected_basename excluded_substitutes source_statement')
+    keys(event, 'event_id event_type selected_basename excluded_substitutes source_statement '
+                'production_deployment_authorized publication_authorized')
     require(event['event_type'] == 'NITIN_AUTHORITATIVE_AUDIO_BINDING', 'binding event type')
+    require(event['production_deployment_authorized'] is False, 'production authority cannot be inferred')
+    require(event['publication_authorized'] is False, 'publication authority cannot be inferred')
     require(event['selected_basename'] == 'AAKHRI ISHQ MASTER 2.wav', 'selected basename drift')
     require(type(event['excluded_substitutes']) is list and event['excluded_substitutes'], 'exclusions required')
     keys(observation, 'path basename size_bytes mtime_ns sha256 unchanged_during_read technical')

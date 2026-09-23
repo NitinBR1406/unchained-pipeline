@@ -11,7 +11,7 @@ RAW = json.loads((ROOT/'p0e4/evidence/target_v13/RAW_HASH.json').read_text())
 BINDING = json.loads((ROOT/'p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json').read_text())
 EVENT={'event_id':'AKI_AUTHORITATIVE_AUDIO_BINDING_V01','event_type':'NITIN_AUTHORITATIVE_AUDIO_BINDING',
        'selected_basename':'AAKHRI ISHQ MASTER 2.wav','excluded_substitutes':['AAKHRI ISHQ MASTER 1.wav'],
-       'source_statement':'explicit'}
+       'source_statement':'explicit','production_deployment_authorized':False,'publication_authorized':False}
 OBS={'path':'/x/Aakhri Ishq/AAKHRI ISHQ MASTER 2.wav','basename':'AAKHRI ISHQ MASTER 2.wav',
      'size_bytes':61749398,'mtime_ns':1776231984000000000,
      'sha256':'670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2',
