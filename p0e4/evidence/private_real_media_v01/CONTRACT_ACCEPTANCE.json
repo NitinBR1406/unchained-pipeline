@@ -1,0 +1,12 @@
+{
+  "contract_status": "READY_FOR_PRIVATE_REAL_MEDIA_EXECUTION",
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "private_authority_distinct_from_production": true,
+  "production_deployment_authorized": false,
+  "prompt_lint_green": true,
+  "publication_authorized": false,
+  "schema": "PRIVATE_REAL_MEDIA_CONTRACT_ACCEPTANCE_V01",
+  "schema_version": 1,
+  "semantic_equivalence_green": true,
+  "tested_sha": "a2fd6519dfc6b6c2ee1e2482de66fa1df3b632fc"
+}

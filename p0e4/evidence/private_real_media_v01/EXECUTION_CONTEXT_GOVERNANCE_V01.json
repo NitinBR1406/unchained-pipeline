@@ -1,0 +1,49 @@
+{
+  "allowed_operations": [
+    "READ_BOUND_MEDIA",
+    "WRITE_PRIVATE_LOCAL_STAGING",
+    "CREATE_NEW_PRIVATE_RESOLVE_PROJECT",
+    "PRIVATE_RENDER",
+    "WRITE_REPO_EVIDENCE",
+    "PRIVATE_GEMINI_QC",
+    "PRIVATE_CLAUDE_TRANSLATION"
+  ],
+  "authority": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "branch": "p0e4/slice1-production-handoff",
+  "budgets": {
+    "max_input_tokens": 12000,
+    "max_latency_ms": 900000,
+    "max_output_tokens": 6000,
+    "max_retries": 1
+  },
+  "context_id": "aki-private-real-media-v01",
+  "forbidden_operations": [
+    "PUBLISH",
+    "PRODUCTION_DEPLOYMENT",
+    "LIVE_MAKE_CUTOVER",
+    "SHARED_DRIVE_MUTATION",
+    "INFER_NITIN_APPROVAL"
+  ],
+  "master_state_ref": {
+    "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635",
+    "uri": "p0e4/MASTER_STATE_LATEST.json"
+  },
+  "repository": "NitinBR1406/unchained-pipeline",
+  "schema": "EXECUTION_CONTEXT_GOVERNANCE_V01",
+  "schema_version": 1,
+  "task_state_refs": [
+    {
+      "sha256": "e1e0bb79e4b78332d3a518d93abd24132323d1bbf558ee4b3c641f705ea6c189",
+      "uri": "p0e4/evidence/post_ready_v01/RAW_INGEST_RECONCILIATION_V01.json"
+    },
+    {
+      "sha256": "a7ba2ff35013e1b8c5214ec562f864c3de687cd2f99676f020ba8e31322d20fe",
+      "uri": "p0e4/evidence/private_real_media_v01/NITIN_AUTHORIZATION.json"
+    }
+  ],
+  "tested_sha": "a2fd6519dfc6b6c2ee1e2482de66fa1df3b632fc"
+}

@@ -1,0 +1,485 @@
+{
+  "CLAUDE": {
+    "candidate": {
+      "actor": "CLAUDE",
+      "context_refs": [
+        {
+          "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635",
+          "uri": "p0e4/MASTER_STATE_LATEST.json"
+        },
+        {
+          "sha256": "e1e0bb79e4b78332d3a518d93abd24132323d1bbf558ee4b3c641f705ea6c189",
+          "uri": "p0e4/evidence/post_ready_v01/RAW_INGEST_RECONCILIATION_V01.json"
+        },
+        {
+          "sha256": "a7ba2ff35013e1b8c5214ec562f864c3de687cd2f99676f020ba8e31322d20fe",
+          "uri": "p0e4/evidence/private_real_media_v01/NITIN_AUTHORIZATION.json"
+        }
+      ],
+      "instructions": [
+        "Complete the bounded task through its acceptance checks.",
+        "Execute only the explicitly scoped integration task and return a bounded receipt.",
+        "Use repository and state references; do not copy large context blocks.",
+        "Stop at genuine human, credential, financial, rights or governance gates."
+      ],
+      "metrics_contract": [
+        "input_tokens",
+        "output_tokens",
+        "cost",
+        "latency_ms",
+        "retries",
+        "failures",
+        "semantic_drift",
+        "accepted_green"
+      ],
+      "objective": "Translate the private bound-media contract into production-oriented edit/QC guidance without deployment.",
+      "output_contract": {
+        "required": [
+          "status",
+          "evidence_refs",
+          "metrics",
+          "limitations"
+        ],
+        "semantic_drift": "FAIL_CLOSED",
+        "unknowns": "EXPLICIT"
+      },
+      "prompt_class": "TASK_PROMPT",
+      "prompt_id": "aki-private-v01:claude:candidate:acb0629bdccc",
+      "protected_semantics": {
+        "acceptance_criteria": [
+          "GREEN requires the referenced acceptance contract and exact evidence."
+        ],
+        "evidence_requirements": [
+          "Bind evidence to the exact tested SHA and verify referenced hashes."
+        ],
+        "governance": [
+          "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+          "PUBLICATION_AUTHORIZED=false",
+          "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+        ],
+        "human_gates": [
+          "Never infer or fabricate Nitin approval."
+        ],
+        "provenance": [
+          "Preserve producer, run, source and model provenance."
+        ],
+        "rights_source_binding": [
+          "Rights and authoritative source/audio binding remain explicit gates."
+        ]
+      },
+      "schema": "GOVERNED_PROMPT_V01",
+      "schema_version": 1
+    },
+    "equivalence": {
+      "candidate_sha256": "0407d3d86167e7130c6d986e4e6e1d48375e28599d54cecbe1811a20c92d21fe",
+      "checks": {
+        "actor_equal": true,
+        "context_refs_equal": true,
+        "instruction_set_equal": true,
+        "metrics_contract_equal": true,
+        "objective_equal": true,
+        "output_contract_equal": true,
+        "prompt_class_equal": true,
+        "protected_semantics_equal": true
+      },
+      "source_sha256": "acb0629bdccc8fe3de82d5081a5de7bcd2d4b4dd6d589d2ef95f6463f4d41812",
+      "status": "PASS"
+    },
+    "lint": {
+      "findings": [],
+      "status": "PASS"
+    },
+    "source": {
+      "actor": "CLAUDE",
+      "context_refs": [
+        {
+          "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635",
+          "uri": "p0e4/MASTER_STATE_LATEST.json"
+        },
+        {
+          "sha256": "e1e0bb79e4b78332d3a518d93abd24132323d1bbf558ee4b3c641f705ea6c189",
+          "uri": "p0e4/evidence/post_ready_v01/RAW_INGEST_RECONCILIATION_V01.json"
+        },
+        {
+          "sha256": "a7ba2ff35013e1b8c5214ec562f864c3de687cd2f99676f020ba8e31322d20fe",
+          "uri": "p0e4/evidence/private_real_media_v01/NITIN_AUTHORIZATION.json"
+        }
+      ],
+      "instructions": [
+        "Complete the bounded task through its acceptance checks.",
+        "Execute only the explicitly scoped integration task and return a bounded receipt.",
+        "Use repository and state references; do not copy large context blocks.",
+        "Stop at genuine human, credential, financial, rights or governance gates."
+      ],
+      "metrics_contract": [
+        "input_tokens",
+        "output_tokens",
+        "cost",
+        "latency_ms",
+        "retries",
+        "failures",
+        "semantic_drift",
+        "accepted_green"
+      ],
+      "objective": "Translate the private bound-media contract into production-oriented edit/QC guidance without deployment.",
+      "output_contract": {
+        "required": [
+          "status",
+          "evidence_refs",
+          "metrics",
+          "limitations"
+        ],
+        "semantic_drift": "FAIL_CLOSED",
+        "unknowns": "EXPLICIT"
+      },
+      "prompt_class": "TASK_PROMPT",
+      "prompt_id": "aki-private-v01:claude",
+      "protected_semantics": {
+        "acceptance_criteria": [
+          "GREEN requires the referenced acceptance contract and exact evidence."
+        ],
+        "evidence_requirements": [
+          "Bind evidence to the exact tested SHA and verify referenced hashes."
+        ],
+        "governance": [
+          "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+          "PUBLICATION_AUTHORIZED=false",
+          "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+        ],
+        "human_gates": [
+          "Never infer or fabricate Nitin approval."
+        ],
+        "provenance": [
+          "Preserve producer, run, source and model provenance."
+        ],
+        "rights_source_binding": [
+          "Rights and authoritative source/audio binding remain explicit gates."
+        ]
+      },
+      "schema": "GOVERNED_PROMPT_V01",
+      "schema_version": 1
+    }
+  },
+  "CODEX": {
+    "candidate": {
+      "actor": "CODEX",
+      "context_refs": [
+        {
+          "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635",
+          "uri": "p0e4/MASTER_STATE_LATEST.json"
+        },
+        {
+          "sha256": "e1e0bb79e4b78332d3a518d93abd24132323d1bbf558ee4b3c641f705ea6c189",
+          "uri": "p0e4/evidence/post_ready_v01/RAW_INGEST_RECONCILIATION_V01.json"
+        },
+        {
+          "sha256": "a7ba2ff35013e1b8c5214ec562f864c3de687cd2f99676f020ba8e31322d20fe",
+          "uri": "p0e4/evidence/private_real_media_v01/NITIN_AUTHORIZATION.json"
+        }
+      ],
+      "instructions": [
+        "Complete the bounded task through its acceptance checks.",
+        "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+        "Use repository and state references; do not copy large context blocks.",
+        "Stop at genuine human, credential, financial, rights or governance gates."
+      ],
+      "metrics_contract": [
+        "input_tokens",
+        "output_tokens",
+        "cost",
+        "latency_ms",
+        "retries",
+        "failures",
+        "semantic_drift",
+        "accepted_green"
+      ],
+      "objective": "Execute the hash-bound Aakhri Ishq private real-media render and technical acceptance.",
+      "output_contract": {
+        "required": [
+          "status",
+          "evidence_refs",
+          "metrics",
+          "limitations"
+        ],
+        "semantic_drift": "FAIL_CLOSED",
+        "unknowns": "EXPLICIT"
+      },
+      "prompt_class": "TASK_PROMPT",
+      "prompt_id": "aki-private-v01:codex:candidate:cbb1b710200d",
+      "protected_semantics": {
+        "acceptance_criteria": [
+          "GREEN requires the referenced acceptance contract and exact evidence."
+        ],
+        "evidence_requirements": [
+          "Bind evidence to the exact tested SHA and verify referenced hashes."
+        ],
+        "governance": [
+          "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+          "PUBLICATION_AUTHORIZED=false",
+          "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+        ],
+        "human_gates": [
+          "Never infer or fabricate Nitin approval."
+        ],
+        "provenance": [
+          "Preserve producer, run, source and model provenance."
+        ],
+        "rights_source_binding": [
+          "Rights and authoritative source/audio binding remain explicit gates."
+        ]
+      },
+      "schema": "GOVERNED_PROMPT_V01",
+      "schema_version": 1
+    },
+    "equivalence": {
+      "candidate_sha256": "c928154f8e5fcff21f739dd5fdc33ec3c959f231f9c2996ecf75776e094966b4",
+      "checks": {
+        "actor_equal": true,
+        "context_refs_equal": true,
+        "instruction_set_equal": true,
+        "metrics_contract_equal": true,
+        "objective_equal": true,
+        "output_contract_equal": true,
+        "prompt_class_equal": true,
+        "protected_semantics_equal": true
+      },
+      "source_sha256": "cbb1b710200db38cb30ad7a3505d4774ebecd09820461573c8bf723363c0eb29",
+      "status": "PASS"
+    },
+    "lint": {
+      "findings": [],
+      "status": "PASS"
+    },
+    "source": {
+      "actor": "CODEX",
+      "context_refs": [
+        {
+          "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635",
+          "uri": "p0e4/MASTER_STATE_LATEST.json"
+        },
+        {
+          "sha256": "e1e0bb79e4b78332d3a518d93abd24132323d1bbf558ee4b3c641f705ea6c189",
+          "uri": "p0e4/evidence/post_ready_v01/RAW_INGEST_RECONCILIATION_V01.json"
+        },
+        {
+          "sha256": "a7ba2ff35013e1b8c5214ec562f864c3de687cd2f99676f020ba8e31322d20fe",
+          "uri": "p0e4/evidence/private_real_media_v01/NITIN_AUTHORIZATION.json"
+        }
+      ],
+      "instructions": [
+        "Complete the bounded task through its acceptance checks.",
+        "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+        "Use repository and state references; do not copy large context blocks.",
+        "Stop at genuine human, credential, financial, rights or governance gates."
+      ],
+      "metrics_contract": [
+        "input_tokens",
+        "output_tokens",
+        "cost",
+        "latency_ms",
+        "retries",
+        "failures",
+        "semantic_drift",
+        "accepted_green"
+      ],
+      "objective": "Execute the hash-bound Aakhri Ishq private real-media render and technical acceptance.",
+      "output_contract": {
+        "required": [
+          "status",
+          "evidence_refs",
+          "metrics",
+          "limitations"
+        ],
+        "semantic_drift": "FAIL_CLOSED",
+        "unknowns": "EXPLICIT"
+      },
+      "prompt_class": "TASK_PROMPT",
+      "prompt_id": "aki-private-v01:codex",
+      "protected_semantics": {
+        "acceptance_criteria": [
+          "GREEN requires the referenced acceptance contract and exact evidence."
+        ],
+        "evidence_requirements": [
+          "Bind evidence to the exact tested SHA and verify referenced hashes."
+        ],
+        "governance": [
+          "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+          "PUBLICATION_AUTHORIZED=false",
+          "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+        ],
+        "human_gates": [
+          "Never infer or fabricate Nitin approval."
+        ],
+        "provenance": [
+          "Preserve producer, run, source and model provenance."
+        ],
+        "rights_source_binding": [
+          "Rights and authoritative source/audio binding remain explicit gates."
+        ]
+      },
+      "schema": "GOVERNED_PROMPT_V01",
+      "schema_version": 1
+    }
+  },
+  "GEMINI": {
+    "candidate": {
+      "actor": "GEMINI",
+      "context_refs": [
+        {
+          "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635",
+          "uri": "p0e4/MASTER_STATE_LATEST.json"
+        },
+        {
+          "sha256": "e1e0bb79e4b78332d3a518d93abd24132323d1bbf558ee4b3c641f705ea6c189",
+          "uri": "p0e4/evidence/post_ready_v01/RAW_INGEST_RECONCILIATION_V01.json"
+        },
+        {
+          "sha256": "a7ba2ff35013e1b8c5214ec562f864c3de687cd2f99676f020ba8e31322d20fe",
+          "uri": "p0e4/evidence/private_real_media_v01/NITIN_AUTHORIZATION.json"
+        }
+      ],
+      "instructions": [
+        "Complete the bounded task through its acceptance checks.",
+        "Perform independent intelligence or QC without claiming execution or approval.",
+        "Use repository and state references; do not copy large context blocks.",
+        "Stop at genuine human, credential, financial, rights or governance gates."
+      ],
+      "metrics_contract": [
+        "input_tokens",
+        "output_tokens",
+        "cost",
+        "latency_ms",
+        "retries",
+        "failures",
+        "semantic_drift",
+        "accepted_green"
+      ],
+      "objective": "Independently inspect the private rendered candidate and return bounded QC observations.",
+      "output_contract": {
+        "required": [
+          "status",
+          "evidence_refs",
+          "metrics",
+          "limitations"
+        ],
+        "semantic_drift": "FAIL_CLOSED",
+        "unknowns": "EXPLICIT"
+      },
+      "prompt_class": "TASK_PROMPT",
+      "prompt_id": "aki-private-v01:gemini:candidate:eb4df5156382",
+      "protected_semantics": {
+        "acceptance_criteria": [
+          "GREEN requires the referenced acceptance contract and exact evidence."
+        ],
+        "evidence_requirements": [
+          "Bind evidence to the exact tested SHA and verify referenced hashes."
+        ],
+        "governance": [
+          "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+          "PUBLICATION_AUTHORIZED=false",
+          "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+        ],
+        "human_gates": [
+          "Never infer or fabricate Nitin approval."
+        ],
+        "provenance": [
+          "Preserve producer, run, source and model provenance."
+        ],
+        "rights_source_binding": [
+          "Rights and authoritative source/audio binding remain explicit gates."
+        ]
+      },
+      "schema": "GOVERNED_PROMPT_V01",
+      "schema_version": 1
+    },
+    "equivalence": {
+      "candidate_sha256": "ae5407f487c68ee3d09301039c6f2b5ffbf1daf78972b49b211952a0c6c1dc51",
+      "checks": {
+        "actor_equal": true,
+        "context_refs_equal": true,
+        "instruction_set_equal": true,
+        "metrics_contract_equal": true,
+        "objective_equal": true,
+        "output_contract_equal": true,
+        "prompt_class_equal": true,
+        "protected_semantics_equal": true
+      },
+      "source_sha256": "eb4df5156382ed44465770c9a963154776ecfe8914c703aa1acc69b061d4d157",
+      "status": "PASS"
+    },
+    "lint": {
+      "findings": [],
+      "status": "PASS"
+    },
+    "source": {
+      "actor": "GEMINI",
+      "context_refs": [
+        {
+          "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635",
+          "uri": "p0e4/MASTER_STATE_LATEST.json"
+        },
+        {
+          "sha256": "e1e0bb79e4b78332d3a518d93abd24132323d1bbf558ee4b3c641f705ea6c189",
+          "uri": "p0e4/evidence/post_ready_v01/RAW_INGEST_RECONCILIATION_V01.json"
+        },
+        {
+          "sha256": "a7ba2ff35013e1b8c5214ec562f864c3de687cd2f99676f020ba8e31322d20fe",
+          "uri": "p0e4/evidence/private_real_media_v01/NITIN_AUTHORIZATION.json"
+        }
+      ],
+      "instructions": [
+        "Complete the bounded task through its acceptance checks.",
+        "Perform independent intelligence or QC without claiming execution or approval.",
+        "Use repository and state references; do not copy large context blocks.",
+        "Stop at genuine human, credential, financial, rights or governance gates."
+      ],
+      "metrics_contract": [
+        "input_tokens",
+        "output_tokens",
+        "cost",
+        "latency_ms",
+        "retries",
+        "failures",
+        "semantic_drift",
+        "accepted_green"
+      ],
+      "objective": "Independently inspect the private rendered candidate and return bounded QC observations.",
+      "output_contract": {
+        "required": [
+          "status",
+          "evidence_refs",
+          "metrics",
+          "limitations"
+        ],
+        "semantic_drift": "FAIL_CLOSED",
+        "unknowns": "EXPLICIT"
+      },
+      "prompt_class": "TASK_PROMPT",
+      "prompt_id": "aki-private-v01:gemini",
+      "protected_semantics": {
+        "acceptance_criteria": [
+          "GREEN requires the referenced acceptance contract and exact evidence."
+        ],
+        "evidence_requirements": [
+          "Bind evidence to the exact tested SHA and verify referenced hashes."
+        ],
+        "governance": [
+          "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+          "PUBLICATION_AUTHORIZED=false",
+          "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+        ],
+        "human_gates": [
+          "Never infer or fabricate Nitin approval."
+        ],
+        "provenance": [
+          "Preserve producer, run, source and model provenance."
+        ],
+        "rights_source_binding": [
+          "Rights and authoritative source/audio binding remain explicit gates."
+        ]
+      },
+      "schema": "GOVERNED_PROMPT_V01",
+      "schema_version": 1
+    }
+  }
+}
