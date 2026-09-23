@@ -1,0 +1,46 @@
+{
+  "schema": "PRIVATE_REAL_MEDIA_ATTEMPTS_V01",
+  "schema_version": 1,
+  "observed_at": "2026-09-23T20:13:03.047553+00:00",
+  "tested_code_sha": "4674bac762354f73c34d6e0fffa4f5d7767e9257",
+  "attempts": [
+    {
+      "run_id": "UNCHAINED_AKI_PRIVATE_V01_RUN1",
+      "status": "FAILED_CLOSED_BEFORE_MEDIA_IMPORT",
+      "error": "RuntimeError('PRIVATE_PROJECT_SETTINGS_FAILED')",
+      "original_project_restored": true,
+      "output_created": false
+    },
+    {
+      "run_id": "UNCHAINED_AKI_PRIVATE_V01_RUN2",
+      "status": "TERMINATED_AFTER_UNRESPONSIVE_RESOLVE_IMPORT",
+      "receipt_created": false,
+      "output_created": false,
+      "duplicate_run_started": false,
+      "harness_pid_terminated": 33878
+    }
+  ],
+  "private_staged_copies": [
+    {
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/bound-inputs/AKI_SOURCE_0902_V01.mov",
+      "sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790",
+      "bytes": 323607983
+    },
+    {
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/bound-inputs/AAKHRI ISHQ MASTER 2.wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+      "bytes": 61749398
+    }
+  ],
+  "resolve_state": "APPLICATION_RUNNING_BUT_SCRIPT_API_AND_ACCESSIBILITY_UNRESPONSIVE_AFTER_IMPORT_ATTEMPT",
+  "independent_progress": {
+    "claude_translation": "COMPLETE_GUIDANCE_ONLY",
+    "gemini_output_qc": "DEPENDENCY_BLOCKED_NO_CANDIDATE"
+  },
+  "decision": "WAITING_FOR_NITIN_RESOLVE_SAFE_RESTART",
+  "smallest_human_action": "Save any unrelated unsaved Resolve work, then quit and reopen DaVinci Resolve Studio. Do not start a render.",
+  "source_mutations": 0,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

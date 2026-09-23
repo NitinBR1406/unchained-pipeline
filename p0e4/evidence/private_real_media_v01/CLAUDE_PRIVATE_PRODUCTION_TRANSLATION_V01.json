@@ -1,0 +1,40 @@
+{
+  "schema": "CLAUDE_PRIVATE_PRODUCTION_TRANSLATION_V01",
+  "contract": "PRIVATE_REAL_MEDIA_ACCEPTANCE_V01",
+  "scope": "AAKHRI_ISHQ_BOUND_RAW_AUDIO_PRIVATE_E2E",
+  "output_class": "PRIVATE_LOCAL_REVIEW_ONLY",
+  "provenance": {
+    "surface": "Claude Desktop Cowork",
+    "url": "https://claude.ai/cowork/cse_01XA7m4uMoW96FhtdFBhkdF5",
+    "model_display": "Opus 5.5 Medium",
+    "result_observed": "Claude finished the response",
+    "media_access": "NONE; declared bindings only"
+  },
+  "input_hashes": {
+    "raw_video": {"filename": "AKI_SOURCE_0902_V01.mov", "sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790", "verification": "DECLARED_NOT_VERIFIED_BY_CLAUDE"},
+    "master_audio": {"filename": "AAKHRI ISHQ MASTER 2.wav", "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2", "verification": "DECLARED_NOT_VERIFIED_BY_CLAUDE"}
+  },
+  "measured_facts": {
+    "source": "PROVIDED_IN_PROMPT",
+    "raw_duration_s_approx": 214.505,
+    "master_duration_s_approx": 214.400,
+    "duration_delta_s": 0.105,
+    "interpretation": "MEASURED_TECHNICAL_DIFFERENCE_ONLY_NOT_PROOF_OF_SYNC_OR_MIS_SYNC"
+  },
+  "production_translation": [
+    "Re-hash both inputs and abort on mismatch.",
+    "Probe frame rate, CFR/VFR, time base, start time, edit lists, AAC priming and rotation.",
+    "Measure guide/master start offset and multi-window drift; do not assume zero alignment.",
+    "Apply only measured offset; do not time-stretch without evidence and human approval.",
+    "Log a deterministic tail rule for the 0.105-second duration difference.",
+    "Replace guide audio with MASTER 2 for a private local review output; never upload or schedule."
+  ],
+  "technical_qc_checks": [
+    "exact input hashes", "source-matching portrait video properties and frame count", "single stereo 48 kHz programme-audio stream", "residual start offset within one frame", "drift spread within one frame", "logged duration/tail handling", "reported clipping/loudness without normalization", "private local output only", "human sync spot-check pending"
+  ],
+  "creative_unknowns": ["intended edit/cuts", "lyric alignment", "creative approval", "delivery loudness", "titles/graphics", "credits and rights"],
+  "prohibited_inferences": ["duration delta proves sync state", "assume frame rate or zero offset", "invent edits or lyric alignment", "infer rights or approval", "treat declared hashes as Claude-verified", "unpause poster or trigger production/publication"],
+  "confidence": {"declared_bindings": "HIGH_TRANSCRIBED", "method": "HIGH_GUIDANCE", "actual_sync_state": "UNKNOWN", "creative_or_rights_status": "UNKNOWN"},
+  "governance_echo": {"PRODUCTION_DEPLOYMENT_AUTHORIZED": false, "PUBLICATION_AUTHORIZED": false, "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"},
+  "status": "GUIDANCE_ONLY_PRIVATE_ACCEPTANCE"
+}

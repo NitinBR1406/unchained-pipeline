@@ -1,0 +1,35 @@
+{
+  "authoritative_audio_included": true,
+  "camera_audio_included": false,
+  "error": "RuntimeError('PRIVATE_PROJECT_SETTINGS_FAILED')",
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "input_hashes": {
+    "authoritative_audio": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "raw_video": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790"
+  },
+  "input_observations_before": {
+    "authoritative_audio": {
+      "bytes": 61749398,
+      "mtime_ns": 1776231984000000000,
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+      "uri": "/Users/nitinramdaras/Library/Mobile Documents/com~apple~CloudDocs/Aakhri Ishq/AAKHRI ISHQ MASTER 2.wav"
+    },
+    "raw_video": {
+      "bytes": 323607983,
+      "mtime_ns": 1788621176914000034,
+      "sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790",
+      "uri": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/Campaigns/Aakhri-Ishq/00_Source-Raw/AKI_SOURCE_0902_V01.mov"
+    }
+  },
+  "mode": "PRIVATE_LOCAL_REVIEW_ONLY",
+  "original_project_restored": true,
+  "production_deployment_authorized": false,
+  "project_closed": true,
+  "project_name": "UNCHAINED_AKI_PRIVATE_V01_RUN1",
+  "publication_authorized": false,
+  "render_status": "FAILED",
+  "run_id": "UNCHAINED_AKI_PRIVATE_V01_RUN1",
+  "schema": "PRIVATE_REAL_MEDIA_EXECUTION_RECEIPT_V01",
+  "schema_version": 1,
+  "source_mutations": 0
+}

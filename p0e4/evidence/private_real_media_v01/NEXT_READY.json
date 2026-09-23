@@ -1,0 +1,26 @@
+{
+  "schema": "PRIVATE_REAL_MEDIA_NEXT_READY_V01",
+  "schema_version": 1,
+  "status": "WAITING_FOR_NITIN_RESOLVE_SAFE_RESTART",
+  "ready_nonhuman_count": 0,
+  "completed": [
+    "PRIVATE_REAL_MEDIA_ACCEPTANCE_CONTRACT",
+    "EXECUTION_CONTEXT_GOVERNANCE",
+    "PROMPT_GOVERNANCE_LINT_AND_EQUIVALENCE",
+    "BOUND_MEDIA_REHASH",
+    "HASH_IDENTICAL_PRIVATE_STAGING",
+    "CLAUDE_PRIVATE_PRODUCTION_TRANSLATION"
+  ],
+  "blocked": [
+    "PRIVATE_RESOLVE_REAL_MEDIA_RENDER",
+    "TECHNICAL_OUTPUT_DECODE",
+    "GEMINI_INDEPENDENT_REAL_OUTPUT_QC",
+    "PRIVATE_REAL_MEDIA_E2E_ACCEPTANCE"
+  ],
+  "human_gate": "RESOLVE_SAFE_RESTART",
+  "smallest_human_action": "Save any unrelated unsaved work in DaVinci Resolve Studio, then quit and reopen Resolve. Do not start a render.",
+  "resume_task": "PRIVATE_RESOLVE_REAL_MEDIA_RENDER_RUN3_FROM_HASH_IDENTICAL_LOCAL_STAGING",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}
