@@ -56,6 +56,11 @@ class ResolveAdapter:
                     status='PLAN_ONLY_INSTALLATION_CAPABILITY_AND_HUMAN_BINDINGS_REQUIRED',
                     resolve_execution_proven=False,production_deployment_authorized=False,publication_authorized=False,first_real_poster='PAUSED_BY_NITIN')
 
+    def synthetic_local_acceptance(self, staging_root, project_name):
+        """Version/fixture-bound local smoke; never the production execute route."""
+        from resolve.local_acceptance import run
+        return run(staging_root, project_name)
+
     def execute(self,*args,**kwargs):
         raise ValueError('NO_VERIFIED_LOCAL_RESOLVE_TRANSPORT')
 
