@@ -1,5 +1,5 @@
 """Bound Aakhri Ishq private render harness; never deploys or publishes."""
-import argparse,hashlib,json,re,time
+import argparse,hashlib,json,re,time,shutil
 from pathlib import Path
 
 EXPECTED={
@@ -28,6 +28,14 @@ def check_inputs(raw,audio,output_root,project):
 
 def run(raw,audio,output_root,project):
  raw,audio,root,before=check_inputs(raw,audio,output_root,project);root.mkdir(parents=True,exist_ok=True)
+ cache=root/'bound-inputs';cache.mkdir(parents=True,exist_ok=True)
+ staged={}
+ for role,source in [('raw_video',raw),('authoritative_audio',audio)]:
+  target=cache/source.name
+  if not target.exists():shutil.copyfile(source,target)
+  digest,size=stream_hash(target)
+  if (digest,size)!=(before[role]['sha256'],before[role]['bytes']):raise ValueError('PRIVATE_STAGED_COPY_DRIFT:'+role)
+  staged[role]={'uri':str(target),'sha256':digest,'bytes':size}
  report=root/(project+'.json');output=root/(project+'.mp4');drp=root/(project+'.drp')
  if any(x.exists() for x in (report,output,drp)):raise ValueError('NO_OVERWRITE_OR_DUPLICATE_REPLAY')
  import DaVinciResolveScript as d
@@ -38,7 +46,7 @@ def run(raw,audio,output_root,project):
  if project in pm.GetProjectListInCurrentFolder():raise ValueError('NO_OVERWRITE_OR_DUPLICATE_REPLAY')
  original=pm.GetCurrentProject();original_name=original.GetName() if original else None;original_page=resolve.GetCurrentPage()
  receipt={'schema':'PRIVATE_REAL_MEDIA_EXECUTION_RECEIPT_V01','schema_version':1,'run_id':project,'mode':'PRIVATE_LOCAL_REVIEW_ONLY','project_name':project,
-  'input_hashes':{k:v['sha256'] for k,v in before.items()},'input_observations_before':before,
+  'input_hashes':{k:v['sha256'] for k,v in before.items()},'input_observations_before':before,'private_staged_copies':staged,
   'camera_audio_included':False,'authoritative_audio_included':True,'source_mutations':0,
   'production_deployment_authorized':False,'publication_authorized':False,'first_real_poster':'PAUSED_BY_NITIN','render_status':'STARTED'}
  def rec(key,value):receipt[key]=value;report.write_text(json.dumps(receipt,sort_keys=True,indent=2)+'\n');print(key,json.dumps(value,default=str),flush=True)
@@ -47,7 +55,7 @@ def run(raw,audio,output_root,project):
   p=pm.CreateProject(project)
   if not p:raise RuntimeError('CREATE_PRIVATE_PROJECT_FAILED')
   if not p.SetSettings({'timelineResolutionWidth':'1080','timelineResolutionHeight':'1920','timelineFrameRate':'25'}):raise RuntimeError('PRIVATE_PROJECT_SETTINGS_FAILED')
-  pool=p.GetMediaPool();videos=pool.ImportMedia([str(raw)]);audios=pool.ImportMedia([str(audio)])
+  pool=p.GetMediaPool();videos=pool.ImportMedia([staged['raw_video']['uri']]);audios=pool.ImportMedia([staged['authoritative_audio']['uri']])
   if len(videos)!=1 or len(audios)!=1:raise RuntimeError('BOUND_MEDIA_IMPORT_FAILED')
   vp=videos[0].GetClipProperty();ap=audios[0].GetClipProperty();rec('import_properties',{'raw_video':vp,'authoritative_audio':ap})
   fps=str(vp.get('FPS') or vp.get('Video Frame Rate') or '')
