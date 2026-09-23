@@ -1,0 +1,10 @@
+{
+  "schema": "CATALOG_PHASE2_TASK_STATE",
+  "status": "TECHNICAL_DISCOVERY_COMPLETE_SEMANTIC_REVIEW_PENDING",
+  "parent_master_state_version": 29,
+  "candidate_count": 88,
+  "asset_count": 962,
+  "MASTER_CATALOG_V01": "DEFERRED_UNTIL_NITIN_REVIEW",
+  "production_mutation": false,
+  "publication_authorized": false
+}

@@ -1,0 +1,19 @@
+{
+  "tested_sha": "f17657d590d8244d5c26e98e5938b905dcc1f6e4",
+  "observed_at": "2026-09-23T09:14:35.804156+00:00",
+  "checks": "PASS: asset references, cloud-byte nulls, collection separation, semantic unknowns, exclusion boundaries and master hash",
+  "source_root_read_only": true,
+  "cloud_download_requested": false,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "parent_master_state_version": 29,
+  "master_pointer_unchanged": true,
+  "asset_bytes_in_repository": false,
+  "full_decode_performed": false,
+  "catalog_regression": {
+    "test_catalog": 8,
+    "test_catalog_live_replay": 2,
+    "failures": 0
+  }
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "path": ".DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "10722-030821-bestektekeningen.pdf",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Agar Ho Tum/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Automatiseringsocialmedia",
+    "reason": "AUTOMATION_ADMIN",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Bhool Jaa/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Chand mera dil mash up/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Dooriyan/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Downloads/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "ING docs",
+    "reason": "ADMIN_FINANCIAL",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Jaanam/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Jenna Sikha De/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Kalank/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Khoobsurat/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "RGSoftwareHuurovereenkomst.pdf",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Roya Jab Tu/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Saiyaara/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Saiyaara/CAT docs",
+    "reason": "ADMIN_DOCUMENTS",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Songs voor 2022/.DS_Store",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  },
+  {
+    "path": "Tickets Louvre.pdf",
+    "reason": "NON_MUSIC_ADMIN_OR_SYSTEM_METADATA",
+    "basis": "name/type routing only; contents not read",
+    "reversible": true
+  }
+]

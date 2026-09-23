@@ -1,0 +1,29 @@
+{
+  "groups": [
+    {
+      "sha256": "588c74e9ef9da47309ea300e4315d25914d951b754e56aa18a9cec4ee30ae490",
+      "paths": [
+        "Chand Mera dil/Chand Mera Dil (Title Track).mp3",
+        "Downloads/Chand Mera Dil (Title Track).mp3"
+      ],
+      "same_recording_semantics": "NOT_INFERRED"
+    },
+    {
+      "sha256": "79c1a23b4b356889b01f378cbc834788160211aed962567c923d2e3066731923",
+      "paths": [
+        "Downloads/comment an r&b song that we missed 2.mp3",
+        "Downloads/comment an r&b song that we missed.mp3",
+        "Downloads/ssstik.io_1785349136850.mp3"
+      ],
+      "same_recording_semantics": "NOT_INFERRED"
+    },
+    {
+      "sha256": "765995f59cc137d0868b20f58123140955b4a55a5b39741d5d28de3a2539a6d3",
+      "paths": [
+        "Downloads/Tujhko (Video) Shahid, Rashmika, Kriti  Pritam, Arijit Singh, Sunidhi C, Amitabh B  Cocktail 2.mp3",
+        "Tujhe ko/Tujhko (Video) Shahid, Rashmika, Kriti  Pritam, Arijit Singh, Sunidhi C, Amitabh B  Cocktail 2.mp3"
+      ],
+      "same_recording_semantics": "NOT_INFERRED"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "ready_nonhuman_count": 0,
+  "next_task": "NITIN_SEMANTIC_REVIEW",
+  "status": "WAITING_FOR_NITIN",
+  "after_review": [
+    "prepare MASTER_CATALOG_V01",
+    "prepare offline Nitin x Vatsal operational sheet view"
+  ],
+  "shared_drive_mutation_authorized": false
+}
