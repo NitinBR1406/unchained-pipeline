@@ -70,6 +70,25 @@ def build():
       {'id':'LOOSE_MEDIA','question':'Unassigned media is held outside the song review. Identify only items you want in the catalog; no need to label every download. Unresolved items remain explicitly UNKNOWN.','answer':'UNKNOWN'}]
     counts={'source_candidates':len(candidates),'semantic_rows':len(rows),'immediate_semantic_rows':sum(r['block']!='ambiguous_identity' for r in rows),'conditional_identity_rows':sum(r['block']=='ambiguous_identity' for r in rows),'download_candidates_removed_from_readiness':11,'admin_candidates_excluded':1,'additional_mixed_containers':4,'download_media_folders_identity_first':6,'exact_hash_links':len(links),'redundant_unassigned_aliases':sum(len(g['alias_paths']) for g in duplicate_only),'remaining_original_unassigned_representatives':len(unassigned),'admin_embedded_media_held_separately':len(retained_admin_media)}
     result={'artifact':'NITIN_MINIMAL_SEMANTIC_REVIEW_V01','status':'WAITING_FOR_NITIN','source':'CATALOG_DISCOVERY_V02','parent_master_state_version':pointer['state_version'],'counts':counts,'allowed_values':allowed,'rows':rows,'identity_questions':questions,'rules':['All semantic defaults UNKNOWN. Category is routing, not TYPE.','Batch answers apply only to explicitly selected rows.','Final-video approval is not a song-wide music/lyrics/vocals/mix/live approval.','No MASTER_CATALOG_V01 until received review. No publication authorization.'],'nitin_2008_identity_status':'AWAITING_CONFIRMATION_AS_EIGHT_ORIGINAL_SONG_RECREATIONS'}
+    assert all(r[f]=='UNKNOWN' for r in rows for f in allowed)
+    event_path=ROOT/'p0e4/evidence/catalog_semantic_events/NITIN_2008_SEMANTIC_CONFIRMATION_V01.json'
+    if event_path.exists():
+        event=json.loads(event_path.read_text())
+        expected={r['candidate_id']:r['path'] for r in rows if r['block']=='nitin_2008_children'}
+        assert {r['candidate_id']:r['path'] for r in event['subject_rows']}==expected
+        assert event['set_fields']=={'identity_confirmed':'YES','TYPE':'ORIGINAL_RECREATION','NEXT_ACTION':'REVIEW_WITH_VATSAL','ACTION_OWNER':'NITIN_AND_VATSAL'}
+        for row in rows:
+            if row['candidate_id'] in expected:
+                row.update(event['set_fields'])
+                row['semantic_evidence_event_id']=event['event_id']
+                row['question']='Identity and original-recreation TYPE confirmed by Nitin. Readiness and priority remain UNKNOWN.'
+        q=next(q for q in questions if q['id']=='N2008')
+        q.update(question='Eight identities and TYPE confirmed by Nitin; no further identity confirmation required.',answer='YES — all eight are the existing original songs from approximately 2008 in the Vatsal recreation package.',evidence_event_id=event['event_id'])
+        result['nitin_2008_identity_status']='CONFIRMED_BY_NITIN'
+        result['status']='PARTIAL_REVIEW_RECEIVED_REMAINING_FIELDS_UNKNOWN'
+        result['applied_semantic_events']=[{'event_id':event['event_id'],'path':str(event_path.relative_to(ROOT)),'sha256':hashlib.sha256(event_path.read_bytes()).hexdigest()}]
+        result['counts']['nitin_2008_identities_confirmed']=8
+        result['counts']['nitin_2008_readiness_confirmed']=0
     write('NITIN_MINIMAL_SEMANTIC_REVIEW_V01',result)
     write('REVIEW_REDUCTION_AUDIT',{'counts':counts,'candidate_dispositions':dispositions,'categories':categories,'original_exclusions':read('NON_SONG_EXCLUSIONS'),'existing_containers':read('COLLECTIONS_AND_CHILDREN'),'exact_hash_links':links,'unassigned_duplicate_alias_groups':duplicate_only,'unassigned_representatives':unassigned,'admin_embedded_media_retained':retained_admin_media,'limitations':['No identity merges on names or sizes. No new iCloud reads.','75 immediate semantic rows remain because readiness is not technically provable.','Two conditional rows and six media folders need identity decisions; no candidates silently dropped.']})
     fields=['candidate_id','name','path','block','identity_confirmed',*allowed]
@@ -78,8 +97,8 @@ def build():
     assert len(dispositions)==88 and len({x['candidate_id'] for x in dispositions})==88
     assert len(rows)==77 and counts['immediate_semantic_rows']==75 and len(links)==2
     assert sum(r['block']=='nitin_2008_children' for r in rows)==8
-    assert all(r[f]=='UNKNOWN' for r in rows for f in allowed)
-    write('NEXT_READY',{'status':'WAITING_FOR_NITIN','task':'Receive semantic review and resolve identity groups','MASTER_CATALOG_V01_created':False,'publication_authorized':False,'production_mutation':False})
+    assert all(r[f]=='UNKNOWN' for r in rows for f in ['MUSIC_READY','LYRICS_READY','VOCALS_READY','MIX_MASTER_READY','REVISION_REQUIRED','LIVE_READY','PRIORITY'])
+    write('NEXT_READY',{'status':'WAITING_FOR_NITIN','task':'Receive remaining semantic readiness/priority review and unresolved identity decisions; NITIN 2008 identity and TYPE already confirmed','MASTER_CATALOG_V01_created':False,'publication_authorized':False,'production_mutation':False})
     template=(ROOT/'p0e4/catalog/minimal_review_template.html').read_text()
     embedded=json.dumps(result,ensure_ascii=False).replace('<','\\u003c')
     (OUT/'NITIN_MINIMAL_SEMANTIC_REVIEW_V01.html').write_text(template.replace('__DATA__',embedded))

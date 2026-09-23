@@ -1,0 +1,67 @@
+{
+  "event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01",
+  "event_type": "NITIN_SUPPLIED_SEMANTIC_CONFIRMATION",
+  "recorded_at": "2026-09-23T09:42:38.892164+00:00",
+  "source": "Explicit Nitin user message in existing Primary P0-E4 executor conversation",
+  "source_message_time": "NOT_EXPOSED",
+  "source_statement_normalized": "NITIN SEMANTIC CONFIRMATION — NITIN 2008\n\nNitin explicitly confirms that all 8 discovered children under NITIN 2008 are the eight existing original songs from 2008 that fall under the agreed Vatsal recreation package:\nasma; KHAN KHAN; KHILTA GHUL; khud se; raeena; SANIYA; tum sabse; ye raat.\n\nFor all eight persist: identity_confirmed = YES; TYPE = ORIGINAL_RECREATION.\nThese are Nitin's existing originals from approximately 2008, originally produced with another engineer. The Vatsal scope is to reproduce/update them for the current UNCHAINED NITIN sound and quality, including review/update/revision of lyrics where needed.\nDo NOT infer current MUSIC_READY, LYRICS_READY, VOCALS_READY, MIX_MASTER_READY, REVISION_REQUIRED or LIVE_READY from the historical filenames or the word MASTERED.\nSet only where compatible with the current review contract: NEXT_ACTION = REVIEW_WITH_VATSAL; ACTION_OWNER = NITIN_AND_VATSAL.\nPreserve all other unconfirmed semantic fields as UNKNOWN. Persist this as Nitin-supplied semantic evidence and update the review projection. No publication or production mutation.\n",
+  "source_statement_format": "Formatting-normalized transcription; not byte-exact chat export",
+  "subject_rows": [
+    {
+      "candidate_id": "cat2_823dcfaf0a8be169",
+      "path": "NITIN 2008/asma mastered_01.wav"
+    },
+    {
+      "candidate_id": "cat2_e526065897b54f07",
+      "path": "NITIN 2008/KHAN KHAN MASTERED.wav"
+    },
+    {
+      "candidate_id": "cat2_b51082b1c9ad2a98",
+      "path": "NITIN 2008/KHILTA GHUL MASTERED.wav"
+    },
+    {
+      "candidate_id": "cat2_9e83d55d3d3b9604",
+      "path": "NITIN 2008/khud se mastered.wav"
+    },
+    {
+      "candidate_id": "cat2_91a182b555222b59",
+      "path": "NITIN 2008/raeena mastered.wav"
+    },
+    {
+      "candidate_id": "cat2_a771c4c946c5174e",
+      "path": "NITIN 2008/SANIYA MASTERED_00.wav"
+    },
+    {
+      "candidate_id": "cat2_e33fdd193b68cbe2",
+      "path": "NITIN 2008/tum sabse mastered.wav"
+    },
+    {
+      "candidate_id": "cat2_0f2352dc32122b2e",
+      "path": "NITIN 2008/ye raat mastered_00.wav"
+    }
+  ],
+  "set_fields": {
+    "identity_confirmed": "YES",
+    "TYPE": "ORIGINAL_RECREATION",
+    "NEXT_ACTION": "REVIEW_WITH_VATSAL",
+    "ACTION_OWNER": "NITIN_AND_VATSAL"
+  },
+  "context": {
+    "historical_year_approximate": 2008,
+    "historical_production": "With another engineer",
+    "nitin_statement": "Existing Nitin originals; all eight in agreed Vatsal recreation package",
+    "vatsal_scope": "Reproduce/update for current UNCHAINED NITIN sound and quality, including review/update/revision of lyrics where needed",
+    "rights_clearance_inferred": false
+  },
+  "unconfirmed_fields": [
+    "MUSIC_READY",
+    "LYRICS_READY",
+    "VOCALS_READY",
+    "MIX_MASTER_READY",
+    "REVISION_REQUIRED",
+    "LIVE_READY",
+    "PRIORITY"
+  ],
+  "publication_authorization": false,
+  "production_mutation_authorization": false
+}
