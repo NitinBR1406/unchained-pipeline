@@ -1,0 +1,56 @@
+{
+  "conversation_url": "https://gemini.google.com/app/1052032ea8dde9ed",
+  "no_publication_claim": true,
+  "no_rights_or_approval_claim": true,
+  "package_verdict": "REPAIR_REQUIRED",
+  "reviewed_files": [
+    {
+      "blocking_defects": [
+        "Title/artist text competes with face/eyes."
+      ],
+      "confidence": "HIGH",
+      "file_name": "source_1_master",
+      "observed_duration": "03:34",
+      "verdict": "REPAIR_REQUIRED"
+    },
+    {
+      "blocking_defects": [
+        "Title/artist text competes with face/eyes.",
+        "Abrupt tail."
+      ],
+      "confidence": "HIGH",
+      "file_name": "source_2_derivative_chorus",
+      "observed_duration": "00:15",
+      "verdict": "REPAIR_REQUIRED"
+    },
+    {
+      "blocking_defects": [
+        "Title/artist text competes with face/eyes."
+      ],
+      "confidence": "HIGH",
+      "file_name": "source_3_derivative_eye_contact",
+      "observed_duration": "00:15",
+      "verdict": "REPAIR_REQUIRED"
+    },
+    {
+      "blocking_defects": [
+        "Title/artist text competes with face/eyes."
+      ],
+      "confidence": "HIGH",
+      "file_name": "source_4_derivative_climax",
+      "observed_duration": "00:15",
+      "verdict": "REPAIR_REQUIRED"
+    },
+    {
+      "blocking_defects": [
+        "Title/artist text competes with face/eyes.",
+        "Abrupt tail."
+      ],
+      "confidence": "HIGH",
+      "file_name": "source_5_derivative_intimate",
+      "observed_duration": "00:15",
+      "verdict": "REPAIR_REQUIRED"
+    }
+  ],
+  "schema": "GEMINI_INDEPENDENT_FACTORY_OUTPUT_QC_V01"
+}

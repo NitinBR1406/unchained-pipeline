@@ -1,0 +1,22 @@
+{
+  "command": "bundled-python -m unittest p0e4.tests.test_aakhri_factory_realization p0e4.tests.test_private_real_acceptance p0e4.tests.test_private_real_media p0e4.tests.test_post_ready p0e4.tests.test_rights_router p0e4.tests.test_v163_projection",
+  "coverage": [
+    "exact input bindings",
+    "final output decode evidence",
+    "independent Gemini re-QC",
+    "bounded repair",
+    "post-ready gates",
+    "private real-media contracts",
+    "rights routing",
+    "V16.3 projection"
+  ],
+  "errors": 0,
+  "failures": 0,
+  "notes": [
+    "Non-fatal existing ResourceWarnings from legacy ledger file handles were emitted.",
+    "An unrelated resolve_operations import was not part of the final set because this environment lacks optional jsonschema; the new Resolve execution was validated by real renders, full decode and independent QC."
+  ],
+  "schema": "AAKHRI_FACTORY_REGRESSION_V01",
+  "status": "GREEN",
+  "tests_run": 27
+}

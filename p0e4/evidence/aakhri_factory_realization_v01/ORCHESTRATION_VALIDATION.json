@@ -1,0 +1,23 @@
+{
+  "input_hashes_match": true,
+  "no_live_make_or_distribution_step": true,
+  "no_publication_step": true,
+  "ordered_stages": [
+    "INGEST",
+    "GEMINI_CREATIVE_INTELLIGENCE",
+    "ORCHESTRATION_VALIDATION",
+    "CLAUDE_PRODUCTION_TRANSLATION",
+    "RESOLVE_FUSION_PRODUCTION",
+    "DERIVATIVES",
+    "STILLS_THUMBNAILS",
+    "CAPTIONS_METADATA",
+    "TECHNICAL_QC",
+    "INDEPENDENT_GEMINI_QC",
+    "RIGHTS_ROUTING",
+    "POST_READY_MANIFEST",
+    "WAITING_FOR_NITIN"
+  ],
+  "schema": "AAKHRI_ORCHESTRATION_VALIDATION_V01",
+  "single_workload_only": true,
+  "status": "PASS"
+}

@@ -1,0 +1,13 @@
+{
+  "repairs": [
+    "Reduced and moved non-lyric title/artist label to a lower face-safe area.",
+    "Extended D1 and D4 by 15 frames.",
+    "Created source-bound PCM24 derivative audio with 200 ms fade-in and 300 ms fade-out.",
+    "Added brief derivative visual fades."
+  ],
+  "rerender": "UNCHAINED_AAKHRI_FACTORY_V01_RUN2",
+  "schema": "AAKHRI_BOUNDED_REPAIR_RECEIPT_V01",
+  "scope_expanded": false,
+  "status": "COMPLETED",
+  "trigger": "Independent Gemini RUN1 QC"
+}

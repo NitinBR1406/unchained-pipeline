@@ -1,0 +1,7 @@
+{
+  "accepted_as_evidence": false,
+  "reason": "Response described a different 28-second female-performer clip and therefore did not evidence the hash-bound workload.",
+  "replacement": "Gemini web conversation db14b325064aab1b using the exact existing RUN4 candidate",
+  "schema": "GEMINI_ATTEMPT_REJECTION_V01",
+  "surface": "Google AI Studio"
+}

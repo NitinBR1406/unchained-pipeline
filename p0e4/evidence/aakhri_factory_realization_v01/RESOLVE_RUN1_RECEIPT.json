@@ -1,0 +1,166 @@
+{
+  "authorization": {
+    "bounded_aakhri_realization": true,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "inputs_after": {
+    "audio": {
+      "bytes": 61749398,
+      "mtime_ns": 1790194140233343099,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/bound-inputs/AAKHRI ISHQ MASTER 2.wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+    },
+    "raw": {
+      "bytes": 323607983,
+      "mtime_ns": 1790194140178500176,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/bound-inputs/AKI_SOURCE_0902_V01.mov",
+      "sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790"
+    },
+    "run4": {
+      "bytes": 382264829,
+      "mtime_ns": 1790196134308776935,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/UNCHAINED_AKI_PRIVATE_V01_RUN4.mp4",
+      "sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501"
+    }
+  },
+  "inputs_before": {
+    "audio": {
+      "bytes": 61749398,
+      "mtime_ns": 1790194140233343099,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/bound-inputs/AAKHRI ISHQ MASTER 2.wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+    },
+    "raw": {
+      "bytes": 323607983,
+      "mtime_ns": 1790194140178500176,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/bound-inputs/AKI_SOURCE_0902_V01.mov",
+      "sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790"
+    },
+    "run4": {
+      "bytes": 382264829,
+      "mtime_ns": 1790196134308776935,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/UNCHAINED_AKI_PRIVATE_V01_RUN4.mp4",
+      "sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501"
+    }
+  },
+  "original_restored": true,
+  "outputs": [
+    {
+      "bytes": 382350256,
+      "frames": 6432,
+      "fusion": {
+        "font": "Helvetica",
+        "frames": 6432,
+        "max_zoom": 1.035,
+        "title": "AAKHRI ISHQ / UNCHAINED NITIN"
+      },
+      "name": "AAKHRI_MASTER_REALIZED_V01",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-factory-realization-v01/AAKHRI_MASTER_REALIZED_V01.mp4",
+      "sha256": "950980d3865ff3fa302ae690cc610d19791a9ebf6da08215cb1a40a742f3e1ba",
+      "source_frames": [
+        0,
+        6432
+      ],
+      "status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 96889
+      }
+    },
+    {
+      "bytes": 27137245,
+      "frames": 450,
+      "fusion": {
+        "font": "Helvetica",
+        "frames": 450,
+        "max_zoom": 1.025,
+        "title": "AAKHRI ISHQ / UNCHAINED NITIN"
+      },
+      "name": "AAKHRI_D1_CHORUS_ENERGY_V01",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-factory-realization-v01/AAKHRI_D1_CHORUS_ENERGY_V01.mp4",
+      "sha256": "494b136f4ebd1fe7e1cf901c83209250f58ca2a82f78c0f31a6bb5dc99128177",
+      "source_frames": [
+        1230,
+        1680
+      ],
+      "status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 8697
+      }
+    },
+    {
+      "bytes": 27133967,
+      "frames": 450,
+      "fusion": {
+        "font": "Helvetica",
+        "frames": 450,
+        "max_zoom": 1.025,
+        "title": "AAKHRI ISHQ / UNCHAINED NITIN"
+      },
+      "name": "AAKHRI_D2_DIRECT_EYE_CONTACT_V01",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-factory-realization-v01/AAKHRI_D2_DIRECT_EYE_CONTACT_V01.mp4",
+      "sha256": "515281be8f19596bd0a5d9a32a8e2eb47c02306ac2a0902b901076b00f614a0a",
+      "source_frames": [
+        3540,
+        3990
+      ],
+      "status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 9149
+      }
+    },
+    {
+      "bytes": 27140994,
+      "frames": 450,
+      "fusion": {
+        "font": "Helvetica",
+        "frames": 450,
+        "max_zoom": 1.025,
+        "title": "AAKHRI ISHQ / UNCHAINED NITIN"
+      },
+      "name": "AAKHRI_D3_CLIMAX_V01",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-factory-realization-v01/AAKHRI_D3_CLIMAX_V01.mp4",
+      "sha256": "e0586c42efb44095797355df6bbdbf456f40d85e417f9c59ab58780a2255c4e8",
+      "source_frames": [
+        4500,
+        4950
+      ],
+      "status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 8024
+      }
+    },
+    {
+      "bytes": 27266854,
+      "frames": 450,
+      "fusion": {
+        "font": "Helvetica",
+        "frames": 450,
+        "max_zoom": 1.025,
+        "title": "AAKHRI ISHQ / UNCHAINED NITIN"
+      },
+      "name": "AAKHRI_D4_INTIMATE_CONCLUSION_V01",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-factory-realization-v01/AAKHRI_D4_INTIMATE_CONCLUSION_V01.mp4",
+      "sha256": "4fb88d5dd76d568293b6b8473192d690f48e388b3ebfba3bde0cc14632b120c1",
+      "source_frames": [
+        5850,
+        6300
+      ],
+      "status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 6467
+      }
+    }
+  ],
+  "project": "UNCHAINED_AAKHRI_FACTORY_V01_RUN1",
+  "project_closed": true,
+  "schema": "AAKHRI_FACTORY_REALIZATION_EXECUTION_V01",
+  "scope": "PRIVATE_LOCAL_NON_PUBLISHING_AAKHRI_ONLY",
+  "status": "RENDER_COMPLETE_PRIVATE_ONLY"
+}

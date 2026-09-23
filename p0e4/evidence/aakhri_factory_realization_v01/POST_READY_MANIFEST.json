@@ -1,0 +1,122 @@
+{
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "human_gates": [
+    "RIGHTS_CLEARANCE",
+    "NITIN_CREATIVE_APPROVAL",
+    "NITIN_FINAL_ASSET_APPROVAL",
+    "NITIN_PUBLISH_APPROVAL"
+  ],
+  "inputs": {
+    "authoritative_audio": {
+      "bytes": 61749398,
+      "path": ".local/private-real-media-v01/bound-inputs/AAKHRI ISHQ MASTER 2.wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+    },
+    "raw": {
+      "bytes": 323607983,
+      "path": ".local/private-real-media-v01/bound-inputs/AKI_SOURCE_0902_V01.mov",
+      "sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790"
+    }
+  },
+  "outputs": [
+    {
+      "bytes": 382330875,
+      "name": "AAKHRI_MASTER_REALIZED_V01_R2",
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_MASTER_REALIZED_V01_R2.mp4",
+      "sha256": "a83a8aeba305d8c02f5051fdc6f48ef2b10ad296c889aa438077b77343d3e924",
+      "source_frames": [
+        0,
+        6432
+      ]
+    },
+    {
+      "bytes": 27893214,
+      "name": "AAKHRI_D1_CHORUS_ENERGY_V01_R2",
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_D1_CHORUS_ENERGY_V01_R2.mp4",
+      "sha256": "146ac6359f5ffe1fd29886cd2b30075d20c202047f118db62248cc7b21855a78",
+      "source_frames": [
+        1230,
+        1695
+      ]
+    },
+    {
+      "bytes": 27208980,
+      "name": "AAKHRI_D2_DIRECT_EYE_CONTACT_V01_R2",
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_D2_DIRECT_EYE_CONTACT_V01_R2.mp4",
+      "sha256": "1f3588d1643606c81fbdd8396df69ae3185fd984a05d1d747929ff941ef61967",
+      "source_frames": [
+        3540,
+        3990
+      ]
+    },
+    {
+      "bytes": 27151147,
+      "name": "AAKHRI_D3_CLIMAX_V01_R2",
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_D3_CLIMAX_V01_R2.mp4",
+      "sha256": "4e94fadaf24dc22b7038eb2b6371fc512870c74d041690170aa23b163039a34c",
+      "source_frames": [
+        4500,
+        4950
+      ]
+    },
+    {
+      "bytes": 28144486,
+      "name": "AAKHRI_D4_INTIMATE_CONCLUSION_V01_R2",
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_D4_INTIMATE_CONCLUSION_V01_R2.mp4",
+      "sha256": "3ddecc4fc1e9c59d84567fb873f5712fd2dca1cce276979b5b79faa86690be07",
+      "source_frames": [
+        5850,
+        6315
+      ]
+    }
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "publish_ready": false,
+  "resolve_project_archive": {
+    "bytes": 149391,
+    "path": ".local/aakhri-factory-realization-v01/UNCHAINED_AAKHRI_FACTORY_V01_RUN2.drp",
+    "sha256": "6be8fde869e14375539e7fc98d2a285c93a6dbceaf54251a08139602a018b313"
+  },
+  "schema": "AAKHRI_POST_READY_MANIFEST_V01",
+  "scope": "PRIVATE_NON_PUBLISHING_ONLY",
+  "stage_outcomes": {
+    "CAPTIONS_METADATA": "GREEN_PRIVATE_METADATA_LYRICS_UNAVAILABLE",
+    "CLAUDE_PRODUCTION_TRANSLATION": "GREEN_FROZEN",
+    "DERIVATIVES": "GREEN_4",
+    "GEMINI_CREATIVE_INTELLIGENCE": "GREEN_FROZEN",
+    "INDEPENDENT_GEMINI_QC": "GREEN_ACCEPT_PRIVATE_POST_READY",
+    "INGEST": "GREEN_HASH_BOUND",
+    "ORCHESTRATION_VALIDATION": "GREEN",
+    "POST_READY_MANIFEST": "GREEN_PRIVATE_ONLY",
+    "RESOLVE_FUSION_PRODUCTION": "GREEN_RUN2",
+    "RIGHTS_ROUTING": "RIGHTS_HOLD",
+    "STILLS_THUMBNAILS": "GREEN_3_STILLS",
+    "TECHNICAL_QC": "GREEN_FULL_DECODE"
+  },
+  "status": "POST_READY_WAITING_FOR_NITIN",
+  "stills": [
+    {
+      "bytes": 1725072,
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_S1_DIRECT_POINT_V01.png",
+      "sha256": "7cfb439f33666f0721f1dc54a1b3ccaf9dcf5829b038808ad4cd5ec453e4e693",
+      "source": "RUN1 master; reused because RUN2 repair did not alter these source frames",
+      "timecode": "00:35"
+    },
+    {
+      "bytes": 1891412,
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_S2_MID_EXPRESSION_V01.png",
+      "sha256": "d6bb5aa027b1360d42a30609d241559ee5a8547e0cd29e476e7818aba99ad460",
+      "source": "RUN1 master; reused because RUN2 repair did not alter these source frames",
+      "timecode": "01:56"
+    },
+    {
+      "bytes": 1754038,
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_S3_FINAL_EYE_CONTACT_V01.png",
+      "sha256": "6a690aeff80b9ff5ef10d98c24b8073057a3a3ffa019e1020718b139796eeefc",
+      "source": "RUN1 master; reused because RUN2 repair did not alter these source frames",
+      "timecode": "03:28"
+    }
+  ],
+  "workload_id": "AAKHRI_ISHQ_BOUND_RAW_MASTER2_V01"
+}

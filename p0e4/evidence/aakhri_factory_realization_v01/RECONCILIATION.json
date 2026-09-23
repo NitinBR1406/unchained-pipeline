@@ -1,0 +1,25 @@
+{
+  "authoritative_master_state_version": "V16.3",
+  "authoritative_state_version": 29,
+  "completed_work_repeated": false,
+  "duplicate_authoritative_run_dispatched": false,
+  "reused_evidence": {
+    "accepted_private_run4": {
+      "bytes": 382264829,
+      "path": ".local/private-real-media-v01/UNCHAINED_AKI_PRIVATE_V01_RUN4.mp4",
+      "sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501"
+    },
+    "authoritative_audio": {
+      "bytes": 61749398,
+      "path": ".local/private-real-media-v01/bound-inputs/AAKHRI ISHQ MASTER 2.wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+    },
+    "raw": {
+      "bytes": 323607983,
+      "path": ".local/private-real-media-v01/bound-inputs/AKI_SOURCE_0902_V01.mov",
+      "sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790"
+    }
+  },
+  "schema": "AAKHRI_FACTORY_RECONCILIATION_V01",
+  "status": "RECONCILED"
+}

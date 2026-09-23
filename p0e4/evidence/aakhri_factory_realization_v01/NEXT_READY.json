@@ -1,0 +1,16 @@
+{
+  "independent_ready_work_remaining": [],
+  "publish_approval_requested": false,
+  "schema": "AAKHRI_FACTORY_NEXT_READY_V01",
+  "smallest_human_questions": [
+    {
+      "gate": "NITIN_CREATIVE_APPROVAL",
+      "question": "Approve or reject the RUN2 private master, four derivatives and three stills as the creative package?"
+    },
+    {
+      "gate": "RIGHTS_CLEARANCE",
+      "question": "Provide verified rights clearance before any publication route is considered."
+    }
+  ],
+  "status": "WAITING_FOR_NITIN"
+}

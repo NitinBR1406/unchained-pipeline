@@ -1,0 +1,38 @@
+{
+  "git_diff_check_output": "",
+  "git_diff_check_returncode": 0,
+  "schema": "AAKHRI_FACTORY_DIFF_QC_V01",
+  "scope": [
+    "p0e4/resolve/aakhri_factory_realization.py",
+    "p0e4/build_aakhri_factory_realization.py",
+    "p0e4/tests/test_aakhri_factory_realization.py",
+    "p0e4/evidence/aakhri_factory_realization_v01"
+  ],
+  "status": "PASS",
+  "untracked_local_media_staged": false,
+  "working_tree_status_before_commit": [
+    "?? .local/",
+    "?? 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/control_plane/__pycache__/",
+    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/__init__.cpython-312.pyc",
+    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/__init__.cpython-313.pyc",
+    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/control_loop.cpython-312.pyc",
+    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/control_loop.cpython-313.pyc",
+    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/durable_stores.cpython-312.pyc",
+    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/durable_stores.cpython-313.pyc",
+    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/persistence.cpython-312.pyc",
+    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/persistence.cpython-313.pyc",
+    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/state_model.cpython-312.pyc",
+    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/state_model.cpython-313.pyc",
+    "?? p0e4/__pycache__/",
+    "?? p0e4/build_aakhri_factory_realization.py",
+    "?? p0e4/canonical/__pycache__/",
+    "?? p0e4/controller/__pycache__/",
+    "?? p0e4/evidence/aakhri_factory_realization_v01/",
+    "?? p0e4/integration/__pycache__/",
+    "?? p0e4/resolve/__pycache__/",
+    "?? p0e4/resolve/aakhri_factory_realization.py",
+    "?? p0e4/tests/__pycache__/",
+    "?? p0e4/tests/test_aakhri_factory_realization.py",
+    "?? unpipe/__pycache__/"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "blind_to_claude_and_chatgpt_conclusions": true,
+  "conversation_url": "https://gemini.google.com/app/db14b325064aab1b",
+  "input_sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501",
+  "schema": "GEMINI_CREATIVE_INTELLIGENCE_RECEIPT_V01",
+  "status": "FROZEN",
+  "surface": "Gemini web authenticated as nitinramdaras23@gmail.com"
+}

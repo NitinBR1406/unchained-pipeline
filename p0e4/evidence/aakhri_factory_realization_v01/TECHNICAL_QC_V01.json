@@ -1,0 +1,67 @@
+{
+  "outputs": [
+    {
+      "audio_sample_buffers": 421,
+      "audio_tracks": 1,
+      "decode_status": "COMPLETE",
+      "duration_s": 214.4,
+      "file": "AAKHRI_MASTER_REALIZED_V01_R2.mp4",
+      "height": 1920,
+      "nominal_fps": 30,
+      "video_samples": 6436,
+      "video_tracks": 1,
+      "width": 1080
+    },
+    {
+      "audio_sample_buffers": 33,
+      "audio_tracks": 1,
+      "decode_status": "COMPLETE",
+      "duration_s": 15.5,
+      "file": "AAKHRI_D1_CHORUS_ENERGY_V01_R2.mp4",
+      "height": 1920,
+      "nominal_fps": 30,
+      "video_samples": 469,
+      "video_tracks": 1,
+      "width": 1080
+    },
+    {
+      "audio_sample_buffers": 32,
+      "audio_tracks": 1,
+      "decode_status": "COMPLETE",
+      "duration_s": 15,
+      "file": "AAKHRI_D2_DIRECT_EYE_CONTACT_V01_R2.mp4",
+      "height": 1920,
+      "nominal_fps": 30,
+      "video_samples": 454,
+      "video_tracks": 1,
+      "width": 1080
+    },
+    {
+      "audio_sample_buffers": 32,
+      "audio_tracks": 1,
+      "decode_status": "COMPLETE",
+      "duration_s": 15,
+      "file": "AAKHRI_D3_CLIMAX_V01_R2.mp4",
+      "height": 1920,
+      "nominal_fps": 30,
+      "video_samples": 454,
+      "video_tracks": 1,
+      "width": 1080
+    },
+    {
+      "audio_sample_buffers": 33,
+      "audio_tracks": 1,
+      "decode_status": "COMPLETE",
+      "duration_s": 15.5,
+      "file": "AAKHRI_D4_INTIMATE_CONCLUSION_V01_R2.mp4",
+      "height": 1920,
+      "nominal_fps": 30,
+      "video_samples": 469,
+      "video_tracks": 1,
+      "width": 1080
+    }
+  ],
+  "schema": "AAKHRI_TECHNICAL_DECODE_QC_V01",
+  "status": "FULL_DECODE_COMPLETE",
+  "stills": []
+}

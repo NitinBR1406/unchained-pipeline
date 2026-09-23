@@ -1,0 +1,50 @@
+{
+  "conversation_url": "https://gemini.google.com/app/b3c18a928d96dfce",
+  "limitations": [],
+  "no_publication_claim": true,
+  "no_rights_or_approval_claim": true,
+  "package_verdict": "ACCEPT_PRIVATE_POST_READY",
+  "reviewed_files": [
+    {
+      "blocking_defects": [],
+      "confidence": "HIGH",
+      "file": "AAKHRI_MASTER_REALIZED_V01_R2",
+      "observations": "Full playback; stable portrait; clean audio; apparent sync; label on shirt away from face; natural fade.",
+      "observed_duration": "03:34",
+      "verdict": "PASS"
+    },
+    {
+      "blocking_defects": [],
+      "confidence": "HIGH",
+      "file": "AAKHRI_D1_CHORUS_ENERGY_V01_R2",
+      "observations": "Full playback; portrait; clean synchronized audio; face-safe label; brief intentional fade.",
+      "observed_duration": "00:16",
+      "verdict": "PASS"
+    },
+    {
+      "blocking_defects": [],
+      "confidence": "HIGH",
+      "file": "AAKHRI_D2_DIRECT_EYE_CONTACT_V01_R2",
+      "observations": "Full playback; portrait; clean synchronized audio; face-safe label; intentional fade.",
+      "observed_duration": "00:15",
+      "verdict": "PASS"
+    },
+    {
+      "blocking_defects": [],
+      "confidence": "HIGH",
+      "file": "AAKHRI_D3_CLIMAX_V01_R2",
+      "observations": "Full playback; stable portrait; no glitches; clean synchronized audio; face-safe label; clean fade.",
+      "observed_duration": "00:15",
+      "verdict": "PASS"
+    },
+    {
+      "blocking_defects": [],
+      "confidence": "HIGH",
+      "file": "AAKHRI_D4_INTIMATE_CONCLUSION_V01_R2",
+      "observations": "Full playback; portrait maintained; no visual errors or audio dropouts; face-safe label; natural fade.",
+      "observed_duration": "00:16",
+      "verdict": "PASS"
+    }
+  ],
+  "schema": "GEMINI_INDEPENDENT_FACTORY_REQC_V01"
+}

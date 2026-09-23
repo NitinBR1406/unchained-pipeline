@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "bytes": 1725072,
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_S1_DIRECT_POINT_V01.png",
+      "sha256": "7cfb439f33666f0721f1dc54a1b3ccaf9dcf5829b038808ad4cd5ec453e4e693",
+      "source": "RUN1 master; reused because RUN2 repair did not alter these source frames",
+      "timecode": "00:35"
+    },
+    {
+      "bytes": 1891412,
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_S2_MID_EXPRESSION_V01.png",
+      "sha256": "d6bb5aa027b1360d42a30609d241559ee5a8547e0cd29e476e7818aba99ad460",
+      "source": "RUN1 master; reused because RUN2 repair did not alter these source frames",
+      "timecode": "01:56"
+    },
+    {
+      "bytes": 1754038,
+      "path": ".local/aakhri-factory-realization-v01/AAKHRI_S3_FINAL_EYE_CONTACT_V01.png",
+      "sha256": "6a690aeff80b9ff5ef10d98c24b8073057a3a3ffa019e1020718b139796eeefc",
+      "source": "RUN1 master; reused because RUN2 repair did not alter these source frames",
+      "timecode": "03:28"
+    }
+  ],
+  "schema": "AAKHRI_STILLS_MANIFEST_V01",
+  "status": "COMPLETE_PRIVATE_ONLY"
+}

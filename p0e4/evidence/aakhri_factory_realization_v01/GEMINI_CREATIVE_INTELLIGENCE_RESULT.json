@@ -1,0 +1,102 @@
+{
+  "caption_strategy": "Lyrics and translations unavailable; do not invent lyric captions.",
+  "creative_arc": "Intimate opening, increasing emotional intensity and gestures, a third-minute peak, then a quiet personal resolution.",
+  "derivative_candidates": [
+    {
+      "confidence": "high",
+      "duration_s": 15,
+      "end_time": "00:56",
+      "hook_basis": "Observed rise in vocal intensity and facial expression.",
+      "id": "DC_01_ChorusEnergy",
+      "start_time": "00:41"
+    },
+    {
+      "confidence": "high",
+      "duration_s": 15,
+      "end_time": "02:13",
+      "hook_basis": "Observed direct eye contact and camera-directed gesture.",
+      "id": "DC_02_DirectEngagement",
+      "start_time": "01:58"
+    },
+    {
+      "confidence": "high",
+      "duration_s": 15,
+      "end_time": "02:45",
+      "hook_basis": "Observed emotional peak and expansive gestures.",
+      "id": "DC_03_ClimacticBuild",
+      "start_time": "02:30"
+    },
+    {
+      "confidence": "high",
+      "duration_s": 15,
+      "end_time": "03:30",
+      "hook_basis": "Observed emotional resolution and final look.",
+      "id": "DC_04_IntimateConclusion",
+      "start_time": "03:15"
+    }
+  ],
+  "measured_or_observed_facts": [
+    {
+      "confidence": "high",
+      "fact": "Portrait 9:16; one male performer in a black shirt at a studio microphone and pop filter; vertical wood/acoustic slats behind him.",
+      "timecode": "00:00-03:35"
+    },
+    {
+      "confidence": "high",
+      "fact": "Performer points directly toward the camera.",
+      "timecode": "00:35"
+    },
+    {
+      "confidence": "high",
+      "fact": "Performer maintains direct camera eye contact during the final phrase.",
+      "timecode": "03:28"
+    }
+  ],
+  "media_filename": "UNCHAINED_AKI_PRIVATE_V01_RUN4.mp4",
+  "metadata_positioning": "Private studio vocal performance; solo male performer; portrait frame; raw emotional delivery.",
+  "no_causation_claim": true,
+  "no_rights_or_approval_claim": true,
+  "observed_duration": "03:35",
+  "recommended_master_treatment": {
+    "color_motion_rules": "Preserve natural palette and portrait framing; subtle slow push-ins only.",
+    "impact_windows": [
+      "00:41-01:07",
+      "02:24-02:50",
+      "03:02-03:20"
+    ],
+    "opening": "Cold open on performer face.",
+    "outro": "Retain the final emotional settling window.",
+    "protected_vocal_windows": [
+      "00:03-00:15",
+      "03:25-03:35"
+    ],
+    "title_timing": "Delay title until after 00:10."
+  },
+  "review_scope": "Full video analysis from 00:00 to 03:35",
+  "risks": [
+    "Hand gestures cross lower-middle frame.",
+    "Horizontal crops would remove microphone and context."
+  ],
+  "schema": "GEMINI_CREATIVE_INTELLIGENCE_V01",
+  "still_candidates": [
+    {
+      "rationale": "Direct point toward camera",
+      "timecode": "00:35",
+      "title_safe_area": "top 20% and bottom 30%"
+    },
+    {
+      "rationale": "Direct intense gaze",
+      "timecode": "01:56",
+      "title_safe_area": "upper third"
+    },
+    {
+      "rationale": "Soft concluding expression",
+      "timecode": "03:28",
+      "title_safe_area": "bottom half"
+    }
+  ],
+  "uncertainties": [
+    "Language and lyrical meaning unverified.",
+    "Platform safe zones not in scope."
+  ]
+}

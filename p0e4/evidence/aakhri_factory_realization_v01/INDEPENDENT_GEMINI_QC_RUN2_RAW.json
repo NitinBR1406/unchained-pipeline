@@ -1,0 +1,376 @@
+{
+  "schema": "CLAUDE_AAKHRI_PRODUCTION_TRANSLATION_V01",
+  "role": "production_translation_specialist",
+  "generated": "2026-09-23",
+  "execution_performed": false,
+  "scope": "LOCAL_PRIVATE_NON_PUBLISHING_REALIZATION_PLAN_ONLY",
+  "authorization_state": {
+    "LOCAL_PRIVATE_REALIZATION_AUTHORIZED": true,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "authority_source": "Nitin, workload-scoped instruction",
+    "note": "This plan does not grant or infer any further authorization. Rights, approval, and publication remain out of scope."
+  },
+
+  "input_bindings": {
+    "RAW": {
+      "sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790",
+      "resolution": "1080x1920",
+      "orientation": "portrait_9x16",
+      "fps": 30,
+      "duration_s": 214.505,
+      "duration_frames_approx": 6435,
+      "verified_by": "Codex (local hash)",
+      "use": "sole picture source for master, derivatives, and stills"
+    },
+    "MASTER2_WAV": {
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "duration_s": 214.4,
+      "duration_frames_at_30fps": 6432,
+      "verified_by": "Codex (local hash)",
+      "use": "sole audio source; timeline length is set by this file"
+    },
+    "RUN4_ACCEPTED_TECHNICAL_PRIVATE_MASTER": {
+      "sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501",
+      "status": "ACCEPTED_TECHNICAL_PRIVATE",
+      "use": "reference for sync, edit, and picture parity; fallback source if the Resolve rebuild fails parity"
+    },
+    "GEMINI_INTELLIGENCE": {
+      "conversation_id": "db14b325064aab1b",
+      "source_media": "RUN4, full 3:35",
+      "treated_as": "advisory timing intelligence; exact frames must be confirmed on the timeline by eye before locking",
+      "key_markers_s": {
+        "direct_point": 35.0,
+        "final_direct_eye_contact": 208.0
+      },
+      "impact_windows_s": [[41.0, 67.0], [144.0, 170.0], [182.0, 200.0]],
+      "protected_windows_s": [[3.0, 15.0], [205.0, 214.4]],
+      "protected_window_note": "The requested window 03:25-03:35 runs past the audio end (214.4s), so it is clamped to 205.0-214.4s."
+    },
+    "binding_rule": "Before any work starts, re-hash every input. Stop if any hash does not match the values above."
+  },
+
+  "accepted_reuse": {
+    "reuse_from_RUN4": [
+      "A/V sync offset between RAW and MASTER2 (read from the RUN4 project or edit decision; do not re-derive by ear)",
+      "head trim and tail trim decisions",
+      "color treatment, if one was applied in RUN4 (otherwise leave RAW color untouched)",
+      "encode settings that produced the accepted RUN4, as the baseline for the review proxy"
+    ],
+    "do_not_reuse": [
+      "RUN4 encoded pixels as the source for new renders while the RAW rebuild is available (avoids generational loss)",
+      "any lyric or caption assets (none exist; none may be created)"
+    ],
+    "fallback": "If the RAW+MASTER2 rebuild cannot reach parity with RUN4 (see technical_qc_plan.parity_vs_RUN4), stop. Nitin decides whether RUN4 itself becomes the source for derivatives and stills. Claude does not make that switch on its own."
+  },
+
+  "master_execution_plan": {
+    "tool": "DaVinci Resolve (Edit + Fusion pages)",
+    "project_settings": {
+      "timeline_resolution": "1080x1920",
+      "pixel_aspect": "square",
+      "timeline_fps": 30,
+      "playback_fps": 30,
+      "color_science": "DaVinci YRGB",
+      "timeline_color_space": "Rec.709 Gamma 2.4",
+      "output_color_space": "Rec.709 Gamma 2.4",
+      "image_scaling": "Scale entire image to fit; mismatched resolution = center crop with no resizing (should never trigger, because the source is already 1080x1920)",
+      "audio_sample_rate_hz": 48000
+    },
+    "steps": [
+      {"id": "M1", "action": "Import RAW and MASTER2 read-only. Confirm clip attributes: 1080x1920, 30fps, 48k stereo."},
+      {"id": "M2", "action": "Create timeline AAKHRI_MASTER_V01. Place MASTER2 on A1 at 00:00:00:00, with no gain, EQ, dynamics, or fades on the full-length master (clip gain 0.0 dB, track fader 0.0 dB, bus fader 0.0 dB)."},
+      {"id": "M3", "action": "Place RAW on V1 using the RUN4 sync offset. Trim the RAW tail so the video ends at the audio end: 6432 frames, 214.4s. The ~3-frame video overhang is discarded."},
+      {"id": "M4", "action": "Frame lock: Inspector Zoom 1.000, Position 0/0, Rotation 0, no crop. No horizontal recrop at any time."},
+      {"id": "M5", "action": "Subtle push-ins, only inside the impact windows, as uniform centered zoom keyframes (Inspector Zoom, X and Y linked, anchor at frame center, Position 0/0):",
+        "keyframes": [
+          {"window": "00:41:00-01:07:00", "zoom_from": 1.000, "zoom_to": 1.030, "ease": "ease in/out", "return": "cut back to 1.000 on the first frame after the window only if it lands on a natural pause; otherwise ease back over >= 60 frames starting at 01:07:00"},
+          {"window": "02:24:00-02:50:00", "zoom_from": 1.000, "zoom_to": 1.035, "ease": "ease in/out", "return": "ease back to 1.000 over >= 60 frames"},
+          {"window": "03:02:00-03:20:00", "zoom_from": 1.000, "zoom_to": 1.030, "ease": "ease in/out", "return": "ease back to 1.000, reaching it no later than 03:24:29"}
+        ],
+        "hard_limits": {
+          "max_zoom": 1.04,
+          "max_zoom_rate_per_second": 0.0025,
+          "protected_windows_zoom": 1.000,
+          "note": "At 1.04 zoom, about 3.8% of the frame edge is lost on every side, uniformly. The aspect ratio is unchanged. Before locking, confirm the performer's head and hands stay fully inside the frame on the timeline."
+        }
+      },
+      {"id": "M6", "action": "Grade: none beyond what RUN4 used. No LUTs, stylization, vignettes, grain, or beauty filters."},
+      {"id": "M7", "action": "Fusion title/artist labels per fusion_graphics_plan (master placements only)."},
+      {"id": "M8", "action": "Render a mezzanine and a review proxy (see outputs)."}
+    ],
+    "outputs": [
+      {
+        "name": "AAKHRI_MASTER_V01_MEZZ.mov",
+        "video": "Apple ProRes 422 HQ, 1080x1920, 30fps CFR, Rec.709 tags (1-1-1), full-duration 6432 frames",
+        "audio": "Linear PCM 24-bit 48kHz stereo, passthrough from MASTER2 (no render-time level change)",
+        "purpose": "private archival master and QC reference"
+      },
+      {
+        "name": "AAKHRI_MASTER_V01_REVIEW.mp4",
+        "video": "H.264 High, yuv420p, 1080x1920, 30fps CFR, VBR target 16 Mbps / max 24 Mbps, BT.709 tagged, faststart",
+        "audio": "AAC-LC 320 kbps 48kHz stereo",
+        "purpose": "private review playback only"
+      }
+    ],
+    "storage": "Local private folder only. No upload to Drive, Make, Sheets, YouTube, or any social platform."
+  },
+
+  "derivative_execution_plan": {
+    "count": 4,
+    "common": {
+      "source": "AAKHRI_MASTER_V01 timeline, clean (no labels), in new compound or sub-timelines. Labels are added per derivative in Fusion.",
+      "frame": "1080x1920, 30fps, no recrop; uniform zoom <= 1.04 is inherited from the master and nothing is added on top",
+      "duration_frames": 450,
+      "audio": "MASTER2 segment. Fade in over 6 frames (200 ms) and fade out over 9 frames (300 ms) to avoid clicks. No other processing.",
+      "outputs_per_derivative": ["ProRes 422 HQ + PCM mezzanine", "H.264 review proxy, same spec as the master review"],
+      "cut_point_rule": "Cut on the exact timecodes given. If the eye check finds a cut mid-syllable, you may move either boundary by up to ±15 frames to the nearest breath or phrase gap. Log the adjusted in/out frames in the sidecar."
+    },
+    "derivatives": [
+      {
+        "id": "D1",
+        "label": "chorus_energy",
+        "in_tc": "00:00:41:00", "out_tc": "00:00:56:00",
+        "in_frame": 1230, "out_frame_exclusive": 1680,
+        "inside_impact_window": "00:41-01:07",
+        "motion": "inherits the master push-in segment (about 1.000 to 1.017 across this range); nothing added",
+        "labels": "title/artist label visible 00:00-00:03 of the clip (frames 0-89), then faded out",
+        "filename": "AAKHRI_D1_0041-0056_V01"
+      },
+      {
+        "id": "D2",
+        "label": "direct_eye_contact",
+        "in_tc": "00:01:58:00", "out_tc": "00:02:13:00",
+        "in_frame": 3540, "out_frame_exclusive": 3990,
+        "inside_impact_window": null,
+        "motion": "none (zoom 1.000). The eye contact carries this clip.",
+        "labels": "title/artist label visible 00:00-00:03 of the clip, placed so it never overlaps the face",
+        "filename": "AAKHRI_D2_0158-0213_V01"
+      },
+      {
+        "id": "D3",
+        "label": "climax",
+        "in_tc": "00:02:30:00", "out_tc": "00:02:45:00",
+        "in_frame": 4500, "out_frame_exclusive": 4950,
+        "inside_impact_window": "02:24-02:50",
+        "motion": "inherits the master push-in segment; nothing added",
+        "labels": "title/artist label visible 00:00-00:03 of the clip",
+        "filename": "AAKHRI_D3_0230-0245_V01"
+      },
+      {
+        "id": "D4",
+        "label": "intimate_conclusion",
+        "in_tc": "00:03:15:00", "out_tc": "00:03:30:00",
+        "in_frame": 5850, "out_frame_exclusive": 6300,
+        "inside_impact_window": "03:02-03:20 (partial)",
+        "overlaps_protected_window": "03:25:00-03:30:00 (clip frames 300-449)",
+        "contains_final_eye_contact": "03:28 = master frame 6240 = clip frame 390",
+        "motion": "inherits the master ease-back. Must be at 1.000 by clip frame 269 (03:23:29).",
+        "labels": "title/artist label visible only on clip frames 0-89 (03:15-03:18). Nothing at all from clip frame 90 to the end. The protected window stays clean.",
+        "filename": "AAKHRI_D4_0315-0330_V01"
+      }
+    ]
+  },
+
+  "fusion_graphics_plan": {
+    "allowed_text": [
+      {"id": "T_TITLE", "string": "Aakhri Ishq", "type": "non-lyric title label", "confirmation_required": "exact spelling, capitalization, and any script variant (Latin or Devanagari) must be confirmed by Nitin"},
+      {"id": "T_ARTIST", "string": "Unchained Nitin", "type": "non-lyric artist label", "confirmation_required": "confirm the display form (with or without the tagline 'The Indestructible Voice')"}
+    ],
+    "forbidden_text": ["lyrics", "lyric fragments", "translations", "transliterations", "invented taglines", "credits not provided by Nitin", "calls to action", "platform handles", "URLs"],
+    "node_graph": "MediaIn1 -> Merge1(Background) ; Text+ (T_TITLE) -> Transform_T -> Merge1(Foreground) -> Merge2(Background) ; Text+ (T_ARTIST) -> Transform_A -> Merge2(Foreground) -> MediaOut1",
+    "styling": {
+      "font": "one neutral sans-serif whose license is confirmed for this use; FONT_LICENSE_UNVERIFIED blocks the render",
+      "title_size_px_cap_height": 44,
+      "artist_size_px_cap_height": 30,
+      "color": "#FFFFFF at 90% opacity",
+      "legibility_aid": "Text+ Shading element 2 (soft shadow): black, 35% opacity, softness 8, offset 0/2 px. No boxes, bars, or plates.",
+      "tracking": "slight positive tracking, 1.02",
+      "alignment": "left-aligned"
+    },
+    "placement_and_safe_zones": {
+      "frame": "1080x1920",
+      "hard_exclusion_zones_px": {
+        "top": "y 0-220 (platform status and header UI)",
+        "bottom": "y 1540-1920 (platform caption and control UI)",
+        "right": "x 900-1080 (platform action-button rail)",
+        "left_margin": "x 0-72"
+      },
+      "label_block_anchor": "bottom-left of the permitted area, baseline at y ≈ 1500, x starting at 72",
+      "label_block_max_area_px": "760x140 (≈ 5.1% of the frame)",
+      "face_exclusion": "The label block must not intersect the performer's face or hand bounding boxes on any frame where it is visible. If it would, move it upward within y 1300-1500, or drop the artist line."
+    },
+    "timing": {
+      "master": [
+        {"show": "00:00:16:00-00:00:21:00", "reason": "first unprotected moment after the 00:03-00:15 protected opening"},
+        {"show": "none after 00:00:21:00", "reason": "minimal text; no end card, because 03:25-03:35 is protected"}
+      ],
+      "derivatives": "clip frames 0-89 only (see derivative_execution_plan)",
+      "animation": "opacity 0 to 90% over 12 frames, hold, 90% to 0 over 12 frames. Allowed Y drift ≤ 8 px. No scale pops, no kinetic type."
+    },
+    "performer_visibility_constraint": {
+      "requirement": ">= 80% of the performer's bounding-box area left unobscured on every frame",
+      "design_margin": "The label block is kept to ≤ 5.1% of the frame and placed away from the face. Expected obscured share of the performer box is ≤ 8%. This is an estimate; QC must measure it.",
+      "push_in_note": "Uniform zoom ≤ 1.04 does not count as obscuring, but any performer area pushed out of frame counts as lost visibility and is measured the same way"
+    }
+  },
+
+  "stills_plan": {
+    "source": "clean master timeline (no labels), rendered from the mezzanine timeline, not grabbed from the H.264 file",
+    "stills": [
+      {"id": "S1", "tc": "00:00:35:00", "frame": 1050, "intent": "direct point", "search_window_frames": "±10; choose the sharpest frame with open eyes and no motion blur"},
+      {"id": "S2", "tc": "00:01:56:00", "frame": 3480, "intent": "mid-song expression", "search_window_frames": "±10"},
+      {"id": "S3", "tc": "00:03:28:00", "frame": 6240, "intent": "final direct eye contact", "search_window_frames": "±10"}
+    ],
+    "format": "PNG, 1080x1920, 8-bit RGB, Rec.709, no text overlay, no crop",
+    "log": "Record the chosen frame numbers and their offset from the target in the sidecar.",
+    "status": "private review stills; not posters (FIRST_REAL_POSTER remains PAUSED_BY_NITIN)"
+  },
+
+  "captions_metadata_plan": {
+    "lyric_captions": "NONE. Lyrics and translations are unavailable, and none may be invented, transcribed from audio, or machine-generated.",
+    "subtitle_files": "none produced",
+    "sidecar": {
+      "filename": "AAKHRI_REALIZATION_SIDECAR_V01.json",
+      "fields": [
+        "input sha256s (RAW, MASTER2, RUN4)",
+        "output sha256s (all renders and stills)",
+        "sync offset used (frames) and its source (RUN4)",
+        "push-in keyframes as actually rendered",
+        "derivative in/out frames as actually rendered, plus any ±15-frame adjustments with reasons",
+        "still frame numbers as actually rendered",
+        "label strings, font name, and font license status",
+        "authorization flags copied verbatim",
+        "status: PRIVATE_REVIEW_ONLY"
+      ]
+    },
+    "embedded_metadata": {
+      "title": "AAKHRI_MASTER_V01 / AAKHRI_D#_V01 (working names only)",
+      "comment": "PRIVATE REVIEW - NOT FOR PUBLICATION",
+      "forbidden": "no publishing descriptions, hashtags, credits, ISRC, copyright lines, or rights claims"
+    }
+  },
+
+  "technical_qc_plan": {
+    "container_and_stream_checks": [
+      "ffprobe: width 1080, height 1920, SAR 1:1, r_frame_rate 30/1, avg_frame_rate 30/1 (CFR), pix_fmt yuv422p10le (ProRes) or yuv420p (H.264), color_primaries/trc/space bt709",
+      "master duration 6432 frames ±0; each derivative 450 frames ±0 (or the logged adjusted length)",
+      "audio 48000 Hz, 2 channels; ProRes mezz PCM 24-bit"
+    ],
+    "audio_integrity": [
+      "Mezzanine: decode PCM, align to MASTER2 at sample 0, and compare. Expected bit-identical, or a maximum absolute sample difference of 0 at 24-bit. Any difference fails the check.",
+      "Review proxy: integrated loudness and true peak are measured and logged (EBU R128). They are not normalized and not enforced, because the proxy only needs to match the master's sound.",
+      "Derivatives: confirm fade lengths and that no clicks appear at the cut points"
+    ],
+    "sync": "A/V offset versus RUN4 at the checkpoints 00:35, 01:56, 02:37, and 03:28. Pass if within ±1 frame (33 ms) at every checkpoint.",
+    "parity_vs_RUN4": [
+      "Frame-matched comparison on unlabeled, un-pushed segments (for example 00:03-00:15 and 03:25-03:34). Pass if SSIM ≥ 0.98 and PSNR ≥ 38 dB versus RUN4.",
+      "The hash is expected to differ from RUN4 (new render), so hash equality is not a criterion"
+    ],
+    "frame_integrity": "No dropped or duplicated frames (ffmpeg framemd5 on the mezzanine versus the timeline frame count; freezedetect with no unexpected freezes over 0.5 s).",
+    "framing": [
+      "Aspect ratio 9:16 on every frame. No horizontal recrop. Zoom ≤ 1.04, confirmed from the Resolve keyframe export.",
+      "Protected windows (00:03-00:15, 03:25-end): zoom exactly 1.000 and zero overlay pixels (difference against the clean render equals 0 inside these windows)."
+    ],
+    "performer_visibility_measurement": {
+      "method": "Run person segmentation or a bounding-box detector on every 5th frame of each labeled segment. Compute the share of the performer mask covered by any label pixel with alpha > 0.1, plus the share pushed out of frame.",
+      "pass": "unobscured ≥ 80% on 100% of sampled frames; target ≥ 92%",
+      "fallback_if_no_detector": "Manual check on every label-visible second (about 5 frames per second) by drawing the face and hand boxes. Log it as MANUAL."
+    },
+    "text_audit": "OCR every labeled frame. The only strings allowed are the two confirmed labels. Any other text fails the check."
+  },
+
+  "independent_qc_handoff": {
+    "recipient": "an independent reviewer (for example Codex for technical checks and a Gemini session separate from db14b325064aab1b for perception checks). Must not be the same agent instance that rendered the outputs.",
+    "package": [
+      "all output files plus their sha256 values",
+      "AAKHRI_REALIZATION_SIDECAR_V01.json",
+      "the input sha256 values listed above (not the input files, unless the reviewer needs them for the audio-integrity test)",
+      "this plan (CLAUDE_AAKHRI_PRODUCTION_TRANSLATION_V01) as the acceptance reference"
+    ],
+    "reviewer_instructions": [
+      "Re-hash everything; any mismatch means REJECT",
+      "Re-run every technical_qc_plan check without trusting the renderer's logs",
+      "Blind perception check: impact windows feel intact, protected windows are clean, each derivative starts and ends on a musically natural point, and the labels never compete with the face",
+      "Return PASS, PASS_WITH_NOTES, or REJECT per output, with frame-level evidence"
+    ],
+    "prohibition": "The reviewer may not publish, upload, share externally, or edit the outputs"
+  },
+
+  "rights_routing": {
+    "status": "UNRESOLVED_NOT_INFERRED",
+    "items_requiring_Nitin_confirmation": [
+      "composition and lyrics ownership and authorship",
+      "sound recording and master ownership, including any producer or co-owner shares",
+      "performer and likeness consent for derivatives (presumed Nitin, but not confirmed for this workload)",
+      "the font license for the title labels",
+      "the title string and artist display form"
+    ],
+    "route": "All rights questions go to Nitin only. Nothing is sent to third parties by this workload.",
+    "effect_on_this_workload": "None of these block local private rendering. All of them block any future publication, which is not authorized anyway."
+  },
+
+  "explicit_unknowns": [
+    "The exact RAW-to-MASTER2 sync offset in frames. It must be read from RUN4 and is not supplied here.",
+    "Whether RUN4 applied any color grade",
+    "Lyrics and translations (unavailable; must stay absent)",
+    "Exact phrase boundaries near the D1-D4 cut points (Gemini gave second-level timings only)",
+    "The performer's bounding-box position across the frame. Label placement is a design default and must be confirmed against the actual picture.",
+    "Confirmation of the title spelling and script",
+    "Artist label form",
+    "Font and its license",
+    "Whether the Resolve version or license on the local machine supports the ProRes encode (depends on the OS). The alternative is DNxHR HQX with PCM, logged as a deviation.",
+    "The source of the 0.105 s difference between RAW (214.505 s) and MASTER2 (214.4 s). The plan assumes a tail overhang consistent with RUN4; if RUN4 trimmed from the head instead, follow RUN4.",
+    "Loudness figures for MASTER2 (not supplied; to be measured and logged only)"
+  ],
+
+  "prohibited_actions": [
+    "publishing, uploading, scheduling, or sharing any output on any platform",
+    "creating, modifying, activating, or running Make.com scenarios",
+    "writing to Google Drive or Google Sheets",
+    "creating a public or real poster (FIRST_REAL_POSTER = PAUSED_BY_NITIN)",
+    "inventing, transcribing, or machine-generating lyrics, translations, or lyric captions",
+    "any text beyond the two confirmed non-lyric labels",
+    "horizontal recrop, reframing to other aspect ratios, zoom > 1.04, or rotation",
+    "zoom other than 1.000, or any overlay, inside the protected windows",
+    "audio processing on the master beyond passthrough (no EQ, compression, limiting, normalization, or pitch/time change)",
+    "stylization: LUT looks, beauty filters, grain, glitches, flashes, or kinetic typography",
+    "inferring or asserting rights, credits, ownership, approval, or publication readiness",
+    "overwriting or modifying the RAW, MASTER2, or RUN4 files",
+    "promoting any output past PRIVATE_REVIEW status without Nitin's explicit instruction"
+  ],
+
+  "acceptance_criteria": [
+    {"id": "AC1", "criterion": "All input hashes match the bound values at render time"},
+    {"id": "AC2", "criterion": "Master: 1080x1920, 30fps CFR, 6432 frames, BT.709 tagged"},
+    {"id": "AC3", "criterion": "Mezzanine audio bit-identical to MASTER2 after alignment"},
+    {"id": "AC4", "criterion": "A/V sync within ±1 frame of RUN4 at all four checkpoints"},
+    {"id": "AC5", "criterion": "Parity with RUN4 on clean segments: SSIM ≥ 0.98, PSNR ≥ 38 dB"},
+    {"id": "AC6", "criterion": "Exactly 4 derivatives, each 450 frames (or a logged adjustment of ≤ ±15 frames per boundary), matching D1-D4 in the plan"},
+    {"id": "AC7", "criterion": "Exactly 3 stills within ±10 frames of 00:35, 01:56, and 03:28, clean and uncropped"},
+    {"id": "AC8", "criterion": "Performer ≥ 80% unobscured on every sampled frame"},
+    {"id": "AC9", "criterion": "Protected windows: zoom 1.000 and zero overlay pixels"},
+    {"id": "AC10", "criterion": "OCR finds only the confirmed title and artist labels; no lyric text anywhere"},
+    {"id": "AC11", "criterion": "Zoom ≤ 1.04 and no recrop, confirmed from the keyframe export"},
+    {"id": "AC12", "criterion": "Sidecar complete; all output hashes recorded"},
+    {"id": "AC13", "criterion": "Independent QC returns PASS or PASS_WITH_NOTES for every output"},
+    {"id": "AC14", "criterion": "All outputs remain in local private storage; no external transfer occurred"}
+  ],
+
+  "status": {
+    "plan_state": "READY_FOR_LOCAL_PRIVATE_REALIZATION",
+    "execution_state": "NOT_EXECUTED_BY_CLAUDE",
+    "blocking_prerequisites_before_render": [
+      "RUN4 sync offset retrieved",
+      "title string and artist label form confirmed by Nitin",
+      "font license confirmed"
+    ],
+    "output_classification": "PRIVATE_REVIEW_ONLY",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

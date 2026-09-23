@@ -1,0 +1,13 @@
+{
+  "conversation_url": "https://claude.ai/cowork/cse_01Priw1oSDZ96Lgn8sz1mYE5",
+  "execution_performed_by_claude": false,
+  "input_bindings": {
+    "audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "raw_sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790",
+    "run4_sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501"
+  },
+  "model_displayed": "Opus 5.5 Medium",
+  "schema": "CLAUDE_PRODUCTION_TRANSLATION_RECEIPT_V01",
+  "status": "FROZEN_PRODUCTION_TRANSLATION",
+  "surface": "Claude desktop"
+}
