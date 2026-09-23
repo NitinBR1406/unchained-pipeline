@@ -1,0 +1,26 @@
+{
+  "outputs": [
+    {
+      "file": "UNCHAINED_V163_SYNTHETIC_ACCEPTANCE.mov",
+      "sha256": "6bbbfdbb482c5c187c6b5a55ad6b1b2d7b0c1fccae054b2d614d35ee8bdd9681",
+      "video_decoded_sha256": "8397a1c12f7a723b0c415479d6884a8cf677f097837c092a7c609cf91a97d179",
+      "video_decoded_bytes": 92160000,
+      "audio_decoded_sha256": "dfdaf75b9f4b04fcc7bf107128fa10e6b153a34335eec364877ddbc01983e757",
+      "audio_decoded_bytes": 768000
+    },
+    {
+      "file": "UNCHAINED_V163_SYNTHETIC_REPLAY.mov",
+      "sha256": "a5997c13935b97006c637c6d18bb8e83fe32cd427a416a4f65b913f491f45e36",
+      "video_decoded_sha256": "8397a1c12f7a723b0c415479d6884a8cf677f097837c092a7c609cf91a97d179",
+      "video_decoded_bytes": 92160000,
+      "audio_decoded_sha256": "dfdaf75b9f4b04fcc7bf107128fa10e6b153a34335eec364877ddbc01983e757",
+      "audio_decoded_bytes": 768000
+    }
+  ],
+  "video_essence_equal": true,
+  "audio_essence_equal": true,
+  "full_decode_pass": true,
+  "video_frames": 100,
+  "audio_samples_per_channel": 192000,
+  "container_bytes_equal": false
+}

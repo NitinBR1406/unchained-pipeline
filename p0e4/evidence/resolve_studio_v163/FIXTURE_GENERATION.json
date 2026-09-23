@@ -1,0 +1,11 @@
+{
+  "audio_codec": "pcm_s16le",
+  "inputs": {
+    "synthetic.mov": "8895e4e431120d5ca12bc2c8e20d64136ea0b534dc7dd27fd6883cb355d7b348",
+    "synthetic.wav": "7760bdedc79a1d2374a9ff850ef7a482937c25c1bbb8f39263071cb053b56038"
+  },
+  "private_staging": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/resolve-v163",
+  "real_artist_media_used": false,
+  "source": "ffmpeg lavfi testsrc2 640x360 25fps duration4 + sine 440Hz 48000Hz duration4",
+  "video_codec": "prores_ks profile0 yuv422p10le"
+}

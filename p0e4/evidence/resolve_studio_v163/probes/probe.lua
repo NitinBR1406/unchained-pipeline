@@ -1,0 +1,7 @@
+local r = bmd.scriptapp('Resolve')
+assert(r)
+print('LUA_VERSION=' .. _VERSION)
+print('PRODUCT=' .. r:GetProductName())
+print('VERSION=' .. r:GetVersionString())
+print('PROJECT=' .. r:GetProjectManager():GetCurrentProject():GetName())
+print('FUSION=' .. tostring(r:Fusion() ~= nil))

@@ -1,0 +1,33 @@
+{
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "refs": {
+    "captions": {
+      "sha256": "22f7e1a8669d652e9923ace15a29cd5b44b5923bdee68feb653624743496128d",
+      "uri": "p0e4/evidence/resolve_studio_v163/CAPTIONS_ACCEPTANCE.json"
+    },
+    "local": {
+      "sha256": "c7ee262c95b833b73b1818325dc88a1981485e4abe831c7690b353e8ddf2e300",
+      "uri": "p0e4/evidence/resolve_studio_v163/LOCAL_ACCEPTANCE.json"
+    },
+    "matrix": {
+      "sha256": "c0b0204952d0908556c15114e42707ecfda961431a435176a108da975985f40b",
+      "uri": "p0e4/evidence/resolve_studio_v163/CAPABILITY_MATRIX.json"
+    },
+    "readback": {
+      "sha256": "427361126efd5c8f0b7cfdcea2820719adeba3ec0e76c8bbc7bebc78f27deea4",
+      "uri": "p0e4/evidence/resolve_studio_v163/READBACK_REPLAY.json"
+    },
+    "regression": {
+      "sha256": "1eb56d4f8a737d22b1424c237e7362edf86ec4b2d6d1aeb15514e24e72cd4711",
+      "uri": "p0e4/evidence/resolve_studio_v163/REGRESSION.json"
+    },
+    "replay": {
+      "sha256": "e211ae36f7385be4162f1e3abb1aeea2db7b62cf5a20849db74a2d1772de1a09",
+      "uri": "p0e4/evidence/resolve_studio_v163/LOCAL_REPLAY.json"
+    }
+  },
+  "status": "INSTALLED_SYNTHETIC_CAPABILITIES_ACCEPTED_PRODUCTION_BLOCKED",
+  "tested_sha": "2af66e8884cd17fb39b02838798e41337c3e78bb"
+}

@@ -1,0 +1,50 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '.local/resolve-v163/UNCHAINED_V163_CAPTIONS.mov':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 512
+    compatible_brands: qt  
+    creation_time   : 2026-09-23T08:44:56.000000Z
+    encoder         : Blackmagic Design DaVinci Resolve Studio
+  Duration: 00:00:04.00, start: 0.000000, bitrate: 16316 kb/s
+  Stream #0:0[0x1]: Video: prores (LT) (apcs / 0x73637061), yuv422p10le(smpte170m/bt709/bt709, progressive), 640x360, 14007 kb/s, SAR 1:1 DAR 16:9, 25 fps, 25 tbr, 12800 tbn (default)
+      Metadata:
+        creation_time   : 2026-09-23T08:44:56.000000Z
+        handler_name    : VideoHandler
+        vendor_id       : appl
+        encoder         : Apple ProRes 422 LT
+        timecode        : 01:00:00:00
+  Stream #0:1[0x2]: Audio: pcm_s24le (lpcm / 0x6D63706C), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s (default)
+      Metadata:
+        creation_time   : 2026-09-23T08:44:56.000000Z
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:2[0x3](eng): Data: none (tmcd / 0x64636D74), 0 kb/s (default)
+      Metadata:
+        creation_time   : 2026-09-23T08:44:56.000000Z
+        handler_name    : TimeCodeHandler
+        timecode        : 01:00:00:00
+Stream mapping:
+  Stream #0:0 -> #0:0 (prores (native) -> wrapped_avframe (native))
+  Stream #0:1 -> #0:1 (pcm_s24le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 512
+    compatible_brands: qt  
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: wrapped_avframe, yuv422p10le(tv, smpte170m/bt709/bt709, progressive), 640x360 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn (default)
+      Metadata:
+        creation_time   : 2026-09-23T08:44:56.000000Z
+        handler_name    : VideoHandler
+        vendor_id       : appl
+        timecode        : 01:00:00:00
+        encoder         : Lavc61.19.100 wrapped_avframe
+  Stream #0:1: Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)
+      Metadata:
+        creation_time   : 2026-09-23T08:44:56.000000Z
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 pcm_s16le
+[out#0/null @ 0x158f09510] video:43KiB audio:750KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=  100 fps=0.0 q=-0.0 Lsize=N/A time=00:00:04.00 bitrate=N/A speed= 196x    

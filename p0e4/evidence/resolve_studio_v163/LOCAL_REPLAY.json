@@ -1,0 +1,92 @@
+{
+  "audio": {
+    "end": 100,
+    "offset_samples": 0,
+    "sample_rate": 48000,
+    "start": 0,
+    "volume_db": -6.0
+  },
+  "closed": true,
+  "cuts": [
+    {
+      "duration": 50,
+      "end": 50,
+      "source_start": 0,
+      "start": 0
+    },
+    {
+      "duration": 50,
+      "end": 100,
+      "source_start": 50,
+      "start": 50
+    }
+  ],
+  "fairlight": {
+    "normalization_modes": [
+      "Sample Peak Program",
+      "True Peak",
+      "ITU-R BS.1770-1",
+      "ITU-R BS.1770-4",
+      "ATSC A/85",
+      "EBU R128",
+      "OP-59",
+      "TR-B32",
+      "AGCOM 219/09/CSP",
+      "Netflix",
+      "YouTube",
+      "Disney - 2.0",
+      "Disney - 5.1+",
+      "TencentVideo"
+    ],
+    "page": "fairlight",
+    "presets": {}
+  },
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "fusion": {
+    "glow_gain": 0.15,
+    "shake_frame24": -0.8,
+    "template_import_readback": true,
+    "template_sha256": "454855f7922b3d0d0567e83c7d6913f38e1a85ffebf93403741d6b417f273f7f",
+    "text_peak_size": 0.08,
+    "zoom_end": 1.2
+  },
+  "installation": {
+    "product": "DaVinci Resolve Studio",
+    "version": [
+      21,
+      1,
+      0,
+      17,
+      ""
+    ]
+  },
+  "job_id": "60fb4600-9170-4d76-9ec1-a48a7e7a34b8",
+  "nitin_audio_source_binding_inferred": false,
+  "original_project_restored": true,
+  "production_deployment_authorized": false,
+  "project": "UNCHAINED_V163_SYNTHETIC_REPLAY",
+  "publication_authorized": false,
+  "render": {
+    "bytes": 7206906,
+    "private_output": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/resolve-v163/UNCHAINED_V163_SYNTHETIC_REPLAY.mov",
+    "sha256": "a5997c13935b97006c637c6d18bb8e83fe32cd427a416a4f65b913f491f45e36",
+    "status": {
+      "CompletionPercentage": 100,
+      "JobStatus": "Complete",
+      "TimeTakenToRenderInMs": 1183
+    }
+  },
+  "render_job_removed": true,
+  "schema_version": 1,
+  "status": "PASS_SYNTHETIC_BOUNDED_CAPABILITIES",
+  "synthetic_input_sha256": {
+    "synthetic.mov": "8895e4e431120d5ca12bc2c8e20d64136ea0b534dc7dd27fd6883cb355d7b348",
+    "synthetic.wav": "7760bdedc79a1d2374a9ff850ef7a482937c25c1bbb8f39263071cb053b56038"
+  },
+  "transform": {
+    "Pan": 12.0,
+    "Tilt": -6.0,
+    "ZoomX": 1.1,
+    "ZoomY": 1.1
+  }
+}

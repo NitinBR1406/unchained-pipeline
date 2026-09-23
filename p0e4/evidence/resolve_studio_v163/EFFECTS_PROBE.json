@@ -1,0 +1,106 @@
+{
+  "cuts": [
+    {
+      "start": 90000,
+      "end": 90050,
+      "duration": 50,
+      "left": 0
+    },
+    {
+      "start": 90050,
+      "end": 90100,
+      "duration": 50,
+      "left": 50
+    }
+  ],
+  "transform": true,
+  "transform_read": {
+    "Pan": 12.0,
+    "Tilt": -6.0,
+    "ZoomX": 1.1,
+    "ZoomY": 1.1,
+    "ZoomGang": true,
+    "RotationAngle": 0.0,
+    "AnchorPointX": 0.0,
+    "AnchorPointY": 0.0,
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "FlipX": false,
+    "FlipY": false,
+    "CropLeft": 0.0,
+    "CropRight": 0.0,
+    "CropTop": 0.0,
+    "CropBottom": 0.0,
+    "CropSoftness": 0.0,
+    "CropRetain": false,
+    "DynamicZoomEase": 0,
+    "CompositeMode": 0,
+    "Opacity": 100.0,
+    "Distortion": 0.0,
+    "RetimeProcess": 0,
+    "MotionEstimation": 0,
+    "Scaling": 0,
+    "ResizeFilter": 0,
+    "TransformEnabled": true,
+    "CroppingEnabled": true,
+    "DynamicZoomEnabled": false,
+    "CompositeEnabled": true,
+    "LensCorrectionEnabled": true,
+    "RetimeAndScalingEnabled": true
+  },
+  "audio": {
+    "start": 90000,
+    "end": 90100,
+    "gain_set": true
+  },
+  "audio_read": {
+    "AudioVolumeEnabled": true,
+    "AudioVolume": -6.0,
+    "AudioPanEnabled": true,
+    "AudioPan": 0.0,
+    "AudioPitchEnabled": true,
+    "AudioPitchSemiTones": 0,
+    "AudioPitchCents": 0,
+    "AudioVoiceIsolationEnabled": false,
+    "AudioVoiceIsolationAmount": 0,
+    "AudioDialogueLevelerEnabled": false,
+    "AudioDialogueLevelerMode": 0,
+    "AudioDialogueLevelerReduceLoudDialogue": false,
+    "AudioDialogueLevelerLiftSoftDialogue": false,
+    "AudioDialogueLevelerBackgroundReduction": false,
+    "AudioDialogueLevelerOutputGain": 0.0
+  },
+  "fusion": {
+    "tools": {
+      "1": "MediaIn",
+      "2": "Transform",
+      "3": "BezierSpline",
+      "4": "BezierSpline",
+      "5": "SoftGlow",
+      "6": "TextPlus",
+      "7": "BezierSpline",
+      "8": "Merge",
+      "9": "MediaOut"
+    },
+    "zoom": {
+      "0": 1.0,
+      "24": 1.0979591836734695,
+      "49": 1.2
+    },
+    "shake": {
+      "0": 0.0,
+      "12": 0.8,
+      "24": -0.8,
+      "49": 0.0
+    },
+    "text": "UNCHAINED\nSYNTHETIC TEST",
+    "emphasis": {
+      "0": 0.055,
+      "24": 0.08,
+      "49": 0.055
+    },
+    "glow": 0.15
+  },
+  "template_export": true,
+  "save": true
+}

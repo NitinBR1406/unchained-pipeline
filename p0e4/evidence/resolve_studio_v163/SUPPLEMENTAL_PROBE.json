@@ -1,0 +1,17 @@
+{
+  "srt_import": 1,
+  "srt_append": 1,
+  "subtitle_tracks": 0,
+  "subtitle_items": [],
+  "native_title": true,
+  "fusion_title": true,
+  "fairlight_open": true,
+  "audio_track": true,
+  "timecode": true,
+  "fairlight_sample_insert": false,
+  "audio_items": [
+    [],
+    []
+  ],
+  "save": true
+}

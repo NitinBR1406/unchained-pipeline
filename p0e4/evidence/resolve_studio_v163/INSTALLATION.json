@@ -1,0 +1,43 @@
+{
+  "bundle_version": "21.1.00017",
+  "database_name": "Local Database",
+  "database_type": "Disk",
+  "documents": [
+    {
+      "path": "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Developer/Scripting/README.md",
+      "sha256": "5f58c94da8ec3c1f390d77ad9c60675263591dc101159b302e50b5774513830b"
+    },
+    {
+      "path": "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Developer/Scripting/DaVinciResolveScript.pyi",
+      "sha256": "00078fa1256851b9807621a4eea5e670f4266b0e7003763cba4a62655543f0ec"
+    },
+    {
+      "path": "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Developer/Fusion Templates/README.txt",
+      "sha256": "45d3e128311599ff8987b9be777dac50c2eef322728154be9cc90488fac8a966"
+    }
+  ],
+  "lua": "Lua 5.1; fuscript external connection returned product/version/Fusion",
+  "preferences_changed": false,
+  "probe_source_sha256": {
+    "UN_Lyric.setting": "e4addf4acde499b046e95a136677e2ddc3d3fe4507b12f92aa399313afe6d432",
+    "caption_accept.py": "55df2f743fbd41d2c54b00009b67a99b7f99848e7beee12917810e251b6d8c75",
+    "captions.srt": "b2993a8e823a385af4c8e9aad041d423589c3a87bf1d5ee85acd9e74786ae9af",
+    "extra.py": "d639af0d5e35d2afdf0004b72160c192568f048140aceb492998d9b4549c522b",
+    "final_probe.py": "4703d74e11b0a16068666bdb1bdfd09b42cf2ea9d0d228d39d56625e79e14b51",
+    "macro.lua": "34dc81f75284b4348ff55533afc182d3b16a2c4e9948fa1cab30fbe650586a4b",
+    "macro_probe.lua": "89ad15bb0a1c015d6ce18d07a1c3a0abd88d0289f3a63bc4f992eefedf8f57d6",
+    "probe.lua": "1190e4b762f446348b5c4fbbb3f058db28838f4c6c940f6f36f42cd12c173418",
+    "regress.py": "29c306f18eeea02f56bfbdc450b1ad45382a3e03ed3ee6fed9ca5165f03c6288"
+  },
+  "product": "DaVinci Resolve Studio",
+  "python": "Built-in ResolvePython 3.14; successful external scriptapp connection",
+  "sandbox_connection": false,
+  "unsandboxed_local_connection": true,
+  "version": [
+    21,
+    1,
+    0,
+    17,
+    ""
+  ]
+}

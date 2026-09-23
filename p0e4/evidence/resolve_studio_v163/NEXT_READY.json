@@ -1,0 +1,37 @@
+{
+  "completed": [
+    "RESOLVE_LOCAL_CAPABILITY_SMOKE",
+    "SYNTHETIC_LOCAL_REPLAY",
+    "CAPABILITY_CLASSIFICATION"
+  ],
+  "engineering_limitations": [
+    "Macro library installation not proven; reusable Fusion composition path proven",
+    "Arbitrary sample-offset/Fairlight insertion and waveform alignment fail closed",
+    "Per-character emphasis not accepted; whole-cue emphasis proven"
+  ],
+  "next_ready_scope": "Current authorized synthetic acceptance complete; no unrelated production expansion inferred",
+  "ready_nonhuman_count": 0,
+  "schema_version": 1,
+  "tasks": [
+    {
+      "reason": "Real production finishing needs explicit source binding; synthetic tone proves no source choice.",
+      "status": "WAITING_FOR_NITIN",
+      "task_id": "AKI_AUTHORITATIVE_AUDIO_BINDING"
+    },
+    {
+      "reason": "Requires approved hash-bound real inputs and validated operation coverage; no fake Gemini/Claude receipt.",
+      "status": "DEPENDENCY_BLOCKED",
+      "task_id": "REAL_ASSET_FINISHING_AND_GEMINI_QC"
+    },
+    {
+      "reason": "Production/Make/Sheets remain unchanged.",
+      "status": "WAITING_FOR_NITIN_CHANGE_APPROVAL",
+      "task_id": "LIVE_OPERATIONAL_CUTOVER"
+    },
+    {
+      "reason": "Publication false; First Real Poster paused.",
+      "status": "WAITING_FOR_NITIN_PUBLISH_APPROVAL",
+      "task_id": "PUBLICATION"
+    }
+  ]
+}

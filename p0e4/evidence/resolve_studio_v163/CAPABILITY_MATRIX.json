@@ -1,0 +1,201 @@
+{
+  "capabilities": [
+    {
+      "capability": "installed_version_edition",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "INSTALLATION.json",
+      "proven_scope_or_limit": "Studio 21.1.0.17 on this Mac only; no preference changes"
+    },
+    {
+      "capability": "resolve_api_connectivity",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "INSTALLATION.json",
+      "proven_scope_or_limit": "Studio 21.1.0.17 on this Mac only; no preference changes"
+    },
+    {
+      "capability": "python_external_scripting",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "INSTALLATION.json",
+      "proven_scope_or_limit": "Studio 21.1.0.17 on this Mac only; no preference changes"
+    },
+    {
+      "capability": "lua_external_scripting",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "INSTALLATION.json",
+      "proven_scope_or_limit": "Studio 21.1.0.17 on this Mac only; no preference changes"
+    },
+    {
+      "capability": "project_creation",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "New disk-library project; 640x360 25fps; cuts [0,50),[50,100); exact readback"
+    },
+    {
+      "capability": "synthetic_media_import",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "New disk-library project; 640x360 25fps; cuts [0,50),[50,100); exact readback"
+    },
+    {
+      "capability": "timeline_creation",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "New disk-library project; 640x360 25fps; cuts [0,50),[50,100); exact readback"
+    },
+    {
+      "capability": "cuts",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "New disk-library project; 640x360 25fps; cuts [0,50),[50,100); exact readback"
+    },
+    {
+      "capability": "static_transform_reframe",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "New disk-library project; 640x360 25fps; cuts [0,50),[50,100); exact readback"
+    },
+    {
+      "capability": "fusion_access_scriptability",
+      "classification": "FUSION_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Transform/BezierSpline/SoftGlow/TextPlus/Merge; composition export-import readback plus rendered replay"
+    },
+    {
+      "capability": "zoom_push_in_keyframes",
+      "classification": "FUSION_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Transform/BezierSpline/SoftGlow/TextPlus/Merge; composition export-import readback plus rendered replay"
+    },
+    {
+      "capability": "deterministic_rotational_shake",
+      "classification": "FUSION_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Transform/BezierSpline/SoftGlow/TextPlus/Merge; composition export-import readback plus rendered replay"
+    },
+    {
+      "capability": "glow",
+      "classification": "FUSION_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Transform/BezierSpline/SoftGlow/TextPlus/Merge; composition export-import readback plus rendered replay"
+    },
+    {
+      "capability": "text_title",
+      "classification": "FUSION_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Transform/BezierSpline/SoftGlow/TextPlus/Merge; composition export-import readback plus rendered replay"
+    },
+    {
+      "capability": "whole_cue_lyric_emphasis",
+      "classification": "FUSION_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Transform/BezierSpline/SoftGlow/TextPlus/Merge; composition export-import readback plus rendered replay"
+    },
+    {
+      "capability": "reusable_fusion_composition_templates",
+      "classification": "FUSION_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Transform/BezierSpline/SoftGlow/TextPlus/Merge; composition export-import readback plus rendered replay"
+    },
+    {
+      "capability": "native_titles",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "CAPTIONS_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Text and Text+ inserted and read back; custom text styling is proven through Fusion"
+    },
+    {
+      "capability": "native_subtitles_captions",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "CAPTIONS_ACCEPTANCE.json",
+      "proven_scope_or_limit": "ImportMedia SRT + AddTrack subtitle + SetCurrentTimecode + AppendToTimeline; two exact 50-frame cues; private BurnIn render/decode"
+    },
+    {
+      "capability": "fusion_effects_library_macro_installation",
+      "classification": "UNSUPPORTED_FAIL_CLOSED",
+      "evidence": "MACRO_FAILED_PROBE.json",
+      "proven_scope_or_limit": "Python and Lua comp.Paste returned false; MacroOperator absent. No installed macro or template library claim; reusable composition route is proven."
+    },
+    {
+      "capability": "per_character_lyric_emphasis",
+      "classification": "UNSUPPORTED_FAIL_CLOSED",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Whole-cue size animation proven; character-span styling not validated in this run"
+    },
+    {
+      "capability": "audio_import_frame_alignment",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Synthetic PCM imported at zero offset, exact 100-frame extent, -6 dB readback"
+    },
+    {
+      "capability": "fairlight_callable_surface",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "OpenPage fairlight; GetFairlightPresets and GetNormalizeAudioModes; clip AudioVolume SetProperties/readback. No generic mixer/plugin API claim."
+    },
+    {
+      "capability": "fairlight_sample_offset_insertion",
+      "classification": "UNSUPPORTED_FAIL_CLOSED",
+      "evidence": "SUPPLEMENTAL_PROBE.json",
+      "proven_scope_or_limit": "InsertAudioToCurrentTrackAtPlayhead returned false; no resulting audio items. Selected-track dependency unresolved."
+    },
+    {
+      "capability": "waveform_auto_sync",
+      "classification": "UNSUPPORTED_FAIL_CLOSED",
+      "evidence": "SUBTITLE_SYNC_PROBE.json",
+      "proven_scope_or_limit": "AutoSyncAudio returned false on synthetic tone; this does not prove music waveform sync unsupported globally"
+    },
+    {
+      "capability": "semantic_audio_sync_lip_sync",
+      "classification": "EXTERNAL_INTELLIGENCE_REQUIRED",
+      "evidence": "READBACK_REPLAY.json",
+      "proven_scope_or_limit": "Technical synthetic QC only; authenticated creative/audio intelligence and real-output Gemini QC not performed"
+    },
+    {
+      "capability": "lyric_transcription_alignment",
+      "classification": "EXTERNAL_INTELLIGENCE_REQUIRED",
+      "evidence": "READBACK_REPLAY.json",
+      "proven_scope_or_limit": "Technical synthetic QC only; authenticated creative/audio intelligence and real-output Gemini QC not performed"
+    },
+    {
+      "capability": "creative_cut_reframe_selection",
+      "classification": "EXTERNAL_INTELLIGENCE_REQUIRED",
+      "evidence": "READBACK_REPLAY.json",
+      "proven_scope_or_limit": "Technical synthetic QC only; authenticated creative/audio intelligence and real-output Gemini QC not performed"
+    },
+    {
+      "capability": "gemini_output_qc",
+      "classification": "EXTERNAL_INTELLIGENCE_REQUIRED",
+      "evidence": "READBACK_REPLAY.json",
+      "proven_scope_or_limit": "Technical synthetic QC only; authenticated creative/audio intelligence and real-output Gemini QC not performed"
+    },
+    {
+      "capability": "render_queue_private_export",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "LOCAL_ACCEPTANCE.json",
+      "proven_scope_or_limit": "Scoped job only, local ProRes422LT + PCM 640x360 25fps; Complete; job removed"
+    },
+    {
+      "capability": "output_sha_readback",
+      "classification": "API_SCRIPTABLE",
+      "evidence": "READBACK_REPLAY.json",
+      "proven_scope_or_limit": "100 decoded frames and 192000 stereo samples per run; identical decoded essences, differing MOV container SHAs"
+    }
+  ],
+  "categories": [
+    "API_SCRIPTABLE",
+    "FUSION_SCRIPTABLE",
+    "EXTERNAL_INTELLIGENCE_REQUIRED",
+    "GUI_AUTOMATION_ONLY",
+    "UNSUPPORTED_FAIL_CLOSED"
+  ],
+  "gui_only_claims": 0,
+  "installed_version": [
+    21,
+    1,
+    0,
+    17,
+    ""
+  ],
+  "reason": "No feature labelled GUI_AUTOMATION_ONLY without a demonstrated GUI execution fallback.",
+  "schema_version": 1
+}

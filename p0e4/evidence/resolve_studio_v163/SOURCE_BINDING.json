@@ -1,0 +1,8 @@
+{
+  "harness_unchanged_between_commits": true,
+  "live_harness_path": "p0e4/resolve/local_acceptance.py",
+  "live_harness_sha256": "88518ba2cf41849a529ca91c9392c0ecb2eaeb4cf34be444d099ddb46ba7f72b",
+  "live_smoke_tested_sha": "5d6ddc3939e790fcf8359e47835716cf729c7355",
+  "regression_tested_sha": "2af66e8884cd17fb39b02838798e41337c3e78bb",
+  "supplemental_probes": "Source snapshots and hashes in INSTALLATION.json; executed against same Studio instance using private synthetic project only"
+}

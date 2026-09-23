@@ -1,2 +1,5 @@
 
 _visualizer_approvals_consumed.json
+
+# Private synthetic Resolve acceptance assets; never publish rendered media.
+.local/resolve-v163/

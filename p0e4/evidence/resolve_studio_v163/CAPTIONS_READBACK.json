@@ -1,0 +1,9 @@
+{
+  "frame_sha256": "d5ee8d1f604cd536fde2feda826ee86be6d8a9a636a6d27960b3397ef33cfaba",
+  "full_decode_pass": true,
+  "observed_frame": 75,
+  "observed_text": "CAPTION ACCEPTANCE",
+  "private_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/resolve-v163/UNCHAINED_V163_CAPTIONS.mov",
+  "sha256": "332e614ac67c2b8080def5c7231eb8b905577521c063488fdb1a04285220ab06",
+  "visual_check": "Frame 75 shows Fusion title and native caption on synthetic test pattern"
+}

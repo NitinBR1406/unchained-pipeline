@@ -1,0 +1,21 @@
+{
+ Tools = ordered() {
+  UN_LyricMacro = MacroOperator {
+   Inputs = ordered() {
+    Text = InstanceInput { SourceOp = "UN_Text", Source = "StyledText", },
+    Size = InstanceInput { SourceOp = "UN_Text", Source = "Size", },
+   },
+   Outputs = { Output1 = InstanceOutput { SourceOp = "UN_Text", Source = "Output", }, },
+   Tools = ordered() {
+    UN_Text = TextPlus {
+     Inputs = {
+      StyledText = Input { Value = "UNCHAINED MACRO", },
+      Font = Input { Value = "Arial", },
+      Style = Input { Value = "Bold", },
+      Size = Input { Value = 0.07, },
+     },
+    },
+   },
+  },
+ },
+}

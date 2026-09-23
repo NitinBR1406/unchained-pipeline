@@ -1,0 +1,12 @@
+{
+  "audio_sync": "No NITIN_AUDIO_SOURCE_BINDING inferred. Pure sine waveform sync returned false; nonzero sample-offset insert returned false.",
+  "cleanup": "Acceptance and replay jobs removed; all test projects closed; original Untitled Project restored. Private test projects/media retained for diagnosis; no production project edited.",
+  "macro_lua_result": "comp.Paste(table) and comp.Paste(string) both returned false; macro absent",
+  "make_mutation": false,
+  "no_public_media_upload": true,
+  "production_mutation": false,
+  "render_container_replay": "Container hashes differ; decoded video and PCM hashes match exactly.",
+  "runtime_dependency_repair": "Initial regression failed due missing jsonschema/PyYAML in default runtime. Used existing Python 3.12 dependency directory plus PyYAML 6.0.2 installed into /private/tmp/unchained-v163-deps. Final 73/73.",
+  "sheets_mutation": false,
+  "subtitle_recovery": "SRT returns media item named captions, not captions.srt. Must create subtitle track and set playhead; recordFrame was ignored in failed supplemental attempt."
+}
