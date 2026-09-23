@@ -1,0 +1,28 @@
+{
+  "event_id": "NITIN_CONTROL_TOTAL_RECONCILIATION_V01",
+  "event_type": "NITIN_SUPPLIED_EXPECTED_TOTAL_CORRECTION",
+  "recorded_at": "2026-09-23T13:18:46.343444+00:00",
+  "source": "Explicit Nitin user message: NITIN CONTROL-TOTAL RECONCILIATION",
+  "corrects_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01",
+  "corrected_event_sha256": "6da0dc5e8d141e12098c35c6d453866d8b3416b97714600be7aa3cadba61f54a",
+  "source_statement": "Nitin confirms explicit per-song row assignments are authoritative. Earlier 40 regular jj / 23 regular jn / 27 total vocal pending were an Orchestrator counting error, not a correction to song answers. Preserve every row-level assignment; correct expected totals only. No additional readiness semantics; governance unchanged.",
+  "corrected_control_totals": {
+    "regular_items": 63,
+    "regular_music_yes": 63,
+    "regular_vocals_yes": 36,
+    "regular_vocals_no": 27,
+    "mashup_medley_items": 4,
+    "mashup_medley_music_yes": 4,
+    "mashup_medley_vocals_no": 4,
+    "total_reviewed_items": 67,
+    "total_music_ready": 67,
+    "total_vocals_ready": 36,
+    "total_vocal_pending": 31
+  },
+  "row_level_changes": {},
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

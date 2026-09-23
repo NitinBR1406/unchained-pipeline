@@ -1,9 +1,9 @@
 """Offline projection of frozen discovery; never accesses iCloud or production."""
 import csv, hashlib, json
 try:
-    from .batch_semantics import apply_batch
+    from .batch_semantics import apply_batch, reconcile_totals
 except ImportError:
-    from batch_semantics import apply_batch
+    from batch_semantics import apply_batch, reconcile_totals
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT/'p0e4/evidence/catalog_discovery_v02'
@@ -96,6 +96,12 @@ def build():
     batch_path=ROOT/'p0e4/evidence/catalog_semantic_events/NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01.json'
     if batch_path.exists():
         result,receipt,queues=apply_batch(result,json.loads(batch_path.read_text()))
+        correction_path=ROOT/'p0e4/evidence/catalog_semantic_events/NITIN_CONTROL_TOTAL_RECONCILIATION_V01.json'
+        if correction_path.exists():
+            correction=json.loads(correction_path.read_text())
+            assert hashlib.sha256(batch_path.read_bytes()).hexdigest()==correction['corrected_event_sha256']
+            result,receipt,queues=reconcile_totals(result,receipt,queues,correction)
+            result['applied_semantic_events'].append({'event_id':correction['event_id'],'path':str(correction_path.relative_to(ROOT)),'sha256':hashlib.sha256(correction_path.read_bytes()).hexdigest()})
         rows=result['rows'];counts=result['counts']
         result['applied_semantic_events'].append({'event_id':receipt['event_id'],'path':str(batch_path.relative_to(ROOT)),'sha256':hashlib.sha256(batch_path.read_bytes()).hexdigest()})
         write('BATCH_SEMANTIC_VALIDATION_RECEIPT',receipt)
@@ -116,6 +122,9 @@ def build():
     next_ready={'status':'WAITING_FOR_NITIN','ready_nonhuman_count':0,'task':'Receive remaining semantic review','MASTER_CATALOG_V01_created':False,'publication_authorized':False,'production_mutation':False}
     if batch_path.exists():
         next_ready.update(status='WAITING_FOR_NITIN_CONTROL_TOTAL_RECONCILIATION',task='Confirm explicit-row totals 36 ready / 31 vocal-pending, or name four regular jn-to-jj corrections.',remaining_questions=[{'priority':1,'question':'Resolve row answers versus stated 40/23 regular totals; do not resend the whole batch.'},{'priority':2,'question':'For the next selected vocal session only, specify priority and owner if needed. Other unknown semantics may remain UNKNOWN.'},{'priority':3,'question':'When relevant, confirm Intro beat association and remaining download identities; Chunar stays separate and NITIN 2008 identity is already confirmed.'}],unconfirmed_semantics=['LYRICS_READY','MIX_MASTER_READY','REVISION_REQUIRED','LIVE_READY','PRIORITY'],untouched_readiness_rows=['Aakhri Ishq','Intro beat','NITIN 2008 (8 children)'])
+    if batch_path.exists() and receipt['all_checks_passed']:
+        next_ready.update(status='WAITING_FOR_NITIN_REMAINING_SEMANTICS',task='Choose the next vocal-session items and priority/owner when ready; finalized queues are available.',control_totals='GREEN',queues_finalized=True)
+        next_ready['remaining_questions']=[q for q in next_ready['remaining_questions'] if q['priority']!=1]
     write('NEXT_READY',next_ready)
     template=(ROOT/'p0e4/catalog/minimal_review_template.html').read_text()
     embedded=json.dumps(result,ensure_ascii=False).replace('<','\\u003c')

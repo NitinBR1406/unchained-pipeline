@@ -12,7 +12,7 @@
 <script>
 const data=__DATA__;
 const fields=Object.keys(data.allowed_values), selected=new Set();
-if(data.batch_semantic_validation){const b=data.batch_semantic_validation;document.querySelector('.notice').textContent='67 readiness-antwoorden vastgelegd. Uit de regels: 36 muziek+zang-gereed en 31 zang-pending. Opgegeven controletotalen wijken af; bevestiging/correctie nog nodig. Onbevestigde velden blijven UNKNOWN.';}
+if(data.batch_semantic_validation){const b=data.batch_semantic_validation;document.querySelector('.notice').textContent=b.all_checks_passed?'Controletotalen door Nitin bevestigd en GREEN gevalideerd: 67 antwoorden, 36 muziek+zang-gereed en 31 zang-pending. Beide werklijsten zijn gefinaliseerd; overige semantiek blijft onbekend.':'67 readiness-antwoorden vastgelegd. Uit de regels: 36 muziek+zang-gereed en 31 zang-pending. Opgegeven controletotalen wijken af; bevestiging/correctie nog nodig. Onbevestigde velden blijven UNKNOWN.';}
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const groups=[['nitin_2008_children',data.nitin_2008_identity_status==='CONFIRMED_BY_NITIN'?'NITIN 2008 — acht original-song recreations bevestigd door Nitin':'NITIN 2008 — acht original-song recreation-kandidaten'],['clear_song_folders','Duidelijke songgerichte mappen — type en gereedheid nog onbekend'],['mashup_medley_named_folders','Mashup-/medleybenamingen — TYPE nog te bevestigen'],['ambiguous_identity','Eerst identiteit bepalen — nog geen dubbele gereedheidsreview']];
 const select=(r,f)=>`<select data-id="${esc(r.candidate_id)}" data-field="${f}" aria-label="${esc(r.name+' '+f)}">${data.allowed_values[f].map(v=>`<option ${r[f]===v?'selected':''}>${v}</option>`).join('')}</select>`;

@@ -47,3 +47,29 @@ def apply_batch(review, event):
         entries=[deepcopy(r) for r in result['rows'] if r['MUSIC_READY']=='YES' and r['VOCALS_READY']==vocal]
         queues[name]={'artifact':name,'predicate':{'MUSIC_READY':'YES','VOCALS_READY':vocal},'count':len(entries),'status':'DERIVED_FROM_EXPLICIT_ROWS_CONTROL_TOTALS_UNRECONCILED' if mismatches else 'DERIVED_FROM_CONFIRMED_FIELDS','rows':entries,'not_established':['LYRICS_READY','MIX_MASTER_READY','STEMS_READY','LIVE_READY','RIGHTS_CLEARANCE','PUBLISH_READY'],'publication_authorized':False}
     return result,receipt,queues
+
+
+def reconcile_totals(result, receipt, queues, correction):
+    """Append an expected-total correction without changing any row assignment."""
+    result,receipt,queues=deepcopy((result,receipt,queues))
+    if correction['corrects_event_id']!=receipt['event_id'] or correction['row_level_changes']!={}:raise ValueError('Invalid totals-only correction')
+    actual=receipt['observed_control_totals']
+    observed={k:actual[k] for k in ['regular_items','regular_music_yes','regular_vocals_yes','regular_vocals_no','mashup_medley_items','mashup_medley_music_yes','mashup_medley_vocals_no']}
+    observed.update(total_reviewed_items=actual['total_items'],total_music_ready=actual['regular_music_yes']+actual['mashup_medley_music_yes'],total_vocals_ready=queues['MUSIC_AND_VOCALS_READY_V01']['count'],total_vocal_pending=actual['vocal_pending'])
+    expected=correction['corrected_control_totals']
+    if set(expected)!=set(observed):raise ValueError('Incomplete correction totals')
+    mismatches={k:{'expected':v,'observed':observed[k]} for k,v in expected.items() if v!=observed[k]}
+    receipt['original_expected_control_totals']=receipt['expected_control_totals']
+    receipt['original_control_total_mismatches']=receipt['control_total_mismatches']
+    receipt.update(expected_control_totals=expected,observed_control_totals=observed,control_total_mismatches=mismatches,reconciliation_event_id=correction['event_id'],row_assignments_changed_by_reconciliation=0,all_checks_passed=not(mismatches or receipt['type_conflicts']))
+    receipt['status']='GREEN_CONTROL_TOTALS_VALIDATED' if receipt['all_checks_passed'] else 'WAITING_FOR_NITIN_CONTROL_TOTAL_RECONCILIATION'
+    result['batch_semantic_validation']=receipt
+    result['status']='PARTIAL_CATALOG_SEMANTICS_CONFIRMED' if receipt['all_checks_passed'] else receipt['status']
+    q=next(q for q in result['identity_questions'] if q['id']=='BATCH_CONTROL_TOTALS')
+    q.update(question='Row-level answers are authoritative; earlier aggregate expectations were an Orchestrator counting error.',answer='CONFIRMED_BY_NITIN_36_READY_31_VOCAL_PENDING',evidence_event_id=correction['event_id'])
+    result['row_question_notes']='Per-row question text retained from the original batch snapshot; aggregate reconciliation is resolved by the current validation receipt.'
+    for queue in queues.values():
+        queue['status']='FINALIZED_CONFIRMED_MUSIC_VOCALS_ONLY' if receipt['all_checks_passed'] else 'CONTROL_TOTALS_UNRECONCILED'
+        queue['reconciliation_event_id']=correction['event_id']
+        queue['finalized']=receipt['all_checks_passed']
+    return result,receipt,queues

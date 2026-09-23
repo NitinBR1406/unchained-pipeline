@@ -6,7 +6,7 @@ import sys
 import unittest
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT))
-from p0e4.catalog.batch_semantics import apply_batch
+from p0e4.catalog.batch_semantics import apply_batch, reconcile_totals
 EVENT_PATH=ROOT/'p0e4/evidence/catalog_semantic_events/NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01.json'
 BASE=json.loads(subprocess.check_output(['git','show','f1f9eff:p0e4/evidence/catalog_minimal_review_v01/NITIN_MINIMAL_SEMANTIC_REVIEW_V01.json'],cwd=ROOT,text=True))
 EVENT=json.loads(EVENT_PATH.read_text())
@@ -45,4 +45,20 @@ class BatchTests(unittest.TestCase):
  def test_deterministic_and_no_input_mutation(self):
   b=copy.deepcopy(BASE);e=copy.deepcopy(EVENT);first=apply_batch(b,e)
   self.assertEqual(first,apply_batch(b,e));self.assertEqual(b,BASE);self.assertEqual(e,EVENT)
+class ReconciliationTests(unittest.TestCase):
+ def correction(self):return json.loads((ROOT/'p0e4/evidence/catalog_semantic_events/NITIN_CONTROL_TOTAL_RECONCILIATION_V01.json').read_text())
+ def test_green_and_rows_byte_equivalent(self):
+  p,r,q=apply_batch(BASE,EVENT);after,receipt,queues=reconcile_totals(p,r,q,self.correction())
+  self.assertEqual(after['rows'],p['rows']);self.assertTrue(receipt['all_checks_passed'])
+  self.assertEqual(receipt['observed_control_totals'],self.correction()['corrected_control_totals'])
+  for name in q:self.assertEqual(q[name]['rows'],queues[name]['rows']);self.assertTrue(queues[name]['finalized'])
+  self.assertEqual((queues['NITIN_VOCAL_QUEUE_V01']['count'],queues['MUSIC_AND_VOCALS_READY_V01']['count']),(31,36))
+  self.assertEqual(reconcile_totals(p,r,q,self.correction()),(after,receipt,queues))
+ def test_incorrect_correction_does_not_finalize(self):
+  c=self.correction();c['corrected_control_totals']['total_vocal_pending']=27
+  _,r,q=reconcile_totals(*apply_batch(BASE,EVENT),c)
+  self.assertFalse(r['all_checks_passed']);self.assertFalse(q['NITIN_VOCAL_QUEUE_V01']['finalized'])
+ def test_row_mutating_event_rejected(self):
+  c=self.correction();c['row_level_changes']={'TYPE':'ORIGINAL'}
+  with self.assertRaises(ValueError):reconcile_totals(*apply_batch(BASE,EVENT),c)
 if __name__=='__main__':unittest.main()
