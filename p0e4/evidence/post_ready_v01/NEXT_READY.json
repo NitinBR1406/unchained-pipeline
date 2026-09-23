@@ -1,0 +1,27 @@
+{
+  "schema": "POST_READY_NEXT_READY_V01",
+  "schema_version": 1,
+  "status": "WAITING_FOR_NITIN",
+  "ready_nonhuman_count": 0,
+  "completed": [
+    "PROMPT_GOVERNANCE_V01",
+    "RAW_INGEST_RECONCILE",
+    "POST_READY_CONTRACT"
+  ],
+  "critical_path": [
+    "RAW_INGEST",
+    "POST_READY_CONTRACT",
+    "REAL_MEDIA_ORCHESTRATION",
+    "AAKHRI_ISHQ_RAW_DROP_AUDIO_BINDING",
+    "COMPLETE_FACTORY_E2E"
+  ],
+  "next_task": "AAKHRI_ISHQ_RAW_DROP_AUDIO_BINDING",
+  "human_gate": "AKI_AUTHORITATIVE_AUDIO_BINDING",
+  "blocked_after_gate": [
+    "REAL_MEDIA_ORCHESTRATION requires production deployment authorization",
+    "COMPLETE_FACTORY_E2E requires accepted real-media orchestration"
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

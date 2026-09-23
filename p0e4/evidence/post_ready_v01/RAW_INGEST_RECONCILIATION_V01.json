@@ -1,0 +1,21 @@
+{
+  "schema": "RAW_INGEST_RECONCILIATION_V01",
+  "schema_version": 1,
+  "content_id": "aakhri-ishq",
+  "raw": {
+    "file_id": "1Uk6Ru7wtU1Y3aCeOdYQwPhuTojHzDgN6",
+    "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/Campaigns/Aakhri-Ishq/00_Source-Raw/AKI_SOURCE_0902_V01.mov",
+    "bytes": 323607983,
+    "sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790",
+    "method": "read-only byte stream from existing Google Drive mount",
+    "status": "RAW_BYTES_HASHED",
+    "source_mutations": 0
+  },
+  "raw_contract_status": "RAW_IDENTITY_HASH_RECONCILED",
+  "full_ingest_status": "BLOCKED_MISSING_AUTHORITATIVE_AUDIO",
+  "authoritative_audio": null,
+  "human_gate": "AKI_AUTHORITATIVE_AUDIO_BINDING",
+  "source_mutations": 0,
+  "production_deployment_authorized": false,
+  "publication_authorized": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "POST_READY_ACCEPTANCE_V01",
+  "schema_version": 1,
+  "tested_sha": "98957f1a7703c66a4db9a6b557276ae98319898a",
+  "raw_evidence_refs": [
+    {
+      "uri": "p0e4/evidence/target_v13/RAW_HASH.json",
+      "sha256": "9d4109b744a32914ef0dc5e56807afab18fd81f82b691f5a1fea0b1ca54587d8"
+    },
+    {
+      "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+      "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+    }
+  ],
+  "raw_identity_reconciled": true,
+  "authoritative_audio_bound": false,
+  "post_ready_contract_validated": true,
+  "source_mutations": 0,
+  "real_media_orchestration_started": false,
+  "factory_e2e_complete": false,
+  "production_deployment_authorized": false,
+  "publication_authorized": false
+}
