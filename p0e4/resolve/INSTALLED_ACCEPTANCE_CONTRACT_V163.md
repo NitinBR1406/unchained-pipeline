@@ -18,7 +18,9 @@ Built-in Python 3.14 and Lua 5.1 are separate connection probes. Every capabilit
 in the evidence matrix has exactly one of API_SCRIPTABLE, FUSION_SCRIPTABLE,
 EXTERNAL_INTELLIGENCE_REQUIRED, GUI_AUTOMATION_ONLY, UNSUPPORTED_FAIL_CLOSED.
 A documented method, a non-null item, or a successful setter without readback is
-not sufficient. Failed macro/SRT/sample-offset probes are retained explicitly.
+not sufficient. Failed macro/sample-offset probes and the recovered SRT route are retained explicitly.
+Native captions require AddTrack("subtitle"), SetCurrentTimecode and imported SRT
+AppendToTimeline; recordFrame alone did not position subtitles in the probe.
 Reusable compositions are not claimed to be installed Effects Library macros.
 
 The intended chain remains Gemini creative intelligence -> canonical contract ->
