@@ -1,14 +1,17 @@
 {
-  "schema": "POST_READY_NEXT_READY_V01",
-  "schema_version": 1,
-  "status": "WAITING_FOR_NITIN_PRODUCTION_DEPLOYMENT_AUTHORIZATION",
-  "ready_nonhuman_count": 0,
+  "blocked_after_gate": [
+    "PRODUCTION_REAL_MEDIA_ORCHESTRATION requires explicit production deployment authorization",
+    "COMPLETE_FACTORY_PRODUCTION_E2E requires accepted production orchestration",
+    "PUBLICATION requires separate NITIN_PUBLISH_APPROVAL"
+  ],
   "completed": [
     "PROMPT_GOVERNANCE_V01",
     "RAW_INGEST_RECONCILE",
     "POST_READY_CONTRACT",
     "AAKHRI_ISHQ_RAW_DROP_AUDIO_BINDING",
-    "REAL_MEDIA_ORCHESTRATION_PLAN"
+    "REAL_MEDIA_ORCHESTRATION_PLAN",
+    "PRIVATE_REAL_MEDIA_E2E_ACCEPTANCE_V01",
+    "GEMINI_INDEPENDENT_REAL_OUTPUT_QC_V01"
   ],
   "critical_path": [
     "RAW_INGEST",
@@ -17,13 +20,15 @@
     "AAKHRI_ISHQ_RAW_DROP_AUDIO_BINDING",
     "COMPLETE_FACTORY_E2E"
   ],
-  "next_task": "REAL_MEDIA_ORCHESTRATION",
+  "first_real_poster": "PAUSED_BY_NITIN",
   "human_gate": "PRODUCTION_DEPLOYMENT_AUTHORIZED",
-  "blocked_after_gate": [
-    "REAL_MEDIA_ORCHESTRATION requires explicit production deployment authorization",
-    "COMPLETE_FACTORY_E2E requires accepted real-media orchestration"
-  ],
+  "next_task": "PRODUCTION_REAL_MEDIA_ORCHESTRATION_AFTER_EXPLICIT_NITIN_AUTHORIZATION",
+  "private_candidate_sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501",
+  "private_real_media_acceptance": "GREEN",
   "production_deployment_authorized": false,
   "publication_authorized": false,
-  "first_real_poster": "PAUSED_BY_NITIN"
+  "ready_nonhuman_count": 0,
+  "schema": "POST_READY_NEXT_READY_V01",
+  "schema_version": 1,
+  "status": "POST_READY_WAITING_FOR_NITIN_PRODUCTION_DEPLOYMENT_AUTHORIZATION"
 }

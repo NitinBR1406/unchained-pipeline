@@ -1,9 +1,10 @@
 {
   "blocked": [
-    "GEMINI_INDEPENDENT_REAL_OUTPUT_QC",
-    "PRIVATE_REAL_MEDIA_E2E_ACCEPTANCE",
-    "POST_READY"
+    "PRODUCTION_REAL_MEDIA_ORCHESTRATION",
+    "COMPLETE_FACTORY_PRODUCTION_E2E",
+    "PUBLICATION"
   ],
+  "candidate_sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501",
   "completed": [
     "PRIVATE_REAL_MEDIA_ACCEPTANCE_CONTRACT",
     "EXECUTION_CONTEXT_GOVERNANCE",
@@ -12,16 +13,19 @@
     "HASH_IDENTICAL_PRIVATE_STAGING",
     "CLAUDE_PRIVATE_PRODUCTION_TRANSLATION",
     "PRIVATE_RESOLVE_REAL_MEDIA_RENDER",
-    "TECHNICAL_OUTPUT_DECODE"
+    "TECHNICAL_OUTPUT_DECODE",
+    "GEMINI_INDEPENDENT_REAL_OUTPUT_QC",
+    "PRIVATE_REAL_MEDIA_E2E_ACCEPTANCE",
+    "POST_READY_HANDOFF"
   ],
   "first_real_poster": "PAUSED_BY_NITIN",
-  "human_gate": "GEMINI_BROWSER_FILE_UPLOAD_ACCESS",
+  "human_gate": "PRODUCTION_DEPLOYMENT_AUTHORIZED",
   "production_deployment_authorized": false,
   "publication_authorized": false,
   "ready_nonhuman_count": 0,
-  "resume_task": "GEMINI_INDEPENDENT_REAL_OUTPUT_QC_FROM_RUN4_SHA_7F5B96E8",
+  "resume_task": "PRODUCTION_REAL_MEDIA_ORCHESTRATION_AFTER_EXPLICIT_NITIN_AUTHORIZATION",
   "schema": "PRIVATE_REAL_MEDIA_NEXT_READY_V01",
   "schema_version": 1,
-  "smallest_human_action": "Open chrome://extensions, click Details for the ChatGPT browser extension, and enable Allow access to file URLs. Do not upload or submit the video manually.",
-  "status": "WAITING_FOR_NITIN_GEMINI_UPLOAD_ACCESS"
+  "smallest_human_action": "Explicitly authorize production deployment only if Nitin wants the private accepted flow promoted; this does not authorize publication.",
+  "status": "POST_READY_WAITING_FOR_NITIN_PRODUCTION_DEPLOYMENT_AUTHORIZATION"
 }

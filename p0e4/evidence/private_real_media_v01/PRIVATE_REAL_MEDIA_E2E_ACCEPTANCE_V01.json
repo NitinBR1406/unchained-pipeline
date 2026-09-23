@@ -1,0 +1,23 @@
+{
+  "candidate_sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501",
+  "claude_translation": "COMPLETE_GUIDANCE_ONLY",
+  "content_id": "aakhri-ishq",
+  "creative_approval_inferred": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "gemini_cross_validation_note": "One non-blocking orientation label contradiction preserved; decoded dimensions are 1080x1920 portrait.",
+  "gemini_independent_qc": "ACCEPT_TECHNICAL_PRIVATE_E2E",
+  "input_hashes": {
+    "authoritative_audio": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "raw_video": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790"
+  },
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "resolve_render": "COMPLETE",
+  "rights_clearance_inferred": false,
+  "run_id": "UNCHAINED_AKI_PRIVATE_V01_RUN4",
+  "schema": "PRIVATE_REAL_MEDIA_E2E_ACCEPTANCE_V01",
+  "schema_version": 1,
+  "source_mutations": 0,
+  "status": "PRIVATE_REAL_MEDIA_E2E_ACCEPTED_POST_READY",
+  "technical_decode": "GREEN"
+}

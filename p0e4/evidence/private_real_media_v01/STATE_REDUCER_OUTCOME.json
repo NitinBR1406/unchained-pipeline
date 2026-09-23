@@ -3,14 +3,15 @@
   "base_master_state_version": "V16.3",
   "base_state_version": 29,
   "candidate_sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501",
-  "derived_private_state": "WAITING_FOR_NITIN_GEMINI_UPLOAD_ACCESS",
-  "event": "PRIVATE_REAL_MEDIA_RENDER_RUN4_TECHNICAL_GREEN",
+  "derived_private_state": "POST_READY_WAITING_FOR_NITIN_PRODUCTION_DEPLOYMENT_AUTHORIZATION",
+  "event": "PRIVATE_REAL_MEDIA_E2E_ACCEPTED_V01",
   "first_real_poster": "PAUSED_BY_NITIN",
   "master_state_advanced": false,
+  "private_real_media_e2e_status": "GREEN",
   "production_deployment_authorized": false,
   "production_e2e_status": "BLOCKED_NOT_GREEN",
   "publication_authorized": false,
-  "reason": "The exact bound private candidate rendered and decoded GREEN, but independent Gemini real-output QC is blocked by local file-upload access; POST_READY cannot be asserted.",
+  "reason": "Private real-media render, full technical decode, and independent Gemini real-output QC are accepted. Production deployment remains an explicit Nitin-only gate.",
   "schema": "PRIVATE_REAL_MEDIA_STATE_REDUCER_OUTCOME_V01",
   "schema_version": 1
 }

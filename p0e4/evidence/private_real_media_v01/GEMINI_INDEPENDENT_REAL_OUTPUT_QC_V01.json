@@ -1,0 +1,91 @@
+{
+  "account": "nitinramdaras23@gmail.com",
+  "api_key_selected": false,
+  "candidate": {
+    "bytes": 382264829,
+    "gemini_internal_filename": "input_file_0.mp4",
+    "local_basename": "UNCHAINED_AKI_PRIVATE_V01_RUN4.mp4",
+    "sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501"
+  },
+  "cross_validation": {
+    "confidence_adjustment": "Orientation-description claim downgraded to LOW; other perceptual claims remain Gemini-reported and technical decode evidence remains separate.",
+    "contradiction": "Gemini called the consistent orientation landscape; authoritative full decode measured 1080x1920 portrait.",
+    "effect": "NON_BLOCKING_LABEL_ERROR; no corrupt frame, crop, sync, or audio defect identified.",
+    "status": "ACCEPT_WITH_NON_BLOCKING_DESCRIPTION_CONTRADICTION_RECORDED"
+  },
+  "final_private_qc_disposition": "ACCEPT_TECHNICAL_PRIVATE_E2E",
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "independence": {
+    "chatgpt_conclusion_exposed": false,
+    "claude_result_exposed": false,
+    "new_context": true,
+    "prompt": "You are an independent real-output QC reviewer. Review the attached video from beginning to end using only the media you can directly observe. You have not been given any other agent's conclusions. Do not infer facts you cannot observe. Evaluate: full playback/decode availability; visible corruption, black/frozen/unintended frames, framing/cropping and orientation; audio presence and obvious distortion/dropouts; apparent audiovisual/lip synchronization where observable; continuity and major production defects. Distinguish measured/observed facts from uncertainty. Return ONLY valid JSON with this schema: {\"schema\":\"GEMINI_INDEPENDENT_REAL_OUTPUT_QC_V01\",\"media_filename\":\"...\",\"review_scope\":{\"full_video_review_attempted\":true,\"audio_review_attempted\":true},\"observations\":[{\"check\":\"...\",\"status\":\"PASS|FAIL|UNKNOWN\",\"evidence\":\"...\",\"confidence\":\"HIGH|MEDIUM|LOW\"}],\"blocking_defects\":[{\"timecode\":\"HH:MM:SS.mmm or UNKNOWN\",\"defect\":\"...\",\"confidence\":\"HIGH|MEDIUM|LOW\"}],\"verdict\":\"ACCEPT_TECHNICAL_PRIVATE_E2E|REPAIR_REQUIRED|UNABLE_TO_REVIEW\",\"limitations\":[\"...\"],\"no_publication_or_creative_approval_claim\":true}. ACCEPT only if no blocking technical defect is observed. This is private technical QC only, not creative approval, rights clearance, production authorization, or publication authorization."
+  },
+  "model": "gemini-3-flash-preview",
+  "observed_ui_time_local": "2026-09-23 23:10 Europe/Amsterdam (UI minute precision)",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "raw_response": {
+    "blocking_defects": [],
+    "limitations": [
+      "Review performed based on human-perceptible observation of playback; no technical waveform or metadata-level packet analysis was conducted."
+    ],
+    "media_filename": "input_file_0.mp4",
+    "no_publication_or_creative_approval_claim": true,
+    "observations": [
+      {
+        "check": "Full playback/decode availability",
+        "confidence": "HIGH",
+        "evidence": "The video file decoded successfully without interruptions from start to end.",
+        "status": "PASS"
+      },
+      {
+        "check": "Visible corruption/artifacts",
+        "confidence": "HIGH",
+        "evidence": "No macroblocking, digital artifacts, or compression corruption was observed during the stream.",
+        "status": "PASS"
+      },
+      {
+        "check": "Black, frozen, or unintended frames",
+        "confidence": "HIGH",
+        "evidence": "No frozen frames or unintentional black frames were detected throughout the duration.",
+        "status": "PASS"
+      },
+      {
+        "check": "Framing, cropping, and orientation",
+        "confidence": "HIGH",
+        "evidence": "The video maintains a consistent landscape orientation with appropriate framing for the subject.",
+        "status": "PASS"
+      },
+      {
+        "check": "Audio presence and quality",
+        "confidence": "HIGH",
+        "evidence": "Clear audio is present for the full duration with no audible distortion, clicks, or dropouts.",
+        "status": "PASS"
+      },
+      {
+        "check": "Audiovisual/lip synchronization",
+        "confidence": "HIGH",
+        "evidence": "Audio is perfectly aligned with on-screen visual cues and dialogue.",
+        "status": "PASS"
+      },
+      {
+        "check": "Continuity and production defects",
+        "confidence": "HIGH",
+        "evidence": "No production equipment is visible in the frame, and no continuity breaks were observed.",
+        "status": "PASS"
+      }
+    ],
+    "review_scope": {
+      "audio_review_attempted": true,
+      "full_video_review_attempted": true
+    },
+    "schema": "GEMINI_INDEPENDENT_REAL_OUTPUT_QC_V01",
+    "verdict": "ACCEPT_TECHNICAL_PRIVATE_E2E"
+  },
+  "raw_verdict": "ACCEPT_TECHNICAL_PRIVATE_E2E",
+  "repair_required": false,
+  "schema": "GEMINI_INDEPENDENT_REAL_OUTPUT_QC_RECEIPT_V01",
+  "schema_version": 1,
+  "surface": "Google AI Studio Playground"
+}

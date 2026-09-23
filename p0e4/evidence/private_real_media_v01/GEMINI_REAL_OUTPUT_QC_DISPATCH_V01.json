@@ -4,13 +4,15 @@
   "candidate_sha256": "7f5b96e8a42377263ba9b0953d7c8edf92f4d9cb5447fc80e2527e33a02da501",
   "first_real_poster": "PAUSED_BY_NITIN",
   "independence": "NEW_CONVERSATION_NO_CLAUDE_RESULT_OR_CHATGPT_CONCLUSION_EXPOSED",
+  "model": "gemini-3-flash-preview",
   "production_deployment_authorized": false,
   "publication_authorized": false,
-  "reason": "Chrome extension blocked local file chooser setFiles; candidate was not transmitted and no Gemini conclusion exists.",
+  "reason": "Exact RUN4 bytes uploaded directly from the hash-verified local candidate; no Drive or Photos substitute used.",
+  "receipt": "p0e4/evidence/private_real_media_v01/GEMINI_INDEPENDENT_REAL_OUTPUT_QC_V01.json",
   "schema": "GEMINI_REAL_OUTPUT_QC_DISPATCH_V01",
   "schema_version": 1,
-  "smallest_human_action": "Open chrome://extensions, click Details for the ChatGPT browser extension, and enable Allow access to file URLs. Do not upload or submit the video manually.",
-  "status": "WAITING_FOR_NITIN_BROWSER_FILE_ACCESS",
-  "surface": "Google Gemini 3.1 Pro",
-  "upload_attempts": 2
+  "smallest_human_action": null,
+  "status": "COMPLETE",
+  "surface": "Google AI Studio Playground",
+  "upload_attempts": 3
 }
