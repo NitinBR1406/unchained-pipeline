@@ -26,7 +26,9 @@ def main():
     with audio_path.open('rb') as stream:
         while chunk:=stream.read(1024*1024):audio_hash.update(chunk)
     after=audio_path.stat()
-    if audio_hash.hexdigest()!=observation['sha256'] or after.st_size!=observation['size_bytes']:
+    if (audio_hash.hexdigest()!=observation['sha256'] or
+            after.st_size!=observation['size_bytes'] or
+            after.st_mtime_ns!=observation['mtime_ns']):
         raise ValueError('authoritative audio byte observation drift')
     if (before.st_size,before.st_mtime_ns)!=(after.st_size,after.st_mtime_ns):
         raise ValueError('authoritative audio changed during validation')
