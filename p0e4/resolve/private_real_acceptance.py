@@ -5,7 +5,7 @@ from pathlib import Path
 EXPECTED={
  'raw_video':('AKI_SOURCE_0902_V01.mov','50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790',323607983),
  'authoritative_audio':('AAKHRI ISHQ MASTER 2.wav','670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2',61749398)}
-VERSION=[21,1,0,17,''];PRODUCT='DaVinci Resolve Studio'
+VERSION=[21,1,0,17,''];PRODUCT='DaVinci Resolve Studio';BOUND_RAW_FPS='30'
 
 def stream_hash(path):
  h=hashlib.sha256();size=0
@@ -54,12 +54,12 @@ def run(raw,audio,output_root,project):
  try:
   p=pm.CreateProject(project)
   if not p:raise RuntimeError('CREATE_PRIVATE_PROJECT_FAILED')
-  if not p.SetSettings({'timelineResolutionWidth':'1080','timelineResolutionHeight':'1920','timelineFrameRate':'25'}):raise RuntimeError('PRIVATE_PROJECT_SETTINGS_FAILED')
+  if not p.SetSettings({'timelineResolutionWidth':'1080','timelineResolutionHeight':'1920','timelineFrameRate':BOUND_RAW_FPS}):raise RuntimeError('PRIVATE_PROJECT_SETTINGS_FAILED')
   pool=p.GetMediaPool();videos=pool.ImportMedia([staged['raw_video']['uri']]);audios=pool.ImportMedia([staged['authoritative_audio']['uri']])
   if len(videos)!=1 or len(audios)!=1:raise RuntimeError('BOUND_MEDIA_IMPORT_FAILED')
   vp=videos[0].GetClipProperty();ap=audios[0].GetClipProperty();rec('import_properties',{'raw_video':vp,'authoritative_audio':ap})
   fps=str(vp.get('FPS') or vp.get('Video Frame Rate') or '')
-  if fps not in ('25','25.0'):raise ValueError('RAW_FRAME_RATE_REQUIRES_EXPLICIT_REVISION:'+fps)
+  if fps not in (BOUND_RAW_FPS,BOUND_RAW_FPS+'.0'):raise ValueError('RAW_FRAME_RATE_REQUIRES_EXPLICIT_REVISION:'+fps)
   timeline=pool.CreateEmptyTimeline('AKI_PRIVATE_BOUND_MASTER2');
   if not timeline or not p.SetCurrentTimeline(timeline):raise RuntimeError('TIMELINE_CREATE_FAILED')
   start=timeline.GetStartFrame()
@@ -72,7 +72,7 @@ def run(raw,audio,output_root,project):
   rec('timeline_binding',timeline_binding)
   if not p.SetCurrentRenderFormatAndCodec('mp4','H264'):raise RuntimeError('PRIVATE_H264_PROFILE_UNAVAILABLE')
   if not p.SetCurrentRenderMode(1):raise RuntimeError('SINGLE_CLIP_RENDER_MODE_FAILED')
-  if not p.SetRenderSettings({'SelectAllFrames':True,'TargetDir':str(root),'CustomName':project,'ExportVideo':True,'ExportAudio':True,'FormatWidth':1080,'FormatHeight':1920,'FrameRate':25,'AudioCodec':'aac','AudioSampleRate':48000}):raise RuntimeError('PRIVATE_RENDER_SETTINGS_FAILED')
+  if not p.SetRenderSettings({'SelectAllFrames':True,'TargetDir':str(root),'CustomName':project,'ExportVideo':True,'ExportAudio':True,'FormatWidth':1080,'FormatHeight':1920,'FrameRate':int(BOUND_RAW_FPS),'AudioCodec':'aac','AudioSampleRate':48000}):raise RuntimeError('PRIVATE_RENDER_SETTINGS_FAILED')
   job=p.AddRenderJob()
   if not job:raise RuntimeError('PRIVATE_RENDER_JOB_FAILED')
   rec('job_id',job)
