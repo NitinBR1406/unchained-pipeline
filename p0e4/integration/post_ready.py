@@ -36,7 +36,7 @@ def route(reconciliation, production_deployment_authorized=False,
         next_stage = 'AAKHRI_ISHQ_RAW_DROP_AUDIO_BINDING'
     else:
         sha(reconciliation['authoritative_audio']['sha256'])
-        status = 'READY_FOR_AUTHORIZED_REAL_MEDIA_ORCHESTRATION'
+        status = 'AUDIO_BOUND_WAITING_FOR_PRODUCTION_DEPLOYMENT_AUTHORIZATION'
         next_stage = 'REAL_MEDIA_ORCHESTRATION'
     return {'schema': 'POST_READY_CONTRACT_V01', 'schema_version': 1,
             'content_id': reconciliation['content_id'], 'status': status,
@@ -47,3 +47,30 @@ def route(reconciliation, production_deployment_authorized=False,
             'rights_source_binding_preserved': True,
             'evidence_required': True, 'production_deployment_authorized': False,
             'publication_authorized': False, 'first_real_poster': 'PAUSED_BY_NITIN'}
+
+
+def bind_authoritative_audio(reconciliation, event, observation):
+    """Bind one exact observed file from an explicit Nitin selection event."""
+    require(reconciliation['authoritative_audio'] is None, 'audio already bound')
+    keys(event, 'event_id event_type selected_basename excluded_substitutes source_statement')
+    require(event['event_type'] == 'NITIN_AUTHORITATIVE_AUDIO_BINDING', 'binding event type')
+    require(event['selected_basename'] == 'AAKHRI ISHQ MASTER 2.wav', 'selected basename drift')
+    require(type(event['excluded_substitutes']) is list and event['excluded_substitutes'], 'exclusions required')
+    keys(observation, 'path basename size_bytes mtime_ns sha256 unchanged_during_read technical')
+    require(observation['basename'] == event['selected_basename'], 'wrong audio selected')
+    require(observation['basename'] not in event['excluded_substitutes'], 'excluded substitute selected')
+    require(observation['path'].endswith('/Aakhri Ishq/' + event['selected_basename']), 'wrong iCloud source path')
+    require(observation['unchanged_during_read'] is True, 'audio changed during read')
+    require(type(observation['size_bytes']) is int and observation['size_bytes'] > 0, 'audio size')
+    sha(observation['sha256'])
+    require(observation['technical'] == {'format':'PCM_WAVE','channels':2,'sample_rate_hz':48000,
+            'sample_width_bytes':3,'frames':10291202,'duration_seconds':214.40004166666668,
+            'validation':'full bytes SHA256 read; WAV header and frame count parsed'}, 'audio technical drift')
+    result=deepcopy(reconciliation)
+    result['authoritative_audio']={'role':'authoritative_audio','uri':observation['path'],
+                                   'sha256':observation['sha256'],'bytes':observation['size_bytes'],
+                                   'binding_event_id':event['event_id']}
+    result['full_ingest_status']='RAW_AUDIO_PAIR_IDENTITY_BOUND_BYTES_HASHED'
+    result['human_gate']=None
+    result['audio_source_mutations']=0
+    return result

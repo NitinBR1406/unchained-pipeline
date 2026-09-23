@@ -1,0 +1,17 @@
+{
+  "path": "/Users/nitinramdaras/Library/Mobile Documents/com~apple~CloudDocs/Aakhri Ishq/AAKHRI ISHQ MASTER 2.wav",
+  "basename": "AAKHRI ISHQ MASTER 2.wav",
+  "size_bytes": 61749398,
+  "mtime_ns": 1776231984000000000,
+  "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "unchanged_during_read": true,
+  "technical": {
+    "format": "PCM_WAVE",
+    "channels": 2,
+    "sample_rate_hz": 48000,
+    "sample_width_bytes": 3,
+    "frames": 10291202,
+    "duration_seconds": 214.40004166666668,
+    "validation": "full bytes SHA256 read; WAV header and frame count parsed"
+  }
+}

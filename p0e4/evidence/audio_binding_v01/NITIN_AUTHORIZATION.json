@@ -1,0 +1,17 @@
+{
+  "event_id": "AKI_AUTHORITATIVE_AUDIO_BINDING_V01",
+  "event_type": "NITIN_AUTHORITATIVE_AUDIO_BINDING",
+  "selected_basename": "AAKHRI ISHQ MASTER 2.wav",
+  "excluded_substitutes": [
+    "AAKHRI ISHQ MASTER 1.wav",
+    "AAKHRI ISHQ VOCALS.wav",
+    "AAKHRI ISHQ IT T75.wav",
+    "AAKHRI ISHQ 1.wav",
+    "MP3",
+    "MP4",
+    "ANY_OTHER_AUDIO"
+  ],
+  "source_statement": "Nitin explicitly selects AAKHRI ISHQ MASTER 2.wav as the authoritative Aakhri Ishq production audio. Resolve this exact file from the existing Aakhri Ishq iCloud source, read/hash its actual bytes, and bind its exact path + SHA256 to the already hash-bound Aakhri Ishq RAW workload. Do not substitute MASTER 1, VOCALS, IT T75, AAKHRI ISHQ 1, MP3, MP4, or any other audio.",
+  "production_deployment_authorized": false,
+  "publication_authorized": false
+}
