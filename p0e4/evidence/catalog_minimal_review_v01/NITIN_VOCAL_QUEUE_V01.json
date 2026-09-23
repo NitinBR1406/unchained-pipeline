@@ -5,7 +5,7 @@
     "VOCALS_READY": "NO"
   },
   "count": 31,
-  "status": "DERIVED_FROM_EXPLICIT_ROWS_CONTROL_TOTALS_UNRECONCILED",
+  "status": "FINALIZED_CONFIRMED_MUSIC_VOCALS_ONLY",
   "rows": [
     {
       "candidate_id": "cat2_0a43a98fdcab8228",
@@ -636,5 +636,7 @@
     "RIGHTS_CLEARANCE",
     "PUBLISH_READY"
   ],
-  "publication_authorized": false
+  "publication_authorized": false,
+  "reconciliation_event_id": "NITIN_CONTROL_TOTAL_RECONCILIATION_V01",
+  "finalized": true
 }

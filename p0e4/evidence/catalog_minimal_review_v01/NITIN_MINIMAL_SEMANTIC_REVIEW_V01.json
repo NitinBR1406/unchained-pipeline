@@ -1,6 +1,6 @@
 {
   "artifact": "NITIN_MINIMAL_SEMANTIC_REVIEW_V01",
-  "status": "WAITING_FOR_NITIN_CONTROL_TOTAL_RECONCILIATION",
+  "status": "PARTIAL_CATALOG_SEMANTICS_CONFIRMED",
   "source": "CATALOG_DISCOVERY_V02",
   "parent_master_state_version": 29,
   "counts": {
@@ -1646,9 +1646,9 @@
   "identity_questions": [
     {
       "id": "BATCH_CONTROL_TOTALS",
-      "question": "Explicit answers produce 36 regular jj and 27 regular jn, plus 4 mashup/medley jn: 31 vocal-pending. Confirm row-based totals or specify four jn-to-jj corrections; no answers changed to force totals.",
-      "answer": "UNKNOWN",
-      "evidence_event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01"
+      "question": "Row-level answers are authoritative; earlier aggregate expectations were an Orchestrator counting error.",
+      "answer": "CONFIRMED_BY_NITIN_36_READY_31_VOCAL_PENDING",
+      "evidence_event_id": "NITIN_CONTROL_TOTAL_RECONCILIATION_V01"
     },
     {
       "id": "N2008",
@@ -1745,6 +1745,11 @@
       "sha256": "9fcc6c1ba24ccb97e80dbb0abdb118c12ac1560098d3c079cd0739d118d5db91"
     },
     {
+      "event_id": "NITIN_CONTROL_TOTAL_RECONCILIATION_V01",
+      "path": "p0e4/evidence/catalog_semantic_events/NITIN_CONTROL_TOTAL_RECONCILIATION_V01.json",
+      "sha256": "abcc6d85e564669a3451221d640c2ff192785bf7d0df256a992976f2533f9d1e"
+    },
+    {
       "event_id": "NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01",
       "path": "p0e4/evidence/catalog_semantic_events/NITIN_BATCH_1_5_MASHUPS_SEMANTIC_CONFIRMATION_V01.json",
       "sha256": "6da0dc5e8d141e12098c35c6d453866d8b3416b97714600be7aa3cadba61f54a"
@@ -1760,13 +1765,15 @@
     "expected_control_totals": {
       "regular_items": 63,
       "regular_music_yes": 63,
-      "regular_vocals_yes": 40,
-      "regular_vocals_no": 23,
+      "regular_vocals_yes": 36,
+      "regular_vocals_no": 27,
       "mashup_medley_items": 4,
       "mashup_medley_music_yes": 4,
       "mashup_medley_vocals_no": 4,
-      "total_items": 67,
-      "vocal_pending": 27
+      "total_reviewed_items": 67,
+      "total_music_ready": 67,
+      "total_vocals_ready": 36,
+      "total_vocal_pending": 31
     },
     "observed_control_totals": {
       "regular_items": 63,
@@ -1776,10 +1783,28 @@
       "mashup_medley_items": 4,
       "mashup_medley_music_yes": 4,
       "mashup_medley_vocals_no": 4,
-      "total_items": 67,
-      "vocal_pending": 31
+      "total_reviewed_items": 67,
+      "total_music_ready": 67,
+      "total_vocals_ready": 36,
+      "total_vocal_pending": 31
     },
-    "control_total_mismatches": {
+    "control_total_mismatches": {},
+    "type_conflicts": [],
+    "status": "GREEN_CONTROL_TOTALS_VALIDATED",
+    "row_assignments_applied": 67,
+    "all_checks_passed": true,
+    "original_expected_control_totals": {
+      "regular_items": 63,
+      "regular_music_yes": 63,
+      "regular_vocals_yes": 40,
+      "regular_vocals_no": 23,
+      "mashup_medley_items": 4,
+      "mashup_medley_music_yes": 4,
+      "mashup_medley_vocals_no": 4,
+      "total_items": 67,
+      "vocal_pending": 27
+    },
+    "original_control_total_mismatches": {
       "regular_vocals_yes": {
         "expected": 40,
         "observed": 36
@@ -1793,13 +1818,12 @@
         "observed": 31
       }
     },
-    "type_conflicts": [],
-    "status": "WAITING_FOR_NITIN_CONTROL_TOTAL_RECONCILIATION",
-    "row_assignments_applied": 67,
-    "all_checks_passed": false
+    "reconciliation_event_id": "NITIN_CONTROL_TOTAL_RECONCILIATION_V01",
+    "row_assignments_changed_by_reconciliation": 0
   },
   "historical_grouping_constraints": {
     "Songs voor 2022": "PRESERVE",
     "Songs voor 2022/Chunar": "KEEP_SEPARATE_FROM_CHUNAR_2025_WITHOUT_EXPLICIT_IDENTITY_EVIDENCE"
-  }
+  },
+  "row_question_notes": "Per-row question text retained from the original batch snapshot; aggregate reconciliation is resolved by the current validation receipt."
 }

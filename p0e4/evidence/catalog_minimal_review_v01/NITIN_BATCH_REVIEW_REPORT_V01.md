@@ -1,6 +1,6 @@
 # Nitin batch 1–5 + mashups — vastgelegde antwoorden
 
-**Status: expliciete songantwoorden verwerkt; controletotalen wachten op Nitin.**
+**Status: Nitin heeft de correcte totalen bevestigd; GREEN gevalideerd. Beide werklijsten zijn gefinaliseerd.**
 
 De 67 opgegeven namen zijn uniek aan bestaande candidate IDs gekoppeld (alleen omringende spaties genegeerd). Er zijn geen songs samengevoegd. Aye Khuda en Dooriyan zijn ORIGINAL; DHUN blijft UNKNOWN. De vier mashup-/medleytypes zijn toegepast zonder bestaand typeconflict.
 
@@ -10,7 +10,7 @@ De 67 opgegeven namen zijn uniek aan bestaande candidate IDs gekoppeld (alleen o
 | Mashup/medley | 4 | 4 | 0 | 4 |
 | Totaal | 67 | 67 | 36 | 31 |
 
-De opgegeven verwachting (40/23 regulier en 27 zang-pending totaal) wijkt af. De deterministische validatie markeert dit expliciet; de verwachting is niet herschreven en geen vier antwoorden zijn verzonnen. Nitin hoeft alleen de uitgeschreven telling te bevestigen of vier reguliere jn→jj-correcties te noemen.
+De oorspronkelijke verwachting (40/23 regulier en 27 zang-pending totaal) was een Orchestrator-telfout. Nitin heeft expliciet 36/27 regulier en 31 zang-pending totaal bevestigd. Een afzonderlijk correctie-event vervangt alleen de verwachte totalen; het oorspronkelijke event blijft intact. Alle 77 reviewregels en alle queue-regels blijven exact ongewijzigd.
 
 Per batch: B1 6 jj/9 jn; B2 11 jj/4 jn; B3 8 jj/7 jn; B4 11 jj/4 jn; B5 0 jj/3 jn.
 

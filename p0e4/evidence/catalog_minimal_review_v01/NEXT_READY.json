@@ -1,15 +1,11 @@
 {
-  "status": "WAITING_FOR_NITIN_CONTROL_TOTAL_RECONCILIATION",
+  "status": "WAITING_FOR_NITIN_REMAINING_SEMANTICS",
   "ready_nonhuman_count": 0,
-  "task": "Confirm explicit-row totals 36 ready / 31 vocal-pending, or name four regular jn-to-jj corrections.",
+  "task": "Choose the next vocal-session items and priority/owner when ready; finalized queues are available.",
   "MASTER_CATALOG_V01_created": false,
   "publication_authorized": false,
   "production_mutation": false,
   "remaining_questions": [
-    {
-      "priority": 1,
-      "question": "Resolve row answers versus stated 40/23 regular totals; do not resend the whole batch."
-    },
     {
       "priority": 2,
       "question": "For the next selected vocal session only, specify priority and owner if needed. Other unknown semantics may remain UNKNOWN."
@@ -30,5 +26,7 @@
     "Aakhri Ishq",
     "Intro beat",
     "NITIN 2008 (8 children)"
-  ]
+  ],
+  "control_totals": "GREEN",
+  "queues_finalized": true
 }

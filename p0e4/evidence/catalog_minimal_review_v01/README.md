@@ -1,4 +1,4 @@
-> Update: 67 expliciete readiness-antwoorden uit Nitin batch 1–5 + mashups zijn verwerkt. De uitgeschreven regels geven 36 muziek+zang-gereed en 31 zang-pending. Dit wijkt af van de verwachte controletotalen; reconciliatie met Nitin staat open. Zie NITIN_BATCH_REVIEW_REPORT_V01.md en BATCH_SEMANTIC_VALIDATION_RECEIPT.json. Geen eerdere antwoorden opnieuw nodig.
+> Update: Nitin heeft de uitgeschreven antwoorden en correcte totalen bevestigd. Deterministische validatie is GREEN: 67 muziek-gereed, 36 zang-gereed en 31 zang-pending. Beide werklijsten zijn gefinaliseerd voor uitsluitend deze velden; alle songregels zijn ongewijzigd. Zie NITIN_BATCH_REVIEW_REPORT_V01.md.
 
 # NITIN_MINIMAL_SEMANTIC_REVIEW_V01
 
