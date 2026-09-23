@@ -46,7 +46,7 @@ def run(raw,audio,output_root,project):
  try:
   p=pm.CreateProject(project)
   if not p:raise RuntimeError('CREATE_PRIVATE_PROJECT_FAILED')
-  if not p.SetSettings({'timelineResolutionWidth':'1080','timelineResolutionHeight':'1920','timelineFrameRate':'25','timelinePlaybackFrameRate':'25'}):raise RuntimeError('PRIVATE_PROJECT_SETTINGS_FAILED')
+  if not p.SetSettings({'timelineResolutionWidth':'1080','timelineResolutionHeight':'1920','timelineFrameRate':'25'}):raise RuntimeError('PRIVATE_PROJECT_SETTINGS_FAILED')
   pool=p.GetMediaPool();videos=pool.ImportMedia([str(raw)]);audios=pool.ImportMedia([str(audio)])
   if len(videos)!=1 or len(audios)!=1:raise RuntimeError('BOUND_MEDIA_IMPORT_FAILED')
   vp=videos[0].GetClipProperty();ap=audios[0].GetClipProperty();rec('import_properties',{'raw_video':vp,'authoritative_audio':ap})
