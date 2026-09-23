@@ -1,9 +1,9 @@
 {
-  "tested_sha": "8ccd649c591b5352d6eb860e25d4210a48ffde19",
-  "observed_at": "2026-09-23T09:31:30.572286+00:00",
+  "tested_sha": "01723ba1cd83c7bd51d80cc49840fb53974db42e",
+  "observed_at": "2026-09-23T09:43:41.791082+00:00",
   "source_manifest_verified": true,
   "all_88_candidates_accounted_for": true,
-  "all_semantic_defaults_unknown": true,
+  "all_semantic_defaults_unknown": false,
   "catalog_tests_passed": 10,
   "javascript_syntax": "PASS",
   "isolated_javascript_smoke": "PASS: render 77 rows, selected-only batch assignment, export action",
@@ -12,5 +12,10 @@
   "production_mutation": false,
   "icloud_access": "NONE; frozen discovery projection only",
   "master_state_version": 29,
-  "csv_line_endings": "LF"
+  "csv_line_endings": "LF",
+  "unconfirmed_semantic_fields_unknown": true,
+  "semantic_rows_updated": 8,
+  "other_rows_unchanged": 69,
+  "semantic_confirmation_event": "NITIN_2008_SEMANTIC_CONFIRMATION_V01",
+  "semantic_projection_check": "PASS exact four-field update plus provenance/question; no readiness or priority inferred"
 }

@@ -1,6 +1,6 @@
 # NITIN_MINIMAL_SEMANTIC_REVIEW_V01
 
-Begin in het HTML-reviewformulier bij het aparte **NITIN 2008**-blok. Er zijn acht kinderen: asma, KHAN KHAN, KHILTA GHUL, khud se, raeena, SANIYA, tum sabse en ye raat (zie de exacte bestandsnamen in het formulier). Bevestig/corrigeer of dit de acht original-song recreations zijn. TYPE blijft UNKNOWN tot die bevestiging. Gereedheid wordt afzonderlijk gevraagd.
+Begin in het HTML-reviewformulier bij het aparte **NITIN 2008**-blok. Er zijn acht kinderen: asma, KHAN KHAN, KHILTA GHUL, khud se, raeena, SANIYA, tum sabse en ye raat (zie de exacte bestandsnamen in het formulier). Nitin heeft alle acht identiteiten expliciet bevestigd als zijn bestaande originals uit circa 2008 binnen het Vatsal recreation-pakket. identity_confirmed=YES, TYPE=ORIGINAL_RECREATION, NEXT_ACTION=REVIEW_WITH_VATSAL en ACTION_OWNER=NITIN_AND_VATSAL zijn ingevuld. Gereedheid en prioriteit blijven UNKNOWN.
 
 ## Wat is verminderd?
 
@@ -24,6 +24,6 @@ Identieke namen/groottes van de twee Apna-transferbundels zijn geen bytebewijs: 
 
 HTML: selecteer de bedoelde regels, kies een veld/waarde en pas het toe. Vul desgewenst individueel aan. Download antwoorden als JSON vóór afsluiten; geen automatische opslag of verzending. CSV en JSON zijn alternatieven. Alle tien gevraagde velden zijn aanwezig. Toegestane waarden staan machineleesbaar in allowed_values; TYPE, PRIORITY en ACTION_OWNER zijn dropdowns. ACTION_OWNER betekent actie-uitvoerder, geen rechtenhouder. NEXT_ACTION=OTHER kan met een opmerking worden verduidelijkt.
 
-Alle semantische velden starten UNKNOWN. Master V16.3/state29 bevat een exact-SHA final-video-approval voor Aakhri Ishq; die is geen bewijs voor de tien catalogusvelden en is daarom niet als algemene gereedheid overgenomen. De gebruiker vraagt nog expliciet bevestiging van de acht recreatie-identiteiten, dus ook die zijn niet alvast goedgekeurd.
+Onbevestigde semantische velden blijven UNKNOWN. Master V16.3/state29 bevat een exact-SHA final-video-approval voor Aakhri Ishq; die is geen bewijs voor de tien catalogusvelden en is daarom niet als algemene gereedheid overgenomen. De nieuwe expliciete Nitin-bevestiging is afzonderlijk vastgelegd in p0e4/evidence/catalog_semantic_events/NITIN_2008_SEMANTIC_CONFIRMATION_V01.json en deterministisch op precies de acht kinderen toegepast. Historische productie met een andere engineer en Vatsals update-/recreatiescope, inclusief eventuele lyrische revisie, zijn context uit Nitin's verklaring; geen bewijs dat revisie per song nodig is.
 
 Deze projectie gebruikt uitsluitend de gehashte Discovery V02-evidence. Geen nieuwe iCloud-toegang, cloudhydratie of bronmutatie. Master State en oude discovery blijven ongewijzigd. Geen MASTER_CATALOG_V01 aangemaakt; voorbereiding daarvan wacht op ontvangen Nitin-review. Geen productie- of publicatiemutatie.

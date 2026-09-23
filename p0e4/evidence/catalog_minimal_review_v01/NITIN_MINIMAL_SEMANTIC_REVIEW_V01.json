@@ -1,6 +1,6 @@
 {
   "artifact": "NITIN_MINIMAL_SEMANTIC_REVIEW_V01",
-  "status": "WAITING_FOR_NITIN",
+  "status": "PARTIAL_REVIEW_RECEIVED_REMAINING_FIELDS_UNKNOWN",
   "source": "CATALOG_DISCOVERY_V02",
   "parent_master_state_version": 29,
   "counts": {
@@ -15,7 +15,9 @@
     "exact_hash_links": 2,
     "redundant_unassigned_aliases": 2,
     "remaining_original_unassigned_representatives": 103,
-    "admin_embedded_media_held_separately": 1
+    "admin_embedded_media_held_separately": 1,
+    "nitin_2008_identities_confirmed": 8,
+    "nitin_2008_readiness_confirmed": 0
   },
   "allowed_values": {
     "TYPE": [
@@ -923,8 +925,8 @@
       "name": "asma mastered_01.wav",
       "path": "NITIN 2008/asma mastered_01.wav",
       "block": "nitin_2008_children",
-      "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
+      "identity_confirmed": "YES",
+      "TYPE": "ORIGINAL_RECREATION",
       "MUSIC_READY": "UNKNOWN",
       "LYRICS_READY": "UNKNOWN",
       "VOCALS_READY": "UNKNOWN",
@@ -932,18 +934,19 @@
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
       "PRIORITY": "UNKNOWN",
-      "NEXT_ACTION": "UNKNOWN",
-      "ACTION_OWNER": "UNKNOWN",
+      "NEXT_ACTION": "REVIEW_WITH_VATSAL",
+      "ACTION_OWNER": "NITIN_AND_VATSAL",
       "asset_count": 1,
-      "question": "Is this one of the eight original-song recreations? Confirm/correct title and TYPE. No ownership or readiness inferred."
+      "question": "Identity and original-recreation TYPE confirmed by Nitin. Readiness and priority remain UNKNOWN.",
+      "semantic_evidence_event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_e526065897b54f07",
       "name": "KHAN KHAN MASTERED.wav",
       "path": "NITIN 2008/KHAN KHAN MASTERED.wav",
       "block": "nitin_2008_children",
-      "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
+      "identity_confirmed": "YES",
+      "TYPE": "ORIGINAL_RECREATION",
       "MUSIC_READY": "UNKNOWN",
       "LYRICS_READY": "UNKNOWN",
       "VOCALS_READY": "UNKNOWN",
@@ -951,18 +954,19 @@
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
       "PRIORITY": "UNKNOWN",
-      "NEXT_ACTION": "UNKNOWN",
-      "ACTION_OWNER": "UNKNOWN",
+      "NEXT_ACTION": "REVIEW_WITH_VATSAL",
+      "ACTION_OWNER": "NITIN_AND_VATSAL",
       "asset_count": 1,
-      "question": "Is this one of the eight original-song recreations? Confirm/correct title and TYPE. No ownership or readiness inferred."
+      "question": "Identity and original-recreation TYPE confirmed by Nitin. Readiness and priority remain UNKNOWN.",
+      "semantic_evidence_event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_b51082b1c9ad2a98",
       "name": "KHILTA GHUL MASTERED.wav",
       "path": "NITIN 2008/KHILTA GHUL MASTERED.wav",
       "block": "nitin_2008_children",
-      "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
+      "identity_confirmed": "YES",
+      "TYPE": "ORIGINAL_RECREATION",
       "MUSIC_READY": "UNKNOWN",
       "LYRICS_READY": "UNKNOWN",
       "VOCALS_READY": "UNKNOWN",
@@ -970,18 +974,19 @@
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
       "PRIORITY": "UNKNOWN",
-      "NEXT_ACTION": "UNKNOWN",
-      "ACTION_OWNER": "UNKNOWN",
+      "NEXT_ACTION": "REVIEW_WITH_VATSAL",
+      "ACTION_OWNER": "NITIN_AND_VATSAL",
       "asset_count": 1,
-      "question": "Is this one of the eight original-song recreations? Confirm/correct title and TYPE. No ownership or readiness inferred."
+      "question": "Identity and original-recreation TYPE confirmed by Nitin. Readiness and priority remain UNKNOWN.",
+      "semantic_evidence_event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_9e83d55d3d3b9604",
       "name": "khud se mastered.wav",
       "path": "NITIN 2008/khud se mastered.wav",
       "block": "nitin_2008_children",
-      "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
+      "identity_confirmed": "YES",
+      "TYPE": "ORIGINAL_RECREATION",
       "MUSIC_READY": "UNKNOWN",
       "LYRICS_READY": "UNKNOWN",
       "VOCALS_READY": "UNKNOWN",
@@ -989,18 +994,19 @@
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
       "PRIORITY": "UNKNOWN",
-      "NEXT_ACTION": "UNKNOWN",
-      "ACTION_OWNER": "UNKNOWN",
+      "NEXT_ACTION": "REVIEW_WITH_VATSAL",
+      "ACTION_OWNER": "NITIN_AND_VATSAL",
       "asset_count": 1,
-      "question": "Is this one of the eight original-song recreations? Confirm/correct title and TYPE. No ownership or readiness inferred."
+      "question": "Identity and original-recreation TYPE confirmed by Nitin. Readiness and priority remain UNKNOWN.",
+      "semantic_evidence_event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_91a182b555222b59",
       "name": "raeena mastered.wav",
       "path": "NITIN 2008/raeena mastered.wav",
       "block": "nitin_2008_children",
-      "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
+      "identity_confirmed": "YES",
+      "TYPE": "ORIGINAL_RECREATION",
       "MUSIC_READY": "UNKNOWN",
       "LYRICS_READY": "UNKNOWN",
       "VOCALS_READY": "UNKNOWN",
@@ -1008,18 +1014,19 @@
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
       "PRIORITY": "UNKNOWN",
-      "NEXT_ACTION": "UNKNOWN",
-      "ACTION_OWNER": "UNKNOWN",
+      "NEXT_ACTION": "REVIEW_WITH_VATSAL",
+      "ACTION_OWNER": "NITIN_AND_VATSAL",
       "asset_count": 1,
-      "question": "Is this one of the eight original-song recreations? Confirm/correct title and TYPE. No ownership or readiness inferred."
+      "question": "Identity and original-recreation TYPE confirmed by Nitin. Readiness and priority remain UNKNOWN.",
+      "semantic_evidence_event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_a771c4c946c5174e",
       "name": "SANIYA MASTERED_00.wav",
       "path": "NITIN 2008/SANIYA MASTERED_00.wav",
       "block": "nitin_2008_children",
-      "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
+      "identity_confirmed": "YES",
+      "TYPE": "ORIGINAL_RECREATION",
       "MUSIC_READY": "UNKNOWN",
       "LYRICS_READY": "UNKNOWN",
       "VOCALS_READY": "UNKNOWN",
@@ -1027,18 +1034,19 @@
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
       "PRIORITY": "UNKNOWN",
-      "NEXT_ACTION": "UNKNOWN",
-      "ACTION_OWNER": "UNKNOWN",
+      "NEXT_ACTION": "REVIEW_WITH_VATSAL",
+      "ACTION_OWNER": "NITIN_AND_VATSAL",
       "asset_count": 1,
-      "question": "Is this one of the eight original-song recreations? Confirm/correct title and TYPE. No ownership or readiness inferred."
+      "question": "Identity and original-recreation TYPE confirmed by Nitin. Readiness and priority remain UNKNOWN.",
+      "semantic_evidence_event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_e33fdd193b68cbe2",
       "name": "tum sabse mastered.wav",
       "path": "NITIN 2008/tum sabse mastered.wav",
       "block": "nitin_2008_children",
-      "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
+      "identity_confirmed": "YES",
+      "TYPE": "ORIGINAL_RECREATION",
       "MUSIC_READY": "UNKNOWN",
       "LYRICS_READY": "UNKNOWN",
       "VOCALS_READY": "UNKNOWN",
@@ -1046,18 +1054,19 @@
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
       "PRIORITY": "UNKNOWN",
-      "NEXT_ACTION": "UNKNOWN",
-      "ACTION_OWNER": "UNKNOWN",
+      "NEXT_ACTION": "REVIEW_WITH_VATSAL",
+      "ACTION_OWNER": "NITIN_AND_VATSAL",
       "asset_count": 1,
-      "question": "Is this one of the eight original-song recreations? Confirm/correct title and TYPE. No ownership or readiness inferred."
+      "question": "Identity and original-recreation TYPE confirmed by Nitin. Readiness and priority remain UNKNOWN.",
+      "semantic_evidence_event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_0f2352dc32122b2e",
       "name": "ye raat mastered_00.wav",
       "path": "NITIN 2008/ye raat mastered_00.wav",
       "block": "nitin_2008_children",
-      "identity_confirmed": "UNKNOWN",
-      "TYPE": "UNKNOWN",
+      "identity_confirmed": "YES",
+      "TYPE": "ORIGINAL_RECREATION",
       "MUSIC_READY": "UNKNOWN",
       "LYRICS_READY": "UNKNOWN",
       "VOCALS_READY": "UNKNOWN",
@@ -1065,10 +1074,11 @@
       "REVISION_REQUIRED": "UNKNOWN",
       "LIVE_READY": "UNKNOWN",
       "PRIORITY": "UNKNOWN",
-      "NEXT_ACTION": "UNKNOWN",
-      "ACTION_OWNER": "UNKNOWN",
+      "NEXT_ACTION": "REVIEW_WITH_VATSAL",
+      "ACTION_OWNER": "NITIN_AND_VATSAL",
       "asset_count": 1,
-      "question": "Is this one of the eight original-song recreations? Confirm/correct title and TYPE. No ownership or readiness inferred."
+      "question": "Identity and original-recreation TYPE confirmed by Nitin. Readiness and priority remain UNKNOWN.",
+      "semantic_evidence_event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "candidate_id": "cat2_35549f8c6f426681",
@@ -1578,8 +1588,9 @@
         "tum sabse mastered.wav",
         "ye raat mastered_00.wav"
       ],
-      "question": "Confirm/correct these eight identities as the eight original-song recreations. Batch TYPE=ORIGINAL_RECREATION is available only after your explicit confirmation. Readiness is a separate decision.",
-      "answer": "UNKNOWN"
+      "question": "Eight identities and TYPE confirmed by Nitin; no further identity confirmation required.",
+      "answer": "YES — all eight are the existing original songs from approximately 2008 in the Vatsal recreation package.",
+      "evidence_event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01"
     },
     {
       "id": "APNA",
@@ -1651,5 +1662,12 @@
     "Final-video approval is not a song-wide music/lyrics/vocals/mix/live approval.",
     "No MASTER_CATALOG_V01 until received review. No publication authorization."
   ],
-  "nitin_2008_identity_status": "AWAITING_CONFIRMATION_AS_EIGHT_ORIGINAL_SONG_RECREATIONS"
+  "nitin_2008_identity_status": "CONFIRMED_BY_NITIN",
+  "applied_semantic_events": [
+    {
+      "event_id": "NITIN_2008_SEMANTIC_CONFIRMATION_V01",
+      "path": "p0e4/evidence/catalog_semantic_events/NITIN_2008_SEMANTIC_CONFIRMATION_V01.json",
+      "sha256": "9fcc6c1ba24ccb97e80dbb0abdb118c12ac1560098d3c079cd0739d118d5db91"
+    }
+  ]
 }
