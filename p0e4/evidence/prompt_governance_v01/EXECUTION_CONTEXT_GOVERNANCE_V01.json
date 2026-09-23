@@ -1,0 +1,52 @@
+{
+  "schema": "EXECUTION_CONTEXT_GOVERNANCE_V01",
+  "schema_version": 1,
+  "context_id": "P0E4_PROMPT_GOVERNANCE_V01",
+  "repository": "NitinBR1406/unchained-pipeline",
+  "branch": "p0e4/slice1-production-handoff",
+  "tested_sha": "c2a55ee411bddcfe57733209cb49380ec3b4bd2a",
+  "master_state_ref": {
+    "uri": "p0e4/MASTER_STATE_LATEST.json",
+    "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+  },
+  "task_state_refs": [
+    {
+      "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+      "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+    },
+    {
+      "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+      "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+    },
+    {
+      "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+      "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+    }
+  ],
+  "authority": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  },
+  "allowed_operations": [
+    "READ_REFERENCED_CONTEXT",
+    "PROPOSE_PROMPT_CANDIDATE",
+    "LINT",
+    "SEMANTIC_EQUIVALENCE_CHECK",
+    "WRITE_REPO_EVIDENCE"
+  ],
+  "forbidden_operations": [
+    "PUBLISH",
+    "PRODUCTION_DEPLOY",
+    "INFER_HUMAN_GATE",
+    "INFER_RIGHTS",
+    "INFER_SOURCE_BINDING",
+    "NEW_COST"
+  ],
+  "budgets": {
+    "max_input_tokens": 12000,
+    "max_output_tokens": 8000,
+    "max_retries": 2,
+    "max_latency_ms": 300000
+  }
+}

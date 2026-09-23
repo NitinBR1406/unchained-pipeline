@@ -1,0 +1,50 @@
+{
+  "schema": "PROMPT_GOVERNANCE_NEXT_READY_V01",
+  "schema_version": 1,
+  "status": "PROMPT_GOVERNANCE_ACCEPTED_RETURN_TO_CRITICAL_PATH",
+  "ready_nonhuman_count": 1,
+  "ordered_critical_path": [
+    {
+      "order": 1,
+      "task_id": "RAW_INGEST_RECONCILE",
+      "status": "READY",
+      "scope": "Read-only reconcile already hashed RAW against ingest contract; do not bind audio."
+    },
+    {
+      "order": 2,
+      "task_id": "POST_READY_CONTRACT",
+      "status": "READY_AFTER_1",
+      "scope": "Build/validate fail-closed contract for post-ingest orchestration."
+    },
+    {
+      "order": 3,
+      "task_id": "REAL_MEDIA_ORCHESTRATION",
+      "status": "DEPENDENCY_BLOCKED",
+      "blocked_by": [
+        "AKI_AUTHORITATIVE_AUDIO_BINDING",
+        "PRODUCTION_DEPLOYMENT_AUTHORIZED"
+      ]
+    },
+    {
+      "order": 4,
+      "task_id": "AAKHRI_ISHQ_RAW_DROP_AUDIO_BINDING",
+      "status": "WAITING_FOR_NITIN",
+      "blocked_by": [
+        "AKI_AUTHORITATIVE_AUDIO_BINDING"
+      ]
+    },
+    {
+      "order": 5,
+      "task_id": "COMPLETE_FACTORY_E2E",
+      "status": "DEPENDENCY_BLOCKED",
+      "blocked_by": [
+        "REAL_MEDIA_ORCHESTRATION",
+        "PRODUCTION_DEPLOYMENT_AUTHORIZED"
+      ]
+    }
+  ],
+  "human_gates_preserved": true,
+  "publication_authorized": false,
+  "production_deployment_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

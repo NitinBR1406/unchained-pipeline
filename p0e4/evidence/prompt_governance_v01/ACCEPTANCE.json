@@ -1,0 +1,35 @@
+{
+  "status": "PASS_OFFLINE_PROMPT_GOVERNANCE",
+  "tested_sha": "c2a55ee411bddcfe57733209cb49380ec3b4bd2a",
+  "template_count": 20,
+  "prompt_classes": [
+    "MICRO_PROMPT",
+    "TASK_PROMPT",
+    "RESEARCH_PROMPT",
+    "HUMAN_GATE_PROMPT",
+    "FULL_CONTRACT_PROMPT"
+  ],
+  "actors": [
+    "CODEX",
+    "CLAUDE",
+    "GEMINI",
+    "NITIN"
+  ],
+  "source_lint_passed": true,
+  "candidate_semantic_equivalence_passed": true,
+  "candidate_auto_promoted": false,
+  "execution_context_validated": true,
+  "protected_semantics": [
+    "human_gates",
+    "acceptance_criteria",
+    "provenance",
+    "rights_source_binding",
+    "evidence_requirements",
+    "governance"
+  ],
+  "external_dispatches": 0,
+  "new_costs": 0,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "PROMPT_GOVERNANCE_REGRESSION_V01",
+  "schema_version": 1,
+  "tested_sha": "c2a55ee411bddcfe57733209cb49380ec3b4bd2a",
+  "focused_tests": {
+    "status": "PASS",
+    "passed": 50,
+    "failed": 0,
+    "includes": [
+      "prompt governance adversarial tests",
+      "catalog and semantic projection",
+      "integration contracts, ingest and projection",
+      "handoff",
+      "V16.3 projection"
+    ]
+  },
+  "deterministic_evidence_replay": "PASS",
+  "broad_discovery": {
+    "tests_reached": 132,
+    "status": "ENVIRONMENT_IMPORT_BLOCKED",
+    "import_errors": 18,
+    "missing_dependency": "jsonschema",
+    "assertion_failures_observed": 0,
+    "dependency_installed": false
+  },
+  "external_dispatches": 0,
+  "new_costs": 0,
+  "production_deployment_authorized": false,
+  "publication_authorized": false
+}

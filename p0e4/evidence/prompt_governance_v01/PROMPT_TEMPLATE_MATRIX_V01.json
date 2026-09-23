@@ -1,0 +1,3841 @@
+{
+  "schema": "PROMPT_TEMPLATE_MATRIX_V01",
+  "schema_version": 1,
+  "count": 20,
+  "actors": [
+    "CODEX",
+    "CLAUDE",
+    "GEMINI",
+    "NITIN"
+  ],
+  "prompt_classes": [
+    "MICRO_PROMPT",
+    "TASK_PROMPT",
+    "RESEARCH_PROMPT",
+    "HUMAN_GATE_PROMPT",
+    "FULL_CONTRACT_PROMPT"
+  ],
+  "all_candidates_equivalent": true,
+  "templates": [
+    {
+      "actor": "CODEX",
+      "prompt_class": "MICRO_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CODEX:MICRO_PROMPT",
+        "prompt_class": "MICRO_PROMPT",
+        "actor": "CODEX",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Perform one atomic deterministic action.",
+          "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Perform one atomic deterministic action."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CODEX:MICRO_PROMPT:candidate:2abefb16aeda",
+        "prompt_class": "MICRO_PROMPT",
+        "actor": "CODEX",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Perform one atomic deterministic action.",
+          "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "ed2eae9aedfe512979b36cd41c6b76469ae357105514102fa5d401a164c386f9",
+        "candidate_sha256": "9c8cd12e5a64009580ef500d2f8ca0613763d10b390bfa2ee6a014f96474b3c8"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "CODEX",
+      "prompt_class": "TASK_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CODEX:TASK_PROMPT",
+        "prompt_class": "TASK_PROMPT",
+        "actor": "CODEX",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Complete the bounded task through its acceptance checks.",
+          "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Complete the bounded task through its acceptance checks."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CODEX:TASK_PROMPT:candidate:3f084436ba15",
+        "prompt_class": "TASK_PROMPT",
+        "actor": "CODEX",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Complete the bounded task through its acceptance checks.",
+          "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "4cd62e9a87f92233de0a023a42c818627ba8b7b571ad27beacd2526061a8f2ea",
+        "candidate_sha256": "ea19f570c8392480c3117eb5afc5528aa9d7349c1db695774f799051bc3bda60"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "CODEX",
+      "prompt_class": "RESEARCH_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CODEX:RESEARCH_PROMPT",
+        "prompt_class": "RESEARCH_PROMPT",
+        "actor": "CODEX",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Separate measured facts, estimates and hypotheses; cite provenance.",
+          "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Separate measured facts, estimates and hypotheses; cite provenance."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CODEX:RESEARCH_PROMPT:candidate:d978134b2929",
+        "prompt_class": "RESEARCH_PROMPT",
+        "actor": "CODEX",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Separate measured facts, estimates and hypotheses; cite provenance.",
+          "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "0ca5442363615b03d3e78ec29c2ab1ebbfa6268a5b8129de274681c07eabc07d",
+        "candidate_sha256": "b351eb62d24e15391e0f3ff72d0ed3572afbcf9b0b12502fe661f3fca736e30f"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "CODEX",
+      "prompt_class": "HUMAN_GATE_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CODEX:HUMAN_GATE_PROMPT",
+        "prompt_class": "HUMAN_GATE_PROMPT",
+        "actor": "CODEX",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Present the smallest concrete decision with exact affected artifacts.",
+          "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Present the smallest concrete decision with exact affected artifacts."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CODEX:HUMAN_GATE_PROMPT:candidate:aca5f949ad9f",
+        "prompt_class": "HUMAN_GATE_PROMPT",
+        "actor": "CODEX",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Present the smallest concrete decision with exact affected artifacts.",
+          "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "b74c51a2be20d2c17815fea1037baeeabef4b302c65373232c3857cd8e498db0",
+        "candidate_sha256": "376a86352745743479330c98a2b0c106102744ef158eea54b380b5fcaf9621e5"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "CODEX",
+      "prompt_class": "FULL_CONTRACT_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CODEX:FULL_CONTRACT_PROMPT",
+        "prompt_class": "FULL_CONTRACT_PROMPT",
+        "actor": "CODEX",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Apply the full referenced contract without weakening constraints.",
+          "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Apply the full referenced contract without weakening constraints."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CODEX:FULL_CONTRACT_PROMPT:candidate:30d0cec7f548",
+        "prompt_class": "FULL_CONTRACT_PROMPT",
+        "actor": "CODEX",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Apply the full referenced contract without weakening constraints.",
+          "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "ec98e243b9046d4bed9af7a411d3364efda8e4aa2f70266f1cdc53dabd7ec36f",
+        "candidate_sha256": "06790973928873b4e5cc14d23e19ffa61b739a5f4238c6f7b4dceac2dcb70be4"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "CLAUDE",
+      "prompt_class": "MICRO_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CLAUDE:MICRO_PROMPT",
+        "prompt_class": "MICRO_PROMPT",
+        "actor": "CLAUDE",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Perform one atomic deterministic action.",
+          "Execute only the explicitly scoped integration task and return a bounded receipt.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Perform one atomic deterministic action."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CLAUDE:MICRO_PROMPT:candidate:01217d5b81a9",
+        "prompt_class": "MICRO_PROMPT",
+        "actor": "CLAUDE",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Perform one atomic deterministic action.",
+          "Execute only the explicitly scoped integration task and return a bounded receipt.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "9454200d4997460ec56c8194be4588069cef4d6ac004b620663a45a927dd587b",
+        "candidate_sha256": "f4cf91df16c6ab4a9848859f6ab7ea673d820e5d4808cf254837a95450f8f96a"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "CLAUDE",
+      "prompt_class": "TASK_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CLAUDE:TASK_PROMPT",
+        "prompt_class": "TASK_PROMPT",
+        "actor": "CLAUDE",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Complete the bounded task through its acceptance checks.",
+          "Execute only the explicitly scoped integration task and return a bounded receipt.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Complete the bounded task through its acceptance checks."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CLAUDE:TASK_PROMPT:candidate:b27aad4dff2c",
+        "prompt_class": "TASK_PROMPT",
+        "actor": "CLAUDE",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Complete the bounded task through its acceptance checks.",
+          "Execute only the explicitly scoped integration task and return a bounded receipt.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "fa2563bff508b7653ec0645c47bbc14142deffef538c28de729a256c7e4bbf64",
+        "candidate_sha256": "c6d3f9a1b73ad8a7b57219381c673412dbe730d64ea5f0e46ce53225c99d46fd"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "CLAUDE",
+      "prompt_class": "RESEARCH_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CLAUDE:RESEARCH_PROMPT",
+        "prompt_class": "RESEARCH_PROMPT",
+        "actor": "CLAUDE",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Separate measured facts, estimates and hypotheses; cite provenance.",
+          "Execute only the explicitly scoped integration task and return a bounded receipt.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Separate measured facts, estimates and hypotheses; cite provenance."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CLAUDE:RESEARCH_PROMPT:candidate:5797250a81a7",
+        "prompt_class": "RESEARCH_PROMPT",
+        "actor": "CLAUDE",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Separate measured facts, estimates and hypotheses; cite provenance.",
+          "Execute only the explicitly scoped integration task and return a bounded receipt.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "af015c36b8fbdb2c097eebafa1a69a21b7df9ef902c756b8c4120cc9b4c524ad",
+        "candidate_sha256": "5467641847c87e770c292126cb09327f3a8a3b1f5a1440c0328e4b1a956ba809"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "CLAUDE",
+      "prompt_class": "HUMAN_GATE_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CLAUDE:HUMAN_GATE_PROMPT",
+        "prompt_class": "HUMAN_GATE_PROMPT",
+        "actor": "CLAUDE",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Present the smallest concrete decision with exact affected artifacts.",
+          "Execute only the explicitly scoped integration task and return a bounded receipt.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Present the smallest concrete decision with exact affected artifacts."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CLAUDE:HUMAN_GATE_PROMPT:candidate:dcec12917823",
+        "prompt_class": "HUMAN_GATE_PROMPT",
+        "actor": "CLAUDE",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Present the smallest concrete decision with exact affected artifacts.",
+          "Execute only the explicitly scoped integration task and return a bounded receipt.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "68035cc7ac171438d673a5e16d61733fd0368e1748fc102781244a3bab9b557d",
+        "candidate_sha256": "d1f1bbbf72ceaa8976edda4ddd9149cc35003a5e8e7ab94a6c840f0ccd25139e"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "CLAUDE",
+      "prompt_class": "FULL_CONTRACT_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CLAUDE:FULL_CONTRACT_PROMPT",
+        "prompt_class": "FULL_CONTRACT_PROMPT",
+        "actor": "CLAUDE",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Apply the full referenced contract without weakening constraints.",
+          "Execute only the explicitly scoped integration task and return a bounded receipt.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Apply the full referenced contract without weakening constraints."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:CLAUDE:FULL_CONTRACT_PROMPT:candidate:8e1aa3c36c84",
+        "prompt_class": "FULL_CONTRACT_PROMPT",
+        "actor": "CLAUDE",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Apply the full referenced contract without weakening constraints.",
+          "Execute only the explicitly scoped integration task and return a bounded receipt.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "6a937bf89800255c00247dd1aec516ad763c1e4d5c7a37b5f3b7fa7cd207ec76",
+        "candidate_sha256": "f4f39860536bc162fc2ac40e453e7642f43295e16f60502aeaacf3cd95f9727c"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "GEMINI",
+      "prompt_class": "MICRO_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:GEMINI:MICRO_PROMPT",
+        "prompt_class": "MICRO_PROMPT",
+        "actor": "GEMINI",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Perform one atomic deterministic action.",
+          "Perform independent intelligence or QC without claiming execution or approval.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Perform one atomic deterministic action."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:GEMINI:MICRO_PROMPT:candidate:98c46aeccb13",
+        "prompt_class": "MICRO_PROMPT",
+        "actor": "GEMINI",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Perform one atomic deterministic action.",
+          "Perform independent intelligence or QC without claiming execution or approval.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "abad690173ffd6ca5b12ab9bfbc6e2578bbdf5d9929a3d1cc69419499ac33461",
+        "candidate_sha256": "b373a7f2e88d188e12971e05cb7bd975fc169c51b9171085fb9b6b7f113b4de4"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "GEMINI",
+      "prompt_class": "TASK_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:GEMINI:TASK_PROMPT",
+        "prompt_class": "TASK_PROMPT",
+        "actor": "GEMINI",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Complete the bounded task through its acceptance checks.",
+          "Perform independent intelligence or QC without claiming execution or approval.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Complete the bounded task through its acceptance checks."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:GEMINI:TASK_PROMPT:candidate:6da51830f93c",
+        "prompt_class": "TASK_PROMPT",
+        "actor": "GEMINI",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Complete the bounded task through its acceptance checks.",
+          "Perform independent intelligence or QC without claiming execution or approval.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "5f284c1e04e19e33b26b19e43b10983697ae4361df75ae3359d5c865f2edb338",
+        "candidate_sha256": "36b19cf936153e18f0b333720c82e7ef1f5dcb187520cf25ce0bba9dacd81532"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "GEMINI",
+      "prompt_class": "RESEARCH_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:GEMINI:RESEARCH_PROMPT",
+        "prompt_class": "RESEARCH_PROMPT",
+        "actor": "GEMINI",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Separate measured facts, estimates and hypotheses; cite provenance.",
+          "Perform independent intelligence or QC without claiming execution or approval.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Separate measured facts, estimates and hypotheses; cite provenance."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:GEMINI:RESEARCH_PROMPT:candidate:ff644ec72a0f",
+        "prompt_class": "RESEARCH_PROMPT",
+        "actor": "GEMINI",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Separate measured facts, estimates and hypotheses; cite provenance.",
+          "Perform independent intelligence or QC without claiming execution or approval.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "12a14070f7d20119cb2f3cd116bc394c119e0e8a73cc25032ea8cb91301a647a",
+        "candidate_sha256": "c4a0f4e33efb9ec68fbcc0be91b20705660b5d8bd84f364df261b2a6b0df0564"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "GEMINI",
+      "prompt_class": "HUMAN_GATE_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:GEMINI:HUMAN_GATE_PROMPT",
+        "prompt_class": "HUMAN_GATE_PROMPT",
+        "actor": "GEMINI",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Present the smallest concrete decision with exact affected artifacts.",
+          "Perform independent intelligence or QC without claiming execution or approval.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Present the smallest concrete decision with exact affected artifacts."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:GEMINI:HUMAN_GATE_PROMPT:candidate:81fd36e01e7f",
+        "prompt_class": "HUMAN_GATE_PROMPT",
+        "actor": "GEMINI",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Present the smallest concrete decision with exact affected artifacts.",
+          "Perform independent intelligence or QC without claiming execution or approval.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "cdf014699cbd0dbe594d545788a809a80aec2696f866447e2416543fdc280a83",
+        "candidate_sha256": "ca50c42a970274247e2261ebd9bf1c6e86c38709eb890cc9e1c43ccc12cba813"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "GEMINI",
+      "prompt_class": "FULL_CONTRACT_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:GEMINI:FULL_CONTRACT_PROMPT",
+        "prompt_class": "FULL_CONTRACT_PROMPT",
+        "actor": "GEMINI",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Apply the full referenced contract without weakening constraints.",
+          "Perform independent intelligence or QC without claiming execution or approval.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Apply the full referenced contract without weakening constraints."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:GEMINI:FULL_CONTRACT_PROMPT:candidate:9383287e1a73",
+        "prompt_class": "FULL_CONTRACT_PROMPT",
+        "actor": "GEMINI",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Apply the full referenced contract without weakening constraints.",
+          "Perform independent intelligence or QC without claiming execution or approval.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "c7b64be2368817a41c2d079c863abe5b9464e88a69a7cd23fa188b1c3b254c6e",
+        "candidate_sha256": "ea2f31b6ccb2c71cd282817b852e86fb336cc41f2b52f04e44f656fe70832ddc"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "NITIN",
+      "prompt_class": "MICRO_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:NITIN:MICRO_PROMPT",
+        "prompt_class": "MICRO_PROMPT",
+        "actor": "NITIN",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Perform one atomic deterministic action.",
+          "Decide only the named human gate; unknown or rejected are valid answers.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Perform one atomic deterministic action."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:NITIN:MICRO_PROMPT:candidate:bab807afedc8",
+        "prompt_class": "MICRO_PROMPT",
+        "actor": "NITIN",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Perform one atomic deterministic action.",
+          "Decide only the named human gate; unknown or rejected are valid answers.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "b9ed94249f53a6f1c303b79bf9f1f5b1cf6a350093d9d125b5d0e24ad2d84b99",
+        "candidate_sha256": "131d0f92a9902066397c8063f3655ff5500738438308b97763b4f73b15e66d26"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "NITIN",
+      "prompt_class": "TASK_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:NITIN:TASK_PROMPT",
+        "prompt_class": "TASK_PROMPT",
+        "actor": "NITIN",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Complete the bounded task through its acceptance checks.",
+          "Decide only the named human gate; unknown or rejected are valid answers.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Complete the bounded task through its acceptance checks."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:NITIN:TASK_PROMPT:candidate:27cf1b3ccec3",
+        "prompt_class": "TASK_PROMPT",
+        "actor": "NITIN",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Complete the bounded task through its acceptance checks.",
+          "Decide only the named human gate; unknown or rejected are valid answers.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "a47683eb3539ecf2479b5110868768a376977ebe65723504d5bda8c73f96b07d",
+        "candidate_sha256": "f93e461a78d91b73fa478816ab87f13e0242229986b84ef9a2eda73271ce0dad"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "NITIN",
+      "prompt_class": "RESEARCH_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:NITIN:RESEARCH_PROMPT",
+        "prompt_class": "RESEARCH_PROMPT",
+        "actor": "NITIN",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Separate measured facts, estimates and hypotheses; cite provenance.",
+          "Decide only the named human gate; unknown or rejected are valid answers.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Separate measured facts, estimates and hypotheses; cite provenance."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:NITIN:RESEARCH_PROMPT:candidate:36be6e6079ba",
+        "prompt_class": "RESEARCH_PROMPT",
+        "actor": "NITIN",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Separate measured facts, estimates and hypotheses; cite provenance.",
+          "Decide only the named human gate; unknown or rejected are valid answers.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "c8a02b1c92db5cc7e27d264779e8bdc346c852e20d811cdb485018fab44a8902",
+        "candidate_sha256": "e061d06e8bd38328d5858958c87f002d82d8f871c24add992ef33b8dd02b6ee9"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "NITIN",
+      "prompt_class": "HUMAN_GATE_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:NITIN:HUMAN_GATE_PROMPT",
+        "prompt_class": "HUMAN_GATE_PROMPT",
+        "actor": "NITIN",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Present the smallest concrete decision with exact affected artifacts.",
+          "Decide only the named human gate; unknown or rejected are valid answers.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Present the smallest concrete decision with exact affected artifacts."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:NITIN:HUMAN_GATE_PROMPT:candidate:2cc33d5aeffc",
+        "prompt_class": "HUMAN_GATE_PROMPT",
+        "actor": "NITIN",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Present the smallest concrete decision with exact affected artifacts.",
+          "Decide only the named human gate; unknown or rejected are valid answers.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "3d12b3bf2d561298c5a0f0c74dbac0f27635677fe00ac67c436a923d0d7b8e23",
+        "candidate_sha256": "946c6406f76d92a88ea317ad0eb41178b4f266fafd0ca7a14e87cc839a8cd40c"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    },
+    {
+      "actor": "NITIN",
+      "prompt_class": "FULL_CONTRACT_PROMPT",
+      "source": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:NITIN:FULL_CONTRACT_PROMPT",
+        "prompt_class": "FULL_CONTRACT_PROMPT",
+        "actor": "NITIN",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Apply the full referenced contract without weakening constraints.",
+          "Decide only the named human gate; unknown or rejected are valid answers.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates.",
+          "Apply the full referenced contract without weakening constraints."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "source_lint": {
+        "status": "PASS",
+        "findings": [
+          {
+            "severity": "WARN",
+            "code": "DUPLICATION",
+            "index": 4
+          }
+        ]
+      },
+      "candidate": {
+        "schema": "GOVERNED_PROMPT_V01",
+        "schema_version": 1,
+        "prompt_id": "P0E4:NITIN:FULL_CONTRACT_PROMPT:candidate:3c78cee26b87",
+        "prompt_class": "FULL_CONTRACT_PROMPT",
+        "actor": "NITIN",
+        "objective": "Produce the minimum-cost accepted GREEN result within the referenced scope.",
+        "context_refs": [
+          {
+            "uri": "p0e4/evidence/prompt_governance_v01/EXECUTION_CONTEXT_GOVERNANCE_V01.json",
+            "sha256": "51e01a50f5503633b8bd1e8e6b0382da19f6444fac4d825036053843f36755fa"
+          },
+          {
+            "uri": "p0e4/MASTER_STATE_LATEST.json",
+            "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635"
+          },
+          {
+            "uri": "p0e4/evidence/resolve_studio_v163/NEXT_READY.json",
+            "sha256": "1b92fd4273b303f0afa710a9c58f4661a2ac023ca0bf56b9563620c0022d0ac8"
+          },
+          {
+            "uri": "p0e4/evidence/catalog_minimal_review_v01/NEXT_READY.json",
+            "sha256": "7f3b85c0525b4874cc3a03b5976b1a66c4a3a5ae79ac76c5c52aebbaf151c770"
+          },
+          {
+            "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
+            "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+          }
+        ],
+        "instructions": [
+          "Apply the full referenced contract without weakening constraints.",
+          "Decide only the named human gate; unknown or rejected are valid answers.",
+          "Use repository and state references; do not copy large context blocks.",
+          "Stop at genuine human, credential, financial, rights or governance gates."
+        ],
+        "protected_semantics": {
+          "human_gates": [
+            "Never infer or fabricate Nitin approval."
+          ],
+          "acceptance_criteria": [
+            "GREEN requires the referenced acceptance contract and exact evidence."
+          ],
+          "provenance": [
+            "Preserve producer, run, source and model provenance."
+          ],
+          "rights_source_binding": [
+            "Rights and authoritative source/audio binding remain explicit gates."
+          ],
+          "evidence_requirements": [
+            "Bind evidence to the exact tested SHA and verify referenced hashes."
+          ],
+          "governance": [
+            "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+            "PUBLICATION_AUTHORIZED=false",
+            "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+          ]
+        },
+        "output_contract": {
+          "required": [
+            "status",
+            "evidence_refs",
+            "metrics",
+            "limitations"
+          ],
+          "unknowns": "EXPLICIT",
+          "semantic_drift": "FAIL_CLOSED"
+        },
+        "metrics_contract": [
+          "input_tokens",
+          "output_tokens",
+          "cost",
+          "latency_ms",
+          "retries",
+          "failures",
+          "semantic_drift",
+          "accepted_green"
+        ]
+      },
+      "candidate_lint": {
+        "status": "PASS",
+        "findings": []
+      },
+      "semantic_equivalence": {
+        "status": "PASS",
+        "checks": {
+          "objective_equal": true,
+          "context_refs_equal": true,
+          "protected_semantics_equal": true,
+          "output_contract_equal": true,
+          "metrics_contract_equal": true,
+          "actor_equal": true,
+          "prompt_class_equal": true,
+          "instruction_set_equal": true
+        },
+        "source_sha256": "6417a9981514614392976d54e92ce7a83dbf1461b812f276739132428d498723",
+        "candidate_sha256": "ee9bb43ce9d80c2f71685115f71f084cbb3789d0db1d68513a839c9b3ac54819"
+      },
+      "promotion_status": "ELIGIBLE_FOR_REVIEW_NOT_AUTO_PROMOTED"
+    }
+  ]
+}
