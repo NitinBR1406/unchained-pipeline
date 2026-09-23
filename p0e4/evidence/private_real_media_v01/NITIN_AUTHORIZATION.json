@@ -1,0 +1,22 @@
+{
+  "event_id": "PRIVATE_REAL_MEDIA_ACCEPTANCE_GO_V01",
+  "event_type": "NITIN_PRIVATE_REAL_MEDIA_ACCEPTANCE_AUTHORIZATION",
+  "scope": "AAKHRI_ISHQ_BOUND_RAW_AUDIO_PRIVATE_E2E",
+  "output_class": "PRIVATE_LOCAL_REVIEW_ONLY",
+  "allowed_surfaces": [
+    "LOCAL_DAVINCI_RESOLVE",
+    "GEMINI_PRIVATE_QC",
+    "CLAUDE_PRIVATE_TRANSLATION"
+  ],
+  "forbidden_operations": [
+    "PUBLICATION",
+    "PRODUCTION_DEPLOYMENT",
+    "LIVE_MAKE_CUTOVER",
+    "SHARED_DRIVE_MUTATION",
+    "INFER_NITIN_APPROVAL"
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "source_statement": "P0-E4 PRIVATE REAL-MEDIA ACCEPTANCE — GO. Implement and validate PRIVATE_REAL_MEDIA_ACCEPTANCE_V01 so private/non-publishing real-media E2E testing is explicitly distinct from production deployment. Preserve PRODUCTION_DEPLOYMENT_AUTHORIZED=false, PUBLICATION_AUTHORIZED=false, FIRST_REAL_POSTER=PAUSED_BY_NITIN."
+}
