@@ -74,7 +74,7 @@ def build():
     write('REVIEW_REDUCTION_AUDIT',{'counts':counts,'candidate_dispositions':dispositions,'categories':categories,'original_exclusions':read('NON_SONG_EXCLUSIONS'),'existing_containers':read('COLLECTIONS_AND_CHILDREN'),'exact_hash_links':links,'unassigned_duplicate_alias_groups':duplicate_only,'unassigned_representatives':unassigned,'admin_embedded_media_retained':retained_admin_media,'limitations':['No identity merges on names or sizes. No new iCloud reads.','75 immediate semantic rows remain because readiness is not technically provable.','Two conditional rows and six media folders need identity decisions; no candidates silently dropped.']})
     fields=['candidate_id','name','path','block','identity_confirmed',*allowed]
     with (OUT/'NITIN_MINIMAL_SEMANTIC_REVIEW_V01.csv').open('w',newline='') as f:
-        w=csv.DictWriter(f,fields,extrasaction='ignore');w.writeheader();w.writerows(rows)
+        w=csv.DictWriter(f,fields,extrasaction='ignore',lineterminator='\n');w.writeheader();w.writerows(rows)
     assert len(dispositions)==88 and len({x['candidate_id'] for x in dispositions})==88
     assert len(rows)==77 and counts['immediate_semantic_rows']==75 and len(links)==2
     assert sum(r['block']=='nitin_2008_children' for r in rows)==8
