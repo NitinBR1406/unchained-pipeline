@@ -1,0 +1,35 @@
+{
+  "schema": "REAL_MEDIA_ORCHESTRATION_PLAN_V01",
+  "schema_version": 1,
+  "content_id": "aakhri-ishq",
+  "mode": "PLAN_ONLY_NO_EXECUTION",
+  "inputs": [
+    {
+      "role": "raw_video",
+      "uri": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/Campaigns/Aakhri-Ishq/00_Source-Raw/AKI_SOURCE_0902_V01.mov",
+      "sha256": "50144b7d4754355cdfa69a2be626709116e5aead1faa566bbb4e1ab361ea8790",
+      "bytes": 323607983
+    },
+    {
+      "role": "authoritative_audio",
+      "uri": "/Users/nitinramdaras/Library/Mobile Documents/com~apple~CloudDocs/Aakhri Ishq/AAKHRI ISHQ MASTER 2.wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+      "bytes": 61749398,
+      "binding_event_id": "AKI_AUTHORITATIVE_AUDIO_BINDING_V01"
+    }
+  ],
+  "ordered_stages": [
+    "HASH_REVERIFY",
+    "TECHNICAL_DECODE",
+    "EDIT_PLAN_BINDING",
+    "RESOLVE_RENDER",
+    "TECHNICAL_QC",
+    "INDEPENDENT_REAL_MEDIA_QC",
+    "PACKAGE_EVIDENCE"
+  ],
+  "execution_status": "BLOCKED_PENDING_PRODUCTION_DEPLOYMENT_AUTHORIZATION",
+  "rights_clearance": "NOT_INFERRED",
+  "publication_authorized": false,
+  "production_deployment_authorized": false,
+  "source_mutations": 0
+}

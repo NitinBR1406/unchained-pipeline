@@ -1,12 +1,14 @@
 {
   "schema": "POST_READY_NEXT_READY_V01",
   "schema_version": 1,
-  "status": "WAITING_FOR_NITIN",
+  "status": "WAITING_FOR_NITIN_PRODUCTION_DEPLOYMENT_AUTHORIZATION",
   "ready_nonhuman_count": 0,
   "completed": [
     "PROMPT_GOVERNANCE_V01",
     "RAW_INGEST_RECONCILE",
-    "POST_READY_CONTRACT"
+    "POST_READY_CONTRACT",
+    "AAKHRI_ISHQ_RAW_DROP_AUDIO_BINDING",
+    "REAL_MEDIA_ORCHESTRATION_PLAN"
   ],
   "critical_path": [
     "RAW_INGEST",
@@ -15,10 +17,10 @@
     "AAKHRI_ISHQ_RAW_DROP_AUDIO_BINDING",
     "COMPLETE_FACTORY_E2E"
   ],
-  "next_task": "AAKHRI_ISHQ_RAW_DROP_AUDIO_BINDING",
-  "human_gate": "AKI_AUTHORITATIVE_AUDIO_BINDING",
+  "next_task": "REAL_MEDIA_ORCHESTRATION",
+  "human_gate": "PRODUCTION_DEPLOYMENT_AUTHORIZED",
   "blocked_after_gate": [
-    "REAL_MEDIA_ORCHESTRATION requires production deployment authorization",
+    "REAL_MEDIA_ORCHESTRATION requires explicit production deployment authorization",
     "COMPLETE_FACTORY_E2E requires accepted real-media orchestration"
   ],
   "production_deployment_authorized": false,

@@ -2,8 +2,8 @@
   "schema": "POST_READY_CONTRACT_V01",
   "schema_version": 1,
   "content_id": "aakhri-ishq",
-  "status": "WAITING_FOR_NITIN_AUDIO_SOURCE_BINDING",
-  "next_stage": "AAKHRI_ISHQ_RAW_DROP_AUDIO_BINDING",
+  "status": "AUDIO_BOUND_WAITING_FOR_PRODUCTION_DEPLOYMENT_AUTHORIZATION",
+  "next_stage": "REAL_MEDIA_ORCHESTRATION",
   "required_before_real_media": [
     "AUTHORITATIVE_RAW_AUDIO_PAIR",
     "PRODUCTION_DEPLOYMENT_AUTHORIZED"

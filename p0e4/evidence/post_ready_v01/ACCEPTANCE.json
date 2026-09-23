@@ -1,7 +1,7 @@
 {
   "schema": "POST_READY_ACCEPTANCE_V01",
   "schema_version": 1,
-  "tested_sha": "98957f1a7703c66a4db9a6b557276ae98319898a",
+  "tested_sha": "50b08fe0608cf0139e8a1faf4945d889d6eaef66",
   "raw_evidence_refs": [
     {
       "uri": "p0e4/evidence/target_v13/RAW_HASH.json",
@@ -10,13 +10,22 @@
     {
       "uri": "p0e4/evidence/target_v13/AAKHRI_ISHQ_INPUT_BINDING.json",
       "sha256": "277d03766a1f1f01c9df2c5acfba07c46c808b9fee9c1b98d462c43ad5c288fd"
+    },
+    {
+      "uri": "p0e4/evidence/audio_binding_v01/NITIN_AUTHORIZATION.json",
+      "sha256": "355c3342465154b881ece2616570f6b276d7e18490a6f6216ce13bcd33c67223"
+    },
+    {
+      "uri": "p0e4/evidence/audio_binding_v01/AUDIO_BYTE_OBSERVATION.json",
+      "sha256": "c56017ab738dfa92454e66a3a37b783f63ae9184fc27601a5add434d7f0e9e6f"
     }
   ],
   "raw_identity_reconciled": true,
-  "authoritative_audio_bound": false,
+  "authoritative_audio_bound": true,
   "post_ready_contract_validated": true,
   "source_mutations": 0,
   "real_media_orchestration_started": false,
+  "real_media_orchestration_plan_ready": true,
   "factory_e2e_complete": false,
   "production_deployment_authorized": false,
   "publication_authorized": false

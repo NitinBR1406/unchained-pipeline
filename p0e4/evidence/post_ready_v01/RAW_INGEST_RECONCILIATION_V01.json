@@ -12,10 +12,17 @@
     "source_mutations": 0
   },
   "raw_contract_status": "RAW_IDENTITY_HASH_RECONCILED",
-  "full_ingest_status": "BLOCKED_MISSING_AUTHORITATIVE_AUDIO",
-  "authoritative_audio": null,
-  "human_gate": "AKI_AUTHORITATIVE_AUDIO_BINDING",
+  "full_ingest_status": "RAW_AUDIO_PAIR_IDENTITY_BOUND_BYTES_HASHED",
+  "authoritative_audio": {
+    "role": "authoritative_audio",
+    "uri": "/Users/nitinramdaras/Library/Mobile Documents/com~apple~CloudDocs/Aakhri Ishq/AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "bytes": 61749398,
+    "binding_event_id": "AKI_AUTHORITATIVE_AUDIO_BINDING_V01"
+  },
+  "human_gate": null,
   "source_mutations": 0,
   "production_deployment_authorized": false,
-  "publication_authorized": false
+  "publication_authorized": false,
+  "audio_source_mutations": 0
 }
