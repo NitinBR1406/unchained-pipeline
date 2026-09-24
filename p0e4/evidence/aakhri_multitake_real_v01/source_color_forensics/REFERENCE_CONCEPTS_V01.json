@@ -1,0 +1,27 @@
+{
+  "IDENTITY_ROUNDTRIP_REFERENCE": {
+    "base_layer_hlg_identity_supported": true,
+    "definition": "Four-second 10+ bit ProRes 422 HQ Rec.2100 HLG base-layer roundtrip sample; not a camera original and not full Dolby display identity.",
+    "dolby_vision_metadata_preserved": false,
+    "full_source_display_identity_demonstrated": false,
+    "kind": "ZERO_CREATIVE_GRADE_RENDER",
+    "may_be_called_raw": false,
+    "sha256": "637e6eb0a7b92ce74486815f5a0e3af605e0bbaa23805db6547cbe2eba7e7bef"
+  },
+  "RESOLVE_DECODE_REFERENCE": {
+    "bit_depth": "10",
+    "definition": "Resolve decode of the exact source bytes with metadata-supported Rec.2100 HLG input interpretation and no creative grade.",
+    "input_interpretation": "Rec.2100 HLG",
+    "kind": "DECODED_UNGRADED_VIEW"
+  },
+  "SOURCE_BYTES_REFERENCE": {
+    "definition": "Exact original MOV bytes plus container/codec/Apple metadata; no rendered surrogate.",
+    "kind": "HASH_BOUND_CAMERA_ORIGINALS",
+    "source_sha256": {
+      "IMG_5739.MOV": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+      "IMG_5740.MOV": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "IMG_5741.MOV": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "IMG_5742.MOV": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+    }
+  }
+}

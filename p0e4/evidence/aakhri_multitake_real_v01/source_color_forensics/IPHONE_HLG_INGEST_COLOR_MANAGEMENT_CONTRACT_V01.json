@@ -1,0 +1,35 @@
+{
+  "applies_to": "metadata-proven BT.2020 HLG 10-bit iPhone footage",
+  "detection": {
+    "dolby_metadata": "record presence and preservation capability separately",
+    "minimum_bit_depth": 10,
+    "required_matrix": "ITU_R_2020",
+    "required_primaries": "ITU_R_2020",
+    "required_transfer": "ITU_R_2100_HLG"
+  },
+  "fail_closed": [
+    "UNKNOWN_OR_CONFLICTING_TAGS",
+    "BIT_DEPTH_BELOW_EXPECTED",
+    "DOLBY_METADATA_LOSS_CLAIMED_AS_FULL_IDENTITY",
+    "UNMANAGED_REC709_PROJECT_FOR_HLG_IDENTITY_REFERENCE",
+    "RENDER_TAGS_DIFFER_FROM_CONTRACT"
+  ],
+  "full_master_render_authorized": false,
+  "reference_naming": {
+    "RAW_label": "FORBIDDEN unless full identity including relevant dynamic metadata is demonstrated",
+    "camera_original": "SOURCE_BYTES_REFERENCE",
+    "decoded_view": "RESOLVE_DECODE_REFERENCE",
+    "zero_grade_render": "IDENTITY_ROUNDTRIP_REFERENCE"
+  },
+  "resolve": {
+    "colorScienceMode": "davinciYRGBColorManaged",
+    "gamut_mapping": "None",
+    "input": "Rec.2100 HLG",
+    "input_override_policy": "only when source metadata proves assignment and Resolve auto-detection disagrees",
+    "isAutoColorManage": "0",
+    "output_for_identity_test": "Rec.2100 HLG",
+    "timeline": "Rec.2100 HLG",
+    "tone_mapping": "None"
+  },
+  "schema": "IPHONE_HLG_INGEST_COLOR_MANAGEMENT_CONTRACT_V01"
+}

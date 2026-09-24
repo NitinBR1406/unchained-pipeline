@@ -1,0 +1,9 @@
+{
+  "authority": "NITIN",
+  "creative_grading_suspended": true,
+  "full_master_render_forbidden": true,
+  "reason": "potential source color management defect",
+  "schema": "R5_COLOR_SELECTION_SUSPENSION_V01",
+  "status": "SUSPENDED_PENDING_SOURCE_COLOR_REFERENCE_VALIDATION",
+  "supersedes_next_gate": "NITIN_R5_COLOR_DIRECTION_SELECTION"
+}

@@ -1,0 +1,30 @@
+{
+  "adversarial_guards": [
+    "AMBIGUOUS_SOURCE_TAGS_FAIL_CLOSED",
+    "LOW_BIT_DEPTH_FAIL_CLOSED",
+    "UNMANAGED_REC709_IDENTITY_FAILS_CLOSED",
+    "RAW_LABEL_FORBIDDEN_WITHOUT_FULL_IDENTITY",
+    "DOLBY_METADATA_LOSS_REMAINS_EXPLICIT",
+    "FULL_MASTER_FORBIDDEN"
+  ],
+  "full_p0e4_regression": {
+    "result": "PASS",
+    "runtime": "bundled Python 3.12 plus frozen /private/tmp/unchained-p0e4-testdeps",
+    "tests": 293
+  },
+  "resolve_identity_render": {
+    "creative_grade_applied": false,
+    "duration_bearing_video_frames": 120,
+    "duration_seconds": 4,
+    "full_master_rendered": false,
+    "result": "PASS"
+  },
+  "schema": "SOURCE_COLOR_FORENSICS_REGRESSION_V01",
+  "shared_drive_persistence": "PASS_ALL_5_REVIEW_ASSETS_PLUS_RECEIPT_READBACK",
+  "source_integrity": "PASS_FOUR_HASHES_UNCHANGED",
+  "status": "GREEN_FOR_SOURCE_COLOR_REFERENCE_VALIDATION_ONLY",
+  "targeted_source_color_tests": {
+    "result": "PASS",
+    "tests": 8
+  }
+}

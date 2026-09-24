@@ -1,0 +1,14 @@
+{
+  "conclusion": "R5 RAW_REFERENCE was a transformed/re-tagged rendition and was not identity-preserving. The evidence proves color-tag, bit-depth/codec, and dynamic-metadata changes; it does not claim which internal pass-through/tone-map operation Resolve applied beyond the recorded settings.",
+  "facts": {
+    "identity_test": "explicit color-managed Rec.2100 HLG pipeline, ProRes 422 HQ HLG output",
+    "r5_project": "unmanaged DaVinci YRGB with Rec.709 timeline/output defaults",
+    "r5_reference_output": "H.264 Rec.709 primaries/transfer/matrix without dvvC",
+    "source": "10-bit HEVC BT.2020 Rec.2100 HLG with dvvC Dolby Vision metadata"
+  },
+  "r5_color_selection": "SUSPENDED",
+  "remaining_uncertainty": "Resolve preserved the HLG base layer closely but did not preserve Dolby Vision dvvC metadata, so iPhone Dolby display equivalence requires Nitin validation.",
+  "repair": "Generic iPhone HLG ingest/reference contract added; old R5 assets retained as historical evidence and must not be used for creative direction selection.",
+  "schema": "SOURCE_COLOR_MANAGEMENT_DEFECT_V01",
+  "status": "PROVEN"
+}

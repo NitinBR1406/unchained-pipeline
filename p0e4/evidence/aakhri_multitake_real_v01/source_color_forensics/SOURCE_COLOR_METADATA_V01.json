@@ -1,0 +1,370 @@
+{
+  "probe": "AVFoundation_CMFormatDescription",
+  "schema": "SOURCE_COLOR_METADATA_V01",
+  "source_files": [
+    {
+      "duration_seconds": 211.28166666666667,
+      "estimated_data_rate": 35393312,
+      "format_descriptions": [
+        {
+          "all_extension_keys": [
+            "AmbientViewingEnvironment",
+            "BitsPerComponent",
+            "CVFieldCount",
+            "CVImageBufferChromaLocationBottomField",
+            "CVImageBufferChromaLocationTopField",
+            "CVImageBufferColorPrimaries",
+            "CVImageBufferTransferFunction",
+            "CVImageBufferYCbCrMatrix",
+            "Depth",
+            "FormatName",
+            "FullRangeVideo",
+            "RevisionLevel",
+            "SampleDescriptionExtensionAtoms",
+            "SpatialQuality",
+            "TemporalQuality",
+            "VerbatimSampleDescription",
+            "Version"
+          ],
+          "dimensions": {
+            "height": 2160,
+            "width": 3840
+          },
+          "extensions_safe": {
+            "AmbientViewingEnvironment": {
+              "data_bytes": 8,
+              "sha_prefix": "002fe9a03d134042"
+            },
+            "BitsPerComponent": 10,
+            "CVFieldCount": 1,
+            "CVImageBufferChromaLocationBottomField": "Left",
+            "CVImageBufferChromaLocationTopField": "Left",
+            "CVImageBufferColorPrimaries": "ITU_R_2020",
+            "CVImageBufferTransferFunction": "ITU_R_2100_HLG",
+            "CVImageBufferYCbCrMatrix": "ITU_R_2020",
+            "Depth": 24,
+            "FormatName": "HEVC",
+            "FullRangeVideo": false,
+            "RevisionLevel": 0,
+            "SampleDescriptionExtensionAtoms": {
+              "dvvC": {
+                "data_bytes": 24,
+                "sha_prefix": "0100103d40000000"
+              },
+              "hvcC": {
+                "data_bytes": 124,
+                "sha_prefix": "010220000000b000"
+              }
+            },
+            "SpatialQuality": 512,
+            "TemporalQuality": 512,
+            "VerbatimSampleDescription": {
+              "data_bytes": 288,
+              "sha_prefix": "0000012068766331"
+            },
+            "Version": 0
+          },
+          "known_color_extensions": {
+            "CVImageBufferChromaLocationBottomField": "Left",
+            "CVImageBufferChromaLocationTopField": "Left",
+            "CVImageBufferColorPrimaries": "ITU_R_2020",
+            "CVImageBufferTransferFunction": "ITU_R_2100_HLG",
+            "CVImageBufferYCbCrMatrix": "ITU_R_2020"
+          },
+          "media_subtype": "hvc1"
+        }
+      ],
+      "natural_size": {
+        "height": 2160,
+        "width": 3840
+      },
+      "nominal_fps": 29.983434677124023,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5739.MOV",
+      "relevant_quicktime_metadata": [
+        {
+          "identifier": "mdta/com.apple.quicktime.model",
+          "key": "Optional(com.apple.quicktime.model)",
+          "value": "iPhone 14 Pro"
+        },
+        {
+          "identifier": "mdta/com.apple.quicktime.software",
+          "key": "Optional(com.apple.quicktime.software)",
+          "value": "26.6"
+        }
+      ]
+    },
+    {
+      "duration_seconds": 49.593333333333334,
+      "estimated_data_rate": 34564140,
+      "format_descriptions": [
+        {
+          "all_extension_keys": [
+            "AmbientViewingEnvironment",
+            "BitsPerComponent",
+            "CVFieldCount",
+            "CVImageBufferChromaLocationBottomField",
+            "CVImageBufferChromaLocationTopField",
+            "CVImageBufferColorPrimaries",
+            "CVImageBufferTransferFunction",
+            "CVImageBufferYCbCrMatrix",
+            "Depth",
+            "FormatName",
+            "FullRangeVideo",
+            "RevisionLevel",
+            "SampleDescriptionExtensionAtoms",
+            "SpatialQuality",
+            "TemporalQuality",
+            "VerbatimSampleDescription",
+            "Version"
+          ],
+          "dimensions": {
+            "height": 2160,
+            "width": 3840
+          },
+          "extensions_safe": {
+            "AmbientViewingEnvironment": {
+              "data_bytes": 8,
+              "sha_prefix": "002fe9a03d134042"
+            },
+            "BitsPerComponent": 10,
+            "CVFieldCount": 1,
+            "CVImageBufferChromaLocationBottomField": "Left",
+            "CVImageBufferChromaLocationTopField": "Left",
+            "CVImageBufferColorPrimaries": "ITU_R_2020",
+            "CVImageBufferTransferFunction": "ITU_R_2100_HLG",
+            "CVImageBufferYCbCrMatrix": "ITU_R_2020",
+            "Depth": 24,
+            "FormatName": "HEVC",
+            "FullRangeVideo": false,
+            "RevisionLevel": 0,
+            "SampleDescriptionExtensionAtoms": {
+              "dvvC": {
+                "data_bytes": 24,
+                "sha_prefix": "0100103d40000000"
+              },
+              "hvcC": {
+                "data_bytes": 124,
+                "sha_prefix": "010220000000b000"
+              }
+            },
+            "SpatialQuality": 512,
+            "TemporalQuality": 512,
+            "VerbatimSampleDescription": {
+              "data_bytes": 288,
+              "sha_prefix": "0000012068766331"
+            },
+            "Version": 0
+          },
+          "known_color_extensions": {
+            "CVImageBufferChromaLocationBottomField": "Left",
+            "CVImageBufferChromaLocationTopField": "Left",
+            "CVImageBufferColorPrimaries": "ITU_R_2020",
+            "CVImageBufferTransferFunction": "ITU_R_2100_HLG",
+            "CVImageBufferYCbCrMatrix": "ITU_R_2020"
+          },
+          "media_subtype": "hvc1"
+        }
+      ],
+      "natural_size": {
+        "height": 2160,
+        "width": 3840
+      },
+      "nominal_fps": 29.983869552612305,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5740.MOV",
+      "relevant_quicktime_metadata": [
+        {
+          "identifier": "mdta/com.apple.quicktime.model",
+          "key": "Optional(com.apple.quicktime.model)",
+          "value": "iPhone 14 Pro"
+        },
+        {
+          "identifier": "mdta/com.apple.quicktime.software",
+          "key": "Optional(com.apple.quicktime.software)",
+          "value": "26.6"
+        }
+      ]
+    },
+    {
+      "duration_seconds": 216.785,
+      "estimated_data_rate": 33898576,
+      "format_descriptions": [
+        {
+          "all_extension_keys": [
+            "AmbientViewingEnvironment",
+            "BitsPerComponent",
+            "CVFieldCount",
+            "CVImageBufferChromaLocationBottomField",
+            "CVImageBufferChromaLocationTopField",
+            "CVImageBufferColorPrimaries",
+            "CVImageBufferTransferFunction",
+            "CVImageBufferYCbCrMatrix",
+            "Depth",
+            "FormatName",
+            "FullRangeVideo",
+            "RevisionLevel",
+            "SampleDescriptionExtensionAtoms",
+            "SpatialQuality",
+            "TemporalQuality",
+            "VerbatimSampleDescription",
+            "Version"
+          ],
+          "dimensions": {
+            "height": 2160,
+            "width": 3840
+          },
+          "extensions_safe": {
+            "AmbientViewingEnvironment": {
+              "data_bytes": 8,
+              "sha_prefix": "002fe9a03d134042"
+            },
+            "BitsPerComponent": 10,
+            "CVFieldCount": 1,
+            "CVImageBufferChromaLocationBottomField": "Left",
+            "CVImageBufferChromaLocationTopField": "Left",
+            "CVImageBufferColorPrimaries": "ITU_R_2020",
+            "CVImageBufferTransferFunction": "ITU_R_2100_HLG",
+            "CVImageBufferYCbCrMatrix": "ITU_R_2020",
+            "Depth": 24,
+            "FormatName": "HEVC",
+            "FullRangeVideo": false,
+            "RevisionLevel": 0,
+            "SampleDescriptionExtensionAtoms": {
+              "dvvC": {
+                "data_bytes": 24,
+                "sha_prefix": "0100103d40000000"
+              },
+              "hvcC": {
+                "data_bytes": 124,
+                "sha_prefix": "010220000000b000"
+              }
+            },
+            "SpatialQuality": 512,
+            "TemporalQuality": 512,
+            "VerbatimSampleDescription": {
+              "data_bytes": 288,
+              "sha_prefix": "0000012068766331"
+            },
+            "Version": 0
+          },
+          "known_color_extensions": {
+            "CVImageBufferChromaLocationBottomField": "Left",
+            "CVImageBufferChromaLocationTopField": "Left",
+            "CVImageBufferColorPrimaries": "ITU_R_2020",
+            "CVImageBufferTransferFunction": "ITU_R_2100_HLG",
+            "CVImageBufferYCbCrMatrix": "ITU_R_2020"
+          },
+          "media_subtype": "hvc1"
+        }
+      ],
+      "natural_size": {
+        "height": 2160,
+        "width": 3840
+      },
+      "nominal_fps": 29.983623504638672,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5741.MOV",
+      "relevant_quicktime_metadata": [
+        {
+          "identifier": "mdta/com.apple.quicktime.model",
+          "key": "Optional(com.apple.quicktime.model)",
+          "value": "iPhone 14 Pro"
+        },
+        {
+          "identifier": "mdta/com.apple.quicktime.software",
+          "key": "Optional(com.apple.quicktime.software)",
+          "value": "26.6"
+        }
+      ]
+    },
+    {
+      "duration_seconds": 120.765,
+      "estimated_data_rate": 33095494,
+      "format_descriptions": [
+        {
+          "all_extension_keys": [
+            "AmbientViewingEnvironment",
+            "BitsPerComponent",
+            "CVFieldCount",
+            "CVImageBufferChromaLocationBottomField",
+            "CVImageBufferChromaLocationTopField",
+            "CVImageBufferColorPrimaries",
+            "CVImageBufferTransferFunction",
+            "CVImageBufferYCbCrMatrix",
+            "Depth",
+            "FormatName",
+            "FullRangeVideo",
+            "RevisionLevel",
+            "SampleDescriptionExtensionAtoms",
+            "SpatialQuality",
+            "TemporalQuality",
+            "VerbatimSampleDescription",
+            "Version"
+          ],
+          "dimensions": {
+            "height": 2160,
+            "width": 3840
+          },
+          "extensions_safe": {
+            "AmbientViewingEnvironment": {
+              "data_bytes": 8,
+              "sha_prefix": "002fe9a03d134042"
+            },
+            "BitsPerComponent": 10,
+            "CVFieldCount": 1,
+            "CVImageBufferChromaLocationBottomField": "Left",
+            "CVImageBufferChromaLocationTopField": "Left",
+            "CVImageBufferColorPrimaries": "ITU_R_2020",
+            "CVImageBufferTransferFunction": "ITU_R_2100_HLG",
+            "CVImageBufferYCbCrMatrix": "ITU_R_2020",
+            "Depth": 24,
+            "FormatName": "HEVC",
+            "FullRangeVideo": false,
+            "RevisionLevel": 0,
+            "SampleDescriptionExtensionAtoms": {
+              "dvvC": {
+                "data_bytes": 24,
+                "sha_prefix": "0100103d40000000"
+              },
+              "hvcC": {
+                "data_bytes": 124,
+                "sha_prefix": "010220000000b000"
+              }
+            },
+            "SpatialQuality": 512,
+            "TemporalQuality": 512,
+            "VerbatimSampleDescription": {
+              "data_bytes": 288,
+              "sha_prefix": "0000012068766331"
+            },
+            "Version": 0
+          },
+          "known_color_extensions": {
+            "CVImageBufferChromaLocationBottomField": "Left",
+            "CVImageBufferChromaLocationTopField": "Left",
+            "CVImageBufferColorPrimaries": "ITU_R_2020",
+            "CVImageBufferTransferFunction": "ITU_R_2100_HLG",
+            "CVImageBufferYCbCrMatrix": "ITU_R_2020"
+          },
+          "media_subtype": "hvc1"
+        }
+      ],
+      "natural_size": {
+        "height": 2160,
+        "width": 3840
+      },
+      "nominal_fps": 29.98343849182129,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5742.MOV",
+      "relevant_quicktime_metadata": [
+        {
+          "identifier": "mdta/com.apple.quicktime.model",
+          "key": "Optional(com.apple.quicktime.model)",
+          "value": "iPhone 14 Pro"
+        },
+        {
+          "identifier": "mdta/com.apple.quicktime.software",
+          "key": "Optional(com.apple.quicktime.software)",
+          "value": "26.6"
+        }
+      ]
+    }
+  ]
+}

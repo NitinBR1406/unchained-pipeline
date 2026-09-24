@@ -1,0 +1,149 @@
+{
+  "schema": "SOURCE_BYTES_REFERENCE_V01",
+  "sources": [
+    {
+      "ambient_viewing_environment": {
+        "data_bytes": 8,
+        "sha_prefix": "002fe9a03d134042"
+      },
+      "bits_per_component": 10,
+      "codec": "hvc1",
+      "dolby_vision_dvvC": {
+        "data_bytes": 24,
+        "sha_prefix": "0100103d40000000"
+      },
+      "file": "IMG_5739.MOV",
+      "full_range_video": false,
+      "hvcC": {
+        "data_bytes": 124,
+        "sha_prefix": "010220000000b000"
+      },
+      "matrix": "ITU_R_2020",
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5739.MOV",
+      "primaries": "ITU_R_2020",
+      "profile": "HEVC Main 10 (Resolve)",
+      "quicktime_metadata": [
+        {
+          "identifier": "mdta/com.apple.quicktime.model",
+          "key": "Optional(com.apple.quicktime.model)",
+          "value": "iPhone 14 Pro"
+        },
+        {
+          "identifier": "mdta/com.apple.quicktime.software",
+          "key": "Optional(com.apple.quicktime.software)",
+          "value": "26.6"
+        }
+      ],
+      "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+      "transfer": "ITU_R_2100_HLG"
+    },
+    {
+      "ambient_viewing_environment": {
+        "data_bytes": 8,
+        "sha_prefix": "002fe9a03d134042"
+      },
+      "bits_per_component": 10,
+      "codec": "hvc1",
+      "dolby_vision_dvvC": {
+        "data_bytes": 24,
+        "sha_prefix": "0100103d40000000"
+      },
+      "file": "IMG_5740.MOV",
+      "full_range_video": false,
+      "hvcC": {
+        "data_bytes": 124,
+        "sha_prefix": "010220000000b000"
+      },
+      "matrix": "ITU_R_2020",
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5740.MOV",
+      "primaries": "ITU_R_2020",
+      "profile": "HEVC Main 10 (Resolve)",
+      "quicktime_metadata": [
+        {
+          "identifier": "mdta/com.apple.quicktime.model",
+          "key": "Optional(com.apple.quicktime.model)",
+          "value": "iPhone 14 Pro"
+        },
+        {
+          "identifier": "mdta/com.apple.quicktime.software",
+          "key": "Optional(com.apple.quicktime.software)",
+          "value": "26.6"
+        }
+      ],
+      "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "transfer": "ITU_R_2100_HLG"
+    },
+    {
+      "ambient_viewing_environment": {
+        "data_bytes": 8,
+        "sha_prefix": "002fe9a03d134042"
+      },
+      "bits_per_component": 10,
+      "codec": "hvc1",
+      "dolby_vision_dvvC": {
+        "data_bytes": 24,
+        "sha_prefix": "0100103d40000000"
+      },
+      "file": "IMG_5741.MOV",
+      "full_range_video": false,
+      "hvcC": {
+        "data_bytes": 124,
+        "sha_prefix": "010220000000b000"
+      },
+      "matrix": "ITU_R_2020",
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5741.MOV",
+      "primaries": "ITU_R_2020",
+      "profile": "HEVC Main 10 (Resolve)",
+      "quicktime_metadata": [
+        {
+          "identifier": "mdta/com.apple.quicktime.model",
+          "key": "Optional(com.apple.quicktime.model)",
+          "value": "iPhone 14 Pro"
+        },
+        {
+          "identifier": "mdta/com.apple.quicktime.software",
+          "key": "Optional(com.apple.quicktime.software)",
+          "value": "26.6"
+        }
+      ],
+      "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "transfer": "ITU_R_2100_HLG"
+    },
+    {
+      "ambient_viewing_environment": {
+        "data_bytes": 8,
+        "sha_prefix": "002fe9a03d134042"
+      },
+      "bits_per_component": 10,
+      "codec": "hvc1",
+      "dolby_vision_dvvC": {
+        "data_bytes": 24,
+        "sha_prefix": "0100103d40000000"
+      },
+      "file": "IMG_5742.MOV",
+      "full_range_video": false,
+      "hvcC": {
+        "data_bytes": 124,
+        "sha_prefix": "010220000000b000"
+      },
+      "matrix": "ITU_R_2020",
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5742.MOV",
+      "primaries": "ITU_R_2020",
+      "profile": "HEVC Main 10 (Resolve)",
+      "quicktime_metadata": [
+        {
+          "identifier": "mdta/com.apple.quicktime.model",
+          "key": "Optional(com.apple.quicktime.model)",
+          "value": "iPhone 14 Pro"
+        },
+        {
+          "identifier": "mdta/com.apple.quicktime.software",
+          "key": "Optional(com.apple.quicktime.software)",
+          "value": "26.6"
+        }
+      ],
+      "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+      "transfer": "ITU_R_2100_HLG"
+    }
+  ]
+}

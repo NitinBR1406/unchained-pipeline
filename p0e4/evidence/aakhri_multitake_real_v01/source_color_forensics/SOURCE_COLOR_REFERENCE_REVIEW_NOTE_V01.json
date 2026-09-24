@@ -1,0 +1,33 @@
+{
+  "assets": [
+    {
+      "bytes": 109237409,
+      "name": "IDENTITY_ROUNDTRIP_REFERENCE_V01.mov",
+      "sha256": "637e6eb0a7b92ce74486815f5a0e3af605e0bbaa23805db6547cbe2eba7e7bef"
+    },
+    {
+      "bytes": 1090921,
+      "name": "SOURCE_VS_IDENTITY_ROUNDTRIP_CONTACT_SHEET_V01.jpg",
+      "sha256": "1897cfe9d726cd5dbeadd21828fbfcf069e60a1375e9e32f4c0b2c1fbfe71aa6"
+    },
+    {
+      "bytes": 169187,
+      "name": "UNCHAINED_AAKHRI_SOURCE_COLOR_IDENTITY_V01.drp",
+      "sha256": "c126343ca8c16c68aefbeb6736d3bc94ae7b37581e6827a1f4576112702d3ee7"
+    },
+    {
+      "bytes": 3397,
+      "name": "DECODED_FRAME_MEASUREMENTS_V01.json",
+      "sha256": "ab0a0a2651e80c6414dffea3748aada3a82ce8ffa7955dcecdf171a4b840a71d"
+    }
+  ],
+  "classification": "PRIVATE_SOURCE_COLOR_VALIDATION_ASSETS_NOT_CREATIVE_GRADE",
+  "creative_selection_suspended": true,
+  "final_video_approved": false,
+  "finding": "R5 RAW_REFERENCE was not identity preserving. The new reference preserves the 10+ bit BT.2020 HLG base layer but does not preserve Dolby Vision dvvC metadata.",
+  "full_master_rendered": false,
+  "post_ready": false,
+  "publication_authorized": false,
+  "review_instruction": "On an HDR-capable Apple display, compare SOURCE_BYTES display decode (left) with IDENTITY_ROUNDTRIP Rec.2100 HLG (right). Confirm VALIDATED, STILL_DIFFERS, or provide a precise correction.",
+  "schema": "SOURCE_COLOR_REFERENCE_REVIEW_NOTE_V01"
+}

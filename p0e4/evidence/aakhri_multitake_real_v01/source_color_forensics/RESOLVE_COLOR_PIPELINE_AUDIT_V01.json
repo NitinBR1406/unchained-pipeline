@@ -1,0 +1,137 @@
+{
+  "finding": "R5_RAW_REFERENCE_WAS_NOT_IDENTITY_PRESERVING",
+  "identity_test_path": {
+    "input_interpretation": {
+      "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+        "Bit Depth": "10",
+        "FPS": 30.0,
+        "Input Color Space": "Rec.2100 HLG",
+        "Input Gamma": "Rec.2100 HLG",
+        "Resolution": "2160x3840",
+        "Video Codec": "H.265 Main 10 L5.0"
+      },
+      "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+        "Bit Depth": "10",
+        "FPS": 30.0,
+        "Input Color Space": "Rec.2100 HLG",
+        "Input Gamma": "Rec.2100 HLG",
+        "Resolution": "2160x3840",
+        "Video Codec": "H.265 Main 10 L5.0"
+      },
+      "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+        "Bit Depth": "10",
+        "FPS": 30.0,
+        "Input Color Space": "Rec.2100 HLG",
+        "Input Gamma": "Rec.2100 HLG",
+        "Resolution": "2160x3840",
+        "Video Codec": "H.265 Main 10 L5.0"
+      },
+      "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+        "Bit Depth": "10",
+        "FPS": 30.0,
+        "Input Color Space": "Rec.2100 HLG",
+        "Input Gamma": "Rec.2100 HLG",
+        "Resolution": "2160x3840",
+        "Video Codec": "H.265 Main 10 L5.0"
+      }
+    },
+    "project_settings": {
+      "colorScienceMode": "davinciYRGBColorManaged",
+      "colorSpaceInput": "Rec.2100 HLG",
+      "colorSpaceOutput": "Rec.2100 HLG",
+      "colorSpaceOutputGamutMapping": "None",
+      "colorSpaceOutputToneMapping": "None",
+      "colorSpaceTimeline": "Rec.2100 HLG",
+      "isAutoColorManage": "0",
+      "timelineFrameRate": "30.0",
+      "timelineResolutionHeight": "1920",
+      "timelineResolutionWidth": "1080"
+    },
+    "render": {
+      "bits_per_component_reported": 12,
+      "container_codec": "QuickTime_ProRes422HQ",
+      "dimensions": "1080x1920",
+      "dolby_vision_metadata": false,
+      "matrix": "ITU_R_2020",
+      "primaries": "ITU_R_2020",
+      "transfer": "ITU_R_2100_HLG"
+    }
+  },
+  "product": "DaVinci Resolve Studio",
+  "r5_or_default_project_path": {
+    "media_input_interpretation": {
+      "IMG_5739.MOV": {
+        "Bit Depth": "10",
+        "Camera Firmware": "26.6",
+        "Camera Manufacturer": "Apple",
+        "Camera Type": "iPhone 14 Pro",
+        "Data Level": "Auto",
+        "FPS": 30.0,
+        "File Path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5739.MOV",
+        "Input Color Space": "Rec.2100 HLG",
+        "Input Gamma": "Rec.2100 HLG",
+        "Resolution": "2160x3840",
+        "Video Codec": "H.265 Main 10 L5.0"
+      },
+      "IMG_5740.MOV": {
+        "Bit Depth": "10",
+        "Camera Firmware": "26.6",
+        "Camera Manufacturer": "Apple",
+        "Camera Type": "iPhone 14 Pro",
+        "Data Level": "Auto",
+        "FPS": 30.0,
+        "File Path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5740.MOV",
+        "Input Color Space": "Rec.2100 HLG",
+        "Input Gamma": "Rec.2100 HLG",
+        "Resolution": "2160x3840",
+        "Video Codec": "H.265 Main 10 L5.0"
+      },
+      "IMG_5741.MOV": {
+        "Bit Depth": "10",
+        "Camera Firmware": "26.6",
+        "Camera Manufacturer": "Apple",
+        "Camera Type": "iPhone 14 Pro",
+        "Data Level": "Auto",
+        "FPS": 30.0,
+        "File Path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5741.MOV",
+        "Input Color Space": "Rec.2100 HLG",
+        "Input Gamma": "Rec.2100 HLG",
+        "Resolution": "2160x3840",
+        "Video Codec": "H.265 Main 10 L5.0"
+      },
+      "IMG_5742.MOV": {
+        "Bit Depth": "10",
+        "Camera Firmware": "26.6",
+        "Camera Manufacturer": "Apple",
+        "Camera Type": "iPhone 14 Pro",
+        "Data Level": "Auto",
+        "FPS": 30.0,
+        "File Path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5742.MOV",
+        "Input Color Space": "Rec.2100 HLG",
+        "Input Gamma": "Rec.2100 HLG",
+        "Resolution": "2160x3840",
+        "Video Codec": "H.265 Main 10 L5.0"
+      }
+    },
+    "project_timeline_color_management": {
+      "colorScienceMode": "davinciYRGB",
+      "colorSpaceInput": "Rec.709 Gamma 2.4",
+      "colorSpaceOutput": "Rec.709 (Scene)",
+      "colorSpaceOutputGamutMapping": "None",
+      "colorSpaceOutputToneMapping": "None",
+      "colorSpaceTimeline": "Rec.709 (Scene)",
+      "hdrDolbyControlsOn": "0",
+      "hdrMasteringOn": "0",
+      "isAutoColorManage": "0"
+    },
+    "render": {
+      "container_codec": "MP4_H264",
+      "dimensions": "1080x1920",
+      "dolby_vision_metadata": false,
+      "matrix": "ITU_R_709_2",
+      "primaries": "ITU_R_709_2",
+      "transfer": "ITU_R_709_2"
+    }
+  },
+  "schema": "RESOLVE_COLOR_PIPELINE_AUDIT_V01"
+}

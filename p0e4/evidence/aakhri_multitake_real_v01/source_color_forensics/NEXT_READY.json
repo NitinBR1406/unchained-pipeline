@@ -1,0 +1,18 @@
+{
+  "full_master_rendered": false,
+  "post_ready": false,
+  "publication_authorized": false,
+  "r5_creative_selection_suspended": true,
+  "schema": "P0E4_NEXT_READY_V01",
+  "smallest_human_gate": {
+    "allowed_response": [
+      "VALIDATED",
+      "STILL_DIFFERS",
+      "PRECISE_CORRECTION"
+    ],
+    "gate": "NITIN_SOURCE_COLOR_REFERENCE_VALIDATION",
+    "question": "Compare the SOURCE_BYTES display-decode side with the IDENTITY_ROUNDTRIP Rec.2100 HLG side on an HDR-capable Apple display and confirm whether the restored HLG reference now matches the original source character."
+  },
+  "state": "WAITING_FOR_NITIN_SOURCE_COLOR_REFERENCE_VALIDATION",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01"
+}

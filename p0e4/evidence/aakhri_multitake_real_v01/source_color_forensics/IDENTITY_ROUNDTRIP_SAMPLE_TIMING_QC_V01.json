@@ -1,0 +1,11 @@
+{
+  "asset_duration_seconds" : 4,
+  "duration_bearing_video_frames" : 120,
+  "non_numeric_pts_sample_buffers" : 2,
+  "reader_status" : 2,
+  "schema" : "IDENTITY_ROUNDTRIP_SAMPLE_TIMING_QC_V01",
+  "status" : "PASS_120_DISPLAY_FRAMES",
+  "total_sample_buffers" : 124,
+  "track_duration_seconds" : 4,
+  "zero_duration_sample_buffers" : 4
+}

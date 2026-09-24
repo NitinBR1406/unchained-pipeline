@@ -1,0 +1,166 @@
+{
+  "acceptance": {
+    "full_dolby_display_identity": "NOT_DEMONSTRATED",
+    "hlg_base_layer_tags_preserved": true,
+    "max_absolute_luma_mean_delta": 0.0013410000000000366,
+    "max_absolute_saturation_mean_delta": 0.0028850000000000264,
+    "minimum_bit_depth_preserved": true,
+    "visual_result": "NO_MATERIAL_BASE_LAYER_COLOR_SHIFT_OBSERVED_IN_FOUR_REPRESENTATIVE_PAIRS"
+  },
+  "measurements": {
+    "measurement_domain": "Apple AVFoundation display decode to 8-bit PNG; measurements compare displayed decodes, not encoded HDR code values",
+    "scenes": [
+      {
+        "comparison_after_source_resize": {
+          "psnr_db": 45.49,
+          "rgb_mae": 0.002811
+        },
+        "roundtrip_dimensions": [
+          1080,
+          1920
+        ],
+        "roundtrip_display_decode": {
+          "luma_mean": 0.329946,
+          "luma_p05": 0.07926,
+          "luma_p95": 0.679775,
+          "rgb_mean": [
+            0.362426,
+            0.321063,
+            0.328624
+          ],
+          "saturation_mean": 0.16293
+        },
+        "scene_index": 1,
+        "source_dimensions": [
+          2160,
+          3840
+        ],
+        "source_display_decode": {
+          "luma_mean": 0.330532,
+          "luma_p05": 0.079281,
+          "luma_p95": 0.6811,
+          "rgb_mean": [
+            0.362291,
+            0.321992,
+            0.328194
+          ],
+          "saturation_mean": 0.160485
+        }
+      },
+      {
+        "comparison_after_source_resize": {
+          "psnr_db": 32.841,
+          "rgb_mae": 0.008941
+        },
+        "roundtrip_dimensions": [
+          1080,
+          1920
+        ],
+        "roundtrip_display_decode": {
+          "luma_mean": 0.327951,
+          "luma_p05": 0.081231,
+          "luma_p95": 0.690052,
+          "rgb_mean": [
+            0.35693,
+            0.320523,
+            0.319454
+          ],
+          "saturation_mean": 0.130777
+        },
+        "scene_index": 2,
+        "source_dimensions": [
+          2160,
+          3840
+        ],
+        "source_display_decode": {
+          "luma_mean": 0.328516,
+          "luma_p05": 0.081231,
+          "luma_p95": 0.691645,
+          "rgb_mean": [
+            0.356732,
+            0.32142,
+            0.318915
+          ],
+          "saturation_mean": 0.128438
+        }
+      },
+      {
+        "comparison_after_source_resize": {
+          "psnr_db": 45.821,
+          "rgb_mae": 0.002767
+        },
+        "roundtrip_dimensions": [
+          1080,
+          1920
+        ],
+        "roundtrip_display_decode": {
+          "luma_mean": 0.30451,
+          "luma_p05": 0.063311,
+          "luma_p95": 0.682018,
+          "rgb_mean": [
+            0.327753,
+            0.2987,
+            0.299808
+          ],
+          "saturation_mean": 0.134311
+        },
+        "scene_index": 3,
+        "source_dimensions": [
+          2160,
+          3840
+        ],
+        "source_display_decode": {
+          "luma_mean": 0.30509,
+          "luma_p05": 0.063574,
+          "luma_p95": 0.683649,
+          "rgb_mean": [
+            0.327557,
+            0.299637,
+            0.299366
+          ],
+          "saturation_mean": 0.131426
+        }
+      },
+      {
+        "comparison_after_source_resize": {
+          "psnr_db": 32.062,
+          "rgb_mae": 0.010481
+        },
+        "roundtrip_dimensions": [
+          1080,
+          1920
+        ],
+        "roundtrip_display_decode": {
+          "luma_mean": 0.317219,
+          "luma_p05": 0.084056,
+          "luma_p95": 0.679173,
+          "rgb_mean": [
+            0.342166,
+            0.311237,
+            0.309944
+          ],
+          "saturation_mean": 0.122399
+        },
+        "scene_index": 4,
+        "source_dimensions": [
+          2160,
+          3840
+        ],
+        "source_display_decode": {
+          "luma_mean": 0.31856,
+          "luma_p05": 0.08487,
+          "luma_p95": 0.681409,
+          "rgb_mean": [
+            0.342938,
+            0.312868,
+            0.310157
+          ],
+          "saturation_mean": 0.120628
+        }
+      }
+    ],
+    "schema": "DECODED_FRAME_MEASUREMENTS_V01"
+  },
+  "schema": "RESOLVE_SCOPES_AND_FRAME_COMPARISON_V01",
+  "scope_method": "Resolve project configured for Rec.2100 HLG with no grade; decoded frame waveform-equivalent luma and vectorscope-equivalent saturation summary persisted from Apple display decode. Contact sheet visually inspected."
+}

@@ -1,0 +1,21 @@
+{
+  "outputs" : [
+    {
+      "audio_sample_buffers" : 0,
+      "audio_tracks" : 0,
+      "decode_status" : "COMPLETE",
+      "duration_s" : 4,
+      "file" : "IDENTITY_ROUNDTRIP_REFERENCE_V01.mov",
+      "height" : 1920,
+      "nominal_fps" : 30,
+      "video_samples" : 124,
+      "video_tracks" : 1,
+      "width" : 1080
+    }
+  ],
+  "schema" : "AAKHRI_TECHNICAL_DECODE_QC_V01",
+  "status" : "FULL_DECODE_COMPLETE",
+  "stills" : [
+
+  ]
+}
