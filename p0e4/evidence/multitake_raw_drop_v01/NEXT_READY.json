@@ -1,0 +1,6 @@
+{
+  "real_drop_triggered": false,
+  "smallest_gate": "REAL_NITIN_MULTI_TAKE_RAW_DROP_ACCEPTANCE",
+  "status": "WAITING_FOR_NITIN",
+  "unrelated_ready_work": "EXHAUSTED"
+}

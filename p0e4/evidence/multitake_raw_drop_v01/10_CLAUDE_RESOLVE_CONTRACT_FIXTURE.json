@@ -1,0 +1,41 @@
+{
+  "color": {
+    "creative_look": {
+      "evidence_bound": true,
+      "name": "UNCHAINED_LOOK"
+    },
+    "normalization": {
+      "method": "EXPOSURE_WHITE_BALANCE_NORMALIZE"
+    },
+    "shot_match": {
+      "reference": "asset_1"
+    }
+  },
+  "edl_sha256": "fb1ba6705037d022e7673e3292103f51ac7d0290933577b3e9e1b6f5cb6de07a",
+  "final_audio_route": "AUTHORITATIVE_MASTER_ONLY",
+  "guide_audio_muted": true,
+  "mode": "PLAN_ONLY_NO_EXTERNAL_EXECUTION",
+  "operations": [
+    {
+      "end_ms": 3000,
+      "evidence_sha256": "378bfce5cda2599a6cda399f1cacef861e4e575ec794744dcf0e55e9c4780633",
+      "kind": "cut",
+      "operation_id": "cut_1",
+      "parameters": {},
+      "start_ms": 0
+    },
+    {
+      "end_ms": 4000,
+      "evidence_sha256": "d107ea3629c326718876f07356a48dea26f123742f8bf44ce75f8f805cf9a37d",
+      "kind": "push_in",
+      "operation_id": "push_1",
+      "parameters": {
+        "trajectory": "DETERMINISTIC"
+      },
+      "start_ms": 3000
+    }
+  ],
+  "schema": "MULTI_TAKE_PRODUCTION_TRANSLATION_V01",
+  "status": "VALIDATED_PLAN_ONLY",
+  "translation_sha256": "b0b6ba50a6f3c01503b353f3773d4be4a922d8a1d3f65be06bb928d28cad9f3f"
+}

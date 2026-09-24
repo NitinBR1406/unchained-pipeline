@@ -1,0 +1,46 @@
+{
+  "agent_isolation": "INDEPENDENT_NO_CLAUDE_OR_CHATGPT_CONCLUSIONS",
+  "intelligence_sha256": "dd0ccbc7e7d63d51fc2f7a2a7f52b0a3cd265265f062218770db0d3ee5b4ffb9",
+  "lyrics_or_captions_invented": false,
+  "schema": "GEMINI_MULTI_TAKE_PERFORMANCE_INTELLIGENCE_V01",
+  "status": "VALIDATED_CONTRACT_ONLY",
+  "synchronized_take_set_sha256": "21650e11115f01900500b7d5c2576707c0f96001d5003219af25efa9f17760a5",
+  "take_observations": [
+    {
+      "asset_id": "asset_1",
+      "evidence_sha256": "819fd23bc717de44fef892002922cc1f93c0e202bddbb1025574c5cafa08dd67",
+      "ranges": [
+        {
+          "end_ms": 5000,
+          "performance_score_milli": 920,
+          "reason_code": "SYNTHETIC_DELIVERY",
+          "start_ms": 250
+        }
+      ]
+    },
+    {
+      "asset_id": "asset_2",
+      "evidence_sha256": "2210788316b5d8e5e6e469d51ebb79474852669a0d348b1d4e38c50d3cd5eaca",
+      "ranges": [
+        {
+          "end_ms": 5000,
+          "performance_score_milli": 920,
+          "reason_code": "SYNTHETIC_DELIVERY",
+          "start_ms": 250
+        }
+      ]
+    },
+    {
+      "asset_id": "asset_3",
+      "evidence_sha256": "dc813d531a76f4316f127f1910ee7ce30f3028af353503a5e79db9dcff413c03",
+      "ranges": [
+        {
+          "end_ms": 5000,
+          "performance_score_milli": 920,
+          "reason_code": "SYNTHETIC_DELIVERY",
+          "start_ms": 250
+        }
+      ]
+    }
+  ]
+}

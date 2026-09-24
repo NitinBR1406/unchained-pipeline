@@ -1,0 +1,33 @@
+{
+  "adversarial_multitake_tests": 22,
+  "full_p0e4_tests": 248,
+  "full_p0e4_status": "GREEN",
+  "runtime": "codex-primary-runtime-python-3.12",
+  "temporary_dependency": "jsonschema==4.26.0",
+  "temporary_dependency_persisted_in_repository": false,
+  "covered": [
+    "synthetic_scope_enforcement",
+    "byte_hash_source_drift",
+    "duplicate_suppression",
+    "differing_duration_fps_resolution_orientation",
+    "low_confidence_sync_hold",
+    "material_drift_hold",
+    "usable_range_hold",
+    "master_audio_only_programme_route",
+    "filename_independence",
+    "machine_readable_edl",
+    "80_percent_performance_rule",
+    "maximum_derivative_rule",
+    "authoritative_text_binding",
+    "color_stage_separation",
+    "excessive_effects_hold",
+    "all_required_qc_defect_routes",
+    "bounded_repair_and_independent_re_qc",
+    "deterministic_replay",
+    "existing_watcher_idempotency_and_recovery_regression"
+  ],
+  "known_warning": "Existing frozen ledger tests emit ResourceWarning for unclosed read handles; assertions remain GREEN.",
+  "real_raw_drop_triggered": false,
+  "production_deployment_authorized": false,
+  "publication_authorized": false
+}

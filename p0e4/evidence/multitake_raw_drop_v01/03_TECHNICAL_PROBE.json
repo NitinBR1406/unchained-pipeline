@@ -1,0 +1,67 @@
+{
+  "probe_sha256": "8809fbf398ab7a9d087156fbb7a6cfe3d054c8148eb826ef4f2c8a274f27237c",
+  "schema": "MULTI_TAKE_TECHNICAL_PROBE_V01",
+  "status": "GREEN",
+  "takes": [
+    {
+      "asset_id": "asset_1",
+      "duration_ms": 12000,
+      "fps_den": 1,
+      "fps_num": 25,
+      "full_decode": true,
+      "guide_audio_present": true,
+      "height": 2160,
+      "normalization": {
+        "frame_rate_conform": true,
+        "method": "SCALE_PAD_OR_EVIDENCE_CROP",
+        "output_fps_den": 1,
+        "output_fps_num": 30,
+        "output_height": 1920,
+        "output_width": 1080
+      },
+      "orientation": "LANDSCAPE",
+      "take_sha256": "22682e4c30aba0c77010a4b3999d5fc53b3d621450d90ddb367c983bbf42cd6f",
+      "width": 3840
+    },
+    {
+      "asset_id": "asset_2",
+      "duration_ms": 10500,
+      "fps_den": 1001,
+      "fps_num": 30000,
+      "full_decode": true,
+      "guide_audio_present": true,
+      "height": 1080,
+      "normalization": {
+        "frame_rate_conform": true,
+        "method": "SCALE_PAD_OR_EVIDENCE_CROP",
+        "output_fps_den": 1,
+        "output_fps_num": 30,
+        "output_height": 1920,
+        "output_width": 1080
+      },
+      "orientation": "LANDSCAPE",
+      "take_sha256": "39fdaed8ee39f6eba01a6ad69ad272b80c7cedc069c90d8388462736fc46fa3a",
+      "width": 1920
+    },
+    {
+      "asset_id": "asset_3",
+      "duration_ms": 11000,
+      "fps_den": 1,
+      "fps_num": 30,
+      "full_decode": true,
+      "guide_audio_present": true,
+      "height": 1920,
+      "normalization": {
+        "frame_rate_conform": false,
+        "method": "SCALE_PAD_OR_EVIDENCE_CROP",
+        "output_fps_den": 1,
+        "output_fps_num": 30,
+        "output_height": 1920,
+        "output_width": 1080
+      },
+      "orientation": "PORTRAIT",
+      "take_sha256": "c08ea7b16572f2e9e49a44cb1dbbb848232e160cfe604cec0e91c23207869175",
+      "width": 1080
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "edl_sha256": "fb1ba6705037d022e7673e3292103f51ac7d0290933577b3e9e1b6f5cb6de07a",
+  "external_execution_claimed": false,
+  "independent_gemini_qc": "PASS_FIXTURE_ONLY",
+  "output_sha256": "dab68fbcd56fb4f5877973a9a80b7365aac5c834b5a2dca6493783e53e1004ed",
+  "publication_authorized": false,
+  "rights_status": "RIGHTS_HOLD",
+  "schema": "POST_READY_MANIFEST_FIXTURE_V01",
+  "source_set_sha256": "21650e11115f01900500b7d5c2576707c0f96001d5003219af25efa9f17760a5",
+  "state": "WAITING_FOR_NITIN",
+  "technical_qc": "PASS"
+}

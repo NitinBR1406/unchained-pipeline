@@ -1,0 +1,49 @@
+{
+  "candidate_qc": {
+    "checks": {
+      "audio_defects": "PASS",
+      "bad_cuts": "PASS",
+      "caption_safe_area": "PASS",
+      "color_mismatch": "PASS",
+      "excessive_effects": "PASS",
+      "framing_crop": "FAIL",
+      "performance_rule": "PASS",
+      "sync_defects": "PASS",
+      "technical_decode": "PASS"
+    },
+    "failed": [
+      "framing_crop"
+    ],
+    "independent_gemini_re_qc_required_after_repair": true,
+    "output_sha256": "725af2341828540b4ca8969362c2e1e2c77ebb6140da62c70b980e546bb87de8",
+    "schema": "MULTI_TAKE_OUTPUT_QC_V01",
+    "status": "REPAIR_REQUIRED"
+  },
+  "repair": {
+    "attempt": 1,
+    "original_sha256": "725af2341828540b4ca8969362c2e1e2c77ebb6140da62c70b980e546bb87de8",
+    "repaired_sha256": "dab68fbcd56fb4f5877973a9a80b7365aac5c834b5a2dca6493783e53e1004ed",
+    "schema": "BOUNDED_REPAIR_RERENDER_V01",
+    "source_rebinding_allowed": false,
+    "source_set_sha256": "21650e11115f01900500b7d5c2576707c0f96001d5003219af25efa9f17760a5",
+    "status": "GREEN_AFTER_RE_QC"
+  },
+  "repaired_qc": {
+    "checks": {
+      "audio_defects": "PASS",
+      "bad_cuts": "PASS",
+      "caption_safe_area": "PASS",
+      "color_mismatch": "PASS",
+      "excessive_effects": "PASS",
+      "framing_crop": "PASS",
+      "performance_rule": "PASS",
+      "sync_defects": "PASS",
+      "technical_decode": "PASS"
+    },
+    "failed": [],
+    "independent_gemini_re_qc_required_after_repair": false,
+    "output_sha256": "dab68fbcd56fb4f5877973a9a80b7365aac5c834b5a2dca6493783e53e1004ed",
+    "schema": "MULTI_TAKE_OUTPUT_QC_V01",
+    "status": "ACCEPTED"
+  }
+}

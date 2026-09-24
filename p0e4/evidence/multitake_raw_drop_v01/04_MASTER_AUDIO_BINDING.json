@@ -1,0 +1,9 @@
+{
+  "asset_id": "asset_4",
+  "final_programme_audio": "AUTHORITATIVE_MASTER_ONLY",
+  "schema": "MASTER_AUDIO_BINDING_V01",
+  "sha256": "475e4513cec26e76e5e16c8f787b7a37cda589f01e46f2e5b590db8b67dceaf5",
+  "source_uri": "synthetic://final.wav",
+  "status": "GREEN",
+  "take_audio_use": "SYNC_EVIDENCE_ONLY"
+}

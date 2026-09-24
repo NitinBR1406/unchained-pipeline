@@ -1,0 +1,50 @@
+{
+  "accepted": [
+    {
+      "asset_id": "asset_1",
+      "bytes": 19,
+      "role": "TAKE",
+      "sha256": "22682e4c30aba0c77010a4b3999d5fc53b3d621450d90ddb367c983bbf42cd6f",
+      "source_uri": "synthetic://camera-z.mov"
+    },
+    {
+      "asset_id": "asset_2",
+      "bytes": 20,
+      "role": "TAKE",
+      "sha256": "39fdaed8ee39f6eba01a6ad69ad272b80c7cedc069c90d8388462736fc46fa3a",
+      "source_uri": "synthetic://camera-a.mp4"
+    },
+    {
+      "asset_id": "asset_3",
+      "bytes": 23,
+      "role": "TAKE",
+      "sha256": "c08ea7b16572f2e9e49a44cb1dbbb848232e160cfe604cec0e91c23207869175",
+      "source_uri": "synthetic://phone-q.mov"
+    },
+    {
+      "asset_id": "asset_4",
+      "bytes": 22,
+      "role": "MASTER_AUDIO",
+      "sha256": "475e4513cec26e76e5e16c8f787b7a37cda589f01e46f2e5b590db8b67dceaf5",
+      "source_uri": "synthetic://final.wav"
+    },
+    {
+      "asset_id": "asset_5",
+      "bytes": 15,
+      "role": "PHOTO",
+      "sha256": "fa87dfdcebfc3a806b57b9a1ed4409d6e9fca89afc28a72c942ccb79443703f3",
+      "source_uri": "synthetic://photo.jpg"
+    }
+  ],
+  "aliases": [],
+  "filename_semantics_used": false,
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "manifest_sha256": "31e0eded8f3217e95bee0de288188c9072a6647fc22bcf60372a283d23ce8ac6",
+  "receipt_sha256": "b7604c85513e923ed37c47055ecfbf836141fa744c3a5717d30fb73f2b031e78",
+  "schema": "MULTI_FILE_INGEST_RECEIPT_V01",
+  "status": "GREEN_SYNTHETIC_ONLY"
+}

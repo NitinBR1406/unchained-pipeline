@@ -1,0 +1,114 @@
+{
+  "low_confidence": {
+    "alignment_sha256": "b5340a05a9adef86bd81adf0fe3a757d115951a414e85ad8fdc5e7886af9e56f",
+    "schema": "PER_TAKE_LIPSYNC_ALIGNMENT_V01",
+    "status": "HOLD_ALIGNMENT_REVIEW",
+    "takes": [
+      {
+        "anchor_count": 6,
+        "asset_id": "asset_1",
+        "confidence_milli": 600,
+        "drift_ppm": 10,
+        "evidence_sha256": "7e8e4ca4f127cd78093442c5344b72f69f5bb755222d10fc018d83f9e7a7a656",
+        "hold_reasons": [
+          "LOW_CONFIDENCE"
+        ],
+        "method": "CAMERA_GUIDE_AUDIO_CORRELATION",
+        "offset_ms": 120,
+        "status": "HOLD",
+        "take_sha256": "22682e4c30aba0c77010a4b3999d5fc53b3d621450d90ddb367c983bbf42cd6f",
+        "usable_end_ms": 10000,
+        "usable_start_ms": 100
+      },
+      {
+        "anchor_count": 5,
+        "asset_id": "asset_2",
+        "confidence_milli": 920,
+        "drift_ppm": -25,
+        "evidence_sha256": "7e8e4ca4f127cd78093442c5344b72f69f5bb755222d10fc018d83f9e7a7a656",
+        "hold_reasons": [],
+        "method": "CAMERA_GUIDE_AUDIO_CORRELATION",
+        "offset_ms": -340,
+        "status": "READY",
+        "take_sha256": "39fdaed8ee39f6eba01a6ad69ad272b80c7cedc069c90d8388462736fc46fa3a",
+        "usable_end_ms": 9500,
+        "usable_start_ms": 200
+      },
+      {
+        "anchor_count": 4,
+        "asset_id": "asset_3",
+        "confidence_milli": 900,
+        "drift_ppm": 35,
+        "evidence_sha256": "7e8e4ca4f127cd78093442c5344b72f69f5bb755222d10fc018d83f9e7a7a656",
+        "hold_reasons": [],
+        "method": "CAMERA_GUIDE_AUDIO_CORRELATION",
+        "offset_ms": 45,
+        "status": "READY",
+        "take_sha256": "c08ea7b16572f2e9e49a44cb1dbbb848232e160cfe604cec0e91c23207869175",
+        "usable_end_ms": 9800,
+        "usable_start_ms": 150
+      }
+    ],
+    "thresholds": {
+      "abs_drift_ppm_max": 80,
+      "anchor_count_min": 3,
+      "confidence_milli_min": 850
+    }
+  },
+  "material_drift": {
+    "alignment_sha256": "9e9acd11d7ce78f5632a9bcb56ced7708e079ecff685acd1b7635accc5d52b84",
+    "schema": "PER_TAKE_LIPSYNC_ALIGNMENT_V01",
+    "status": "HOLD_ALIGNMENT_REVIEW",
+    "takes": [
+      {
+        "anchor_count": 6,
+        "asset_id": "asset_1",
+        "confidence_milli": 960,
+        "drift_ppm": 10,
+        "evidence_sha256": "7e8e4ca4f127cd78093442c5344b72f69f5bb755222d10fc018d83f9e7a7a656",
+        "hold_reasons": [],
+        "method": "CAMERA_GUIDE_AUDIO_CORRELATION",
+        "offset_ms": 120,
+        "status": "READY",
+        "take_sha256": "22682e4c30aba0c77010a4b3999d5fc53b3d621450d90ddb367c983bbf42cd6f",
+        "usable_end_ms": 10000,
+        "usable_start_ms": 100
+      },
+      {
+        "anchor_count": 5,
+        "asset_id": "asset_2",
+        "confidence_milli": 920,
+        "drift_ppm": -25,
+        "evidence_sha256": "7e8e4ca4f127cd78093442c5344b72f69f5bb755222d10fc018d83f9e7a7a656",
+        "hold_reasons": [],
+        "method": "CAMERA_GUIDE_AUDIO_CORRELATION",
+        "offset_ms": -340,
+        "status": "READY",
+        "take_sha256": "39fdaed8ee39f6eba01a6ad69ad272b80c7cedc069c90d8388462736fc46fa3a",
+        "usable_end_ms": 9500,
+        "usable_start_ms": 200
+      },
+      {
+        "anchor_count": 4,
+        "asset_id": "asset_3",
+        "confidence_milli": 900,
+        "drift_ppm": 150,
+        "evidence_sha256": "7e8e4ca4f127cd78093442c5344b72f69f5bb755222d10fc018d83f9e7a7a656",
+        "hold_reasons": [
+          "MATERIAL_DRIFT"
+        ],
+        "method": "CAMERA_GUIDE_AUDIO_CORRELATION",
+        "offset_ms": 45,
+        "status": "HOLD",
+        "take_sha256": "c08ea7b16572f2e9e49a44cb1dbbb848232e160cfe604cec0e91c23207869175",
+        "usable_end_ms": 9800,
+        "usable_start_ms": 150
+      }
+    ],
+    "thresholds": {
+      "abs_drift_ppm_max": 80,
+      "anchor_count_min": 3,
+      "confidence_milli_min": 850
+    }
+  }
+}
