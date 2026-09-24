@@ -1,0 +1,47 @@
+{
+  "schema": "COLOR_REVIEW_PERSISTENCE_RECEIPT_V01",
+  "persisted_at": "2026-09-24T17:09:18Z",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "revision": "R4",
+  "status": "COLOR_REVIEW_CANDIDATE",
+  "source_candidate": {
+    "path": ".local/aakhri-multitake-realization-r4-color-repair1/AAKHRI_MULTITAKE_MASTER_V01_RUN4_COLOR_REVIEW.mp4",
+    "sha256": "505cca0728a503588715ae548489214d5f5ac4ab1043d1b7f1ae6a590b67691f",
+    "bytes": 385393347,
+    "unchanged": true
+  },
+  "destination": {
+    "shared_drive": "Unchained Nitin — Master",
+    "relative_path": "P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_R4_COLOR_REVIEW_CANDIDATE_V01",
+    "folder_id": "1yP_K6w7Fn1zTgDWWdxVwxNnWwnWveobD",
+    "video_file_id": "1YCWdtpvqb_LDztsVWYp6BNvHolo4vJYJ",
+    "creation_mode": "NEW_VERSIONED_FOLDER_NO_OVERWRITE"
+  },
+  "artifacts": [
+    {"name": "AAKHRI_MULTITAKE_MASTER_V01_RUN4_COLOR_REVIEW.mp4", "bytes": 385393347, "source_sha256": "505cca0728a503588715ae548489214d5f5ac4ab1043d1b7f1ae6a590b67691f", "destination_readback_sha256": "505cca0728a503588715ae548489214d5f5ac4ab1043d1b7f1ae6a590b67691f", "sha256_equivalent": true, "drive_file_id": "1YCWdtpvqb_LDztsVWYp6BNvHolo4vJYJ"},
+    {"name": "UNCHAINED_AAKHRI_MULTITAKE_V01_RUN4_COLOR_REPAIR1.drp", "bytes": 187845, "source_sha256": "303f1af56ca7d828f7bd73ebab9bf100a55f3688dbf30952c594ce915d2d60f9", "destination_readback_sha256": "303f1af56ca7d828f7bd73ebab9bf100a55f3688dbf30952c594ce915d2d60f9", "sha256_equivalent": true, "drive_file_id": "1gGl99xYz5pcz7X4-WzhZSB9_wMVTInnJ"},
+    {"name": "R4_COLOR_DEVELOPMENT_CONTRACT_V01.json", "bytes": 2993, "source_sha256": "9058b80ac7a9a67c6ae2658cbd37dc15e6bbc4827fd89ee0729c86e2c35a2d85", "destination_readback_sha256": "9058b80ac7a9a67c6ae2658cbd37dc15e6bbc4827fd89ee0729c86e2c35a2d85", "sha256_equivalent": true, "drive_file_id": "1ikZjvWidvAEvqjYduDDVifiH_f4yLzma"},
+    {"name": "R4_RESOLVE_SCOPES_AND_MEASURABLE_COLOR_QC_V01.json", "bytes": 5417, "source_sha256": "bc98de399e125be9ad99bf50dc0d08ee75eaedb0561c236c9baf3cb8be2d0fdf", "destination_readback_sha256": "bc98de399e125be9ad99bf50dc0d08ee75eaedb0561c236c9baf3cb8be2d0fdf", "sha256_equivalent": true, "drive_file_id": "1twRv6LjUJNmcCvyY8vhDrXnAxvHztPph"},
+    {"name": "R4_TECHNICAL_QC_V01.json", "bytes": 715, "source_sha256": "082135b5cdda834bb373961c1b6fc5cc65357178836561f106ca02fa52c78dd7", "destination_readback_sha256": "082135b5cdda834bb373961c1b6fc5cc65357178836561f106ca02fa52c78dd7", "sha256_equivalent": true, "drive_file_id": "14q1fYtmwjBcoGalbfC0nbeHyw__cc_2s"},
+    {"name": "GEMINI_INDEPENDENT_R4_COLOR_QC_V01.json", "bytes": 2152, "source_sha256": "0a02edc1f6aadec4fe91c02ae1f51b34893114cb4a2515b58d03cf0723282432", "destination_readback_sha256": "0a02edc1f6aadec4fe91c02ae1f51b34893114cb4a2515b58d03cf0723282432", "sha256_equivalent": true, "drive_file_id": "1b8QJGfWr8q6MAW_IzbgmVIGRagEWP_Ho"},
+    {"name": "R4_COLOR_QC_OUTCOME_V01.json", "bytes": 695, "source_sha256": "88957180e6b1dc15015d26b5e5dffff33afb26ae4639ad7d7ef5c8aae81413f0", "destination_readback_sha256": "88957180e6b1dc15015d26b5e5dffff33afb26ae4639ad7d7ef5c8aae81413f0", "sha256_equivalent": true, "drive_file_id": "11Q10HvXolEQyLveAyQ5yFj3iqdu0YB81"},
+    {"name": "NEXT_READY.json", "bytes": 475, "source_sha256": "7c7fcf4d1d9831e4ae622a126c81dea570bc66a0150c57fb8b448999a7f77ac2", "destination_readback_sha256": "7c7fcf4d1d9831e4ae622a126c81dea570bc66a0150c57fb8b448999a7f77ac2", "sha256_equivalent": true}
+  ],
+  "readback_verification": "PASS",
+  "technical_qc": "GREEN_COLOR_REVIEW_ONLY",
+  "independent_gemini_color_qc": "COLOR_ACCEPTED_HIGH_CONFIDENCE",
+  "known_r3_defects": "CONFIRMED_UNRESOLVED",
+  "post_ready": false,
+  "final_video_approved": false,
+  "final_asset_approved": false,
+  "rights_cleared": false,
+  "publish_ready": false,
+  "r3_unchanged": true,
+  "source_media_unchanged": true,
+  "next_state": "WAITING_FOR_NITIN_R4_COLOR_REVIEW",
+  "governance": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  }
+}

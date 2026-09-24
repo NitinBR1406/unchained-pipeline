@@ -1,0 +1,29 @@
+{
+  "schema": "GEMINI_INDEPENDENT_R4_COLOR_QC_V01",
+  "candidate_sha256": "505cca0728a503588715ae548489214d5f5ac4ab1043d1b7f1ae6a590b67691f",
+  "session_isolation": "NEW_ISOLATED_GEMINI_CONTEXT_NO_CLAUDE_OR_CHATGPT_CONCLUSIONS",
+  "session_url": "https://gemini.google.com/app/0519fd454119d7da",
+  "review_scope": "COLOR_DEVELOPMENT_ONLY",
+  "raw_verdict": {
+    "schema": "qc_color_review_v1",
+    "reviewed_file": "source: 1",
+    "full_duration_reviewed": "03:34",
+    "verdict": "COLOR_ACCEPTED",
+    "confidence": "High",
+    "color_findings": "Skin tones appear generally natural with restored healthy warmth, effectively mitigating previous pale or washed-out characteristics[cite: 1]. The subject maintains a strong visual presence within the frame[cite: 1]. The slatted background is softly balanced, appearing calm and not overly dominant while retaining a natural look[cite: 1].",
+    "inter_take_findings": "Exposure, contrast, and color balance remain consistent across the various camera angles and take changes throughout the performance, providing a cohesive visual experience[cite: 1].",
+    "artifact_findings": "The color grade does not introduce unnatural color casts, oversaturated skin, or noticeable masking halos around the subject[cite: 1]. Shadow details in the subject's dark shirt are adequately preserved without severe crushed blacks, and highlights are not clipped[cite: 1].",
+    "defect_time_ranges": [],
+    "known_r3_defects_worsened_by_color": false,
+    "repair_actions": "No further color repair actions required based on the evaluated scope.",
+    "limitations": "Evaluation is strictly limited to the specified color-development criteria and color-introduced technical artifacts. This review does not infer correlation or causation regarding non-color defects, nor does it constitute final video approval, POST_READY status, or publication readiness."
+  },
+  "normalized_outcome": "COLOR_ACCEPTED_FOR_NITIN_HUMAN_COLOR_REVIEW",
+  "governance": {
+    "post_ready": false,
+    "final_video_approved": false,
+    "final_asset_approved": false,
+    "rights_cleared": false,
+    "publication_authorized": false
+  }
+}

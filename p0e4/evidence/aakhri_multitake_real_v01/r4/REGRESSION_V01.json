@@ -1,0 +1,19 @@
+{
+  "schema": "R4_REGRESSION_V01",
+  "targeted_suite": {
+    "runtime": "bundled Python 3.12",
+    "tests": 69,
+    "result": "PASS"
+  },
+  "full_suite_observation": {
+    "tests_started": 220,
+    "import_errors": 19,
+    "cause": "PREEXISTING_TEST_ENVIRONMENT_MISSING_JSONSCHEMA",
+    "code_failure": false,
+    "superseded_for_r4_scope_by_targeted_suite": true
+  },
+  "render_full_decode": "PASS",
+  "scope_qc": "GREEN",
+  "shared_drive_readback": "PASS",
+  "status": "GREEN_FOR_COLOR_REVIEW_CANDIDATE_ONLY"
+}

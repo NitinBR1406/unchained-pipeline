@@ -1,0 +1,38 @@
+{
+  "schema": "R4_COLOR_DEVELOPMENT_CONTRACT_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "revision": "R4_COLOR_REVIEW",
+  "authorized_basis": {
+    "r3_candidate_sha256": "baa675588c3fb3bd57bec71b0261f76a4a28eff74047f8673c3e0aceb0ac7487",
+    "r3_contract_sha256": "4542e8abab0c842b104773fa9f4a6bd806f6614ba4235a38e87c359533989e35",
+    "edl_sha256": "6ab0cd0d29f65ab445902ec7e852c5da6b6023f439f5a2e05288e6f3583e0354",
+    "authority": "EXPLICIT_NITIN_R4_PROFESSIONAL_COLOR_DEVELOPMENT_PASS"
+  },
+  "preserved_r3": {"framing": true, "edl": true, "synchronization": true, "beat_motion_timing": true},
+  "stage_order": ["NORMALIZATION", "INTER_TAKE_SHOT_MATCH", "SKIN_EXPOSURE_CONTRAST", "SUBJECT_BACKGROUND_SEPARATION", "BOUNDED_CREATIVE_LOOK"],
+  "resolve_color_page": {"method": "ASC_CDL_PER_TIMELINE_CLIP", "node_index": 1, "working_space": "PROJECT_DEFAULT_REC709", "scope_review_required": true},
+  "takes": {
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {"cdl": {"NodeIndex": 1, "Slope": "0.940 0.920 0.900", "Offset": "0.006 0.003 -0.002", "Power": "1.070 1.055 1.035", "Saturation": 1.11}},
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {"cdl": {"NodeIndex": 1, "Slope": "0.945 0.925 0.902", "Offset": "0.006 0.003 -0.002", "Power": "1.068 1.052 1.032", "Saturation": 1.12}},
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {"cdl": {"NodeIndex": 1, "Slope": "0.938 0.918 0.898", "Offset": "0.005 0.002 -0.002", "Power": "1.075 1.058 1.038", "Saturation": 1.10}},
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {"cdl": {"NodeIndex": 1, "Slope": "0.915 0.905 0.890", "Offset": "0.004 0.001 -0.003", "Power": "1.080 1.062 1.040", "Saturation": 1.09}}
+  },
+  "subject_background_separation": {
+    "method": "SOFT_STATIC_INVERTED_ELLIPSE_FAIL_CLOSED", "gain": 0.95, "saturation": 0.90, "blur_size": 0.010,
+    "mask": {"center": [0.56, 0.49], "width": 0.68, "height": 0.78, "soft_edge": 0.18},
+    "limitations": "NO_AI_SEGMENTATION; NO_TRACKED_FACE_MASK; ABANDON_IF_EDGE_OR_FACE_ARTIFACTS"
+  },
+  "scope_limits": {"max_shadow_clip_pct": 2.0, "max_highlight_clip_pct": 1.0, "max_saturation_p99": 0.98},
+  "known_r3_defects": {
+    "status": "CONFIRMED_UNRESOLVED",
+    "not_repaired_by_r4": true,
+    "ranges": [
+      {"range": "00:09-00:21", "categories": ["FOREHEAD_TEXTURE_SHADOW_ARTIFACT"]},
+      {"range": "01:13-01:29", "categories": ["RECURRING_FOREHEAD_ARTIFACT"]},
+      {"range": "01:33-01:58", "categories": ["EXCESSIVE_DISTRACTING_MOVEMENT_SHAKE"]},
+      {"range": "01:52-01:54", "categories": ["MOUTH_TONGUE_DISTORTION", "POSSIBLE_LIPSYNC_CONCERN"]}
+    ]
+  },
+  "forbidden": ["GLOBAL_BLACK_CRUSH", "HIGHLIGHT_CLIP", "SKIN_OVERSATURATION", "FACIAL_MASK_ARTIFACT", "R3_EDIT_OR_TIMING_CHANGE"],
+  "governance": {"classification": "COLOR_REVIEW_CANDIDATE", "post_ready": false, "final_video_approved": false, "final_asset_approved": false, "rights_cleared": false, "production_deployment_authorized": false, "publication_authorized": false, "first_real_poster": "PAUSED_BY_NITIN"}
+}

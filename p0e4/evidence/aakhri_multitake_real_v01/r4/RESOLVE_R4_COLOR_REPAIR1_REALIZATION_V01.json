@@ -1,0 +1,464 @@
+{
+  "classification": "COLOR_REVIEW_CANDIDATE",
+  "governance": {
+    "classification": "COLOR_REVIEW_CANDIDATE",
+    "final_asset_approved": false,
+    "final_video_approved": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "post_ready": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "rights_cleared": false
+  },
+  "inputs_before": {
+    "edl": {
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/aakhri_multitake_real_v01/MULTI_TAKE_EDIT_DECISION_LIST_V01.json",
+      "sha256": "6ab0cd0d29f65ab445902ec7e852c5da6b6023f439f5a2e05288e6f3583e0354"
+    },
+    "master": {
+      "bytes": 61749398,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/AAKHRI ISHQ MASTER 2.wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+    },
+    "r3_candidate": {
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-r3-repair5/AAKHRI_MULTITAKE_MASTER_V01_RUN3.mp4",
+      "sha256": "baa675588c3fb3bd57bec71b0261f76a4a28eff74047f8673c3e0aceb0ac7487"
+    },
+    "r3_contract": {
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/aakhri_multitake_real_v01/r3/MULTI_TAKE_CREATIVE_REVISION_CONTRACT_V01.json",
+      "sha256": "4542e8abab0c842b104773fa9f4a6bd806f6614ba4235a38e87c359533989e35"
+    },
+    "takes": {
+      "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+        "bytes": 216042666,
+        "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5740.MOV",
+        "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb"
+      },
+      "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+        "bytes": 504008133,
+        "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5742.MOV",
+        "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+      },
+      "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+        "bytes": 926438315,
+        "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5741.MOV",
+        "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+      },
+      "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+        "bytes": 942419948,
+        "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5739.MOV",
+        "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+      }
+    }
+  },
+  "known_r3_defects": {
+    "not_repaired_by_r4": true,
+    "ranges": [
+      {
+        "categories": [
+          "FOREHEAD_TEXTURE_SHADOW_ARTIFACT"
+        ],
+        "range": "00:09-00:21"
+      },
+      {
+        "categories": [
+          "RECURRING_FOREHEAD_ARTIFACT"
+        ],
+        "range": "01:13-01:29"
+      },
+      {
+        "categories": [
+          "EXCESSIVE_DISTRACTING_MOVEMENT_SHAKE"
+        ],
+        "range": "01:33-01:58"
+      },
+      {
+        "categories": [
+          "MOUTH_TONGUE_DISTORTION",
+          "POSSIBLE_LIPSYNC_CONCERN"
+        ],
+        "range": "01:52-01:54"
+      }
+    ],
+    "status": "CONFIRMED_UNRESOLVED"
+  },
+  "original_restored": true,
+  "outputs": [
+    {
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 385393347,
+      "clip_finishing": [
+        {
+          "base_framing": {
+            "base_scale": 2.02,
+            "center": [
+              0.5,
+              0.5
+            ],
+            "reason": "GEMINI_R3_REPAIR_REMOVE_UPPER_CEILING_AND_LOWER_BORDER"
+          },
+          "beat_motion_events": [],
+          "resolve_color_page_cdl": {
+            "NodeIndex": 1,
+            "Offset": "0.006 0.003 -0.002",
+            "Power": "1.068 1.052 1.032",
+            "Saturation": 1.12,
+            "Slope": "0.945 0.925 0.902"
+          },
+          "segment_id": "S01",
+          "separation": {
+            "blur_size": 0.01,
+            "gain": 0.95,
+            "limitations": "NO_AI_SEGMENTATION; NO_TRACKED_FACE_MASK; ABANDON_IF_EDGE_OR_FACE_ARTIFACTS",
+            "mask": {
+              "center": [
+                0.56,
+                0.49
+              ],
+              "height": 0.78,
+              "soft_edge": 0.18,
+              "width": 0.68
+            },
+            "method": "SOFT_STATIC_INVERTED_ELLIPSE_FAIL_CLOSED",
+            "saturation": 0.9
+          },
+          "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin"
+        },
+        {
+          "base_framing": {
+            "base_scale": 2.3,
+            "center": [
+              0.5,
+              0.72
+            ],
+            "reason": "GEMINI_R3_REPAIR_REMOVE_UPPER_CEILING_AND_NORMALIZE_SUBJECT"
+          },
+          "beat_motion_events": [],
+          "resolve_color_page_cdl": {
+            "NodeIndex": 1,
+            "Offset": "0.006 0.003 -0.002",
+            "Power": "1.070 1.055 1.035",
+            "Saturation": 1.11,
+            "Slope": "0.940 0.920 0.900"
+          },
+          "segment_id": "S02",
+          "separation": {
+            "blur_size": 0.01,
+            "gain": 0.95,
+            "limitations": "NO_AI_SEGMENTATION; NO_TRACKED_FACE_MASK; ABANDON_IF_EDGE_OR_FACE_ARTIFACTS",
+            "mask": {
+              "center": [
+                0.56,
+                0.49
+              ],
+              "height": 0.78,
+              "soft_edge": 0.18,
+              "width": 0.68
+            },
+            "method": "SOFT_STATIC_INVERTED_ELLIPSE_FAIL_CLOSED",
+            "saturation": 0.9
+          },
+          "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8"
+        },
+        {
+          "base_framing": {
+            "base_scale": 2.02,
+            "center": [
+              0.5,
+              0.49
+            ],
+            "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+          },
+          "beat_motion_events": [
+            {
+              "energy_zone": "BUILD",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.7958,
+              "time_ms": 49960
+            },
+            {
+              "energy_zone": "BUILD",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.7759,
+              "time_ms": 56360
+            },
+            {
+              "energy_zone": "PEAK",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.7843,
+              "time_ms": 63960
+            },
+            {
+              "energy_zone": "QUIET",
+              "motion": "GENTLE_PUSH",
+              "onset_strength": 0.8446,
+              "time_ms": 72760
+            },
+            {
+              "energy_zone": "BUILD",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.8643,
+              "time_ms": 78760
+            }
+          ],
+          "resolve_color_page_cdl": {
+            "NodeIndex": 1,
+            "Offset": "0.005 0.002 -0.002",
+            "Power": "1.075 1.058 1.038",
+            "Saturation": 1.1,
+            "Slope": "0.938 0.918 0.898"
+          },
+          "segment_id": "S03",
+          "separation": {
+            "blur_size": 0.01,
+            "gain": 0.95,
+            "limitations": "NO_AI_SEGMENTATION; NO_TRACKED_FACE_MASK; ABANDON_IF_EDGE_OR_FACE_ARTIFACTS",
+            "mask": {
+              "center": [
+                0.56,
+                0.49
+              ],
+              "height": 0.78,
+              "soft_edge": 0.18,
+              "width": 0.68
+            },
+            "method": "SOFT_STATIC_INVERTED_ELLIPSE_FAIL_CLOSED",
+            "saturation": 0.9
+          },
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8"
+        },
+        {
+          "base_framing": {
+            "base_scale": 2.02,
+            "center": [
+              0.5,
+              0.49
+            ],
+            "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+          },
+          "beat_motion_events": [
+            {
+              "energy_zone": "QUIET",
+              "motion": "GENTLE_PUSH",
+              "onset_strength": 1.0,
+              "time_ms": 92760
+            },
+            {
+              "energy_zone": "BUILD",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.7807,
+              "time_ms": 102760
+            },
+            {
+              "energy_zone": "BUILD",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.8071,
+              "time_ms": 118360
+            }
+          ],
+          "resolve_color_page_cdl": {
+            "NodeIndex": 1,
+            "Offset": "0.005 0.002 -0.002",
+            "Power": "1.075 1.058 1.038",
+            "Saturation": 1.1,
+            "Slope": "0.938 0.918 0.898"
+          },
+          "segment_id": "S04",
+          "separation": {
+            "blur_size": 0.01,
+            "gain": 0.95,
+            "limitations": "NO_AI_SEGMENTATION; NO_TRACKED_FACE_MASK; ABANDON_IF_EDGE_OR_FACE_ARTIFACTS",
+            "mask": {
+              "center": [
+                0.56,
+                0.49
+              ],
+              "height": 0.78,
+              "soft_edge": 0.18,
+              "width": 0.68
+            },
+            "method": "SOFT_STATIC_INVERTED_ELLIPSE_FAIL_CLOSED",
+            "saturation": 0.9
+          },
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8"
+        },
+        {
+          "base_framing": {
+            "base_scale": 2.02,
+            "center": [
+              0.5,
+              0.5
+            ],
+            "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+          },
+          "beat_motion_events": [
+            {
+              "energy_zone": "BUILD",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.8483,
+              "time_ms": 125160
+            },
+            {
+              "energy_zone": "BUILD",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.8446,
+              "time_ms": 137960
+            },
+            {
+              "energy_zone": "PEAK",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.7592,
+              "time_ms": 143960
+            },
+            {
+              "energy_zone": "BUILD",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.8697,
+              "time_ms": 149160
+            },
+            {
+              "energy_zone": "BUILD",
+              "motion": "PUNCH_IN_MICRO_SHAKE",
+              "onset_strength": 0.759,
+              "time_ms": 153960
+            }
+          ],
+          "resolve_color_page_cdl": {
+            "NodeIndex": 1,
+            "Offset": "0.004 0.001 -0.003",
+            "Power": "1.080 1.062 1.040",
+            "Saturation": 1.09,
+            "Slope": "0.915 0.905 0.890"
+          },
+          "segment_id": "S05",
+          "separation": {
+            "blur_size": 0.01,
+            "gain": 0.95,
+            "limitations": "NO_AI_SEGMENTATION; NO_TRACKED_FACE_MASK; ABANDON_IF_EDGE_OR_FACE_ARTIFACTS",
+            "mask": {
+              "center": [
+                0.56,
+                0.49
+              ],
+              "height": 0.78,
+              "soft_edge": 0.18,
+              "width": 0.68
+            },
+            "method": "SOFT_STATIC_INVERTED_ELLIPSE_FAIL_CLOSED",
+            "saturation": 0.9
+          },
+          "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW"
+        },
+        {
+          "base_framing": {
+            "base_scale": 2.02,
+            "center": [
+              0.5,
+              0.5
+            ],
+            "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+          },
+          "beat_motion_events": [
+            {
+              "energy_zone": "QUIET",
+              "motion": "GENTLE_PUSH",
+              "onset_strength": 0.8725,
+              "time_ms": 161960
+            }
+          ],
+          "resolve_color_page_cdl": {
+            "NodeIndex": 1,
+            "Offset": "0.004 0.001 -0.003",
+            "Power": "1.080 1.062 1.040",
+            "Saturation": 1.09,
+            "Slope": "0.915 0.905 0.890"
+          },
+          "segment_id": "S06",
+          "separation": {
+            "blur_size": 0.01,
+            "gain": 0.95,
+            "limitations": "NO_AI_SEGMENTATION; NO_TRACKED_FACE_MASK; ABANDON_IF_EDGE_OR_FACE_ARTIFACTS",
+            "mask": {
+              "center": [
+                0.56,
+                0.49
+              ],
+              "height": 0.78,
+              "soft_edge": 0.18,
+              "width": 0.68
+            },
+            "method": "SOFT_STATIC_INVERTED_ELLIPSE_FAIL_CLOSED",
+            "saturation": 0.9
+          },
+          "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW"
+        },
+        {
+          "base_framing": {
+            "base_scale": 2.02,
+            "center": [
+              0.5,
+              0.49
+            ],
+            "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+          },
+          "beat_motion_events": [],
+          "resolve_color_page_cdl": {
+            "NodeIndex": 1,
+            "Offset": "0.005 0.002 -0.002",
+            "Power": "1.075 1.058 1.038",
+            "Saturation": 1.1,
+            "Slope": "0.938 0.918 0.898"
+          },
+          "segment_id": "S07",
+          "separation": {
+            "blur_size": 0.01,
+            "gain": 0.95,
+            "limitations": "NO_AI_SEGMENTATION; NO_TRACKED_FACE_MASK; ABANDON_IF_EDGE_OR_FACE_ARTIFACTS",
+            "mask": {
+              "center": [
+                0.56,
+                0.49
+              ],
+              "height": 0.78,
+              "soft_edge": 0.18,
+              "width": 0.68
+            },
+            "method": "SOFT_STATIC_INVERTED_ELLIPSE_FAIL_CLOSED",
+            "saturation": 0.9
+          },
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8"
+        }
+      ],
+      "color_pipeline": [
+        "NORMALIZATION",
+        "INTER_TAKE_SHOT_MATCH",
+        "SKIN_EXPOSURE_CONTRAST",
+        "SUBJECT_BACKGROUND_SEPARATION",
+        "BOUNDED_CREATIVE_LOOK"
+      ],
+      "frames": 6432,
+      "name": "AAKHRI_MULTITAKE_MASTER_V01_RUN4_COLOR_REVIEW",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-r4-color-repair1/AAKHRI_MULTITAKE_MASTER_V01_RUN4_COLOR_REVIEW.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 179209
+      },
+      "sha256": "505cca0728a503588715ae548489214d5f5ac4ab1043d1b7f1ae6a590b67691f"
+    }
+  ],
+  "project": "UNCHAINED_AAKHRI_MULTITAKE_V01_RUN4_COLOR_REPAIR1",
+  "project_closed": true,
+  "r3_edit_state_preserved": {
+    "beat_motion_timing": true,
+    "edl": true,
+    "framing": true,
+    "synchronization": true
+  },
+  "resolve_project_archive": {
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-r4-color-repair1/UNCHAINED_AAKHRI_MULTITAKE_V01_RUN4_COLOR_REPAIR1.drp",
+    "sha256": "303f1af56ca7d828f7bd73ebab9bf100a55f3688dbf30952c594ce915d2d60f9"
+  },
+  "schema": "RESOLVE_R4_COLOR_REALIZATION_V01",
+  "status": "R4_COLOR_RENDER_COMPLETE_PRIVATE_ONLY"
+}

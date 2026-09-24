@@ -1,0 +1,13 @@
+{
+  "schema": "P0E4_NEXT_READY_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "state": "WAITING_FOR_NITIN_R4_COLOR_REVIEW",
+  "smallest_human_gate": {
+    "gate": "NITIN_R4_COLOR_REVIEW",
+    "candidate_sha256": "505cca0728a503588715ae548489214d5f5ac4ab1043d1b7f1ae6a590b67691f",
+    "question": "Confirm or reject the R4 professional color direction only."
+  },
+  "known_r3_defects_remain_open": true,
+  "post_ready": false,
+  "publication_authorized": false
+}

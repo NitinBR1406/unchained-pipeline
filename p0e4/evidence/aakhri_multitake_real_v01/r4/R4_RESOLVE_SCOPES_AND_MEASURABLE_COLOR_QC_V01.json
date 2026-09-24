@@ -1,0 +1,199 @@
+{
+  "schema": "R4_RESOLVE_SCOPES_AND_MEASURABLE_COLOR_QC_V01",
+  "candidate_sha256": "505cca0728a503588715ae548489214d5f5ac4ab1043d1b7f1ae6a590b67691f",
+  "resolve_scope_observation": {
+    "page": "COLOR",
+    "scope": "RGB_PARADE",
+    "observed_frame_timecode": "01:03:34:11",
+    "observation": "RGB parade remained below 1023 ceiling and above 0 floor; channel separation reflected bounded warm CDL; no global channel clipping observed",
+    "capture_method": "LIVE_RESOLVE_COLOR_PAGE_VISUAL_OBSERVATION"
+  },
+  "sample_method": "AVFoundation frame extraction plus deterministic RGB pixel scope metrics",
+  "limits": {
+    "max_shadow_clip_pct": 2.0,
+    "max_highlight_clip_pct": 1.0,
+    "max_saturation_p99": 0.98
+  },
+  "samples": [
+    {
+      "time_ms": 10000,
+      "metrics": {
+        "luma_percentiles": {
+          "1": 0.042849,
+          "5": 0.141136,
+          "50": 0.503624,
+          "95": 0.763654,
+          "99": 0.786932
+        },
+        "rgb_shadow_clip_pct": 0.0,
+        "rgb_highlight_clip_pct": 0.0,
+        "saturation_percentiles": {
+          "50": 0.1,
+          "95": 0.260204,
+          "99": 0.325847
+        },
+        "subject_roi_luma_median": 0.668426,
+        "background_edge_luma_median": 0.499421,
+        "subject_background_luma_delta": 0.169005
+      }
+    },
+    {
+      "time_ms": 19000,
+      "metrics": {
+        "luma_percentiles": {
+          "1": 0.055448,
+          "5": 0.128841,
+          "50": 0.504729,
+          "95": 0.760315,
+          "99": 0.782722
+        },
+        "rgb_shadow_clip_pct": 0.0,
+        "rgb_highlight_clip_pct": 0.0,
+        "saturation_percentiles": {
+          "50": 0.108696,
+          "95": 0.275709,
+          "99": 0.362904
+        },
+        "subject_roi_luma_median": 0.66984,
+        "background_edge_luma_median": 0.480944,
+        "subject_background_luma_delta": 0.188896
+      }
+    },
+    {
+      "time_ms": 35000,
+      "metrics": {
+        "luma_percentiles": {
+          "1": 0.031085,
+          "5": 0.095533,
+          "50": 0.50052,
+          "95": 0.754973,
+          "99": 0.77685
+        },
+        "rgb_shadow_clip_pct": 0.324219,
+        "rgb_highlight_clip_pct": 0.0,
+        "saturation_percentiles": {
+          "50": 0.16092,
+          "95": 0.365385,
+          "99": 0.454545
+        },
+        "subject_roi_luma_median": 0.580709,
+        "background_edge_luma_median": 0.52794,
+        "subject_background_luma_delta": 0.052769
+      }
+    },
+    {
+      "time_ms": 60000,
+      "metrics": {
+        "luma_percentiles": {
+          "1": 0.070017,
+          "5": 0.128841,
+          "50": 0.482831,
+          "95": 0.753871,
+          "99": 0.782743
+        },
+        "rgb_shadow_clip_pct": 0.0,
+        "rgb_highlight_clip_pct": 0.0,
+        "saturation_percentiles": {
+          "50": 0.090909,
+          "95": 0.248522,
+          "99": 0.315789
+        },
+        "subject_roi_luma_median": 0.521515,
+        "background_edge_luma_median": 0.498868,
+        "subject_background_luma_delta": 0.022647
+      }
+    },
+    {
+      "time_ms": 100000,
+      "metrics": {
+        "luma_percentiles": {
+          "1": 0.067516,
+          "5": 0.126056,
+          "50": 0.451259,
+          "95": 0.743563,
+          "99": 0.775853
+        },
+        "rgb_shadow_clip_pct": 0.0,
+        "rgb_highlight_clip_pct": 0.0,
+        "saturation_percentiles": {
+          "50": 0.084906,
+          "95": 0.253886,
+          "99": 0.322034
+        },
+        "subject_roi_luma_median": 0.506078,
+        "background_edge_luma_median": 0.465792,
+        "subject_background_luma_delta": 0.040286
+      }
+    },
+    {
+      "time_ms": 140000,
+      "metrics": {
+        "luma_percentiles": {
+          "1": 0.059673,
+          "5": 0.118496,
+          "50": 0.467576,
+          "95": 0.736466,
+          "99": 0.765776
+        },
+        "rgb_shadow_clip_pct": 0.0,
+        "rgb_highlight_clip_pct": 0.0,
+        "saturation_percentiles": {
+          "50": 0.079545,
+          "95": 0.246305,
+          "99": 0.310811
+        },
+        "subject_roi_luma_median": 0.619673,
+        "background_edge_luma_median": 0.46274,
+        "subject_background_luma_delta": 0.156933
+      }
+    },
+    {
+      "time_ms": 180000,
+      "metrics": {
+        "luma_percentiles": {
+          "1": 0.025763,
+          "5": 0.099455,
+          "50": 0.453497,
+          "95": 0.735349,
+          "99": 0.764675
+        },
+        "rgb_shadow_clip_pct": 0.154514,
+        "rgb_highlight_clip_pct": 0.0,
+        "saturation_percentiles": {
+          "50": 0.086957,
+          "95": 0.25974,
+          "99": 0.380952
+        },
+        "subject_roi_luma_median": 0.525602,
+        "background_edge_luma_median": 0.470584,
+        "subject_background_luma_delta": 0.055018
+      }
+    },
+    {
+      "time_ms": 208000,
+      "metrics": {
+        "luma_percentiles": {
+          "1": 0.013998,
+          "5": 0.065226,
+          "50": 0.448155,
+          "95": 0.731129,
+          "99": 0.763434
+        },
+        "rgb_shadow_clip_pct": 0.474392,
+        "rgb_highlight_clip_pct": 0.0,
+        "saturation_percentiles": {
+          "50": 0.108696,
+          "95": 0.3125,
+          "99": 0.444444
+        },
+        "subject_roi_luma_median": 0.520128,
+        "background_edge_luma_median": 0.488225,
+        "subject_background_luma_delta": 0.031903
+      }
+    }
+  ],
+  "assessment": {
+    "status": "GREEN",
+    "failures": []
+  }
+}

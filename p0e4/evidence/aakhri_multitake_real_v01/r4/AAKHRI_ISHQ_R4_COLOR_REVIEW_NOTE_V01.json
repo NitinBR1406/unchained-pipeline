@@ -1,0 +1,20 @@
+{
+  "schema": "AAKHRI_ISHQ_R4_COLOR_REVIEW_NOTE_V01",
+  "classification": "COLOR_REVIEW_CANDIDATE",
+  "candidate_sha256": "505cca0728a503588715ae548489214d5f5ac4ab1043d1b7f1ae6a590b67691f",
+  "technical_qc": "GREEN",
+  "creative_target": [
+    "NATURAL_RICH_HEALTHY_SKIN",
+    "STRONGER_SUBJECT_PRESENCE",
+    "SOFTER_CALMER_BACKGROUND"
+  ],
+  "known_unresolved_r3_defects": [
+    "00:09-00:21 forehead texture/shadow artifact",
+    "01:13-01:29 recurring forehead artifact",
+    "01:33-01:58 excessive/distracting movement/shake",
+    "01:52-01:54 mouth/tongue distortion and possible lip-sync concern"
+  ],
+  "review_instruction": "Review color only. This candidate is not POST_READY and does not carry final video, final asset, rights, deployment or publication approval.",
+  "independent_gemini_color_qc": "COLOR_ACCEPTED_HIGH_CONFIDENCE",
+  "state": "WAITING_FOR_NITIN_R4_COLOR_REVIEW"
+}
