@@ -1,0 +1,14 @@
+{
+  "schema": "PERSISTENCE_HANDOFF_STATE_REDUCER_OUTCOME_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "prior_workload_state": "POST_READY_WAITING_FOR_NITIN",
+  "workload_state": "WAITING_FOR_NITIN_FINAL_VIDEO_AND_ASSET_APPROVAL",
+  "persistence_handoff": "GREEN",
+  "authoritative_review_folder_id": "1qwYo1yBdBinGY-SCgj5FzNxCo-xf5LMa",
+  "global_master_state_mutated": false,
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  }
+}

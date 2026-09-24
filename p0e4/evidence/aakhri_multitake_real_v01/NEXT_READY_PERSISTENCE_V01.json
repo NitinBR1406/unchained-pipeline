@@ -1,0 +1,19 @@
+{
+  "schema": "AAKHRI_MULTI_TAKE_NEXT_READY_PERSISTENCE_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "status": "WAITING_FOR_NITIN_FINAL_VIDEO_AND_ASSET_APPROVAL",
+  "private_master_sha256": "009965d6db556d6886cd61cffea26da988787a07b9e39e34db206eaf79bb603d",
+  "review_folder_id": "1qwYo1yBdBinGY-SCgj5FzNxCo-xf5LMa",
+  "review_folder_url": "https://drive.google.com/drive/folders/1qwYo1yBdBinGY-SCgj5FzNxCo-xf5LMa",
+  "remaining_human_gates": [
+    "NITIN_FINAL_VIDEO_APPROVAL",
+    "NITIN_FINAL_ASSET_APPROVAL",
+    "RIGHTS_CLEARANCE"
+  ],
+  "publish_approval_requested": false,
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  }
+}

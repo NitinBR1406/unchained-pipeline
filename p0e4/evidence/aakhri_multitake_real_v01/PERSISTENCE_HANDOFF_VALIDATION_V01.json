@@ -1,0 +1,22 @@
+{
+  "schema": "PERSISTENCE_HANDOFF_VALIDATION_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "status": "GREEN",
+  "receipt_sha256": "1ebda7da0d11fd65761466f76075be3883e26e239d689e83a1e21835f69fdcb9",
+  "focused_tests": {
+    "tests_run": 11,
+    "failures": 0,
+    "errors": 0
+  },
+  "full_regression": {
+    "tests_run": 274,
+    "failures": 0,
+    "errors": 0
+  },
+  "destination_folder_id": "1qwYo1yBdBinGY-SCgj5FzNxCo-xf5LMa",
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  }
+}

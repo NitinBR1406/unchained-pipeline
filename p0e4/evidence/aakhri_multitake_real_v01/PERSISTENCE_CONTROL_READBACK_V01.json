@@ -1,0 +1,32 @@
+{
+  "schema": "PERSISTENCE_CONTROL_READBACK_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "destination_folder_id": "1qwYo1yBdBinGY-SCgj5FzNxCo-xf5LMa",
+  "files": [
+    {
+      "path": "PERSISTENCE_HANDOFF_RECEIPT_V01.json",
+      "bytes": 34813,
+      "sha256": "1ebda7da0d11fd65761466f76075be3883e26e239d689e83a1e21835f69fdcb9",
+      "verified": true
+    },
+    {
+      "path": "NEXT_READY_PERSISTENCE_V01.json",
+      "bytes": 746,
+      "sha256": "68df10932e23c206eae2d03b43f11ed3ae6233fe3c73c056b12e6760096a3084",
+      "verified": true
+    },
+    {
+      "path": "STATE_REDUCER_OUTCOME_PERSISTENCE_V01.json",
+      "bytes": 543,
+      "sha256": "e36170360b27c796461350ff1bef7d23c78428196cdef27d4260697f51984155",
+      "verified": true
+    },
+    {
+      "path": "PERSISTENCE_HANDOFF_SHA256SUMS_V01.json",
+      "bytes": 635,
+      "sha256": "934d075c2120918a0985ce63e986ab25bddc4b14fd5147e8c848682f5df132d9",
+      "verified": true
+    }
+  ],
+  "status": "GREEN"
+}
