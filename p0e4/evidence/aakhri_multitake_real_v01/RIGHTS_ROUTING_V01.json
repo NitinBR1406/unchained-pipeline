@@ -1,0 +1,16 @@
+{
+  "approval_status": "UNKNOWN_NOT_INFERRED",
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "next_gate": "NITIN_RIGHTS_AND_FINAL_ASSET_REVIEW",
+  "output_binding_sha256": "009965d6db556d6886cd61cffea26da988787a07b9e39e34db206eaf79bb603d",
+  "publication_blocked": true,
+  "receipt_sha256": "e1f42f6bd3c3165d69e3d1355c841718035ac1ca436c08e82d89479a239e0eea",
+  "rights_status": "UNKNOWN_NOT_INFERRED",
+  "schema": "RIGHTS_ROUTING_V01",
+  "status": "HOLD_RIGHTS_CLEARANCE",
+  "workload": "AAKHRI_ISHQ"
+}

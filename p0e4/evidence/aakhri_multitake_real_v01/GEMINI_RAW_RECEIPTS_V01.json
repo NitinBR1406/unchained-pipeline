@@ -1,0 +1,122 @@
+{
+  "accepted_segment_count": 7,
+  "coverage_ms": [
+    0,
+    214400
+  ],
+  "independent_contexts": [
+    {
+      "accepted_ranges": [
+        {
+          "asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+          "concise_observation": "The performer exhibits a grounded, introspective demeanor with downward glances, well-suited for the song's introduction.",
+          "end_ms": 20000,
+          "framing_score_milli": 900,
+          "lipsync_visual_confidence_milli": 950,
+          "performance_score_milli": 850,
+          "reason_code": "INTRO_SUBDUED_PERFORMANCE",
+          "recommended_use": "Primary shot for the opening 20 seconds to establish a calm baseline before building energy.",
+          "start_ms": 0
+        },
+        {
+          "asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+          "concise_observation": "Tight close-up framing highlights facial micro-expressions and intense eye contact, elevating the emotional delivery.",
+          "end_ms": 47000,
+          "framing_score_milli": 880,
+          "lipsync_visual_confidence_milli": 980,
+          "performance_score_milli": 920,
+          "reason_code": "EMOTIONAL_BUILD",
+          "recommended_use": "Use for the transition from the intro into the first verse/pre-chorus.",
+          "start_ms": 20000
+        },
+        {
+          "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "concise_observation": "Wide high-angle framing captures energetic body language, hand gestures, and spatial movement within the vocal booth.",
+          "end_ms": 92000,
+          "framing_score_milli": 850,
+          "lipsync_visual_confidence_milli": 900,
+          "performance_score_milli": 890,
+          "reason_code": "CHORUS_DYNAMICS",
+          "recommended_use": "Intercut during the first chorus to provide visual relief from the tight close-ups and emphasize rhythm.",
+          "start_ms": 47000
+        }
+      ],
+      "model": "GEMINI_PRO",
+      "status": "PARTIAL_ACCEPTED_0_92000",
+      "termination": "GENERATION_STALLED_MID_OBJECT"
+    },
+    {
+      "model": "GEMINI_PRO",
+      "reason": "WRONG_BINDING_SHA_PLACEHOLDER_ASSET_IDS",
+      "status": "REJECTED"
+    },
+    {
+      "color_match_notes": "Both takes share similar acoustic booth lighting; slight contrast and exposure adjustment needed to blend skin tones seamlessly.",
+      "crop_reframe_notes": "Both assets feature vertical overhead framing; normalize scale slightly around the pop filter for uniform visual weight.",
+      "model": "GEMINI_FLASH",
+      "normalization": {
+        "formula": "integer_divide_by_10",
+        "ordering_preserved": true,
+        "reason": "RAW_VALUES_OUTSIDE_DECLARED_0_1000_MILLI_SCALE"
+      },
+      "raw_ranges": [
+        {
+          "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "concise_observation": "Stable high-angle perspective, consistent lip-sync across the vocal verse entry.",
+          "end_ms": 125000,
+          "framing_score_milli": 6000,
+          "lipsync_visual_confidence_milli": 6500,
+          "performance_score_milli": 6300,
+          "reason_code": "COVERAGE_CONTINUITY",
+          "recommended_use": "PRIMARY",
+          "start_ms": 92000
+        },
+        {
+          "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+          "concise_observation": "Engaging direct eye line to lens during chorus phrase.",
+          "end_ms": 160000,
+          "framing_score_milli": 6400,
+          "lipsync_visual_confidence_milli": 6700,
+          "performance_score_milli": 6600,
+          "reason_code": "EXPRESSION_VARIATION",
+          "recommended_use": "PRIMARY",
+          "start_ms": 125000
+        },
+        {
+          "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+          "concise_observation": "Good energy and hand gestures throughout climax.",
+          "end_ms": 213557,
+          "framing_score_milli": 6200,
+          "lipsync_visual_confidence_milli": 6600,
+          "performance_score_milli": 6500,
+          "reason_code": "PERFORMANCE_DELIVERY",
+          "recommended_use": "PRIMARY",
+          "start_ms": 160000
+        },
+        {
+          "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "concise_observation": "Completes master tail beyond asset 04 coverage window.",
+          "end_ms": 214400,
+          "framing_score_milli": 5900,
+          "lipsync_visual_confidence_milli": 6000,
+          "performance_score_milli": 5800,
+          "reason_code": "EXCLUSIVE_COVERAGE",
+          "recommended_use": "PRIMARY",
+          "start_ms": 213557
+        }
+      ],
+      "status": "ACCEPTED_WITH_DETERMINISTIC_SCORE_NORMALIZATION",
+      "uncertainties": [
+        "Fine-grain sub-frame alignment offset between proxy audio stems."
+      ]
+    },
+    {
+      "model": "GEMINI_FLASH",
+      "reason": "CORRUPTED_BINDING_RESPONSE_AFTER_RESCALE_REQUEST",
+      "status": "REJECTED"
+    }
+  ],
+  "no_chatgpt_or_claude_conclusions_exposed": true,
+  "receipt_sha256": "338b1ce98bd12b59c0bb39b80d01ffff51be60e928daacc10a47dae568942861",
+  "schema": "GEMINI_RAW_RECEIPTS_V01"
+}

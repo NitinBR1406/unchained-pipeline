@@ -1,0 +1,55 @@
+{
+  "schema": "GEMINI_INDEPENDENT_MULTI_TAKE_OUTPUT_QC_V01",
+  "candidate_sha256": "009965d6db556d6886cd61cffea26da988787a07b9e39e34db206eaf79bb603d",
+  "agent_isolation": "NO_CLAUDE_OR_CHATGPT_CONCLUSIONS",
+  "full_duration_reviewed": true,
+  "verdict": "ACCEPTED",
+  "checks": {
+    "sync_defects": "PASS",
+    "bad_cuts": "PASS",
+    "framing_crop": "PASS",
+    "excessive_effects": "PASS",
+    "color_mismatch": "PASS",
+    "audio_defects": "PASS",
+    "caption_safe_area": "PASS",
+    "technical_decode": "PASS",
+    "performance_rule": "PASS"
+  },
+  "observations": [
+    {
+      "time_range": "00:00:00.000 - 00:00:20.000",
+      "evidence": "Opening shot establishes continuous vocal take with accurate lip synchronization and natural studio booth acoustics."
+    },
+    {
+      "time_range": "00:00:19.500 - 00:00:20.500",
+      "evidence": "Inspected cut point near 00:20.000; transition maintains visual continuity, framing balance, and sync."
+    },
+    {
+      "time_range": "00:00:46.500 - 00:00:47.500",
+      "evidence": "Inspected transition around 00:47.000; seamless cut without flash frames, sync jump, or color mismatch."
+    },
+    {
+      "time_range": "00:01:31.500 - 00:01:33.000",
+      "evidence": "Interlude transition near 00:92.000; performer movement and camera tracking remain coherent."
+    },
+    {
+      "time_range": "00:02:04.500 - 00:02:05.500",
+      "evidence": "Mid-point transition inspected near 00:125.000; framing maintains vertical headroom and stable exposure."
+    },
+    {
+      "time_range": "00:02:39.500 - 00:02:40.500",
+      "evidence": "Later verse transition inspected near 00:160.000; tight lip-sync alignment and consistent audio levels."
+    },
+    {
+      "time_range": "00:03:31.000 - 00:03:34.400",
+      "evidence": "Final tail inspected around 00:213.557 to programme end; clean action cutoff and complete audio fadeout with no abrupt glitch."
+    },
+    {
+      "time_range": "00:00:00.000 - 00:03:34.400",
+      "evidence": "Absence of unauthorized titles, lyrics, or burned-in captions confirmed across full runtime."
+    }
+  ],
+  "repair_actions": [],
+  "uncertainties": [],
+  "rights_or_approval_inferred": false
+}

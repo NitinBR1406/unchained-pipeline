@@ -1,0 +1,57 @@
+[
+  {
+    "name": "AAKHRI ISHQ MASTER 2.wav",
+    "file_id": "10zkJH9QvMDNcjVb00JVE6PEm4UOwOUZn",
+    "bytes_read": 61749398,
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "stat_size": 61749398,
+    "mtime_ns": 1790250085938999891,
+    "file_mime": "audio/x-wav",
+    "file_type": "RIFF (little-endian) data, WAVE audio",
+    "mdls": "kMDItemAudioSampleRate = 48000\nkMDItemContentType     = \"com.microsoft.waveform-audio\"\nkMDItemDurationSeconds = 214.4000416666667\nkMDItemPixelHeight     = (null)\nkMDItemPixelWidth      = (null)"
+  },
+  {
+    "name": "IMG_5739.MOV",
+    "file_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+    "bytes_read": 942419948,
+    "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+    "stat_size": 942419948,
+    "mtime_ns": 1790250771908999919,
+    "file_mime": "video/quicktime",
+    "file_type": "ISO Media, Apple QuickTime movie, Apple QuickTime (.MOV/QT)",
+    "mdls": "kMDItemAudioSampleRate = (null)\nkMDItemContentType     = \"com.apple.quicktime-movie\"\nkMDItemDurationSeconds = (null)\nkMDItemPixelHeight     = (null)\nkMDItemPixelWidth      = (null)"
+  },
+  {
+    "name": "IMG_5740.MOV",
+    "file_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+    "bytes_read": 216042666,
+    "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+    "stat_size": 216042666,
+    "mtime_ns": 1790250073174999952,
+    "file_mime": "video/quicktime",
+    "file_type": "ISO Media, Apple QuickTime movie, Apple QuickTime (.MOV/QT)",
+    "mdls": "kMDItemAudioSampleRate = (null)\nkMDItemContentType     = \"com.apple.quicktime-movie\"\nkMDItemDurationSeconds = (null)\nkMDItemPixelHeight     = (null)\nkMDItemPixelWidth      = (null)"
+  },
+  {
+    "name": "IMG_5741.MOV",
+    "file_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+    "bytes_read": 926438315,
+    "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+    "stat_size": 926438315,
+    "mtime_ns": 1790250456999000072,
+    "file_mime": "video/quicktime",
+    "file_type": "ISO Media, Apple QuickTime movie, Apple QuickTime (.MOV/QT)",
+    "mdls": "kMDItemAudioSampleRate = (null)\nkMDItemContentType     = \"com.apple.quicktime-movie\"\nkMDItemDurationSeconds = (null)\nkMDItemPixelHeight     = (null)\nkMDItemPixelWidth      = (null)"
+  },
+  {
+    "name": "IMG_5742.MOV",
+    "file_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+    "bytes_read": 504008133,
+    "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+    "stat_size": 504008133,
+    "mtime_ns": 1790250184072000026,
+    "file_mime": "video/quicktime",
+    "file_type": "ISO Media, Apple QuickTime movie, Apple QuickTime (.MOV/QT)",
+    "mdls": "kMDItemAudioSampleRate = (null)\nkMDItemContentType     = \"com.apple.quicktime-movie\"\nkMDItemDurationSeconds = (null)\nkMDItemPixelHeight     = (null)\nkMDItemPixelWidth      = (null)"
+  }
+]

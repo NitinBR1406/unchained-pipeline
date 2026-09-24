@@ -1,0 +1,17 @@
+{
+  "schema_version": "REGRESSION_RECEIPT_V01",
+  "workload_id": "aakhri-ishq-multitake-real-v01",
+  "result": "GREEN",
+  "full_suite": {
+    "tests_run": 271,
+    "failures": 0,
+    "errors": 0,
+    "runtime": "bundled_python_3.12",
+    "command": "PYTHONPATH=/private/tmp/unchained-p0e4-testdeps:p0e4 <bundled-python> -m unittest discover -s p0e4/tests -p test_*.py"
+  },
+  "governance": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  }
+}

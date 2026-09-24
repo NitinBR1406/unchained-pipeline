@@ -1,0 +1,60 @@
+{
+  "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+  "filename_semantics_used": false,
+  "files": [
+    {
+      "bytes": 61749398,
+      "display_name": "AAKHRI ISHQ MASTER 2.wav",
+      "file_id": "10zkJH9QvMDNcjVb00JVE6PEm4UOwOUZn",
+      "kind": "MASTER_AUDIO_CANDIDATE",
+      "mime_from_bytes": "audio/x-wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+    },
+    {
+      "bytes": 942419948,
+      "display_name": "IMG_5739.MOV",
+      "file_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "kind": "TAKE",
+      "mime_from_bytes": "video/quicktime",
+      "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+    },
+    {
+      "bytes": 216042666,
+      "display_name": "IMG_5740.MOV",
+      "file_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "kind": "TAKE",
+      "mime_from_bytes": "video/quicktime",
+      "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb"
+    },
+    {
+      "bytes": 926438315,
+      "display_name": "IMG_5741.MOV",
+      "file_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "kind": "TAKE",
+      "mime_from_bytes": "video/quicktime",
+      "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+    },
+    {
+      "bytes": 504008133,
+      "display_name": "IMG_5742.MOV",
+      "file_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "kind": "TAKE",
+      "mime_from_bytes": "video/quicktime",
+      "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+    }
+  ],
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "master_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "photo_count": 0,
+  "receipt_sha256": "c5b4b20d904e3fc4536739106b3e47e3fe0e9cb96ae8f5d54f3f805a98afd745",
+  "schema": "REAL_MULTI_TAKE_INTAKE_ACCEPTANCE_V01",
+  "scope": "AAKHRI_ISHQ_ONLY",
+  "stable_complete_polls": 2,
+  "status": "GREEN",
+  "take_count": 4,
+  "workload_folder_id": "1htIIMHb7isiRwuFDDR9c_uLQXzVhiJrB"
+}

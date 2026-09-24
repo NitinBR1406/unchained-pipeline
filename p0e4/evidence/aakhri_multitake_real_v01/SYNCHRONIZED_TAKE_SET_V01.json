@@ -1,0 +1,60 @@
+{
+  "alignment_sha256": "d0cc83842006fff3ece2f2adef3859857e800edb1117bb87a4b4888683e51c5b",
+  "filename_order_used": false,
+  "guide_audio_in_final_mix": false,
+  "intake_receipt_sha256": "c5b4b20d904e3fc4536739106b3e47e3fe0e9cb96ae8f5d54f3f805a98afd745",
+  "programme_audio": {
+    "route": "AUTHORITATIVE_MASTER_ONLY",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "schema": "SYNCHRONIZED_TAKE_SET_V01",
+  "set_sha256": "0ee44a2a83a0642a7df3b92c5108e8cbaf637592d7ea73284228a2214db2a06b",
+  "status": "GREEN",
+  "takes": [
+    {
+      "asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "drift_ppm": 27.17,
+      "offset_ms": 526,
+      "status": "READY",
+      "take_sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+      "take_usable_end_ms": 211270,
+      "take_usable_start_ms": 0,
+      "timeline_usable_end_ms": 211796,
+      "timeline_usable_start_ms": 526
+    },
+    {
+      "asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "drift_ppm": 76.8,
+      "offset_ms": -1627,
+      "status": "READY",
+      "take_sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "take_usable_end_ms": 49590,
+      "take_usable_start_ms": 1627,
+      "timeline_usable_end_ms": 47963,
+      "timeline_usable_start_ms": 0
+    },
+    {
+      "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "drift_ppm": -42.48,
+      "offset_ms": -2044,
+      "status": "READY",
+      "take_sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "take_usable_end_ms": 216434,
+      "take_usable_start_ms": 2044,
+      "timeline_usable_end_ms": 214390,
+      "timeline_usable_start_ms": 0
+    },
+    {
+      "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "drift_ppm": -64.84,
+      "offset_ms": 92805,
+      "status": "READY",
+      "take_sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+      "take_usable_end_ms": 120760,
+      "take_usable_start_ms": 0,
+      "timeline_usable_end_ms": 213565,
+      "timeline_usable_start_ms": 92805
+    }
+  ],
+  "workload": "AAKHRI_ISHQ"
+}

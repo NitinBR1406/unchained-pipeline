@@ -1,0 +1,481 @@
+{
+  "alignment_sha256": "d0cc83842006fff3ece2f2adef3859857e800edb1117bb87a4b4888683e51c5b",
+  "programme_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "schema": "PER_TAKE_LIPSYNC_ALIGNMENT_V01",
+  "status": "GREEN",
+  "takes": [
+    {
+      "asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "confidence": {
+        "checks": {
+          "anchor_redundancy": true,
+          "drift": true,
+          "fit_rmse": true,
+          "median_correlation": true,
+          "median_peak_margin": true,
+          "offset_mad": true,
+          "temporal_span": true
+        },
+        "confidence_milli": 1000,
+        "metrics": {
+          "anchor_count": 9,
+          "anchor_span_ms": 196270,
+          "drift_ppm": 27.17,
+          "fit_rmse_ms": 2.63,
+          "median_peak_corr": 0.732278,
+          "median_peak_margin": 0.223809,
+          "offset_mad_ms": 0
+        },
+        "rubric_sha256": "4f052ff19f9272d808fc60a340bf38865e3f6b78396c0dfddd839257bda2f1ba",
+        "schema": "ALIGNMENT_CONFIDENCE_RUBRIC_V01",
+        "status": "GREEN",
+        "threshold_milli": 850,
+        "weights_milli": {
+          "anchor_redundancy": 200,
+          "drift": 150,
+          "fit_rmse": 150,
+          "median_correlation": 100,
+          "median_peak_margin": 100,
+          "offset_mad": 150,
+          "temporal_span": 150
+        }
+      },
+      "consensus_anchors": [
+        {
+          "master_time_ms": 520,
+          "offset_ms": 520,
+          "peak_corr": 0.778219,
+          "peak_margin": 0.171029,
+          "take_time_ms": 0
+        },
+        {
+          "master_time_ms": 25060,
+          "offset_ms": 530,
+          "peak_corr": 0.791974,
+          "peak_margin": 0.386006,
+          "take_time_ms": 24530
+        },
+        {
+          "master_time_ms": 49590,
+          "offset_ms": 530,
+          "peak_corr": 0.750526,
+          "peak_margin": 0.149986,
+          "take_time_ms": 49060
+        },
+        {
+          "master_time_ms": 74130,
+          "offset_ms": 530,
+          "peak_corr": 0.732278,
+          "peak_margin": 0.143215,
+          "take_time_ms": 73600
+        },
+        {
+          "master_time_ms": 98660,
+          "offset_ms": 530,
+          "peak_corr": 0.679883,
+          "peak_margin": 0.085096,
+          "take_time_ms": 98130
+        },
+        {
+          "master_time_ms": 123190,
+          "offset_ms": 530,
+          "peak_corr": 0.722098,
+          "peak_margin": 0.248873,
+          "take_time_ms": 122660
+        },
+        {
+          "master_time_ms": 147730,
+          "offset_ms": 530,
+          "peak_corr": 0.741323,
+          "peak_margin": 0.223809,
+          "take_time_ms": 147200
+        },
+        {
+          "master_time_ms": 172260,
+          "offset_ms": 530,
+          "peak_corr": 0.690353,
+          "peak_margin": 0.372872,
+          "take_time_ms": 171730
+        },
+        {
+          "master_time_ms": 196800,
+          "offset_ms": 530,
+          "peak_corr": 0.662868,
+          "peak_margin": 0.32961,
+          "take_time_ms": 196270
+        }
+      ],
+      "display_name": "IMG_5739.MOV",
+      "drift_ppm": 27.17,
+      "fit_rmse_ms": 2.63,
+      "guide_audio_use": "ALIGNMENT_EVIDENCE_ONLY",
+      "method": "CAMERA_GUIDE_AUDIO_CORRELATION_10MS_ENVELOPE_CONSENSUS",
+      "offset_ms": 526,
+      "raw_peak_confidence_milli": 940,
+      "rejected_or_nonconsensus_anchors": [],
+      "status": "READY",
+      "take_sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+      "take_usable_end_ms": 211270,
+      "take_usable_start_ms": 0,
+      "timeline_usable_end_ms": 211796,
+      "timeline_usable_start_ms": 526
+    },
+    {
+      "asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "confidence": {
+        "checks": {
+          "anchor_redundancy": true,
+          "drift": true,
+          "fit_rmse": true,
+          "median_correlation": true,
+          "median_peak_margin": true,
+          "offset_mad": true,
+          "temporal_span": false
+        },
+        "confidence_milli": 850,
+        "metrics": {
+          "anchor_count": 7,
+          "anchor_span_ms": 27900,
+          "drift_ppm": 76.8,
+          "fit_rmse_ms": 7.25,
+          "median_peak_corr": 0.786637,
+          "median_peak_margin": 0.264754,
+          "offset_mad_ms": 0
+        },
+        "rubric_sha256": "04cbcdd31517e959e88a355ac32ef79ab7f9799de03f8d97d4b68ed35c08a769",
+        "schema": "ALIGNMENT_CONFIDENCE_RUBRIC_V01",
+        "status": "GREEN",
+        "threshold_milli": 850,
+        "weights_milli": {
+          "anchor_redundancy": 200,
+          "drift": 150,
+          "fit_rmse": 150,
+          "median_correlation": 100,
+          "median_peak_margin": 100,
+          "offset_mad": 150,
+          "temporal_span": 150
+        }
+      },
+      "consensus_anchors": [
+        {
+          "master_time_ms": 3010,
+          "offset_ms": -1640,
+          "peak_corr": 0.785769,
+          "peak_margin": 0.170605,
+          "take_time_ms": 4650
+        },
+        {
+          "master_time_ms": 7680,
+          "offset_ms": -1620,
+          "peak_corr": 0.74025,
+          "peak_margin": 0.21193,
+          "take_time_ms": 9300
+        },
+        {
+          "master_time_ms": 12330,
+          "offset_ms": -1620,
+          "peak_corr": 0.812121,
+          "peak_margin": 0.264851,
+          "take_time_ms": 13950
+        },
+        {
+          "master_time_ms": 16980,
+          "offset_ms": -1620,
+          "peak_corr": 0.831506,
+          "peak_margin": 0.250653,
+          "take_time_ms": 18600
+        },
+        {
+          "master_time_ms": 21630,
+          "offset_ms": -1620,
+          "peak_corr": 0.802926,
+          "peak_margin": 0.320975,
+          "take_time_ms": 23250
+        },
+        {
+          "master_time_ms": 26270,
+          "offset_ms": -1630,
+          "peak_corr": 0.786637,
+          "peak_margin": 0.315761,
+          "take_time_ms": 27900
+        },
+        {
+          "master_time_ms": 30920,
+          "offset_ms": -1630,
+          "peak_corr": 0.765509,
+          "peak_margin": 0.264754,
+          "take_time_ms": 32550
+        }
+      ],
+      "display_name": "IMG_5740.MOV",
+      "drift_ppm": 76.8,
+      "fit_rmse_ms": 7.25,
+      "guide_audio_use": "ALIGNMENT_EVIDENCE_ONLY",
+      "method": "CAMERA_GUIDE_AUDIO_CORRELATION_10MS_ENVELOPE_CONSENSUS",
+      "offset_ms": -1627,
+      "raw_peak_confidence_milli": 988,
+      "rejected_or_nonconsensus_anchors": [
+        {
+          "master_time_ms": 14190,
+          "offset_ms": 14190,
+          "peak_corr": 0.439709,
+          "peak_margin": 0.00715,
+          "take_time_ms": 0
+        },
+        {
+          "master_time_ms": 197580,
+          "offset_ms": 160370,
+          "peak_corr": 0.467753,
+          "peak_margin": 0.15358,
+          "take_time_ms": 37210
+        }
+      ],
+      "status": "READY",
+      "take_sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "take_usable_end_ms": 49590,
+      "take_usable_start_ms": 1627,
+      "timeline_usable_end_ms": 47963,
+      "timeline_usable_start_ms": 0
+    },
+    {
+      "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "confidence": {
+        "checks": {
+          "anchor_redundancy": true,
+          "drift": true,
+          "fit_rmse": true,
+          "median_correlation": true,
+          "median_peak_margin": true,
+          "offset_mad": true,
+          "temporal_span": true
+        },
+        "confidence_milli": 1000,
+        "metrics": {
+          "anchor_count": 7,
+          "anchor_span_ms": 151330,
+          "drift_ppm": -42.48,
+          "fit_rmse_ms": 2.77,
+          "median_peak_corr": 0.690856,
+          "median_peak_margin": 0.158007,
+          "offset_mad_ms": 0
+        },
+        "rubric_sha256": "4f052ff19f9272d808fc60a340bf38865e3f6b78396c0dfddd839257bda2f1ba",
+        "schema": "ALIGNMENT_CONFIDENCE_RUBRIC_V01",
+        "status": "GREEN",
+        "threshold_milli": 850,
+        "weights_milli": {
+          "anchor_redundancy": 200,
+          "drift": 150,
+          "fit_rmse": 150,
+          "median_correlation": 100,
+          "median_peak_margin": 100,
+          "offset_mad": 150,
+          "temporal_span": 150
+        }
+      },
+      "consensus_anchors": [
+        {
+          "master_time_ms": 23180,
+          "offset_ms": -2040,
+          "peak_corr": 0.795636,
+          "peak_margin": 0.284823,
+          "take_time_ms": 25220
+        },
+        {
+          "master_time_ms": 48390,
+          "offset_ms": -2050,
+          "peak_corr": 0.707816,
+          "peak_margin": 0.158007,
+          "take_time_ms": 50440
+        },
+        {
+          "master_time_ms": 73610,
+          "offset_ms": -2050,
+          "peak_corr": 0.690856,
+          "peak_margin": 0.048056,
+          "take_time_ms": 75660
+        },
+        {
+          "master_time_ms": 98840,
+          "offset_ms": -2050,
+          "peak_corr": 0.693028,
+          "peak_margin": 0.071294,
+          "take_time_ms": 100890
+        },
+        {
+          "master_time_ms": 124060,
+          "offset_ms": -2050,
+          "peak_corr": 0.595244,
+          "peak_margin": 0.183186,
+          "take_time_ms": 126110
+        },
+        {
+          "master_time_ms": 149280,
+          "offset_ms": -2050,
+          "peak_corr": 0.684504,
+          "peak_margin": 0.181185,
+          "take_time_ms": 151330
+        },
+        {
+          "master_time_ms": 174500,
+          "offset_ms": -2050,
+          "peak_corr": 0.65985,
+          "peak_margin": 0.103918,
+          "take_time_ms": 176550
+        }
+      ],
+      "display_name": "IMG_5741.MOV",
+      "drift_ppm": -42.48,
+      "fit_rmse_ms": 2.77,
+      "guide_audio_use": "ALIGNMENT_EVIDENCE_ONLY",
+      "method": "CAMERA_GUIDE_AUDIO_CORRELATION_10MS_ENVELOPE_CONSENSUS",
+      "offset_ms": -2044,
+      "raw_peak_confidence_milli": 871,
+      "rejected_or_nonconsensus_anchors": [
+        {
+          "master_time_ms": 13760,
+          "offset_ms": 13760,
+          "peak_corr": 0.417874,
+          "peak_margin": 0.012608,
+          "take_time_ms": 0
+        },
+        {
+          "master_time_ms": 23790,
+          "offset_ms": -177990,
+          "peak_corr": 0.377601,
+          "peak_margin": 0.069719,
+          "take_time_ms": 201780
+        }
+      ],
+      "status": "READY",
+      "take_sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "take_usable_end_ms": 216434,
+      "take_usable_start_ms": 2044,
+      "timeline_usable_end_ms": 214390,
+      "timeline_usable_start_ms": 0
+    },
+    {
+      "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "confidence": {
+        "checks": {
+          "anchor_redundancy": true,
+          "drift": true,
+          "fit_rmse": true,
+          "median_correlation": true,
+          "median_peak_margin": true,
+          "offset_mad": true,
+          "temporal_span": true
+        },
+        "confidence_milli": 1000,
+        "metrics": {
+          "anchor_count": 6,
+          "anchor_span_ms": 66100,
+          "drift_ppm": -64.84,
+          "fit_rmse_ms": 3.43,
+          "median_peak_corr": 0.619765,
+          "median_peak_margin": 0.104834,
+          "offset_mad_ms": 0.0
+        },
+        "rubric_sha256": "4f052ff19f9272d808fc60a340bf38865e3f6b78396c0dfddd839257bda2f1ba",
+        "schema": "ALIGNMENT_CONFIDENCE_RUBRIC_V01",
+        "status": "GREEN",
+        "threshold_milli": 850,
+        "weights_milli": {
+          "anchor_redundancy": 200,
+          "drift": 150,
+          "fit_rmse": 150,
+          "median_correlation": 100,
+          "median_peak_margin": 100,
+          "offset_mad": 150,
+          "temporal_span": 150
+        }
+      },
+      "consensus_anchors": [
+        {
+          "master_time_ms": 106020,
+          "offset_ms": 92800,
+          "peak_corr": 0.627612,
+          "peak_margin": 0.079392,
+          "take_time_ms": 13220
+        },
+        {
+          "master_time_ms": 119250,
+          "offset_ms": 92810,
+          "peak_corr": 0.57092,
+          "peak_margin": 0.080497,
+          "take_time_ms": 26440
+        },
+        {
+          "master_time_ms": 132460,
+          "offset_ms": 92800,
+          "peak_corr": 0.586449,
+          "peak_margin": 0.072153,
+          "take_time_ms": 39660
+        },
+        {
+          "master_time_ms": 145680,
+          "offset_ms": 92800,
+          "peak_corr": 0.611917,
+          "peak_margin": 0.129171,
+          "take_time_ms": 52880
+        },
+        {
+          "master_time_ms": 158900,
+          "offset_ms": 92800,
+          "peak_corr": 0.667849,
+          "peak_margin": 0.251524,
+          "take_time_ms": 66100
+        },
+        {
+          "master_time_ms": 172120,
+          "offset_ms": 92800,
+          "peak_corr": 0.636169,
+          "peak_margin": 0.230495,
+          "take_time_ms": 79320
+        }
+      ],
+      "display_name": "IMG_5742.MOV",
+      "drift_ppm": -64.84,
+      "fit_rmse_ms": 3.43,
+      "guide_audio_use": "ALIGNMENT_EVIDENCE_ONLY",
+      "method": "CAMERA_GUIDE_AUDIO_CORRELATION_10MS_ENVELOPE_CONSENSUS",
+      "offset_ms": 92805,
+      "raw_peak_confidence_milli": 768,
+      "rejected_or_nonconsensus_anchors": [
+        {
+          "master_time_ms": 3040,
+          "offset_ms": 3040,
+          "peak_corr": 0.835472,
+          "peak_margin": 0.271418,
+          "take_time_ms": 0
+        },
+        {
+          "master_time_ms": 44540,
+          "offset_ms": -48000,
+          "peak_corr": 0.712825,
+          "peak_margin": 0.131163,
+          "take_time_ms": 92540
+        },
+        {
+          "master_time_ms": 198570,
+          "offset_ms": 92810,
+          "peak_corr": 0.409086,
+          "peak_margin": 0.013857,
+          "take_time_ms": 105760
+        }
+      ],
+      "status": "READY",
+      "take_sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+      "take_usable_end_ms": 120760,
+      "take_usable_start_ms": 0,
+      "timeline_usable_end_ms": 213565,
+      "timeline_usable_start_ms": 92805
+    }
+  ],
+  "thresholds": {
+    "abs_drift_ppm_max": 80,
+    "confidence_milli_min": 850,
+    "consensus_anchor_min": 5
+  },
+  "workload": "AAKHRI_ISHQ"
+}

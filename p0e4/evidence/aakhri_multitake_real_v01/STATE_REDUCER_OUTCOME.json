@@ -1,0 +1,14 @@
+{
+  "accepted_output_sha256": "009965d6db556d6886cd61cffea26da988787a07b9e39e34db206eaf79bb603d",
+  "closed_gates": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "global_master_state_mutated": false,
+  "parent_master_state_version": "V16.3",
+  "parent_state_version": 29,
+  "reason": "Workload-scoped additive private evidence does not change global deployment, publication, approval or rights state.",
+  "schema": "AAKHRI_MULTI_TAKE_STATE_REDUCER_OUTCOME_V01",
+  "workload_state": "POST_READY_WAITING_FOR_NITIN"
+}

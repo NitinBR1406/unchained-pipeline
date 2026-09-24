@@ -1,0 +1,23 @@
+{
+  "artist": "UNCHAINED NITIN",
+  "captions": {
+    "invented": false,
+    "status": "OMITTED_NO_AUTHORITATIVE_TEXT"
+  },
+  "descriptions": {
+    "status": "UNKNOWN_NOT_INVENTED"
+  },
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "hashtags": {
+    "status": "UNKNOWN_NOT_INVENTED"
+  },
+  "output_binding_sha256": "009965d6db556d6886cd61cffea26da988787a07b9e39e34db206eaf79bb603d",
+  "receipt_sha256": "c4f01f0ec50e794eae4a77812c65ac294c84bb418d1757dac044564dbdb4c303",
+  "schema": "CAPTIONS_METADATA_V01",
+  "status": "GREEN_WITH_CAPTIONS_OMITTED",
+  "title": "Aakhri Ishq"
+}

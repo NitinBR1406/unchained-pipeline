@@ -1,0 +1,83 @@
+{
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "guide_audio_in_final_mix": false,
+  "master_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "outputs": [
+    {
+      "asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "bytes": 101806563,
+      "frames": 6338,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-real-v01/SYNC_COAR23N8.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 53316
+      },
+      "sha256": "49effa213f98297b2c12b42e245c6b1d5afa828cf288009a7969fe4f8edf3a9e",
+      "take_end_ms": 211270,
+      "take_sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+      "take_start_ms": 0,
+      "timeline_end_ms": 211796,
+      "timeline_start_ms": 526
+    },
+    {
+      "asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "bytes": 23183370,
+      "frames": 1439,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-real-v01/SYNC_xzLXOFin.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 12632
+      },
+      "sha256": "79831639bbf62bbc76f3a16519329e949df15c3ea9c27e01dff535e5c82f9cc4",
+      "take_end_ms": 49590,
+      "take_sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "take_start_ms": 1627,
+      "timeline_end_ms": 47963,
+      "timeline_start_ms": 0
+    },
+    {
+      "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "bytes": 103542648,
+      "frames": 6432,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-real-v01/SYNC_62NzMsF8.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 54247
+      },
+      "sha256": "b2b80183abdb1b39eaf1d2bfa3448c08e7a954bead1c51165a9f6d7f20aa2e97",
+      "take_end_ms": 216434,
+      "take_sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "take_start_ms": 2044,
+      "timeline_end_ms": 214390,
+      "timeline_start_ms": 0
+    },
+    {
+      "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "bytes": 58425974,
+      "frames": 3623,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-real-v01/SYNC_EtPHjhsW.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 31674
+      },
+      "sha256": "37b3e656331ec9092fa9757099979c095588a62c1d0936aedb2ea85a3084e883",
+      "take_end_ms": 120752,
+      "take_sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+      "take_start_ms": 0,
+      "timeline_end_ms": 213557,
+      "timeline_start_ms": 92805
+    }
+  ],
+  "project": "UNCHAINED_AAKHRI_MULTI_TAKE_SYNC_V01",
+  "schema": "RESOLVE_SYNCHRONIZED_TAKE_PROXY_RUN_V01",
+  "scope": "PRIVATE_NON_PUBLISHING_AAKHRI_ONLY",
+  "status": "GREEN_PRIVATE_SYNC_PROXIES"
+}

@@ -1,0 +1,521 @@
+{
+  "IMG_5739.MOV": {
+    "all_anchors": [
+      {
+        "take_time_ms": 0,
+        "master_time_ms": 520,
+        "offset_ms": 520,
+        "peak_corr": 0.778219,
+        "peak_margin": 0.171029
+      },
+      {
+        "take_time_ms": 24530,
+        "master_time_ms": 25060,
+        "offset_ms": 530,
+        "peak_corr": 0.791974,
+        "peak_margin": 0.386006
+      },
+      {
+        "take_time_ms": 49060,
+        "master_time_ms": 49590,
+        "offset_ms": 530,
+        "peak_corr": 0.750526,
+        "peak_margin": 0.149986
+      },
+      {
+        "take_time_ms": 73600,
+        "master_time_ms": 74130,
+        "offset_ms": 530,
+        "peak_corr": 0.732278,
+        "peak_margin": 0.143215
+      },
+      {
+        "take_time_ms": 98130,
+        "master_time_ms": 98660,
+        "offset_ms": 530,
+        "peak_corr": 0.679883,
+        "peak_margin": 0.085096
+      },
+      {
+        "take_time_ms": 122660,
+        "master_time_ms": 123190,
+        "offset_ms": 530,
+        "peak_corr": 0.722098,
+        "peak_margin": 0.248873
+      },
+      {
+        "take_time_ms": 147200,
+        "master_time_ms": 147730,
+        "offset_ms": 530,
+        "peak_corr": 0.741323,
+        "peak_margin": 0.223809
+      },
+      {
+        "take_time_ms": 171730,
+        "master_time_ms": 172260,
+        "offset_ms": 530,
+        "peak_corr": 0.690353,
+        "peak_margin": 0.372872
+      },
+      {
+        "take_time_ms": 196270,
+        "master_time_ms": 196800,
+        "offset_ms": 530,
+        "peak_corr": 0.662868,
+        "peak_margin": 0.32961
+      }
+    ],
+    "consensus_anchors": [
+      {
+        "take_time_ms": 0,
+        "master_time_ms": 520,
+        "offset_ms": 520,
+        "peak_corr": 0.778219,
+        "peak_margin": 0.171029
+      },
+      {
+        "take_time_ms": 24530,
+        "master_time_ms": 25060,
+        "offset_ms": 530,
+        "peak_corr": 0.791974,
+        "peak_margin": 0.386006
+      },
+      {
+        "take_time_ms": 49060,
+        "master_time_ms": 49590,
+        "offset_ms": 530,
+        "peak_corr": 0.750526,
+        "peak_margin": 0.149986
+      },
+      {
+        "take_time_ms": 73600,
+        "master_time_ms": 74130,
+        "offset_ms": 530,
+        "peak_corr": 0.732278,
+        "peak_margin": 0.143215
+      },
+      {
+        "take_time_ms": 98130,
+        "master_time_ms": 98660,
+        "offset_ms": 530,
+        "peak_corr": 0.679883,
+        "peak_margin": 0.085096
+      },
+      {
+        "take_time_ms": 122660,
+        "master_time_ms": 123190,
+        "offset_ms": 530,
+        "peak_corr": 0.722098,
+        "peak_margin": 0.248873
+      },
+      {
+        "take_time_ms": 147200,
+        "master_time_ms": 147730,
+        "offset_ms": 530,
+        "peak_corr": 0.741323,
+        "peak_margin": 0.223809
+      },
+      {
+        "take_time_ms": 171730,
+        "master_time_ms": 172260,
+        "offset_ms": 530,
+        "peak_corr": 0.690353,
+        "peak_margin": 0.372872
+      },
+      {
+        "take_time_ms": 196270,
+        "master_time_ms": 196800,
+        "offset_ms": 530,
+        "peak_corr": 0.662868,
+        "peak_margin": 0.32961
+      }
+    ],
+    "anchor_count": 9,
+    "offset_ms": 526,
+    "drift_ppm": 27.17,
+    "fit_rmse_ms": 2.63,
+    "confidence_milli": 940,
+    "usable_master_start_ms": 526,
+    "usable_master_end_ms": 211802,
+    "take_duration_ms": 211270,
+    "master_duration_ms": 214390,
+    "method": "CAMERA_GUIDE_AUDIO_CORRELATION_10MS_ENVELOPE_CONSENSUS"
+  },
+  "IMG_5740.MOV": {
+    "all_anchors": [
+      {
+        "take_time_ms": 0,
+        "master_time_ms": 14190,
+        "offset_ms": 14190,
+        "peak_corr": 0.439709,
+        "peak_margin": 0.00715
+      },
+      {
+        "take_time_ms": 4650,
+        "master_time_ms": 3010,
+        "offset_ms": -1640,
+        "peak_corr": 0.785769,
+        "peak_margin": 0.170605
+      },
+      {
+        "take_time_ms": 9300,
+        "master_time_ms": 7680,
+        "offset_ms": -1620,
+        "peak_corr": 0.74025,
+        "peak_margin": 0.21193
+      },
+      {
+        "take_time_ms": 13950,
+        "master_time_ms": 12330,
+        "offset_ms": -1620,
+        "peak_corr": 0.812121,
+        "peak_margin": 0.264851
+      },
+      {
+        "take_time_ms": 18600,
+        "master_time_ms": 16980,
+        "offset_ms": -1620,
+        "peak_corr": 0.831506,
+        "peak_margin": 0.250653
+      },
+      {
+        "take_time_ms": 23250,
+        "master_time_ms": 21630,
+        "offset_ms": -1620,
+        "peak_corr": 0.802926,
+        "peak_margin": 0.320975
+      },
+      {
+        "take_time_ms": 27900,
+        "master_time_ms": 26270,
+        "offset_ms": -1630,
+        "peak_corr": 0.786637,
+        "peak_margin": 0.315761
+      },
+      {
+        "take_time_ms": 32550,
+        "master_time_ms": 30920,
+        "offset_ms": -1630,
+        "peak_corr": 0.765509,
+        "peak_margin": 0.264754
+      },
+      {
+        "take_time_ms": 37210,
+        "master_time_ms": 197580,
+        "offset_ms": 160370,
+        "peak_corr": 0.467753,
+        "peak_margin": 0.15358
+      }
+    ],
+    "consensus_anchors": [
+      {
+        "take_time_ms": 4650,
+        "master_time_ms": 3010,
+        "offset_ms": -1640,
+        "peak_corr": 0.785769,
+        "peak_margin": 0.170605
+      },
+      {
+        "take_time_ms": 9300,
+        "master_time_ms": 7680,
+        "offset_ms": -1620,
+        "peak_corr": 0.74025,
+        "peak_margin": 0.21193
+      },
+      {
+        "take_time_ms": 13950,
+        "master_time_ms": 12330,
+        "offset_ms": -1620,
+        "peak_corr": 0.812121,
+        "peak_margin": 0.264851
+      },
+      {
+        "take_time_ms": 18600,
+        "master_time_ms": 16980,
+        "offset_ms": -1620,
+        "peak_corr": 0.831506,
+        "peak_margin": 0.250653
+      },
+      {
+        "take_time_ms": 23250,
+        "master_time_ms": 21630,
+        "offset_ms": -1620,
+        "peak_corr": 0.802926,
+        "peak_margin": 0.320975
+      },
+      {
+        "take_time_ms": 27900,
+        "master_time_ms": 26270,
+        "offset_ms": -1630,
+        "peak_corr": 0.786637,
+        "peak_margin": 0.315761
+      },
+      {
+        "take_time_ms": 32550,
+        "master_time_ms": 30920,
+        "offset_ms": -1630,
+        "peak_corr": 0.765509,
+        "peak_margin": 0.264754
+      }
+    ],
+    "anchor_count": 7,
+    "offset_ms": -1627,
+    "drift_ppm": 76.8,
+    "fit_rmse_ms": 7.25,
+    "confidence_milli": 988,
+    "usable_master_start_ms": 0,
+    "usable_master_end_ms": 47967,
+    "take_duration_ms": 49590,
+    "master_duration_ms": 214390,
+    "method": "CAMERA_GUIDE_AUDIO_CORRELATION_10MS_ENVELOPE_CONSENSUS"
+  },
+  "IMG_5741.MOV": {
+    "all_anchors": [
+      {
+        "take_time_ms": 0,
+        "master_time_ms": 13760,
+        "offset_ms": 13760,
+        "peak_corr": 0.417874,
+        "peak_margin": 0.012608
+      },
+      {
+        "take_time_ms": 25220,
+        "master_time_ms": 23180,
+        "offset_ms": -2040,
+        "peak_corr": 0.795636,
+        "peak_margin": 0.284823
+      },
+      {
+        "take_time_ms": 50440,
+        "master_time_ms": 48390,
+        "offset_ms": -2050,
+        "peak_corr": 0.707816,
+        "peak_margin": 0.158007
+      },
+      {
+        "take_time_ms": 75660,
+        "master_time_ms": 73610,
+        "offset_ms": -2050,
+        "peak_corr": 0.690856,
+        "peak_margin": 0.048056
+      },
+      {
+        "take_time_ms": 100890,
+        "master_time_ms": 98840,
+        "offset_ms": -2050,
+        "peak_corr": 0.693028,
+        "peak_margin": 0.071294
+      },
+      {
+        "take_time_ms": 126110,
+        "master_time_ms": 124060,
+        "offset_ms": -2050,
+        "peak_corr": 0.595244,
+        "peak_margin": 0.183186
+      },
+      {
+        "take_time_ms": 151330,
+        "master_time_ms": 149280,
+        "offset_ms": -2050,
+        "peak_corr": 0.684504,
+        "peak_margin": 0.181185
+      },
+      {
+        "take_time_ms": 176550,
+        "master_time_ms": 174500,
+        "offset_ms": -2050,
+        "peak_corr": 0.65985,
+        "peak_margin": 0.103918
+      },
+      {
+        "take_time_ms": 201780,
+        "master_time_ms": 23790,
+        "offset_ms": -177990,
+        "peak_corr": 0.377601,
+        "peak_margin": 0.069719
+      }
+    ],
+    "consensus_anchors": [
+      {
+        "take_time_ms": 25220,
+        "master_time_ms": 23180,
+        "offset_ms": -2040,
+        "peak_corr": 0.795636,
+        "peak_margin": 0.284823
+      },
+      {
+        "take_time_ms": 50440,
+        "master_time_ms": 48390,
+        "offset_ms": -2050,
+        "peak_corr": 0.707816,
+        "peak_margin": 0.158007
+      },
+      {
+        "take_time_ms": 75660,
+        "master_time_ms": 73610,
+        "offset_ms": -2050,
+        "peak_corr": 0.690856,
+        "peak_margin": 0.048056
+      },
+      {
+        "take_time_ms": 100890,
+        "master_time_ms": 98840,
+        "offset_ms": -2050,
+        "peak_corr": 0.693028,
+        "peak_margin": 0.071294
+      },
+      {
+        "take_time_ms": 126110,
+        "master_time_ms": 124060,
+        "offset_ms": -2050,
+        "peak_corr": 0.595244,
+        "peak_margin": 0.183186
+      },
+      {
+        "take_time_ms": 151330,
+        "master_time_ms": 149280,
+        "offset_ms": -2050,
+        "peak_corr": 0.684504,
+        "peak_margin": 0.181185
+      },
+      {
+        "take_time_ms": 176550,
+        "master_time_ms": 174500,
+        "offset_ms": -2050,
+        "peak_corr": 0.65985,
+        "peak_margin": 0.103918
+      }
+    ],
+    "anchor_count": 7,
+    "offset_ms": -2044,
+    "drift_ppm": -42.48,
+    "fit_rmse_ms": 2.77,
+    "confidence_milli": 871,
+    "usable_master_start_ms": 0,
+    "usable_master_end_ms": 214390,
+    "take_duration_ms": 216780,
+    "master_duration_ms": 214390,
+    "method": "CAMERA_GUIDE_AUDIO_CORRELATION_10MS_ENVELOPE_CONSENSUS"
+  },
+  "IMG_5742.MOV": {
+    "all_anchors": [
+      {
+        "take_time_ms": 0,
+        "master_time_ms": 3040,
+        "offset_ms": 3040,
+        "peak_corr": 0.835472,
+        "peak_margin": 0.271418
+      },
+      {
+        "take_time_ms": 13220,
+        "master_time_ms": 106020,
+        "offset_ms": 92800,
+        "peak_corr": 0.627612,
+        "peak_margin": 0.079392
+      },
+      {
+        "take_time_ms": 26440,
+        "master_time_ms": 119250,
+        "offset_ms": 92810,
+        "peak_corr": 0.57092,
+        "peak_margin": 0.080497
+      },
+      {
+        "take_time_ms": 39660,
+        "master_time_ms": 132460,
+        "offset_ms": 92800,
+        "peak_corr": 0.586449,
+        "peak_margin": 0.072153
+      },
+      {
+        "take_time_ms": 52880,
+        "master_time_ms": 145680,
+        "offset_ms": 92800,
+        "peak_corr": 0.611917,
+        "peak_margin": 0.129171
+      },
+      {
+        "take_time_ms": 66100,
+        "master_time_ms": 158900,
+        "offset_ms": 92800,
+        "peak_corr": 0.667849,
+        "peak_margin": 0.251524
+      },
+      {
+        "take_time_ms": 79320,
+        "master_time_ms": 172120,
+        "offset_ms": 92800,
+        "peak_corr": 0.636169,
+        "peak_margin": 0.230495
+      },
+      {
+        "take_time_ms": 92540,
+        "master_time_ms": 44540,
+        "offset_ms": -48000,
+        "peak_corr": 0.712825,
+        "peak_margin": 0.131163
+      },
+      {
+        "take_time_ms": 105760,
+        "master_time_ms": 198570,
+        "offset_ms": 92810,
+        "peak_corr": 0.409086,
+        "peak_margin": 0.013857
+      }
+    ],
+    "consensus_anchors": [
+      {
+        "take_time_ms": 13220,
+        "master_time_ms": 106020,
+        "offset_ms": 92800,
+        "peak_corr": 0.627612,
+        "peak_margin": 0.079392
+      },
+      {
+        "take_time_ms": 26440,
+        "master_time_ms": 119250,
+        "offset_ms": 92810,
+        "peak_corr": 0.57092,
+        "peak_margin": 0.080497
+      },
+      {
+        "take_time_ms": 39660,
+        "master_time_ms": 132460,
+        "offset_ms": 92800,
+        "peak_corr": 0.586449,
+        "peak_margin": 0.072153
+      },
+      {
+        "take_time_ms": 52880,
+        "master_time_ms": 145680,
+        "offset_ms": 92800,
+        "peak_corr": 0.611917,
+        "peak_margin": 0.129171
+      },
+      {
+        "take_time_ms": 66100,
+        "master_time_ms": 158900,
+        "offset_ms": 92800,
+        "peak_corr": 0.667849,
+        "peak_margin": 0.251524
+      },
+      {
+        "take_time_ms": 79320,
+        "master_time_ms": 172120,
+        "offset_ms": 92800,
+        "peak_corr": 0.636169,
+        "peak_margin": 0.230495
+      }
+    ],
+    "anchor_count": 6,
+    "offset_ms": 92805,
+    "drift_ppm": -64.84,
+    "fit_rmse_ms": 3.43,
+    "confidence_milli": 768,
+    "usable_master_start_ms": 92805,
+    "usable_master_end_ms": 213557,
+    "take_duration_ms": 120760,
+    "master_duration_ms": 214390,
+    "method": "CAMERA_GUIDE_AUDIO_CORRELATION_10MS_ENVELOPE_CONSENSUS"
+  }
+}

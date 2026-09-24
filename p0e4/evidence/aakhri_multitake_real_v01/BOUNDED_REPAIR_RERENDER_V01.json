@@ -1,0 +1,20 @@
+{
+  "attempt": 1,
+  "defect": "FUSION_CONTRAST_PARAMETER_SCALE_MISMATCH",
+  "edl_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "independent_gemini_re_qc_required": true,
+  "original_sha256": "ce835593d0843628a2a28ddff1ea28e9d6ac25b10aa18290af5fa52a1fb88e18",
+  "original_status": "REJECTED_VISUAL_QC_COLOR_CLIPPING",
+  "receipt_sha256": "f4c8a3de54958d0bf099b4bf85a02f7ab89a402865f4ea16dbbfae73dff99250",
+  "repair": "SET_SHOT_MATCH_AND_CREATIVE_LOOK_CONTRAST_TO_NEUTRAL_ZERO",
+  "repaired_sha256": "009965d6db556d6886cd61cffea26da988787a07b9e39e34db206eaf79bb603d",
+  "schema": "BOUNDED_REPAIR_RERENDER_V01",
+  "source_rebinding_allowed": false,
+  "source_set_sha256": "0ee44a2a83a0642a7df3b92c5108e8cbaf637592d7ea73284228a2214db2a06b",
+  "technical_re_qc": "GREEN"
+}

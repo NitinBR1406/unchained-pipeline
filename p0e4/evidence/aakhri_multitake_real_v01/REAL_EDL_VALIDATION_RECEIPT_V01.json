@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "derivative_limit": "PASS_4_OF_4",
+    "filename_semantics_unused": "PASS",
+    "gemini_range_binding": "PASS",
+    "performance_rule": "PASS_100_PERCENT",
+    "programme_audio_binding": "PASS",
+    "sync_binding": "PASS",
+    "timeline_continuity": "PASS",
+    "usable_ranges": "PASS_WITH_EXPLICIT_10MS_FRAME_QUANTIZATION_BRIDGE"
+  },
+  "edl_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "receipt_sha256": "037a1c85ee3ba6b741592de65694358a26cd6e0041eb53792d8360bc8aa4196c",
+  "schema": "REAL_EDL_VALIDATION_RECEIPT_V01",
+  "status": "GREEN"
+}

@@ -1,0 +1,127 @@
+{
+  "checks": {
+    "audio_tracks": "PASS_ONE_PER_OUTPUT",
+    "caption_safe_area": "N_A_NO_CAPTIONS",
+    "derivative_count": "PASS_4",
+    "dimensions": "PASS_1080X1920",
+    "frame_rate": "PASS_30",
+    "full_decode": "PASS_5_OF_5",
+    "master_duration": "PASS_214400MS",
+    "performance_rule": "PASS_100_PERCENT_FROM_EDL"
+  },
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "outputs": [
+    {
+      "audio_sample_buffers": 421,
+      "audio_tracks": 1,
+      "bytes": 387390757,
+      "decode_status": "COMPLETE",
+      "duration_s": 214.4,
+      "file": "AAKHRI_MULTITAKE_MASTER_V01_RUN2.mp4",
+      "height": 1920,
+      "nominal_fps": 30,
+      "sha256": "009965d6db556d6886cd61cffea26da988787a07b9e39e34db206eaf79bb603d",
+      "video_samples": 6436,
+      "video_tracks": 1,
+      "width": 1080
+    },
+    {
+      "audio_sample_buffers": 33,
+      "audio_tracks": 1,
+      "bytes": 28314133,
+      "decode_status": "COMPLETE",
+      "duration_s": 15.5,
+      "file": "AAKHRI_D01_V01_RUN2.mp4",
+      "height": 1920,
+      "nominal_fps": 30,
+      "sha256": "0662af1733ef7b281a6b71983973f4ba34fd5b48fe6e9010026156ecea8fddb1",
+      "video_samples": 469,
+      "video_tracks": 1,
+      "width": 1080
+    },
+    {
+      "audio_sample_buffers": 32,
+      "audio_tracks": 1,
+      "bytes": 27374448,
+      "decode_status": "COMPLETE",
+      "duration_s": 15,
+      "file": "AAKHRI_D02_V01_RUN2.mp4",
+      "height": 1920,
+      "nominal_fps": 30,
+      "sha256": "482e8746c74e890990e5de6fd14cc8a14020f1387693afc55650ade60f5f73c6",
+      "video_samples": 454,
+      "video_tracks": 1,
+      "width": 1080
+    },
+    {
+      "audio_sample_buffers": 32,
+      "audio_tracks": 1,
+      "bytes": 27402681,
+      "decode_status": "COMPLETE",
+      "duration_s": 15,
+      "file": "AAKHRI_D03_V01_RUN2.mp4",
+      "height": 1920,
+      "nominal_fps": 30,
+      "sha256": "fb8692fe703c9f917f966bf25d35c9f603ea94a691fea48149e8ad6890f166b1",
+      "video_samples": 454,
+      "video_tracks": 1,
+      "width": 1080
+    },
+    {
+      "audio_sample_buffers": 33,
+      "audio_tracks": 1,
+      "bytes": 28459142,
+      "decode_status": "COMPLETE",
+      "duration_s": 15.5,
+      "file": "AAKHRI_D04_V01_RUN2.mp4",
+      "height": 1920,
+      "nominal_fps": 30,
+      "sha256": "1849cf990ccbb5f314a25db03d235ec5b7fc8e69a9871325f32f518aea863039",
+      "video_samples": 469,
+      "video_tracks": 1,
+      "width": 1080
+    }
+  ],
+  "receipt_sha256": "9ef4b7f8d779068efcb24fa6d9b6c8aba11074a45595ee2aa8e8928f45b41dd6",
+  "schema": "MULTI_TAKE_TECHNICAL_QC_V01",
+  "status": "GREEN",
+  "stills": [
+    {
+      "actual_s": 35,
+      "bytes": 2389685,
+      "height": 1920,
+      "id": "S1_DIRECT_POINT",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-v01/stills_r2/AAKHRI_S1_DIRECT_POINT_V01.png",
+      "purpose": "PRIVATE_STILL_THUMBNAIL_CANDIDATE",
+      "requested_s": 35,
+      "sha256": "e8765bbd9ddf4593a57bd947c96953c40c76382866ed3ef78897a36242517023",
+      "width": 1080
+    },
+    {
+      "actual_s": 116,
+      "bytes": 2567693,
+      "height": 1920,
+      "id": "S2_MID_EXPRESSION",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-v01/stills_r2/AAKHRI_S2_MID_EXPRESSION_V01.png",
+      "purpose": "PRIVATE_STILL_THUMBNAIL_CANDIDATE",
+      "requested_s": 116,
+      "sha256": "b37c1b507df7d64c7aa964d46afb3d9b23a3b4aa7242ffb8f9cef1aa4d21265d",
+      "width": 1080
+    },
+    {
+      "actual_s": 208,
+      "bytes": 2452687,
+      "height": 1920,
+      "id": "S3_FINAL_EYE_CONTACT",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-v01/stills_r2/AAKHRI_S3_FINAL_EYE_CONTACT_V01.png",
+      "purpose": "PRIVATE_STILL_THUMBNAIL_CANDIDATE",
+      "requested_s": 208,
+      "sha256": "3406b519696e77aebec1a19e1745497127973931c8324d73706a653f1459066c",
+      "width": 1080
+    }
+  ]
+}

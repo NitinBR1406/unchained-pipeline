@@ -1,0 +1,212 @@
+{
+  "agent_isolation": "INDEPENDENT_NO_CLAUDE_OR_CHATGPT_CONCLUSIONS",
+  "color_match_notes": "Both takes share similar acoustic booth lighting; slight contrast and exposure adjustment needed to blend skin tones seamlessly.",
+  "crop_reframe_notes": "Both assets feature vertical overhead framing; normalize scale slightly around the pop filter for uniform visual weight.",
+  "intelligence_sha256": "3b2b5cadccce5439022f9d0006ccfb91bc1fb88011127de30912373773e5317b",
+  "lyrics_or_captions_invented": false,
+  "overall_observations": "Four distinct camera angles support a dynamic edit; close framing carries emotional peaks, wider framing supplies rhythmic relief, and direct eye-line material supports the later climax.",
+  "programme_duration_ms": 214400,
+  "schema": "GEMINI_MULTI_TAKE_PERFORMANCE_INTELLIGENCE_V01",
+  "selected_segments": [
+    {
+      "asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "concise_observation": "The performer exhibits a grounded, introspective demeanor with downward glances, well-suited for the song's introduction.",
+      "end_ms": 20000,
+      "framing_score_milli": 900,
+      "lipsync_visual_confidence_milli": 950,
+      "performance_score_milli": 850,
+      "reason_code": "INTRO_SUBDUED_PERFORMANCE",
+      "recommended_use": "Primary shot for the opening 20 seconds to establish a calm baseline before building energy.",
+      "start_ms": 0
+    },
+    {
+      "asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "concise_observation": "Tight close-up framing highlights facial micro-expressions and intense eye contact, elevating the emotional delivery.",
+      "end_ms": 47000,
+      "framing_score_milli": 880,
+      "lipsync_visual_confidence_milli": 980,
+      "performance_score_milli": 920,
+      "reason_code": "EMOTIONAL_BUILD",
+      "recommended_use": "Use for the transition from the intro into the first verse/pre-chorus.",
+      "start_ms": 20000
+    },
+    {
+      "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "concise_observation": "Wide high-angle framing captures energetic body language, hand gestures, and spatial movement within the vocal booth.",
+      "end_ms": 92000,
+      "framing_score_milli": 850,
+      "lipsync_visual_confidence_milli": 900,
+      "performance_score_milli": 890,
+      "reason_code": "CHORUS_DYNAMICS",
+      "recommended_use": "Intercut during the first chorus to provide visual relief from the tight close-ups and emphasize rhythm.",
+      "start_ms": 47000
+    },
+    {
+      "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "concise_observation": "Stable high-angle perspective, consistent lip-sync across the vocal verse entry.",
+      "end_ms": 125000,
+      "framing_score_milli": 600,
+      "lipsync_visual_confidence_milli": 650,
+      "performance_score_milli": 630,
+      "reason_code": "COVERAGE_CONTINUITY",
+      "recommended_use": "PRIMARY",
+      "start_ms": 92000
+    },
+    {
+      "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "concise_observation": "Engaging direct eye line to lens during chorus phrase.",
+      "end_ms": 160000,
+      "framing_score_milli": 640,
+      "lipsync_visual_confidence_milli": 670,
+      "performance_score_milli": 660,
+      "reason_code": "EXPRESSION_VARIATION",
+      "recommended_use": "PRIMARY",
+      "start_ms": 125000
+    },
+    {
+      "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "concise_observation": "Good energy and hand gestures throughout climax.",
+      "end_ms": 213557,
+      "framing_score_milli": 620,
+      "lipsync_visual_confidence_milli": 660,
+      "performance_score_milli": 650,
+      "reason_code": "PERFORMANCE_DELIVERY",
+      "recommended_use": "PRIMARY",
+      "start_ms": 160000
+    },
+    {
+      "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "concise_observation": "Completes master tail beyond asset 04 coverage window.",
+      "end_ms": 214400,
+      "framing_score_milli": 590,
+      "lipsync_visual_confidence_milli": 600,
+      "performance_score_milli": 580,
+      "reason_code": "EXCLUSIVE_COVERAGE",
+      "recommended_use": "PRIMARY",
+      "start_ms": 213557
+    }
+  ],
+  "status": "FROZEN_VALIDATED_FROM_ACCEPTED_GEMINI_RANGES",
+  "synchronized_take_set_sha256": "0ee44a2a83a0642a7df3b92c5108e8cbaf637592d7ea73284228a2214db2a06b",
+  "take_observations": [
+    {
+      "asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "evidence_sha256": "24b696daf62c7c284e667509cdf050e199a85490ec027fa3f75e0b4dd5ba9672",
+      "ranges": [
+        {
+          "asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+          "concise_observation": "The performer exhibits a grounded, introspective demeanor with downward glances, well-suited for the song's introduction.",
+          "end_ms": 20000,
+          "evidence_sha256": "ed79fe417750624baef0bd186a1aa4c00b1bc1554346fa18141b41f2f0731ef7",
+          "framing_score_milli": 900,
+          "lipsync_visual_confidence_milli": 950,
+          "performance_score_milli": 850,
+          "reason_code": "INTRO_SUBDUED_PERFORMANCE",
+          "recommended_use": "Primary shot for the opening 20 seconds to establish a calm baseline before building energy.",
+          "start_ms": 0
+        }
+      ]
+    },
+    {
+      "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "evidence_sha256": "3eb0e7231fff841772f99b4a6b45536941049caa934f76843f99f89b56e397fa",
+      "ranges": [
+        {
+          "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+          "concise_observation": "Engaging direct eye line to lens during chorus phrase.",
+          "end_ms": 160000,
+          "evidence_sha256": "4efd63665e50bee32f6c2028a12032c6a3254dab265cc329a5c9770393557f78",
+          "framing_score_milli": 640,
+          "lipsync_visual_confidence_milli": 670,
+          "performance_score_milli": 660,
+          "reason_code": "EXPRESSION_VARIATION",
+          "recommended_use": "PRIMARY",
+          "start_ms": 125000
+        },
+        {
+          "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+          "concise_observation": "Good energy and hand gestures throughout climax.",
+          "end_ms": 213557,
+          "evidence_sha256": "651010c5cf394d0ac9bfdb07b98ea28e78424fa6e1b5ed868c4f3af919263597",
+          "framing_score_milli": 620,
+          "lipsync_visual_confidence_milli": 660,
+          "performance_score_milli": 650,
+          "reason_code": "PERFORMANCE_DELIVERY",
+          "recommended_use": "PRIMARY",
+          "start_ms": 160000
+        }
+      ]
+    },
+    {
+      "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "evidence_sha256": "d7d8987ede67a1d2182a6c981d16b4095a02e3a63353c22e4689d7bc772dafdc",
+      "ranges": [
+        {
+          "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "concise_observation": "Wide high-angle framing captures energetic body language, hand gestures, and spatial movement within the vocal booth.",
+          "end_ms": 92000,
+          "evidence_sha256": "cbba6d856043c59f9ebbd55a93b1c5d12ac2c728711ecb60b96727c4e533ddeb",
+          "framing_score_milli": 850,
+          "lipsync_visual_confidence_milli": 900,
+          "performance_score_milli": 890,
+          "reason_code": "CHORUS_DYNAMICS",
+          "recommended_use": "Intercut during the first chorus to provide visual relief from the tight close-ups and emphasize rhythm.",
+          "start_ms": 47000
+        },
+        {
+          "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "concise_observation": "Stable high-angle perspective, consistent lip-sync across the vocal verse entry.",
+          "end_ms": 125000,
+          "evidence_sha256": "83ad9acf01ce5230a747c1795af68413f1f93a6da297856f1bae3fe0546c2f82",
+          "framing_score_milli": 600,
+          "lipsync_visual_confidence_milli": 650,
+          "performance_score_milli": 630,
+          "reason_code": "COVERAGE_CONTINUITY",
+          "recommended_use": "PRIMARY",
+          "start_ms": 92000
+        },
+        {
+          "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "concise_observation": "Completes master tail beyond asset 04 coverage window.",
+          "end_ms": 214400,
+          "evidence_sha256": "de8c28684a938cecd0bce50396b031abb3baab22d3e1b0f31c3723c65ee2e6bd",
+          "framing_score_milli": 590,
+          "lipsync_visual_confidence_milli": 600,
+          "performance_score_milli": 580,
+          "reason_code": "EXCLUSIVE_COVERAGE",
+          "recommended_use": "PRIMARY",
+          "start_ms": 213557
+        }
+      ]
+    },
+    {
+      "asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "evidence_sha256": "674de5169845fe8daa9894801351ebbc0ca94b18d98e69625c295fa556fbb8c6",
+      "ranges": [
+        {
+          "asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+          "concise_observation": "Tight close-up framing highlights facial micro-expressions and intense eye contact, elevating the emotional delivery.",
+          "end_ms": 47000,
+          "evidence_sha256": "3d63edcc1b918b6f78efd200f0827587463598c197381c32a2979a83fd16a624",
+          "framing_score_milli": 880,
+          "lipsync_visual_confidence_milli": 980,
+          "performance_score_milli": 920,
+          "reason_code": "EMOTIONAL_BUILD",
+          "recommended_use": "Use for the transition from the intro into the first verse/pre-chorus.",
+          "start_ms": 20000
+        }
+      ]
+    }
+  ],
+  "uncertainties": [
+    "Fine-grain sub-frame alignment offset between proxy audio stems."
+  ],
+  "unsafe_or_unusable_ranges": [
+    {
+      "asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "end_ms": 214400,
+      "issue": "ASSET_END_OUT_OF_BOUNDS",
+      "start_ms": 213557
+    }
+  ]
+}

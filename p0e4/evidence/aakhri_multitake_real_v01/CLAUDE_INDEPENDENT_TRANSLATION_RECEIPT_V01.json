@@ -1,0 +1,19 @@
+{
+  "conversation_url": "https://claude.ai/cowork/cse_01LaXdm94drvCqwaAkFr6HYq",
+  "isolation": "NEW_CONTEXT_NO_PRIOR_CLAUDE_CHAT_INPUT",
+  "normalized_translation_sha256": "616f0243e5f377bf4c4971e9a3197924cd43308e0ad5fd25263919febb24918c",
+  "note": "Raw JSON remains in the cited authenticated Claude conversation; repository copy is a deterministic normalized projection.",
+  "raw_response_chars": 18133,
+  "raw_response_sha256": "732cba5f8588a8b4aebea5fcf889e309e0ce79aaef48090bd58eabdcabc8e27d",
+  "receipt_sha256": "2646d0b5fed59da37e3224a57338f9995a4a391ac0ea673118c868e63a499d30",
+  "schema": "CLAUDE_INDEPENDENT_TRANSLATION_RECEIPT_V01",
+  "status": "FROZEN_NORMALIZED_FROM_VALID_JSON",
+  "validation": {
+    "audio_route": "PASS",
+    "edl_binding": "PASS",
+    "governance": "PASS",
+    "guide_audio_muted": "PASS",
+    "no_titles_or_captions": "PASS",
+    "operations_schema": "PASS"
+  }
+}

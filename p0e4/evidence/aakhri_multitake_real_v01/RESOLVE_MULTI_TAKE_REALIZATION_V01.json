@@ -1,0 +1,317 @@
+{
+  "color_pipeline": {
+    "creative_look": "SEPARATE_BOUNDED_UNCHAINED_STAGE",
+    "normalization": "PER_TAKE_MEASURED_THUMBNAIL_LUMA_GAIN",
+    "shot_match": "SEPARATE_FUSION_STAGE"
+  },
+  "edl_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "inputs_after": {
+    "master": {
+      "bytes": 61749398,
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+    },
+    "takes": {
+      "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+        "bytes": 216042666,
+        "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb"
+      },
+      "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+        "bytes": 504008133,
+        "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+      },
+      "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+        "bytes": 926438315,
+        "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+      },
+      "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+        "bytes": 942419948,
+        "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+      }
+    }
+  },
+  "inputs_before": {
+    "edl": {
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/aakhri_multitake_real_v01/MULTI_TAKE_EDIT_DECISION_LIST_V01.json",
+      "sha256": "6ab0cd0d29f65ab445902ec7e852c5da6b6023f439f5a2e05288e6f3583e0354"
+    },
+    "master": {
+      "bytes": 61749398,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/AAKHRI ISHQ MASTER 2.wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+    },
+    "takes": {
+      "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+        "bytes": 216042666,
+        "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5740.MOV",
+        "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb"
+      },
+      "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+        "bytes": 504008133,
+        "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5742.MOV",
+        "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+      },
+      "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+        "bytes": 926438315,
+        "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5741.MOV",
+        "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+      },
+      "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+        "bytes": 942419948,
+        "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5739.MOV",
+        "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+      }
+    }
+  },
+  "original_restored": true,
+  "outputs": [
+    {
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 387390757,
+      "frames": 6432,
+      "fusion_finishing": [
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 0.976,
+          "push_in_end_scale": 1.025,
+          "segment_id": "S01",
+          "shot_match_contrast": 0.0
+        },
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 0.989,
+          "push_in_end_scale": 1.0,
+          "segment_id": "S02",
+          "shot_match_contrast": 0.0
+        },
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.011,
+          "push_in_end_scale": 1.0,
+          "segment_id": "S03",
+          "shot_match_contrast": 0.0
+        },
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.011,
+          "push_in_end_scale": 1.0,
+          "segment_id": "S04",
+          "shot_match_contrast": 0.0
+        },
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.09,
+          "push_in_end_scale": 1.0,
+          "segment_id": "S05",
+          "shot_match_contrast": 0.0
+        },
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.09,
+          "push_in_end_scale": 1.0,
+          "segment_id": "S06",
+          "shot_match_contrast": 0.0
+        },
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.011,
+          "push_in_end_scale": 1.0,
+          "segment_id": "S07",
+          "shot_match_contrast": 0.0
+        }
+      ],
+      "name": "AAKHRI_MULTITAKE_MASTER_V01_RUN2",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-v01/AAKHRI_MULTITAKE_MASTER_V01_RUN2.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 185792
+      },
+      "sha256": "009965d6db556d6886cd61cffea26da988787a07b9e39e34db206eaf79bb603d"
+    },
+    {
+      "audio_lineage": {
+        "end_frame_exclusive": 1695,
+        "sha256": "8065b34a9c7f95d2835b4039024b99dd0bf5ccc6bb8404ec47ba09a82ed4abac",
+        "start_frame": 1230
+      },
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 28314133,
+      "derivative_range_ms": [
+        41000,
+        56500
+      ],
+      "frames": 465,
+      "fusion_finishing": [
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 0.989,
+          "push_in_end_scale": 1.025,
+          "segment_id": "S02",
+          "shot_match_contrast": 0.0
+        },
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.011,
+          "push_in_end_scale": 1.0,
+          "segment_id": "S03",
+          "shot_match_contrast": 0.0
+        }
+      ],
+      "name": "AAKHRI_D01_V01_RUN2",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-v01/AAKHRI_D01_V01_RUN2.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 14870
+      },
+      "sha256": "0662af1733ef7b281a6b71983973f4ba34fd5b48fe6e9010026156ecea8fddb1"
+    },
+    {
+      "audio_lineage": {
+        "end_frame_exclusive": 3990,
+        "sha256": "e353598f52d089dbda3a7e52aa8ead1b981891f10371afee5450b79623b50355",
+        "start_frame": 3540
+      },
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 27374448,
+      "derivative_range_ms": [
+        118000,
+        133000
+      ],
+      "frames": 450,
+      "fusion_finishing": [
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.011,
+          "push_in_end_scale": 1.025,
+          "segment_id": "S04",
+          "shot_match_contrast": 0.0
+        },
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.09,
+          "push_in_end_scale": 1.0,
+          "segment_id": "S05",
+          "shot_match_contrast": 0.0
+        }
+      ],
+      "name": "AAKHRI_D02_V01_RUN2",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-v01/AAKHRI_D02_V01_RUN2.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 14648
+      },
+      "sha256": "482e8746c74e890990e5de6fd14cc8a14020f1387693afc55650ade60f5f73c6"
+    },
+    {
+      "audio_lineage": {
+        "end_frame_exclusive": 4950,
+        "sha256": "8e29245b77d428c9edcdb0fe5efe1d841c53002ed149b68d7d935be40b7a62e5",
+        "start_frame": 4500
+      },
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 27402681,
+      "derivative_range_ms": [
+        150000,
+        165000
+      ],
+      "frames": 450,
+      "fusion_finishing": [
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.09,
+          "push_in_end_scale": 1.025,
+          "segment_id": "S05",
+          "shot_match_contrast": 0.0
+        },
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.09,
+          "push_in_end_scale": 1.0,
+          "segment_id": "S06",
+          "shot_match_contrast": 0.0
+        }
+      ],
+      "name": "AAKHRI_D03_V01_RUN2",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-v01/AAKHRI_D03_V01_RUN2.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 15470
+      },
+      "sha256": "fb8692fe703c9f917f966bf25d35c9f603ea94a691fea48149e8ad6890f166b1"
+    },
+    {
+      "audio_lineage": {
+        "end_frame_exclusive": 6315,
+        "sha256": "bbb471926d700f941669ba3fdfdf5e95956cd188e51752dc81dd7d225a492b67",
+        "start_frame": 5850
+      },
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 28459142,
+      "derivative_range_ms": [
+        195000,
+        210500
+      ],
+      "frames": 465,
+      "fusion_finishing": [
+        {
+          "creative_look_contrast": 0.0,
+          "creative_look_saturation": 1.0,
+          "creative_look_status": "NONE_EVIDENCE_CLOSED",
+          "normalization_gain": 1.09,
+          "push_in_end_scale": 1.025,
+          "segment_id": "S06",
+          "shot_match_contrast": 0.0
+        }
+      ],
+      "name": "AAKHRI_D04_V01_RUN2",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-multitake-realization-v01/AAKHRI_D04_V01_RUN2.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 16776
+      },
+      "sha256": "1849cf990ccbb5f314a25db03d235ec5b7fc8e69a9871325f32f518aea863039"
+    }
+  ],
+  "programme_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "project": "UNCHAINED_AAKHRI_MULTITAKE_V01_RUN2",
+  "project_closed": true,
+  "schema": "RESOLVE_MULTI_TAKE_REALIZATION_V01",
+  "scope": "PRIVATE_AAKHRI_ISHQ_ACCEPTANCE_ONLY",
+  "status": "RENDER_COMPLETE_PRIVATE_ONLY",
+  "stills_pending_from_rendered_master": true
+}

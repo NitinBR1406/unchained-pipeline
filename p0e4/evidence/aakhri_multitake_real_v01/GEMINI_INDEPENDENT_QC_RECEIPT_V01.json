@@ -1,0 +1,18 @@
+{
+  "agent_isolation": "NO_CLAUDE_OR_CHATGPT_CONCLUSIONS",
+  "all_checks_pass": true,
+  "candidate_sha256": "009965d6db556d6886cd61cffea26da988787a07b9e39e34db206eaf79bb603d",
+  "conversation_url": "https://gemini.google.com/app/07f0872d9d06c2e8",
+  "full_duration_reviewed": true,
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "raw_response_bytes": 2183,
+  "raw_response_sha256": "404f422e70a166f7d321c6dcacc2771709d14d8b5bde768c2e229ebf3eab394f",
+  "receipt_sha256": "0a7c7c5ab2c2f4aab9cedaddff221fc34b993d556bb155f1f93baa9ee30e610e",
+  "rights_or_approval_inferred": false,
+  "schema": "GEMINI_INDEPENDENT_QC_RECEIPT_V01",
+  "status": "ACCEPTED"
+}

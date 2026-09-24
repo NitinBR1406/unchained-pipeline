@@ -1,0 +1,156 @@
+{
+  "claude_translation_sha256": "616f0243e5f377bf4c4971e9a3197924cd43308e0ad5fd25263919febb24918c",
+  "edl_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+  "gemini_intelligence_sha256": "3b2b5cadccce5439022f9d0006ccfb91bc1fb88011127de30912373773e5317b",
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "human_gates": [
+    "NITIN_FINAL_VIDEO_APPROVAL",
+    "NITIN_FINAL_ASSET_APPROVAL",
+    "RIGHTS_CLEARANCE",
+    "NITIN_PUBLISH_APPROVAL"
+  ],
+  "inputs": [
+    {
+      "bytes": 61749398,
+      "display_name": "AAKHRI ISHQ MASTER 2.wav",
+      "file_id": "10zkJH9QvMDNcjVb00JVE6PEm4UOwOUZn",
+      "kind": "MASTER_AUDIO_CANDIDATE",
+      "mime_from_bytes": "audio/x-wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+    },
+    {
+      "bytes": 942419948,
+      "display_name": "IMG_5739.MOV",
+      "file_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "kind": "TAKE",
+      "mime_from_bytes": "video/quicktime",
+      "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+    },
+    {
+      "bytes": 216042666,
+      "display_name": "IMG_5740.MOV",
+      "file_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "kind": "TAKE",
+      "mime_from_bytes": "video/quicktime",
+      "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb"
+    },
+    {
+      "bytes": 926438315,
+      "display_name": "IMG_5741.MOV",
+      "file_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "kind": "TAKE",
+      "mime_from_bytes": "video/quicktime",
+      "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+    },
+    {
+      "bytes": 504008133,
+      "display_name": "IMG_5742.MOV",
+      "file_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "kind": "TAKE",
+      "mime_from_bytes": "video/quicktime",
+      "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+    }
+  ],
+  "intake_receipt_sha256": "c5b4b20d904e3fc4536739106b3e47e3fe0e9cb96ae8f5d54f3f805a98afd745",
+  "manifest_sha256": "3c68be615bb9982c6c81c587170084f5d9312171132f6d9e1b0f2c0ff2de9962",
+  "outputs": [
+    {
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 387390757,
+      "frames": 6432,
+      "name": "AAKHRI_MULTITAKE_MASTER_V01_RUN2",
+      "path": ".local/aakhri-multitake-realization-v01/AAKHRI_MULTITAKE_MASTER_V01_RUN2.mp4",
+      "sha256": "009965d6db556d6886cd61cffea26da988787a07b9e39e34db206eaf79bb603d"
+    },
+    {
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 28314133,
+      "frames": 465,
+      "name": "AAKHRI_D01_V01_RUN2",
+      "path": ".local/aakhri-multitake-realization-v01/AAKHRI_D01_V01_RUN2.mp4",
+      "sha256": "0662af1733ef7b281a6b71983973f4ba34fd5b48fe6e9010026156ecea8fddb1"
+    },
+    {
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 27374448,
+      "frames": 450,
+      "name": "AAKHRI_D02_V01_RUN2",
+      "path": ".local/aakhri-multitake-realization-v01/AAKHRI_D02_V01_RUN2.mp4",
+      "sha256": "482e8746c74e890990e5de6fd14cc8a14020f1387693afc55650ade60f5f73c6"
+    },
+    {
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 27402681,
+      "frames": 450,
+      "name": "AAKHRI_D03_V01_RUN2",
+      "path": ".local/aakhri-multitake-realization-v01/AAKHRI_D03_V01_RUN2.mp4",
+      "sha256": "fb8692fe703c9f917f966bf25d35c9f603ea94a691fea48149e8ad6890f166b1"
+    },
+    {
+      "audio_route": "AUTHORITATIVE_MASTER_ONLY",
+      "bytes": 28459142,
+      "frames": 465,
+      "name": "AAKHRI_D04_V01_RUN2",
+      "path": ".local/aakhri-multitake-realization-v01/AAKHRI_D04_V01_RUN2.mp4",
+      "sha256": "1849cf990ccbb5f314a25db03d235ec5b7fc8e69a9871325f32f518aea863039"
+    }
+  ],
+  "programme_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "publish_ready": false,
+  "resolve_project_archive": {
+    "bytes": 294189,
+    "path": ".local/aakhri-multitake-realization-v01/UNCHAINED_AAKHRI_MULTITAKE_V01_RUN2.drp",
+    "sha256": "94ac35fe7a0be7d27b51ff3727b9e6beb7c3a822c130676fcadaa91db59ac302"
+  },
+  "schema": "AAKHRI_MULTI_TAKE_POST_READY_MANIFEST_V01",
+  "scope": "PRIVATE_NON_PUBLISHING_REAL_ACCEPTANCE_ONLY",
+  "stage_outcomes": {
+    "CAPTIONS_METADATA": "GREEN_CAPTIONS_OMITTED_NO_AUTHORITATIVE_TEXT",
+    "CLAUDE_PRODUCTION_TRANSLATION": "GREEN_FROZEN",
+    "EDIT_DECISION_LIST": "GREEN_100_PERCENT_PERFORMANCE",
+    "GEMINI_MULTI_TAKE_INTELLIGENCE": "GREEN_FROZEN",
+    "INDEPENDENT_GEMINI_QC": "ACCEPTED_ALL_9_CHECKS_PASS",
+    "INGEST": "GREEN_STABLE_HASH_BOUND",
+    "LIPSYNC_ALIGNMENT": "GREEN_4_TAKES",
+    "MASTER_DERIVATIVES": "GREEN_1_PLUS_4",
+    "POST_READY_MANIFEST": "GREEN_PRIVATE_ONLY",
+    "RESOLVE_FUSION_PRODUCTION": "GREEN_RUN2_AFTER_BOUNDED_REPAIR",
+    "RIGHTS_ROUTING": "HOLD_RIGHTS_CLEARANCE",
+    "STILLS_THUMBNAILS": "GREEN_3_PRIVATE_CANDIDATES",
+    "SYNCHRONIZED_TAKE_SET": "GREEN",
+    "TECHNICAL_QC": "GREEN_FULL_DECODE_5_OF_5"
+  },
+  "status": "POST_READY_WAITING_FOR_NITIN",
+  "stills": [
+    {
+      "bytes": 2389685,
+      "id": "S1_DIRECT_POINT",
+      "path": ".local/aakhri-multitake-realization-v01/stills_r2/AAKHRI_S1_DIRECT_POINT_V01.png",
+      "scope": "PRIVATE_REVIEW_CANDIDATE",
+      "sha256": "e8765bbd9ddf4593a57bd947c96953c40c76382866ed3ef78897a36242517023",
+      "time_seconds": 35
+    },
+    {
+      "bytes": 2567693,
+      "id": "S2_MID_EXPRESSION",
+      "path": ".local/aakhri-multitake-realization-v01/stills_r2/AAKHRI_S2_MID_EXPRESSION_V01.png",
+      "scope": "PRIVATE_REVIEW_CANDIDATE",
+      "sha256": "b37c1b507df7d64c7aa964d46afb3d9b23a3b4aa7242ffb8f9cef1aa4d21265d",
+      "time_seconds": 116
+    },
+    {
+      "bytes": 2452687,
+      "id": "S3_FINAL_EYE_CONTACT",
+      "path": ".local/aakhri-multitake-realization-v01/stills_r2/AAKHRI_S3_FINAL_EYE_CONTACT_V01.png",
+      "scope": "PRIVATE_REVIEW_CANDIDATE",
+      "sha256": "3406b519696e77aebec1a19e1745497127973931c8324d73706a653f1459066c",
+      "time_seconds": 208
+    }
+  ],
+  "synchronized_take_set_sha256": "0ee44a2a83a0642a7df3b92c5108e8cbaf637592d7ea73284228a2214db2a06b",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01"
+}

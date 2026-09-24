@@ -1,0 +1,135 @@
+{
+  "derivatives": [
+    {
+      "derivative_id": "D01",
+      "end_ms": 56500,
+      "performer_visible_ms": 15500,
+      "platform": "SHORT_VERTICAL",
+      "start_ms": 41000
+    },
+    {
+      "derivative_id": "D02",
+      "end_ms": 133000,
+      "performer_visible_ms": 15000,
+      "platform": "SHORT_VERTICAL",
+      "start_ms": 118000
+    },
+    {
+      "derivative_id": "D03",
+      "end_ms": 165000,
+      "performer_visible_ms": 15000,
+      "platform": "SHORT_VERTICAL",
+      "start_ms": 150000
+    },
+    {
+      "derivative_id": "D04",
+      "end_ms": 210500,
+      "performer_visible_ms": 15500,
+      "platform": "SHORT_VERTICAL",
+      "start_ms": 195000
+    }
+  ],
+  "duration_ms": 214400,
+  "edl_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+  "filename_semantics_used": false,
+  "frame_quantization": {
+    "bridge_reason": "DECODED_FINAL_FRAME_COVERS_214400MS_PROGRAMME_END",
+    "max_bridge_ms": 10,
+    "output_fps_den": 1,
+    "output_fps_num": 30
+  },
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "guide_audio_final_mix": false,
+  "intelligence_sha256": "3b2b5cadccce5439022f9d0006ccfb91bc1fb88011127de30912373773e5317b",
+  "performance_fraction": 1.0,
+  "programme_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "schema": "MULTI_TAKE_EDIT_DECISION_LIST_V01",
+  "scope": "PRIVATE_AAKHRI_ISHQ_ACCEPTANCE_ONLY",
+  "segments": [
+    {
+      "evidence_sha256": "ed79fe417750624baef0bd186a1aa4c00b1bc1554346fa18141b41f2f0731ef7",
+      "performer_visible": true,
+      "reason_code": "INTRO_SUBDUED_PERFORMANCE",
+      "segment_id": "S01",
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "take_end_ms": 21627,
+      "take_start_ms": 1627,
+      "timeline_end_ms": 20000,
+      "timeline_start_ms": 0
+    },
+    {
+      "evidence_sha256": "3d63edcc1b918b6f78efd200f0827587463598c197381c32a2979a83fd16a624",
+      "performer_visible": true,
+      "reason_code": "EMOTIONAL_BUILD",
+      "segment_id": "S02",
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "take_end_ms": 46474,
+      "take_start_ms": 19474,
+      "timeline_end_ms": 47000,
+      "timeline_start_ms": 20000
+    },
+    {
+      "evidence_sha256": "cbba6d856043c59f9ebbd55a93b1c5d12ac2c728711ecb60b96727c4e533ddeb",
+      "performer_visible": true,
+      "reason_code": "CHORUS_DYNAMICS",
+      "segment_id": "S03",
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "take_end_ms": 94044,
+      "take_start_ms": 49044,
+      "timeline_end_ms": 92000,
+      "timeline_start_ms": 47000
+    },
+    {
+      "evidence_sha256": "83ad9acf01ce5230a747c1795af68413f1f93a6da297856f1bae3fe0546c2f82",
+      "performer_visible": true,
+      "reason_code": "COVERAGE_CONTINUITY",
+      "segment_id": "S04",
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "take_end_ms": 127044,
+      "take_start_ms": 94044,
+      "timeline_end_ms": 125000,
+      "timeline_start_ms": 92000
+    },
+    {
+      "evidence_sha256": "4efd63665e50bee32f6c2028a12032c6a3254dab265cc329a5c9770393557f78",
+      "performer_visible": true,
+      "reason_code": "EXPRESSION_VARIATION",
+      "segment_id": "S05",
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "take_end_ms": 67195,
+      "take_start_ms": 32195,
+      "timeline_end_ms": 160000,
+      "timeline_start_ms": 125000
+    },
+    {
+      "evidence_sha256": "651010c5cf394d0ac9bfdb07b98ea28e78424fa6e1b5ed868c4f3af919263597",
+      "performer_visible": true,
+      "reason_code": "PERFORMANCE_DELIVERY",
+      "segment_id": "S06",
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "take_end_ms": 120752,
+      "take_start_ms": 67195,
+      "timeline_end_ms": 213557,
+      "timeline_start_ms": 160000
+    },
+    {
+      "evidence_sha256": "de8c28684a938cecd0bce50396b031abb3baab22d3e1b0f31c3723c65ee2e6bd",
+      "performer_visible": true,
+      "reason_code": "EXCLUSIVE_COVERAGE",
+      "segment_id": "S07",
+      "tail_frame_bridge_ms": 10,
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "take_end_ms": 216444,
+      "take_start_ms": 215601,
+      "timeline_end_ms": 214400,
+      "timeline_start_ms": 213557
+    }
+  ],
+  "status": "GREEN_MACHINE_READABLE_REAL_ACCEPTANCE",
+  "synchronized_take_set_sha256": "0ee44a2a83a0642a7df3b92c5108e8cbaf637592d7ea73284228a2214db2a06b",
+  "visible_performance_ms": 214400
+}
