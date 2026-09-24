@@ -1,0 +1,29 @@
+{
+  "schema": "NITIN_CREATIVE_FEEDBACK_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "run2_final_video_approval": "REJECTED_BY_NITIN",
+  "requested_revision": "R3",
+  "authoritative_source": "NITIN_EXPLICIT_USER_INPUT",
+  "requirements": [
+    {
+      "id": "FRAMING",
+      "text": "Tighter safe base crop on every take; no black ceiling, floor, or white lower border in base framing; normalize subject scale before creative motion."
+    },
+    {
+      "id": "LOOK",
+      "text": "Richer natural subject-forward skin, contrast and presence; softer calmer less-dominant background; keep normalization, shot match and creative grade separate."
+    },
+    {
+      "id": "MOTION",
+      "text": "Bind restrained zooms, punch-ins, shakes and motion accents to authoritative master-audio musical/emotional events after safe framing."
+    }
+  ],
+  "forbidden": [
+    "ALTER_RUN2",
+    "INVENT_LYRICS",
+    "INFER_RIGHTS",
+    "INFER_APPROVAL",
+    "DEPLOY",
+    "PUBLISH"
+  ]
+}

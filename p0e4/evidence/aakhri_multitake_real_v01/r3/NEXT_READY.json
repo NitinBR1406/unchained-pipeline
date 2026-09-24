@@ -1,0 +1,9 @@
+{
+  "schema": "R3_NEXT_READY_V01",
+  "status": "WAITING_FOR_NITIN_R3_DEFECT_CONFIRMATION",
+  "candidate_sha256": "baa675588c3fb3bd57bec71b0261f76a4a28eff74047f8673c3e0aceb0ac7487",
+  "question": "Confirm or reject Gemini's reported defects at 00:09-00:21, 01:13-01:29, 01:33-01:58 and 01:52-01:54.",
+  "allowed_answers": ["CONFIRM_DEFECTS", "REJECT_DEFECTS_AND_ACCEPT_FOR_REVIEW_PACKAGE", "REQUEST_SPECIFIC_REPAIR"],
+  "blocked_actions": ["POST_READY", "FINAL_SHARED_DRIVE_PERSISTENCE", "FINAL_VIDEO_APPROVAL"],
+  "publication_authorized": false
+}

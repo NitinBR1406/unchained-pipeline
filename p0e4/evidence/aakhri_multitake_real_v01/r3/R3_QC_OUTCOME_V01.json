@@ -1,0 +1,20 @@
+{
+  "schema": "R3_QC_OUTCOME_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "revision": "R3",
+  "candidate_sha256": "baa675588c3fb3bd57bec71b0261f76a4a28eff74047f8673c3e0aceb0ac7487",
+  "technical_qc": "GREEN",
+  "independent_gemini_qc": "REPAIR_REQUIRED",
+  "post_ready": false,
+  "shared_drive_final_persistence": "NOT_EXECUTED_FAIL_CLOSED",
+  "reason": "Independent Gemini QC reported unresolved facial-artifact, motion-restraint and lip-sync concerns. Local technical checks do not prove those creative findings false.",
+  "smallest_remaining_gate": "NITIN_R3_DEFECT_CONFIRMATION_OR_REJECTION",
+  "required_review_timecodes": ["00:09-00:21", "01:13-01:29", "01:33-01:58", "01:52-01:54"],
+  "run2_immutable": true,
+  "no_approval_inferred": true,
+  "governance": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "R3_TECHNICAL_QC_V01",
+  "candidate_sha256": "baa675588c3fb3bd57bec71b0261f76a4a28eff74047f8673c3e0aceb0ac7487",
+  "full_decode": {
+    "method": "AVFoundation avconvert PresetLowQuality full transcode",
+    "master": "PASS",
+    "derivatives": {"D01": "PASS", "D02": "PASS", "D03": "PASS", "D04": "PASS"}
+  },
+  "visual_spot_checks": {
+    "timecodes_seconds": [19, 23, 30, 35, 44, 85, 130, 208],
+    "black_ceiling": "NOT_OBSERVED_AFTER_REPAIR5",
+    "floor": "NOT_OBSERVED",
+    "white_lower_border": "NOT_OBSERVED",
+    "subject_scale": "CONSISTENT_WITH_TIGHT_BASE_FRAMING"
+  },
+  "programme_audio": "AUTHORITATIVE_MASTER_ONLY",
+  "status": "TECHNICAL_QC_GREEN_INDEPENDENT_CREATIVE_QC_RED",
+  "governance": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  }
+}

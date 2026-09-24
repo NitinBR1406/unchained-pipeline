@@ -1,0 +1,30 @@
+{
+  "schema": "GEMINI_INDEPENDENT_R3_REPAIR_REQC_V01",
+  "candidate_sha256": "baa675588c3fb3bd57bec71b0261f76a4a28eff74047f8673c3e0aceb0ac7487",
+  "candidate_duration": "03:34",
+  "full_duration_reviewed": true,
+  "verdict": "REPAIR_REQUIRED",
+  "confidence_0_to_10": 10,
+  "model_surface": "Gemini 3.1 Pro isolated new conversation",
+  "checks": {
+    "no_black_ceiling": {"status": "PASS", "evidence": "No black ceiling visible."},
+    "no_floor": {"status": "PASS", "evidence": "No floor visible."},
+    "no_white_lower_border": {"status": "PASS", "evidence": "No white lower border visible."},
+    "consistent_subject_scale": {"status": "PASS", "evidence": "Subject scale appropriately consistent."},
+    "natural_rich_subject_forward_skin_look": {"status": "FAIL", "evidence": "Gemini reported recurring forehead texture/shadow artifacts."},
+    "background_de_emphasis": {"status": "PASS", "evidence": "Background does not distract from subject."},
+    "motion_alignment": {"status": "PASS", "evidence": "Motion generally follows music energy."},
+    "restrained_zooms_shakes": {"status": "FAIL", "evidence": "Gemini reported excessive movement around 01:33."},
+    "lip_sync": {"status": "FAIL", "evidence": "Gemini reported an apparent mouth/tongue distortion at 01:52-01:54."},
+    "cuts": {"status": "PASS", "evidence": "No broken cut was reported."},
+    "programme_audio": {"status": "PASS", "evidence": "Audio clear and uninterrupted."},
+    "technical_integrity": {"status": "FAIL", "evidence": "Failed because of the reported facial artifacts."}
+  },
+  "timecoded_defects": [
+    {"timecode": "00:09-00:21", "description": "Reported forehead artifact."},
+    {"timecode": "01:13-01:29", "description": "Reported forehead artifact."},
+    {"timecode": "01:33-01:58", "description": "Reported excessive motion."},
+    {"timecode": "01:52-01:54", "description": "Reported mouth/tongue distortion."}
+  ],
+  "limitations": "Independent AI review only. No rights, publication, release or human approval was assessed. The artifact findings conflict with local frame inspection and therefore remain unresolved rather than being silently overruled."
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "SAFE_BASE_FRAMING_CONTRACT_V01",
+  "measurement_basis": "READ_ONLY_960PX_QUICKLOOK_SOURCE_THUMBNAILS_PLUS_NITIN_FEEDBACK",
+  "output": "1080x1920",
+  "forbidden_regions": [
+    "BLACK_CEILING",
+    "FLOOR",
+    "WHITE_LOWER_BORDER"
+  ],
+  "application_order": [
+    "BASE_SCALE_AND_CENTER",
+    "BEAT_BOUND_CREATIVE_MOTION"
+  ],
+  "takes": {
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+      "base_scale": 2.30,
+      "center": [
+        0.5,
+        0.72
+      ],
+      "reason": "LOWER_SUBJECT_POSITION_REQUIRES_UPWARD_NORMALIZATION"
+    },
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "reason": "REMOVE_CEILING_AND_LOWER_BORDER"
+    },
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.49
+      ],
+      "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+    },
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+    }
+  },
+  "limits": {
+  "minimum_safe_base_scale": 2.02,
+  "maximum_base_scale": 2.30,
+    "creative_motion_may_reduce_below_base": false
+  }
+}

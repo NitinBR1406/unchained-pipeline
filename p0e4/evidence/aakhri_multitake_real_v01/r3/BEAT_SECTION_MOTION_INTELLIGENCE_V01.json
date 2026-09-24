@@ -1,0 +1,159 @@
+{
+  "schema": "BEAT_SECTION_MOTION_INTELLIGENCE_V01",
+  "audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "analysis": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_width_bytes": 3,
+    "hop_ms": 20,
+    "method": "RMS_ONSET_AND_ENERGY_ONLY",
+    "lyrics_or_semantics_inferred": false
+  },
+  "duration_ms": 214400,
+  "events": [
+    {
+      "time_ms": 49960,
+      "onset_strength": 0.7958,
+      "energy_zone": "BUILD",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 56360,
+      "onset_strength": 0.7759,
+      "energy_zone": "BUILD",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 63960,
+      "onset_strength": 0.7843,
+      "energy_zone": "PEAK",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 72760,
+      "onset_strength": 0.8446,
+      "energy_zone": "QUIET",
+      "motion": "GENTLE_PUSH"
+    },
+    {
+      "time_ms": 78760,
+      "onset_strength": 0.8643,
+      "energy_zone": "BUILD",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 92760,
+      "onset_strength": 1.0,
+      "energy_zone": "QUIET",
+      "motion": "GENTLE_PUSH"
+    },
+    {
+      "time_ms": 102760,
+      "onset_strength": 0.7807,
+      "energy_zone": "BUILD",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 118360,
+      "onset_strength": 0.8071,
+      "energy_zone": "BUILD",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 125160,
+      "onset_strength": 0.8483,
+      "energy_zone": "BUILD",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 137960,
+      "onset_strength": 0.8446,
+      "energy_zone": "BUILD",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 143960,
+      "onset_strength": 0.7592,
+      "energy_zone": "PEAK",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 149160,
+      "onset_strength": 0.8697,
+      "energy_zone": "BUILD",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 153960,
+      "onset_strength": 0.759,
+      "energy_zone": "BUILD",
+      "motion": "PUNCH_IN_MICRO_SHAKE"
+    },
+    {
+      "time_ms": 161960,
+      "onset_strength": 0.8725,
+      "energy_zone": "QUIET",
+      "motion": "GENTLE_PUSH"
+    }
+  ],
+  "sections": [
+    {
+      "start_ms": 0,
+      "end_ms": 30000,
+      "energy_zone": "QUIET",
+      "mean_rms": 0.181585
+    },
+    {
+      "start_ms": 30000,
+      "end_ms": 60000,
+      "energy_zone": "BUILD",
+      "mean_rms": 0.25513
+    },
+    {
+      "start_ms": 60000,
+      "end_ms": 90000,
+      "energy_zone": "BUILD",
+      "mean_rms": 0.235931
+    },
+    {
+      "start_ms": 90000,
+      "end_ms": 120000,
+      "energy_zone": "BUILD",
+      "mean_rms": 0.220385
+    },
+    {
+      "start_ms": 120000,
+      "end_ms": 150000,
+      "energy_zone": "BUILD",
+      "mean_rms": 0.238197
+    },
+    {
+      "start_ms": 150000,
+      "end_ms": 180000,
+      "energy_zone": "BUILD",
+      "mean_rms": 0.234644
+    },
+    {
+      "start_ms": 180000,
+      "end_ms": 210000,
+      "energy_zone": "BUILD",
+      "mean_rms": 0.273048
+    },
+    {
+      "start_ms": 210000,
+      "end_ms": 214400,
+      "energy_zone": "QUIET",
+      "mean_rms": 0.004222
+    }
+  ],
+  "restraint": {
+    "maximum_accents": 14,
+    "minimum_spacing_ms": 3500,
+    "quiet_passage_shakes_allowed": false,
+    "maximum_motion_scale": 1.035,
+    "maximum_shake_offset": 0.004
+  },
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "authoritative_audio_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/AAKHRI ISHQ MASTER 2.wav",
+  "authoritative_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+}

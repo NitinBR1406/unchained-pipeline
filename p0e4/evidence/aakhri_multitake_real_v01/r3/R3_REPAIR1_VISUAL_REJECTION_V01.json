@@ -1,0 +1,23 @@
+{
+  "schema": "R3_REPAIR1_VISUAL_REJECTION_V01",
+  "status": "REJECTED_BEFORE_INDEPENDENT_QC",
+  "master_sha256": "cbdf0125bf3d94a1cdbad6164dcc6169eb6478932fd8d65b9de84be9e17b0b49",
+  "technical_decode": "GREEN_5_OF_5",
+  "observed_defects": [
+    "WHITE_LOWER_BORDER_VISIBLE_AT_116S",
+    "SUBJECT_SKIN_REMAINS_TOO_PALE"
+  ],
+  "bounded_repair": [
+    "INCREASE_SAFE_BASE_SCALE",
+    "ADJUST_TAKE_CENTER_TO_CROP_LOWER_BORDER",
+    "LOWER_CREATIVE_GAIN",
+    "INCREASE_BOUNDED_CONTRAST_AND_SATURATION",
+    "STRENGTHEN_BACKGROUND_DEEMPHASIS"
+  ],
+  "run2_immutable": true,
+  "governance": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  }
+}

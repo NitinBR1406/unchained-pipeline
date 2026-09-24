@@ -1,0 +1,8 @@
+{
+  "schema": "R3_REGRESSION_V01",
+  "focused_tests": {"count": 29, "status": "PASS"},
+  "full_p0e4_tests": {"count": 277, "status": "PASS"},
+  "deterministic_replay": true,
+  "publication_authorized": false,
+  "warnings": "Existing ResourceWarning messages did not fail the suite."
+}
