@@ -1,0 +1,385 @@
+{
+  "classification": "COLOR_DIRECTION_SELECTION_ASSETS",
+  "contract_sha256": "28c13fd2339a307b4d5944929b8fba9652f1eda04e5036c1a0d6d40429457d34",
+  "full_master_rendered": false,
+  "fusion_tools_used": [],
+  "governance": {
+    "classification": "COLOR_DIRECTION_SELECTION_ASSETS",
+    "final_asset_approved": false,
+    "final_video_approved": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "post_ready": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "original_restored": true,
+  "output": {
+    "bytes": 28501594,
+    "frames": 480,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r5-look-development/AAKHRI_R5_LOOK_MATRIX_V01.mp4",
+    "render_status": {
+      "CompletionPercentage": 100,
+      "JobStatus": "Complete",
+      "TimeTakenToRenderInMs": 5634
+    },
+    "sha256": "05b2c96bb9c421a250d9352d466b11e1b85f6f3c8bcf570ff112c00d06060f97"
+  },
+  "project_closed": true,
+  "r4_static_inverted_ellipse_used": false,
+  "resolve_project": {
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r5-look-development/UNCHAINED_AAKHRI_R5_RAW_REFERENCE_LOOK_V01.drp",
+    "sha256": "0fb6a58b190e5d2344984d659c57f1ab16158d85f0c847ba19420bddc9a59186"
+  },
+  "schema": "RESOLVE_R5_LOOK_DEVELOPMENT_V01",
+  "segments": [
+    {
+      "fusion_tools": [],
+      "look": "RAW_REFERENCE",
+      "resolve_color_page": {
+        "description": "Exact source image reference; no Color-page or Fusion processing.",
+        "resolve_color_page_operation": "NONE_SOURCE_VALUES"
+      },
+      "scene_index": 1,
+      "source_sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+      "source_time_seconds": 36.0,
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "timeline_end_frame_exclusive": 30,
+      "timeline_start_frame": 0
+    },
+    {
+      "fusion_tools": [],
+      "look": "A_RAW_PLUS",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.001 0.000 -0.001",
+          "Power": "0.995 0.998 1.002",
+          "Saturation": 1.015,
+          "Slope": "1.008 1.002 0.996"
+        },
+        "description": "Minimal neutral correction with subtle skin and contrast support.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 1,
+      "source_sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+      "source_time_seconds": 36.0,
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "timeline_end_frame_exclusive": 60,
+      "timeline_start_frame": 30
+    },
+    {
+      "fusion_tools": [],
+      "look": "B_NATURAL_CINEMATIC",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.002 0.000 -0.002",
+          "Power": "0.985 0.995 1.008",
+          "Saturation": 1.04,
+          "Slope": "1.018 1.006 0.990"
+        },
+        "description": "RAW-preserving natural richness and controlled depth.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 1,
+      "source_sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+      "source_time_seconds": 36.0,
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "timeline_end_frame_exclusive": 90,
+      "timeline_start_frame": 60
+    },
+    {
+      "fusion_tools": [],
+      "look": "C_UNCHAINED_CINEMATIC",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.003 -0.001 -0.004",
+          "Power": "0.972 0.990 1.018",
+          "Saturation": 1.07,
+          "Slope": "1.032 1.008 0.978"
+        },
+        "description": "More pronounced premium depth within natural-skin and source-integrity limits.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 1,
+      "source_sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+      "source_time_seconds": 36.0,
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "timeline_end_frame_exclusive": 120,
+      "timeline_start_frame": 90
+    },
+    {
+      "fusion_tools": [],
+      "look": "RAW_REFERENCE",
+      "resolve_color_page": {
+        "description": "Exact source image reference; no Color-page or Fusion processing.",
+        "resolve_color_page_operation": "NONE_SOURCE_VALUES"
+      },
+      "scene_index": 2,
+      "source_sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "source_time_seconds": 24.0,
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "timeline_end_frame_exclusive": 150,
+      "timeline_start_frame": 120
+    },
+    {
+      "fusion_tools": [],
+      "look": "A_RAW_PLUS",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.001 0.000 -0.001",
+          "Power": "0.995 0.998 1.002",
+          "Saturation": 1.015,
+          "Slope": "1.008 1.002 0.996"
+        },
+        "description": "Minimal neutral correction with subtle skin and contrast support.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 2,
+      "source_sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "source_time_seconds": 24.0,
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "timeline_end_frame_exclusive": 180,
+      "timeline_start_frame": 150
+    },
+    {
+      "fusion_tools": [],
+      "look": "B_NATURAL_CINEMATIC",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.002 0.000 -0.002",
+          "Power": "0.985 0.995 1.008",
+          "Saturation": 1.04,
+          "Slope": "1.018 1.006 0.990"
+        },
+        "description": "RAW-preserving natural richness and controlled depth.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 2,
+      "source_sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "source_time_seconds": 24.0,
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "timeline_end_frame_exclusive": 210,
+      "timeline_start_frame": 180
+    },
+    {
+      "fusion_tools": [],
+      "look": "C_UNCHAINED_CINEMATIC",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.003 -0.001 -0.004",
+          "Power": "0.972 0.990 1.018",
+          "Saturation": 1.07,
+          "Slope": "1.032 1.008 0.978"
+        },
+        "description": "More pronounced premium depth within natural-skin and source-integrity limits.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 2,
+      "source_sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "source_time_seconds": 24.0,
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "timeline_end_frame_exclusive": 240,
+      "timeline_start_frame": 210
+    },
+    {
+      "fusion_tools": [],
+      "look": "RAW_REFERENCE",
+      "resolve_color_page": {
+        "description": "Exact source image reference; no Color-page or Fusion processing.",
+        "resolve_color_page_operation": "NONE_SOURCE_VALUES"
+      },
+      "scene_index": 3,
+      "source_sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "source_time_seconds": 96.0,
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "timeline_end_frame_exclusive": 270,
+      "timeline_start_frame": 240
+    },
+    {
+      "fusion_tools": [],
+      "look": "A_RAW_PLUS",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.001 0.000 -0.001",
+          "Power": "0.995 0.998 1.002",
+          "Saturation": 1.015,
+          "Slope": "1.008 1.002 0.996"
+        },
+        "description": "Minimal neutral correction with subtle skin and contrast support.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 3,
+      "source_sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "source_time_seconds": 96.0,
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "timeline_end_frame_exclusive": 300,
+      "timeline_start_frame": 270
+    },
+    {
+      "fusion_tools": [],
+      "look": "B_NATURAL_CINEMATIC",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.002 0.000 -0.002",
+          "Power": "0.985 0.995 1.008",
+          "Saturation": 1.04,
+          "Slope": "1.018 1.006 0.990"
+        },
+        "description": "RAW-preserving natural richness and controlled depth.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 3,
+      "source_sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "source_time_seconds": 96.0,
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "timeline_end_frame_exclusive": 330,
+      "timeline_start_frame": 300
+    },
+    {
+      "fusion_tools": [],
+      "look": "C_UNCHAINED_CINEMATIC",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.003 -0.001 -0.004",
+          "Power": "0.972 0.990 1.018",
+          "Saturation": 1.07,
+          "Slope": "1.032 1.008 0.978"
+        },
+        "description": "More pronounced premium depth within natural-skin and source-integrity limits.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 3,
+      "source_sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "source_time_seconds": 96.0,
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "timeline_end_frame_exclusive": 360,
+      "timeline_start_frame": 330
+    },
+    {
+      "fusion_tools": [],
+      "look": "RAW_REFERENCE",
+      "resolve_color_page": {
+        "description": "Exact source image reference; no Color-page or Fusion processing.",
+        "resolve_color_page_operation": "NONE_SOURCE_VALUES"
+      },
+      "scene_index": 4,
+      "source_sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+      "source_time_seconds": 72.0,
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "timeline_end_frame_exclusive": 390,
+      "timeline_start_frame": 360
+    },
+    {
+      "fusion_tools": [],
+      "look": "A_RAW_PLUS",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.001 0.000 -0.001",
+          "Power": "0.995 0.998 1.002",
+          "Saturation": 1.015,
+          "Slope": "1.008 1.002 0.996"
+        },
+        "description": "Minimal neutral correction with subtle skin and contrast support.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 4,
+      "source_sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+      "source_time_seconds": 72.0,
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "timeline_end_frame_exclusive": 420,
+      "timeline_start_frame": 390
+    },
+    {
+      "fusion_tools": [],
+      "look": "B_NATURAL_CINEMATIC",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.002 0.000 -0.002",
+          "Power": "0.985 0.995 1.008",
+          "Saturation": 1.04,
+          "Slope": "1.018 1.006 0.990"
+        },
+        "description": "RAW-preserving natural richness and controlled depth.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 4,
+      "source_sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+      "source_time_seconds": 72.0,
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "timeline_end_frame_exclusive": 450,
+      "timeline_start_frame": 420
+    },
+    {
+      "fusion_tools": [],
+      "look": "C_UNCHAINED_CINEMATIC",
+      "resolve_color_page": {
+        "cdl": {
+          "NodeIndex": 1,
+          "Offset": "0.003 -0.001 -0.004",
+          "Power": "0.972 0.990 1.018",
+          "Saturation": 1.07,
+          "Slope": "1.032 1.008 0.978"
+        },
+        "description": "More pronounced premium depth within natural-skin and source-integrity limits.",
+        "operation": "ASC_CDL_NODE_1"
+      },
+      "scene_index": 4,
+      "source_sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+      "source_time_seconds": 72.0,
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "timeline_end_frame_exclusive": 480,
+      "timeline_start_frame": 450
+    }
+  ],
+  "sources_after": {
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+      "bytes": 216042666,
+      "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb"
+    },
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+      "bytes": 504008133,
+      "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+    },
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+      "bytes": 926438315,
+      "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+    },
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+      "bytes": 942419948,
+      "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+    }
+  },
+  "sources_before": {
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+      "bytes": 216042666,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5740.MOV",
+      "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb"
+    },
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+      "bytes": 504008133,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5742.MOV",
+      "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+    },
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+      "bytes": 926438315,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5741.MOV",
+      "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+    },
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+      "bytes": 942419948,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5739.MOV",
+      "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+    }
+  },
+  "status": "R5_LOOK_MATRIX_RENDERED_PRIVATE_ONLY"
+}

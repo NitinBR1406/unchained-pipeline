@@ -1,0 +1,24 @@
+{
+  "schema": "RAW_REFERENCE_SUPREMACY_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "r4_color_status": "REJECTED_BY_NITIN",
+  "principle": "COLOR_PROCESSING_MUST_PRESERVE_OR_IMPROVE_SOURCE_IMAGE",
+  "ai_qc_may_override_nitin": false,
+  "full_master_render_authorized": false,
+  "preserved": {"edl": true, "sync": true, "framing": true, "source_media": true},
+  "look_order": ["RAW_REFERENCE", "A_RAW_PLUS", "B_NATURAL_CINEMATIC", "C_UNCHAINED_CINEMATIC"],
+  "representative_scenes": [
+    {"scene_index": 1, "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8", "file": "IMG_5739.MOV", "source_time_seconds": 36.0, "condition": "TAKE_1_MEDIUM_EXPOSURE_DIRECT_SKIN_BACKGROUND"},
+    {"scene_index": 2, "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin", "file": "IMG_5740.MOV", "source_time_seconds": 24.0, "condition": "TAKE_2_SHORT_ALT_ANGLE_SKIN_BACKGROUND"},
+    {"scene_index": 3, "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8", "file": "IMG_5741.MOV", "source_time_seconds": 96.0, "condition": "TAKE_3_LONG_ALT_EXPOSURE_SKIN_BACKGROUND"},
+    {"scene_index": 4, "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW", "file": "IMG_5742.MOV", "source_time_seconds": 72.0, "condition": "TAKE_4_DISTINCT_ANGLE_EXPOSURE_SKIN_BACKGROUND"}
+  ],
+  "look_recipes": {
+    "RAW_REFERENCE": {"resolve_color_page_operation": "NONE_SOURCE_VALUES", "description": "Exact source image reference; no Color-page or Fusion processing."},
+    "A_RAW_PLUS": {"operation": "ASC_CDL_NODE_1", "description": "Minimal neutral correction with subtle skin and contrast support.", "cdl": {"NodeIndex": 1, "Slope": "1.008 1.002 0.996", "Offset": "0.001 0.000 -0.001", "Power": "0.995 0.998 1.002", "Saturation": 1.015}},
+    "B_NATURAL_CINEMATIC": {"operation": "ASC_CDL_NODE_1", "description": "RAW-preserving natural richness and controlled depth.", "cdl": {"NodeIndex": 1, "Slope": "1.018 1.006 0.990", "Offset": "0.002 0.000 -0.002", "Power": "0.985 0.995 1.008", "Saturation": 1.040}},
+    "C_UNCHAINED_CINEMATIC": {"operation": "ASC_CDL_NODE_1", "description": "More pronounced premium depth within natural-skin and source-integrity limits.", "cdl": {"NodeIndex": 1, "Slope": "1.032 1.008 0.978", "Offset": "0.003 -0.001 -0.004", "Power": "0.972 0.990 1.018", "Saturation": 1.070}}
+  },
+  "forbidden": ["R4_STATIC_INVERTED_ELLIPSE", "SKIN_SMOOTHING", "FACE_MANIPULATION", "GENERATIVE_ALTERATION", "DESTRUCTIVE_GLOBAL_GRADE", "FULL_SONG_RENDER", "CREATIVE_WINNER_SELECTED_BY_AI"],
+  "governance": {"classification": "COLOR_DIRECTION_SELECTION_ASSETS", "post_ready": false, "final_video_approved": false, "final_asset_approved": false, "production_deployment_authorized": false, "publication_authorized": false, "first_real_poster": "PAUSED_BY_NITIN"}
+}

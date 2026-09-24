@@ -1,0 +1,11 @@
+{
+  "schema": "R5_REGRESSION_V02",
+  "supersedes": "REGRESSION_V01.json",
+  "targeted_factory_suite": {"runtime": "bundled Python 3.12", "tests": 73, "result": "PASS"},
+  "adversarial_guards": ["AI_CANNOT_OVERRIDE_NITIN", "R4_MASK_FORBIDDEN", "FULL_MASTER_RENDER_FORBIDDEN", "FOUR_BY_FOUR_MATRIX_REQUIRED", "SOURCE_SHA_DRIFT_FAILS_CLOSED"],
+  "resolve_render": "PASS_16_SECONDS_ONLY",
+  "full_frame_decode": "PASS_480_OF_480",
+  "measurable_scope_qc": "GREEN_FOR_DIRECTION_SELECTION",
+  "shared_drive_readback": "PASS_ALL_23_MEDIA_ASSETS",
+  "status": "GREEN_FOR_NITIN_COLOR_DIRECTION_SELECTION_ONLY"
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "R4_COLOR_REJECTION_BY_NITIN_V01",
+  "event": "R4_COLOR_REJECTED_BY_NITIN",
+  "r4_candidate_sha256": "505cca0728a503588715ae548489214d5f5ac4ab1043d1b7f1ae6a590b67691f",
+  "authoritative_observation": "ORIGINAL_RAW_FOOTAGE_LOOKS_BETTER_THAN_PROCESSED_R4",
+  "final_video_approval": false,
+  "ai_qc_override": false,
+  "supersedes_r4_color_qc_for_creative_selection": true
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "R5_TECHNICAL_QC_V01",
+  "look_matrix_sha256": "05b2c96bb9c421a250d9352d466b11e1b85f6f3c8bcf570ff112c00d06060f97",
+  "duration_frames": 480,
+  "duration_seconds": 16,
+  "full_frame_decode": "PASS_480_OF_480",
+  "scope_assessment": "GREEN_FOR_DIRECTION_SELECTION",
+  "maximum_shadow_clip_pct": 0.027054,
+  "maximum_highlight_clip_pct": 0.003424,
+  "maximum_saturation_p99": 0.5,
+  "fusion_tools_used": [],
+  "r4_static_inverted_ellipse_used": false,
+  "full_master_rendered": false,
+  "status": "TECHNICAL_QC_GREEN_LOOK_SELECTION_ONLY"
+}

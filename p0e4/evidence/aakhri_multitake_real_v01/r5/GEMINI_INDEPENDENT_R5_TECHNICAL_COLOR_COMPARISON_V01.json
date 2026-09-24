@@ -1,0 +1,32 @@
+{
+  "schema": "GEMINI_INDEPENDENT_R5_TECHNICAL_COLOR_COMPARISON_V01",
+  "session_url": "https://gemini.google.com/app/42605bc1fd6abf40",
+  "session_isolation": "NEW_CONTEXT_NO_CREATIVE_WINNER_INPUT",
+  "reviewed_asset": "AAKHRI_R5_ALL_SCENES_RAW_A_B_C_CONTACT_SHEET.png",
+  "gemini_response": {
+    "schema": "gemini_r5_technical_color_comparison_v01",
+    "full_contact_sheet_reviewed": "AAKHRI_R5_ALL_SCENES_RAW_A_B_C_CONTACT_SHEET.jpg",
+    "per_scene_observations": [
+      {"scene_index": 1, "RAW_REFERENCE": "Desaturated, flat log profile. Maximum detail retention in shadows of the shirt and highlights on the microphone.", "A_RAW_PLUS": "Baseline contrast and saturation added. Neutral skin tone rendering. Black levels established without crushing.", "B_NATURAL_CINEMATIC": "Deeper shadows and slightly increased midtone contrast. Skin tones introduce a warmer, more golden cast.", "C_UNCHAINED_CINEMATIC": "High contrast ratio. Shadows in the shirt are heavily compressed. Skin tones pushed aggressively toward amber, and facial highlights are intensified."},
+      {"scene_index": 2, "RAW_REFERENCE": "Consistent flat exposure. Smooth roll-off on the subject's face.", "A_RAW_PLUS": "Standard normalization. Maintains detail in the dark folds of the shirt while restoring natural color separation.", "B_NATURAL_CINEMATIC": "Increased density in the shadows. Skin tone saturation is boosted, providing more depth and separation from the background.", "C_UNCHAINED_CINEMATIC": "Steep S-curve evident. Shadow detail in the lower torso is lost to pure black. Highlights on the hand and face are prominent with a distinct warm color grade."},
+      {"scene_index": 3, "RAW_REFERENCE": "Low contrast, washed-out appearance typical of uncorrected log data. Visible noise floor elevation due to flat shadow curve.", "A_RAW_PLUS": "Balanced midtones. Realistic skin rendition with conservative highlight management.", "B_NATURAL_CINEMATIC": "Rich contrast with a slight push in warmth. Shadows are lowered but retain structural detail in the clothing.", "C_UNCHAINED_CINEMATIC": "Stylized color separation (teal/orange bias). Aggressive shadow clipping in the shirt and heightened luminance on the subject's left cheek."},
+      {"scene_index": 4, "RAW_REFERENCE": "Maximum dynamic range visible. Very low saturation.", "A_RAW_PLUS": "Accurate Rec.709-style mapping. Natural skin tones and balanced contrast.", "B_NATURAL_CINEMATIC": "Slightly elevated contrast and warmth. Pleasing skin depth with minor reduction in deep shadow detail.", "C_UNCHAINED_CINEMATIC": "Highest perceptual contrast. Darkest regions merge into solid blacks. Skin tones exhibit heavy amber saturation, and highlights verge on clipping."}
+    ],
+    "cross_scene_consistency": "Technical consistency across the four scenes is exceptionally high. The specific luminance curves, saturation adjustments, and color casts associated with columns A, B, and C behave uniformly across all source frames, indicating stable, well-calibrated transforms.",
+    "technical_risks_by_look": {
+      "A_RAW_PLUS": "Minimal technical risk. Safely preserves the source dynamic range while providing a standardized, neutral baseline.",
+      "B_NATURAL_CINEMATIC": "Low to moderate risk. Slight reduction in deepest shadow detail, but generally maintains safe exposure limits and natural chromaticity.",
+      "C_UNCHAINED_CINEMATIC": "High risk of destructive data loss. The aggressive contrast curve crushes shadow detail in the clothing and pushes specular highlights on the skin and microphone near clipping thresholds. The heavy color cast alters natural skin chromaticity significantly."
+    },
+    "source_integrity_observations": "RAW_REFERENCE holds the complete dynamic range. A_RAW_PLUS maintains high source integrity, mapping the raw data conservatively. B_NATURAL_CINEMATIC slightly compresses the signal for aesthetic depth. C_UNCHAINED_CINEMATIC intentionally discards source shadow and highlight data to achieve a highly stylized, high-contrast look.",
+    "creative_winner_selected": false,
+    "limitations": ["Analysis conducted on a compressed, 8-bit JPEG contact sheet rather than uncompressed DPX, EXR, or original RAW files.", "No access to objective waveform monitors, vectorscopes, or RGB parades to verify mathematical clipping.", "Analysis is purely technical; no creative recommendations or final post-readiness approvals are implied."]
+  },
+  "evidence_reconciliation": {
+    "uploaded_file_was_png_not_jpg": true,
+    "gemini_clipping_claims_are_visual_hypotheses": true,
+    "measured_scope_result": "NO_MATERIAL_CLIPPING_DETECTED",
+    "gemini_may_not_select_winner": true,
+    "creative_winner_selected": false
+  }
+}

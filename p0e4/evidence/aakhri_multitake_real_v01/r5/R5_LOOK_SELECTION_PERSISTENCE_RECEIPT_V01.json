@@ -1,0 +1,27 @@
+{
+  "schema": "R5_LOOK_SELECTION_PERSISTENCE_RECEIPT_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "revision": "R5_RAW_REFERENCE_LOOK_DEVELOPMENT",
+  "classification": "COLOR_DIRECTION_SELECTION_ASSETS",
+  "destination": {
+    "shared_drive": "Unchained Nitin — Master",
+    "relative_path": "P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_R5_RAW_REFERENCE_LOOK_SELECTION_V01",
+    "folder_id": "1tUhp98ksyxSoEYSs20shazPjOg13WxJi",
+    "look_matrix_file_id": "1e8-_gMPMAOpQx1bBQfo8SnhAgCqzi3lh",
+    "creation_mode": "NEW_VERSIONED_FOLDER_NO_OVERWRITE"
+  },
+  "primary_assets": [
+    {"name": "AAKHRI_R5_LOOK_MATRIX_V01.mp4", "bytes": 28501594, "sha256": "05b2c96bb9c421a250d9352d466b11e1b85f6f3c8bcf570ff112c00d06060f97", "readback_equivalent": true},
+    {"name": "UNCHAINED_AAKHRI_R5_RAW_REFERENCE_LOOK_V01.drp", "bytes": 168648, "sha256": "0fb6a58b190e5d2344984d659c57f1ab16158d85f0c847ba19420bddc9a59186", "readback_equivalent": true},
+    {"name": "CONTACT_SHEETS/AAKHRI_R5_ALL_SCENES_RAW_A_B_C_CONTACT_SHEET.png", "bytes": 5452567, "sha256": "62337fe044b8cc545f5f4422c9e824548c7854436e733efca10eb8c98299add3", "readback_equivalent": true}
+  ],
+  "asset_counts": {"look_matrix_motion_samples": 1, "contact_sheets": 5, "representative_stills": 16, "resolve_projects": 1},
+  "complete_media_manifest": "R5_MEDIA_SHA256SUMS.txt",
+  "readback_verification": "PASS_ALL_23_MEDIA_ASSETS",
+  "r4_color_status": "REJECTED_BY_NITIN",
+  "full_master_rendered": false,
+  "creative_winner_selected": false,
+  "source_media_unchanged": true,
+  "next_state": "WAITING_FOR_NITIN_R5_COLOR_DIRECTION_SELECTION",
+  "governance": {"post_ready": false, "final_video_approved": false, "final_asset_approved": false, "production_deployment_authorized": false, "publication_authorized": false, "first_real_poster": "PAUSED_BY_NITIN"}
+}

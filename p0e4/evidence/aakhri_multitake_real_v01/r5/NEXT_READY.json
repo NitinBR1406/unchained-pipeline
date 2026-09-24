@@ -1,0 +1,13 @@
+{
+  "schema": "P0E4_NEXT_READY_V01",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "state": "WAITING_FOR_NITIN_R5_COLOR_DIRECTION_SELECTION",
+  "smallest_human_gate": {
+    "gate": "NITIN_R5_COLOR_DIRECTION_SELECTION",
+    "allowed_response": ["RAW", "A", "B", "C", "PRECISE_CORRECTION"],
+    "question": "Select the preferred RAW-reference color direction after reviewing all four scenes."
+  },
+  "full_master_rendered": false,
+  "post_ready": false,
+  "publication_authorized": false
+}
