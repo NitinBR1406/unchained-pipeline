@@ -7,6 +7,11 @@
     "DOLBY_METADATA_LOSS_REMAINS_EXPLICIT",
     "FULL_MASTER_FORBIDDEN"
   ],
+  "exact_sha_regression": {
+    "result": "PASS",
+    "tests": 293
+  },
+  "exact_tested_implementation_sha": "110615c41c93c4d40f0185047b96deb7eb180de6",
   "full_p0e4_regression": {
     "result": "PASS",
     "runtime": "bundled Python 3.12 plus frozen /private/tmp/unchained-p0e4-testdeps",
