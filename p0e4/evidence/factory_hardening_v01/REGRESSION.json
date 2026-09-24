@@ -13,13 +13,14 @@
     "test_post_ready",
     "test_v163_projection"
   ],
+  "tested_sha": "e2d8e3dd4533e8b66a83def92fbbf5a754ce3a6f",
   "tests_run": 38,
   "validated": [
     "two-poll watcher stability",
     "restart replay",
     "idempotency",
     "duplicate suppression",
-    "source drift hold",
+    "alias and source drift hold",
     "ledger tamper detection",
     "POST_READY provenance",
     "technical and safe-area validation",

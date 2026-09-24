@@ -1,30 +1,21 @@
 {
+  "evidence_only_followup": true,
   "git_diff_check_output": "",
   "git_diff_check_returncode": 0,
   "schema": "P0E4_HARDENING_DIFF_QC_V01",
   "scope": [
-    "p0e4/hardening",
-    "p0e4/tests/test_factory_hardening.py",
-    "p0e4/build_factory_hardening.py",
     "p0e4/evidence/factory_hardening_v01"
   ],
   "status": "PASS",
   "untracked_private_media_staged": false,
   "working_tree_status_before_commit": [
+    " M p0e4/evidence/factory_hardening_v01/EXECUTION_CONTEXT.json",
+    " M p0e4/evidence/factory_hardening_v01/RECONCILIATION.json",
+    " M p0e4/evidence/factory_hardening_v01/REGRESSION.json",
+    " M p0e4/evidence/factory_hardening_v01/REPLAY.json",
     "?? .local/",
-    "?? 07_Reports/AI_Governance/Architecture/P0E1_CONTROL_PLANE/control_plane/__pycache__/",
-    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/__init__.cpython-312.pyc",
-    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/control_loop.cpython-312.pyc",
-    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/durable_stores.cpython-312.pyc",
-    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/persistence.cpython-312.pyc",
-    "?? 07_Reports/AI_Governance/Architecture/P0E3_CONTROL_LOOP/control_loop/__pycache__/state_model.cpython-312.pyc",
     "?? p0e4/__pycache__/",
-    "?? p0e4/build_factory_hardening.py",
-    "?? p0e4/controller/__pycache__/",
-    "?? p0e4/evidence/factory_hardening_v01/",
-    "?? p0e4/hardening/",
-    "?? p0e4/integration/__pycache__/",
-    "?? p0e4/tests/__pycache__/",
-    "?? p0e4/tests/test_factory_hardening.py"
+    "?? p0e4/evidence/factory_hardening_v01/REMOTE_VERIFICATION.json",
+    "?? p0e4/hardening/__pycache__/"
   ]
 }
