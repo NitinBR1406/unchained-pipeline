@@ -1,0 +1,16 @@
+{
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "forbidden": [
+    "REAL_AAKHRI_RAW_DROP",
+    "LIVE_MAKE_MUTATION",
+    "SOCIAL_UPLOAD",
+    "SCHEDULE",
+    "PUBLISH",
+    "PURCHASE"
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "real_raw_drop_authorized": false,
+  "schema": "P0E4_SYNTHETIC_HARDENING_AUTHORIZATION_V01",
+  "scope": "SYNTHETIC_DISPOSABLE_AND_SHADOW_ONLY"
+}

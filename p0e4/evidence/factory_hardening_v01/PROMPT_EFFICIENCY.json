@@ -1,0 +1,159 @@
+{
+  "acceptance": {
+    "candidate_lint": {
+      "findings": [],
+      "status": "PASS"
+    },
+    "semantic_equivalence": {
+      "candidate_sha256": "ae621d2db6574a1fefefde3905e99fc445d8e6e5ad3b320f5dfbe4ed9b2a2619",
+      "checks": {
+        "actor_equal": true,
+        "context_refs_equal": true,
+        "instruction_set_equal": true,
+        "metrics_contract_equal": true,
+        "objective_equal": true,
+        "output_contract_equal": true,
+        "prompt_class_equal": true,
+        "protected_semantics_equal": true
+      },
+      "source_sha256": "d8d4b3fb983a92ea23fe4cf40cb0ccf8662e08860238337b1c089c3eca105cbc",
+      "status": "PASS"
+    },
+    "source_lint": {
+      "findings": [],
+      "status": "PASS"
+    }
+  },
+  "candidate": {
+    "actor": "CODEX",
+    "context_refs": [
+      {
+        "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635",
+        "uri": "p0e4/MASTER_STATE_LATEST.json"
+      },
+      {
+        "sha256": "943171da6b09e1b55c970a88fbc7016bc369091fe0e12bd24036e7dc0821c826",
+        "uri": "p0e4/evidence/aakhri_factory_realization_v01/POST_READY_MANIFEST.json"
+      }
+    ],
+    "instructions": [
+      "Complete the bounded task through its acceptance checks.",
+      "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+      "Use repository and state references; do not copy large context blocks.",
+      "Stop at genuine human, credential, financial, rights or governance gates."
+    ],
+    "metrics_contract": [
+      "input_tokens",
+      "output_tokens",
+      "cost",
+      "latency_ms",
+      "retries",
+      "failures",
+      "semantic_drift",
+      "accepted_green"
+    ],
+    "objective": "Validate synthetic RAW intake and inert POST_READY projection without external actions",
+    "output_contract": {
+      "required": [
+        "status",
+        "evidence_refs",
+        "metrics",
+        "limitations"
+      ],
+      "semantic_drift": "FAIL_CLOSED",
+      "unknowns": "EXPLICIT"
+    },
+    "prompt_class": "TASK_PROMPT",
+    "prompt_id": "p0e4-synthetic-hardening:candidate:d8d4b3fb983a",
+    "protected_semantics": {
+      "acceptance_criteria": [
+        "GREEN requires the referenced acceptance contract and exact evidence."
+      ],
+      "evidence_requirements": [
+        "Bind evidence to the exact tested SHA and verify referenced hashes."
+      ],
+      "governance": [
+        "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+        "PUBLICATION_AUTHORIZED=false",
+        "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+      ],
+      "human_gates": [
+        "Never infer or fabricate Nitin approval."
+      ],
+      "provenance": [
+        "Preserve producer, run, source and model provenance."
+      ],
+      "rights_source_binding": [
+        "Rights and authoritative source/audio binding remain explicit gates."
+      ]
+    },
+    "schema": "GOVERNED_PROMPT_V01",
+    "schema_version": 1
+  },
+  "source": {
+    "actor": "CODEX",
+    "context_refs": [
+      {
+        "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635",
+        "uri": "p0e4/MASTER_STATE_LATEST.json"
+      },
+      {
+        "sha256": "943171da6b09e1b55c970a88fbc7016bc369091fe0e12bd24036e7dc0821c826",
+        "uri": "p0e4/evidence/aakhri_factory_realization_v01/POST_READY_MANIFEST.json"
+      }
+    ],
+    "instructions": [
+      "Complete the bounded task through its acceptance checks.",
+      "Implement, test, replay, inspect the diff and persist exact-SHA evidence.",
+      "Use repository and state references; do not copy large context blocks.",
+      "Stop at genuine human, credential, financial, rights or governance gates."
+    ],
+    "metrics_contract": [
+      "input_tokens",
+      "output_tokens",
+      "cost",
+      "latency_ms",
+      "retries",
+      "failures",
+      "semantic_drift",
+      "accepted_green"
+    ],
+    "objective": "Validate synthetic RAW intake and inert POST_READY projection without external actions",
+    "output_contract": {
+      "required": [
+        "status",
+        "evidence_refs",
+        "metrics",
+        "limitations"
+      ],
+      "semantic_drift": "FAIL_CLOSED",
+      "unknowns": "EXPLICIT"
+    },
+    "prompt_class": "TASK_PROMPT",
+    "prompt_id": "p0e4-synthetic-hardening",
+    "protected_semantics": {
+      "acceptance_criteria": [
+        "GREEN requires the referenced acceptance contract and exact evidence."
+      ],
+      "evidence_requirements": [
+        "Bind evidence to the exact tested SHA and verify referenced hashes."
+      ],
+      "governance": [
+        "PRODUCTION_DEPLOYMENT_AUTHORIZED=false",
+        "PUBLICATION_AUTHORIZED=false",
+        "FIRST_REAL_POSTER=PAUSED_BY_NITIN"
+      ],
+      "human_gates": [
+        "Never infer or fabricate Nitin approval."
+      ],
+      "provenance": [
+        "Preserve producer, run, source and model provenance."
+      ],
+      "rights_source_binding": [
+        "Rights and authoritative source/audio binding remain explicit gates."
+      ]
+    },
+    "schema": "GOVERNED_PROMPT_V01",
+    "schema_version": 1
+  }
+}

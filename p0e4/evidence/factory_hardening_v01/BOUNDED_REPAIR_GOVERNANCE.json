@@ -1,0 +1,40 @@
+{
+  "authorization": {
+    "allowed_operations": [
+      "OVERLAY_REPOSITION"
+    ],
+    "attempt": 1,
+    "publication_authorized": false,
+    "schema": "BOUNDED_REPAIR_AUTHORIZATION_V01",
+    "source_hashes_locked": [
+      "4ff674eef8b0bf403f28472488fb342b8a5dce0739834dd382fe1f66700668f8",
+      "8b5e0fd3fe5fa63be3281beed93042f89ed14961de3600d9561b58b29f5c51d1",
+      "cb992530ee931fac347bc0b4063738dc877da5852a51787720c230baaed17561",
+      "b6366afd3047407eda16409d3e0018ae6efc48b0b9f1e17d1cd4e9f553d76181",
+      "8d0df0e3e05af46f8a98a845080724c06093564a637fe2c0c5405968aa8a9d3a"
+    ],
+    "status": "AUTHORIZED_PRIVATE_REPAIR_ONLY"
+  },
+  "repair_executed": false,
+  "request": {
+    "attempt": 1,
+    "defect_ids": [
+      "synthetic_overlay_face_overlap"
+    ],
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "input_hashes": [
+      "4ff674eef8b0bf403f28472488fb342b8a5dce0739834dd382fe1f66700668f8",
+      "8b5e0fd3fe5fa63be3281beed93042f89ed14961de3600d9561b58b29f5c51d1",
+      "cb992530ee931fac347bc0b4063738dc877da5852a51787720c230baaed17561",
+      "b6366afd3047407eda16409d3e0018ae6efc48b0b9f1e17d1cd4e9f553d76181",
+      "8d0df0e3e05af46f8a98a845080724c06093564a637fe2c0c5405968aa8a9d3a"
+    ],
+    "operations": [
+      "OVERLAY_REPOSITION"
+    ],
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "schema": "BOUNDED_REPAIR_REQUEST_V01",
+    "trigger_qc_sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+  }
+}

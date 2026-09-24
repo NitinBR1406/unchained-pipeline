@@ -1,0 +1,41 @@
+{
+  "allowed_operations": [
+    "SYNTHETIC_TEST",
+    "REPO_EVIDENCE",
+    "SHADOW_PROJECTION"
+  ],
+  "authority": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "branch": "p0e4/slice1-production-handoff",
+  "budgets": {
+    "max_input_tokens": 3000,
+    "max_latency_ms": 120000,
+    "max_output_tokens": 2000,
+    "max_retries": 2
+  },
+  "context_id": "P0E4_SYNTHETIC_HARDENING_V01",
+  "forbidden_operations": [
+    "REAL_RAW_DROP",
+    "LIVE_MAKE_CUTOVER",
+    "PUBLISH",
+    "SCHEDULE",
+    "PURCHASE"
+  ],
+  "master_state_ref": {
+    "sha256": "dc061c2a43e2c8709fa5d30e6586c6fc684029dce6f8df1cc7ff3737f7f58635",
+    "uri": "p0e4/MASTER_STATE_LATEST.json"
+  },
+  "repository": "NitinBR1406/unchained-pipeline",
+  "schema": "EXECUTION_CONTEXT_GOVERNANCE_V01",
+  "schema_version": 1,
+  "task_state_refs": [
+    {
+      "sha256": "943171da6b09e1b55c970a88fbc7016bc369091fe0e12bd24036e7dc0821c826",
+      "uri": "p0e4/evidence/aakhri_factory_realization_v01/POST_READY_MANIFEST.json"
+    }
+  ],
+  "tested_sha": "a643bf948b66be5550c7b46d029af274170cc995"
+}

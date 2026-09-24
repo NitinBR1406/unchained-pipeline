@@ -1,0 +1,31 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "resource_warnings": [
+    "Existing non-fatal legacy ledger file-handle warning."
+  ],
+  "schema": "P0E4_HARDENING_REGRESSION_V01",
+  "status": "GREEN",
+  "suites": [
+    "test_factory_hardening",
+    "test_prompt_governance",
+    "test_private_real_media",
+    "test_post_ready",
+    "test_v163_projection"
+  ],
+  "tests_run": 38,
+  "validated": [
+    "two-poll watcher stability",
+    "restart replay",
+    "idempotency",
+    "duplicate suppression",
+    "source drift hold",
+    "ledger tamper detection",
+    "POST_READY provenance",
+    "technical and safe-area validation",
+    "bounded repair policy",
+    "architecture-bound Make shadow",
+    "zero live dispatch",
+    "prompt semantic equivalence"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "architecture_refs": {
+    "field_map": {
+      "sha256": "92901cae8b79978e9e1043e699c32ce16fc91048ea1341e94a1727336b40fc9e",
+      "uri": "p0e4/canonical/CLAUDE_SHEET_FIELD_MAP_V151.json"
+    },
+    "live_headers": {
+      "sha256": "326d0e744ab3bb64fd6aa70d7d0341d81a810a3667bec9585db82a35d13ce64a",
+      "uri": "p0e4/evidence/canonical_v151/LIVE_HEADERS.json"
+    },
+    "make_boundary": {
+      "sha256": "5047691838a52c555f0f856d31da01aed91079904b6d11ddbd05f5b9bfd0fc93",
+      "uri": "p0e4/evidence/target_v13/CLAUDE_DISPATCH_RESULT_SANITIZED.json"
+    }
+  },
+  "external_writes": 0,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "make_scenario_runs": 0,
+  "mode": "SHADOW_ONLY_NOT_DISPATCHABLE",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "rows": [
+    {
+      "asset_sha256": "b6366afd3047407eda16409d3e0018ae6efc48b0b9f1e17d1cd4e9f553d76181",
+      "content_id": "SYNTHETIC_DISPOSABLE_001",
+      "platform": "facebook_reels",
+      "publish_to_platform": "FALSE",
+      "rights_status": "UNKNOWN_RIGHTS_HOLD",
+      "schedule_at": null,
+      "status": "SHADOW_ONLY_NOT_DISPATCHABLE"
+    },
+    {
+      "asset_sha256": "cb992530ee931fac347bc0b4063738dc877da5852a51787720c230baaed17561",
+      "content_id": "SYNTHETIC_DISPOSABLE_001",
+      "platform": "instagram_reels",
+      "publish_to_platform": "FALSE",
+      "rights_status": "UNKNOWN_RIGHTS_HOLD",
+      "schedule_at": null,
+      "status": "SHADOW_ONLY_NOT_DISPATCHABLE"
+    },
+    {
+      "asset_sha256": "8d0df0e3e05af46f8a98a845080724c06093564a637fe2c0c5405968aa8a9d3a",
+      "content_id": "SYNTHETIC_DISPOSABLE_001",
+      "platform": "tiktok",
+      "publish_to_platform": "FALSE",
+      "rights_status": "UNKNOWN_RIGHTS_HOLD",
+      "schedule_at": null,
+      "status": "SHADOW_ONLY_NOT_DISPATCHABLE"
+    },
+    {
+      "asset_sha256": "4ff674eef8b0bf403f28472488fb342b8a5dce0739834dd382fe1f66700668f8",
+      "content_id": "SYNTHETIC_DISPOSABLE_001",
+      "platform": "youtube_hero",
+      "publish_to_platform": "FALSE",
+      "rights_status": "UNKNOWN_RIGHTS_HOLD",
+      "schedule_at": null,
+      "status": "SHADOW_ONLY_NOT_DISPATCHABLE"
+    },
+    {
+      "asset_sha256": "8b5e0fd3fe5fa63be3281beed93042f89ed14961de3600d9561b58b29f5c51d1",
+      "content_id": "SYNTHETIC_DISPOSABLE_001",
+      "platform": "youtube_shorts",
+      "publish_to_platform": "FALSE",
+      "rights_status": "UNKNOWN_RIGHTS_HOLD",
+      "schedule_at": null,
+      "status": "SHADOW_ONLY_NOT_DISPATCHABLE"
+    }
+  ],
+  "schema": "POST_READY_MAKE_SHADOW_V01",
+  "shadow_sha256": "45ddcb95e6bcee0a7267e1d814fa07b5961933fc723b5e5a8e2946ebecf2c320",
+  "social_uploads": 0,
+  "source_package_sha256": "dad0baa62959e7002aa5343500cb961a3215f283359066804625ba99e4a8da27"
+}

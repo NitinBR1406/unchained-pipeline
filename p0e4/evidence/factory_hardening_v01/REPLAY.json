@@ -1,0 +1,10 @@
+{
+  "changed_files": {},
+  "deterministic_files_checked": 12,
+  "duplicate_side_effect_count": 0,
+  "event_ledger_replay": true,
+  "external_writes": 0,
+  "real_raw_drop_triggered": false,
+  "schema": "P0E4_HARDENING_REPLAY_V01",
+  "status": "GREEN"
+}

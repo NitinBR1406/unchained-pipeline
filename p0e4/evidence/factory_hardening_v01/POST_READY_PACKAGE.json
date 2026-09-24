@@ -1,0 +1,318 @@
+{
+  "content_id": "SYNTHETIC_DISPOSABLE_001",
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "inputs": {
+    "audio_sha256": "ef746a1a59afecba50d3ce36e3506ee52784236e91034569ccb54f73fbc3c632",
+    "raw_sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536"
+  },
+  "lyrics_status": "UNKNOWN_NOT_INVENTED",
+  "outputs": [
+    {
+      "bytes": 100,
+      "provenance": {
+        "operation": "SYNTHETIC_FIXTURE",
+        "source_sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536"
+      },
+      "role": "master",
+      "sha256": "4ff674eef8b0bf403f28472488fb342b8a5dce0739834dd382fe1f66700668f8",
+      "technical": {
+        "audio_tracks": 1,
+        "decode": "COMPLETE",
+        "duration_ms": 214400,
+        "fps": 30,
+        "height": 1920,
+        "width": 1080
+      },
+      "uri": "synthetic-disposable/synthetic-master.mp4"
+    },
+    {
+      "bytes": 100,
+      "provenance": {
+        "operation": "SYNTHETIC_FIXTURE",
+        "source_sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536"
+      },
+      "role": "derivative",
+      "sha256": "8b5e0fd3fe5fa63be3281beed93042f89ed14961de3600d9561b58b29f5c51d1",
+      "technical": {
+        "audio_tracks": 1,
+        "decode": "COMPLETE",
+        "duration_ms": 15000,
+        "fps": 30,
+        "height": 1920,
+        "width": 1080
+      },
+      "uri": "synthetic-disposable/synthetic-d1.mp4"
+    },
+    {
+      "bytes": 100,
+      "provenance": {
+        "operation": "SYNTHETIC_FIXTURE",
+        "source_sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536"
+      },
+      "role": "derivative",
+      "sha256": "cb992530ee931fac347bc0b4063738dc877da5852a51787720c230baaed17561",
+      "technical": {
+        "audio_tracks": 1,
+        "decode": "COMPLETE",
+        "duration_ms": 15000,
+        "fps": 30,
+        "height": 1920,
+        "width": 1080
+      },
+      "uri": "synthetic-disposable/synthetic-d2.mp4"
+    },
+    {
+      "bytes": 100,
+      "provenance": {
+        "operation": "SYNTHETIC_FIXTURE",
+        "source_sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536"
+      },
+      "role": "derivative",
+      "sha256": "b6366afd3047407eda16409d3e0018ae6efc48b0b9f1e17d1cd4e9f553d76181",
+      "technical": {
+        "audio_tracks": 1,
+        "decode": "COMPLETE",
+        "duration_ms": 15000,
+        "fps": 30,
+        "height": 1920,
+        "width": 1080
+      },
+      "uri": "synthetic-disposable/synthetic-d3.mp4"
+    },
+    {
+      "bytes": 100,
+      "provenance": {
+        "operation": "SYNTHETIC_FIXTURE",
+        "source_sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536"
+      },
+      "role": "derivative",
+      "sha256": "8d0df0e3e05af46f8a98a845080724c06093564a637fe2c0c5405968aa8a9d3a",
+      "technical": {
+        "audio_tracks": 1,
+        "decode": "COMPLETE",
+        "duration_ms": 15000,
+        "fps": 30,
+        "height": 1920,
+        "width": 1080
+      },
+      "uri": "synthetic-disposable/synthetic-d4.mp4"
+    }
+  ],
+  "package_sha256": "dad0baa62959e7002aa5343500cb961a3215f283359066804625ba99e4a8da27",
+  "platform_map": {
+    "facebook_reels": "b6366afd3047407eda16409d3e0018ae6efc48b0b9f1e17d1cd4e9f553d76181",
+    "instagram_reels": "cb992530ee931fac347bc0b4063738dc877da5852a51787720c230baaed17561",
+    "tiktok": "8d0df0e3e05af46f8a98a845080724c06093564a637fe2c0c5405968aa8a9d3a",
+    "youtube_hero": "4ff674eef8b0bf403f28472488fb342b8a5dce0739834dd382fe1f66700668f8",
+    "youtube_shorts": "8b5e0fd3fe5fa63be3281beed93042f89ed14961de3600d9561b58b29f5c51d1"
+  },
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "qc": {
+    "checked_assets": [
+      "4ff674eef8b0bf403f28472488fb342b8a5dce0739834dd382fe1f66700668f8",
+      "8b5e0fd3fe5fa63be3281beed93042f89ed14961de3600d9561b58b29f5c51d1",
+      "cb992530ee931fac347bc0b4063738dc877da5852a51787720c230baaed17561",
+      "b6366afd3047407eda16409d3e0018ae6efc48b0b9f1e17d1cd4e9f553d76181",
+      "8d0df0e3e05af46f8a98a845080724c06093564a637fe2c0c5405968aa8a9d3a"
+    ],
+    "verdict": "PASS"
+  },
+  "rights_status": "UNKNOWN_RIGHTS_HOLD",
+  "safe_areas": [
+    {
+      "asset_sha256": "4ff674eef8b0bf403f28472488fb342b8a5dce0739834dd382fe1f66700668f8",
+      "overlays": [
+        {
+          "kind": "title",
+          "non_lyric": true,
+          "rect": {
+            "h": 0.1,
+            "w": 0.35,
+            "x": 0.1,
+            "y": 0.75
+          }
+        }
+      ],
+      "performer_box": {
+        "h": 0.5,
+        "w": 0.6,
+        "x": 0.2,
+        "y": 0.1
+      },
+      "platform_ui_exclusions": [
+        {
+          "h": 0.6,
+          "w": 0.1,
+          "x": 0.85,
+          "y": 0.2
+        }
+      ]
+    },
+    {
+      "asset_sha256": "8b5e0fd3fe5fa63be3281beed93042f89ed14961de3600d9561b58b29f5c51d1",
+      "overlays": [
+        {
+          "kind": "title",
+          "non_lyric": true,
+          "rect": {
+            "h": 0.1,
+            "w": 0.35,
+            "x": 0.1,
+            "y": 0.75
+          }
+        }
+      ],
+      "performer_box": {
+        "h": 0.5,
+        "w": 0.6,
+        "x": 0.2,
+        "y": 0.1
+      },
+      "platform_ui_exclusions": [
+        {
+          "h": 0.6,
+          "w": 0.1,
+          "x": 0.85,
+          "y": 0.2
+        }
+      ]
+    },
+    {
+      "asset_sha256": "cb992530ee931fac347bc0b4063738dc877da5852a51787720c230baaed17561",
+      "overlays": [
+        {
+          "kind": "title",
+          "non_lyric": true,
+          "rect": {
+            "h": 0.1,
+            "w": 0.35,
+            "x": 0.1,
+            "y": 0.75
+          }
+        }
+      ],
+      "performer_box": {
+        "h": 0.5,
+        "w": 0.6,
+        "x": 0.2,
+        "y": 0.1
+      },
+      "platform_ui_exclusions": [
+        {
+          "h": 0.6,
+          "w": 0.1,
+          "x": 0.85,
+          "y": 0.2
+        }
+      ]
+    },
+    {
+      "asset_sha256": "b6366afd3047407eda16409d3e0018ae6efc48b0b9f1e17d1cd4e9f553d76181",
+      "overlays": [
+        {
+          "kind": "title",
+          "non_lyric": true,
+          "rect": {
+            "h": 0.1,
+            "w": 0.35,
+            "x": 0.1,
+            "y": 0.75
+          }
+        }
+      ],
+      "performer_box": {
+        "h": 0.5,
+        "w": 0.6,
+        "x": 0.2,
+        "y": 0.1
+      },
+      "platform_ui_exclusions": [
+        {
+          "h": 0.6,
+          "w": 0.1,
+          "x": 0.85,
+          "y": 0.2
+        }
+      ]
+    },
+    {
+      "asset_sha256": "8d0df0e3e05af46f8a98a845080724c06093564a637fe2c0c5405968aa8a9d3a",
+      "overlays": [
+        {
+          "kind": "title",
+          "non_lyric": true,
+          "rect": {
+            "h": 0.1,
+            "w": 0.35,
+            "x": 0.1,
+            "y": 0.75
+          }
+        }
+      ],
+      "performer_box": {
+        "h": 0.5,
+        "w": 0.6,
+        "x": 0.2,
+        "y": 0.1
+      },
+      "platform_ui_exclusions": [
+        {
+          "h": 0.6,
+          "w": 0.1,
+          "x": 0.85,
+          "y": 0.2
+        }
+      ]
+    }
+  ],
+  "schema": "HARDENED_POST_READY_PACKAGE_V01",
+  "status": "POST_READY_WAITING_FOR_NITIN",
+  "stills": [
+    {
+      "bytes": 50,
+      "provenance": {
+        "operation": "SYNTHETIC_FRAME_EXTRACT",
+        "source_sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536"
+      },
+      "role": "still",
+      "sha256": "85643cda63873a0a4725e6d57e9c46e5b3334bb61ec230e736efd6850fd0d626",
+      "technical": {
+        "decode": "COMPLETE",
+        "height": 1920,
+        "width": 1080
+      },
+      "uri": "synthetic-disposable/synthetic-s1.png"
+    },
+    {
+      "bytes": 50,
+      "provenance": {
+        "operation": "SYNTHETIC_FRAME_EXTRACT",
+        "source_sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536"
+      },
+      "role": "still",
+      "sha256": "1c763d13808c061241a44ef9ce43d4841fd2de97ed5a377798b13e0df9b8a3d5",
+      "technical": {
+        "decode": "COMPLETE",
+        "height": 1920,
+        "width": 1080
+      },
+      "uri": "synthetic-disposable/synthetic-s2.png"
+    },
+    {
+      "bytes": 50,
+      "provenance": {
+        "operation": "SYNTHETIC_FRAME_EXTRACT",
+        "source_sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536"
+      },
+      "role": "still",
+      "sha256": "04eac69e1a843cdb0702e86eb3b7585ac95a408106a396857c8b13405a016d0d",
+      "technical": {
+        "decode": "COMPLETE",
+        "height": 1920,
+        "width": 1080
+      },
+      "uri": "synthetic-disposable/synthetic-s3.png"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "covered": [
+    "real_scope_rejected",
+    "unstable_file_rejected",
+    "hash_mismatch_rejected",
+    "ledger_tamper_rejected",
+    "duplicate_suppressed",
+    "path_drift_held",
+    "partial_qc_rejected",
+    "unsafe_overlay_rejected",
+    "lyric_claim_rejected",
+    "technical_decode_failure_rejected",
+    "repair_scope_expansion_rejected",
+    "repair_budget_exhaustion_rejected",
+    "shadow_tamper_rejected",
+    "live_dispatch_rejected",
+    "authority_drift_rejected",
+    "prompt_semantic_drift_rejected"
+  ],
+  "real_external_actions": 0,
+  "schema": "P0E4_HARDENING_ADVERSARIAL_VALIDATION_V01",
+  "status": "COVERED_BY_REGRESSION"
+}

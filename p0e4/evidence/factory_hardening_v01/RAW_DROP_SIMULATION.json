@@ -1,0 +1,50 @@
+{
+  "accepted": {
+    "basename": "drop-001.mov",
+    "bytes": 33,
+    "drop_key": "drop-001.mov",
+    "intake_id": "sri_64ce66e0e20ebd51952fe0c0",
+    "sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536",
+    "status": "SYNTHETIC_RAW_ACCEPTED"
+  },
+  "accepted_content_count": 1,
+  "alias_duplicate": {
+    "drop_key": "drop-001-copy.mov",
+    "existing_intake_id": "sri_64ce66e0e20ebd51952fe0c0",
+    "sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536",
+    "status": "DUPLICATE_SUPPRESSED"
+  },
+  "duplicate": {
+    "drop_key": "drop-001.mov",
+    "existing_intake_id": "sri_64ce66e0e20ebd51952fe0c0",
+    "sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536",
+    "status": "DUPLICATE_SUPPRESSED"
+  },
+  "event_count": 4,
+  "first_poll": [
+    {
+      "drop_key": "drop-001.mov",
+      "status": "PENDING_STABILITY"
+    }
+  ],
+  "ledger_head_hash": "336bfba86fe52fa09e7ad5669a0ec0d9b15d1708d4c25c89673fce0ab10402e4",
+  "observation": {
+    "basename": "drop-001.mov",
+    "bytes": 33,
+    "drop_key": "drop-001.mov",
+    "schema": "SYNTHETIC_RAW_DROP_OBSERVATION_V01",
+    "scope": "SYNTHETIC_DISPOSABLE_ONLY",
+    "sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536",
+    "source_mutations": 0,
+    "stable_reads": 2
+  },
+  "real_raw_drop_triggered": false,
+  "recovered_after_restart": true,
+  "schema": "SYNTHETIC_RAW_DROP_SIMULATION_V01",
+  "source_drift": {
+    "drop_key": "drop-001.mov",
+    "observed_sha256": "b2082d0cae3a13e5a8852d53b133f6dcfb9e66323c473f190ecedb30c82aadcf",
+    "previous_sha256": "68eb385c4412513af0835048841f6e490a2418092b649a911abbf4df9ee1c536",
+    "status": "HOLD_SOURCE_DRIFT"
+  }
+}

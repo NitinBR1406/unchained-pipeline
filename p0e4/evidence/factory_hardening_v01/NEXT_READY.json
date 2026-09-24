@@ -1,0 +1,20 @@
+{
+  "completed_independent_work": [
+    "SYNTHETIC_RAW_DROP",
+    "POST_READY_HARDENING",
+    "MAKE_SHADOW_ADAPTER",
+    "PROMPT_CONTEXT_GOVERNANCE"
+  ],
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "independent_ready_work_remaining": [],
+  "parked": [
+    {
+      "reason": "Explicitly parked until Nitin is at his PC",
+      "task": "REAL_RAW_DROP_ACCEPTANCE"
+    }
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "schema": "P0E4_HARDENING_NEXT_READY_V01",
+  "status": "WAITING_FOR_NITIN_AT_PC"
+}
