@@ -1,0 +1,126 @@
+{
+  "assets": [
+    {
+      "bytes": 437626913,
+      "name": "AAKHRI_R6_HLG_RICHNESS_MATRIX_V01.mov",
+      "sha256": "20e993b30c099d83fd7b0b225b899eee320dccab353f55ab231b1b8597a397a4"
+    },
+    {
+      "bytes": 174041,
+      "name": "UNCHAINED_AAKHRI_R6_HLG_RICHNESS_V01.drp",
+      "sha256": "c371571b07edba9a21843d7068bd907140867615c1ea0d122e698751acb5be82"
+    },
+    {
+      "bytes": 693038,
+      "name": "AAKHRI_R6_ALL_SCENES_HLG_R1_R2_R3_CONTACT_SHEET.jpg",
+      "sha256": "34ea014f9dd86a8e2ea460499a162fa68b1f0f2139846e673bfae1419021b144"
+    },
+    {
+      "bytes": 11449,
+      "name": "R6_HDR_SCOPES_GAMUT_SKIN_QC_V01.json",
+      "sha256": "0e41a51b9207447df4c976b037685025216469d8148cd18b3c698e131b023078"
+    },
+    {
+      "bytes": 8335179,
+      "name": "STILLS/R6_S01_HLG_IDENTITY.png",
+      "sha256": "782449cee7c4e1536990b072161f7ef651438de080398c025488f6c0e18a627f"
+    },
+    {
+      "bytes": 8341669,
+      "name": "STILLS/R6_S01_R1_SUBTLE_RICHNESS.png",
+      "sha256": "d857cddae12002041e8d23624e2bf8151e3d4cf3b7afd5a228dc54f9f7de8810"
+    },
+    {
+      "bytes": 8363933,
+      "name": "STILLS/R6_S01_R2_MEDIUM_RICHNESS.png",
+      "sha256": "3b45d797582c27da35312038f53d038751b8925c3c50f5bd4b46bc3f594430d4"
+    },
+    {
+      "bytes": 8354820,
+      "name": "STILLS/R6_S01_R3_STRONG_RICHNESS.png",
+      "sha256": "cfbef1a13fae95eb9083b3df2fb9df629ec9915908176c04a6fc62c3877342ce"
+    },
+    {
+      "bytes": 8465026,
+      "name": "STILLS/R6_S02_HLG_IDENTITY.png",
+      "sha256": "b34b701ae31af3f6b31c992dc45841c084ce646f51480de8dda3036444eecc88"
+    },
+    {
+      "bytes": 8468814,
+      "name": "STILLS/R6_S02_R1_SUBTLE_RICHNESS.png",
+      "sha256": "ed53050fe256d81e391ea1b8adbf44d64f322918c24dba02e983e8e222b9e2a5"
+    },
+    {
+      "bytes": 8466777,
+      "name": "STILLS/R6_S02_R2_MEDIUM_RICHNESS.png",
+      "sha256": "f98f6e7be1574bf052006b6611e4418649b70471bee32a6af7e95b84a20fb8c0"
+    },
+    {
+      "bytes": 8478938,
+      "name": "STILLS/R6_S02_R3_STRONG_RICHNESS.png",
+      "sha256": "8c2bd4c77c12c30267fdd53b942508f189bb85e6f989d3daf39ad981ecd693e7"
+    },
+    {
+      "bytes": 8473384,
+      "name": "STILLS/R6_S03_HLG_IDENTITY.png",
+      "sha256": "825d3e75b38fd0549d52b2cb15e7144abcecd633556beab28e6533c556bab7dd"
+    },
+    {
+      "bytes": 8481430,
+      "name": "STILLS/R6_S03_R1_SUBTLE_RICHNESS.png",
+      "sha256": "63814323910cfc4a63d2fb8f7d16551b4a8934d52f48cc8ffa067cb4470960b2"
+    },
+    {
+      "bytes": 8512817,
+      "name": "STILLS/R6_S03_R2_MEDIUM_RICHNESS.png",
+      "sha256": "eda997249d9fa96380c7a3021fac5bd7b37025bbc1f2091bd1fc3285d92a1670"
+    },
+    {
+      "bytes": 8494680,
+      "name": "STILLS/R6_S03_R3_STRONG_RICHNESS.png",
+      "sha256": "0664059ad88ae5dea6f920966d9e8dc320b1c9e2f5137d392a11dd67a9ac6e5c"
+    },
+    {
+      "bytes": 8479040,
+      "name": "STILLS/R6_S04_HLG_IDENTITY.png",
+      "sha256": "610200f8dd1c7094a7a0c39913d2920eb3c5a5b86a8f237982311769f2d121c0"
+    },
+    {
+      "bytes": 8474613,
+      "name": "STILLS/R6_S04_R1_SUBTLE_RICHNESS.png",
+      "sha256": "bd4fcf63fdaab44deccdf62fe14128ba0902bd1aa97d0dca7d38a1408bc48eae"
+    },
+    {
+      "bytes": 8482274,
+      "name": "STILLS/R6_S04_R2_MEDIUM_RICHNESS.png",
+      "sha256": "57e9ee9c9a9e64f315abd58cbf78db54a627a50548582e0a6916356e6ca1d172"
+    },
+    {
+      "bytes": 8492415,
+      "name": "STILLS/R6_S04_R3_STRONG_RICHNESS.png",
+      "sha256": "26f99f04ef857adfc27038e4de238fad0d8bb599636816a8df2b5f7845fd597a"
+    }
+  ],
+  "classification": "HDR_COLOR_RICHNESS_SELECTION_ASSETS",
+  "creative_winner": "NITIN_ONLY_NOT_SELECTED",
+  "full_dolby_vision_display_identity": false,
+  "full_master_rendered": false,
+  "order": [
+    "HLG_IDENTITY",
+    "R1_SUBTLE_RICHNESS",
+    "R2_MEDIUM_RICHNESS",
+    "R3_STRONG_RICHNESS"
+  ],
+  "post_ready": false,
+  "publication_authorized": false,
+  "review_instruction": "Review the motion matrix on an HDR-capable Apple display. Choose R1_SUBTLE_RICHNESS, R2_MEDIUM_RICHNESS, R3_STRONG_RICHNESS, HLG_IDENTITY, or give a precise correction.",
+  "saturation_controls": [
+    1.0,
+    1.035,
+    1.07,
+    1.105
+  ],
+  "schema": "R6_COLOR_RICHNESS_REVIEW_NOTE_V01",
+  "technical_baseline": "10-bit BT.2020 Rec.2100 HLG; ProRes 422 HQ output reports 12 bits per component",
+  "technical_qc": "GREEN_ALL_16"
+}

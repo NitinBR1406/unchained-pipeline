@@ -1,0 +1,67 @@
+{
+  "output": {
+    "duration_seconds": 16,
+    "estimated_data_rate": 218811296,
+    "format_descriptions": [
+      {
+        "all_extension_keys": [
+          "BitsPerComponent",
+          "CVFieldCount",
+          "CVImageBufferColorPrimaries",
+          "CVImageBufferTransferFunction",
+          "CVImageBufferYCbCrMatrix",
+          "CVPixelAspectRatio",
+          "Depth",
+          "FormatName",
+          "RevisionLevel",
+          "SpatialQuality",
+          "TemporalQuality",
+          "Vendor",
+          "VerbatimSampleDescription",
+          "Version"
+        ],
+        "dimensions": {
+          "height": 1920,
+          "width": 1080
+        },
+        "extensions_safe": {
+          "BitsPerComponent": 12,
+          "CVFieldCount": 1,
+          "CVImageBufferColorPrimaries": "ITU_R_2020",
+          "CVImageBufferTransferFunction": "ITU_R_2100_HLG",
+          "CVImageBufferYCbCrMatrix": "ITU_R_2020",
+          "CVPixelAspectRatio": {
+            "HorizontalSpacing": 1,
+            "VerticalSpacing": 1
+          },
+          "Depth": 24,
+          "FormatName": "Apple ProRes 422 HQ",
+          "RevisionLevel": 0,
+          "SpatialQuality": 1023,
+          "TemporalQuality": 0,
+          "Vendor": "appl",
+          "VerbatimSampleDescription": {
+            "data_bytes": 130,
+            "sha_prefix": "0000008261706368"
+          },
+          "Version": 0
+        },
+        "known_color_extensions": {
+          "CVImageBufferColorPrimaries": "ITU_R_2020",
+          "CVImageBufferTransferFunction": "ITU_R_2100_HLG",
+          "CVImageBufferYCbCrMatrix": "ITU_R_2020"
+        },
+        "media_subtype": "apch"
+      }
+    ],
+    "natural_size": {
+      "height": 1920,
+      "width": 1080
+    },
+    "nominal_fps": 30,
+    "path": ".local/aakhri-r6-hlg-richness/AAKHRI_R6_HLG_RICHNESS_MATRIX_V01.mov",
+    "relevant_quicktime_metadata": []
+  },
+  "probe": "AVFoundation_CMFormatDescription",
+  "schema": "R6_OUTPUT_COLOR_METADATA_V01"
+}

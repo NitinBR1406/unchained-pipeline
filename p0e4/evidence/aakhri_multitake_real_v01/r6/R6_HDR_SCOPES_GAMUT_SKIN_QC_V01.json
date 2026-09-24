@@ -1,0 +1,402 @@
+{
+  "blur": false,
+  "gamut_mapping": "None",
+  "limits": {
+    "max_added_clip_pct": 0.02,
+    "max_luma_delta": 0.01,
+    "max_saturation_p99": 0.92,
+    "max_skin_hue_shift_degrees": 2.0
+  },
+  "measurement_domain": "Apple AVFoundation HLG-aware display decode to 8-bit PNG; luma/saturation/clipping and skin-hue proxies supplement Resolve Rec.2100 HLG project scopes. They do not claim Dolby Vision identity.",
+  "output_color_metadata": "BT2020_REC2100_HLG_PRORES422HQ_12_BPC_REPORTED",
+  "rows": [
+    {
+      "delta_from_identity": {
+        "luma_mean": 0.0,
+        "saturation_mean": 0.0,
+        "saturation_p99": 0.0,
+        "skin_hue_degrees": 0.0
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 4.8e-05,
+        "clip_low_pct": 0.32962,
+        "luma_mean": 0.329946,
+        "luma_p05": 0.07926,
+        "luma_p95": 0.679775,
+        "saturation_mean": 0.16293,
+        "saturation_p95": 0.412281,
+        "saturation_p99": 0.769231,
+        "skin_hue_median_degrees": 15.3846,
+        "skin_proxy_pixels_sampled": 37777
+      },
+      "scene_index": 1,
+      "status": "GREEN",
+      "variant": "HLG_IDENTITY"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -8.8e-05,
+        "saturation_mean": 0.005466,
+        "saturation_p99": 0.016483,
+        "skin_hue_degrees": 0.171
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 4.8e-05,
+        "clip_low_pct": 0.309365,
+        "luma_mean": 0.329858,
+        "luma_p05": 0.079009,
+        "luma_p95": 0.679703,
+        "saturation_mean": 0.168396,
+        "saturation_p95": 0.423423,
+        "saturation_p99": 0.785714,
+        "skin_hue_median_degrees": 15.5556,
+        "skin_proxy_pixels_sampled": 37700
+      },
+      "scene_index": 1,
+      "status": "GREEN",
+      "variant": "R1_SUBTLE_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -0.000156,
+        "saturation_mean": 0.009846,
+        "saturation_p99": 0.030769,
+        "skin_hue_degrees": -0.3846
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 4.8e-05,
+        "clip_low_pct": 0.303193,
+        "luma_mean": 0.32979,
+        "luma_p05": 0.078993,
+        "luma_p95": 0.679628,
+        "saturation_mean": 0.172776,
+        "saturation_p95": 0.434211,
+        "saturation_p99": 0.8,
+        "skin_hue_median_degrees": 15.0,
+        "skin_proxy_pixels_sampled": 38774
+      },
+      "scene_index": 1,
+      "status": "GREEN",
+      "variant": "R2_MEDIUM_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -0.000219,
+        "saturation_mean": 0.014187,
+        "saturation_p99": 0.030769,
+        "skin_hue_degrees": -0.9018
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 4.8e-05,
+        "clip_low_pct": 0.297164,
+        "luma_mean": 0.329727,
+        "luma_p05": 0.078993,
+        "luma_p95": 0.679556,
+        "saturation_mean": 0.177117,
+        "saturation_p95": 0.444444,
+        "saturation_p99": 0.8,
+        "skin_hue_median_degrees": 14.4828,
+        "skin_proxy_pixels_sampled": 39571
+      },
+      "scene_index": 1,
+      "status": "GREEN",
+      "variant": "R3_STRONG_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": 0.0,
+        "saturation_mean": 0.0,
+        "saturation_p99": 0.0,
+        "skin_hue_degrees": 0.0
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000193,
+        "clip_low_pct": 0.002218,
+        "luma_mean": 0.327951,
+        "luma_p05": 0.081231,
+        "luma_p95": 0.690052,
+        "saturation_mean": 0.130777,
+        "saturation_p95": 0.4,
+        "saturation_p99": 0.463542,
+        "skin_hue_median_degrees": 16.3636,
+        "skin_proxy_pixels_sampled": 42138
+      },
+      "scene_index": 2,
+      "status": "GREEN",
+      "variant": "HLG_IDENTITY"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -6.8e-05,
+        "saturation_mean": 0.004644,
+        "saturation_p99": 0.010142,
+        "skin_hue_degrees": -0.7114
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000241,
+        "clip_low_pct": 0.001929,
+        "luma_mean": 0.327883,
+        "luma_p05": 0.081216,
+        "luma_p95": 0.690031,
+        "saturation_mean": 0.135421,
+        "saturation_p95": 0.409574,
+        "saturation_p99": 0.473684,
+        "skin_hue_median_degrees": 15.6522,
+        "skin_proxy_pixels_sampled": 43609
+      },
+      "scene_index": 2,
+      "status": "GREEN",
+      "variant": "R1_SUBTLE_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -0.00011,
+        "saturation_mean": 0.007891,
+        "saturation_p99": 0.021306,
+        "skin_hue_degrees": -1.3636
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000145,
+        "clip_low_pct": 0.00164,
+        "luma_mean": 0.327841,
+        "luma_p05": 0.080984,
+        "luma_p95": 0.690013,
+        "saturation_mean": 0.138668,
+        "saturation_p95": 0.419811,
+        "saturation_p99": 0.484848,
+        "skin_hue_median_degrees": 15.0,
+        "skin_proxy_pixels_sampled": 44838
+      },
+      "scene_index": 2,
+      "status": "GREEN",
+      "variant": "R2_MEDIUM_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -0.000162,
+        "saturation_mean": 0.011782,
+        "saturation_p99": 0.033945,
+        "skin_hue_degrees": -1.9636
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000241,
+        "clip_low_pct": 0.001495,
+        "luma_mean": 0.327789,
+        "luma_p05": 0.080964,
+        "luma_p95": 0.690018,
+        "saturation_mean": 0.142559,
+        "saturation_p95": 0.429907,
+        "saturation_p99": 0.497487,
+        "skin_hue_median_degrees": 14.4,
+        "skin_proxy_pixels_sampled": 45959
+      },
+      "scene_index": 2,
+      "status": "GREEN",
+      "variant": "R3_STRONG_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": 0.0,
+        "saturation_mean": 0.0,
+        "saturation_p99": 0.0,
+        "skin_hue_degrees": 0.0
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000145,
+        "clip_low_pct": 0.065828,
+        "luma_mean": 0.30451,
+        "luma_p05": 0.063311,
+        "luma_p95": 0.682018,
+        "saturation_mean": 0.134311,
+        "saturation_p95": 0.404959,
+        "saturation_p99": 0.642857,
+        "skin_hue_median_degrees": 15.0,
+        "skin_proxy_pixels_sampled": 28949
+      },
+      "scene_index": 3,
+      "status": "GREEN",
+      "variant": "HLG_IDENTITY"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -6.7e-05,
+        "saturation_mean": 0.004782,
+        "saturation_p99": 0.02381,
+        "skin_hue_degrees": -0.6
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000145,
+        "clip_low_pct": 0.057919,
+        "luma_mean": 0.304443,
+        "luma_p05": 0.063311,
+        "luma_p95": 0.681977,
+        "saturation_mean": 0.139093,
+        "saturation_p95": 0.41629,
+        "saturation_p99": 0.666667,
+        "skin_hue_median_degrees": 14.4,
+        "skin_proxy_pixels_sampled": 30285
+      },
+      "scene_index": 3,
+      "status": "GREEN",
+      "variant": "R1_SUBTLE_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -0.000105,
+        "saturation_mean": 0.007859,
+        "saturation_p99": 0.02381,
+        "skin_hue_degrees": -1.6667
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000145,
+        "clip_low_pct": 0.055797,
+        "luma_mean": 0.304405,
+        "luma_p05": 0.063307,
+        "luma_p95": 0.681976,
+        "saturation_mean": 0.14217,
+        "saturation_p95": 0.426966,
+        "saturation_p99": 0.666667,
+        "skin_hue_median_degrees": 13.3333,
+        "skin_proxy_pixels_sampled": 31262
+      },
+      "scene_index": 3,
+      "status": "GREEN",
+      "variant": "R2_MEDIUM_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -0.000157,
+        "saturation_mean": 0.011623,
+        "saturation_p99": 0.02381,
+        "skin_hue_degrees": -1.6667
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000145,
+        "clip_low_pct": 0.05271,
+        "luma_mean": 0.304353,
+        "luma_p05": 0.063307,
+        "luma_p95": 0.681941,
+        "saturation_mean": 0.145934,
+        "saturation_p95": 0.436782,
+        "saturation_p99": 0.666667,
+        "skin_hue_median_degrees": 13.3333,
+        "skin_proxy_pixels_sampled": 32542
+      },
+      "scene_index": 3,
+      "status": "GREEN",
+      "variant": "R3_STRONG_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": 0.0,
+        "saturation_mean": 0.0,
+        "saturation_p99": 0.0,
+        "skin_hue_degrees": 0.0
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000145,
+        "clip_low_pct": 0.001109,
+        "luma_mean": 0.317219,
+        "luma_p05": 0.084056,
+        "luma_p95": 0.679173,
+        "saturation_mean": 0.122399,
+        "saturation_p95": 0.362319,
+        "saturation_p99": 0.452381,
+        "skin_hue_median_degrees": 15.6522,
+        "skin_proxy_pixels_sampled": 36238
+      },
+      "scene_index": 4,
+      "status": "GREEN",
+      "variant": "HLG_IDENTITY"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -6.6e-05,
+        "saturation_mean": 0.004364,
+        "saturation_p99": 0.011537,
+        "skin_hue_degrees": -0.6522
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000193,
+        "clip_low_pct": 0.000916,
+        "luma_mean": 0.317153,
+        "luma_p05": 0.084052,
+        "luma_p95": 0.679141,
+        "saturation_mean": 0.126763,
+        "saturation_p95": 0.372727,
+        "saturation_p99": 0.463918,
+        "skin_hue_median_degrees": 15.0,
+        "skin_proxy_pixels_sampled": 37824
+      },
+      "scene_index": 4,
+      "status": "GREEN",
+      "variant": "R1_SUBTLE_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -0.000106,
+        "saturation_mean": 0.007441,
+        "saturation_p99": 0.021532,
+        "skin_hue_degrees": -1.3665
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000193,
+        "clip_low_pct": 0.000916,
+        "luma_mean": 0.317113,
+        "luma_p05": 0.084052,
+        "luma_p95": 0.679137,
+        "saturation_mean": 0.12984,
+        "saturation_p95": 0.382222,
+        "saturation_p99": 0.473913,
+        "skin_hue_median_degrees": 14.2857,
+        "skin_proxy_pixels_sampled": 39043
+      },
+      "scene_index": 4,
+      "status": "GREEN",
+      "variant": "R2_MEDIUM_RICHNESS"
+    },
+    {
+      "delta_from_identity": {
+        "luma_mean": -0.000158,
+        "saturation_mean": 0.011187,
+        "saturation_p99": 0.032619,
+        "skin_hue_degrees": -1.2522
+      },
+      "failures": [],
+      "metrics": {
+        "clip_high_pct": 0.000241,
+        "clip_low_pct": 0.001013,
+        "luma_mean": 0.317061,
+        "luma_p05": 0.084036,
+        "luma_p95": 0.67902,
+        "saturation_mean": 0.133586,
+        "saturation_p95": 0.391667,
+        "saturation_p99": 0.485,
+        "skin_hue_median_degrees": 14.4,
+        "skin_proxy_pixels_sampled": 40407
+      },
+      "scene_index": 4,
+      "status": "GREEN",
+      "variant": "R3_STRONG_RICHNESS"
+    }
+  ],
+  "schema": "R6_HDR_SCOPES_GAMUT_SKIN_QC_V01",
+  "static_masks": false,
+  "status": "GREEN",
+  "tone_mapping": "None"
+}

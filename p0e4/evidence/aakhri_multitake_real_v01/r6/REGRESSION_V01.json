@@ -1,0 +1,28 @@
+{
+  "full_p0e4_regression": {
+    "result": "PASS",
+    "tests": 300
+  },
+  "gemini_selected_winner": false,
+  "measured_maxima": {
+    "absolute_luma_mean_delta": 0.000219,
+    "absolute_skin_hue_shift_degrees": 1.9636,
+    "saturation_p99": 0.8
+  },
+  "output_color": "PRORES422HQ_BT2020_REC2100_HLG_MINIMUM_10_BIT",
+  "resolve_render": {
+    "duration_bearing_video_frames": 480,
+    "duration_seconds": 16,
+    "full_master_rendered": false,
+    "result": "PASS"
+  },
+  "schema": "R6_HLG_RICHNESS_REGRESSION_V01",
+  "shared_drive_readback": "PASS_21_REVIEW_ASSETS_PLUS_RECEIPT",
+  "source_integrity": "PASS_FOUR_HASHES_UNCHANGED",
+  "status": "GREEN_FOR_NITIN_R6_COLOR_RICHNESS_SELECTION_ONLY",
+  "targeted_r6_tests": {
+    "result": "PASS",
+    "tests": 7
+  },
+  "technical_qc": "GREEN_ALL_16"
+}

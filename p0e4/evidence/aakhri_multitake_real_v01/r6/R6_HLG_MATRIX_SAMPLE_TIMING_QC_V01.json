@@ -1,0 +1,12 @@
+{
+  "asset_duration_seconds" : 16,
+  "duration_bearing_video_frames" : 480,
+  "expected_display_frames" : 480,
+  "non_numeric_pts_sample_buffers" : 2,
+  "reader_status" : 2,
+  "schema" : "R6_HLG_MATRIX_SAMPLE_TIMING_QC_V01",
+  "status" : "PASS_EXPECTED_DISPLAY_FRAMES",
+  "total_sample_buffers" : 484,
+  "track_duration_seconds" : 16,
+  "zero_duration_sample_buffers" : 4
+}

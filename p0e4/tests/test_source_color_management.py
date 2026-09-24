@@ -76,7 +76,10 @@ class SourceColorManagementTests(unittest.TestCase):
         self.assertTrue(validate_reference_names(refs))
         self.assertFalse(refs["IDENTITY_ROUNDTRIP_REFERENCE"]["full_source_display_identity_demonstrated"])
         gate = json.loads((root / "NEXT_READY.json").read_text())
-        self.assertEqual(gate["state"], "WAITING_FOR_NITIN_SOURCE_COLOR_REFERENCE_VALIDATION")
+        self.assertIn(gate["state"], {
+            "WAITING_FOR_NITIN_SOURCE_COLOR_REFERENCE_VALIDATION",
+            "VALIDATED_BY_NITIN_SUPERSEDED_BY_R6_CALIBRATION",
+        })
         self.assertTrue(gate["r5_creative_selection_suspended"])
 
     def test_all_four_persisted_sources_are_hlg_dolby(self):

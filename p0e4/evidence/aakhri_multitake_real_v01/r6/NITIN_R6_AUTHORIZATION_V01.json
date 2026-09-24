@@ -1,0 +1,8 @@
+{
+  "creative_winner_selected": false,
+  "full_master_authorized": false,
+  "input": "Nitin validates corrected Rec.2100 HLG identity direction as substantially closer and requests more colorful/richer image.",
+  "next": "R6_SHORT_CALIBRATION_MATRIX_ONLY",
+  "schema": "NITIN_R6_AUTHORIZATION_V01",
+  "technical_baseline_accepted": "10_BIT_BT2020_REC2100_HLG"
+}

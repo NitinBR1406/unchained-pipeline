@@ -1,0 +1,20 @@
+{
+  "full_master_rendered": false,
+  "gemini_selected_winner": false,
+  "post_ready": false,
+  "publication_authorized": false,
+  "schema": "P0E4_NEXT_READY_V01",
+  "smallest_human_gate": {
+    "allowed_response": [
+      "HLG_IDENTITY",
+      "R1_SUBTLE_RICHNESS",
+      "R2_MEDIUM_RICHNESS",
+      "R3_STRONG_RICHNESS",
+      "PRECISE_CORRECTION"
+    ],
+    "gate": "NITIN_R6_COLOR_RICHNESS_SELECTION",
+    "question": "Select the preferred Rec.2100 HLG richness level after reviewing motion and still comparisons on an HDR-capable Apple display."
+  },
+  "state": "WAITING_FOR_NITIN_R6_COLOR_RICHNESS_SELECTION",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01"
+}

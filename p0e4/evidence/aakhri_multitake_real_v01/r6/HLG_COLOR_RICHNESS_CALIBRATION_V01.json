@@ -1,0 +1,119 @@
+{
+  "authority": "NITIN",
+  "dvvC_preserved_in_roundtrip": false,
+  "forbidden": [
+    "REC709_CONVERSION",
+    "STATIC_MASK",
+    "BLUR",
+    "SKIN_SMOOTHING",
+    "FACE_MANIPULATION",
+    "GENERATIVE_PROCESSING",
+    "FULL_SONG_RENDER"
+  ],
+  "full_dolby_vision_identity_claimed": false,
+  "full_master_render_authorized": false,
+  "gemini_may_select_winner": false,
+  "governance": {
+    "classification": "R6_HDR_COLOR_RICHNESS_SELECTION_ASSETS",
+    "final_asset_approved": false,
+    "final_video_approved": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "post_ready": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "identity_reference_sha256": "637e6eb0a7b92ce74486815f5a0e3af605e0bbaa23805db6547cbe2eba7e7bef",
+  "preserved": {
+    "contrast": true,
+    "exposure": true,
+    "framing": true,
+    "gamma_tone_mapping": true,
+    "source_scene": true
+  },
+  "qc_limits": {
+    "max_added_clip_pct": 0.02,
+    "max_luma_delta": 0.01,
+    "max_saturation_p99": 0.92,
+    "max_skin_hue_shift_degrees": 2.0
+  },
+  "representative_scenes": [
+    {
+      "scene_index": 1,
+      "source_time_seconds": 36.0,
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8"
+    },
+    {
+      "scene_index": 2,
+      "source_time_seconds": 24.0,
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin"
+    },
+    {
+      "scene_index": 3,
+      "source_time_seconds": 96.0,
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8"
+    },
+    {
+      "scene_index": 4,
+      "source_time_seconds": 72.0,
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW"
+    }
+  ],
+  "resolve_color_management": {
+    "colorScienceMode": "davinciYRGBColorManaged",
+    "gamut_mapping": "None",
+    "input": "Rec.2100 HLG",
+    "isAutoColorManage": "0",
+    "output": "Rec.2100 HLG",
+    "timeline": "Rec.2100 HLG",
+    "tone_mapping": "None"
+  },
+  "schema": "HLG_COLOR_RICHNESS_CALIBRATION_V01",
+  "source_reference": "../source_color_forensics/SOURCE_BYTES_REFERENCE_V01.json",
+  "technical_baseline": "10_BIT_BT2020_REC2100_HLG",
+  "variant_order": [
+    "HLG_IDENTITY",
+    "R1_SUBTLE_RICHNESS",
+    "R2_MEDIUM_RICHNESS",
+    "R3_STRONG_RICHNESS"
+  ],
+  "variant_recipes": {
+    "HLG_IDENTITY": {
+      "description": "Exact corrected Rec.2100 HLG base-layer identity reference.",
+      "operation": "NONE",
+      "saturation": 1.0
+    },
+    "R1_SUBTLE_RICHNESS": {
+      "cdl": {
+        "NodeIndex": 1,
+        "Offset": "0.0 0.0 0.0",
+        "Power": "1.0 1.0 1.0",
+        "Saturation": 1.035,
+        "Slope": "1.0 1.0 1.0"
+      },
+      "description": "Subtle HDR-native color-density increase with neutral slope/offset/power.",
+      "operation": "ASC_CDL_SATURATION_ONLY"
+    },
+    "R2_MEDIUM_RICHNESS": {
+      "cdl": {
+        "NodeIndex": 1,
+        "Offset": "0.0 0.0 0.0",
+        "Power": "1.0 1.0 1.0",
+        "Saturation": 1.07,
+        "Slope": "1.0 1.0 1.0"
+      },
+      "description": "Medium HDR-native color-density increase with neutral slope/offset/power.",
+      "operation": "ASC_CDL_SATURATION_ONLY"
+    },
+    "R3_STRONG_RICHNESS": {
+      "cdl": {
+        "NodeIndex": 1,
+        "Offset": "0.0 0.0 0.0",
+        "Power": "1.0 1.0 1.0",
+        "Saturation": 1.105,
+        "Slope": "1.0 1.0 1.0"
+      },
+      "description": "Strong bounded HDR-native color-density increase with neutral slope/offset/power.",
+      "operation": "ASC_CDL_SATURATION_ONLY"
+    }
+  }
+}
