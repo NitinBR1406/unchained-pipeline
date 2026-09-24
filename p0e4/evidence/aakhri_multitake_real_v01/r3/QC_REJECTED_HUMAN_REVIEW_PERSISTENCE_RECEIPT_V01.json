@@ -1,0 +1,61 @@
+{
+  "schema": "QC_REJECTED_HUMAN_REVIEW_PERSISTENCE_RECEIPT_V01",
+  "persisted_at": "2026-09-24T15:53:14Z",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "revision": "R3",
+  "status": "QC_REJECTED_HUMAN_REVIEW_CANDIDATE",
+  "source": {
+    "path": ".local/aakhri-multitake-realization-r3-repair5/AAKHRI_MULTITAKE_MASTER_V01_RUN3.mp4",
+    "sha256": "baa675588c3fb3bd57bec71b0261f76a4a28eff74047f8673c3e0aceb0ac7487",
+    "bytes": 386329759,
+    "unchanged": true
+  },
+  "destination": {
+    "shared_drive": "Unchained Nitin — Master",
+    "relative_path": "P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_R3_QC_REJECTED_HUMAN_REVIEW_CANDIDATE_V01",
+    "folder_id": "1J2KO9heuIEGoQ-AllGOnffMObbqpuLcU",
+    "video_file_id": "19_5dA_HkW0OSWtnQO5mjIOfXoipvN59W",
+    "creation_mode": "NEW_VERSIONED_FOLDER_NO_OVERWRITE"
+  },
+  "artifacts": [
+    {
+      "name": "AAKHRI_MULTITAKE_MASTER_V01_RUN3_QC_REJECTED_HUMAN_REVIEW_CANDIDATE.mp4",
+      "bytes": 386329759,
+      "source_sha256": "baa675588c3fb3bd57bec71b0261f76a4a28eff74047f8673c3e0aceb0ac7487",
+      "destination_readback_sha256": "baa675588c3fb3bd57bec71b0261f76a4a28eff74047f8673c3e0aceb0ac7487",
+      "sha256_equivalent": true
+    },
+    {
+      "name": "AAKHRI_ISHQ_R3_HUMAN_REVIEW_NOTE_V01.md",
+      "bytes": 1159,
+      "destination_readback_sha256": "7a3bbe13f6ca933dad6a20fa9f25bcd1938ef66f3f9785451ccaa318db99ab80"
+    },
+    {
+      "name": "AAKHRI_ISHQ_R3_HUMAN_REVIEW_NOTE_V01.json",
+      "bytes": 1109,
+      "destination_readback_sha256": "62c2167cd85734d07790c3b92be3a50727863fc0be2f094c06357ac0aeae8340"
+    }
+  ],
+  "review_ranges": [
+    {"range": "00:09-00:21", "category": "FOREHEAD_TEXTURE_OR_SHADOW_ARTIFACT"},
+    {"range": "01:13-01:29", "category": "RECURRING_FOREHEAD_TEXTURE_OR_SHADOW_ARTIFACT"},
+    {"range": "01:33-01:58", "category": "EXCESSIVE_OR_DISTRACTING_MOVEMENT_SHAKE"},
+    {"range": "01:52-01:54", "category": "MOUTH_TONGUE_DISTORTION_AND_POSSIBLE_LIP_SYNC_CONCERN", "special_attention": true}
+  ],
+  "technical_qc": "GREEN",
+  "independent_gemini_qc": "REPAIR_REQUIRED",
+  "readback_verification": "PASS",
+  "post_ready": false,
+  "final_video_approved": false,
+  "final_asset_approved": false,
+  "rights_cleared": false,
+  "publish_ready": false,
+  "run2_unchanged": true,
+  "source_media_unchanged": true,
+  "next_state": "WAITING_FOR_NITIN_R3_DEFECT_CONFIRMATION",
+  "governance": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "AAKHRI_ISHQ_R3_HUMAN_REVIEW_NOTE_V01",
+  "status": "QC_REJECTED_HUMAN_REVIEW_CANDIDATE",
+  "candidate_sha256": "baa675588c3fb3bd57bec71b0261f76a4a28eff74047f8673c3e0aceb0ac7487",
+  "technical_qc": "GREEN",
+  "independent_gemini_qc": "REPAIR_REQUIRED",
+  "reported_defects": [
+    {"range": "00:09-00:21", "category": "FOREHEAD_TEXTURE_OR_SHADOW_ARTIFACT"},
+    {"range": "01:13-01:29", "category": "RECURRING_FOREHEAD_TEXTURE_OR_SHADOW_ARTIFACT"},
+    {"range": "01:33-01:58", "category": "EXCESSIVE_OR_DISTRACTING_MOVEMENT_SHAKE"},
+    {"range": "01:52-01:54", "category": "MOUTH_TONGUE_DISTORTION_AND_POSSIBLE_LIP_SYNC_CONCERN", "special_attention": true}
+  ],
+  "review_instruction": "For each reported defect, Nitin must CONFIRM, REJECT_AS_FALSE_POSITIVE, or REQUEST_SPECIFIC_BOUNDED_REPAIR.",
+  "not_post_ready": true,
+  "final_video_approved": false,
+  "final_asset_approved": false,
+  "rights_cleared": false,
+  "publish_ready": false,
+  "governance": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  }
+}
