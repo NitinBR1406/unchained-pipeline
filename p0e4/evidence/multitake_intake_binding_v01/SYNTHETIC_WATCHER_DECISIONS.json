@@ -1,0 +1,122 @@
+{
+  "audio_ambiguity": {
+    "dispatch_enabled": false,
+    "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+    "files_observed": 5,
+    "master_audio_candidate_ids": [
+      "audio",
+      "audio_2"
+    ],
+    "real_acceptance_required": true,
+    "schema": "MULTI_TAKE_WATCHER_DECISION_V01",
+    "status": "HOLD_MASTER_AUDIO_AMBIGUITY",
+    "trigger_eligible": false,
+    "workload_folder_id": "synthetic-workload",
+    "workload_folder_name": "Synthetic Song"
+  },
+  "cloud_unavailable": {
+    "dispatch_enabled": false,
+    "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+    "files_observed": 4,
+    "real_acceptance_required": true,
+    "schema": "MULTI_TAKE_WATCHER_DECISION_V01",
+    "status": "HOLD_CLOUD_BYTES_UNAVAILABLE",
+    "trigger_eligible": false,
+    "unavailable_file_ids": [
+      "take_a"
+    ],
+    "workload_folder_id": "synthetic-workload",
+    "workload_folder_name": "Synthetic Song"
+  },
+  "duplicate_event": {
+    "aliases": [],
+    "dispatch_enabled": false,
+    "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+    "event_key": "7de3f309bb8a6fba7d4fc4022bb2bf7f1a08f5f353b8e6b7d6c59510859fbf51",
+    "files_observed": 4,
+    "real_acceptance_required": true,
+    "schema": "MULTI_TAKE_WATCHER_DECISION_V01",
+    "status": "DUPLICATE_EVENT_SUPPRESSED",
+    "trigger_eligible": false,
+    "workload_folder_id": "synthetic-workload",
+    "workload_folder_name": "Synthetic Song"
+  },
+  "empty": {
+    "dispatch_enabled": false,
+    "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+    "files_observed": 0,
+    "real_acceptance_required": true,
+    "reason": "EMPTY_FOLDER",
+    "schema": "MULTI_TAKE_WATCHER_DECISION_V01",
+    "status": "EMPTY_NO_TRIGGER",
+    "trigger_eligible": false,
+    "workload_folder_id": "synthetic-workload",
+    "workload_folder_name": "Synthetic Song"
+  },
+  "first_poll": {
+    "aliases": [],
+    "dispatch_enabled": false,
+    "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+    "files_observed": 4,
+    "real_acceptance_required": true,
+    "schema": "MULTI_TAKE_WATCHER_DECISION_V01",
+    "set_identity_sha256": "8c5caac496cbad86abc4565843e3ec9e90de3a14121de0af4016a619dd35991e",
+    "stable_polls": 1,
+    "status": "PENDING_STABILITY",
+    "trigger_eligible": false,
+    "workload_folder_id": "synthetic-workload",
+    "workload_folder_name": "Synthetic Song"
+  },
+  "second_identical_poll": {
+    "aliases": [],
+    "dispatch_enabled": false,
+    "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+    "event_key": "7de3f309bb8a6fba7d4fc4022bb2bf7f1a08f5f353b8e6b7d6c59510859fbf51",
+    "event_ledger_action": "APPEND_ON_EXPLICIT_REAL_ACCEPTANCE_ONLY",
+    "files_observed": 4,
+    "manifest": {
+      "file_sha256": {
+        "audio": "fc613b4dfd6736a7bd268c8a0e74ed0d1c04a959f59dd74ef2874983fd443fc9",
+        "photo": "55c64d0fcd6f9d5f7c828093857e3fdfda68478bb4e9bd24d481ef391c7804e8",
+        "take_a": "611a744d3ffac1e81cf437c1dbe2c7fcb46f4adb967711e6e124bfe1cde7ba6f",
+        "take_b": "c44d94f1423779ae960719188c0cf07b92f04edc538160fc55b9e2a74474cca5"
+      },
+      "filename_semantics_used": false,
+      "master_audio_file_id": "audio",
+      "photo_file_ids": [
+        "photo"
+      ],
+      "schema": "MULTI_TAKE_RAW_DROP_V01",
+      "scope": "FUTURE_REAL_ACCEPTANCE_ONLY",
+      "takes": [
+        "take_a",
+        "take_b"
+      ],
+      "workload_folder_id": "synthetic-workload"
+    },
+    "real_acceptance_required": true,
+    "schema": "MULTI_TAKE_WATCHER_DECISION_V01",
+    "stable_polls": 2,
+    "status": "READY_FOR_EXPLICIT_REAL_ACCEPTANCE",
+    "trigger_eligible": true,
+    "workload_folder_id": "synthetic-workload",
+    "workload_folder_name": "Synthetic Song"
+  },
+  "source_drift": {
+    "aliases": [],
+    "dispatch_enabled": false,
+    "drift_file_ids": [
+      "take_a"
+    ],
+    "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+    "files_observed": 4,
+    "real_acceptance_required": true,
+    "schema": "MULTI_TAKE_WATCHER_DECISION_V01",
+    "set_identity_sha256": "99bc67a74f0429810453b500ec83b59a4efa4685dcd241aa892095ce2de781a5",
+    "stable_polls": 1,
+    "status": "HOLD_SOURCE_DRIFT",
+    "trigger_eligible": false,
+    "workload_folder_id": "synthetic-workload",
+    "workload_folder_name": "Synthetic Song"
+  }
+}

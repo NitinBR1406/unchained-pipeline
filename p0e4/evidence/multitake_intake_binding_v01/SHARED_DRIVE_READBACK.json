@@ -1,0 +1,27 @@
+{
+  "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+  "drive_name": "Unchained Nitin \u2014 Master",
+  "intake": {
+    "folder_id": "1k7ZPuJ8woieikCXKbY9SPHpTAeHhlxf6",
+    "name": "RAW_INTAKE"
+  },
+  "media_copied_or_moved": false,
+  "mode": {
+    "folder_id": "1Nc2BoQNqWUARhCnKdtJ7jKXm9hcBhzJc",
+    "name": "MULTI_TAKE"
+  },
+  "parent": {
+    "folder_id": "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR",
+    "name": "P0E4_PRODUCTION_INTEGRATION"
+  },
+  "prepared_workload": {
+    "children": [],
+    "empty": true,
+    "folder_id": "1htIIMHb7isiRwuFDDR9c_uLQXzVhiJrB",
+    "name": "Aakhri-Ishq"
+  },
+  "readback_source": "authenticated Google Drive folder listing plus local DriveFS mount",
+  "real_acceptance_triggered": false,
+  "schema": "GOOGLE_SHARED_DRIVE_INTAKE_READBACK_V01",
+  "status": "GREEN_EMPTY_INERT_STRUCTURE"
+}

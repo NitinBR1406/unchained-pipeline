@@ -1,0 +1,21 @@
+{
+  "authoritative_master_audio_files": 1,
+  "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+  "drive_name": "Unchained Nitin \u2014 Master",
+  "empty_folder_triggers": false,
+  "file_rename_or_take_order_required": false,
+  "finder_root": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE",
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "intake_root_folder_id": "1Nc2BoQNqWUARhCnKdtJ7jKXm9hcBhzJc",
+  "intake_root_relative": "P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE",
+  "minimum_unique_video_takes": 2,
+  "parent_folder_id": "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR",
+  "photos_optional": true,
+  "production_deployment_authorized": false,
+  "production_dispatch_enabled": false,
+  "publication_authorized": false,
+  "real_acceptance_required": true,
+  "schema": "MULTI_TAKE_INTAKE_BINDING_V01",
+  "stability_required_identical_polls": 2,
+  "workload_rule": "ONE_DIRECT_CHILD_FOLDER_PER_SONG"
+}
