@@ -1,4 +1,9 @@
 {
+  "exact_sha_regression": {
+    "result": "PASS",
+    "tests": 300
+  },
+  "exact_tested_implementation_sha": "e84a2525b6ae4ea88b444dafad2cea1cd32a640c",
   "full_p0e4_regression": {
     "result": "PASS",
     "tests": 300
