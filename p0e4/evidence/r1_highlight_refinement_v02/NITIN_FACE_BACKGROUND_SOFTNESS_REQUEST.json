@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-25T14:03:35+02:00",
+  "actor": "NITIN",
+  "source": "Direct user feedback in orchestrator chat",
+  "user_quote": "Gezicht is krachtig genoeg alleen het is nog iets te vel op het gezicht. Als je de achtergrond zachter maakt kun je m’n gezicht zachter maken",
+  "review_context": {
+    "master_state": "V16.6",
+    "state_version": 32,
+    "review_file": "AAKHRI_R1_CURRENT_VS_REVISED_HLG_REVIEW_V01.mp4",
+    "review_sha256": "ad6ec65d104cd45aea7cfe0470553f1d8e0a012221909a206fb0c497661e00d6",
+    "exact_variant_selected": false
+  },
+  "status": "REVISION_REQUESTED_PENDING_LOCAL_EXECUTION",
+  "interpretation": {
+    "subject_presence": "Sufficient; do not increase facial impact or richness further by default",
+    "face": "Slightly reduce facial brightness and soften remaining forehead/nose highlights, preserving natural skin hue, richness and texture",
+    "background": "Slightly calmer tonal contrast so gentler face retains separation; no artificial blur",
+    "final_color_approval": false
+  },
+  "execution_request": [
+    "Continue from latest revised HLG color-development basis; retain all prior comparisons",
+    "Make one bounded refinement and short matched current-versus-new comparison on all four takes; no full-song master",
+    "Remain minimum 10-bit BT.2020 Rec.2100 HLG; no Rec.709 conversion; retain explicit Dolby Vision metadata limitation",
+    "No skin smoothing, face manipulation, static ellipse mask, artificial blur or generative alteration; preserve exposure and contrast outside intended gentle corrections",
+    "Check highlights against source, skin texture, motion consistency and background leakage; do not claim recovered detail without evidence",
+    "One independent Gemini QC; Nitin selects creative outcome",
+    "Persist new versioned review and evidence, then update ledger-derived Master State and pointer with verified results; include this feedback as project memory"
+  ],
+  "gates": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_FINAL_COLOR_APPROVAL": "NOT_GRANTED",
+    "NITIN_FINAL_VIDEO_APPROVAL": "NOT_GRANTED",
+    "NITIN_PUBLISH_APPROVAL": "NOT_GRANTED"
+  }
+}
