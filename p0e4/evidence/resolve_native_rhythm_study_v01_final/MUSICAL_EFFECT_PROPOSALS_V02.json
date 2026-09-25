@@ -1,0 +1,48 @@
+{
+  "attention_retention_note": "Possible attention/retention effects are hypotheses only. No growth, virality, watch-time, or causation claim is made.",
+  "creative_winner": null,
+  "effect_render_authorized": false,
+  "proposals": [
+    {
+      "audible_evidence": "Anticipatory vocal breath followed by the immediate arrival of the downbeat bass transient at 00:41.25.",
+      "do_not_use_condition": "Do not use if visual edit already employs an abrupt shot transition or if visual pacing aims for continuous unhurried stillness.",
+      "duration": "0.35s ramp, settling into section",
+      "intensity": "Micro scale (approx. 2-3% zoom/punch scale jump)",
+      "proposal_index": 1,
+      "timecode_range": "00:40.80 - 00:41.80",
+      "treatment_type": "Subtle rhythmic push/punch-in",
+      "uncertainty": "Medium-low; downbeat location is prominent, but visual cutting pacing must align with visual cut list if footage exists."
+    },
+    {
+      "audible_evidence": "Highest peak dynamic transient in the mixed master where Chorus 2 drops alongside peak vocal strain.",
+      "do_not_use_condition": "Strictly do not use if the subject on screen is mid-phrasing close-up where facial expression would be compromised or cheapened.",
+      "duration": "0.20s total decay",
+      "intensity": "Very subtle, minimal displacement (sub-pixel to 1.5% maximum camera jitter profile)",
+      "proposal_index": 2,
+      "timecode_range": "02:04.80 - 02:05.15",
+      "treatment_type": "Very short impact shake",
+      "uncertainty": "Low audible ambiguity regarding peak power; moderate uncertainty regarding whether visual narrative tone accepts kinetic distortion."
+    },
+    {
+      "audible_evidence": "Outro decay where all percussive instruments drop out, leaving solo sustained singing and decaying reverberation.",
+      "do_not_use_condition": "Do not use any abrupt cuts, pulsating zooms, or jitter; do not execute if scene lighting is already rapidly shifting.",
+      "duration": "17.0s sustained unbroken drift",
+      "intensity": "Extremely slow, linear digital creep (approx. 1% to 1.5% total transformation over 17 seconds)",
+      "proposal_index": 3,
+      "timecode_range": "02:45.00 - 03:02.00",
+      "treatment_type": "Vocal-led slow push with deliberate stillness",
+      "uncertainty": "Low sonic uncertainty; audio provides unequivocal stillness and emotional space."
+    }
+  ],
+  "rules": [
+    "At most three restrained treatments",
+    "No automatic beat-per-cut mapping",
+    "Quiet and vocal-led sections default to stillness",
+    "Impact shake remains optional and conditional",
+    "Before render, confirm candidate against native Resolve overlay and picture edit",
+    "No proposal covers 03:08.000-03:34.400 because Gemini did not report that tail"
+  ],
+  "schema": "MUSICAL_EFFECT_PROPOSALS_V02",
+  "source_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "status": "READY_FOR_NITIN_POLICY_SELECTION_NO_RENDER"
+}

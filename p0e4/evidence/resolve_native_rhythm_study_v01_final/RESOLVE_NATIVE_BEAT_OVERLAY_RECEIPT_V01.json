@@ -1,0 +1,16 @@
+{
+  "effect_rendered": false,
+  "machine_extractable_native_event_times": false,
+  "observation": "Many thin native Resolve beat-indicator lines were visibly present across the selected green audio clip after Detect Music Beats completed.",
+  "observed_by": "CODEX_CUA",
+  "performed_by": "NITIN",
+  "project_export_ref": "UNCHAINED_AAKHRI_NATIVE_RHYTHM_STUDY_V01.drp",
+  "project_export_sha256": "615eaf723a07944cb767bffebb9f460e4e128af6178c49a420690b9fc132e293",
+  "project_name": "UNCHAINED_AAKHRI_NATIVE_RHYTHM_STUDY_V01",
+  "schema": "RESOLVE_NATIVE_BEAT_OVERLAY_RECEIPT_V01",
+  "semantic_limit": "Native overlays are pulse/beat visual guidance only; they do not prove kick, snare, downbeat, instrument identity, or safe effect triggers.",
+  "source_file": "AAKHRI ISHQ MASTER 2.wav",
+  "source_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "status": "COMPLETED_UI_VISUAL_EVIDENCE",
+  "timeline_name": "AAKHRI_MASTER2_NATIVE_BEAT_STUDY"
+}

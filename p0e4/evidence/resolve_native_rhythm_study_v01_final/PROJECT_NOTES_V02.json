@@ -1,0 +1,12 @@
+{
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "next_gate": "NITIN_EFFECT_POLICY_SELECTION",
+  "no_effect_render": true,
+  "no_full_master": true,
+  "outcome": "Native Resolve beat detection and independent Gemini audio QC completed. Analysis is green only for policy review; Gemini duration mismatch leaves the last 26.4000417 s explicitly uncovered.",
+  "schema": "PROJECT_NOTES_V02"
+}

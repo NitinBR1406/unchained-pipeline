@@ -1,0 +1,8 @@
+{
+  "effect_render_authorized": false,
+  "full_master_render_authorized": false,
+  "gate": "NITIN_EFFECT_POLICY_SELECTION",
+  "schema": "NEXT_READY_V01",
+  "smallest_action": "Select, reject, or adjust P1/P2/P3 and confirm whether the 03:08.000-03:34.400 tail should remain fully still.",
+  "status": "WAITING_FOR_NITIN"
+}

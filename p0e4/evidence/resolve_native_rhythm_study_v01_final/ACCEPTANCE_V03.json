@@ -1,0 +1,18 @@
+{
+  "effect_proposals_completed": true,
+  "effect_rendered": false,
+  "exact_audio_bound": true,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "full_master_rendered": false,
+  "gemini_duration_discrepancy_fail_closed": true,
+  "gemini_full_duration_coverage": false,
+  "gemini_review_completed": true,
+  "native_analysis_completed": true,
+  "native_event_times_machine_extracted": false,
+  "native_overlay_visually_verified": true,
+  "prior_kick_snare_labels_used_as_proven_triggers": false,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "schema": "RESOLVE_NATIVE_RHYTHM_STUDY_ACCEPTANCE_V03",
+  "status": "GREEN_FOR_ANALYSIS_ONLY_WAITING_FOR_NITIN_EFFECT_POLICY"
+}

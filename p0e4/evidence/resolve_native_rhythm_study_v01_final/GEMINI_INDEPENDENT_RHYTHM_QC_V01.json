@@ -1,0 +1,19 @@
+{
+  "blindness": "NO_PRIOR_CANDIDATE_TIMESTAMPS_LABELS_RANKINGS_OR_CHATGPT_CONCLUSIONS_SUPPLIED",
+  "chat_url": "https://gemini.google.com/app/dd2048ede939dc45",
+  "creative_winner_selected": false,
+  "duration_discrepancy_policy": "FAIL_CLOSED_FOR_UNREVIEWED_TAIL_03:08.000_TO_03:34.400; do not treat Gemini as full-file coverage",
+  "duration_discrepancy_seconds": 26.4000417,
+  "effect_render_requested": false,
+  "gemini_reported_audible_length_seconds": 188.0,
+  "input_file_name": "AAKHRI ISHQ MASTER 2.wav",
+  "input_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "model_surface": "Gemini Flash web authenticated",
+  "raw_result_ref": "GEMINI_RAW_RESULT_V01.json",
+  "raw_result_sha256": "58ff34577049a2efe7cf1b26b8559e0a131b86d9880f953f5bc3a84e98934505",
+  "schema": "GEMINI_INDEPENDENT_RHYTHM_QC_RECEIPT_V01",
+  "semantic_limit": "Mixed-master event labels remain audible hypotheses; no kick/snare stem identity accepted as truth",
+  "status": "COMPLETED_WITH_DURATION_DISCREPANCY_FAIL_CLOSED",
+  "uploaded_exact_local_bytes": true,
+  "verified_source_duration_seconds": 214.4000417
+}

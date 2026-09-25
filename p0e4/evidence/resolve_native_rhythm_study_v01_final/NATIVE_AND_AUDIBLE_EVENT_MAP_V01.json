@@ -1,0 +1,54 @@
+{
+  "accepted_joint_interpretation": "Use audible section evidence as bounded editorial hypotheses; inspect native overlay locally at candidate time before any future preview. Never convert provisional kick/snare labels into triggers.",
+  "gemini_layer": {
+    "completed": true,
+    "coverage_status": "PARTIAL_TO_03:08_DUE_DURATION_DISCREPANCY",
+    "events": [
+      {
+        "audible_evidence": "First syllables delivered over delicate acoustic background.",
+        "event_type": "vocal entrance",
+        "instrument_identity_confidence": "HIGH",
+        "timecode": "00:00.60"
+      },
+      {
+        "audible_evidence": "Sudden arrival of low-frequency thud and wide mid transient marking Chorus 1 start.",
+        "event_type": "downbeat / rhythmic drop",
+        "instrument_identity_confidence": "HIGH",
+        "timecode": "00:41.25"
+      },
+      {
+        "audible_evidence": "Percussion cuts out to leave vocal tail and acoustic resonance.",
+        "event_type": "section boundary / transient cut",
+        "instrument_identity_confidence": "HIGH",
+        "timecode": "01:04.10"
+      },
+      {
+        "audible_evidence": "Rhythmic syncopated transient with soft low-mid profile; ambiguous whether programmed kick sample, percussion rim, or acoustic body tap.",
+        "event_type": "UNKNOWN",
+        "instrument_identity_confidence": "LOW",
+        "timecode": "01:43.30"
+      },
+      {
+        "audible_evidence": "Prominent vocal belt arriving simultaneously with maximum low-end transient impact.",
+        "event_type": "vocal climax / full beat downbeat",
+        "instrument_identity_confidence": "HIGH",
+        "timecode": "02:04.85"
+      },
+      {
+        "audible_evidence": "Cessation of all driving low-end pulse; vocal tail decays into silence.",
+        "event_type": "section boundary / outro drop",
+        "instrument_identity_confidence": "HIGH",
+        "timecode": "02:45.10"
+      }
+    ]
+  },
+  "native_resolve_layer": {
+    "completed": true,
+    "event_times_exportable": false,
+    "semantic_role": "PULSE_GUIDANCE_ONLY",
+    "visual_overlay_present": true
+  },
+  "schema": "NATIVE_AND_AUDIBLE_EVENT_MAP_V01",
+  "source_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "unreviewed_tail": "03:08.000-03:34.400"
+}

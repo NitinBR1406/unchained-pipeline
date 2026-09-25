@@ -1,0 +1,23 @@
+{
+  "choices": [
+    {
+      "id": "P1",
+      "label": "subtle rhythmic push/punch-in",
+      "range": "00:40.80-00:41.80"
+    },
+    {
+      "id": "P2",
+      "label": "single very short impact shake, conditional on picture",
+      "range": "02:04.80-02:05.15"
+    },
+    {
+      "id": "P3",
+      "label": "vocal-led slow push with deliberate stillness",
+      "range": "02:45.00-03:02.00"
+    }
+  ],
+  "request": "Nitin selects/adjusts the effect rules. No effect preview has been rendered.",
+  "schema": "NITIN_RHYTHM_POLICY_REVIEW_V02",
+  "status": "WAITING_FOR_NITIN_EFFECT_POLICY_SELECTION",
+  "summary": "Resolve native beat overlays exist on the exact bound audio, and Gemini independently proposed three restrained musical treatments. Gemini reported only 188.0 s against the verified 214.4000417 s file, so the final 26.4000417 s remains unreviewed by Gemini and is excluded from effect proposals."
+}
