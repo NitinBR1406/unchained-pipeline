@@ -1,0 +1,7 @@
+{
+  "effect_render_authorized": false,
+  "gate": "NITIN_MAC_UNLOCK_FOR_GEMINI_AUDIO_VALIDATION_THEN_JOINT_EFFECT_POLICY_DECISION",
+  "schema": "NEXT_READY_V01",
+  "smallest_action": "Unlock the Mac once; Codex will upload the exact SHA-bound 17.15s WAV sample to the already isolated Gemini audit context.",
+  "status": "WAITING_FOR_NITIN"
+}

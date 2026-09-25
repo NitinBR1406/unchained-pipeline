@@ -1,0 +1,17 @@
+{
+  "analysis_reproducible": true,
+  "detector_audit": "GREEN_FINDINGS_PERSISTED",
+  "effect_policy_selected": false,
+  "effect_rendered": false,
+  "full_master_rendered": false,
+  "gemini_independent_review": "BLOCKED_MAC_LOCKED",
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "instrument_labels_accepted_for_automation": false,
+  "master_sha_verified": true,
+  "schema": "KICK_SNARE_DISCOVERY_ACCEPTANCE_V01",
+  "status": "ANALYSIS_READY_GEMINI_VALIDATION_BLOCKED"
+}

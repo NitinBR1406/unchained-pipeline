@@ -1,0 +1,5 @@
+{
+  "next_gate": "GEMINI_AUDIO_VALIDATION_THEN_NITIN_JOINT_EFFECT_POLICY_DECISION",
+  "schema": "PROJECT_NOTES_V01",
+  "summary": "Existing detector audit completed. Exact MASTER 2 mixed-master kick/snare candidate analysis is reproducible but not calibrated or safe as automatic effect triggers. Independent Gemini audio review is blocked only by the locked Mac file chooser. No effect render made."
+}

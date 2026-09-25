@@ -1,0 +1,30 @@
+{
+  "conclusion": "Do not reuse historical detect_hits or current RMS events as verified kick/snare triggers.",
+  "deployed_parity_proven": false,
+  "detector_source_located": false,
+  "findings": [
+    {
+      "component": "historical /clip call site",
+      "evidence": "p0e4/evidence/factory_v16/clip_source.txt lines 91-111",
+      "fact": "Calls FX.detect_hits, separates kick/snare, thins at default 0.40s/0.32s, then maps kick to zoom and snare to shake. Implementation bytes and deployed parity are absent."
+    },
+    {
+      "component": "historical discovery",
+      "evidence": "p0e4/evidence/factory_v16/CLAUDE_DISCOVERY_RESULT.json",
+      "fact": "Mentions beat-service app.py and clip_fx.py, but explicitly does not prove deployed byte parity or live N-series consumption."
+    },
+    {
+      "component": "current Aakhri analyzer",
+      "evidence": "p0e4/multitake/creative_revision.py",
+      "fact": "20ms RMS onset/energy detector; no instrument classification, beat phase, tempo, or downbeat semantics."
+    },
+    {
+      "component": "V06 preview",
+      "evidence": "p0e4/resolve/aakhri_v06_caption_beat_preview_v01.py",
+      "fact": "Uses three fixed onset timestamps and no instrument labels; source file is not loaded or SHA-validated by renderer."
+    }
+  ],
+  "live_consumption_proven": false,
+  "schema": "EXISTING_DETECTOR_AUDIT_V01",
+  "status": "AUDITED_NOT_REUSABLE_AS_PROVEN_LIVE_CLASSIFIER"
+}

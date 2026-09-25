@@ -1,0 +1,69 @@
+{
+  "decision_owner": "NITIN_WITH_GEMINI_AND_CHATGPT",
+  "effect_rendered": false,
+  "parameters": {
+    "kick": {
+      "amplitude_options": "bounded and preview-tested",
+      "attack_ms_options": [
+        40,
+        60,
+        80
+      ],
+      "cooldown_ms_options": [
+        600,
+        900,
+        1200
+      ],
+      "effect_options": [
+        "NONE",
+        "SUBTLE_VERTICAL_IMPULSE",
+        "SUBTLE_PUNCH_IN"
+      ],
+      "return_ms_options": [
+        140,
+        180,
+        240
+      ]
+    },
+    "simultaneous_hit_priority": [
+      "KICK",
+      "SNARE",
+      "STRONGEST_ONLY",
+      "NO_EFFECT"
+    ],
+    "snare": {
+      "amplitude_options": "bounded and preview-tested",
+      "attack_ms_options": [
+        30,
+        50,
+        70
+      ],
+      "cooldown_ms_options": [
+        500,
+        750,
+        1000
+      ],
+      "effect_options": [
+        "NONE",
+        "QUICK_LIGHT_ZOOM",
+        "MICRO_LATERAL_IMPULSE"
+      ],
+      "return_ms_options": [
+        100,
+        140,
+        180
+      ]
+    },
+    "vocal_protection": "required reviewed intervals; no automatic inference from drum labels"
+  },
+  "schema": "POLICY_OPTIONS_FOR_JOINT_DECISION_V01",
+  "shared_constraints": [
+    "Never apply an effect to every detected hit",
+    "Only reviewed high-confidence events may enter a creative candidate set",
+    "Vocal-protection windows override rhythmic effects",
+    "Simultaneous-hit priority must be explicit",
+    "Minimum cooldown and section density caps are mandatory",
+    "Every rendered repair must be independently re-QCed"
+  ],
+  "status": "OPTIONS_ONLY_NO_MAPPING_SELECTED"
+}

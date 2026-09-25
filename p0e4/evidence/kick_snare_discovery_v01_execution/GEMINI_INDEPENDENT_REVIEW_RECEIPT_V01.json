@@ -1,0 +1,9 @@
+{
+  "effect_rendered": false,
+  "gemini_verdict": null,
+  "reason": "Chrome local file chooser requires an unlocked Mac; native surface reported locked. Gemini Drive picker accepts document-oriented MIME types and did not expose the WAV sample. No manual substitute or fabricated review used.",
+  "sample_sha256": "ef05a97ca224e52f2e7ffbd4e66ab0ab273c56a836696d562ee4d7b6675fb2f3",
+  "schema": "GEMINI_INDEPENDENT_REVIEW_RECEIPT_V01",
+  "smallest_nitin_action": "Unlock the Mac once so the exact WAV can be uploaded to the isolated Gemini audit chat.",
+  "status": "BLOCKED_BEFORE_DISPATCH"
+}

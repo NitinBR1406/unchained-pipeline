@@ -1,0 +1,37 @@
+{
+  "acceptance": "ANALYSIS_REPRODUCIBLE_BUT_CLASSIFICATION_NOT_ACCEPTED_FOR_AUTOMATED_EFFECTS",
+  "classification_status": "TENTATIVE_UNCALIBRATED",
+  "confidence": "Internal heuristic only; explicitly not probability",
+  "method": "KICK_SNARE_MIXED_MASTER_HEURISTIC_V01",
+  "observed_counts": {
+    "kick": 5,
+    "snare": 367,
+    "uncertain": 3
+  },
+  "overlap_handling": "One label per candidate; near-simultaneous low/high evidence becomes ratio-based or uncertain; no creative thinning applied",
+  "quality_finding": "The 5 kick / 367 snare-like / 3 uncertain imbalance indicates high-frequency arrangement transients likely dominate. No ground-truth drum stem or annotated truth set exists, so precision/recall cannot be measured.",
+  "schema": "DETECTION_METHOD_AND_VALIDATION_V01",
+  "settings": {
+    "broad_band_hz": [
+      35,
+      9000
+    ],
+    "candidate_robust_z": 2.4,
+    "high_confidence_margin": 0.28,
+    "hop_ms": 10,
+    "kick_band_hz": [
+      35,
+      180
+    ],
+    "medium_confidence_margin": 0.12,
+    "minimum_gap_ms": 120,
+    "snare_band_hz": [
+      700,
+      6000
+    ],
+    "window_ms": 42.667
+  },
+  "strength": "broadband/low/snare-band robust z values retained per event",
+  "timing_grid": "10ms hop; each event also mapped to nearest 30fps frame",
+  "total_candidates": 375
+}

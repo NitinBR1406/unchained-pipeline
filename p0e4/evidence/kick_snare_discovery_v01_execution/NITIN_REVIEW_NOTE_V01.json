@@ -1,0 +1,12 @@
+{
+  "facts": [
+    "Historical detector implementation and deployed parity were not found.",
+    "Current Aakhri detector is RMS onset/energy only, not kick/snare.",
+    "Exact MASTER 2 SHA verified.",
+    "Transparent mixed-master heuristic produced 375 candidates: 5 kick-like, 367 snare-like, 3 uncertain.",
+    "Labels are tentative; imbalance indicates likely high-frequency false positives.",
+    "No effect rule or render was created."
+  ],
+  "next_review": "First validate the stratified listening sample and Gemini classification; then jointly select or reject effect mapping and bounds.",
+  "schema": "NITIN_REVIEW_NOTE_V01"
+}

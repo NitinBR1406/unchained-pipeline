@@ -1,0 +1,126 @@
+{
+  "audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "mapping": [
+    {
+      "detector": {
+        "broadband_robust_z": 6.898,
+        "classification": "snare",
+        "confidence": "high",
+        "confidence_score": 0.95,
+        "frame_30fps": 1211,
+        "kick_ratio": 0.207,
+        "low_band_robust_z": 1.921,
+        "snare_band_robust_z": 7.359,
+        "snare_ratio": 0.793,
+        "source": "MIXED_MASTER_ONLY",
+        "time_ms": 40380
+      },
+      "sample_local_center_ms": 900,
+      "source_time_ms": 40380
+    },
+    {
+      "detector": {
+        "broadband_robust_z": 7.843,
+        "classification": "snare",
+        "confidence": "high",
+        "confidence_score": 0.95,
+        "frame_30fps": 1271,
+        "kick_ratio": 0.045,
+        "low_band_robust_z": 0.319,
+        "snare_band_robust_z": 6.804,
+        "snare_ratio": 0.955,
+        "source": "MIXED_MASTER_ONLY",
+        "time_ms": 42380
+      },
+      "sample_local_center_ms": 3350,
+      "source_time_ms": 42380
+    },
+    {
+      "detector": {
+        "broadband_robust_z": 7.636,
+        "classification": "snare",
+        "confidence": "high",
+        "confidence_score": 0.95,
+        "frame_30fps": 1319,
+        "kick_ratio": 0.124,
+        "low_band_robust_z": 0.949,
+        "snare_band_robust_z": 6.713,
+        "snare_ratio": 0.876,
+        "source": "MIXED_MASTER_ONLY",
+        "time_ms": 43980
+      },
+      "sample_local_center_ms": 5800,
+      "source_time_ms": 43980
+    },
+    {
+      "detector": {
+        "broadband_robust_z": 3.338,
+        "classification": "kick",
+        "confidence": "medium",
+        "confidence_score": 0.841,
+        "frame_30fps": 5604,
+        "kick_ratio": 0.788,
+        "low_band_robust_z": 2.319,
+        "snare_band_robust_z": 0.625,
+        "snare_ratio": 0.212,
+        "source": "MIXED_MASTER_ONLY",
+        "time_ms": 186790
+      },
+      "sample_local_center_ms": 8250,
+      "source_time_ms": 186790
+    },
+    {
+      "detector": {
+        "broadband_robust_z": 3.124,
+        "classification": "kick",
+        "confidence": "medium",
+        "confidence_score": 0.823,
+        "frame_30fps": 5796,
+        "kick_ratio": 0.777,
+        "low_band_robust_z": 2.233,
+        "snare_band_robust_z": 0.64,
+        "snare_ratio": 0.223,
+        "source": "MIXED_MASTER_ONLY",
+        "time_ms": 193190
+      },
+      "sample_local_center_ms": 10700,
+      "source_time_ms": 193190
+    },
+    {
+      "detector": {
+        "broadband_robust_z": 2.442,
+        "classification": "kick",
+        "confidence": "medium",
+        "confidence_score": 0.639,
+        "frame_30fps": 6160,
+        "kick_ratio": 0.637,
+        "low_band_robust_z": 1.658,
+        "snare_band_robust_z": 0.945,
+        "snare_ratio": 0.363,
+        "source": "MIXED_MASTER_ONLY",
+        "time_ms": 205350
+      },
+      "sample_local_center_ms": 13150,
+      "source_time_ms": 205350
+    },
+    {
+      "detector": {
+        "broadband_robust_z": 2.636,
+        "classification": "uncertain",
+        "confidence": "low",
+        "confidence_score": 0.539,
+        "frame_30fps": 4410,
+        "kick_ratio": 0.486,
+        "low_band_robust_z": 1.664,
+        "snare_band_robust_z": 1.76,
+        "snare_ratio": 0.514,
+        "source": "MIXED_MASTER_ONLY",
+        "time_ms": 146990
+      },
+      "sample_local_center_ms": 15600,
+      "source_time_ms": 146990
+    }
+  ],
+  "purpose": "STRATIFIED_CLASSIFICATION_VALIDATION_NOT_EFFECT_SELECTION",
+  "schema": "KICK_SNARE_LISTENING_SAMPLE_MAP_V01"
+}
