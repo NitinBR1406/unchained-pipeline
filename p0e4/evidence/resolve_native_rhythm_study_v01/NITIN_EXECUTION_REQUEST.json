@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-25T20:51:19+02:00",
+  "user_quote": "Oké ik stel voor om te starten met de resolve beatdetectie / golfvormen. Analyseer het nummer en geef enkele zeer passende. Ritmische effect voorstellen terug",
+  "status": "AUTHORIZED_PENDING_LOCAL_RESOLVE_ANALYSIS",
+  "supersedes_priority": "Start with native Resolve beat detection and waveform/listening inspection before external detector development; retain previous kick/snare audit findings as context.",
+  "baseline": {
+    "reconciled_head": "a84860cdcbdd055321ed2d4d0989224797f11438",
+    "master_state": "V16.13",
+    "state_version": 39,
+    "color": "V06_PROVISIONAL_RETAIN",
+    "audio": "AAKHRI ISHQ MASTER 2.wav",
+    "audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "execution": [
+    "Reconcile latest repo/evidence before work. Use isolated private project/timeline copy; preserve existing color, edit and source files",
+    "Verify local Resolve Studio version and whether Detect Music Beats is present. Analyze full exact MASTER 2 via native Detect Music Beats, retaining native analysis and screenshots/evidence of waveform/beat overlays. Verify API support from local installed documentation instead of inventing methods. If only UI works, use available authorized local UI capability; otherwise report exact blocker without falsely substituting external onset analysis",
+    "Inspect Fairlight/Edit waveform and listen to representative passages throughout the song to validate detected beat positions and ambiguous events. Preserve distinction between regular beat grid, audible transient and instrument classification",
+    "Produce master-relative event timestamps with sample/frame mapping and method provenance; separate native detected beats from manually verified observations. Do not infer downbeats, kick/snare class or exact BPM from arbitrary energy peaks. Uncertain instrument labels remain uncertain",
+    "Identify musical energy changes, vocal/emotional passages and useful effect/rest windows from actual listening and available video; prior fixed30s energy bins are not semantic sections. Report derived tempo/meter only with evidence and uncertainty",
+    "Select three short contrasting passages with exact MASTER 2 timecodes: restrained/emotional, rhythmic groove, stronger accent/build if actually present; do not force nonexistent sections",
+    "Give Gemini one independent review of actual audio and aligned waveform/beat evidence plus representative video. Ask for proposed rhythmic effect rules and protected vocal moments. Preserve input hashes, exact response and limitations. If Gemini dispatch unavailable record pending, never fabricate its assessment",
+    "Return three song-specific effect proposals, each tied to verified moments: subtle rhythmic push, short impact shake where justified, and vocal-led slow push with stillness. Kick-shake/snare-zoom remain testable suggestions only, not preselected rules",
+    "For every proposal specify why the musical event supports it, exact event timestamps, attack/hold/return in frames at timeline FPS, relative scale/offset limits, cooldown/density, handling concurrent hits, quiet/vocal overrides and safe crop constraints. Distinguish measured facts from creative suggestions; no retention guarantees",
+    "Do not add captions or render new creative effects/full master in this analysis phase. A short annotated beat/waveform listening review is permitted for validation, not a selected effect treatment",
+    "Persist versioned native analysis evidence, machine-readable event map and proposal report to repo/Shared Drive with SHA verification; update ledger-derived Master State, latest pointer and project notes using actual outcomes",
+    "Return precise review link, a compact findings table with actual timecodes, three bounded proposals and any uncertainty. Stop for joint Nitin/ChatGPT/Gemini effect-policy choice"
+  ],
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false,
+    "final_video_approved": false,
+    "frozen_P0_E0_through_E3": "UNCHANGED"
+  },
+  "execution_started_from_this_chat": false
+}
