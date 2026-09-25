@@ -1,0 +1,15 @@
+{
+  "effect_rendered": false,
+  "exact_audio_bound": true,
+  "full_master_rendered": false,
+  "gemini_review_completed": false,
+  "native_analysis_completed": false,
+  "native_feature_present": true,
+  "prior_kick_snare_labels_used_as_proven_triggers": false,
+  "provisional_effect_proposals_completed": true,
+  "resolve_studio_verified": true,
+  "schema": "RESOLVE_NATIVE_RHYTHM_STUDY_ACCEPTANCE_V02",
+  "status": "PARTIAL_BLOCKED_UI_ONLY_NATIVE_CONTEXT_MENU_AND_GEMINI_AUDIO_UPLOAD",
+  "waveform_byte_analysis_completed": true,
+  "waveform_listening_completed": false
+}

@@ -1,0 +1,24 @@
+{
+  "no_effect_render": true,
+  "no_full_master": true,
+  "schema": "NITIN_REVIEW_NOTE_V01",
+  "status": "ANALYSIS_READY_BUT_NATIVE_AND_GEMINI_CONFIRMATION_BLOCKED",
+  "summary": "Exact audio and Resolve Studio path are verified. Three bounded effect hypotheses with concrete timecodes are prepared, but none is an accepted trigger until native beat overlays and audible review confirm it.",
+  "timecode_table": [
+    {
+      "confidence": "LOW until audible role verified",
+      "proposal": "vocal-led slow push with stillness",
+      "window": "00:14.000-00:21.000"
+    },
+    {
+      "confidence": "MEDIUM waveform evidence; beat role unverified",
+      "proposal": "subtle rhythmic micro-push",
+      "window": "00:40.000-00:44.500"
+    },
+    {
+      "confidence": "MEDIUM energy/transient evidence; instrument/downbeat unverified",
+      "proposal": "one short impact shake only if confirmed",
+      "window": "03:06.500-03:13.600"
+    }
+  ]
+}

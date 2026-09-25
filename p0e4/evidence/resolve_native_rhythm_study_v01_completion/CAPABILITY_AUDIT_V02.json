@@ -1,0 +1,38 @@
+{
+  "effect_rendered": false,
+  "exact_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "installed_binary_evidence": [
+    "AI Detect Music Beats",
+    "Show Music Beats",
+    "Hide Music Beats",
+    "Update Music Beats"
+  ],
+  "keyboard_customization": {
+    "finding": "Command is not keyboard-assignable in Resolve 21.1.",
+    "query": "Detect Music Beats",
+    "result_count": 0
+  },
+  "native_analysis_completed": false,
+  "official_behavior": {
+    "finding": "Detect Music Beats is a Studio-only timeline audio-clip context-menu command; effective primarily for beat-driven 4/4 or 3/4 music; output is beat indicator overlays used for snapping.",
+    "source": "https://documents.blackmagicdesign.com/SupportNotes/DaVinci_Resolve_20_New_Features_Guide.pdf"
+  },
+  "recorded_at": "2026-09-25T22:28:00+02:00",
+  "resolve": {
+    "edition": "DaVinci Resolve Studio",
+    "project": "UNCHAINED_AAKHRI_NATIVE_RHYTHM_STUDY_V01",
+    "timeline": "AAKHRI_MASTER2_NATIVE_BEAT_STUDY",
+    "version": "21.1.0.17"
+  },
+  "schema": "RESOLVE_NATIVE_RHYTHM_CAPABILITY_AUDIT_V02",
+  "scripting_api": {
+    "finding": "No installed Resolve scripting API method exposes Detect Music Beats or its overlay data.",
+    "supported": false
+  },
+  "ui_execution": {
+    "automation_result": "BLOCKED",
+    "clip_context_menu_required": true,
+    "mac_unlocked": true,
+    "reason": "Authorized computer-use surface could select the exact timeline clip and inspect menus, but did not expose/activate the clip right-click context menu. No external onset detector was substituted."
+  }
+}

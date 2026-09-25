@@ -1,11 +1,11 @@
 {
-  "evidence_manifest": "p0e4/evidence/resolve_native_rhythm_study_v01_execution/SHA256SUMS.txt",
-  "master_state_version": "V16.15",
-  "path": "p0e4/evidence/resolve_native_rhythm_study_v01_execution/UNCHAINED_MASTER_PROJECT_STATE_V16_15.json",
+  "evidence_manifest": "p0e4/evidence/resolve_native_rhythm_study_v01_completion/SHA256SUMS.txt",
+  "master_state_version": "V16.16",
+  "path": "p0e4/evidence/resolve_native_rhythm_study_v01_completion/UNCHAINED_MASTER_PROJECT_STATE_V16_16.json",
   "production_e2e_status": "BLOCKED_NOT_GREEN",
   "schema_version": 1,
-  "scope_status": "WAITING_FOR_NITIN_MAC_UNLOCK_FOR_RESOLVE_NATIVE_RHYTHM_STUDY",
-  "sha256": "aa2368d66badf98fb3c23a1c68caed2b3d4b652eb169b0bea7644ea19395df0c",
-  "state_version": 41,
-  "tested_sha": "03bf39a895c9e579a46854fa4762f67afd529435"
+  "scope_status": "WAITING_FOR_NITIN_NATIVE_BEAT_AND_GEMINI_AUDIO_UI_ACTIONS",
+  "sha256": "116c19825b929c74b50df5ef9d11b2ac660e59ded6570d7f7ecb774bc52a3776",
+  "state_version": 42,
+  "tested_sha": "PENDING_COMMIT"
 }

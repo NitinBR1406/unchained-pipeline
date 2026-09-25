@@ -1,0 +1,124 @@
+{
+  "audio": {
+    "channels": 2,
+    "duration_seconds": 214.40004166666668,
+    "sample_rate_hz": 48000,
+    "sample_width_bits": 24,
+    "timeline_fps": 30
+  },
+  "audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "candidate_review_points": [
+    {
+      "basis": "strong broadband/high-band transient candidate; instrument unknown",
+      "frame_30fps": 1211,
+      "time_s": 40.38
+    },
+    {
+      "basis": "strong broadband/high-band transient candidate; instrument unknown",
+      "frame_30fps": 1271,
+      "time_s": 42.38
+    },
+    {
+      "basis": "strong broadband/high-band transient candidate; instrument unknown",
+      "frame_30fps": 1319,
+      "time_s": 43.98
+    },
+    {
+      "basis": "ambiguous-band transient candidate",
+      "frame_30fps": 4410,
+      "time_s": 146.99
+    },
+    {
+      "basis": "low-band-weighted transient candidate; instrument unknown",
+      "frame_30fps": 5604,
+      "time_s": 186.79
+    },
+    {
+      "basis": "low-band-weighted transient candidate; instrument unknown",
+      "frame_30fps": 5796,
+      "time_s": 193.19
+    },
+    {
+      "basis": "low-band-weighted transient candidate; instrument unknown",
+      "frame_30fps": 6160,
+      "time_s": 205.35
+    }
+  ],
+  "limitations": [
+    "No native Resolve beat overlay obtained.",
+    "No authenticated auditory model review completed.",
+    "RMS peaks are not beats, downbeats, kicks, snares or semantic sections."
+  ],
+  "method": "One-second stereo PCM RMS proxy from exact WAV bytes using every 20th interleaved sample; proxy only, not calibrated loudness or semantic section detection.",
+  "not_accepted_as_triggers": {
+    "prior_labels_ref": "p0e4/evidence/kick_snare_discovery_v01_execution/KICK_SNARE_MIXED_MASTER_EVENTS_V01.json",
+    "reason": "Uncalibrated mixed-master heuristic produced 5 kick-like, 367 snare-like and 3 uncertain events; no ground truth or instrument stem."
+  },
+  "recorded_at": "2026-09-25T22:28:00+02:00",
+  "regional_rms_proxy": [
+    {
+      "end_s": 30,
+      "max": 0.2922,
+      "max_second": 29,
+      "mean": 0.1936,
+      "min": 0.0,
+      "min_second": 0,
+      "start_s": 0
+    },
+    {
+      "end_s": 60,
+      "max": 0.3514,
+      "max_second": 51,
+      "mean": 0.2761,
+      "min": 0.1781,
+      "min_second": 34,
+      "start_s": 30
+    },
+    {
+      "end_s": 90,
+      "max": 0.3449,
+      "max_second": 80,
+      "mean": 0.264,
+      "min": 0.1313,
+      "min_second": 89,
+      "start_s": 60
+    },
+    {
+      "end_s": 120,
+      "max": 0.3159,
+      "max_second": 112,
+      "mean": 0.2588,
+      "min": 0.102,
+      "min_second": 90,
+      "start_s": 90
+    },
+    {
+      "end_s": 150,
+      "max": 0.3188,
+      "max_second": 134,
+      "mean": 0.2701,
+      "min": 0.2115,
+      "min_second": 149,
+      "start_s": 120
+    },
+    {
+      "end_s": 180,
+      "max": 0.3105,
+      "max_second": 155,
+      "mean": 0.2651,
+      "min": 0.1987,
+      "min_second": 159,
+      "start_s": 150
+    },
+    {
+      "end_s": 214,
+      "max": 0.3496,
+      "max_second": 192,
+      "mean": 0.2605,
+      "min": 0.0001,
+      "min_second": 213,
+      "start_s": 180
+    }
+  ],
+  "schema": "WAVEFORM_ENERGY_ANALYSIS_V01"
+}

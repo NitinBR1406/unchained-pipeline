@@ -1,0 +1,85 @@
+{
+  "audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "effect_rendered": false,
+  "global_guards": [
+    "No kick/snare/downbeat label is accepted.",
+    "No effect is authorized for rendering.",
+    "Native beat markers and audible musical role must both confirm a trigger.",
+    "Retention/watch-time impact is a hypothesis only and not predicted."
+  ],
+  "proposals": [
+    {
+      "concurrent_hits": "ignore transient candidates while slow push is active",
+      "cooldown_frames": 180,
+      "creative_hypothesis": "If the vocal carries the passage, preserve stillness and use one imperceptible slow push.",
+      "density": "one envelope in the 7 s window",
+      "event_timecodes": [
+        "00:14.000",
+        "00:21.000"
+      ],
+      "id": "VOCAL_LED_SLOW_PUSH_WITH_STILLNESS",
+      "measured_basis": "Early lower-energy region; 00:14 one-second RMS proxy 0.1583 and 00:21 0.1543. Vocal/emotional interpretation is not yet verified by listening.",
+      "motion": {
+        "attack_frames": 18,
+        "hold_frames": 150,
+        "offset_px_max": 0,
+        "return_frames": 42,
+        "scale_peak_max": 1.025,
+        "scale_start": 1.0
+      },
+      "review_window": "00:14.000-00:21.000",
+      "safe_crop": "must pass existing base-framing safe-area contract at peak scale",
+      "vocal_override": "cancel motion if consonant articulation or head/hand movement already supplies emphasis"
+    },
+    {
+      "concurrent_hits": "merge events within 12 frames; never stack scale envelopes",
+      "cooldown_frames": 36,
+      "creative_hypothesis": "If native overlay and listening confirm a short regular groove, apply micro-pushes on at most two of the three events.",
+      "density": "maximum 2 accents in 4.5 s",
+      "event_timecodes": [
+        "00:40.380",
+        "00:42.380",
+        "00:43.980"
+      ],
+      "id": "SUBTLE_RHYTHMIC_PUSH",
+      "measured_basis": "Three strong broadband/high-band transient candidates from exact mixed master; instrument class and beat role remain unknown.",
+      "motion": {
+        "attack_frames": 3,
+        "hold_frames": 2,
+        "offset_px_max": 0,
+        "relative_scale_delta_max": 0.012,
+        "return_frames": 9
+      },
+      "review_window": "00:40.000-00:44.500",
+      "safe_crop": "peak scale must retain ceiling/floor/white-border exclusions",
+      "vocal_override": "skip accents under exposed sustained notes or emotional phrase endings"
+    },
+    {
+      "concurrent_hits": "choose the strongest verified event only",
+      "cooldown_frames": 150,
+      "creative_hypothesis": "If listening and native beats confirm one genuine structural impact, use a single restrained shake; otherwise use no shake.",
+      "density": "maximum 1 shake in the 7.1 s window",
+      "event_timecodes": [
+        "03:06.790",
+        "03:13.190"
+      ],
+      "id": "SHORT_IMPACT_SHAKE",
+      "measured_basis": "Low-band-weighted transient candidates coincide with two of the strongest whole-song one-second RMS regions (186 s and 192 s); instrument/downbeat status unknown.",
+      "motion": {
+        "attack_frames": 1,
+        "hold_frames": 2,
+        "horizontal_offset_px_max": 6,
+        "return_frames": 5,
+        "rotation_deg_max": 0.15,
+        "scale_floor": 1.03,
+        "vertical_offset_px_max": 4
+      },
+      "review_window": "03:06.500-03:13.600",
+      "safe_crop": "pre-scale to safe base crop; reject any forbidden border exposure",
+      "vocal_override": "no shake on delicate onset, held note, breath or lyric landing"
+    }
+  ],
+  "schema": "MUSICAL_EFFECT_PROPOSALS_V01",
+  "status": "PROVISIONAL_REQUIRES_NATIVE_AND_AUDIBLE_CONFIRMATION",
+  "timeline_fps": 30
+}

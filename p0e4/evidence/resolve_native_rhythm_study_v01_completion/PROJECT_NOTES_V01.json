@@ -1,0 +1,11 @@
+{
+  "do_not_render_effects": true,
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "outcome": "MAC_UNLOCKED; RESOLVE_AND_GEMINI_SURFACES_REACHED; TWO_UI_ONLY_ACTIONS_REMAIN",
+  "recorded_at": "2026-09-25T22:28:00+02:00",
+  "schema": "PROJECT_NOTES_V01"
+}

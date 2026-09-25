@@ -1,0 +1,26 @@
+{
+  "attempts": [
+    {
+      "result": "AVAILABLE",
+      "surface": "fresh authenticated Gemini chat"
+    },
+    {
+      "result": "SYSTEM_FILE_CHOOSER_NOT_CONTROLLABLE_BY_AUTHORIZED_BROWSER_SURFACE",
+      "surface": "local file upload"
+    },
+    {
+      "detail": "Picker was restricted to Docs, Sheets, Slides and office document MIME types; WAV/audio was not selectable.",
+      "result": "REJECTED_BY_PICKER_SCOPE",
+      "surface": "Gemini Add from Drive picker"
+    }
+  ],
+  "audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "fabricated_assessment": false,
+  "independence_preserved": true,
+  "other_agent_conclusions_exposed": false,
+  "recorded_at": "2026-09-25T22:28:00+02:00",
+  "schema": "GEMINI_INDEPENDENT_REVIEW_RECEIPT_V02",
+  "smallest_human_action": "In the already open fresh Gemini chat, upload the exact AAKHRI ISHQ MASTER 2.wav (SHA256 670e5ddf...) when prompted; do not add other agents conclusions.",
+  "status": "BLOCKED_BEFORE_DISPATCH",
+  "verdict": null
+}
