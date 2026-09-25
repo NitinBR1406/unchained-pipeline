@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-25T16:36:55+02:00",
+  "user_quote": "Inderdaad de algehele huidskleur mag zachter van kleur zodat het er natuurlijker uit ziet,",
+  "review_context": {
+    "master_state": "V16.9",
+    "state_version": 35,
+    "review_sha256": "6abcf3378ecce5df960c3d88df6bf0a1429e185996f321ecb37a0c7c381ca69b"
+  },
+  "status": "REVISION_REQUESTED_PENDING_LOCAL_EXECUTION",
+  "interpretation": "Overall skin color should be gentler and more natural. Treat primarily as a bounded skin chroma/intensity refinement, not further blanket luminance reduction. This refines earlier richer-skin preference; no final color approval.",
+  "execution_request": [
+    "Reconcile current evidence and avoid duplicate work; retain V03 as development starting point",
+    "Create one restrained natural-skin revision reducing excessive skin color intensity across face, eyelids, neck and visible hands consistently; inspect warmth against correctly interpreted source and adjust hue only if justified",
+    "Preserve established highlight rolloff, natural texture, facial depth, background treatment and base framing; avoid grey/pale skin, lip discoloration, eye changes or temporal key artifacts",
+    "Compare matched V03 versus revised longer excerpts covering all four takes and real cuts; use exact HLG source reference rather than SDR surrogate to judge naturalness",
+    "Resolve outstanding decode validation limitation and verify review 00:08 forehead and 00:45 dark clothing observations against authoritative HLG bytes; proxy artifacts must not trigger unsupported grade changes",
+    "Maintain minimum 10-bit BT.2020 Rec.2100 HLG and MASTER 2 audio. No artificial blur, skin smoothing, static ellipse mask, face manipulation or generative alteration. Dolby Vision metadata limitation stays explicit",
+    "One independent Gemini QC with disclosed viewing limitations; Nitin chooses creative outcome",
+    "Persist new versioned review, hash-verified evidence and feedback; update ledger-derived Master State, pointer and project notes using verified results only"
+  ],
+  "governance": {
+    "final_color_approved": false,
+    "final_video_approved": false,
+    "final_asset_approved": false,
+    "rights_cleared": false,
+    "full_master_render_authorized": false,
+    "beat_effects_preview": "WAITING_FOR_COLOR",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
