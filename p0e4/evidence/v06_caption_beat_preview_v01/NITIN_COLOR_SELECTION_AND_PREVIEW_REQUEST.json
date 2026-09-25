@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-25T20:12:02+02:00",
+  "user_quote": "Voor nu is v6 zacht genoeg",
+  "prior_authorization_quote": "Oké prima Lets go",
+  "reconciled_head": "b1b6cc5fb8a26e3c56c9f01b416161aebda3011d",
+  "baseline": {
+    "master_state": "V16.12",
+    "state_version": 38,
+    "variant": "V06",
+    "authoritative_comparison_sha256": "1a90b0645d4e2a1edb47438f38a28d6eda08a4b4ff61d939400e914f51b929d4",
+    "hlg_review_proxy_sha256": "3aaf0c9e2fca1be745d8a79b8770df63251c438ed6a4072930a86c12ac8f8599"
+  },
+  "decision": {
+    "color_direction": "V06_SELECTED_FOR_NEXT_PRIVATE_PREVIEW",
+    "provisional": true,
+    "scope": "User accepts softness for now; previously agreed short caption/beat preview may proceed with V06. Not a final full-song color/video/asset approval.",
+    "color_gate_for_short_preview": "SATISFIED",
+    "full_song_color_approval": false
+  },
+  "status": "AUTHORIZED_PENDING_LOCAL_EXECUTION",
+  "instructions": [
+    "Reconcile latest branch, evidence and frozen state; reuse completed work. Record this bounded human decision in ledger-derived Master State and project notes without elevating release gates",
+    "Use selected V06 settings for the proposed 24-second excerpt at original timeline 01:12–01:36. Preserve natural skin, framing, HLG pipeline and authoritative MASTER 2 audio. No further creative color revision unless an evidenced defect needs bounded repair",
+    "Build one restrained beat-driven motion treatment from verified MASTER 2 musical accents, shared across all caption variants. Use subtle punch-ins and quiet intervals; avoid excessive shake and check earlier motion issues in overlapping interval",
+    "Render A performance-only and B original opening-line draft 'Some love stories never really end.' with existing timing/layout draft. B is review copy, not user-approved final copy or a translation",
+    "Resolve C selective sung words from authoritative available lyrics and verified sung timing where possible. If still unavailable, leave C explicitly HOLD, do not invent words or silently substitute another variant; A/B should proceed independently",
+    "Keep source excerpt, edit, audio, color and effects identical across A/B/C; only caption content differs. Preserve majority text-free performance and reconcile stricter existing brand/derivative/safe-area rules",
+    "Check face/mouth/lipsync integrity, highlights through animated crops, headroom, framing exclusions, caption readability, safe placement and skin-tone stability. Text must not cover face or mouth",
+    "Maintain minimum 10-bit BT.2020 Rec.2100 HLG. No artificial blur, static ellipse masking, skin smoothing, face manipulation or generative alteration; disclose Dolby Vision identity limitations",
+    "Run targeted technical QC and one independent Gemini review of the combined comparison. Nitin chooses the creative outcome; do not claim measured watch-time or growth gains",
+    "Save previews non-destructively to new versioned authoritative Shared Drive folder, verify hashes, persist evidence and update Master State/pointer/project notes with actual results and any blockers",
+    "Return exact review links, variant mapping, what effects/caption timings were used and any remaining C blocker. Stop at Nitin preview review; do not render full-song master"
+  ],
+  "governance": {
+    "full_master_render_authorized": false,
+    "final_video_approved": false,
+    "final_asset_approved": false,
+    "rights_cleared": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "frozen_P0_E0_through_E3": "UNCHANGED"
+  },
+  "execution_started_in_this_chat": false
+}
