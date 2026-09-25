@@ -1,0 +1,75 @@
+{
+  "limitations": [
+    "Geometric ROI is not semantic subject or skin segmentation.",
+    "PNG extraction uses platform display decoding; values are comparative proxies, not HDR nits or calibrated Resolve scopes.",
+    "No causal retention/watch-time conclusion may be drawn."
+  ],
+  "measurement_domain": "8_BIT_DISPLAY_DECODED_PNG_PROXY_NOT_ABSOLUTE_HLG_SCOPES",
+  "pairs": [
+    {
+      "current_frame": "frame_2.5.png",
+      "delta_revised_minus_current": {
+        "center_mean_chroma": -0.005944,
+        "center_mean_luma": -0.004516,
+        "center_p95_luma": -0.013393,
+        "center_p99_luma": -0.017879,
+        "full_mean_luma": -0.00244,
+        "full_p95_luma": -0.011335,
+        "full_p99_luma": -0.017348,
+        "outer_mean_chroma": -0.002834
+      },
+      "revised_frame": "frame_7.5.png",
+      "take": 1
+    },
+    {
+      "current_frame": "frame_12.5.png",
+      "delta_revised_minus_current": {
+        "center_mean_chroma": -0.006148,
+        "center_mean_luma": -0.003984,
+        "center_p95_luma": -0.015521,
+        "center_p99_luma": -0.018811,
+        "full_mean_luma": -0.002323,
+        "full_p95_luma": -0.014092,
+        "full_p99_luma": -0.019342,
+        "outer_mean_chroma": -0.002538
+      },
+      "revised_frame": "frame_17.5.png",
+      "take": 2
+    },
+    {
+      "current_frame": "frame_22.5.png",
+      "delta_revised_minus_current": {
+        "center_mean_chroma": -0.002865,
+        "center_mean_luma": -0.002041,
+        "center_p95_luma": -0.008209,
+        "center_p99_luma": -0.015354,
+        "full_mean_luma": -0.001287,
+        "full_p95_luma": -0.008076,
+        "full_p99_luma": -0.024924,
+        "outer_mean_chroma": -0.001276
+      },
+      "revised_frame": "frame_27.5.png",
+      "take": 3
+    },
+    {
+      "current_frame": "frame_32.5.png",
+      "delta_revised_minus_current": {
+        "center_mean_chroma": -0.004828,
+        "center_mean_luma": -0.003145,
+        "center_p95_luma": -0.010868,
+        "center_p99_luma": -0.025357,
+        "full_mean_luma": -0.001775,
+        "full_p95_luma": -0.009305,
+        "full_p99_luma": -0.027383,
+        "outer_mean_chroma": -0.001743
+      },
+      "revised_frame": "frame_37.5.png",
+      "take": 4
+    }
+  ],
+  "roi_definition": {
+    "center_subject_proxy": "x=22%-78%, y=5%-62%",
+    "outer_background_proxy": "all pixels outside center subject proxy"
+  },
+  "schema": "R1_REFINEMENT_FRAME_MEASUREMENTS_V01"
+}

@@ -1,0 +1,21 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "full_master_rendered": false,
+  "schema": "R1_HIGHLIGHT_BACKGROUND_REGRESSION_V01",
+  "status": "PASS",
+  "suites": [
+    "p0e4.tests.test_color_development",
+    "p0e4.tests.test_source_color_management",
+    "p0e4.tests.test_r1_framed_color_study",
+    "p0e4.tests.test_r1_highlight_refinement",
+    "p0e4.tests.test_v164_projection",
+    "p0e4.tests.test_v165_projection",
+    "p0e4.tests.test_v166_projection"
+  ],
+  "technical_decode": "1200_OF_1200_FRAMES_H265_REVIEW_PROXY",
+  "tests_run": 24,
+  "warnings": [
+    "Existing ResourceWarning from legacy EventLedger open-file implementation; no test failure."
+  ]
+}

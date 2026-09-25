@@ -1,0 +1,20 @@
+{
+  "decision_requested": "Confirm REVISED, retain CURRENT, reject both, or describe the smallest correction. This is final color review only; it is not publication approval.",
+  "gemini_summary": "Gemini observed softer facial highlights and a slightly calmer background across all four revised takes, retained rich skin, and no visible encoding artifacts. Gemini did not select the winner. Growth effects remain hypotheses with uncertainty.",
+  "mapping": {
+    "take_1": "00:00 CURRENT / 00:05 REVISED",
+    "take_2": "00:10 CURRENT / 00:15 REVISED",
+    "take_3": "00:20 CURRENT / 00:25 REVISED",
+    "take_4": "00:30 CURRENT / 00:35 REVISED"
+  },
+  "review_sha256": "ad6ec65d104cd45aea7cfe0470553f1d8e0a012221909a206fb0c497661e00d6",
+  "review_video": "AAKHRI_R1_CURRENT_VS_REVISED_HLG_REVIEW_V01.mp4",
+  "schema": "NITIN_HIGHLIGHT_BACKGROUND_REVIEW_NOTE_V01",
+  "status": "WAITING_FOR_NITIN_HIGHLIGHT_BACKGROUND_COLOR_REVIEW",
+  "technical_summary": [
+    "10-bit H.265, BT.2020/Rec.2100 HLG tags verified",
+    "1200/1200 frames decoded",
+    "high-percentile display-proxy luma reduced in all four revised pairs",
+    "no full master rendered"
+  ]
+}

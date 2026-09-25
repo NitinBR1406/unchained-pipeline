@@ -1,0 +1,13 @@
+{
+  "account": "nitinramdaras23@gmail.com",
+  "blindness": "NO_CHATGPT_OR_CLAUDE_CONCLUSIONS_EXPOSED",
+  "conversation_url": "https://gemini.google.com/app/478cbe9389830acd",
+  "input": {
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-highlight-refinement/AAKHRI_R1_CURRENT_VS_REVISED_HLG_REVIEW_V01.mp4",
+    "sha256": "ad6ec65d104cd45aea7cfe0470553f1d8e0a012221909a206fb0c497661e00d6"
+  },
+  "recorded_at": "2026-09-25T11:19:15Z",
+  "result_ref": "p0e4/evidence/r1_highlight_refinement_v01_execution/GEMINI_INDEPENDENT_HIGHLIGHT_BACKGROUND_QC_V01.json",
+  "schema": "GEMINI_INDEPENDENT_HIGHLIGHT_BACKGROUND_QC_RECEIPT_V01",
+  "status": "COMPLETED_INDEPENDENT_NO_CREATIVE_WINNER"
+}

@@ -1,0 +1,115 @@
+{
+  "authority": "NITIN",
+  "authorization_ref": "p0e4/evidence/r1_highlight_refinement_v01/NITIN_REVISION_AND_EXECUTION_REQUEST.json",
+  "base_framing": {
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "reason": "REMOVE_CEILING_AND_LOWER_BORDER"
+    },
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+    },
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.49
+      ],
+      "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+    },
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+      "base_scale": 2.3,
+      "center": [
+        0.5,
+        0.72
+      ],
+      "reason": "LOWER_SUBJECT_POSITION_REQUIRES_UPWARD_NORMALIZATION"
+    }
+  },
+  "baseline": {
+    "approval_status": "TECHNICAL_BASIS_NOT_FINAL_SELECTION",
+    "identity": "CURRENT_R1_CALMER_BACKGROUND_RICHER_SUBJECT_CANDIDATE",
+    "lut_sha256": "ec5a9aed880dc5b4009111ee07b82a50bd5cf65fb95fd94d081fae496cc2930c"
+  },
+  "color_management": {
+    "gamut_mapping": "None",
+    "input": "Rec.2100 HLG",
+    "output": "Rec.2100 HLG",
+    "timeline": "Rec.2100 HLG",
+    "tone_mapping": "None"
+  },
+  "constraints": [
+    "BT.2020 Rec.2100 HLG minimum 10-bit; no silent Rec.709 conversion",
+    "No artificial blur, static ellipse mask, skin smoothing, face manipulation or generative alteration",
+    "No full Dolby Vision display identity claim",
+    "No full-song render or beat-effects progression before final color approval",
+    "No production deployment, publication, purchases or frozen P0-E0 through E3 edits"
+  ],
+  "full_master_allowed": false,
+  "governance": {
+    "final_asset_approved": false,
+    "final_color_approved": false,
+    "final_video_approved": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "rights_cleared": false
+  },
+  "measurement_domain": {
+    "domain": "AVFoundation-decoded 8-bit PNG samples from HLG-tagged ProRes output",
+    "not_claimed": [
+      "calibrated Resolve scope evidence",
+      "absolute scene luminance",
+      "Dolby Vision identity",
+      "semantic face segmentation"
+    ],
+    "purpose": "repeatable relative current-versus-revised comparison only"
+  },
+  "representative_scenes": [
+    {
+      "scene_index": 1,
+      "source_time_seconds": 36.0,
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8"
+    },
+    {
+      "scene_index": 2,
+      "source_time_seconds": 24.0,
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin"
+    },
+    {
+      "scene_index": 3,
+      "source_time_seconds": 96.0,
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8"
+    },
+    {
+      "scene_index": 4,
+      "source_time_seconds": 72.0,
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW"
+    }
+  ],
+  "revised_recipe": {
+    "background_neutral_chroma_delta": -0.1,
+    "highlight_max_encoded_delta": -0.02,
+    "highlight_shoulder_full": 0.94,
+    "highlight_shoulder_start": 0.7,
+    "operation": "BOUNDED_HLG_SIGNAL_SHOULDER_PLUS_HUE_CHROMA_GATING",
+    "semantic_subject_isolation_claimed": false,
+    "skin_chroma_delta": 0.065
+  },
+  "schema": "R1_HIGHLIGHT_BACKGROUND_REFINEMENT_CONTRACT_V01",
+  "segment_seconds": 5,
+  "variant_order": [
+    "CURRENT_R1_CALMER_BACKGROUND_RICHER_SUBJECT_CANDIDATE",
+    "REVISED_GENTLER_HIGHLIGHTS_CALMER_BACKGROUND"
+  ]
+}
