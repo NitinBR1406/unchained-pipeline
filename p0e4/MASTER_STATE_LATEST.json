@@ -1,11 +1,11 @@
 {
-  "evidence_manifest": "p0e4/evidence/r1_framed_study_v164/SHA256SUMS.txt",
-  "master_state_version": "V16.4",
-  "path": "p0e4/evidence/r1_framed_study_v164/UNCHAINED_MASTER_PROJECT_STATE_V16_4.json",
+  "evidence_manifest": "p0e4/evidence/r1_framed_study_v164_execution/SHA256SUMS.txt",
+  "master_state_version": "V16.5",
+  "path": "p0e4/evidence/r1_framed_study_v164_execution/UNCHAINED_MASTER_PROJECT_STATE_V16_5.json",
   "production_e2e_status": "BLOCKED_NOT_GREEN",
   "schema_version": 1,
-  "scope_status": "R1_STUDY_PREPARED_MAC_EXECUTION_BLOCKED",
-  "sha256": "ca0f7350d1ea8706f210611e541db6c038ea80f25a19383ff37ddeafd53480ac",
-  "state_version": 30,
-  "tested_sha": "0e4bc31345a90e96ad3cdaf342a42f36139d42b7"
+  "scope_status": "WAITING_FOR_NITIN_R1_REFINED_COLOR_REVIEW",
+  "sha256": "6edbedf6f4b4ba57669398258c9451439566f5c7c9c163b53cea2a07b01d7990",
+  "state_version": 31,
+  "tested_sha": "57b1fa1df2d37b82f0812fb339c30fc93d462aab"
 }

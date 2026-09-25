@@ -1,0 +1,40 @@
+{
+  "authoritative_matrix": {
+    "bytes": 1593948897,
+    "local_path": ".local/aakhri-r1-framed-hlg-study-retry1/AAKHRI_R1_FRAMED_HLG_MATRIX_V01.mov",
+    "sha256": "e6408ed5184c442052f225ab41f3bf1b48ae54440bda665c114ef58edb1f344a"
+  },
+  "full_master_rendered": false,
+  "gemini_independent_review": "COMPLETED_WITH_RENDITION_LIMITATIONS",
+  "gemini_rendition": {
+    "bytes": 22657273,
+    "local_path": ".local/aakhri-r1-framed-hlg-study-retry1/AAKHRI_R1_FRAMED_HLG_MATRIX_GEMINI_RENDITION_V01.mov",
+    "sha256": "19f3a3db7183b8b1ec55a79995ff1d68e637717dfb106ee0d943564a6a4bdf3b"
+  },
+  "governance": {
+    "creative_winner_selected": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "handoff_sha": "2a720c6e74bcdb504917187f5e0ee5218db146c9",
+  "schema": "R1_FRAMED_HLG_STUDY_ACCEPTANCE_V01",
+  "shared_drive_persistence": "BLOCKED_BY_AUTOMATIC_APPROVAL_REVIEW_NO_COPY_PERFORMED",
+  "shared_drive_target": "Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_R1_REFINED_FRAMED_HLG_COLOR_STUDY_V01",
+  "status": "WAITING_FOR_NITIN_R1_REFINED_COLOR_REVIEW",
+  "technical_qc": "GREEN_WITH_GEMINI_VISUAL_UNCERTAINTY",
+  "tested_sha": "57b1fa1df2d37b82f0812fb339c30fc93d462aab",
+  "tests": {
+    "broad_discovery": {
+      "acceptance_use": "NOT_CREDITED_AS_FULL_GREEN",
+      "cause": "jsonschema/cryptography unavailable in local Python runtimes; unrelated suites did not execute",
+      "dependency_import_errors": 18,
+      "ran": 246
+    },
+    "targeted": {
+      "failed": 0,
+      "passed": 3
+    }
+  }
+}

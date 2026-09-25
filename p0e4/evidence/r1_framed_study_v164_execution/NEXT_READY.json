@@ -1,0 +1,24 @@
+{
+  "blocked_followups": [
+    "FULL_MASTER_RENDER",
+    "SHARED_DRIVE_PERSISTENCE_RETRY",
+    "DEPLOYMENT",
+    "PUBLICATION"
+  ],
+  "human_gate": "NITIN_R1_REFINED_COLOR_REVIEW",
+  "independent_ready_work_remaining": false,
+  "review_matrix_order": {
+    "take_1": "00:00/00:05/00:10",
+    "take_2": "00:15/00:20/00:25",
+    "take_3": "00:30/00:35/00:40",
+    "take_4": "00:45/00:50/00:55",
+    "variant_order": [
+      "R1_BASELINE",
+      "R1_CALMER_BACKGROUND",
+      "R1_CALMER_BACKGROUND_RICHER_SUBJECT"
+    ]
+  },
+  "schema": "NEXT_READY_V01",
+  "smallest_user_decision": "After viewing on an HLG-capable display, select R1_BASELINE, R1_CALMER_BACKGROUND, R1_CALMER_BACKGROUND_RICHER_SUBJECT, or reject all and describe the smallest correction.",
+  "status": "WAITING_FOR_NITIN_R1_REFINED_COLOR_REVIEW"
+}
