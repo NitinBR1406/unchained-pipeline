@@ -1,0 +1,15 @@
+{
+  "execution_route": "LOCAL_RESOLVE_UI_ONLY",
+  "external_detector_substituted": false,
+  "native_feature_presence": "PROVEN_BY_INSTALLED_BINARY_STRINGS",
+  "observed_strings": [
+    "AI Detect Music Beats",
+    "Show Music Beats",
+    "Hide Music Beats",
+    "Update Music Beats",
+    "There is no valid audio only clip selected for music beat detection analysis."
+  ],
+  "resolve_version": "21.1.0.17",
+  "schema": "CAPABILITY_AUDIT_V01",
+  "scripting_api_support": "NOT_EXPOSED_IN_INSTALLED_DOCUMENTATION"
+}

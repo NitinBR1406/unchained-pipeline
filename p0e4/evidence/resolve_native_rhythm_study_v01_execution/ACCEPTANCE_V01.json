@@ -1,0 +1,12 @@
+{
+  "effect_proposals_completed": false,
+  "effect_rendered": false,
+  "exact_audio_bound": true,
+  "full_master_rendered": false,
+  "gemini_review_completed": false,
+  "native_analysis_completed": false,
+  "native_feature_present": true,
+  "schema": "RESOLVE_NATIVE_RHYTHM_STUDY_ACCEPTANCE_V01",
+  "status": "PREPARED_BLOCKED_MAC_LOCKED",
+  "waveform_listening_completed": false
+}

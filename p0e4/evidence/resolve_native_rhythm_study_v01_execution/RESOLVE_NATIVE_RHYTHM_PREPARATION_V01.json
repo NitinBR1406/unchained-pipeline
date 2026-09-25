@@ -1,0 +1,20 @@
+{
+  "schema": "RESOLVE_NATIVE_RHYTHM_PREPARATION_V01",
+  "resolve_product": "DaVinci Resolve Studio",
+  "resolve_version": "21.1.0.17",
+  "project": "UNCHAINED_AAKHRI_NATIVE_RHYTHM_STUDY_V01",
+  "project_created": true,
+  "timeline": "AAKHRI_MASTER2_NATIVE_BEAT_STUDY",
+  "source_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/bound-inputs/AAKHRI ISHQ MASTER 2.wav",
+  "source_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "source_clip_count": 1,
+  "current_page": "edit",
+  "native_ui_strings_observed": [
+    "AI Detect Music Beats",
+    "Show Music Beats",
+    "Hide Music Beats",
+    "Update Music Beats"
+  ],
+  "scripting_api_music_beat_method": "NOT_EXPOSED_IN_INSTALLED_DOCUMENTATION",
+  "effect_rendered": false
+}

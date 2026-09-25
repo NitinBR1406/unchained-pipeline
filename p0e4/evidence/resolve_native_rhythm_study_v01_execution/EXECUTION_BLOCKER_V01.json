@@ -1,0 +1,21 @@
+{
+  "blocked_steps": [
+    "Invoke native AI Detect Music Beats",
+    "Capture native beat overlay and waveform evidence",
+    "Perform representative listening validation",
+    "Upload exact evidence to isolated Gemini review context"
+  ],
+  "completed_steps": [
+    "Reconciled V16.14 and latest request",
+    "Audited installed Resolve capability",
+    "Connected Resolve Studio 21.1.0.17",
+    "Created isolated private project and audio-only timeline",
+    "Verified exact MASTER 2 SHA256"
+  ],
+  "effect_proposals_finalized": false,
+  "effect_rendered": false,
+  "gemini_review": null,
+  "schema": "EXECUTION_BLOCKER_V01",
+  "smallest_nitin_action": "Unlock the Mac once and leave Resolve available.",
+  "status": "BLOCKED_MAC_LOCKED"
+}
