@@ -1,11 +1,11 @@
 {
-  "evidence_manifest": "p0e4/evidence/v03_color_consistency_v01_execution/SHA256SUMS.txt",
-  "master_state_version": "V16.9",
-  "path": "p0e4/evidence/v03_color_consistency_v01_execution/UNCHAINED_MASTER_PROJECT_STATE_V16_9.json",
+  "evidence_manifest": "p0e4/evidence/v04_natural_skin_v01_execution/SHA256SUMS.txt",
+  "master_state_version": "V16.10",
+  "path": "p0e4/evidence/v04_natural_skin_v01_execution/UNCHAINED_MASTER_PROJECT_STATE_V16_10.json",
   "production_e2e_status": "BLOCKED_NOT_GREEN",
   "schema_version": 1,
-  "scope_status": "WAITING_FOR_NITIN_V03_COLOR_CONSISTENCY_REVIEW",
-  "sha256": "e5faa984fb6677af45144f963fd67c66cbb6896423443efe0c46a2d21787a0dd",
-  "state_version": 35,
-  "tested_sha": "0001eb98d175d5605fa0036af1f170998579961e"
+  "scope_status": "WAITING_FOR_NITIN_V04_NATURAL_SKIN_COLOR_REVIEW",
+  "sha256": "42b6f4038fcc83382246e1cf14b2891619ebc21bc26523335c64c02a74cc0608",
+  "state_version": 36,
+  "tested_sha": "28bdde5afa87c58366d7730f8b368f6941ad5393"
 }
