@@ -16,5 +16,6 @@
     "no render performed"
   ],
   "result": "PARTIAL_GREEN_POLICY_PREPARATION_BLOCKED_EXISTING_CLAUDE_DETECTOR_BYTES",
-  "schema": "ACCEPTANCE_V01"
+  "schema": "ACCEPTANCE_V01",
+  "tested_sha": "548278b349f843150d832a209b81f379f83e0628"
 }

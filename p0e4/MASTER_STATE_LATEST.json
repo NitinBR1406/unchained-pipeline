@@ -5,7 +5,7 @@
   "production_e2e_status": "BLOCKED_NOT_GREEN",
   "schema_version": 1,
   "scope_status": "WAITING_FOR_CLAUDE_DETECTOR_BYTES_AND_NITIN_CONTINUOUS_POLICY_SELECTION",
-  "sha256": "8887ee6a84b0947e6d0a74afd8eb87a0a21c79692830a9936dd9ad32af116688",
+  "sha256": "e25717a8a74a243c18916d5beadce7c9b72341d7d65af779518bfffc1756d55f",
   "state_version": 45,
-  "tested_sha": "PENDING_EXACT_TESTED_COMMIT"
+  "tested_sha": "548278b349f843150d832a209b81f379f83e0628"
 }
