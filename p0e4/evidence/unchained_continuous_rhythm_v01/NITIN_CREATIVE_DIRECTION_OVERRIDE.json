@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-25T22:47:22+02:00",
+  "user_quote": "ik moet je zeggen dat de voorstellen van gemini treurig zijn, ik wil een continu ritmisch edit. dat maakt een premium video/unchained nitin juist onderscheidend!",
+  "baseline_master_state": "V16.17",
+  "status": "CREATIVE_DIRECTION_CHANGED_PENDING_REVISED_POLICY",
+  "human_decision": {
+    "previous_three_isolated_effect_proposals": "REJECTED_BY_NITIN_AS_CREATIVE_DIRECTION",
+    "new_direction": "CONTINUOUS_RHYTHMIC_EDIT_AS_UNCHAINED_NITIN_SIGNATURE",
+    "premium_positioning": "Nitin creative brand goal, not measured quality/retention claim"
+  },
+  "supersedes": [
+    "At most three restrained treatments per song",
+    "Default sparse isolated accents as overall creative direction",
+    "Default stillness throughout vocal-led sections; must instead propose performance-supporting rhythm and modulation"
+  ],
+  "preserves": [
+    "V06 provisional color",
+    "Real source/audio alignment and HLG pipeline",
+    "Natural face and mouth integrity and safe framing",
+    "No inferred kick/snare labels or full-duration Gemini coverage",
+    "No final video or publication approval"
+  ],
+  "implementation_direction": [
+    "Amend existing reusable Resolve template plan; avoid a competing renderer or separate one-off pipeline",
+    "Design continuous rhythm across the edit using coordinated cuts, alternating punch-ins and releases, rhythmic camera movement and short impacts; density and amplitude follow phrase/section energy",
+    "Continuous rhythm is not synonymous with continuous shake. Preserve perceptible rhythm through varied visual actions and coordinated recovery; avoid stacking transformations or resetting to arbitrary static gaps",
+    "Kick-to-shake and snare-to-quick-zoom are candidate mappings for joint decision, not yet selected parameters. Propose beat/subdivision/cut rules from actual verified events",
+    "Protect visible singing/expression by adapting effect amplitude/type rather than automatically suppressing rhythm whenever vocals occur",
+    "First verify native beat timing and audio alignment, resolve Gemini duration mismatch; do not manufacture a full beat map from three old RMS timestamps",
+    "Ask Gemini to reassess actual audio/picture under this new brief, not repeat the three-accent policy. Request two concrete continuous-rhythm treatments on the same representative20–30s excerpt: controlled groove and stronger performance energy, both genuinely continuous",
+    "Provide event-by-event policies and proposed timing/intensity for joint Nitin/ChatGPT/Gemini selection. No numeric final algorithm inferred from this feedback",
+    "Prepare template/config updates now; new effect-render gate remains pending joint policy choice per earlier instruction. No full-song render",
+    "Record rejection and revised direction in ledger-derived Master State and persistent project notes; preserve prior evidence"
+  ],
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false,
+    "final_video_approved": false,
+    "new_effect_policy_parameters_selected": false
+  }
+}
