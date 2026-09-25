@@ -1,0 +1,11 @@
+{
+  "schema": "GEMINI_V05_QC_RECEIPT_V01",
+  "conversation_url": "https://gemini.google.com/app/db68217ce9c04071",
+  "blind_to_other_agent_conclusions": true,
+  "qc_runs": 1,
+  "format_correction_attempted": true,
+  "format_correction_result": "GEMINI_ERROR_NO_NEW_REVIEW",
+  "raw_response_anomaly": "Outer verdict string began with malformed REJECT fragment and embedded a complete nested PASS JSON object; nested object had no defect ranges and creative_winner_selected=false.",
+  "substantive_result_used": "NESTED_COMPLETE_JSON_OBJECT",
+  "creative_winner_selected": false
+}

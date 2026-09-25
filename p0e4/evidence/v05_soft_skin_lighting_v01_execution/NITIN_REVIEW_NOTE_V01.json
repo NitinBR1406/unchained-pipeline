@@ -1,0 +1,12 @@
+{
+  "schema": "NITIN_V05_REVIEW_NOTE_V01",
+  "status": "WAITING_FOR_NITIN_V05_SOFT_SKIN_LIGHTING_COLOR_REVIEW",
+  "review_timeline": [
+    {"source": "00:08-00:24", "V04": "00:00-00:16", "V05": "00:16-00:32"},
+    {"source": "01:12-01:36", "V04": "00:32-00:56", "V05": "00:56-01:20"},
+    {"source": "01:48-02:10", "V04": "01:20-01:42", "V05": "01:42-02:04"}
+  ],
+  "change": "V05 gently compresses only high-luminance skin peaks and slightly reduces chroma in the same bright regions. It does not perform physical relighting or recover clipped detail.",
+  "unchanged": ["base framing", "EDL", "sync", "background grade", "programme audio", "no creative motion or beat effects"],
+  "limitations": ["Browser/display playback may tone-map HLG", "Dolby Vision metadata identity is not claimed", "Final creative color approval remains Nitin-only"]
+}

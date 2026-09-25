@@ -1,0 +1,8 @@
+{
+  "broad_discovery_failures": "14 import errors; no executed assertion failures reported before import stop",
+  "broad_discovery_status": "BLOCKED_BY_MISSING_LOCAL_JSONSCHEMA_DEPENDENCY",
+  "schema": "V05_REGRESSION_V01",
+  "scope": "V04/V05 transforms plus V16.10/V16.11 deterministic projections",
+  "targeted_status": "GREEN",
+  "targeted_tests_run": 5
+}

@@ -1,0 +1,6 @@
+{
+  "gemini_note": "One independent review completed; substantive nested JSON passed with 0.65 confidence; malformed outer prefix is explicitly retained as uncertainty.",
+  "next_gate": "NITIN_V05_SOFT_SKIN_LIGHTING_COLOR_REVIEW",
+  "schema": "PROJECT_NOTES_V01",
+  "summary": "One bounded V04/V05 HLG comparison rendered; V05 softens high-luminance skin peaks without full-master or beat effects."
+}

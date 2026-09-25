@@ -1,0 +1,13 @@
+{
+  "schema": "V05_SOFT_SKIN_LIGHTING_TECHNICAL_QC_V01",
+  "authoritative_review": {"sha256": "c9d55e5078f5bff0de46342910393de3e2d2e594a8f40c0cd1b83e1265bdbb69", "bytes": 3432009222, "codec": "ProRes 422 HQ", "duration_seconds": 124},
+  "decode_proxy": {"sha256": "4f98fc0fae33885020ec747f3fd620df29e832379160e7b4db894d97ddd41b4e", "bytes": 114333586, "codec": "H.265 10-bit", "decoded_frames": 3720, "expected_frames": 3720, "reader_status": 2, "primaries": "ITU_R_2020", "transfer": "ITU_R_2100_HLG", "matrix": "ITU_R_2020", "width": 1080, "height": 1920, "fps": 30},
+  "resolve_color_management": {"input": "Rec.2100 HLG", "timeline": "Rec.2100 HLG", "output": "Rec.2100 HLG", "tone_mapping": "None", "gamut_mapping": "None"},
+  "matched_frame_proxy_measurements": [
+    {"review_pair_seconds": [10,26], "mean_channel_delta_16bit_display_decode": [-1.2659,-0.6300,-0.2541], "mean_abs_delta": 1.7835, "p99_abs_delta": 9.0},
+    {"review_pair_seconds": [44,68], "mean_channel_delta_16bit_display_decode": [-1.1696,-0.5842,-0.2570], "mean_abs_delta": 1.8627, "p99_abs_delta": 9.0}
+  ],
+  "scope_limit": "Frame measurements are relative 16-bit display-decoded proxy values, not calibrated HDR nits or Resolve scope captures.",
+  "dolby_vision_limit": "Full Apple/Dolby Vision display identity is not claimed; dvvC metadata preservation is not established.",
+  "status": "GREEN_10BIT_HLG_3720_OF_3720_DECODED"
+}

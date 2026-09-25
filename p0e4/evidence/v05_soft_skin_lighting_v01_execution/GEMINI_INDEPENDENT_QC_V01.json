@@ -1,0 +1,17 @@
+{
+  "schema": "GEMINI_INDEPENDENT_V05_QC_V01",
+  "conversation_url": "https://gemini.google.com/app/db68217ce9c04071",
+  "input_proxy_sha256": "4f98fc0fae33885020ec747f3fd620df29e832379160e7b4db894d97ddd41b4e",
+  "verdict": "PASS_FOR_NITIN_V05_COLOR_REVIEW",
+  "confidence_0_to_1": 0.65,
+  "comparison_observations": "V05 introduces controlled roll-off on hot forehead, nose-bridge and cheek highlights while retaining organic warmth and facial dimensionality.",
+  "defect_ranges": [],
+  "motion_stability": "No edge chattering, qualification tearing or localized luminance pumping was detected during reviewed head turns, gestures or blinks.",
+  "skin_and_texture": "Gemini reported retained pore structure, micro-contrast, facial-hair detail, lips and eye integrity, with neck and hand consistency.",
+  "preservation_checks": {"deep_blacks_retained": true, "background_acoustic_slats_intact": true, "clothing_texture_preserved": true, "global_darkening_or_desaturation_flagged": false},
+  "viewing_limitations": "Gemini reviewed a browser/display-mapped 10-bit Rec.2100 HLG proxy. Peak HDR behavior and dynamic metadata cannot be confirmed in this surface.",
+  "retention_attention_hypothesis": "Gemini hypothesized that softer specular peaks could reduce visual fatigue and focus gaze on eyes and performance nuance; this is unmeasured and uncertain.",
+  "creative_winner_selected": false,
+  "normalization_note": "Gemini's first response contained an erroneous malformed outer prefix, followed by a complete nested PASS object with no defects. A format-only retry errored. This record preserves the internally consistent nested response and the raw anomaly in the receipt; it does not invent a new review.",
+  "status": "COMPLETED_WITH_RESPONSE_FORMAT_ANOMALY"
+}

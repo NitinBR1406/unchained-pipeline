@@ -1,0 +1,299 @@
+{
+  "baseline_v04_lut": {
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v04-natural-skin-v01/luts/NEW_V04_NATURAL_SKIN.cube",
+    "read_only": true,
+    "sha256": "58dd7363782a299cb4a17b1ec0e6045640f114834050df1d32ba8b46dfa504d8"
+  },
+  "classification": "PRIVATE_V04_VS_V05_COLOR_REVIEW",
+  "creative_motion": false,
+  "full_master_rendered": false,
+  "master": {
+    "bytes": 61749398,
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "original_restored": true,
+  "outputs": [
+    {
+      "bytes": 3432009222,
+      "frames": 3720,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v05-soft-skin-lighting-v01/AAKHRI_V04_VS_V05_SOFT_SKIN_LIGHTING_HLG_REVIEW_V01.mov",
+      "role": "AUTHORITATIVE_HLG_REVIEW",
+      "sha256": "c9d55e5078f5bff0de46342910393de3e2d2e594a8f40c0cd1b83e1265bdbb69",
+      "status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 137611
+      }
+    },
+    {
+      "bytes": 114333586,
+      "frames": 3720,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v05-soft-skin-lighting-v01/AAKHRI_V04_VS_V05_SOFT_SKIN_LIGHTING_HLG_DECODE_PROXY_V01.mp4",
+      "role": "10BIT_HLG_DECODE_AND_GEMINI_PROXY",
+      "sha256": "4f98fc0fae33885020ec747f3fd620df29e832379160e7b4db894d97ddd41b4e",
+      "status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 140021
+      }
+    }
+  ],
+  "project_closed": true,
+  "project_settings_actual": {
+    "colorScienceMode": "davinciYRGBColorManaged",
+    "colorSpaceInput": "Rec.2100 HLG",
+    "colorSpaceOutput": "Rec.2100 HLG",
+    "colorSpaceOutputGamutMapping": "None",
+    "colorSpaceOutputToneMapping": "None",
+    "colorSpaceTimeline": "Rec.2100 HLG",
+    "isAutoColorManage": "0",
+    "timelineFrameRate": "30.0",
+    "timelineResolutionHeight": "1920",
+    "timelineResolutionWidth": "1080"
+  },
+  "resolve_project_sha256": "affc07dd61599d31d36615fd2a54139a91ed183f779f92c9c8cad00cbda37534",
+  "schema": "RESOLVE_V05_SOFT_SKIN_LIGHTING_V01",
+  "segments": [
+    {
+      "original_timeline_ms": [
+        8000,
+        20000
+      ],
+      "review_ms": [
+        0,
+        12000
+      ],
+      "source_ms": [
+        9627,
+        21627
+      ],
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "variant": "CURRENT_V04_NATURAL_SKIN",
+      "window": 1
+    },
+    {
+      "original_timeline_ms": [
+        20000,
+        24000
+      ],
+      "review_ms": [
+        12000,
+        16000
+      ],
+      "source_ms": [
+        19474,
+        23474
+      ],
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "variant": "CURRENT_V04_NATURAL_SKIN",
+      "window": 1
+    },
+    {
+      "original_timeline_ms": [
+        8000,
+        20000
+      ],
+      "review_ms": [
+        16000,
+        28000
+      ],
+      "source_ms": [
+        9627,
+        21627
+      ],
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin",
+      "variant": "NEW_V05_SOFT_SKIN_LIGHTING",
+      "window": 1
+    },
+    {
+      "original_timeline_ms": [
+        20000,
+        24000
+      ],
+      "review_ms": [
+        28000,
+        32000
+      ],
+      "source_ms": [
+        19474,
+        23474
+      ],
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8",
+      "variant": "NEW_V05_SOFT_SKIN_LIGHTING",
+      "window": 1
+    },
+    {
+      "original_timeline_ms": [
+        72000,
+        92000
+      ],
+      "review_ms": [
+        32000,
+        52000
+      ],
+      "source_ms": [
+        74044,
+        94044
+      ],
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "variant": "CURRENT_V04_NATURAL_SKIN",
+      "window": 2
+    },
+    {
+      "original_timeline_ms": [
+        92000,
+        96000
+      ],
+      "review_ms": [
+        52000,
+        56000
+      ],
+      "source_ms": [
+        94044,
+        98044
+      ],
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "variant": "CURRENT_V04_NATURAL_SKIN",
+      "window": 2
+    },
+    {
+      "original_timeline_ms": [
+        72000,
+        92000
+      ],
+      "review_ms": [
+        56000,
+        76000
+      ],
+      "source_ms": [
+        74044,
+        94044
+      ],
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "variant": "NEW_V05_SOFT_SKIN_LIGHTING",
+      "window": 2
+    },
+    {
+      "original_timeline_ms": [
+        92000,
+        96000
+      ],
+      "review_ms": [
+        76000,
+        80000
+      ],
+      "source_ms": [
+        94044,
+        98044
+      ],
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "variant": "NEW_V05_SOFT_SKIN_LIGHTING",
+      "window": 2
+    },
+    {
+      "original_timeline_ms": [
+        108000,
+        125000
+      ],
+      "review_ms": [
+        80000,
+        97000
+      ],
+      "source_ms": [
+        110044,
+        127044
+      ],
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "variant": "CURRENT_V04_NATURAL_SKIN",
+      "window": 3
+    },
+    {
+      "original_timeline_ms": [
+        125000,
+        130000
+      ],
+      "review_ms": [
+        97000,
+        102000
+      ],
+      "source_ms": [
+        32195,
+        37195
+      ],
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "variant": "CURRENT_V04_NATURAL_SKIN",
+      "window": 3
+    },
+    {
+      "original_timeline_ms": [
+        108000,
+        125000
+      ],
+      "review_ms": [
+        102000,
+        119000
+      ],
+      "source_ms": [
+        110044,
+        127044
+      ],
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "variant": "NEW_V05_SOFT_SKIN_LIGHTING",
+      "window": 3
+    },
+    {
+      "original_timeline_ms": [
+        125000,
+        130000
+      ],
+      "review_ms": [
+        119000,
+        124000
+      ],
+      "source_ms": [
+        32195,
+        37195
+      ],
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW",
+      "variant": "NEW_V05_SOFT_SKIN_LIGHTING",
+      "window": 3
+    }
+  ],
+  "sources_before": {
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+      "bytes": 216042666,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5740.MOV",
+      "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb"
+    },
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+      "bytes": 504008133,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5742.MOV",
+      "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+    },
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+      "bytes": 926438315,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5741.MOV",
+      "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+    },
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+      "bytes": 942419948,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5739.MOV",
+      "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+    }
+  },
+  "status": "RENDERED_PRIVATE_ONLY",
+  "v05_lut": {
+    "background_delta_requested": 0.0,
+    "clipped_detail_recovery_claimed": false,
+    "face_manipulation": false,
+    "max_additional_encoded_luma_delta": -0.02,
+    "max_bright_skin_chroma_reduction_fraction": 0.035,
+    "midtones_preserved_by_weighting": true,
+    "operation": "V04_PLUS_BOUNDED_HIGH_LUMINANCE_SKIN_COMPRESSION_AND_CHROMA_SOFTENING",
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v05-soft-skin-lighting-v01/luts/NEW_V05_SOFT_SKIN_LIGHTING.cube",
+    "physical_relighting_claimed": false,
+    "sha256": "10a5cf0e249e56b9292f9f054c5bfb0e1a1cfd65f1702636ea16b00d1d569fc1",
+    "skin_smoothing": false,
+    "spatial_mask": false
+  }
+}
