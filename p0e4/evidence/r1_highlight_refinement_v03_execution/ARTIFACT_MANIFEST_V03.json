@@ -1,0 +1,92 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1077415841,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/AAKHRI_R1_V02_CURRENT_VS_V03_NEW_HLG_V03.mov",
+      "role": "AUTHORITATIVE_HDR_COMPARISON",
+      "sha256": "0c02d0e7e50e32e2f254875ea45f82188855072ae7dcdadb1eebfbcd29696b53"
+    },
+    {
+      "bytes": 35210494,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/AAKHRI_R1_V02_CURRENT_VS_V03_NEW_HLG_REVIEW_V03.mp4",
+      "role": "COMPACT_10BIT_HDR_REVIEW",
+      "sha256": "4847fd0c8de52e189e79c7333a35572776b5f047381722c0ed79522f56e65718"
+    },
+    {
+      "bytes": 70655470,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/AAKHRI_R1_V02_CURRENT_VS_V03_NEW_GEMINI_H264_COMPAT_V03.mp4",
+      "role": "GEMINI_COMPATIBILITY_RENDITION_NOT_AUTHORITATIVE",
+      "sha256": "f2bc221c317145b742aa0611415a0107719943b665eba9efbd05f510971f7f9a"
+    },
+    {
+      "bytes": 185226,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/UNCHAINED_AAKHRI_R1_PEAK_HIGHLIGHTS_EYELIDS_V03.drp",
+      "role": "RESOLVE_PROJECT_ARCHIVE",
+      "sha256": "d8fb683eedfc86be0743b60aab0749f3a52f0f32786af2a1001b5d3f418aff50"
+    },
+    {
+      "bytes": 1293830,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/luts/NEW_V03_PEAK_HIGHLIGHTS_EYELIDS.cube",
+      "role": "NEW_V03_LUT",
+      "sha256": "a01d7ef456c6c3e6402ba4f43a825c277908abdf54d470c464ea1023fe198bba"
+    },
+    {
+      "bytes": 6773865,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/frames/frame_12.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "f95b50b14faa3fa31cbb4d67777dcc16dad6f79abcee165edb4f374faaf2807c"
+    },
+    {
+      "bytes": 6603725,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/frames/frame_17.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "c7b3525439cb682a8ec8dc7241fd7ca8770389a9b5be460369bd77bcad09e463"
+    },
+    {
+      "bytes": 6542781,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/frames/frame_2.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "d9e0338b06dd455c643d73f979be4a81319a4ee0dbc077d7b9a237c52e474b8e"
+    },
+    {
+      "bytes": 6618337,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/frames/frame_22.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "8f6bfba54e8d07f407085ba08e4127b74e5802e9ee81ac07e24cabc4dc643d45"
+    },
+    {
+      "bytes": 6728917,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/frames/frame_27.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "06b3250320be6493ddf00200eb8731604372eb4a91ddb20afa99482fc95ee6b1"
+    },
+    {
+      "bytes": 6762628,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/frames/frame_32.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "0161bd49b8837f98d01d7ebb45caee5a6bff3aefd18012a3b0fa6050219ac22c"
+    },
+    {
+      "bytes": 6695098,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/frames/frame_37.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "51b850b49123e70a204218668ace6177b7b57f2512f35b96aa8299d9df2ad21b"
+    },
+    {
+      "bytes": 6627967,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/frames/frame_7.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "3784ec3da6cbaf3461d6559d68457e4dc61c283dc53d95d6050eeec22d4e3e9b"
+    }
+  ],
+  "classification": "PRIVATE_COLOR_REVIEW_ONLY",
+  "full_master_rendered": false,
+  "governance": {
+    "final_color_approved": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "schema": "R1_PEAK_HIGHLIGHTS_EYELIDS_ARTIFACT_MANIFEST_V03"
+}

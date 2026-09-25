@@ -1,0 +1,18 @@
+{
+  "bytes": 35210494,
+  "codec": "H265",
+  "format": "mp4",
+  "frames": 1200,
+  "full_master_rendered": false,
+  "height": 1920,
+  "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/AAKHRI_R1_V02_CURRENT_VS_V03_NEW_HLG_REVIEW_V03.mp4",
+  "render_status": {
+    "CompletionPercentage": 100,
+    "JobStatus": "Complete",
+    "TimeTakenToRenderInMs": 44390
+  },
+  "schema": "R1_V03_HLG_REVIEW_PROXY_V01",
+  "sha256": "4847fd0c8de52e189e79c7333a35572776b5f047381722c0ed79522f56e65718",
+  "source_timeline": "AAKHRI_R1_V02_CURRENT_VS_V03_NEW_HLG_V03",
+  "width": 1080
+}

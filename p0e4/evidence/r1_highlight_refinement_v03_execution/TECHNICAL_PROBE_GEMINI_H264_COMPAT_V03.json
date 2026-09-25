@@ -1,0 +1,33 @@
+{
+  "codec_fourcc" : "avc1",
+  "decoded_frames" : 1200,
+  "duration_seconds" : 40,
+  "format_extensions" : {
+    "CVFieldCount" : 1,
+    "CVImageBufferChromaLocationBottomField" : "Left",
+    "CVImageBufferChromaLocationTopField" : "Left",
+    "CVImageBufferColorPrimaries" : "ITU_R_2020",
+    "CVImageBufferTransferFunction" : "ITU_R_2100_HLG",
+    "CVImageBufferYCbCrMatrix" : "ITU_R_2020",
+    "CVPixelAspectRatio" : {
+      "HorizontalSpacing" : 1,
+      "VerticalSpacing" : 1
+    },
+    "Depth" : 24,
+    "FormatName" : "H.264",
+    "FullRangeVideo" : false,
+    "RevisionLevel" : 0,
+    "SampleDescriptionExtensionAtoms" : {
+      "avcC" : "AWQAKP\/hABEnZAAorFZQEQDx5eahIkEgQAEABCjuPLD9+PgA",
+      "btrt" : "AAAAAADXksMA15LD"
+    },
+    "SpatialQuality" : 0,
+    "TemporalQuality" : 0,
+    "VerbatimISOSampleEntry" : "AAAAw2F2YzEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAEOAeAAEgAAABIAAAAAAAAAAEFSC4yNjQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY\/\/8AAAAsYXZjQwFkACj\/4QARJ2QAKKxWUBEA8eXmoSJBIEABAAQo7jyw\/fj4AAAAAApmaWVsAQAAAAATY29scm5jbHgACQASAAkAAAAAEHBhc3AAAAABAAAAAQAAABRidHJ0AAAAAADXksMA15LD",
+    "Version" : 0
+  },
+  "height" : 1920,
+  "nominal_frame_rate" : 29.999998092651367,
+  "reader_status" : 2,
+  "width" : 1080
+}

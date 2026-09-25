@@ -1,0 +1,18 @@
+{
+  "bytes": 70655470,
+  "codec": "H265",
+  "format": "mp4",
+  "frames": 1200,
+  "full_master_rendered": false,
+  "height": 1920,
+  "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/AAKHRI_R1_V02_CURRENT_VS_V03_NEW_GEMINI_H264_COMPAT_V03.mp4",
+  "render_status": {
+    "CompletionPercentage": 100,
+    "JobStatus": "Complete",
+    "TimeTakenToRenderInMs": 45599
+  },
+  "schema": "R1_V03_GEMINI_H264_COMPAT_RENDITION_V01",
+  "sha256": "f2bc221c317145b742aa0611415a0107719943b665eba9efbd05f510971f7f9a",
+  "source_timeline": "AAKHRI_R1_V02_CURRENT_VS_V03_NEW_HLG_V03",
+  "width": 1080
+}

@@ -1,0 +1,29 @@
+{
+  "changes": [
+    "Subtle additional high-luma compression within skin-hue gamut for bright eyelid skin.",
+    "Stronger bounded compression at only the highest facial peaks on forehead and nose.",
+    "V02 background treatment and final base crop preserved; no spatial masks or creative movement."
+  ],
+  "decision_requested": "Confirm V03, retain V02, reject both, or describe the smallest correction. This is color review only.",
+  "limitations": [
+    "No semantic eyelid segmentation or tracking was used or claimed.",
+    "Numeric measurements are display-decoded proxies, not calibrated HDR nits.",
+    "Current roundtrip does not preserve dvvC metadata; no full Apple/Dolby Vision identity.",
+    "Gemini used a disclosed H.264 compatibility rendition after three H.265 processing errors; Nitin should judge the 10-bit HLG review."
+  ],
+  "mapping": {
+    "take_1": "00:00 V02 / 00:05 V03",
+    "take_2": "00:10 V02 / 00:15 V03",
+    "take_3": "00:20 V02 / 00:25 V03",
+    "take_4": "00:30 V02 / 00:35 V03"
+  },
+  "review_sha256": "4847fd0c8de52e189e79c7333a35572776b5f047381722c0ed79522f56e65718",
+  "review_video": "AAKHRI_R1_V02_CURRENT_VS_V03_NEW_HLG_REVIEW_V03.mp4",
+  "schema": "NITIN_PEAK_HIGHLIGHTS_EYELIDS_REVIEW_NOTE_V03",
+  "status": "WAITING_FOR_NITIN_PEAK_HIGHLIGHTS_EYELIDS_COLOR_REVIEW",
+  "technical_summary": [
+    "Authoritative review: 10-bit H.265 BT.2020/Rec.2100 HLG, 1200/1200 frames decoded",
+    "display-decoded proxy center p95 decreased in all four V03 pairs",
+    "no full master rendered"
+  ]
+}

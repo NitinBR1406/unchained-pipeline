@@ -1,0 +1,21 @@
+{
+  "executed_at": "2026-09-25T13:15:00Z",
+  "result": "GREEN",
+  "schema": "R1_PEAK_HIGHLIGHTS_EYELIDS_REGRESSION_V03",
+  "validated_checks": 34,
+  "failed": 0,
+  "commands": [
+    {
+      "command": "PYTHONPATH=p0e4 python3 -m unittest p0e4.tests.test_color_development p0e4.tests.test_source_color_management p0e4.tests.test_r1_framed_color_study p0e4.tests.test_r1_highlight_refinement p0e4.tests.test_r1_face_background_softness p0e4.tests.test_r1_peak_highlights_eyelids p0e4.tests.test_v164_projection p0e4.tests.test_v165_projection p0e4.tests.test_v166_projection p0e4.tests.test_v167_projection",
+      "passed": 33,
+      "failed": 0
+    },
+    {
+      "command": "PYTHONPATH=p0e4 python3 /tmp/validate_v168_temp.py",
+      "scope": "temporary non-authoritative ledger projection; deterministic V16.8 and governance validation before authoritative persistence",
+      "passed": 1,
+      "failed": 0
+    }
+  ],
+  "warnings": "ResourceWarning from existing ledger implementation does not affect assertions or result."
+}

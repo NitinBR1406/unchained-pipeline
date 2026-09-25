@@ -1,0 +1,14 @@
+{
+  "account_surface": "Authenticated Gemini Work UI",
+  "authoritative_review_sha256": "4847fd0c8de52e189e79c7333a35572776b5f047381722c0ed79522f56e65718",
+  "blindness": "NEW_ISOLATED_CONTEXT_NO_CLAUDE_OR_CHATGPT_CONCLUSIONS_SUPPLIED",
+  "compatibility_disclosure": "Gemini could not process the authoritative H.265 upload; a separate H.264 rendition from the exact same HLG timeline was used. It is not the Nitin review master and does not establish HDR mastering behavior.",
+  "conversation_url": "https://gemini.google.com/app/c543040edc8703b0",
+  "creative_winner_selected": false,
+  "failed_attempts_before_compatible_rendition": 3,
+  "growth_and_watch_time": "HYPOTHESES_ONLY_NOT_OBSERVED_NOT_CAUSAL",
+  "nitin_approval_inferred": false,
+  "schema": "GEMINI_INDEPENDENT_PEAK_HIGHLIGHTS_EYELIDS_QC_RECEIPT_V03",
+  "status": "COMPLETED_NO_CREATIVE_WINNER",
+  "uploaded_compatibility_rendition_sha256": "f2bc221c317145b742aa0611415a0107719943b665eba9efbd05f510971f7f9a"
+}
