@@ -1,0 +1,22 @@
+{
+  "combined_sha256": "7c26d1f34668e7bd37b9bde4353163fa20f9c42f319ff1923cedb3f8e48224b7",
+  "full_master_rendered": false,
+  "full_song_color_approved": false,
+  "gemini_independent_review": "PASS_FOR_NITIN_PREVIEW_REVIEW",
+  "governance": {
+    "final_asset_approved": false,
+    "final_video_approved": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "rights_cleared": false
+  },
+  "schema": "V06_CAPTION_BEAT_PREVIEW_ACCEPTANCE_V01",
+  "status": "WAITING_FOR_NITIN_V06_CAPTION_BEAT_PREVIEW_REVIEW",
+  "technical_qc": "GREEN_10BIT_HLG_FULL_DECODE",
+  "variant_c": "HOLD_PENDING_AUTHORITATIVE_LYRIC_TEXT_AND_WORD_TIMING",
+  "variants_rendered": [
+    "A",
+    "B"
+  ]
+}

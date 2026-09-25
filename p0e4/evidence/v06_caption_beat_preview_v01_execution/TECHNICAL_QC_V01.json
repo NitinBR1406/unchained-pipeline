@@ -1,0 +1,51 @@
+{
+  "artifacts": {
+    "A": {
+      "bit_depth": 10,
+      "codec": "hvc1 HEVC",
+      "color_primaries": "BT.2020",
+      "decoded_frames": 720,
+      "duration_seconds": 24,
+      "expected_frames": 720,
+      "height": 1920,
+      "matrix": "BT.2020 non-constant",
+      "reader_status": 2,
+      "sha256": "c66317f42d041e81d7b46880a22cbeb4d683d57559b0aed72bf6b38853e55750",
+      "transfer": "Rec.2100 HLG",
+      "width": 1080
+    },
+    "AB": {
+      "bit_depth": 10,
+      "codec": "hvc1 HEVC",
+      "color_primaries": "BT.2020",
+      "decoded_frames": 1440,
+      "duration_seconds": 48,
+      "expected_frames": 1440,
+      "height": 1920,
+      "matrix": "BT.2020 non-constant",
+      "reader_status": 2,
+      "sha256": "7c26d1f34668e7bd37b9bde4353163fa20f9c42f319ff1923cedb3f8e48224b7",
+      "transfer": "Rec.2100 HLG",
+      "width": 1080
+    },
+    "B": {
+      "bit_depth": 10,
+      "codec": "hvc1 HEVC",
+      "color_primaries": "BT.2020",
+      "decoded_frames": 720,
+      "duration_seconds": 24,
+      "expected_frames": 720,
+      "height": 1920,
+      "matrix": "BT.2020 non-constant",
+      "reader_status": 2,
+      "sha256": "f4439962f7e160aa6c1a4d0f9790df334401873a4215ca129f4c1fe84e4c9bce",
+      "transfer": "Rec.2100 HLG",
+      "width": 1080
+    }
+  },
+  "dolby_vision_identity": "NOT_CLAIMED",
+  "full_master_rendered": false,
+  "probe": "Apple AVFoundation exact full decode",
+  "schema": "TECHNICAL_QC_V01",
+  "status": "GREEN"
+}

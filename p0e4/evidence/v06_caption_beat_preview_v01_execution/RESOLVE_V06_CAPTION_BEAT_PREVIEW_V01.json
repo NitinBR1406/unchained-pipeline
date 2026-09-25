@@ -1,0 +1,118 @@
+{
+  "beat_events": [
+    {
+      "master_ms": 72760,
+      "preview_ms": 760,
+      "source": "BEAT_SECTION_MOTION_INTELLIGENCE_V01"
+    },
+    {
+      "master_ms": 78760,
+      "preview_ms": 6760,
+      "source": "BEAT_SECTION_MOTION_INTELLIGENCE_V01"
+    },
+    {
+      "master_ms": 92760,
+      "preview_ms": 20760,
+      "source": "BEAT_SECTION_MOTION_INTELLIGENCE_V01"
+    }
+  ],
+  "caption_c_rendered": false,
+  "caption_variants": {
+    "A": null,
+    "B": {
+      "provenance": "ORIGINAL_REVIEW_COPY_NOT_LYRIC_OR_TRANSLATION",
+      "text": "Some love stories never really end.",
+      "timing_ms": [
+        250,
+        3850
+      ]
+    },
+    "C": {
+      "status": "HOLD_PENDING_AUTHORITATIVE_LYRIC_TEXT_AND_WORD_TIMING"
+    }
+  },
+  "classification": "PRIVATE_24S_CAPTION_BEAT_PREVIEW",
+  "full_master_rendered": false,
+  "master": {
+    "bytes": 61749398,
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "original_restored": true,
+  "outputs": [
+    {
+      "bytes": 22054303,
+      "frames": 720,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v06-caption-beat-preview-v01/AAKHRI_V06_A_PERFORMANCE_ONLY_HLG_V01.mp4",
+      "role": "A_PERFORMANCE_ONLY",
+      "sha256": "c66317f42d041e81d7b46880a22cbeb4d683d57559b0aed72bf6b38853e55750",
+      "status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 25951
+      }
+    },
+    {
+      "bytes": 22062804,
+      "frames": 720,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v06-caption-beat-preview-v01/AAKHRI_V06_B_ORIGINAL_OPENING_LINE_HLG_V01.mp4",
+      "role": "B_ORIGINAL_OPENING_LINE",
+      "sha256": "f4439962f7e160aa6c1a4d0f9790df334401873a4215ca129f4c1fe84e4c9bce",
+      "status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 25749
+      }
+    },
+    {
+      "bytes": 44234550,
+      "frames": 1440,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v06-caption-beat-preview-v01/AAKHRI_V06_AB_COMPARISON_HLG_V01.mp4",
+      "role": "AB_COMPARISON",
+      "sha256": "7c26d1f34668e7bd37b9bde4353163fa20f9c42f319ff1923cedb3f8e48224b7",
+      "status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 52281
+      }
+    }
+  ],
+  "project_closed": true,
+  "project_settings_actual": {
+    "colorScienceMode": "davinciYRGBColorManaged",
+    "colorSpaceInput": "Rec.2100 HLG",
+    "colorSpaceOutput": "Rec.2100 HLG",
+    "colorSpaceOutputGamutMapping": "None",
+    "colorSpaceOutputToneMapping": "None",
+    "colorSpaceTimeline": "Rec.2100 HLG",
+    "isAutoColorManage": "0",
+    "timelineFrameRate": "30.0",
+    "timelineResolutionHeight": "1920",
+    "timelineResolutionWidth": "1080"
+  },
+  "resolve_project_sha256": "7dc6ed2c9c7a870a40d29d62d7d0f000e86ef00b61e949d4ff069d442bc98f96",
+  "schema": "RESOLVE_V06_CAPTION_BEAT_PREVIEW_V01",
+  "shake_used": false,
+  "sources_before": {
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+      "bytes": 216042666,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5740.MOV",
+      "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb"
+    },
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+      "bytes": 504008133,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5742.MOV",
+      "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+    },
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+      "bytes": 926438315,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5741.MOV",
+      "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+    },
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+      "bytes": 942419948,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5739.MOV",
+      "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+    }
+  },
+  "status": "RENDERED_PRIVATE_ONLY"
+}

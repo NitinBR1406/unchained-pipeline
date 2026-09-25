@@ -1,0 +1,29 @@
+{
+  "beat_motion_qc": {
+    "notes": "Restrained scale pulses align precisely with the musical downbeats near local 00:00.760, 00:06.760, and 00:20.760 across both variants without inducing edge warping or crop disorientations.",
+    "status": "PASS"
+  },
+  "blind_to_chatgpt_conclusions": true,
+  "caption_qc": {
+    "placement_and_typography": "Positioned in lower-third safe zone with restrained sans-serif typography, clearing facial features and mic setup completely.",
+    "status": "PASS",
+    "text": "Some love stories never really end.",
+    "timing_window": "00:24.25 - 00:27.85"
+  },
+  "confidence_0_to_1": 0.68,
+  "creative_winner_selected": false,
+  "defect_ranges": [],
+  "input_sha256": "7c26d1f34668e7bd37b9bde4353163fa20f9c42f319ff1923cedb3f8e48224b7",
+  "measured_watch_time_or_retention_claimed": false,
+  "observations": "Both 24-second variants exhibit identical framing, color grade, audio mix, and subtle rhythmic beat pulses. Variant B incorporates the non-intrusive hook copy during the opening bars before transitioning to a completely clean performance presentation.",
+  "preservation_checks": {
+    "lipsync_and_framing": "Solid sync throughout vocal delivery with preserved vertical headroom.",
+    "text_free_majority": "Variant B maintains text-free presentation for approximately 85% of its duration.",
+    "visual_consistency": "Identical grade, contrast, and grain structure between A and B."
+  },
+  "retention_attention_hypothesis_with_uncertainty": "The brief opening text hook in Variant B may clarify thematic context faster than performance alone, though audience engagement differences remain uncertain without empirical delivery testing.",
+  "review_url": "https://gemini.google.com/app/b2cd1640c7cd2a05",
+  "schema": "GEMINI_INDEPENDENT_QC_V01",
+  "verdict": "PASS_FOR_NITIN_PREVIEW_REVIEW",
+  "viewing_limitations": "Review performed on standard display tone mapping for BT.2020 Rec.2100 HLG proxy without calibrated Dolby Vision monitoring environment."
+}

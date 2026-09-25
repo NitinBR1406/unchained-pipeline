@@ -1,0 +1,65 @@
+{
+  "beat_motion": [
+    {
+      "preview_ms": 760,
+      "scale_delta": 0.012,
+      "style": "gentle_push"
+    },
+    {
+      "preview_ms": 6760,
+      "scale_delta": 0.022,
+      "style": "restrained_push"
+    },
+    {
+      "preview_ms": 20760,
+      "scale_delta": 0.012,
+      "style": "gentle_push"
+    }
+  ],
+  "classification": "PRIVATE_NON_PUBLISHING_SHORT_PREVIEW",
+  "combined": {
+    "bytes": 44234550,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v06-caption-beat-preview-v01/AAKHRI_V06_AB_COMPARISON_HLG_V01.mp4",
+    "sha256": "7c26d1f34668e7bd37b9bde4353163fa20f9c42f319ff1923cedb3f8e48224b7"
+  },
+  "edl_semantic_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+  "full_master_rendered": false,
+  "programme_audio": {
+    "name": "AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "resolve_project": {
+    "bytes": 240034,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v06-caption-beat-preview-v01/UNCHAINED_AAKHRI_V06_CAPTION_BEAT_PREVIEW_V01.drp",
+    "sha256": "7dc6ed2c9c7a870a40d29d62d7d0f000e86ef00b61e949d4ff069d442bc98f96"
+  },
+  "schema": "PREVIEW_VARIANT_MANIFEST_V01",
+  "selected_color": {
+    "full_song_color_approved": false,
+    "lut_sha256": "4fdd545d18826ed26ae2a22ef87eeff70e7013ecb7c12924c993100ee9e082c0",
+    "scope": "PROVISIONAL_SHORT_PREVIEW_ONLY",
+    "variant": "V06"
+  },
+  "shake_used": false,
+  "source_excerpt_original_timeline_ms": [
+    72000,
+    96000
+  ],
+  "variant_a": {
+    "caption": null,
+    "sha256": "c66317f42d041e81d7b46880a22cbeb4d683d57559b0aed72bf6b38853e55750"
+  },
+  "variant_b": {
+    "caption": "Some love stories never really end.",
+    "caption_provenance": "ORIGINAL_REVIEW_COPY_NOT_LYRIC_OR_TRANSLATION",
+    "caption_timing_ms": [
+      250,
+      3850
+    ],
+    "sha256": "f4439962f7e160aa6c1a4d0f9790df334401873a4215ca129f4c1fe84e4c9bce"
+  },
+  "variant_c": {
+    "rendered": false,
+    "status": "HOLD_PENDING_AUTHORITATIVE_LYRIC_TEXT_AND_WORD_TIMING"
+  }
+}

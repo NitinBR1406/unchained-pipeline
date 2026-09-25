@@ -1,0 +1,15 @@
+{
+  "compare_order": "A 00:00-00:24; B 00:24-00:48",
+  "decision_requested": "Choose A or B for next bounded development step, or request a specific revision. V06 remains provisional short-preview color only.",
+  "limitations": [
+    "Browser/display tone mapping may differ from calibrated HLG monitoring",
+    "Dolby Vision display identity is not claimed",
+    "No full master was rendered"
+  ],
+  "motion": "shared restrained pushes at local 00:00.760, 00:06.760, 00:20.760; no shakes",
+  "schema": "NITIN_REVIEW_NOTE_V01",
+  "status": "WAITING_FOR_NITIN_V06_CAPTION_BEAT_PREVIEW_REVIEW",
+  "variant_a": "performance only",
+  "variant_b": "original opening-line review copy; text local 00:00.250-00:03.850",
+  "variant_c": "HOLD: authoritative lyric text and verified word timing unavailable"
+}

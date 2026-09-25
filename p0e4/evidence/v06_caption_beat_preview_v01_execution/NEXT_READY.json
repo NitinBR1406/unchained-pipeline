@@ -1,0 +1,7 @@
+{
+  "full_master_render": "NOT_AUTHORIZED",
+  "gate": "NITIN_V06_CAPTION_BEAT_PREVIEW_REVIEW",
+  "schema": "NEXT_READY_V01",
+  "smallest_question": "Choose A performance-only or B original opening-line review copy, or provide a specific revision. C remains HOLD until authoritative lyric text plus verified sung-word timing exist.",
+  "status": "WAITING_FOR_NITIN"
+}
