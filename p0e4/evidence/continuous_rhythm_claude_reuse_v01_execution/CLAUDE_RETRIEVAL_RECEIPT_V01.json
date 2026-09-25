@@ -1,0 +1,30 @@
+{
+  "authenticated_surface": "Claude Desktop",
+  "master2_binding": {
+    "duration_s": 214.4000417,
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "verified_against_repository_binding": true
+  },
+  "new_detector_built": false,
+  "retrieved": {
+    "aakhri_beat_map": false,
+    "aakhri_hit_map": false,
+    "app_py": false,
+    "clip_fx_py": false
+  },
+  "schema": "CLAUDE_RETRIEVAL_RECEIPT_V01",
+  "secondary_evidence_only": {
+    "beats_every_default": 4,
+    "clip_classes": [
+      "kick",
+      "snare"
+    ],
+    "downbeats": "EVERY_NTH_BEAT_SELECTION_INDICATED_NOT_SOURCE_VERIFIED",
+    "instrument_identity": "NOT_PROVEN",
+    "kick_gap_s": 0.4,
+    "max_per_class": 40,
+    "snare_gap_s": 0.32
+  },
+  "smallest_blocker": "Reconnect the earlier Claude workspace or supply exact app.py and clip_fx.py bytes/deployed service repository; expected app.py SHA256 690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb.",
+  "status": "BLOCKED_SOURCE_AND_EXISTING_OUTPUTS_NOT_RETRIEVED"
+}

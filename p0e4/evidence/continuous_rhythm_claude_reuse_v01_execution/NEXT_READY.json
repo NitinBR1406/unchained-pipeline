@@ -1,0 +1,14 @@
+{
+  "effects_enabled": false,
+  "human_questions": [
+    {
+      "id": "CONTINUOUS_POLICY_SELECTION",
+      "question": "Choose CONTROLLED_GROOVE, STRONGER_PERFORMANCE_ENERGY, or a bounded combination before effect rendering."
+    }
+  ],
+  "independent_ready_exhausted": true,
+  "render_authorized": false,
+  "schema": "NEXT_READY_V01",
+  "smallest_external_blocker": "Reconnect original Claude workspace or provide exact detector source/deployed repository to verify and reuse its MASTER 2 event map.",
+  "status": "WAITING_FOR_NITIN_AND_SOURCE_RECONNECTION"
+}

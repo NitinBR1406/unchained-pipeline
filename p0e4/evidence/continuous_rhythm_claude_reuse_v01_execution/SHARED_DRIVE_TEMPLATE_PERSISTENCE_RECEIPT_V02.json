@@ -1,0 +1,15 @@
+{
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V02_CONTINUOUS_POLICY_PREP_20260925",
+  "effects_enabled": false,
+  "files": {
+    "README.md": "1b1304ee3ee9e75b59020f1d5bd35d985fa8e41d022ba36b028deb64ce488ad9",
+    "fusion_components.json": "b57ad561b49166d5976dd700efd64d50ed294e3a0ca7cf743c5af344d52a1b5f",
+    "job.example.json": "70b037b86e359441db7a17214830660d59011c5a4716b719974bdc9924895f18",
+    "job.schema.json": "24c6e77a26c33f83dd5306d192a85bc88ea5728b6493f6594814b02724949d54",
+    "motion_policy.json": "efd16a4e317f276d68f04e24156179f78df1cd17f5ed06115240d34e081f77df"
+  },
+  "mode": "NON_DESTRUCTIVE_NEW_VERSION",
+  "readback_sha256_verified": true,
+  "render_performed": false,
+  "schema": "SHARED_DRIVE_TEMPLATE_PERSISTENCE_RECEIPT_V02"
+}

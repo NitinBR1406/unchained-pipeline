@@ -1,0 +1,15 @@
+{
+  "options": [
+    "CONTROLLED_GROOVE",
+    "STRONGER_PERFORMANCE_ENERGY"
+  ],
+  "render_authorized": false,
+  "replaces": "THREE_ISOLATED_ACCENT_PROPOSALS",
+  "schema": "CONTINUOUS_RHYTHM_POLICY_OPTIONS_V01",
+  "selection": "AWAITING_NITIN_JOINT_SELECTION",
+  "source": {
+    "claude_detector_map": "UNAVAILABLE_NOT_REUSED",
+    "gemini": "GEMINI_CONTINUOUS_RHYTHM_POLICY_V01.json"
+  },
+  "status": "REVIEW_ONLY_EFFECTS_OFF"
+}

@@ -1,0 +1,257 @@
+{
+  "binding_correction": "Gemini was explicitly corrected from the first prompt transcription error to this authoritative repository SHA before acceptance.",
+  "claims_not_made": [
+    "retention",
+    "watch_time",
+    "growth",
+    "virality",
+    "instrument_identity"
+  ],
+  "common_abort": [
+    "jitter or mechanical vibration",
+    "face crop/clipping",
+    "motion fighting vocal rubato or expression",
+    "safe-crop failure"
+  ],
+  "conversation_url": "https://gemini.google.com/app/5d84b0610b016ce1",
+  "core": "CONTINUOUS_RHYTHM_IS_NOT_CONTINUOUS_SHAKE",
+  "creative_winner_selected": false,
+  "detector_limit": "No Claude event map was available; timings are Gemini auditory proposals, not detector reuse or instrument truth.",
+  "final_effect_rules_status": "AWAITING_NITIN_JOINT_SELECTION",
+  "parent_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "schema": "GEMINI_CONTINUOUS_RHYTHM_POLICY_V01",
+  "surface": "authenticated Gemini isolated context",
+  "treatments": {
+    "CONTROLLED_GROOVE": {
+      "cut_lockout_ms": 200,
+      "density": "about 1 action every 1.5-2.0s",
+      "events": [
+        {
+          "action": "CUT",
+          "bound": "1.00x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:00.000",
+          "parent_time": "00:01:12.000"
+        },
+        {
+          "action": "PUNCH_IN",
+          "bound": "1.04x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:01.850",
+          "parent_time": "00:01:13.850"
+        },
+        {
+          "action": "RELEASE",
+          "bound": "1.00x",
+          "confidence": "MEDIUM",
+          "excerpt_time": "00:00:03.700",
+          "parent_time": "00:01:15.700"
+        },
+        {
+          "action": "RHYTHMIC_REFRAME",
+          "bound": "X +1.5%, Y -1.0%",
+          "confidence": "MEDIUM",
+          "excerpt_time": "00:00:05.550",
+          "parent_time": "00:01:17.550"
+        },
+        {
+          "action": "SHORT_IMPACT",
+          "bound": "1.025x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:07.400",
+          "parent_time": "00:01:19.400"
+        },
+        {
+          "action": "PUNCH_IN",
+          "bound": "1.045x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:09.250",
+          "parent_time": "00:01:21.250"
+        },
+        {
+          "action": "HOLD",
+          "bound": "1.045x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:11.100",
+          "parent_time": "00:01:23.100"
+        },
+        {
+          "action": "RELEASE",
+          "bound": "1.00x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:12.950",
+          "parent_time": "00:01:24.950"
+        },
+        {
+          "action": "CUT",
+          "bound": "1.00x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:14.800",
+          "parent_time": "00:01:26.800"
+        },
+        {
+          "action": "SHORT_IMPACT",
+          "bound": "1.02x",
+          "confidence": "MEDIUM",
+          "excerpt_time": "00:00:16.650",
+          "parent_time": "00:01:28.650"
+        },
+        {
+          "action": "PUNCH_IN",
+          "bound": "1.04x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:18.500",
+          "parent_time": "00:01:30.500"
+        },
+        {
+          "action": "RHYTHMIC_REFRAME",
+          "bound": "X -1.0%, Y +1.0%",
+          "confidence": "MEDIUM",
+          "excerpt_time": "00:00:20.350",
+          "parent_time": "00:01:32.350"
+        },
+        {
+          "action": "RELEASE",
+          "bound": "1.00x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:22.200",
+          "parent_time": "00:01:34.200"
+        }
+      ],
+      "min_interval_ms": 350
+    },
+    "STRONGER_PERFORMANCE_ENERGY": {
+      "cut_lockout_ms": 120,
+      "density": "about 1 action every 0.9-1.2s",
+      "events": [
+        {
+          "action": "CUT",
+          "bound": "1.00x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:00.000",
+          "parent_time": "00:01:12.000"
+        },
+        {
+          "action": "SHORT_IMPACT",
+          "bound": "1.03x",
+          "confidence": "MEDIUM",
+          "excerpt_time": "00:00:00.925",
+          "parent_time": "00:01:12.925"
+        },
+        {
+          "action": "PUNCH_IN",
+          "bound": "1.06x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:01.850",
+          "parent_time": "00:01:13.850"
+        },
+        {
+          "action": "RHYTHMIC_REFRAME",
+          "bound": "Y -2.0%",
+          "confidence": "MEDIUM",
+          "excerpt_time": "00:00:02.775",
+          "parent_time": "00:01:14.775"
+        },
+        {
+          "action": "RELEASE",
+          "bound": "1.01x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:03.700",
+          "parent_time": "00:01:15.700"
+        },
+        {
+          "action": "CUT",
+          "bound": "1.00x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:05.550",
+          "parent_time": "00:01:17.550"
+        },
+        {
+          "action": "SHORT_IMPACT",
+          "bound": "1.035x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:06.475",
+          "parent_time": "00:01:18.475"
+        },
+        {
+          "action": "PUNCH_IN",
+          "bound": "1.065x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:07.400",
+          "parent_time": "00:01:19.400"
+        },
+        {
+          "action": "PUNCH_IN",
+          "bound": "1.07x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:09.250",
+          "parent_time": "00:01:21.250"
+        },
+        {
+          "action": "SHORT_IMPACT",
+          "bound": "1.025x",
+          "confidence": "MEDIUM",
+          "excerpt_time": "00:00:10.175",
+          "parent_time": "00:01:22.175"
+        },
+        {
+          "action": "HOLD",
+          "bound": "1.07x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:11.100",
+          "parent_time": "00:01:23.100"
+        },
+        {
+          "action": "RELEASE",
+          "bound": "1.00x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:12.950",
+          "parent_time": "00:01:24.950"
+        },
+        {
+          "action": "CUT",
+          "bound": "1.00x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:14.800",
+          "parent_time": "00:01:26.800"
+        },
+        {
+          "action": "SHORT_IMPACT",
+          "bound": "1.04x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:16.650",
+          "parent_time": "00:01:28.650"
+        },
+        {
+          "action": "PUNCH_IN",
+          "bound": "1.06x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:17.575",
+          "parent_time": "00:01:29.575"
+        },
+        {
+          "action": "RHYTHMIC_REFRAME",
+          "bound": "X +2.0%",
+          "confidence": "MEDIUM",
+          "excerpt_time": "00:00:19.425",
+          "parent_time": "00:01:31.425"
+        },
+        {
+          "action": "SHORT_IMPACT",
+          "bound": "1.03x",
+          "confidence": "MEDIUM",
+          "excerpt_time": "00:00:21.275",
+          "parent_time": "00:01:33.275"
+        },
+        {
+          "action": "RELEASE",
+          "bound": "1.00x",
+          "confidence": "HIGH",
+          "excerpt_time": "00:00:22.200",
+          "parent_time": "00:01:34.200"
+        }
+      ],
+      "min_interval_ms": 200
+    }
+  }
+}

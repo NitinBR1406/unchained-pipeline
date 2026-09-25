@@ -1,0 +1,100 @@
+{
+  "schema": "CLAUDE_EXISTING_BEAT_RETRIEVAL_RESULT_V01",
+  "recorded_at": "2026-09-25T23:10:00+02:00",
+  "request_ref": "p0e4/evidence/claude_existing_beat_reuse_v01/NITIN_RETRIEVAL_REQUEST.json",
+  "status": "BLOCKED_DETECTOR_SOURCE_AND_OUTPUTS_NOT_PRESENT_IN_THIS_WORKSPACE",
+  "smallest_blocker": "The bytes of outputs/beat-service/app.py (expected sha256 690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb) and clip_fx.py exist only in the earlier Claude session workspace that produced CLAUDE_DISCOVERY_RESULT.json (2026-09-19). That workspace is not reachable from this session. Provide those files (attach them, or put them in a connected folder or Drive), or give the deployed service repository, and the existing detector can be run unchanged.",
+  "binding_target": {
+    "file": "AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "duration_s": 214.4000417,
+    "bytes_in_this_workspace": false,
+    "located_elsewhere": [
+      {"where": "Google Drive", "file_id": "10zkJH9QvMDNcjVb00JVE6PEm4UOwOUZn", "size_bytes": 61749398, "sha256_verified_this_session": false, "note": "Not downloaded. Running is blocked on the missing detector anyway."},
+      {"where": "Nitin Mac, Codex project .local/private-real-media-v01/bound-inputs/", "reachable_this_session": false}
+    ]
+  },
+  "search_performed": [
+    {"location": "this cloud workspace (full filesystem find)", "result": "NO beat-service, app.py, clip_fx.py or Aakhri beat outputs"},
+    {"location": "/mnt/user-data/outputs (this task)", "result": "empty before this retrieval"},
+    {"location": "GitHub NitinBR1406/unchained-pipeline, all branches and all commits (git grep for detect_hits, beat-service, clip_fx, 690e58eb)", "result": "Only secondary evidence found: CLAUDE_DISCOVERY_RESULT.json, SOURCE_VERIFICATION.json, clip_source.txt (/clip excerpt). No app.py, no clip_fx.py, no /beats or /hits output files."},
+    {"location": "Mac ~/Claude (granted this session)", "result": "Only Make.com project docs and plugin. No beat-service."},
+    {"location": "Google Drive search (clip_fx, beat-service, app .py, beats, fullText detect_hits)", "result": "Only EXISTING_DETECTOR_AUDIT_V01.json and ORCHESTRATOR_AUDIT_AND_ANALYSIS_FIRST_REQUEST.json. No source, no outputs."},
+    {"location": "Render workspace tea-dafho7dg1s2s73ek7ksg (read-only list)", "result": "Only service unchained-approval. No beat/media service deployed there."}
+  ],
+  "detector": {
+    "source_retrieved": false,
+    "app_py": {"path": "outputs/beat-service/app.py", "recorded_sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb", "recorded_lines": 2019, "bytes_available": false, "deployed_parity_proven": false},
+    "clip_fx_py": {"path": "outputs/beat-service/clip_fx.py", "recorded_sha256": null, "bytes_available": false},
+    "app_version": "MISSING (APP_VERSION referenced in /clip, value not captured)",
+    "libraries_and_algorithm": "MISSING. Whether it uses librosa, aubio, madmom or custom onset code is unknown."
+  },
+  "parameters_known_from_secondary_evidence": {
+    "/beats": {"accepts": ["audio_url | file", "every (default 4)"], "returns": ["duration", "bpm", "downbeats"], "evidence": "CLAUDE_DISCOVERY_RESULT.json, app.py L745+"},
+    "/hits": {"route_line": 697, "accepts": "MISSING", "returns": "MISSING"},
+    "/clip -> FX.detect_hits call site": {
+      "detect_hits_input": "studio audio if supplied, otherwise the video file",
+      "detect_hits_output_keys": ["kick", "snare"],
+      "post_processing": "FX.shift_and_window(times, start, dur), then FX.thin(min_gap, max_count=40)",
+      "kick_gap_s_default": 0.40,
+      "snare_gap_s_default": 0.32,
+      "max_count_per_class": 40,
+      "fx_default": true,
+      "creative_mapping_in_code": {"kick": "zoom, kick_zoom default 0.038", "snare": "shake, snare_shake default 0.010"},
+      "evidence": "clip_source.txt"
+    },
+    "detect_hits_internal_parameters": "MISSING (band splits, thresholds, onset function, hop size)"
+  },
+  "semantics": {
+    "beats_endpoint": "Returns a global bpm and a downbeats list. The only parameter is every (default 4).",
+    "downbeat_method": "INDICATED_EVERY_NTH_BEAT_SELECTION_NOT_SOURCE_VERIFIED",
+    "downbeat_reasoning": "An 'every' parameter defaulting to 4 on /beats strongly suggests taking every 4th tracked beat from a phase start, not bar-phase estimation. This cannot be confirmed without the app.py bytes. Treat it as NOT true downbeat estimation until verified.",
+    "tempo_map": "Only a single global bpm is indicated. No time-varying tempo map is evidenced.",
+    "hits_kick_snare_labels": "detect_hits emits keys named kick and snare. The classification method (for example a band-energy split) is unknown. These are detector class names, not verified instrument identities. Evidence: EXISTING_DETECTOR_AUDIT_V01 found no ground truth, and the separate mixed-master heuristic gave 5 kick-like vs 367 snare-like events.",
+    "pulse_vs_instrument_distinction": "Any future output must be reported as detected pulse/transient events with detector-class tags (kick-band, snare-band), never as instrument identity."
+  },
+  "aakhri_ishq_existing_claude_beat_outputs": {
+    "found": false,
+    "historical_mismatch_assessment": "NOT_APPLICABLE. No earlier Claude /beats or /hits result for Aakhri Ishq was found, so there is nothing to mark HISTORICAL_MISMATCH.",
+    "rerun_on_master2": "NOT_PERFORMED. Detector bytes are unavailable and MASTER 2 bytes are not in this workspace. Nothing was invented."
+  },
+  "results": {
+    "beat_timestamps": "MISSING",
+    "bpm": "MISSING",
+    "tempo_map": "MISSING",
+    "downbeats": "MISSING",
+    "kick_band_hits": "MISSING",
+    "snare_band_hits": "MISSING",
+    "generic_hits": "MISSING",
+    "strength_confidence_per_event": "MISSING (not known whether detect_hits emits strength at all)",
+    "section_changes": "MISSING from the Claude detector (not evidenced as a /beats or /hits output)",
+    "coverage_end_s": "MISSING",
+    "output_hashes": "NONE (no outputs exist)"
+  },
+  "other_existing_non_claude_rhythm_evidence_on_master2_for_crosscheck_only": [
+    {"path": "p0e4/evidence/aakhri_multitake_real_v01/r3/BEAT_SECTION_MOTION_INTELLIGENCE_V01.json", "git_blob_sha256": "fdd644dc2bba9000f39b81b0487e75b8a9683734a675b83cd324bc7804540c50", "audio_sha256": "670e5ddf...8def2", "method": "RMS_ONSET_AND_ENERGY_ONLY, 20 ms hop", "content": "14 onset events 49960-161960 ms plus 30 s energy zones", "is_beat_map": false, "note": "Its motion field is creative policy mixed into detection output. Keep them separate."},
+    {"path": "p0e4/evidence/resolve_native_rhythm_study_v01_completion/WAVEFORM_ENERGY_ANALYSIS_V01.json", "git_blob_sha256": "6e1b7397fdb3b9b6ec26dbfc922e1ce231e3294066d48b51b42dfcdceb9856fb", "duration_s": 214.40004166666668, "method": "1 s RMS proxy", "is_beat_map": false},
+    {"path": "p0e4/evidence/resolve_native_rhythm_study_v01_final/NATIVE_AND_AUDIBLE_EVENT_MAP_V01.json", "git_blob_sha256": "c818e3df59c42307a8c9251d821fde829e15639d8e434aefbaba77956652a69a", "gemini_coverage": "PARTIAL_TO_03:08, tail 188.000-214.400 s unreviewed", "native_resolve_event_times_exportable": false, "is_beat_map": false}
+  ],
+  "retrieved_files_in_outputs": [
+    {"path": "historical_evidence/CLAUDE_DISCOVERY_RESULT.json", "sha256": "53ea6dae3c20ca7691e71f1357ca7829f488be3d948dd6e70b9d16ec54a15535", "origin": "repo commit f7d4f4d, p0e4/evidence/factory_v16/"},
+    {"path": "historical_evidence/SOURCE_VERIFICATION.json", "sha256": "e43700d3a4624df13ae6bc8311dcf996872939afd97894ada9ab0393007927cb", "origin": "repo commit f7d4f4d"},
+    {"path": "historical_evidence/clip_source.txt", "sha256": "c440ab2052f62e9a34b9d6b2ae770b05329b4c3d16dd8287b9c3735237c0d701", "origin": "repo commit f7d4f4d; /clip excerpt of app.py only, not detect_hits"}
+  ],
+  "repo_ref_inspected": {"repo": "github.com/NitinBR1406/unchained-pipeline", "branch": "p0e4/slice1-production-handoff", "head": "9503b90c6402c90820e6e4bda7424eb0db97454c", "modified": false},
+  "next_step_when_bytes_provided": [
+    "Verify app.py sha256 == 690e58eb...54dbb, and hash clip_fx.py",
+    "Verify MASTER 2 sha256 == 670e5ddf...8def2 and duration 214.4000417 s",
+    "Run the existing /beats (every=4) and FX.detect_hits logic locally and unchanged, with no GCS upload, no /clip, no render",
+    "Emit full beats, bpm, downbeats (tagged EVERY_NTH if source confirms), kick-band and snare-band hits (tagged detector_class, not instrument), coverage_end_s and output sha256",
+    "Hand off to Resolve native overlay and Gemini cross-check. Creative continuous-rhythm policy stays a separate artifact."
+  ],
+  "creative_policy_separation": "This artifact contains detection retrieval only. It proposes no three-accent or sparse policy and selects no mapping. Continuous-rhythm policy follows NITIN_CREATIVE_DIRECTION_OVERRIDE.json in a separate artifact.",
+  "actions_not_performed": ["render", "deploy", "publish", "Drive/Make/Sheets mutation", "repo push", "source modification", "new detector creation"],
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false
+  }
+}

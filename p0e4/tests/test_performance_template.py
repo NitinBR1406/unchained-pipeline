@@ -52,6 +52,15 @@ class PerformanceTemplateTests(unittest.TestCase):
         self.assertIn("alignment_map", plan["invalidation_graph"]["alignment"])
         self.assertNotIn("color_preset_sha256", plan["invalidation_graph"]["alignment"])
 
+    def test_continuous_policy_stays_disabled_until_joint_selection(self):
+        policy_path = ROOT / "p0e4/resolve/templates/UNCHAINED_PERFORMANCE_TEMPLATE_V01/motion_policy.json"
+        policy = json.loads(policy_path.read_text())
+        self.assertEqual("CONTINUOUS_RHYTHMIC_UNCHAINED_NITIN", policy["creative_direction"])
+        self.assertIn("NO_THREE_ACCENT_CAP", policy["creative_direction_constraints"])
+        self.assertEqual("UNSELECTED", policy["selected_policy_version"])
+        self.assertFalse(policy["default_enabled"])
+        self.assertEqual("HOLD_SOURCE_AND_OUTPUTS_NOT_RETRIEVED", policy["detector_binding"]["status"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,11 @@
+{
+  "effects": "OFF",
+  "known_blocker": "Claude source and existing Aakhri beat/hit map were not retrievable; options are Gemini auditory proposals only.",
+  "options": {
+    "CONTROLLED_GROOVE": "Lower density, up to 1.045x in the study, more phrase breathing room.",
+    "STRONGER_PERFORMANCE_ENERGY": "Higher density, up to 1.07x, more intermediate impacts and reframes."
+  },
+  "question": "Choose or combine the two continuous rhythm directions before any effect preview render.",
+  "schema": "BUNDLED_REVIEW_PROPOSAL_V02",
+  "winner": "NOT_SELECTED"
+}

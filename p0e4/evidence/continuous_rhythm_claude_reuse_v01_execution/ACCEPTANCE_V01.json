@@ -1,0 +1,20 @@
+{
+  "blocked": [
+    "Existing Claude detector source and prior Aakhri event map unavailable, so detector reuse not completed"
+  ],
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "passed": [
+    "Nitin continuous direction persisted",
+    "Claude searched before new detector work",
+    "MASTER 2 binding checked",
+    "Gemini supplied two continuous review policies",
+    "template effects remain OFF",
+    "no render performed"
+  ],
+  "result": "PARTIAL_GREEN_POLICY_PREPARATION_BLOCKED_EXISTING_CLAUDE_DETECTOR_BYTES",
+  "schema": "ACCEPTANCE_V01"
+}

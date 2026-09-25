@@ -1,0 +1,14 @@
+{
+  "duration_s": 24.0,
+  "excerpt_sha256": "6c4ccf3da19a9ba98f7a9d6de372fd08eb5df058c7c4114cb239c779696074b3",
+  "lossless_pcm24": true,
+  "parent_audio": "AAKHRI ISHQ MASTER 2.wav",
+  "parent_duration_s": 214.4000417,
+  "parent_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "purpose": "INDEPENDENT_GEMINI_CONTINUOUS_RHYTHM_POLICY_ONLY",
+  "range_s": [
+    72.0,
+    96.0
+  ],
+  "schema": "MASTER2_EXCERPT_PROVENANCE_V01"
+}
