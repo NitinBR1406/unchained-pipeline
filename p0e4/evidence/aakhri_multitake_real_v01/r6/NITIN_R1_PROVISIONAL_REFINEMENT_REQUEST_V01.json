@@ -1,0 +1,48 @@
+{
+  "schema": "NITIN_CREATIVE_FEEDBACK_RECORD_V01",
+  "recorded_date": "2026-09-25",
+  "timezone": "Europe/Amsterdam",
+  "source": "Direct Nitin messages in Master Orchestrator conversation; transcribed by assistant, not a Nitin signature",
+  "observed_repository_sha": "3aca800a31a6f581a151250fe2ddc05f8b2151ba",
+  "workload_id": "AAKHRI_ISHQ_REAL_MULTI_TAKE_V01",
+  "source_quotes": [
+    "Voor nu kies ik R1. Maar ik wil de achtergrond zachter hebben en ik meer dieper gekleurd. Ik wil de kleur is goed hebben alvorens we verder gaan, want ik wil nog beats effecten en dergelijke?",
+    "Maar de versie waarbij het beeld ingezoomd is: daar zou er een juiste studie over gedaan moesten worden met de gegevens die we nu hebben(Apple VS resolve) om de colorgrading boeng tranga (echt tiptop, in srangtongo) te krijgen",
+    "Exact Gemini moet redeneren van uit mijn 10 m plan het viraalgaan en watching hours"
+  ],
+  "provisional_base": "R1_SUBTLE_RICHNESS",
+  "selection_status": "PROVISIONAL_BASE_SELECTED_REFINEMENT_REQUIRED",
+  "requirements": [
+    "Use established tight base framing for color study; disable creative zoom/shake during controlled comparison.",
+    "Compare matching source frames and matching crops: Apple source display/decode versus Resolve HLG identity and R1 refinement.",
+    "Softer/calmer background; richer/deeper subject color with natural skin hue and texture.",
+    "Preserve metadata-supported BT.2020 Rec.2100 HLG minimum 10-bit; no silent Rec.709 conversion.",
+    "Explicitly retain limitation: full original Dolby Vision display identity is not established.",
+    "Gemini independent review must distinguish measured facts, visual observations and hypotheses; evaluate attention, emotional focus, brand consistency and retention/watch-hours hypotheses in context of Nitin's 10M plan.",
+    "Meaning and numeric target of 10M are not defined in this record; do not invent them.",
+    "No causal viral or watch-hours uplift claims without real evidence.",
+    "Color approval precedes full master and beat-effects refinement; review known forehead/mouth defects and temporal mask stability."
+  ],
+  "preserved_restrictions": [
+    "NO_STATIC_ELLIPSE_MASK",
+    "NO_ARTIFICIAL_BLUR",
+    "NO_SKIN_SMOOTHING",
+    "NO_FACE_MANIPULATION",
+    "NO_GENERATIVE_ALTERATION"
+  ],
+  "proposed_review_not_yet_executed": [
+    "R1 baseline",
+    "R1 calmer background",
+    "R1 calmer background and richer subject"
+  ],
+  "governance": {
+    "final_color_approval": false,
+    "final_video_approval": false,
+    "final_asset_approval": false,
+    "rights_clearance_granted": false,
+    "publication_authorized": false,
+    "production_deployment_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  },
+  "record_scope": "Append-only human feedback and requested study. Not a completed render, Gemini receipt, or applied Master State reducer transition."
+}
