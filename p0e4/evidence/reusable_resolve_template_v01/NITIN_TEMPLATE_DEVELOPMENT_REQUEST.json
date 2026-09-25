@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-25T22:41:44+02:00",
+  "user_quote": "haal laatste status op. Ovirgens ik vind het erg langzaamgaan het editen we moet echt een template of iets gaan gebruiken.",
+  "baseline": {
+    "head": "91c5970399f2af587ed2ccb96621520ec13acf66",
+    "master_state": "V16.17",
+    "color": "V06_PROVISIONAL_FOR_AAKHRI_PREVIEWS"
+  },
+  "status": "AUTHORIZED_TEMPLATE_PREPARATION_PENDING_LOCAL_EXECUTION",
+  "goal": "Reduce repetitive per-revision scripting and human relay by reusing a versioned Resolve project plus parameter-driven Fusion components and render recipe.",
+  "scope": [
+    "Reconcile existing templates, renderer helpers and brand contracts first. Reuse working Aakhri V06/Fusion implementation; do not replace frozen components or install an MCP as a prerequisite",
+    "Create UNCHAINED_PERFORMANCE_TEMPLATE_V01 on an isolated project copy, with a reusable project export, documented component interfaces and machine-readable job configuration",
+    "Separate source-specific configuration (audio hash, takes, alignment, per-take crop, source color metadata, timeline edit) from reusable style. V06 is an Aakhri-specific preset, not universal color correction for all iPhone footage",
+    "Provide reusable configurable Fusion components: micro push, short restrained shake, slow push and opening caption. Keep effect switches off by default until Nitin selects the policy; template development does not authorize new musical effect renders",
+    "Centralize attack/hold/return frames, scale/offset limits, collision rules, cooldown, vocal protection and safe crop checks in versioned policy, not fixed timestamps in renderer code",
+    "Read verified event maps and source hashes; no invented native beat timestamps. Native overlay export is not currently machine-proven. Candidate Gemini timings must be validated before enabling effects",
+    "Preserve template A/B caption modes; use verified repository brand typography, not hardcoded Helvetica unless explicitly approved. Song-text mode remains unavailable until verified text/timing",
+    "Produce a dry-run timeline/render plan and validate template instantiation on a disposable copy. Reuse prior unchanged artifacts; only rerender changed review segments after relevant creative approval",
+    "Keep HLG configuration explicit and source-metadata validated; do not bake multiple conversion LUTs, modify MASTER 2, or expose excluded borders",
+    "Persist project/config/schema/run instructions and evidence to repo/Shared Drive with hashes; update ledger-derived Master State and notes. Report template implemented versus merely specified honestly",
+    "Address Gemini duration mismatch before full-song rhythm claims: verify time alignment in reviewed portion and review tail03:08–03:34.400 separately. Do not assume the earlier portion's semantic claims are correct solely because timestamps fall below188s",
+    "Bring Nitin one consolidated bounded effects-review proposal rather than repeated independent setup questions. Full master/publication remain separate gates"
+  ],
+  "template_contract": {
+    "source_binding": [
+      "audio_sha256",
+      "take_asset_ids_and_sha256",
+      "alignment_map",
+      "edit_plan_sha256",
+      "source_color_metadata"
+    ],
+    "style_binding": [
+      "color_preset_sha256",
+      "per_take_base_crop",
+      "brand_preset_version"
+    ],
+    "motion_binding": [
+      "event_map_sha256",
+      "event_evidence_status",
+      "selected_policy_version",
+      "vocal_protection_intervals"
+    ],
+    "caption_modes": [
+      "NONE",
+      "ORIGINAL_OPENING_DRAFT",
+      "VERIFIED_LYRIC_ONLY"
+    ],
+    "outputs": [
+      "private_review",
+      "qc_report",
+      "artifact_manifest"
+    ],
+    "reuse_rule": "Changed source/config hashes invalidate only affected steps; no unsupported always-on claim"
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false,
+    "effect_policy_selected": false
+  },
+  "template_built_in_this_chat": false
+}
