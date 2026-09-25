@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-25T17:26:57+02:00",
+  "feedback_quote": "De kleur intensiteit mag nog wat zachter aan op de plekken  waar de belichting het hardst is. Of kun je de belichting verzachten?",
+  "authorization_quote": "Allright go go",
+  "baseline": {
+    "master_state": "V16.10",
+    "state_version": 36,
+    "version": "V04_NATURAL_SKIN",
+    "authoritative_review_sha256": "76c20cae942bc2625fca8f26bdf4d355386cde8eff74dde949c4603e68326a33"
+  },
+  "status": "AUTHORIZED_PENDING_LOCAL_EXECUTION",
+  "scope": "One bounded V05 revision softening perceived hard illumination in brightest skin regions, plus matched V04/V05 review; no full-song master",
+  "instructions": [
+    "Reconcile latest repository/state/evidence; resume rather than duplicate any already completed work",
+    "Retain V04 baseline and gently compress only high-luminance skin peaks with smooth transitions; subtly reduce chroma only in those bright skin regions",
+    "Include forehead, nose, eyelids and cheeks; maintain consistent treatment on neck and hands when similarly lit. Preserve midtones, natural skin hue, facial depth and texture, lip/eye integrity, background and final base crop",
+    "Do not globally desaturate or darken the face; do not claim physical relighting or recovery of clipped source detail; inspect exact correctly interpreted source frames where necessary",
+    "Check blinks, closed eyes, head turns, gestures and real take cuts across all four takes for flicker, hue shifts, qualification edges, flat patches and excessive compression",
+    "Render one short matched V04/V05 comparison containing representative harsh-light moments and take transitions with exact timecode map; no creative motion effects",
+    "Keep minimum 10-bit BT.2020 Rec.2100 HLG and MASTER 2 programme audio only. No silent Rec.709 conversion, artificial blur, static ellipse mask, skin smoothing, face manipulation or generative alteration. Disclose Dolby Vision metadata limitation",
+    "Run scoped technical QC including frame decode on review rendition and independent Gemini QC once; clearly distinguish authoritative ProRes from proxy measurements and viewing limitations; Gemini cannot choose creative winner",
+    "Persist non-destructively in new Shared Drive version folder, verify hashes, save request and results as project notes and update ledger-derived Master State and pointer based only on verified actions",
+    "Return review link, V04/V05 timecodes, changes and remaining limitations; await Nitin color assessment"
+  ],
+  "governance": {
+    "final_color_approved": false,
+    "final_video_approved": false,
+    "final_asset_approved": false,
+    "rights_cleared": false,
+    "full_master_render_authorized": false,
+    "beat_effects_started": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "frozen_P0_E0_through_E3": "UNCHANGED"
+  }
+}
