@@ -1,0 +1,10 @@
+{
+  "blindness": "NEW_ISOLATED_GEMINI_CONTEXT; NO_CHATGPT_OR_CLAUDE_CONCLUSIONS_EXPOSED",
+  "compatibility_input_sha256": "827f3c005048551558dcacbc9d81b875d63f1f17efe3de24473914a3a8ea5e8d",
+  "conversation_url": "https://gemini.google.com/app/f14644d559aeaa03",
+  "disclosure": "H.264 compatibility rendition from the exact Resolve timeline; authoritative HLG judgement remains with the ProRes review and Nitin.",
+  "model_surface": "GEMINI_FLASH_AUTHENTICATED_WEB",
+  "schema": "GEMINI_QC_RECEIPT_V01",
+  "status": "COMPLETED",
+  "verdict": "PASS_FOR_NITIN_COLOR_CONSISTENCY_REVIEW"
+}

@@ -1,0 +1,79 @@
+{
+  "classification": "PRIVATE_V03_COLOR_CONSISTENCY_REVIEW",
+  "copy_only": true,
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V03_COLOR_CONSISTENCY_V01",
+  "files": [
+    {
+      "bytes": 1704172038,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V03_COLOR_CONSISTENCY_V01/AAKHRI_V03_COLOR_CONSISTENCY_REVIEW_V01.mov",
+      "readback_verified": true,
+      "sha256": "6abcf3378ecce5df960c3d88df6bf0a1429e185996f321ecb37a0c7c381ca69b",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v03-color-consistency-v01/AAKHRI_V03_COLOR_CONSISTENCY_REVIEW_V01.mov"
+    },
+    {
+      "bytes": 111913266,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V03_COLOR_CONSISTENCY_V01/AAKHRI_V03_COLOR_CONSISTENCY_GEMINI_COMPAT_V01.mp4",
+      "readback_verified": true,
+      "sha256": "827f3c005048551558dcacbc9d81b875d63f1f17efe3de24473914a3a8ea5e8d",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v03-color-consistency-v01/AAKHRI_V03_COLOR_CONSISTENCY_GEMINI_COMPAT_V01.mp4"
+    },
+    {
+      "bytes": 185496,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V03_COLOR_CONSISTENCY_V01/UNCHAINED_AAKHRI_V03_COLOR_CONSISTENCY_V01.drp",
+      "readback_verified": true,
+      "sha256": "34e96c173cd6c860666bc8a46a85a2c76006729d3855a98571b123a6eb637a28",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v03-color-consistency-v01/UNCHAINED_AAKHRI_V03_COLOR_CONSISTENCY_V01.drp"
+    },
+    {
+      "bytes": 723,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V03_COLOR_CONSISTENCY_V01/NITIN_REVIEW_NOTE_V01.json",
+      "readback_verified": true,
+      "sha256": "51f2f2cec33c47b302500d875edb0f435d32a5b4cf5959caefedd23f59df2b35",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/v03_color_consistency_v01_execution/NITIN_REVIEW_NOTE_V01.json"
+    },
+    {
+      "bytes": 1067,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V03_COLOR_CONSISTENCY_V01/TECHNICAL_QC_V01.json",
+      "readback_verified": true,
+      "sha256": "aeddd74709a5f076156a4430bb21245347fa24dccadc13ee55577f746b102b71",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/v03_color_consistency_v01_execution/TECHNICAL_QC_V01.json"
+    },
+    {
+      "bytes": 2691,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V03_COLOR_CONSISTENCY_V01/GEMINI_INDEPENDENT_COLOR_CONSISTENCY_QC_V01.json",
+      "readback_verified": true,
+      "sha256": "3abb6cc13846fd2d211ac6a867ccd2b5027aa5c2256b37d6c216eb9dd2537af9",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/v03_color_consistency_v01_execution/GEMINI_INDEPENDENT_COLOR_CONSISTENCY_QC_V01.json"
+    },
+    {
+      "bytes": 586,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V03_COLOR_CONSISTENCY_V01/GEMINI_QC_RECEIPT_V01.json",
+      "readback_verified": true,
+      "sha256": "f2fe2923037c6c3782f629f9c083945f709a251b0928cc7a323912091fc141d8",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/v03_color_consistency_v01_execution/GEMINI_QC_RECEIPT_V01.json"
+    },
+    {
+      "bytes": 2775,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V03_COLOR_CONSISTENCY_V01/V03_COLOR_CONSISTENCY_CONTRACT_V01.json",
+      "readback_verified": true,
+      "sha256": "0cd84c4287df0a2d8f1e38de0436dbf1911f36697e9b6c3c766f0b17860069e4",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/v03_color_consistency_v01_execution/V03_COLOR_CONSISTENCY_CONTRACT_V01.json"
+    },
+    {
+      "bytes": 7715,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V03_COLOR_CONSISTENCY_V01/RESOLVE_V03_COLOR_CONSISTENCY_V01.json",
+      "readback_verified": true,
+      "sha256": "5b0cad0ab441c768e03b7a6df55110659486d948fca90b9ae911eaefc9e99e90",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/v03_color_consistency_v01_execution/RESOLVE_V03_COLOR_CONSISTENCY_V01.json"
+    }
+  ],
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "full_master_rendered": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "overwrote_existing": false,
+  "schema": "SHARED_DRIVE_PERSISTENCE_RECEIPT_V01",
+  "status": "GREEN_SHA256_READBACK_VERIFIED"
+}

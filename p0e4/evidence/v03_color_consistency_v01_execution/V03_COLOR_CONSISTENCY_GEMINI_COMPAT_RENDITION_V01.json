@@ -1,0 +1,16 @@
+{
+  "authoritative_source": {
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v03-color-consistency-v01/AAKHRI_V03_COLOR_CONSISTENCY_REVIEW_V01.mov",
+    "sha256": "6abcf3378ecce5df960c3d88df6bf0a1429e185996f321ecb37a0c7c381ca69b"
+  },
+  "classification": "DISCLOSED_SDR_DISPLAY_COMPATIBILITY_RENDITION_FOR_GEMINI_QC_ONLY",
+  "compatibility_output": {
+    "bytes": 111913266,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v03-color-consistency-v01/AAKHRI_V03_COLOR_CONSISTENCY_GEMINI_COMPAT_V01.mp4",
+    "sha256": "827f3c005048551558dcacbc9d81b875d63f1f17efe3de24473914a3a8ea5e8d"
+  },
+  "hdr_judgement_limit": "NOT_AUTHORITATIVE_FOR_HDR_PEAK_OR_DISPLAY_IDENTITY",
+  "same_resolve_timeline": "UNCHAINED_AAKHRI_V03_COLOR_CONSISTENCY_V01",
+  "schema": "V03_COLOR_CONSISTENCY_GEMINI_COMPAT_RENDITION_V01",
+  "status": "GREEN"
+}

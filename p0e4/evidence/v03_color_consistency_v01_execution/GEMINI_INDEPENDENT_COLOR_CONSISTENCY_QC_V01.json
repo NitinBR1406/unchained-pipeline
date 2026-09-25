@@ -1,0 +1,34 @@
+{
+  "confidence": 0.65,
+  "defects": [
+    {"category": "highlight_compression", "likely_origin": "H.264 compatibility copy 8-bit dynamic range compression", "observation": "Slight flattening on forehead specular peak during head turn.", "original_timecode": "00:16", "review_timecode": "00:08", "severity": "minor", "uncertainty": "Medium (requires verification against master Rec.2100 HLG ProRes signal)"},
+    {"category": "shadow_banding", "likely_origin": "H.264 SDR export quantization rather than grade pipeline", "observation": "Faint stepping in dark collar fold shadow.", "original_timecode": "01:53", "review_timecode": "00:45", "severity": "minor", "uncertainty": "Low-to-medium"}
+  ],
+  "hdr_limitations": [
+    "SDR H.264 SDR clipping prevents definitive verification of Rec.2100 HLG 1000-nit specular roll-off.",
+    "Potential 8-bit chroma sub-sampling artifacts mask true ProRes 422 HQ shadow gradation.",
+    "BT.709 container cannot verify full BT.2020 wide color gamut coverage."
+  ],
+  "human_review_focus": [
+    "Inspect forehead specular boundary in authoritative ProRes HLG track.",
+    "Verify dark shirt shadow tonality on calibrated reference monitor.",
+    "Confirm skin tone warmth consistency across real cut at review 00:12."
+  ],
+  "passed_checks": [
+    "Skin tone and overall exposure continuity across cuts",
+    "Facial highlight roll-off and forehead specular control",
+    "Acoustic slat background color and luminance consistency",
+    "Dark clothing and hair shadow separation",
+    "Temporal stability across head movements, eye blinks, and mouth articulation",
+    "Sync coherence between vocal delivery and MASTER 2 audio track"
+  ],
+  "smallest_remaining_issue": "Subtle compression-induced quantization in lower neck and shirt shadow regions during rapid gesture at review 00:45.",
+  "transition_findings": [
+    {"notes": "Good luminance and hue balance across real cut into next take.", "original_timecode": "00:20", "review_timecode": "00:12", "status": "smooth"},
+    {"notes": "Seamless reel window splice; no noticeable exposure bump.", "original_timecode": "01:12", "review_timecode": "00:16", "status": "smooth"},
+    {"notes": "Same-take boundary maintains identical black level and wall tone.", "original_timecode": "01:32", "review_timecode": "00:36", "status": "smooth"},
+    {"notes": "Window transition maintains skin hue and lighting ratio.", "original_timecode": "01:48", "review_timecode": "00:40", "status": "smooth"},
+    {"notes": "Clean angle/cut match with stable shadow contrast.", "original_timecode": "02:05", "review_timecode": "00:57", "status": "smooth"}
+  ],
+  "verdict": "PASS_FOR_NITIN_COLOR_CONSISTENCY_REVIEW"
+}

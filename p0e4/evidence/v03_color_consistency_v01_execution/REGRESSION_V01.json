@@ -1,0 +1,15 @@
+{
+  "executed_at": "2026-09-25T14:21:01Z",
+  "failed": 0,
+  "result": "GREEN",
+  "schema": "V03_COLOR_CONSISTENCY_REGRESSION_V01",
+  "validated_checks": 34,
+  "checks": [
+    "contract schema, governance and exact MASTER 2 binding",
+    "62-second windows cover every required historical defect interval without full-master scope",
+    "Resolve source/LUT/EDL drift guards and Python syntax load",
+    "legacy V16.4-V16.8 color and reducer projections remain GREEN",
+    "temporary deterministic V16.9 projection preserves every governance gate"
+  ],
+  "limitations": "The local AVAssetReader utility could inspect container/color metadata but could not decode either output; this is explicitly retained in TECHNICAL_QC_V01 and was not silently converted to GREEN."
+}

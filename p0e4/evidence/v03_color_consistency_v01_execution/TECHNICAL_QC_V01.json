@@ -1,0 +1,9 @@
+{
+  "authoritative_output": {"bytes": 1704172038, "codec": "Apple ProRes 422 HQ", "duration_seconds": 62, "height": 1920, "nominal_frame_rate": 30, "sha256": "6abcf3378ecce5df960c3d88df6bf0a1429e185996f321ecb37a0c7c381ca69b", "width": 1080},
+  "audio": {"route": "AUTHORITATIVE_MASTER_2_ONLY", "source_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"},
+  "color_tags": {"bits_per_component_container_metadata": 12, "matrix": "ITU_R_2020", "primaries": "ITU_R_2020", "transfer": "ITU_R_2100_HLG"},
+  "decode_validation": {"apple_probe_reader_status": 3, "limitation": "The local AVAssetReader probe reported Cannot Decode for both ProRes and H.264 outputs; Resolve render completion and Gemini ingestion prove readable outputs but do not replace a calibrated frame-by-frame HDR decode test.", "status": "LIMITED_NOT_SILENTLY_GREEN"},
+  "render": {"completion_percentage": 100, "frames": 1860, "resolve_status": "Complete"},
+  "schema": "TECHNICAL_QC_V01",
+  "status": "GREEN_FOR_PRIVATE_NITIN_COLOR_REVIEW_WITH_DECLARED_DECODE_LIMITATION"
+}

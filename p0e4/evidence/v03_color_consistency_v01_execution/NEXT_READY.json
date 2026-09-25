@@ -1,0 +1,9 @@
+{
+  "blocked_followups": ["FULL_MASTER_RENDER", "BEAT_EFFECTS_PREVIEW", "POST_READY_PROMOTION", "DEPLOYMENT", "PUBLICATION"],
+  "human_gate": "NITIN_V03_COLOR_CONSISTENCY_REVIEW",
+  "independent_ready_work_remaining": false,
+  "review_asset": "AAKHRI_V03_COLOR_CONSISTENCY_REVIEW_V01.mov",
+  "review_sha256": "6abcf3378ecce5df960c3d88df6bf0a1429e185996f321ecb37a0c7c381ca69b",
+  "smallest_user_decision": "Confirm whether V03 remains color-consistent across these longer real-EDL excerpts, or identify the smallest remaining color defect with review timecode.",
+  "status": "WAITING_FOR_NITIN_V03_COLOR_CONSISTENCY_REVIEW"
+}

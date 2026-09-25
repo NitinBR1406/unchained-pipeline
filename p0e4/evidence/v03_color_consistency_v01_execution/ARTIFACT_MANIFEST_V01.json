@@ -1,0 +1,67 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1030,
+      "path": "ACCEPTANCE_V01.json",
+      "sha256": "0b9c74439e775579b64a74536b36fee94b3d110934ce529e763c2d0bb523c39c"
+    },
+    {
+      "bytes": 2691,
+      "path": "GEMINI_INDEPENDENT_COLOR_CONSISTENCY_QC_V01.json",
+      "sha256": "3abb6cc13846fd2d211ac6a867ccd2b5027aa5c2256b37d6c216eb9dd2537af9"
+    },
+    {
+      "bytes": 586,
+      "path": "GEMINI_QC_RECEIPT_V01.json",
+      "sha256": "f2fe2923037c6c3782f629f9c083945f709a251b0928cc7a323912091fc141d8"
+    },
+    {
+      "bytes": 625,
+      "path": "NEXT_READY.json",
+      "sha256": "708e7e87bc5e1c07d9766f8abdc28449925942a79725aa747ef40be7e82567a5"
+    },
+    {
+      "bytes": 723,
+      "path": "NITIN_REVIEW_NOTE_V01.json",
+      "sha256": "51f2f2cec33c47b302500d875edb0f435d32a5b4cf5959caefedd23f59df2b35"
+    },
+    {
+      "bytes": 407,
+      "path": "PROJECT_NOTES_V01.json",
+      "sha256": "506a29a567be0c12e0f7f4fdcecd3cfe0ee27cb1f7a991b0c89c85f4f95694fc"
+    },
+    {
+      "bytes": 768,
+      "path": "REGRESSION_V01.json",
+      "sha256": "b06bb15a45854e7e2b75a8d7c9f5fe40248d0b0f8dd981b69447347e0f301b1a"
+    },
+    {
+      "bytes": 7715,
+      "path": "RESOLVE_V03_COLOR_CONSISTENCY_V01.json",
+      "sha256": "5b0cad0ab441c768e03b7a6df55110659486d948fca90b9ae911eaefc9e99e90"
+    },
+    {
+      "bytes": 6468,
+      "path": "SHARED_DRIVE_PERSISTENCE_RECEIPT_V01.json",
+      "sha256": "238db25bdd6cddee2382b24f31ecf0a464ff32502f8d59ddee413194ba5cad62"
+    },
+    {
+      "bytes": 1067,
+      "path": "TECHNICAL_QC_V01.json",
+      "sha256": "aeddd74709a5f076156a4430bb21245347fa24dccadc13ee55577f746b102b71"
+    },
+    {
+      "bytes": 2775,
+      "path": "V03_COLOR_CONSISTENCY_CONTRACT_V01.json",
+      "sha256": "0cd84c4287df0a2d8f1e38de0436dbf1911f36697e9b6c3c766f0b17860069e4"
+    },
+    {
+      "bytes": 990,
+      "path": "V03_COLOR_CONSISTENCY_GEMINI_COMPAT_RENDITION_V01.json",
+      "sha256": "0a37fd19d34c3f735be81df200500c9e98eac955c709a6b02ab03b3e6bfedaa4"
+    }
+  ],
+  "authoritative_review_sha256": "6abcf3378ecce5df960c3d88df6bf0a1429e185996f321ecb37a0c7c381ca69b",
+  "schema": "ARTIFACT_MANIFEST_V01",
+  "status": "COMPLETE_PRE_STATE"
+}

@@ -1,0 +1,34 @@
+{
+  "authorization_source": "p0e4/evidence/v03_color_consistency_v01/NITIN_EXECUTION_REQUEST.json",
+  "base_framing": {
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {"base_scale": 2.02, "center": [0.5, 0.5]},
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {"base_scale": 2.02, "center": [0.5, 0.5]},
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {"base_scale": 2.02, "center": [0.5, 0.49]},
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {"base_scale": 2.3, "center": [0.5, 0.72]}
+  },
+  "blur_used": false,
+  "color_management": {"gamut_mapping": "None", "input": "Rec.2100 HLG", "output": "Rec.2100 HLG", "timeline": "Rec.2100 HLG", "tone_mapping": "None"},
+  "creative_motion_enabled": false,
+  "dolby_vision_identity_claimed": false,
+  "edl_file_sha256": "6ab0cd0d29f65ab445902ec7e852c5da6b6023f439f5a2e05288e6f3583e0354",
+  "edl_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/aakhri_multitake_real_v01/MULTI_TAKE_EDIT_DECISION_LIST_V01.json",
+  "edl_semantic_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+  "full_master_allowed": false,
+  "generative_processing_used": false,
+  "governance": {"final_asset_approved": false, "final_color_approved": false, "final_video_approved": false, "first_real_poster": "PAUSED_BY_NITIN", "production_deployment_authorized": false, "publication_authorized": false, "rights_cleared": false},
+  "programme_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "references_separated": ["SOURCE_BYTES_REFERENCE", "RESOLVE_DECODE_REFERENCE", "IDENTITY_ROUNDTRIP_REFERENCE"],
+  "review_mapping": [
+    {"covers": ["historical_00:09-00:21", "real_cut_00:20", "TAKE_S01", "TAKE_S02"], "original_timeline_ms": [8000, 24000], "review_ms": [0, 16000]},
+    {"covers": ["historical_01:13-01:29", "real_cut_01:32", "TAKE_S03", "TAKE_S04"], "original_timeline_ms": [72000, 96000], "review_ms": [16000, 40000]},
+    {"covers": ["historical_01:52-01:54", "real_cut_02:05", "TAKE_S04", "TAKE_S05"], "original_timeline_ms": [108000, 130000], "review_ms": [40000, 62000]}
+  ],
+  "schema": "V03_COLOR_CONSISTENCY_CONTRACT_V01",
+  "scope": "PRIVATE_LONGER_EDL_COLOR_CONSISTENCY_REVIEW_ONLY",
+  "skin_smoothing_used": false,
+  "static_ellipse_mask_used": false,
+  "timeline_windows_ms": [[8000, 24000], [72000, 96000], [108000, 130000]],
+  "v03_baseline_review_sha256": "4847fd0c8de52e189e79c7333a35572776b5f047381722c0ed79522f56e65718",
+  "v03_lut_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-peak-highlights-eyelids-v03/luts/NEW_V03_PEAK_HIGHLIGHTS_EYELIDS.cube",
+  "v03_lut_sha256": "a01d7ef456c6c3e6402ba4f43a825c277908abdf54d470c464ea1023fe198bba"
+}
