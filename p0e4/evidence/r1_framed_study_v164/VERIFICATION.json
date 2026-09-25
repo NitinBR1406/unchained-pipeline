@@ -1,0 +1,24 @@
+{
+  "frozen_components_unchanged": true,
+  "replay": {
+    "deterministic_replay": true,
+    "render_started": false,
+    "state_version": 30
+  },
+  "scope": "No render, Gemini dispatch, full production regression or live acceptance performed.",
+  "status": "PASS_SCOPED_STATE_RECONCILIATION",
+  "suites": [
+    {
+      "exit_code": 0,
+      "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.063s\n\nOK",
+      "suite": "p0e4/tests/test_v164_projection.py"
+    },
+    {
+      "exit_code": 0,
+      "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.029s\n\nOK",
+      "suite": "p0e4/tests/test_v163_projection.py"
+    }
+  ],
+  "tested_sha": "0e4bc31345a90e96ad3cdaf342a42f36139d42b7",
+  "tests_passed": 7
+}

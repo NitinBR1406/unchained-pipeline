@@ -1,11 +1,11 @@
 {
-  "evidence_manifest": "p0e4/evidence/resolve_studio_v163/SHA256SUMS.txt",
-  "master_state_version": "V16.3",
-  "path": "p0e4/evidence/resolve_studio_v163/UNCHAINED_MASTER_PROJECT_STATE_V16_3.json",
+  "evidence_manifest": "p0e4/evidence/r1_framed_study_v164/SHA256SUMS.txt",
+  "master_state_version": "V16.4",
+  "path": "p0e4/evidence/r1_framed_study_v164/UNCHAINED_MASTER_PROJECT_STATE_V16_4.json",
   "production_e2e_status": "BLOCKED_NOT_GREEN",
   "schema_version": 1,
-  "scope_status": "INSTALLED_SYNTHETIC_CAPABILITIES_ACCEPTED_PRODUCTION_BLOCKED",
-  "sha256": "c8f9f5ffc29e430ac7b39142b609ad55949ed908b36c3332dcc83b53a9a73ced",
-  "state_version": 29,
-  "tested_sha": "2af66e8884cd17fb39b02838798e41337c3e78bb"
+  "scope_status": "R1_STUDY_PREPARED_MAC_EXECUTION_BLOCKED",
+  "sha256": "ca0f7350d1ea8706f210611e541db6c038ea80f25a19383ff37ddeafd53480ac",
+  "state_version": 30,
+  "tested_sha": "0e4bc31345a90e96ad3cdaf342a42f36139d42b7"
 }
