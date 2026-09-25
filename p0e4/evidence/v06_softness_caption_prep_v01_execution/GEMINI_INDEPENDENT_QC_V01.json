@@ -1,0 +1,14 @@
+{
+  "schema": "GEMINI_INDEPENDENT_V06_QC_V01",
+  "conversation_url": "https://gemini.google.com/app/0b1b14cc2814c38d",
+  "input_proxy_sha256": "3aaf0c9e2fca1be745d8a79b8770df63251c438ed6a4072930a86c12ac8f8599",
+  "verdict": "PASS_FOR_NITIN_V06_COLOR_REVIEW",
+  "confidence_0_to_1": 0.68,
+  "observations": ["V06 subtly rolls off forehead, nose, cheek, eyelid and brow highlights", "Skin depth and tonality remain", "Background, shirt saturation and framing remain consistent"],
+  "defect_ranges": [],
+  "motion_stability": "No edge tearing, luminance swimming or temporal stepping reported across head motion, gestures, blinks or cuts.",
+  "preservation_checks": {"neck_and_hands": "preserved", "hair_and_beard": "preserved", "wardrobe_and_background": "preserved", "crop_and_framing": "identical"},
+  "viewing_limitations": "Browser SDR/HDR mapping and absent Dolby Vision metadata identity limit confidence.",
+  "retention_attention_hypothesis": "Softer highlights may reduce distraction from expression; this is uncertain and unmeasured.",
+  "creative_winner_selected": false
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "V06_SOFTNESS_CAPTION_PREP_ACCEPTANCE_V01",
+  "status": "WAITING_FOR_NITIN_V06_COLOR_REVIEW",
+  "authoritative_review_sha256": "1a90b0645d4e2a1edb47438f38a28d6eda08a4b4ff61d939400e914f51b929d4",
+  "technical_qc": "GREEN_10BIT_HLG_3720_OF_3720_DECODED",
+  "gemini_independent_review": "PASS_FOR_NITIN_V06_COLOR_REVIEW",
+  "caption_variants": "PREPARED_NOT_RENDERED",
+  "caption_preview_rendered": false,
+  "beat_preview_rendered": false,
+  "full_master_rendered": false,
+  "governance": {"final_color_approved": false, "production_deployment_authorized": false, "publication_authorized": false, "first_real_poster": "PAUSED_BY_NITIN"}
+}

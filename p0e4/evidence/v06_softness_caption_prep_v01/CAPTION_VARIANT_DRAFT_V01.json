@@ -1,0 +1,15 @@
+{
+  "schema": "CAPTION_VARIANT_DRAFT_V01",
+  "status": "PREPARED_NOT_RENDERED",
+  "source_excerpt": {"timeline_ms": [72000, 96000], "duration_seconds": 24, "video_source": "HASH_BOUND_REAL_MULTI_TAKE_EDL", "audio_source_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"},
+  "shared_conditions": {"color": "V06_PENDING_NITIN_APPROVAL", "edit": "IDENTICAL", "audio": "MASTER_2_IDENTICAL", "effects": "IDENTICAL_LATER_BEAT_PREVIEW_PENDING_COLOR_APPROVAL", "caption_is_only_future_comparison_variable": true},
+  "variants": [
+    {"id": "A_PERFORMANCE_ONLY", "text": null, "timing_ms": null, "status": "READY_AFTER_COLOR_APPROVAL", "principle": "Text-free performance"},
+    {"id": "B_ORIGINAL_OPENING_LINE", "text": "Some love stories never really end.", "language": "English", "provenance": "ORIGINAL_TEST_COPY_CREATED_FOR_THIS_VARIANT; NOT A LYRIC OR TRANSLATION", "timing_ms": [72250, 75850], "status": "DRAFT_FOR_NITIN_REVIEW"},
+    {"id": "C_VERIFIED_SUNG_WORDS", "text": null, "timing_ms": null, "status": "HOLD_PENDING_AUTHORITATIVE_LYRIC_TEXT_AND_WORD_TIMING", "reason": "No authoritative lyric transcript is bound; lyrics must not be invented or transcribed speculatively."}
+  ],
+  "layout": {"frame": "1080x1920", "safe_area": "existing stricter UNCHAINED mobile-safe contract", "placement": "lower third only where it does not obscure face, mouth, hands or performance gesture", "max_lines": 2, "typography": "restrained existing brand font; no new font introduced", "majority_text_free": true, "opening_line_disappears": true},
+  "render_gate": "NITIN_V06_COLOR_APPROVAL_REQUIRED",
+  "caption_preview_rendered": false,
+  "beat_preview_rendered": false
+}

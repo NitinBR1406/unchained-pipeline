@@ -1,0 +1,10 @@
+{
+  "schema": "V06_SOFTNESS_TECHNICAL_QC_V01",
+  "authoritative_review": {"sha256": "1a90b0645d4e2a1edb47438f38a28d6eda08a4b4ff61d939400e914f51b929d4", "bytes": 3437055622, "codec": "ProRes 422 HQ", "duration_seconds": 124},
+  "decode_proxy": {"sha256": "3aaf0c9e2fca1be745d8a79b8770df63251c438ed6a4072930a86c12ac8f8599", "bytes": 114339169, "codec": "H.265 10-bit", "decoded_frames": 3720, "expected_frames": 3720, "reader_status": 2, "primaries": "ITU_R_2020", "transfer": "ITU_R_2100_HLG", "matrix": "ITU_R_2020", "width": 1080, "height": 1920, "fps": 30},
+  "resolve_color_management": {"input": "Rec.2100 HLG", "timeline": "Rec.2100 HLG", "output": "Rec.2100 HLG", "tone_mapping": "None", "gamut_mapping": "None"},
+  "caption_preview_rendered": false,
+  "beat_preview_rendered": false,
+  "dolby_vision_limit": "Full Apple/Dolby Vision display identity is not claimed.",
+  "status": "GREEN_10BIT_HLG_3720_OF_3720_DECODED"
+}

@@ -1,0 +1,6 @@
+{
+  "schema": "V06_REGRESSION_V01",
+  "scope": "V05/V06 transforms plus V16.11/V16.12 deterministic projections",
+  "status": "GREEN",
+  "tests_run": 6
+}

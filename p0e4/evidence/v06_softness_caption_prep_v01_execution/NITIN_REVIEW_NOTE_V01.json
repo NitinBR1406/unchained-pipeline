@@ -1,0 +1,12 @@
+{
+  "schema": "NITIN_V06_REVIEW_NOTE_V01",
+  "status": "WAITING_FOR_NITIN_V06_COLOR_REVIEW",
+  "review_timeline": [
+    {"source": "00:08-00:24", "V05": "00:00-00:16", "V06": "00:16-00:32"},
+    {"source": "01:12-01:36", "V05": "00:32-00:56", "V06": "00:56-01:20"},
+    {"source": "01:48-02:10", "V05": "01:20-01:42", "V06": "01:42-02:04"}
+  ],
+  "change": "V06 adds a smaller second-stage softening of the brightest skin transitions above V05, without altering background, framing, EDL, sync or programme audio.",
+  "caption_and_beat_previews": "NOT_RENDERED_PENDING_NITIN_COLOR_APPROVAL",
+  "limitations": ["HLG may be display-tone-mapped", "Dolby Vision display identity is not claimed", "Final color choice remains Nitin-only"]
+}
