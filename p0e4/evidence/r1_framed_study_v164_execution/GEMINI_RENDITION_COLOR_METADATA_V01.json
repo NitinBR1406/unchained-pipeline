@@ -1,0 +1,82 @@
+[
+  {
+    "duration_seconds" : 60,
+    "estimated_data_rate" : 3017827.25,
+    "format_descriptions" : [
+      {
+        "all_extension_keys" : [
+          "BitsPerComponent",
+          "CVFieldCount",
+          "CVImageBufferChromaLocationBottomField",
+          "CVImageBufferChromaLocationTopField",
+          "CVImageBufferColorPrimaries",
+          "CVImageBufferTransferFunction",
+          "CVImageBufferYCbCrMatrix",
+          "CVPixelAspectRatio",
+          "Depth",
+          "FormatName",
+          "FullRangeVideo",
+          "RevisionLevel",
+          "SampleDescriptionExtensionAtoms",
+          "SpatialQuality",
+          "TemporalQuality",
+          "Vendor",
+          "VerbatimSampleDescription",
+          "Version"
+        ],
+        "dimensions" : {
+          "height" : 960,
+          "width" : 540
+        },
+        "extensions_safe" : {
+          "BitsPerComponent" : 10,
+          "CVFieldCount" : 1,
+          "CVImageBufferChromaLocationBottomField" : "Left",
+          "CVImageBufferChromaLocationTopField" : "Left",
+          "CVImageBufferColorPrimaries" : "ITU_R_2020",
+          "CVImageBufferTransferFunction" : "ITU_R_2100_HLG",
+          "CVImageBufferYCbCrMatrix" : "ITU_R_2020",
+          "CVPixelAspectRatio" : {
+            "HorizontalSpacing" : 1,
+            "VerticalSpacing" : 1
+          },
+          "Depth" : 24,
+          "FormatName" : "H.265 10-bit",
+          "FullRangeVideo" : false,
+          "RevisionLevel" : 0,
+          "SampleDescriptionExtensionAtoms" : {
+            "hvcC" : {
+              "data_bytes" : 107,
+              "sha_prefix" : "010220000000b000"
+            }
+          },
+          "SpatialQuality" : 512,
+          "TemporalQuality" : 512,
+          "Vendor" : "    ",
+          "VerbatimSampleDescription" : {
+            "data_bytes" : 245,
+            "sha_prefix" : "000000f568766331"
+          },
+          "Version" : 0
+        },
+        "known_color_extensions" : {
+          "CVImageBufferChromaLocationBottomField" : "Left",
+          "CVImageBufferChromaLocationTopField" : "Left",
+          "CVImageBufferColorPrimaries" : "ITU_R_2020",
+          "CVImageBufferTransferFunction" : "ITU_R_2100_HLG",
+          "CVImageBufferYCbCrMatrix" : "ITU_R_2020"
+        },
+        "media_subtype" : "hvc1"
+      }
+    ],
+    "natural_size" : {
+      "height" : 960,
+      "width" : 540
+    },
+    "nominal_fps" : 30,
+    "path" : ".local/aakhri-r1-framed-hlg-study-retry1/AAKHRI_R1_FRAMED_HLG_MATRIX_GEMINI_RENDITION_V01.mov",
+    "relevant_quicktime_metadata" : [
+
+    ]
+  }
+]

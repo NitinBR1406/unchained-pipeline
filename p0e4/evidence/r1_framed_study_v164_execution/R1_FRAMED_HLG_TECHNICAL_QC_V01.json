@@ -1,0 +1,52 @@
+{
+  "authoritative_matrix": {
+    "bytes": 1593948897,
+    "frames": 1800,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-framed-hlg-study-retry1/AAKHRI_R1_FRAMED_HLG_MATRIX_V01.mov",
+    "role": "AUTHORITATIVE_HDR_REVIEW_MATRIX",
+    "sha256": "e6408ed5184c442052f225ab41f3bf1b48ae54440bda665c114ef58edb1f344a",
+    "status": {
+      "CompletionPercentage": 100,
+      "JobStatus": "Complete",
+      "TimeTakenToRenderInMs": 74824
+    }
+  },
+  "gemini_defect_routing": {
+    "00_10_00_14_environment_warmth": "VISIBLE_REVIEW_NOTE",
+    "highlight_clipping_claim": "HUMAN_OR_SCOPE_VALIDATION_REQUIRED"
+  },
+  "gemini_rendition": {
+    "bytes": 22657273,
+    "path": ".local/aakhri-r1-framed-hlg-study-retry1/AAKHRI_R1_FRAMED_HLG_MATRIX_GEMINI_RENDITION_V01.mov",
+    "sha256": "19f3a3db7183b8b1ec55a79995ff1d68e637717dfb106ee0d943564a6a4bdf3b"
+  },
+  "limits": [
+    "Container tags and Resolve settings prove the encoded HLG route, not a calibrated display match.",
+    "Gemini's highlight-clipping observation is visual and rendition-limited; it is not accepted as a measured scope result.",
+    "No true Resolve scope export was exposed through the scripting API during this run."
+  ],
+  "schema": "R1_FRAMED_HLG_TECHNICAL_QC_V01",
+  "status": "GREEN_WITH_GEMINI_VISUAL_UNCERTAINTY",
+  "verified": {
+    "authoritative_bits_per_component": 12,
+    "authoritative_codec": "Apple ProRes 422 HQ",
+    "authoritative_matrix": "ITU_R_2020",
+    "authoritative_primaries": "ITU_R_2020",
+    "authoritative_transfer": "ITU_R_2100_HLG",
+    "blur_used": false,
+    "creative_motion_used": false,
+    "duration_seconds": 60,
+    "fps": 30,
+    "full_master_rendered": false,
+    "gemini_codec": "H.265 10-bit",
+    "gemini_height": 960,
+    "gemini_matrix": "ITU_R_2020",
+    "gemini_primaries": "ITU_R_2020",
+    "gemini_transfer": "ITU_R_2100_HLG",
+    "gemini_width": 540,
+    "height": 1920,
+    "source_hashes_unchanged": true,
+    "static_masks_used": false,
+    "width": 1080
+  }
+}

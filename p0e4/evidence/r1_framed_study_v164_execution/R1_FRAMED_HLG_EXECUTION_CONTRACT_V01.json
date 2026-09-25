@@ -1,0 +1,116 @@
+{
+  "authority": "NITIN",
+  "authorization_ref": "p0e4/evidence/r1_framed_study_v164/STUDY_REQUEST.json",
+  "base_framing": {
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "reason": "REMOVE_CEILING_AND_LOWER_BORDER"
+    },
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+    },
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.49
+      ],
+      "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+    },
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+      "base_scale": 2.3,
+      "center": [
+        0.5,
+        0.72
+      ],
+      "reason": "LOWER_SUBJECT_POSITION_REQUIRES_UPWARD_NORMALIZATION"
+    }
+  },
+  "color_management": {
+    "gamut_mapping": "None",
+    "input": "Rec.2100 HLG",
+    "output": "Rec.2100 HLG",
+    "timeline": "Rec.2100 HLG",
+    "tone_mapping": "None"
+  },
+  "creative_winner_selected": false,
+  "forbidden": [
+    "REC709_CONVERSION",
+    "STATIC_SPATIAL_MASK",
+    "BLUR",
+    "SKIN_SMOOTHING",
+    "FACE_MANIPULATION",
+    "GENERATIVE_PROCESSING",
+    "FULL_MASTER_RENDER"
+  ],
+  "full_master_allowed": false,
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "post_ready": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "method_limits": [
+    "Hue/chroma gating is non-spatial and cannot prove semantic subject/background identity.",
+    "Encoded-domain BT.2020 luma preservation is an engineering constraint, not a perceptual HDR identity claim.",
+    "Nitin alone selects the creative direction."
+  ],
+  "representative_scenes": [
+    {
+      "scene_index": 1,
+      "source_time_seconds": 36.0,
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8"
+    },
+    {
+      "scene_index": 2,
+      "source_time_seconds": 24.0,
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin"
+    },
+    {
+      "scene_index": 3,
+      "source_time_seconds": 96.0,
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8"
+    },
+    {
+      "scene_index": 4,
+      "source_time_seconds": 72.0,
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW"
+    }
+  ],
+  "schema": "R1_FRAMED_HLG_EXECUTION_CONTRACT_V01",
+  "segment_seconds": 5,
+  "variant_order": [
+    "R1_BASELINE",
+    "R1_CALMER_BACKGROUND",
+    "R1_CALMER_BACKGROUND_RICHER_SUBJECT"
+  ],
+  "variant_recipes": {
+    "R1_BASELINE": {
+      "background_neutral_chroma_delta": 0.0,
+      "base_saturation": 1.035,
+      "operation": "BOUNDED_HUE_CHROMA_3D_LUT",
+      "skin_chroma_delta": 0.0
+    },
+    "R1_CALMER_BACKGROUND": {
+      "background_neutral_chroma_delta": -0.075,
+      "base_saturation": 1.035,
+      "operation": "BOUNDED_HUE_CHROMA_3D_LUT",
+      "skin_chroma_delta": 0.0
+    },
+    "R1_CALMER_BACKGROUND_RICHER_SUBJECT": {
+      "background_neutral_chroma_delta": -0.075,
+      "base_saturation": 1.035,
+      "operation": "BOUNDED_HUE_CHROMA_3D_LUT",
+      "skin_chroma_delta": 0.075
+    }
+  }
+}

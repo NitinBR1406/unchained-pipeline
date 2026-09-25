@@ -1,0 +1,50 @@
+{
+  "bounded_repair_actions": "Apply global highlight soft-clip to recover forehead detail. Limit warmth adjustments to specific luma ranges to prevent background shifts.",
+  "creative_winner_selected": false,
+  "growth_hypotheses_and_future_measurements": "Hypothesis: Calmer background reduces distraction. Richer skin tone increases emotional resonance. Together, these may improve early retention. Future measurement: A/B test variants for 3-second drop-off.",
+  "inputs_and_hashes": {
+    "authoritative_sha256": "e6408ed5184c442052f225ab41f3bf1b48ae54440bda665c114ef58edb1f344a",
+    "rendition_specs": "540x960, H.265 10-bit, BT.2020, Rec.2100 HLG, 60s",
+    "uploaded_file": "AAKHRI_R1_FRAMED_HLG_MATRIX_GEMINI_RENDITION_V01.mov",
+    "uploaded_sha256": "19f3a3db7183b8b1ec55a79995ff1d68e637717dfb106ee0d943564a6a4bdf3b"
+  },
+  "measurement_reconciliation": {
+    "INFERRED_HYPOTHESIS": "Richer skin tones and calmer backgrounds may influence audience retention.",
+    "MEASURED": "Hashes, resolution (540x960), codec (H.265 10-bit), duration (60s), tight R3 framing.",
+    "VISUALLY_OBSERVED": "Skin tone warming, background contrast shifts, highlight clipping."
+  },
+  "observed_rendition_limits": "Viewing 8-bit SDR image extractions. Cannot observe true Rec.2100 HLG peak luminance, true HDR contrast ratios, or full BT.2020 color gamut extent.",
+  "per_variant_per_take_findings": [
+    {
+      "baseline": "Bright background stripes compete with subject. Skin appears pale.",
+      "calmer_background": "Background contrast reduced slightly.",
+      "calmer_background_richer_subject": "Skin warmth increased. Enhances emotional focus.",
+      "take": 1
+    },
+    {
+      "baseline": "Forehead highlights prominent.",
+      "calmer_background": "Background visually recedes.",
+      "calmer_background_richer_subject": "Richer skin tone improves presence. Non-spatial adjustment slightly warms environment.",
+      "take": 2
+    },
+    {
+      "baseline": "Tight framing emphasizes facial expressions.",
+      "calmer_background": "Reduced background dominance.",
+      "calmer_background_richer_subject": "Better color depth on face. Inter-take consistency maintained.",
+      "take": 3
+    },
+    {
+      "baseline": "High contrast maintained.",
+      "calmer_background": "Slight reduction in background distraction.",
+      "calmer_background_richer_subject": "Warmer skin improves believability. Framing supports focus.",
+      "take": 4
+    }
+  ],
+  "provider_model_if_visible_else_UNKNOWN": "Gemini",
+  "schema": "Aakhri_Ishq_Color_Study_Review_v1",
+  "timestamped_defects": [
+    "00:00-00:59: Highlight clipping on forehead and nose across all takes.",
+    "00:10-00:14: Mild color leakage; global saturation warms background slightly."
+  ],
+  "uncertainties": "Impact of true HDR display on highlight clipping severity. Viewer device calibration variance."
+}

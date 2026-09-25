@@ -1,0 +1,39 @@
+{
+  "gemini_summary": {
+    "creative_winner_selected": false,
+    "growth_hypothesis": "Calmer background and stronger subject presence may support attention and emotional focus; retention/watch-time impact requires later measured A/B data.",
+    "uncertainty": "Gemini viewed a compressed rendition through an uncalibrated surface and could not verify true HDR peak luminance or gamut.",
+    "visually_observed": "Calmer variants generally reduce background dominance; richer-subject variants appear warmer and more present."
+  },
+  "governance": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "matrix_order": {
+    "take_1": [
+      "00:00 R1_BASELINE",
+      "00:05 R1_CALMER_BACKGROUND",
+      "00:10 R1_CALMER_BACKGROUND_RICHER_SUBJECT"
+    ],
+    "take_2": [
+      "00:15 R1_BASELINE",
+      "00:20 R1_CALMER_BACKGROUND",
+      "00:25 R1_CALMER_BACKGROUND_RICHER_SUBJECT"
+    ],
+    "take_3": [
+      "00:30 R1_BASELINE",
+      "00:35 R1_CALMER_BACKGROUND",
+      "00:40 R1_CALMER_BACKGROUND_RICHER_SUBJECT"
+    ],
+    "take_4": [
+      "00:45 R1_BASELINE",
+      "00:50 R1_CALMER_BACKGROUND",
+      "00:55 R1_CALMER_BACKGROUND_RICHER_SUBJECT"
+    ]
+  },
+  "request_to_nitin": "Select or reject a direction after viewing on an HLG-capable display. No full master is authorized before that decision.",
+  "schema": "NITIN_R1_REFINED_COLOR_REVIEW_NOTE_V01",
+  "status": "WAITING_FOR_NITIN_R1_REFINED_COLOR_REVIEW"
+}

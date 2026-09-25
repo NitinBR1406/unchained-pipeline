@@ -1,0 +1,21 @@
+{
+  "authoritative_matrix_sha256": "e6408ed5184c442052f225ab41f3bf1b48ae54440bda665c114ef58edb1f344a",
+  "capture_method": "authenticated Chrome Gemini UI; response transcribed from accessibility-visible JSON",
+  "conversation_url": "https://gemini.google.com/app/d274da602ff35fd5",
+  "executed_at": "2026-09-25T07:42:00Z",
+  "fresh_context": true,
+  "independence_controls": {
+    "chatgpt_or_claude_conclusions_supplied": false,
+    "creative_winner_authority": false
+  },
+  "model": "UNKNOWN_NOT_EXPOSED_IN_UI",
+  "provider": "Google Gemini",
+  "request_contract_sha256": "ac79951d2eb49ff1a180d796230f4a5a80d819104a9807d88a6419aed440ed8e",
+  "response_sha256": "21809b31d116bb44e3600a5f716e14f1911194962d3b3e264e0c946f1f80ee36",
+  "schema": "GEMINI_INDEPENDENT_R1_REVIEW_RECEIPT_V01",
+  "status": "COMPLETED_WITH_RENDITION_LIMITATIONS",
+  "uploaded_rendition": {
+    "bytes": 22657273,
+    "sha256": "19f3a3db7183b8b1ec55a79995ff1d68e637717dfb106ee0d943564a6a4bdf3b"
+  }
+}
