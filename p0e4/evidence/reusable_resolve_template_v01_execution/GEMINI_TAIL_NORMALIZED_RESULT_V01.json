@@ -1,0 +1,65 @@
+{
+  "audible_events": [
+    {
+      "clip_relative_timecode": "00:00.000 - 00:02.150",
+      "confidence": "HIGH",
+      "evidence": "Upper-register vocal sustain over low transient pulse and ambient harmonic layer.",
+      "parent_master_timecode": "03:08.000 - 03:10.150",
+      "semantic_label": "lead vocal sustain"
+    },
+    {
+      "clip_relative_timecode": "00:02.150 - 00:11.850",
+      "confidence": "HIGH",
+      "evidence": "Continuous melodic vocal phrases over periodic low-end pulses and sustained background pads.",
+      "parent_master_timecode": "03:10.150 - 03:19.850",
+      "semantic_label": "lead vocal melodic line with low-end pulse"
+    },
+    {
+      "clip_relative_timecode": "00:11.850 - 00:20.500",
+      "confidence": "HIGH",
+      "evidence": "Lower vocal phrasing accompanied by low transient pulses that thin out toward the end of the interval.",
+      "parent_master_timecode": "03:19.850 - 03:28.500",
+      "semantic_label": "lead vocal phrasing and rhythmic pulse taper"
+    },
+    {
+      "clip_relative_timecode": "00:20.500 - 00:23.500",
+      "confidence": "HIGH",
+      "evidence": "Final soft vocal cadence in a sparse acoustic space without rhythmic pulses.",
+      "parent_master_timecode": "03:28.500 - 03:31.500",
+      "semantic_label": "lead vocal final phrase"
+    },
+    {
+      "clip_relative_timecode": "00:23.500 - 00:26.400",
+      "confidence": "HIGH",
+      "evidence": "Natural acoustic resonance, synth layer, and reverb decay fading cleanly to silence without active vocal.",
+      "parent_master_timecode": "03:31.500 - 03:34.400",
+      "semantic_label": "natural reverb decay and outro ring-out"
+    }
+  ],
+  "effect_guidance": {
+    "00:00.000 - 00:20.500": "Maintain natural mix balance; avoid limiter pumping against low-end pulses.",
+    "00:20.500 - 00:26.400": "Default to stillness. Preserve natural decay of the final vocal trail and ambient ring-out without artificial gating or early cutoff."
+  },
+  "energy_and_emotion": {
+    "dynamic_trajectory": "Progressive decrescendo from moderate ballad intensity into a sparse, intimate breakdown, ending in ambient decay.",
+    "emotional_contour": "Melancholic, poignant, and resigned, settling into quiet stillness."
+  },
+  "full_tail_reviewed": true,
+  "observed_tail_duration_seconds": 26.4000417,
+  "qc_verdict": {
+    "notes": "Natural fade-out and room tail decay cleanly without digital clipping, premature truncation, or audible artifacts.",
+    "status": "PASS"
+  },
+  "uncertainty_and_limits": {
+    "percussion_identity": "UNKNOWN (low transient pulses cannot be definitively separated into kick vs synth pulse without stems)",
+    "structural_section": "UNKNOWN (evaluated purely as an isolated mixed-master tail excerpt)",
+    "vocal_identity": "UNKNOWN"
+  },
+  "vocal_protection_intervals": [
+    {
+      "clip_relative_timecode": "00:00.000 - 00:23.500",
+      "parent_master_timecode": "03:08.000 - 03:31.500",
+      "rationale": "Continuous primary lead vocal execution; protect clarity, center image, and natural dynamics from harsh processing or gating."
+    }
+  ]
+}

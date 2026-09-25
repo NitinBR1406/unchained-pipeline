@@ -1,0 +1,106 @@
+{
+  "destination_folder_id": "NOT_EXPOSED_BY_LOCAL_DRIVEFS",
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925",
+  "mapping": [
+    {
+      "bytes": 165232,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/UNCHAINED_PERFORMANCE_TEMPLATE_V01_DISPOSABLE.drp",
+      "destination_readback_sha256": "eaacc7c83e3a9cbcf95bbbe9ad13a534d2d145df2eda8016b5c832e76a29eee2",
+      "match": true,
+      "source": ".local/unchained-performance-template-v01/UNCHAINED_PERFORMANCE_TEMPLATE_V01_DISPOSABLE.drp",
+      "source_sha256": "eaacc7c83e3a9cbcf95bbbe9ad13a534d2d145df2eda8016b5c832e76a29eee2"
+    },
+    {
+      "bytes": 720,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/template_contract/README.md",
+      "destination_readback_sha256": "1b1304ee3ee9e75b59020f1d5bd35d985fa8e41d022ba36b028deb64ce488ad9",
+      "match": true,
+      "source": "p0e4/resolve/templates/UNCHAINED_PERFORMANCE_TEMPLATE_V01/README.md",
+      "source_sha256": "1b1304ee3ee9e75b59020f1d5bd35d985fa8e41d022ba36b028deb64ce488ad9"
+    },
+    {
+      "bytes": 1156,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/template_contract/fusion_components.json",
+      "destination_readback_sha256": "b57ad561b49166d5976dd700efd64d50ed294e3a0ca7cf743c5af344d52a1b5f",
+      "match": true,
+      "source": "p0e4/resolve/templates/UNCHAINED_PERFORMANCE_TEMPLATE_V01/fusion_components.json",
+      "source_sha256": "b57ad561b49166d5976dd700efd64d50ed294e3a0ca7cf743c5af344d52a1b5f"
+    },
+    {
+      "bytes": 3146,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/template_contract/job.example.json",
+      "destination_readback_sha256": "70b037b86e359441db7a17214830660d59011c5a4716b719974bdc9924895f18",
+      "match": true,
+      "source": "p0e4/resolve/templates/UNCHAINED_PERFORMANCE_TEMPLATE_V01/job.example.json",
+      "source_sha256": "70b037b86e359441db7a17214830660d59011c5a4716b719974bdc9924895f18"
+    },
+    {
+      "bytes": 805,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/template_contract/job.schema.json",
+      "destination_readback_sha256": "24c6e77a26c33f83dd5306d192a85bc88ea5728b6493f6594814b02724949d54",
+      "match": true,
+      "source": "p0e4/resolve/templates/UNCHAINED_PERFORMANCE_TEMPLATE_V01/job.schema.json",
+      "source_sha256": "24c6e77a26c33f83dd5306d192a85bc88ea5728b6493f6594814b02724949d54"
+    },
+    {
+      "bytes": 1124,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/template_contract/motion_policy.json",
+      "destination_readback_sha256": "8dd05a699cf57cac5429d7c7918a8357bb6a2d8a783fdd9894856f799a4b3706",
+      "match": true,
+      "source": "p0e4/resolve/templates/UNCHAINED_PERFORMANCE_TEMPLATE_V01/motion_policy.json",
+      "source_sha256": "8dd05a699cf57cac5429d7c7918a8357bb6a2d8a783fdd9894856f799a4b3706"
+    },
+    {
+      "bytes": 1451,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/review_evidence/BUNDLED_REVIEW_PROPOSAL_V01.json",
+      "destination_readback_sha256": "3428ff67e388d27d78a413baad72e501f64987635c86bf75e93425b1fa1dc31a",
+      "match": true,
+      "source": "p0e4/evidence/reusable_resolve_template_v01_execution/BUNDLED_REVIEW_PROPOSAL_V01.json",
+      "source_sha256": "3428ff67e388d27d78a413baad72e501f64987635c86bf75e93425b1fa1dc31a"
+    },
+    {
+      "bytes": 992,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/review_evidence/GEMINI_TAIL_COVERAGE_RECEIPT_V01.json",
+      "destination_readback_sha256": "2a374abce8f2027db513a9b651e14d16dadb08379daa83a275cc4f67f66a9504",
+      "match": true,
+      "source": "p0e4/evidence/reusable_resolve_template_v01_execution/GEMINI_TAIL_COVERAGE_RECEIPT_V01.json",
+      "source_sha256": "2a374abce8f2027db513a9b651e14d16dadb08379daa83a275cc4f67f66a9504"
+    },
+    {
+      "bytes": 3104,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/review_evidence/GEMINI_TAIL_NORMALIZED_RESULT_V01.json",
+      "destination_readback_sha256": "22b4f5b42c52bd6f9c8e8ec3e463473f7711c7867b6155c535eabb02a12e9279",
+      "match": true,
+      "source": "p0e4/evidence/reusable_resolve_template_v01_execution/GEMINI_TAIL_NORMALIZED_RESULT_V01.json",
+      "source_sha256": "22b4f5b42c52bd6f9c8e8ec3e463473f7711c7867b6155c535eabb02a12e9279"
+    },
+    {
+      "bytes": 782,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/review_evidence/TAIL_EXTRACTION_PROVENANCE_V01.json",
+      "destination_readback_sha256": "16f6fe9f3c17f5c009c384aa919346f746ac8f5b45a6f1432daab0b4beb8bb35",
+      "match": true,
+      "source": "p0e4/evidence/reusable_resolve_template_v01_execution/TAIL_EXTRACTION_PROVENANCE_V01.json",
+      "source_sha256": "16f6fe9f3c17f5c009c384aa919346f746ac8f5b45a6f1432daab0b4beb8bb35"
+    },
+    {
+      "bytes": 3260,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/review_evidence/TEMPLATE_INSTANTIATION_RECEIPT.json",
+      "destination_readback_sha256": "e137ece76aebf0fbb257a652d0ea36a4192dbfe194c31d1bde301a0dae8d9452",
+      "match": true,
+      "source": "p0e4/evidence/reusable_resolve_template_v01_execution/TEMPLATE_INSTANTIATION_RECEIPT.json",
+      "source_sha256": "e137ece76aebf0fbb257a652d0ea36a4192dbfe194c31d1bde301a0dae8d9452"
+    },
+    {
+      "bytes": 620,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V01_20260925/review_evidence/TEMPLATE_TEST_RECEIPT_V01.json",
+      "destination_readback_sha256": "28321403655f4b8eba6b00767b3cf2228db8b7d04a481f713aa4500e4bf81cf3",
+      "match": true,
+      "source": "p0e4/evidence/reusable_resolve_template_v01_execution/TEMPLATE_TEST_RECEIPT_V01.json",
+      "source_sha256": "28321403655f4b8eba6b00767b3cf2228db8b7d04a481f713aa4500e4bf81cf3"
+    }
+  ],
+  "non_destructive": true,
+  "overwrote_existing": false,
+  "schema": "SHARED_DRIVE_TEMPLATE_PERSISTENCE_RECEIPT_V01",
+  "status": "PASS_READBACK_SHA_EQUIVALENT"
+}

@@ -1,0 +1,8 @@
+{
+  "effect_render_authorized": false,
+  "full_master_render_authorized": false,
+  "gate": "NITIN_SINGLE_BUNDLED_EFFECT_POLICY_REVIEW",
+  "schema": "NEXT_READY_V01",
+  "smallest_action": "Review BUNDLED_REVIEW_PROPOSAL_V01 and select/reject/adjust P1, P2 and P3 together. Tail 03:08.000-03:34.400 remains protected stillness by default.",
+  "status": "WAITING_FOR_NITIN"
+}

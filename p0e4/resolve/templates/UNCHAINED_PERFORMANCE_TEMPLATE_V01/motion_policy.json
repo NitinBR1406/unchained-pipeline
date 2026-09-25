@@ -1,0 +1,39 @@
+{
+  "collision_rules": [
+    "ONE_MOTION_EVENT_AT_A_TIME",
+    "NO_SHAKE_DURING_VOCAL_PROTECTED_CLOSEUP",
+    "NO_MOTION_ACROSS_CUT",
+    "SAFE_CROP_MUST_PASS_AT_PEAK_SCALE"
+  ],
+  "cooldown_frames": 45,
+  "default_enabled": false,
+  "event_requirement": "NITIN_SELECTED_AND_VALIDATED",
+  "native_overlay_semantics": "VISUAL_PULSE_GUIDANCE_ONLY_NOT_KICK_SNARE_TRUTH",
+  "parameters": {
+    "micro_push": {
+      "attack_frames": 10,
+      "hold_frames": 0,
+      "max_offset_fraction": 0.0,
+      "max_scale_delta_fraction": 0.03,
+      "return_frames": 18
+    },
+    "restrained_shake": {
+      "attack_frames": 2,
+      "hold_frames": 1,
+      "max_offset_fraction": 0.005,
+      "max_scale_delta_fraction": 0.015,
+      "max_total_frames": 7,
+      "return_frames": 4
+    },
+    "slow_push": {
+      "attack_frames": 510,
+      "hold_frames": 0,
+      "max_offset_fraction": 0.0,
+      "max_scale_delta_fraction": 0.015,
+      "return_frames": 0
+    }
+  },
+  "schema": "UNCHAINED_MOTION_POLICY_V01",
+  "selected_policy_version": "UNSELECTED",
+  "vocal_protection": "STILLNESS_UNLESS_NITIN_EXPLICITLY_SELECTS_SLOW_PUSH"
+}

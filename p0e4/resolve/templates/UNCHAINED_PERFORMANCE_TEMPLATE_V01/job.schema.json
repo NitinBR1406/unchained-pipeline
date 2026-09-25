@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "motion_binding": {
+      "required": [
+        "event_map_sha256",
+        "event_evidence_status",
+        "selected_policy_version",
+        "effect_switches",
+        "vocal_protection_intervals"
+      ],
+      "type": "object"
+    },
+    "style_binding": {
+      "required": [
+        "color_preset_sha256",
+        "per_take_base_crop",
+        "brand_preset_version",
+        "caption_mode"
+      ],
+      "type": "object"
+    },
+    "template_version": {
+      "const": "UNCHAINED_PERFORMANCE_TEMPLATE_V01"
+    }
+  },
+  "required": [
+    "template_version",
+    "source_binding",
+    "style_binding",
+    "motion_binding",
+    "outputs"
+  ],
+  "title": "UNCHAINED performance template job",
+  "type": "object"
+}

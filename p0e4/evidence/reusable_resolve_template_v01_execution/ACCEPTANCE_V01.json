@@ -1,0 +1,16 @@
+{
+  "caption_default_none": true,
+  "effect_rendered": false,
+  "effects_default_off": true,
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "full_master_rendered": false,
+  "gemini_audio_coverage_gap_remaining_seconds": 0.0,
+  "hlg_explicit": true,
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "resolve_dry_run_instantiated": true,
+  "resolve_project_exported": true,
+  "schema": "REUSABLE_RESOLVE_TEMPLATE_ACCEPTANCE_V01",
+  "status": "GREEN_TEMPLATE_IMPLEMENTED_WAITING_FOR_NITIN_EFFECT_POLICY",
+  "template_code_implemented": true
+}

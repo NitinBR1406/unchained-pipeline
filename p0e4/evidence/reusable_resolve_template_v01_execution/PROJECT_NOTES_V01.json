@@ -1,0 +1,11 @@
+{
+  "limitations": [
+    "V06 is Aakhri-specific and not a universal color preset.",
+    "Repository contains no verified brand typography binding, so opening captions remain disabled.",
+    "Resolve native beat overlays remain non-exportable as machine event timestamps.",
+    "No effect policy is selected."
+  ],
+  "next_gate": "NITIN_SINGLE_BUNDLED_EFFECT_POLICY_REVIEW",
+  "outcome": "Reusable Resolve template implemented and instantiated on an isolated Aakhri-derived dry-run project. All effects and captions are off. Gemini tail coverage closed through a sample-accurate PCM24 tail review.",
+  "schema": "PROJECT_NOTES_V01"
+}

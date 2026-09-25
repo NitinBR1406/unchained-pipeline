@@ -1,0 +1,16 @@
+{
+  "assertions": [
+    "all effects off by default",
+    "effect activation requires selected Nitin policy",
+    "effect activation requires validated events",
+    "lyrics require verified text hash",
+    "non-HLG source interpretation fails closed",
+    "source/config changes have bounded invalidation"
+  ],
+  "command": "python3 -m unittest p0e4.tests.test_performance_template -v",
+  "resolve_instantiation": "PASS_PRIVATE_DRY_RUN_NO_RENDER",
+  "resolve_project_sha256": "eaacc7c83e3a9cbcf95bbbe9ad13a534d2d145df2eda8016b5c832e76a29eee2",
+  "schema": "TEMPLATE_TEST_RECEIPT_V01",
+  "status": "PASS",
+  "tests": 6
+}

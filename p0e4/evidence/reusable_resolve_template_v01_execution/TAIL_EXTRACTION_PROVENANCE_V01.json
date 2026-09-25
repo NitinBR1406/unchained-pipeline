@@ -1,0 +1,24 @@
+{
+  "derivation": {
+    "method": "Python wave module sample-accurate PCM frame slice",
+    "reencode": "PCM_SAMPLES_COPIED_LOSSLESSLY_WITH_NEW_WAV_HEADER",
+    "source_start_frame": 9024000,
+    "source_start_seconds": 188.0
+  },
+  "parent_master": {
+    "duration_seconds": 214.4000417,
+    "name": "AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "schema": "TAIL_EXTRACTION_PROVENANCE_V01",
+  "tail": {
+    "bytes": 7603256,
+    "channels": 2,
+    "duration_seconds": 26.400041666666667,
+    "frames": 1267202,
+    "name": "AAKHRI_MASTER2_TAIL_03m08s_TO_END_PCM24.wav",
+    "sample_rate": 48000,
+    "sample_width_bytes": 3,
+    "sha256": "d18eb6dc5f8a17c46f9bba3ceab2c0b83aa43429d299989ed6da28428eb36a2f"
+  }
+}

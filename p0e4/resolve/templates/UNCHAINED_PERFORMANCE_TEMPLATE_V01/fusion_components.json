@@ -1,0 +1,57 @@
+{
+  "components": {
+    "MICRO_PUSH": {
+      "default_enabled": false,
+      "inputs": [
+        "Enabled",
+        "BaseScale",
+        "PeakScale",
+        "AttackFrames",
+        "ReturnFrames",
+        "Center"
+      ]
+    },
+    "OPENING_CAPTION": {
+      "default_enabled": false,
+      "hold": "TYPOGRAPHY_UNKNOWN_AND_LYRIC_TEXT_UNVERIFIED",
+      "inputs": [
+        "Enabled",
+        "Mode",
+        "AuthoritativeText",
+        "TextSha256",
+        "BrandPresetVersion",
+        "StartFrame",
+        "EndFrame"
+      ],
+      "modes": [
+        "NONE",
+        "ORIGINAL_OPENING_DRAFT",
+        "VERIFIED_LYRIC_ONLY"
+      ]
+    },
+    "RESTRAINED_SHAKE": {
+      "default_enabled": false,
+      "inputs": [
+        "Enabled",
+        "BaseScale",
+        "AmplitudeX",
+        "AmplitudeY",
+        "AttackFrames",
+        "HoldFrames",
+        "ReturnFrames",
+        "Seed"
+      ]
+    },
+    "SLOW_PUSH": {
+      "default_enabled": false,
+      "inputs": [
+        "Enabled",
+        "StartScale",
+        "EndScale",
+        "DurationFrames",
+        "Center"
+      ]
+    }
+  },
+  "schema": "UNCHAINED_FUSION_COMPONENT_INTERFACES_V01"
+}

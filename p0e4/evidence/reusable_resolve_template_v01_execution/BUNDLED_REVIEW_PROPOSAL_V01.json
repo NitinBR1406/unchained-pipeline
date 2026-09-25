@@ -1,0 +1,43 @@
+{
+  "after_selection": "Only selected short previews may be instantiated; no full master without separate authorization.",
+  "audio_coverage": {
+    "coverage_gap_remaining_seconds": 0.0,
+    "parent_master_seconds": 214.4000417,
+    "previous_review_seconds": 188.0,
+    "tail_default": "STILLNESS_AND_VOCAL_PROTECTION",
+    "tail_review_seconds": 26.4000417
+  },
+  "decision_needed": "Select/reject/adjust P1, P2 and P3 together; tail remains still unless Nitin explicitly changes it.",
+  "one_review_request": {
+    "P1": {
+      "default": "OFF",
+      "range": "00:40.80-00:41.80",
+      "treatment": "subtle rhythmic push/punch-in"
+    },
+    "P2": {
+      "default": "OFF",
+      "range": "02:04.80-02:05.15",
+      "treatment": "one very short impact shake, picture-conditional"
+    },
+    "P3": {
+      "default": "OFF",
+      "range": "02:45.00-03:02.00",
+      "treatment": "vocal-led slow push"
+    },
+    "TAIL": {
+      "default": "ON_AS_PROTECTION_RULE",
+      "range": "03:08.00-03:34.40",
+      "treatment": "full stillness with natural outro decay"
+    }
+  },
+  "schema": "BUNDLED_REVIEW_PROPOSAL_V01",
+  "status": "WAITING_FOR_NITIN_SINGLE_REVIEW",
+  "template": {
+    "caption_default": "NONE",
+    "color": "Aakhri V06 provisional short-preview preset only",
+    "effects_default": "OFF",
+    "full_master_rendered": false,
+    "implemented": true,
+    "resolve_project": "UNCHAINED_PERFORMANCE_TEMPLATE_V01_DISPOSABLE.drp"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "caption_mode": "NONE",
+  "component_instances": [
+    {
+      "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "caption_component_connected": false,
+      "components": [
+        "BASE_CROP",
+        "MICRO_PUSH_OFF",
+        "RESTRAINED_SHAKE_OFF",
+        "SLOW_PUSH_OFF"
+      ],
+      "timeline_ms": [
+        72000,
+        92000
+      ]
+    },
+    {
+      "asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+      "caption_component_connected": false,
+      "components": [
+        "BASE_CROP",
+        "MICRO_PUSH_OFF",
+        "RESTRAINED_SHAKE_OFF",
+        "SLOW_PUSH_OFF"
+      ],
+      "timeline_ms": [
+        92000,
+        96000
+      ]
+    }
+  ],
+  "edit_plan_semantic_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+  "effects_bypassed": [
+    "micro_push",
+    "restrained_shake",
+    "slow_push"
+  ],
+  "effects_enabled": [],
+  "full_master_rendered": false,
+  "hlg_settings": {
+    "colorScienceMode": "davinciYRGBColorManaged",
+    "colorSpaceInput": "Rec.2100 HLG",
+    "colorSpaceOutput": "Rec.2100 HLG",
+    "colorSpaceOutputGamutMapping": "None",
+    "colorSpaceOutputToneMapping": "None",
+    "colorSpaceTimeline": "Rec.2100 HLG",
+    "isAutoColorManage": "0",
+    "timelineFrameRate": "30.0",
+    "timelineResolutionHeight": "1920",
+    "timelineResolutionWidth": "1080"
+  },
+  "job_sha256": "70b037b86e359441db7a17214830660d59011c5a4716b719974bdc9924895f18",
+  "previous_project_restored": true,
+  "project_closed": true,
+  "project_export": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/unchained-performance-template-v01/UNCHAINED_PERFORMANCE_TEMPLATE_V01_DISPOSABLE.drp",
+  "project_export_sha256": "eaacc7c83e3a9cbcf95bbbe9ad13a534d2d145df2eda8016b5c832e76a29eee2",
+  "project_name": "UNCHAINED_PERFORMANCE_TEMPLATE_V01_DISPOSABLE",
+  "render_requested": false,
+  "schema": "UNCHAINED_PERFORMANCE_TEMPLATE_INSTANTIATION_RECEIPT_V01",
+  "source_hashes": {
+    "alignment_map": {
+      "ref": "p0e4/evidence/aakhri_multitake_real_v01/SYNCHRONIZED_TAKE_SET_V01.json",
+      "sha256": "2de1e189381f9838e53f14d0860c92897204858ab817685e097f41d2d43fdf4f"
+    },
+    "audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "edit_plan_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+    "source_color_metadata": {
+      "dolby_vision_identity_claimed": false,
+      "gamut_mapping": "None",
+      "input": "Rec.2100 HLG",
+      "minimum_bit_depth": 10,
+      "output": "Rec.2100 HLG",
+      "timeline": "Rec.2100 HLG",
+      "tone_mapping": "None"
+    },
+    "take_asset_ids_and_sha256": {
+      "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+      "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+    }
+  },
+  "status": "INSTANTIATED_PRIVATE_DRY_RUN_NO_RENDER",
+  "timeline": "TEMPLATE_DRY_RUN_24S_EFFECTS_OFF",
+  "timeline_frames": 720
+}

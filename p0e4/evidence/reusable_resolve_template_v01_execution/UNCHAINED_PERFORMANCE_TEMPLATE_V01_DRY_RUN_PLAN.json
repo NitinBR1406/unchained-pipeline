@@ -1,0 +1,153 @@
+{
+  "caption_enabled": false,
+  "effect_nodes_bypassed": [
+    "micro_push",
+    "restrained_shake",
+    "slow_push"
+  ],
+  "effect_nodes_enabled": [],
+  "effect_nodes_instantiated": [
+    "micro_push",
+    "restrained_shake",
+    "slow_push"
+  ],
+  "full_master_rendered": false,
+  "invalidation_graph": {
+    "alignment": [
+      "take_asset_ids_and_sha256",
+      "alignment_map"
+    ],
+    "caption": [
+      "brand_preset_version",
+      "caption_mode",
+      "verified_lyric_sha256"
+    ],
+    "color": [
+      "source_color_metadata",
+      "color_preset_sha256"
+    ],
+    "ingest": [
+      "audio_sha256",
+      "take_asset_ids_and_sha256",
+      "source_color_metadata"
+    ],
+    "motion": [
+      "event_map_sha256",
+      "event_evidence_status",
+      "selected_policy_version",
+      "effect_switches",
+      "vocal_protection_intervals"
+    ],
+    "render": [
+      "timeline",
+      "color",
+      "motion",
+      "caption",
+      "output_recipe"
+    ],
+    "timeline": [
+      "alignment_map",
+      "edit_plan_sha256"
+    ]
+  },
+  "motion": {
+    "effect_switches": {
+      "micro_push": false,
+      "restrained_shake": false,
+      "slow_push": false
+    },
+    "event_evidence_status": "ANALYSIS_COMPLETE_POLICY_UNSELECTED",
+    "event_map_sha256": "c818e3df59c42307a8c9251d821fde829e15639d8e434aefbaba77956652a69a",
+    "selected_policy_version": "UNSELECTED",
+    "vocal_protection_intervals": [
+      {
+        "policy": "STILLNESS_DEFAULT",
+        "range": "00:00-00:23"
+      },
+      {
+        "policy": "VOCAL_PROTECTION",
+        "range": "02:45-03:08"
+      },
+      {
+        "policy": "TAIL_REVIEW_REQUIRED_EFFECTS_OFF",
+        "range": "03:08-03:34.400"
+      }
+    ]
+  },
+  "outputs": {
+    "artifact_manifest": {
+      "enabled": true
+    },
+    "output_recipe": "10BIT_BT2020_REC2100_HLG_PRIVATE_REVIEW",
+    "private_review": {
+      "enabled": false
+    },
+    "qc_report": {
+      "enabled": true
+    }
+  },
+  "render_requested": false,
+  "reusable_style": {
+    "brand_preset_version": "UNCHAINED_BRAND_TYPOGRAPHY_UNVERIFIED_HOLD",
+    "brand_typography_status": "UNKNOWN",
+    "caption_mode": "NONE",
+    "color_preset_sha256": "4fdd545d18826ed26ae2a22ef87eeff70e7013ecb7c12924c993100ee9e082c0",
+    "color_scope": "AAKHRI_V06_PROVISIONAL_SHORT_PREVIEW_ONLY_NOT_UNIVERSAL",
+    "per_take_base_crop": {
+      "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+        "center": [
+          0.5,
+          0.5
+        ],
+        "scale": 2.02
+      },
+      "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+        "center": [
+          0.5,
+          0.5
+        ],
+        "scale": 2.02
+      },
+      "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+        "center": [
+          0.5,
+          0.49
+        ],
+        "scale": 2.02
+      },
+      "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+        "center": [
+          0.5,
+          0.72
+        ],
+        "scale": 2.3
+      }
+    },
+    "verified_lyric_sha256": null
+  },
+  "schema": "UNCHAINED_PERFORMANCE_TEMPLATE_DRY_RUN_PLAN_V01",
+  "source_specific": {
+    "alignment_map": {
+      "ref": "p0e4/evidence/aakhri_multitake_real_v01/SYNCHRONIZED_TAKE_SET_V01.json",
+      "sha256": "2de1e189381f9838e53f14d0860c92897204858ab817685e097f41d2d43fdf4f"
+    },
+    "audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "edit_plan_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+    "source_color_metadata": {
+      "dolby_vision_identity_claimed": false,
+      "gamut_mapping": "None",
+      "input": "Rec.2100 HLG",
+      "minimum_bit_depth": 10,
+      "output": "Rec.2100 HLG",
+      "timeline": "Rec.2100 HLG",
+      "tone_mapping": "None"
+    },
+    "take_asset_ids_and_sha256": {
+      "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb",
+      "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9",
+      "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+    }
+  },
+  "template_version": "UNCHAINED_PERFORMANCE_TEMPLATE_V01"
+}
