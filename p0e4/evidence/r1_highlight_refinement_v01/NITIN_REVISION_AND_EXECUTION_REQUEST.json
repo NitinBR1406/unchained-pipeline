@@ -1,0 +1,55 @@
+{
+  "schema": "NITIN_COLOR_REVISION_EXECUTION_REQUEST_V01",
+  "recorded_at": "2026-09-25T10:57:18Z",
+  "source": "Direct Nitin messages in Master Orchestrator; assistant transcription, not a signed human-gate event",
+  "source_feedback": "ik heb de vergelijking bekeken, de factory is in de juiste richting aan het gaan. Achterrond is inderdaar zachter, mag nog iets zachter. soms zijn er inderdaad felle highlight op voorhoofd en neus, deze mag zachter gemaakt worden. wat zijn de volgende stappen in het colorgrading proces?",
+  "execution_authorization": "go",
+  "feedback_local_datetime": "2026-09-25T10:17:55+02:00",
+  "authorization_local_datetime": "2026-09-25T12:57:18+02:00",
+  "observed_head": "9ec7934f5eed74ebf563197a1727414e4f90da83",
+  "parent_master_state": {
+    "version": "V16.5",
+    "state_version": 31
+  },
+  "status": "AUTHORIZED_REVISION_PENDING_MAC_EXECUTION",
+  "render_started": false,
+  "gemini_dispatched": false,
+  "creative_status": "DIRECTION_POSITIVELY_REVIEWED_MORE_REFINEMENT_REQUIRED",
+  "baseline": {
+    "matrix_sha256": "e6408ed5184c442052f225ab41f3bf1b48ae54440bda665c114ef58edb1f344a",
+    "choice": "R1 provisional family; Nitin did not identify an exact variant ID in latest feedback. Preserve current candidate recipe with explicit identity; do not invent final variant selection."
+  },
+  "execution_steps": [
+    "On existing Mac executor fetch current branch preserving local changes. Inspect latest evidence and in-flight jobs before any dispatch; do not duplicate work.",
+    "Use exact source frames, established tight framing and current HLG recipe. Bind baseline and revised recipe hashes explicitly.",
+    "Inspect strongest forehead/nose highlights across all four takes against source in the same documented color domain. Separate display brightness, recoverable signal and genuinely clipped source detail.",
+    "Apply one bounded revision: gentler highlight roll-off and slightly calmer background; preserve subject richness, natural skin hue, skin structure and midtone exposure. Prevent prior background warmth leakage.",
+    "Do not equate bright appearance with measured clipping. Do not claim detail recovery from irreversibly clipped source. If a requested correction cannot be isolated safely, report rather than silently apply broad darkening.",
+    "Create matched current-versus-revised short motion samples (5-8 seconds) from all four takes including highlight and head/hand motion trouble spots. No creative shakes or zooms during comparison.",
+    "Validate HLG metadata and decode, highlight/shadow behavior, skin hue, inter-take matching and temporal edges. Use repeatable pixel measurements in a documented color domain if Resolve scope export is unavailable; never call proxy measurements calibrated scope evidence.",
+    "Run focused regression; use existing isolated environment for dependencies. Report missing dependency gates honestly rather than claim full regression.",
+    "Submit one independent Gemini review only after package exists. Include source/export metadata, measurement definitions, compressed-rendition limitations and Nitin goals. Separate measured facts, visual observations and retention/watch-hours hypotheses. No AI creative winner.",
+    "Persist new outputs non-destructively to approved Shared Drive review destination and verify readback. Inspect prior automatic-review rejection and reason first; do not bypass or blindly repeat it. Escalate exact unresolved reason if blocked.",
+    "Append evidence via existing ledger/reducer, version Master State, exact tested-SHA and asset lineage; stop for Nitin final color review."
+  ],
+  "governance": {
+    "final_color_approved": false,
+    "final_video_approved": false,
+    "final_asset_approved": false,
+    "rights_cleared": false,
+    "full_master_render_authorized": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  },
+  "constraints": [
+    "BT.2020 Rec.2100 HLG minimum 10-bit; no silent Rec.709 conversion",
+    "No artificial blur, static ellipse mask, skin smoothing, face manipulation or generative alteration",
+    "No full Dolby Vision display identity claim",
+    "No full-song render or beat-effects progression before final color approval",
+    "No production deployment, publication, purchases or frozen P0-E0 through E3 edits"
+  ],
+  "desired_next_state": "WAITING_FOR_NITIN_HIGHLIGHT_BACKGROUND_COLOR_REVIEW",
+  "execution_surface_limit": "Master Orchestrator session has GitHub access but no established remote Mac/Resolve transport. This file is an execution request, not proof of dispatch or completion.",
+  "cost_bound": "One revision, short matched samples, cached source evidence, one independent review; no new full-song render."
+}
