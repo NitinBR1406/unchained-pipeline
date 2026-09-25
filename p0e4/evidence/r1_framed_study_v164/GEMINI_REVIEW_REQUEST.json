@@ -1,0 +1,35 @@
+{
+  "expected_output_fields": [
+    "inputs_and_hashes",
+    "observed_rendition_limits",
+    "per_variant_per_take_findings",
+    "timestamped_defects",
+    "measurement_reconciliation",
+    "growth_hypotheses_and_future_measurements",
+    "bounded_repair_actions",
+    "uncertainties",
+    "creative_winner_selected_false"
+  ],
+  "input_requirements": [
+    "Exact original HLG metadata, source hashes, matched framed comparisons and motion clips",
+    "Apple/Resolve interpretation and export metadata plus scope measurements",
+    "Nitin R1 preference and desired richer subject / calmer background; no prior AI winner conclusions"
+  ],
+  "instructions": [
+    "Independently assess natural subject presence, emotional focus, skin detail, calm background and inter-take consistency in tight framing.",
+    "Do not label HLG as log. State limitations of uploaded rendition and whether actual HDR signal/display is observable.",
+    "Assess 10M-plan relevance through attention, recognition, retention and watch-hours hypotheses. Exact 10M unit/target is UNKNOWN until authoritative plan is retrieved.",
+    "No fabricated causal uplift, probabilities, actual watch hours or winning creative selection.",
+    "Return timestamped defects, measured vs visual vs inferred labels, actionable bounded adjustments, confidence and unresolved uncertainties.",
+    "No approval authority; Nitin alone selects the look."
+  ],
+  "provider_receipt_required": [
+    "Session/run identity where exposed",
+    "Model identity or explicit UNKNOWN",
+    "Exact submitted package hashes",
+    "Request/result hashes",
+    "Fresh independent context and actual execution evidence"
+  ],
+  "schema": "GEMINI_R1_FRAMED_REVIEW_REQUEST_V01",
+  "status": "PREPARED_NOT_DISPATCHED"
+}

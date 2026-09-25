@@ -1,0 +1,46 @@
+{
+  "blocker_scope": "This session only; historical Mac capability remains valid. No remote Mac execution transport exposed.",
+  "cost_controls": [
+    "Three variants only; short matched samples before any full master.",
+    "Cache source metadata, frames and scope results by source/recipe hashes.",
+    "One independent Gemini review after the comparable package exists; bounded repair only for specific defects."
+  ],
+  "execution_host_required": "Existing authorized Mac with Resolve Studio, original media and Apple AVFoundation",
+  "full_master_allowed": false,
+  "gemini_dispatched": false,
+  "minimum_user_action": "Open existing local Codex project unchained-pipeline on Mac and continue from committed request; no secrets or manual terminal commands required.",
+  "next_state_after_execution": "WAITING_FOR_NITIN_R1_REFINED_COLOR_REVIEW",
+  "observed_host": "Linux; no codex or resolve executable; /Applications/DaVinci Resolve and /Users/nitinramdaras absent",
+  "persistence": "New non-destructive review folder under existing Shared Drive PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq; evidence/hash manifest/receipt back into repository.",
+  "preflight": [
+    "Fetch current branch and inspect working tree; never discard local changes.",
+    "Verify no completed newer study or in-flight job; use a unique hash-bound task identity.",
+    "Use existing R3 static framing transforms per take; read their evidence and preserve exact values, no invented crop.",
+    "Read actual source metadata and verify source hashes, MASTER 2 audio hash and current installed Resolve capabilities.",
+    "Locate existing authenticated Gemini review path; never treat this request as a provider receipt."
+  ],
+  "qc": [
+    "Compare Apple vs Resolve in common documented color domain; screenshots/JPEGs alone cannot establish HDR identity.",
+    "Do not claim full Dolby Vision display identity; dvvC preservation not established.",
+    "Reuse existing QC metrics with their measurement definitions; thresholds are engineering bounds, not proof of aesthetic quality.",
+    "Report per-take exposure/color matching, skin hue drift, highlights, shadows, gamut, mask-edge temporal stability, source hash integrity.",
+    "Keep technical measurements separate from Gemini visual hypotheses and Nitin creative selection."
+  ],
+  "render_started": false,
+  "schema": "R1_FRAMED_HLG_STUDY_REQUEST_V01",
+  "status": "R1_STUDY_PREPARED_MAC_EXECUTION_BLOCKED",
+  "study_design": {
+    "color_contract": "Existing Rec.2100 HLG input/timeline/output, BT.2020 minimum 10-bit; no silent Rec.709 or extra tone mapping.",
+    "control": "Creative motion/shakes off. Identical crop and timing for all variants.",
+    "duration": "5-8 seconds per matched segment, four takes; include head/hand motion and known problematic forehead/mouth regions after mapping programme time to source.",
+    "grading": "Bounded secondary corrections; retain natural skin hue/texture and highlight/shadow detail. Background softness means calmer color/contrast, not inferred artificial blur permission.",
+    "reference": "Exact source bytes retained; Apple decode and Resolve HLG decode comparison uses same source timestamps, crop, scaling and documented display transform.",
+    "review": "Nitin selects final color only after comparisons. No full-song render, beat-effects progression, final-video approval, rights clearance, publication or deployment.",
+    "segmentation": "Prove available API/GUI transport for tracked corrections before claiming automation. Reject temporal flicker, halos and skin leakage. No static ellipse mask, skin smoothing, face manipulation or generative alteration.",
+    "variants": [
+      "R1_BASELINE",
+      "R1_CALMER_BACKGROUND",
+      "R1_CALMER_BACKGROUND_RICHER_SUBJECT"
+    ]
+  }
+}
