@@ -1,0 +1,25 @@
+{
+  "authority": "Subordinate to state/evidence; historical notes untouched.",
+  "blockers": [
+    "Latest engineering ledger fails hash-chain verification at zero-based seq 31.",
+    "Last record is not a valid typed/hash-chained event; version 45 carries lineage from earlier state.",
+    "MASTER_STATE_LATEST.sha256 does not match current pointer.",
+    "Claude detector app.py/clip_fx.py and existing beat/hit outputs not retrieved in recorded receipt.",
+    "Nitin final continuous effect policy selection absent."
+  ],
+  "chatgpt_memory_updated": false,
+  "date": "2026-09-26",
+  "lessons_learned": [
+    "A matching SHA manifest does not prove valid ledger replay.",
+    "Pointer, state version, event chain and parent lineage must all agree before state promotion.",
+    "Existing detector retrieval and human creative choice remain distinct from technical policy preparation."
+  ],
+  "next_ready_action": {
+    "action": "Trace the first divergent ledger event and its source commits; prepare an additive recovery proposal with existing reducer and explicit lineage. Do not rewrite frozen snapshots or promote an unreplayable state.",
+    "status": "READY_READ_ONLY"
+  },
+  "schema": "PROJECT_NOTES_V02",
+  "source_commit": "5d3cc76d0b720ef6d4c1b338b6d1442989f82d02",
+  "summary": "Continuous rhythm remains the direction. Effects stay OFF. No new creative/production milestone. V16.19 registered but its replay is not verified; integrity hold takes precedence over promotion.",
+  "supplements": "p0e4/evidence/continuous_rhythm_claude_reuse_v01_execution/PROJECT_NOTES_V01.json"
+}

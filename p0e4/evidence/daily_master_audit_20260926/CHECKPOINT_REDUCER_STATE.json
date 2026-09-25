@@ -1,0 +1,72 @@
+{
+  "approvals": {},
+  "architecture_locks": {
+    "adr_ref": null,
+    "architecture_bakeoff": null,
+    "production_deployment_authorized": false,
+    "selected_control_plane": null,
+    "winner": null
+  },
+  "autonomous_execution": {
+    "active_tasks": [],
+    "current_task": null,
+    "waiting_for_nitin": []
+  },
+  "backlog_summary": {
+    "blocked": 0,
+    "completed": 0,
+    "ready": 0,
+    "running": 0,
+    "waiting_for_nitin": 0
+  },
+  "current_content": null,
+  "current_release": null,
+  "datastore_ids": {},
+  "deployments": [],
+  "duplicate_side_effect_count": 0,
+  "evidence_refs": [
+    {
+      "checkpoint_sha256": "0a28ea2cd1eb8a4b20639071f69543693b7cf32750874ad205f0aac5df1a7595",
+      "master_transition": false,
+      "result": "NO_MASTER_TRANSITION_INTEGRITY_HOLD",
+      "scope": "INDEPENDENT_AUDIT_CHECKPOINT_NOT_PROJECT_MASTER_LINEAGE",
+      "source_commit": "5d3cc76d0b720ef6d4c1b338b6d1442989f82d02"
+    }
+  ],
+  "git": {
+    "branch": null,
+    "commit_sha": null,
+    "repository": null
+  },
+  "grants": {},
+  "invariants": {
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "STATE_RECOVERED_AFTER_RESTART": null,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": null,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": null
+  },
+  "issue_classes": {
+    "material": [],
+    "must_fix": [],
+    "nice_to_have": []
+  },
+  "ledger_head_hash": "c1bf9cd38c1537b4480c3cd7a1caef448a727cf138e11305a831d3413b41f369",
+  "milestone": "TEMPORAL CONTROL PLANE FOUNDATION",
+  "phase": "P0-E1",
+  "production_state": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "mutated": false,
+    "p1_scenario": "9627055"
+  },
+  "project": "UNCHAINED NITIN \u2014 MASTER",
+  "proven_tests": [],
+  "provenance": [],
+  "runner_health": {},
+  "scenario_ids": {},
+  "schema_version": 1,
+  "state_hash": "e91de9f252695163b315c3f091273976b2aa76023c6da17f7232d5cd636901ae",
+  "state_version": 1,
+  "updated_at": "2026-09-25T23:47:39Z",
+  "updated_by": "00_MASTER_ORCHESTRATOR"
+}

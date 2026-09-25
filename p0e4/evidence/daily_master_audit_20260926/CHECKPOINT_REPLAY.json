@@ -1,0 +1,8 @@
+{
+  "ledger_head_hash": "c1bf9cd38c1537b4480c3cd7a1caef448a727cf138e11305a831d3413b41f369",
+  "reducer_state_version": 1,
+  "schema": "CHECKPOINT_REPLAY_V01",
+  "scope": "Independent audit checkpoint only, NOT V16.19 project Master State replay.",
+  "source_commit": "5d3cc76d0b720ef6d4c1b338b6d1442989f82d02",
+  "verified": true
+}

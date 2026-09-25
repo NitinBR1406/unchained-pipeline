@@ -283,3 +283,23 @@ start another run. Do not rerun authoritative acceptance just to reproduce an al
 `state_update.project()` replays the append-only engineering ledger with the frozen reducer and composes
 V06 with its hash-bound V05 parent. This additive project snapshot projection does not replace the runtime
 reducer. Repeated identical updates are idempotent; changed evidence requires a subsequent version.
+
+## Daily handover — 2026-09-26
+
+Source commit: `5d3cc76d0b720ef6d4c1b338b6d1442989f82d02`.
+Registered pointer: V16.19 / state_version 45. No new milestone or master transition.
+The pointer target and all 15 current manifest entries match, but the engineering
+ledger fails replay at zero-based sequence 31; its last record is not a typed,
+hash-chained event. The pointer checksum sidecar also fails. Historical evidence
+and the pointer remain unchanged pending additive, reducer-backed recovery.
+
+The Shared Drive continuous motion policy matches repository bytes; effects remain
+OFF. Claude detector bytes and Nitin's final continuous policy selection remain
+outstanding. First READY action: read-only trace of ledger divergence and an
+additive recovery proposal. No new detector, render, deployment or publication.
+
+See [daily checkpoint](evidence/daily_master_audit_20260926/DAILY_CHECKPOINT.json)
+and [versioned project notes](evidence/daily_master_audit_20260926/PROJECT_NOTES_V02.json).
+The separate checkpoint ledger replays through the existing reducer; this is not
+a claim that V16.19 replays. Notes are subordinate to state/evidence. No ChatGPT
+memory write is claimed. All frozen phases and human authorization gates remain intact.
