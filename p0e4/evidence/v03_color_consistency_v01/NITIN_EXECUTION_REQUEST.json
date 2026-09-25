@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-25T16:05:00+02:00",
+  "user_quote": "Oké go",
+  "authorization_context": "Proceed with step 1: validate selected V03 color over longer fragments and real take transitions before effects.",
+  "status": "AUTHORIZED_PENDING_LOCAL_EXECUTION",
+  "baseline_review_sha256": "4847fd0c8de52e189e79c7333a35572776b5f047381722c0ed79522f56e65718",
+  "instructions": [
+    "Reconcile latest branch, Master State and evidence first; do not duplicate completed work",
+    "Preserve V03 as selected working color baseline; no new look variants unless a demonstrated defect requires bounded repair",
+    "Create one concise review reel of longer contiguous representative excerpts and real EDL take transitions covering all four takes; record exact source and timeline timecodes",
+    "Include historical defect windows 00:09–00:21, 01:13–01:29 and 01:52–01:54 where relevant to current edit; check forehead texture/shadow, eyelid peaks, blinking, head/hand motion, mouth integrity and lipsync. Explicitly map any differing timeline positions",
+    "Keep final base crop, disable creative shake/zoom for color assessment; historical excessive motion interval 01:33–01:58 remains a subsequent effects-stage issue",
+    "Check skin tone/exposure continuity across cuts, highlight rolloff, background consistency, shadow detail and temporal artifacts; compare suspect artifacts to exact source frames",
+    "Keep minimum 10-bit BT.2020 Rec.2100 HLG; use only authoritative MASTER 2 for programme audio; retain Dolby Vision metadata limitation; no blur, skin smoothing, static ellipse masks, face manipulation or generative alteration",
+    "Perform scoped technical QC and one independent Gemini review. Disclose any compatibility rendition and HDR assessment limitations; AI cannot choose creative winner",
+    "Persist non-destructively to new versioned Shared Drive review folder, verify hashes, save findings and update ledger-derived Master State, pointer and project notes",
+    "Return exact review link, timecode findings, actual passed/blocked checks and smallest remaining issue. Wait for Nitin review before further rendering"
+  ],
+  "next_phase": "Short beat-driven effects preview after color consistency review; not started by this request",
+  "governance": {
+    "full_song_master_render_authorized": false,
+    "final_video_approval": false,
+    "final_asset_approval": false,
+    "rights_cleared": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "frozen_P0_E0_through_E3": "UNCHANGED"
+  }
+}
