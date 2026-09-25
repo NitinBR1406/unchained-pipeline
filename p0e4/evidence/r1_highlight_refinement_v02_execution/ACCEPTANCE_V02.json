@@ -1,0 +1,25 @@
+{
+  "authoritative_review_sha256": "bb04de28d14cb33858effc55031c9a8a1ecaa34ea8a4e1611a62ed7b83b3dd59",
+  "full_master_rendered": false,
+  "gemini_independent_review": "COMPLETED_NO_CREATIVE_WINNER",
+  "governance": {
+    "final_asset_approved": false,
+    "final_color_approved": false,
+    "final_video_approved": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "rights_cleared": false
+  },
+  "growth_claims": "HYPOTHESES_ONLY_NOT_OBSERVED_NOT_CAUSAL",
+  "measurements": "COMPARATIVE_DISPLAY_DECODED_PROXY_NOT_CALIBRATED_HDR_SCOPES",
+  "prior_versions_untouched": true,
+  "render_scope": "FOUR_TAKES_X_CURRENT_AND_NEW_5_SECONDS_EACH",
+  "schema": "R1_FACE_BACKGROUND_SOFTNESS_ACCEPTANCE_V02",
+  "shared_drive_persistence": "GREEN_EXACT_SHA_READBACK",
+  "shared_drive_target": "Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_R1_FACE_BACKGROUND_SOFTNESS_V02",
+  "source_staging_untouched": true,
+  "status": "WAITING_FOR_NITIN_FACE_BACKGROUND_SOFTNESS_COLOR_REVIEW",
+  "technical_qc": "GREEN_10BIT_HLG_1200_OF_1200_DECODED"
+}

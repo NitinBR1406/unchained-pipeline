@@ -1,0 +1,18 @@
+{
+  "bytes": 35198032,
+  "codec": "H265",
+  "format": "mp4",
+  "frames": 1200,
+  "full_master_rendered": false,
+  "height": 1920,
+  "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/AAKHRI_R1_V01_CURRENT_VS_V02_NEW_HLG_REVIEW_V02.mp4",
+  "render_status": {
+    "CompletionPercentage": 100,
+    "JobStatus": "Complete",
+    "TimeTakenToRenderInMs": 44361
+  },
+  "schema": "R1_V02_HLG_REVIEW_PROXY_V01",
+  "sha256": "bb04de28d14cb33858effc55031c9a8a1ecaa34ea8a4e1611a62ed7b83b3dd59",
+  "source_timeline": "AAKHRI_R1_V01_CURRENT_VS_V02_NEW_HLG_V02",
+  "width": 1080
+}

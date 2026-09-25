@@ -1,0 +1,29 @@
+{
+  "changes": [
+    "Subtle additional highlight roll-off on skin-like high-luma pixels, bounded to protect midtones and texture.",
+    "Slight neutral-background luma and chroma reduction without spatial masks or blur.",
+    "Same source frames, framing, and playback conditions; no creative motion effects."
+  ],
+  "decision_requested": "Confirm NEW, retain CURRENT, reject both, or describe the smallest correction. This is color review only and is not final video, asset, rights, deployment, or publication approval.",
+  "limitations": [
+    "No calibrated HDR-nits or complete Resolve scope capture; numeric frame measurements are comparative display-decoded proxies.",
+    "Current roundtrip does not preserve dvvC metadata; no full Apple/Dolby Vision identity is claimed.",
+    "No source-detail recovery, retention, watch-time, growth, or causal claim."
+  ],
+  "mapping": {
+    "take_1": "00:00 CURRENT / 00:05 NEW",
+    "take_2": "00:10 CURRENT / 00:15 NEW",
+    "take_3": "00:20 CURRENT / 00:25 NEW",
+    "take_4": "00:30 CURRENT / 00:35 NEW"
+  },
+  "review_sha256": "bb04de28d14cb33858effc55031c9a8a1ecaa34ea8a4e1611a62ed7b83b3dd59",
+  "review_video": "AAKHRI_R1_V01_CURRENT_VS_V02_NEW_HLG_REVIEW_V02.mp4",
+  "schema": "NITIN_FACE_BACKGROUND_SOFTNESS_REVIEW_NOTE_V02",
+  "status": "WAITING_FOR_NITIN_FACE_BACKGROUND_SOFTNESS_COLOR_REVIEW",
+  "technical_summary": [
+    "10-bit H.265, BT.2020/Rec.2100 HLG tags verified",
+    "1200/1200 frames decoded",
+    "display-decoded proxy measurements show lower center p95/p99 luma in all four NEW pairs",
+    "no full master rendered"
+  ]
+}

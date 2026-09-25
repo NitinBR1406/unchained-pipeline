@@ -1,0 +1,119 @@
+{
+  "authority": "NITIN",
+  "authorization_ref": "p0e4/evidence/r1_highlight_refinement_v02/NITIN_FACE_BACKGROUND_SOFTNESS_REQUEST.json",
+  "base_framing": {
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "reason": "REMOVE_CEILING_AND_LOWER_BORDER"
+    },
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+    },
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+      "base_scale": 2.02,
+      "center": [
+        0.5,
+        0.49
+      ],
+      "reason": "REMOVE_CEILING_AND_FLOOR_MATCH_SUBJECT_SCALE"
+    },
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+      "base_scale": 2.3,
+      "center": [
+        0.5,
+        0.72
+      ],
+      "reason": "LOWER_SUBJECT_POSITION_REQUIRES_UPWARD_NORMALIZATION"
+    }
+  },
+  "baseline": {
+    "approval_status": "TECHNICAL_BASIS_NOT_FINAL_SELECTION",
+    "identity": "REVISED_GENTLER_HIGHLIGHTS_CALMER_BACKGROUND",
+    "lut_path": ".local/aakhri-r1-highlight-refinement/luts/REVISED_GENTLER_HIGHLIGHTS_CALMER_BACKGROUND.cube",
+    "lut_sha256": "f3c0687c9e446175919a38f13b548c90805e25ef8d9ad06f0fc120dc66fc84b6"
+  },
+  "color_management": {
+    "gamut_mapping": "None",
+    "input": "Rec.2100 HLG",
+    "output": "Rec.2100 HLG",
+    "timeline": "Rec.2100 HLG",
+    "tone_mapping": "None"
+  },
+  "constraints": [
+    "Minimum 10-bit BT.2020 Rec.2100 HLG",
+    "No Rec.709 conversion",
+    "No blur, static ellipse mask, skin smoothing, face manipulation or generative alteration",
+    "No creative zooms, shakes or beat effects",
+    "No unsupported detail-recovery claim"
+  ],
+  "dolby_vision_limitation": "Current roundtrip does not preserve dvvC metadata; no full Apple/Dolby display identity is claimed.",
+  "full_master_allowed": false,
+  "governance": {
+    "final_asset_approved": false,
+    "final_color_approved": false,
+    "final_video_approved": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "rights_cleared": false
+  },
+  "measurement_domain": {
+    "domain": "AVFoundation-decoded 8-bit PNG samples from HLG-tagged ProRes output",
+    "not_claimed": [
+      "calibrated Resolve scope evidence",
+      "absolute scene luminance",
+      "Dolby Vision identity",
+      "semantic face segmentation"
+    ],
+    "purpose": "repeatable relative current-versus-revised comparison only"
+  },
+  "motion_effects_allowed": false,
+  "reference_evidence": {
+    "identity_roundtrip": "p0e4/evidence/aakhri_multitake_real_v01/source_color_forensics",
+    "resolve_decode": "p0e4/evidence/aakhri_multitake_real_v01/source_color_forensics",
+    "source_bytes": "p0e4/evidence/aakhri_multitake_real_v01/source_color_forensics"
+  },
+  "references_separated": [
+    "SOURCE_BYTES_REFERENCE",
+    "RESOLVE_DECODE_REFERENCE",
+    "IDENTITY_ROUNDTRIP_REFERENCE"
+  ],
+  "representative_scenes": [
+    {
+      "scene_index": 1,
+      "source_time_seconds": 36.0,
+      "take_asset_id": "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8"
+    },
+    {
+      "scene_index": 2,
+      "source_time_seconds": 24.0,
+      "take_asset_id": "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin"
+    },
+    {
+      "scene_index": 3,
+      "source_time_seconds": 96.0,
+      "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8"
+    },
+    {
+      "scene_index": 4,
+      "source_time_seconds": 72.0,
+      "take_asset_id": "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW"
+    }
+  ],
+  "schema": "R1_FACE_BACKGROUND_SOFTNESS_CONTRACT_V02",
+  "segment_seconds": 5,
+  "variant_order": [
+    "CURRENT_V01_REVISED_HLG",
+    "NEW_V02_GENTLER_FACE_CALMER_BACKGROUND"
+  ]
+}

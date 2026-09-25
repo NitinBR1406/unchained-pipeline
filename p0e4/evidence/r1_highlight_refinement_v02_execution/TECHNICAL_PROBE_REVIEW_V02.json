@@ -1,0 +1,34 @@
+{
+  "codec_fourcc" : "hvc1",
+  "decoded_frames" : 1200,
+  "duration_seconds" : 40,
+  "format_extensions" : {
+    "BitsPerComponent" : 10,
+    "CVFieldCount" : 1,
+    "CVImageBufferChromaLocationBottomField" : "Left",
+    "CVImageBufferChromaLocationTopField" : "Left",
+    "CVImageBufferColorPrimaries" : "ITU_R_2020",
+    "CVImageBufferTransferFunction" : "ITU_R_2100_HLG",
+    "CVImageBufferYCbCrMatrix" : "ITU_R_2020",
+    "CVPixelAspectRatio" : {
+      "HorizontalSpacing" : 1,
+      "VerticalSpacing" : 1
+    },
+    "Depth" : 24,
+    "FormatName" : "H.265 10-bit",
+    "FullRangeVideo" : false,
+    "RevisionLevel" : 0,
+    "SampleDescriptionExtensionAtoms" : {
+      "btrt" : "AAAAAABrXcsAa13L",
+      "hvcC" : "AQIgAAAAsAAAAAAAePAA\/P36+gAACwOgAAEAGEABDAH\/\/wIgAAADALAAAAMAAAMAeBXAkKEAAQAlQgEBAiAAAAMAsAAAAwAAAwB4oAIggB4HLtiBXuRZVgLUJEgkAqIAAQAIRAHALLhkFMk="
+    },
+    "SpatialQuality" : 0,
+    "TemporalQuality" : 0,
+    "VerbatimISOSampleEntry" : "AAABCmh2YzEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAEOAeAAEgAAABIAAAAAAAAAAEMSC4yNjUgMTAtYml0AAAAAAAAAAAAAAAAAAAAAAAAAAAY\/\/8AAABzaHZjQwECIAAAALAAAAAAAHjwAPz9+voAAAsDoAABABhAAQwB\/\/8CIAAAAwCwAAADAAADAHgVwJChAAEAJUIBAQIgAAADALAAAAMAAAMAeKACIIAeBy7YgV7kWVYC1CRIJAKiAAEACEQBwCy4ZBTJAAAACmZpZWwBAAAAABNjb2xybmNseAAJABIACQAAAAAQcGFzcAAAAAEAAAABAAAAFGJ0cnQAAAAAAGtdywBrXcs=",
+    "Version" : 0
+  },
+  "height" : 1920,
+  "nominal_frame_rate" : 30.000001907348633,
+  "reader_status" : 2,
+  "width" : 1080
+}

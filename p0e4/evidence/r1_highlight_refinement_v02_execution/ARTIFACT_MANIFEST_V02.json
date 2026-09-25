@@ -1,0 +1,86 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1073840945,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/AAKHRI_R1_V01_CURRENT_VS_V02_NEW_HLG_V02.mov",
+      "role": "AUTHORITATIVE_HDR_COMPARISON",
+      "sha256": "05de745036bcb8d6f9398324085a35830b6f483d3b9c2086bed10957dab0a190"
+    },
+    {
+      "bytes": 35198032,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/AAKHRI_R1_V01_CURRENT_VS_V02_NEW_HLG_REVIEW_V02.mp4",
+      "role": "COMPACT_HDR_REVIEW",
+      "sha256": "bb04de28d14cb33858effc55031c9a8a1ecaa34ea8a4e1611a62ed7b83b3dd59"
+    },
+    {
+      "bytes": 187514,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/UNCHAINED_AAKHRI_R1_FACE_BACKGROUND_SOFTNESS_V02.drp",
+      "role": "RESOLVE_PROJECT_ARCHIVE",
+      "sha256": "61858cfaa3fb6fa149ed60ab28060f67a05b13f926db963609f7779d2ba15ea9"
+    },
+    {
+      "bytes": 1293837,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/luts/NEW_V02_GENTLER_FACE_CALMER_BACKGROUND.cube",
+      "role": "NEW_V02_LUT",
+      "sha256": "2679ee8bf8bd8ba0fc0516191143bdf725c6017ef07942769191091a0510dd2e"
+    },
+    {
+      "bytes": 6813099,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/frames/frame_12.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "923f7b8a3a4132383189f8134ff7b6fcbbece4809dc6a77c872169d57bb5a33e"
+    },
+    {
+      "bytes": 6632354,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/frames/frame_17.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "32933934e0a6ea2a610d1604e13405faaf2f7ce1447626159d421de5a8f2c677"
+    },
+    {
+      "bytes": 6611496,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/frames/frame_2.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "56dccfbd2d9af7fc4a00f627994ce2db0d7e1c81d1aa0a9180cbb816f4c995d5"
+    },
+    {
+      "bytes": 6654859,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/frames/frame_22.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "02d55138f406f171503d0a30518a4abab56c520909d123f2e2476e550a03a2db"
+    },
+    {
+      "bytes": 6732153,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/frames/frame_27.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "49efa9979a996deecc3e4f200eb0288268da23c4fa4ef5f075db3139633e8927"
+    },
+    {
+      "bytes": 6828139,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/frames/frame_32.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "76b65c48d4b3e51e5ec825674fd0137f1c952f430b033171b5f6b7deeed5eec3"
+    },
+    {
+      "bytes": 6690101,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/frames/frame_37.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "67494f91034adafd4bcc6555b505a5f3f318197781177373a7a54dc94d91221a"
+    },
+    {
+      "bytes": 6666881,
+      "local_path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/frames/frame_7.5.png",
+      "role": "DISPLAY_DECODED_REVIEW_FRAME",
+      "sha256": "489dd9d6b3df2cd34424c04f1c18b887801c10248fc342a0a93e96ae7e5473b5"
+    }
+  ],
+  "classification": "PRIVATE_COLOR_REVIEW_ONLY",
+  "full_master_rendered": false,
+  "governance": {
+    "final_color_approved": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false,
+    "production_deployment_authorized": false,
+    "publication_authorized": false
+  },
+  "schema": "R1_FACE_BACKGROUND_SOFTNESS_ARTIFACT_MANIFEST_V02"
+}

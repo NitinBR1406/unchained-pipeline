@@ -1,0 +1,12 @@
+{
+  "account_surface": "Authenticated Gemini Work UI",
+  "blindness": "NEW_ISOLATED_CONTEXT_NO_CLAUDE_OR_CHATGPT_CONCLUSIONS_SUPPLIED",
+  "conversation_url": "https://gemini.google.com/app/7befdf9b6fdd2646",
+  "creative_winner_selected": false,
+  "growth_and_watch_time": "HYPOTHESES_ONLY_NOT_OBSERVED_NOT_CAUSAL",
+  "nitin_approval_inferred": false,
+  "schema": "GEMINI_INDEPENDENT_FACE_BACKGROUND_QC_RECEIPT_V02",
+  "status": "COMPLETED_NO_CREATIVE_WINNER",
+  "uploaded_file": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-r1-face-background-softness-v02/AAKHRI_R1_V01_CURRENT_VS_V02_NEW_HLG_REVIEW_V02.mp4",
+  "uploaded_sha256": "bb04de28d14cb33858effc55031c9a8a1ecaa34ea8a4e1611a62ed7b83b3dd59"
+}

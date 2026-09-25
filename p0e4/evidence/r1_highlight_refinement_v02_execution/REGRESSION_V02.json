@@ -1,0 +1,9 @@
+{
+  "command": "PYTHONPATH=p0e4 python3 -m unittest p0e4.tests.test_color_development p0e4.tests.test_source_color_management p0e4.tests.test_r1_framed_color_study p0e4.tests.test_r1_highlight_refinement p0e4.tests.test_r1_face_background_softness p0e4.tests.test_v164_projection p0e4.tests.test_v165_projection p0e4.tests.test_v166_projection p0e4.tests.test_v167_projection",
+  "executed_at": "2026-09-25T12:22:41Z",
+  "failed": 0,
+  "passed": 29,
+  "result": "GREEN",
+  "schema": "R1_FACE_BACKGROUND_SOFTNESS_REGRESSION_V02",
+  "warnings": "ResourceWarning from existing ledger implementation does not affect assertions or result."
+}

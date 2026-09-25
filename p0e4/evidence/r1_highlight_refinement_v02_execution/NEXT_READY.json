@@ -1,0 +1,22 @@
+{
+  "blocked_followups": [
+    "FULL_MASTER_RENDER",
+    "BEAT_EFFECTS_PROGRESSION",
+    "POST_READY_PROMOTION",
+    "DEPLOYMENT",
+    "PUBLICATION"
+  ],
+  "human_gate": "NITIN_FACE_BACKGROUND_SOFTNESS_COLOR_REVIEW",
+  "independent_ready_work_remaining": false,
+  "review_asset": "AAKHRI_R1_V01_CURRENT_VS_V02_NEW_HLG_REVIEW_V02.mp4",
+  "review_matrix_order": {
+    "take_1": "00:00 CURRENT / 00:05 NEW",
+    "take_2": "00:10 CURRENT / 00:15 NEW",
+    "take_3": "00:20 CURRENT / 00:25 NEW",
+    "take_4": "00:30 CURRENT / 00:35 NEW"
+  },
+  "review_sha256": "bb04de28d14cb33858effc55031c9a8a1ecaa34ea8a4e1611a62ed7b83b3dd59",
+  "schema": "NEXT_READY_V01",
+  "smallest_user_decision": "After viewing on an HLG-capable display: confirm NEW, retain CURRENT, reject both, or describe the smallest correction.",
+  "status": "WAITING_FOR_NITIN_FACE_BACKGROUND_SOFTNESS_COLOR_REVIEW"
+}
