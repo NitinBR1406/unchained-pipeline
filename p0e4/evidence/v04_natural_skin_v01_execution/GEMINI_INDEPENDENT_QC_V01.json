@@ -1,0 +1,16 @@
+{
+  "verdict": "PASS_FOR_NITIN_NATURAL_SKIN_REVIEW",
+  "confidence": 0.72,
+  "pair_findings": [
+    {"segment":"00:00-00:32 (original 00:08-00:24)","v03_observation":"Warmer, higher-saturation skin with orange/amber undertones along cheek, neck and hand.","v04_observation":"Gentler, desaturated skin without losing facial volume or appearing ashen; lip and eye integrity remain intact."},
+    {"segment":"00:32-01:20 (original 01:12-01:36)","v03_observation":"Skin chroma is visibly saturated across lighting shifts.","v04_observation":"Chroma reduction moderates heat in skin highlights smoothly without breaking boundary tone."},
+    {"segment":"01:20-02:04 (original 01:48-02:10)","v03_observation":"Strong red/orange saturation under frontal gaze and hand gestures.","v04_observation":"Gentler skin cast remains consistent across face, neck and hands; hair, beard and dark clothing remain stable."}
+  ],
+  "passed_checks": ["natural_healthy_skin_hue","softness_without_lifeless_cast","lip_and_eye_integrity","facial_texture_and_depth_preservation","highlight_rolloff_stability","cross_take_consistency","background_neutrality_and_stability","hair_beard_clothing_separation","temporal_artifact_absence"],
+  "defects": [],
+  "forehead_check": {"v03_tc":"00:08","v04_tc":"00:24","finding":"Subtle tonal variation and micro-texture; no grade qualification tear or matte edge failure.","likely_origin":"proxy_artifact","uncertainty":"low_to_moderate"},
+  "dark_clothing_check": {"v03_tc":"01:25","v04_tc":"01:47","finding":"Minor shadow macroblock noise tracks identically between versions, without black-level shift or grade clipping.","likely_origin":"proxy_artifact","uncertainty":"low"},
+  "viewing_limitations": ["Review used verified 10-bit H.265 Rec.2100 HLG proxy rather than ProRes 422 HQ master.","Fine shadow grain and specular boundaries may be affected by proxy compression."],
+  "smallest_remaining_issue": "Slight proxy compression granularity around high-contrast deep-shadow clothing folds.",
+  "human_review_focus": ["Subjective preference between V03 warmth and V04 naturalism on an HLG-capable display.","Skin warmth on hands during close-to-lens gestures in Take 3."]
+}

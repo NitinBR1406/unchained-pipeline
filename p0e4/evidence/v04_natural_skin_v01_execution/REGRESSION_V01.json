@@ -1,0 +1,1 @@
+{"schema":"V04_NATURAL_SKIN_REGRESSION_V01","result":"GREEN","validated_checks":35,"failed":0,"checks":["bounded V04 chroma-only transform","V03 and prior color regressions","V16.4-V16.9 reducer projections","temporary deterministic V16.10 projection","3720/3720 HLG decode"],"warnings":"Existing ledger ResourceWarnings do not affect assertions."}

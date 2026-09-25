@@ -1,0 +1,61 @@
+{
+  "artifacts": [
+    {
+      "bytes": 898,
+      "path": "ACCEPTANCE_V01.json",
+      "sha256": "39ef8713380819bfc9ecaddc45fdd2e50ce02c8e2907c7b55be26b149dab1643"
+    },
+    {
+      "bytes": 2191,
+      "path": "GEMINI_INDEPENDENT_QC_V01.json",
+      "sha256": "36771fe4d2a1f33f331635391b530cfe09a0e81585bb0d6b227c194243aa88c4"
+    },
+    {
+      "bytes": 321,
+      "path": "GEMINI_QC_RECEIPT_V01.json",
+      "sha256": "7f59e47839e5be18f7a25e8408885cebd6f2e53b212d43f62824fc3de48bca89"
+    },
+    {
+      "bytes": 459,
+      "path": "NEXT_READY.json",
+      "sha256": "799b59ffbf23a78799dfd5ed737b01a2f4409e0c7c116751985149c16d2ad4c9"
+    },
+    {
+      "bytes": 707,
+      "path": "NITIN_REVIEW_NOTE_V01.json",
+      "sha256": "7c5ecc7da7388b95ef8273c09d5fbe5ce131d7576a0720a16d7af7b407314ea9"
+    },
+    {
+      "bytes": 257,
+      "path": "PROJECT_NOTES_V01.json",
+      "sha256": "535e993ea87fadf11cda45502d1fb37be7d33f1961fc8797c634108d8a8e0fb1"
+    },
+    {
+      "bytes": 349,
+      "path": "REGRESSION_V01.json",
+      "sha256": "c0a9d7517f0039bb50cb71fdcb6234366b23c0b3d368f91b98d52b72c9160ed4"
+    },
+    {
+      "bytes": 7864,
+      "path": "RESOLVE_V04_NATURAL_SKIN_V01.json",
+      "sha256": "2e20e39574044d128434fd94f091da7dffdeb11afaeb7a919a49513551b56493"
+    },
+    {
+      "bytes": 5430,
+      "path": "SHARED_DRIVE_PERSISTENCE_RECEIPT_V01.json",
+      "sha256": "bfaac3b28a38fe9757b4575f03c95eddc276ae2d5d19b8049f0756e1a2ac7987"
+    },
+    {
+      "bytes": 1436,
+      "path": "TECHNICAL_PROBE_HLG_V01.json",
+      "sha256": "fb4435b19c9ee6897e294084d075bb5b9ffa6a38fc187fae9a55a7c5cce903d8"
+    },
+    {
+      "bytes": 1081,
+      "path": "TECHNICAL_QC_V01.json",
+      "sha256": "33c74830d6c294da925017cf006763da01b12b622a1eb0f25e9aa079647604c6"
+    }
+  ],
+  "schema": "ARTIFACT_MANIFEST_V01",
+  "status": "COMPLETE_PRE_STATE"
+}

@@ -1,0 +1,13 @@
+{
+  "schema":"NITIN_V04_NATURAL_SKIN_REVIEW_NOTE_V01",
+  "comparison_map":[
+    {"V03":"00:00-00:16","V04":"00:16-00:32","original":"00:08-00:24"},
+    {"V03":"00:32-00:56","V04":"00:56-01:20","original":"01:12-01:36"},
+    {"V03":"01:20-01:42","V04":"01:42-02:04","original":"01:48-02:10"}
+  ],
+  "change":"Bounded skin-hue chroma reduction up to 7.5%; no intended luma, framing, background or highlight-rolloff change.",
+  "review_focus":["natural softness without grey/pale skin","hands in third pair","forehead V03 00:08 vs V04 00:24","dark clothing V03 01:25 vs V04 01:47"],
+  "full_master_rendered":false,
+  "beat_effects_started":false,
+  "status":"WAITING_FOR_NITIN_V04_NATURAL_SKIN_COLOR_REVIEW"
+}

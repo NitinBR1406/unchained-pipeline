@@ -1,0 +1,65 @@
+{
+  "copy_only": true,
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V04_NATURAL_SKIN_V01",
+  "files": [
+    {
+      "bytes": 3418665062,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V04_NATURAL_SKIN_V01/AAKHRI_V03_VS_V04_NATURAL_SKIN_HLG_REVIEW_V01.mov",
+      "readback_verified": true,
+      "sha256": "76c20cae942bc2625fca8f26bdf4d355386cde8eff74dde949c4603e68326a33",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v04-natural-skin-v01/AAKHRI_V03_VS_V04_NATURAL_SKIN_HLG_REVIEW_V01.mov"
+    },
+    {
+      "bytes": 114330876,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V04_NATURAL_SKIN_V01/AAKHRI_V03_VS_V04_NATURAL_SKIN_HLG_DECODE_PROXY_V01.mp4",
+      "readback_verified": true,
+      "sha256": "2874c30f0c930d53f66f60d1fc9cb0cbb1a10b0922891480eeb189ea11931cdf",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v04-natural-skin-v01/AAKHRI_V03_VS_V04_NATURAL_SKIN_HLG_DECODE_PROXY_V01.mp4"
+    },
+    {
+      "bytes": 196997,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V04_NATURAL_SKIN_V01/UNCHAINED_AAKHRI_V04_NATURAL_SKIN_V01.drp",
+      "readback_verified": true,
+      "sha256": "2935d29f9fc53d877ceaee66dcf767044d77ba389841ea5d1b4986ccc563371d",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v04-natural-skin-v01/UNCHAINED_AAKHRI_V04_NATURAL_SKIN_V01.drp"
+    },
+    {
+      "bytes": 1293816,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V04_NATURAL_SKIN_V01/NEW_V04_NATURAL_SKIN.cube",
+      "readback_verified": true,
+      "sha256": "58dd7363782a299cb4a17b1ec0e6045640f114834050df1d32ba8b46dfa504d8",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v04-natural-skin-v01/luts/NEW_V04_NATURAL_SKIN.cube"
+    },
+    {
+      "bytes": 707,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V04_NATURAL_SKIN_V01/NITIN_REVIEW_NOTE_V01.json",
+      "readback_verified": true,
+      "sha256": "7c5ecc7da7388b95ef8273c09d5fbe5ce131d7576a0720a16d7af7b407314ea9",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/v04_natural_skin_v01_execution/NITIN_REVIEW_NOTE_V01.json"
+    },
+    {
+      "bytes": 1081,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V04_NATURAL_SKIN_V01/TECHNICAL_QC_V01.json",
+      "readback_verified": true,
+      "sha256": "33c74830d6c294da925017cf006763da01b12b622a1eb0f25e9aa079647604c6",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/v04_natural_skin_v01_execution/TECHNICAL_QC_V01.json"
+    },
+    {
+      "bytes": 2191,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V04_NATURAL_SKIN_V01/GEMINI_INDEPENDENT_QC_V01.json",
+      "readback_verified": true,
+      "sha256": "36771fe4d2a1f33f331635391b530cfe09a0e81585bb0d6b227c194243aa88c4",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/v04_natural_skin_v01_execution/GEMINI_INDEPENDENT_QC_V01.json"
+    },
+    {
+      "bytes": 321,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_V04_NATURAL_SKIN_V01/GEMINI_QC_RECEIPT_V01.json",
+      "readback_verified": true,
+      "sha256": "7f59e47839e5be18f7a25e8408885cebd6f2e53b212d43f62824fc3de48bca89",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/v04_natural_skin_v01_execution/GEMINI_QC_RECEIPT_V01.json"
+    }
+  ],
+  "overwrote_existing": false,
+  "schema": "SHARED_DRIVE_PERSISTENCE_RECEIPT_V01",
+  "status": "GREEN_EXACT_SHA_READBACK"
+}

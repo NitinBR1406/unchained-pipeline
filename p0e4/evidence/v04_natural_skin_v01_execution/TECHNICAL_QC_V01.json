@@ -1,0 +1,9 @@
+{
+  "schema":"V04_NATURAL_SKIN_TECHNICAL_QC_V01",
+  "authoritative_review":{"sha256":"76c20cae942bc2625fca8f26bdf4d355386cde8eff74dde949c4603e68326a33","bytes":3418665062,"codec":"ProRes 422 HQ","duration_seconds":124},
+  "decode_proxy":{"sha256":"2874c30f0c930d53f66f60d1fc9cb0cbb1a10b0922891480eeb189ea11931cdf","codec":"H.265 10-bit","decoded_frames":3720,"expected_frames":3720,"reader_status":2,"primaries":"ITU_R_2020","transfer":"ITU_R_2100_HLG","matrix":"ITU_R_2020","width":1080,"height":1920,"fps":30},
+  "previous_decode_limitation_resolution":"PROVEN_ENVIRONMENTAL_SANDBOX_HARDWARE_DECODE_RESTRICTION; OUTSIDE-SANDBOX AVFOUNDATION DECODE GREEN 3720/3720",
+  "matched_frame_findings":{"forehead_v03_vs_v04":{"luma_preserved":true,"face_mean_chroma_change_fraction":-0.0749},"dark_clothing_v03_vs_v04":{"mean_luma_change_abs":0.0,"no_grade_clipping_proven_by_proxy":true}},
+  "measurement_limit":"16-bit display-decoded HLG PNG comparisons are relative proxies, not calibrated HDR nits or full Dolby Vision identity.",
+  "status":"GREEN_10BIT_HLG_3720_OF_3720_DECODED"
+}
