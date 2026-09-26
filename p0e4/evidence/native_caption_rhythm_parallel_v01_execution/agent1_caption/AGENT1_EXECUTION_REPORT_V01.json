@@ -1,0 +1,31 @@
+{
+  "blocked": [
+    "native preset export",
+    "caption comparison render",
+    "decode/audio/lipsync/safe-area QC",
+    "Gemini visual QC"
+  ],
+  "duplicate_render_prevented": true,
+  "implemented": [
+    "native title inventory",
+    "source/V06/EDL binding validation",
+    "four-variant reusable caption configuration",
+    "second-text cache invalidation proof",
+    "HLG Main10 render contract"
+  ],
+  "note": "Do not persist an empty review folder as if a preview exists.",
+  "original_project_preserved": true,
+  "rendered": [],
+  "resolve_project_mutated": false,
+  "schema": "AGENT1_EXECUTION_REPORT_V01",
+  "status": "BLOCKED_REQUIRED_BRAND_FONTS_NOT_INSTALLED",
+  "suggested_shared_drive_target": "Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/NATIVE_CAPTION_TEMPLATE_FASTTRACK_V01",
+  "verified": [
+    "Resolve Studio 21.1.0.17 API reachable",
+    "MASTER2 exact SHA",
+    "V06 LUT exact SHA",
+    "EDL declared SHA",
+    "template archive exact hashes",
+    "brand fonts absent in Resolve registry"
+  ]
+}

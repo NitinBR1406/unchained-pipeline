@@ -1,0 +1,159 @@
+{
+  "cache_contract": "SHA256 canonical JSON of text, timing, styling, template SHA, render contract and source binding",
+  "controls": [
+    "text",
+    "font",
+    "style",
+    "size",
+    "position",
+    "accent",
+    "entrance_frames",
+    "hold_timing_ms",
+    "exit_frames"
+  ],
+  "font_contract": {
+    "required": [
+      "Montserrat",
+      "Cinzel"
+    ],
+    "resolve_inventory": {
+      "Cinzel": {
+        "installed": false,
+        "styles": {}
+      },
+      "Montserrat": {
+        "installed": false,
+        "styles": {}
+      }
+    },
+    "silent_fallback_forbidden": true
+  },
+  "preset_export": "HOLD_UNTIL_BRAND_FONTS_INSTALLED_AND_RENDER_VERIFIED",
+  "render_contract": {
+    "codec": "H265_MAIN10",
+    "fps": 30,
+    "gamut_mapping": "None",
+    "height": 1920,
+    "input": "Rec.2100 HLG",
+    "minimum_bit_depth": 10,
+    "output": "Rec.2100 HLG",
+    "timeline": "Rec.2100 HLG",
+    "tone_mapping": "None",
+    "width": 1080
+  },
+  "render_gate": "BLOCKED_REQUIRED_BRAND_FONTS_NOT_INSTALLED",
+  "safe_area": {
+    "face_mouth_exclusion": "REQUIRED_VISUAL_CHECK",
+    "horizontal_percent": 10,
+    "vertical_percent": 10
+  },
+  "schema": "UNCHAINED_CAPTION_KIT_V01",
+  "second_text_reuse_proof": {
+    "cache_key_differs_from_primary": true,
+    "variant": {
+      "accent": "restrained_gold",
+      "cache_key": "9ae8bf72fb70549edfc5ff537f29c1c3d48724fb57b22598764d568e6d1463b3",
+      "classification": "ORIGINAL_DRAFT_NOT_LYRIC_OR_TRANSLATION",
+      "entrance_frames": 8,
+      "exit_frames": 8,
+      "font": "Montserrat",
+      "id": "EMOTIONAL_OPENING_SECOND_TEXT_PROOF",
+      "position": [
+        0.5,
+        0.145
+      ],
+      "size": 0.024,
+      "style": "SemiBold",
+      "template": "Text+",
+      "template_sha256": "07cc0e0950298f4205bed04e562aadb77b2168417698417af103c14d78d0f214",
+      "text": "A feeling that stays.",
+      "timing_ms": [
+        250,
+        3850
+      ]
+    }
+  },
+  "status": "CONFIGURED_NOT_RENDERED_FONT_GATE",
+  "variants": [
+    {
+      "cache_key": "39c3f0892b8f6f57517e4f0a88d2cbf5d84ec7f5121b00178de000de66a0c259",
+      "font": null,
+      "id": "REFERENCE_TEXT_FREE",
+      "template": "Text+",
+      "template_sha256": "07cc0e0950298f4205bed04e562aadb77b2168417698417af103c14d78d0f214",
+      "text": null,
+      "timing_ms": [
+        0,
+        24000
+      ]
+    },
+    {
+      "accent": "restrained_gold",
+      "cache_key": "7cea211619aadf9055e6fc60c60fefcef9a3c33c0b1d4f587f5d24f5449260b1",
+      "classification": "ORIGINAL_DRAFT_NOT_LYRIC_OR_TRANSLATION",
+      "entrance_frames": 8,
+      "exit_frames": 8,
+      "font": "Montserrat",
+      "id": "EMOTIONAL_OPENING",
+      "position": [
+        0.5,
+        0.145
+      ],
+      "size": 0.024,
+      "style": "SemiBold",
+      "template": "Text+",
+      "template_sha256": "07cc0e0950298f4205bed04e562aadb77b2168417698417af103c14d78d0f214",
+      "text": "Some love stories never really end.",
+      "timing_ms": [
+        250,
+        3850
+      ]
+    },
+    {
+      "accent": "restrained_gold",
+      "cache_key": "0f6f04dbea6467b38d8b312a678e0caca84c09da7c7e70ce44849e010ea0b697",
+      "classification": "VERIFIED_TITLE_AND_ARTIST_SPELLING",
+      "entrance_frames": 10,
+      "exit_frames": 10,
+      "font_primary": "Cinzel",
+      "font_secondary": "Montserrat",
+      "id": "SONG_TITLE_ARTIST",
+      "position": [
+        0.5,
+        0.78
+      ],
+      "size_primary": 0.047,
+      "size_secondary": 0.022,
+      "template": "Simple Two Lines",
+      "template_sha256": "e98de89ac7ffab4a950b2898698f979e5c172a5c720e7c6108b54f0f6cb8736d",
+      "text": "AAKHRI ISHQ\\nUNCHAINED NITIN",
+      "timing_ms": [
+        6200,
+        10200
+      ]
+    },
+    {
+      "accent": "white_with_gold_marker",
+      "actual_lyric_mode": "HOLD",
+      "cache_key": "54ee30608a2681cfec4ba0bd689d04ee56472226c59859af26520d69b230ee5a",
+      "classification": "NON_LYRIC_DEMONSTRATION_TEXT",
+      "entrance_frames": 6,
+      "exit_frames": 6,
+      "font": "Montserrat",
+      "id": "SELECTIVE_LYRIC_LAYOUT_NON_LYRIC_DEMO",
+      "position": [
+        0.5,
+        0.18
+      ],
+      "size": 0.025,
+      "style": "SemiBold",
+      "template": "Text+",
+      "template_sha256": "07cc0e0950298f4205bed04e562aadb77b2168417698417af103c14d78d0f214",
+      "text": "NON-LYRIC LAYOUT DEMO\\nReplace only with verified lyric + timing",
+      "timing_ms": [
+        14200,
+        18200
+      ]
+    }
+  ]
+}

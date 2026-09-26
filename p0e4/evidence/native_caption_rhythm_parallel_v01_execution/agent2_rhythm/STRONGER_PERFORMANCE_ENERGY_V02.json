@@ -1,0 +1,403 @@
+{
+  "schema": "UNCHAINED_CONTINUOUS_RHYTHM_CONCRETE_POLICY_V02",
+  "policy_id": "STRONGER_PERFORMANCE_ENERGY_V02",
+  "status": "PROPOSAL_FOR_NITIN_SELECTION_NO_RENDER",
+  "window": {
+    "master_s": [
+      72,
+      96
+    ],
+    "duration_s": 24,
+    "fps": 30
+  },
+  "source_binding_ref": "SOURCE_BINDING_VALIDATION_V01.json",
+  "waveform_ref": "AUDIO_WAVEFORM_VALIDATION_V01.json",
+  "continuous_rhythm_interpretation": "rhythm maintained through alternating cuts, take changes, bounded focal motion and recovery; never continuous shake",
+  "event_count": 16,
+  "cut_or_take_switch_count": 5,
+  "motion_event_count": 10,
+  "cut_density_per_minute": 12.5,
+  "all_action_density_per_minute": 37.5,
+  "global_rules": {
+    "default_enabled": false,
+    "instrument_labels_used_as_truth": false,
+    "bar_one_used_as_truth": false,
+    "one_motion_event_at_a_time": true,
+    "no_motion_across_cut": true,
+    "safe_crop_must_pass_peak_scale": true,
+    "vocal_protection": "adapt action/amplitude; do not suspend overall rhythm",
+    "event_collision_priority": [
+      "cut_or_take_switch",
+      "expression_protection_hold",
+      "zoom_or_reframe",
+      "shake"
+    ],
+    "same_frame_dual_band": "collapse to one visual action; never stack zoom and shake",
+    "motion_cooldown_frames": 6,
+    "cut_cooldown_frames": 30,
+    "shake_cooldown_frames": 60,
+    "cut_on_visible_vowel": "allowed only after lipsync/expression review; otherwise move to nearest validated boundary within +/-6 frames",
+    "closeup_shake": "replace with micro-reframe or cut when mouth/eyes lose legibility",
+    "maximum_consecutive_kinetic_actions": 3,
+    "mandatory_recovery_after_sequence_frames": 8
+  },
+  "events": [
+    {
+      "master_time_s": 72.771,
+      "master_frame_30fps": 2183,
+      "excerpt_frame_30fps": 23,
+      "action": "zoom",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "72.771:0.912",
+        "onset_strength": 0.912
+      },
+      "prior_gemini_intensity": 0.45,
+      "expression_note": "FAST_SNAP_IN_BOUNDED_TO_NOSE_TIP_ANCHOR",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.0285,
+      "zoom_percent": 2.85,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 2,
+      "hold_frames": 1,
+      "recovery_frames": 7
+    },
+    {
+      "master_time_s": 73.189,
+      "master_frame_30fps": 2196,
+      "excerpt_frame_30fps": 36,
+      "action": "shake",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "73.189:0.657",
+        "onset_strength": 0.657
+      },
+      "prior_gemini_intensity": 0.35,
+      "expression_note": "TRANSLATIONAL_XY_ONLY_NO_ROTATION_DURING_CONSONANT",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.0095,
+      "zoom_percent": 0.95,
+      "shake_displacement_fraction": 0.0051,
+      "shake_px_at_1080": 5.5,
+      "attack_frames": 1,
+      "hold_frames": 1,
+      "recovery_frames": 4,
+      "rotation_degrees": 0
+    },
+    {
+      "master_time_s": 74.977,
+      "master_frame_30fps": 2249,
+      "excerpt_frame_30fps": 89,
+      "action": "take_switch",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "74.977:0.731",
+        "onset_strength": 0.731
+      },
+      "prior_gemini_intensity": 0.85,
+      "expression_note": "HARD_CUT_TO_PERFORMANCE_PROFILE",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 0,
+      "recovery_frames": 0,
+      "cut_requires_lipsync_match": true,
+      "cut_requires_expression_continuity_review": true
+    },
+    {
+      "master_time_s": 77.172,
+      "master_frame_30fps": 2315,
+      "excerpt_frame_30fps": 155,
+      "action": "zoom",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "77.172:0.923",
+        "onset_strength": 0.923
+      },
+      "prior_gemini_intensity": 0.4,
+      "expression_note": "PUNCH_IN_ALIGNED_WITH_PERCUSSIVE_ACCENT",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.027,
+      "zoom_percent": 2.7,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 2,
+      "hold_frames": 1,
+      "recovery_frames": 7
+    },
+    {
+      "master_time_s": 78.17,
+      "master_frame_30fps": 2345,
+      "excerpt_frame_30fps": 185,
+      "action": "shake",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "78.170:0.943_AND_LOW_78.182:0.535",
+        "onset_strength": 0.943
+      },
+      "prior_gemini_intensity": 0.5,
+      "expression_note": "ISOLATE_SHAKE_TO_BACKGROUND_KEEP_FACE_STABLE",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.011,
+      "zoom_percent": 1.1,
+      "shake_displacement_fraction": 0.006,
+      "shake_px_at_1080": 6.5,
+      "attack_frames": 1,
+      "hold_frames": 1,
+      "recovery_frames": 5,
+      "rotation_degrees": 0
+    },
+    {
+      "master_time_s": 78.785,
+      "master_frame_30fps": 2364,
+      "excerpt_frame_30fps": 204,
+      "action": "cut",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "78.785:0.645_AND_HIGH_78.774:0.919",
+        "onset_strength": 0.645
+      },
+      "prior_gemini_intensity": 0.8,
+      "expression_note": "STRICT_LIP_SYNC_CROSS_PHASE_MATCH",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 0,
+      "recovery_frames": 0,
+      "cut_requires_lipsync_match": true,
+      "cut_requires_expression_continuity_review": true
+    },
+    {
+      "master_time_s": 81.386,
+      "master_frame_30fps": 2442,
+      "excerpt_frame_30fps": 282,
+      "action": "zoom",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "81.386:0.526",
+        "onset_strength": 0.526
+      },
+      "prior_gemini_intensity": 0.35,
+      "expression_note": "RAPID_STEP_ZOOM_RETRACTION",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.0255,
+      "zoom_percent": 2.55,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 2,
+      "hold_frames": 1,
+      "recovery_frames": 7
+    },
+    {
+      "master_time_s": 82.373,
+      "master_frame_30fps": 2471,
+      "excerpt_frame_30fps": 311,
+      "action": "shake",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "82.373:0.908",
+        "onset_strength": 0.908
+      },
+      "prior_gemini_intensity": 0.4,
+      "expression_note": "HIGH_FREQUENCY_JITTER_AVOIDS_LIP_BLUR",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.01,
+      "zoom_percent": 1.0,
+      "shake_displacement_fraction": 0.0054,
+      "shake_px_at_1080": 5.8,
+      "attack_frames": 1,
+      "hold_frames": 1,
+      "recovery_frames": 4,
+      "rotation_degrees": 0
+    },
+    {
+      "master_time_s": 83.174,
+      "master_frame_30fps": 2495,
+      "excerpt_frame_30fps": 335,
+      "action": "take_switch",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "83.174:0.916",
+        "onset_strength": 0.916
+      },
+      "prior_gemini_intensity": 0.8,
+      "expression_note": "DYNAMIC_RE-ANGLE_TO_WIDE_ACTION",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 0,
+      "recovery_frames": 0,
+      "cut_requires_lipsync_match": true,
+      "cut_requires_expression_continuity_review": true
+    },
+    {
+      "master_time_s": 85.171,
+      "master_frame_30fps": 2555,
+      "excerpt_frame_30fps": 395,
+      "action": "shake",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "85.171:0.961_PEAK_HIGH",
+        "onset_strength": 0.961
+      },
+      "prior_gemini_intensity": 0.55,
+      "expression_note": "DECAY_RECOVERY_PROTECTS_NEXT_VOCAL_ENTRY",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.0115,
+      "zoom_percent": 1.15,
+      "shake_displacement_fraction": 0.0063,
+      "shake_px_at_1080": 6.8,
+      "attack_frames": 1,
+      "hold_frames": 1,
+      "recovery_frames": 5,
+      "rotation_degrees": 0
+    },
+    {
+      "master_time_s": 85.983,
+      "master_frame_30fps": 2579,
+      "excerpt_frame_30fps": 419,
+      "action": "zoom",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "85.983:0.651",
+        "onset_strength": 0.651
+      },
+      "prior_gemini_intensity": 0.4,
+      "expression_note": "EXPONENT_PULLBACK_RESTORING_WIDE_PERSPECTIVE",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.027,
+      "zoom_percent": 2.7,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 2,
+      "hold_frames": 1,
+      "recovery_frames": 7
+    },
+    {
+      "master_time_s": 88.375,
+      "master_frame_30fps": 2651,
+      "excerpt_frame_30fps": 491,
+      "action": "cut",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "88.375:0.733",
+        "onset_strength": 0.733
+      },
+      "prior_gemini_intensity": 0.75,
+      "expression_note": "JUMP_CUT_ON_PERCUSSION_SNARL",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 0,
+      "recovery_frames": 0,
+      "cut_requires_lipsync_match": true,
+      "cut_requires_expression_continuity_review": true
+    },
+    {
+      "master_time_s": 90.778,
+      "master_frame_30fps": 2723,
+      "excerpt_frame_30fps": 563,
+      "action": "shake",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "90.778:0.868",
+        "onset_strength": 0.868
+      },
+      "prior_gemini_intensity": 0.5,
+      "expression_note": "BOUNDED_AMPLITUDE_MAINTAINING_EYE_CONTACT",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.011,
+      "zoom_percent": 1.1,
+      "shake_displacement_fraction": 0.006,
+      "shake_px_at_1080": 6.5,
+      "attack_frames": 1,
+      "hold_frames": 1,
+      "recovery_frames": 5,
+      "rotation_degrees": 0
+    },
+    {
+      "master_time_s": 91.591,
+      "master_frame_30fps": 2748,
+      "excerpt_frame_30fps": 588,
+      "action": "zoom",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "91.591:0.974",
+        "onset_strength": 0.974
+      },
+      "prior_gemini_intensity": 0.5,
+      "expression_note": "INTENSE_SNAP_TIGHTENING_TO_CLIMAX",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.03,
+      "zoom_percent": 3.0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 2,
+      "hold_frames": 1,
+      "recovery_frames": 6
+    },
+    {
+      "master_time_s": 92.775,
+      "master_frame_30fps": 2783,
+      "excerpt_frame_30fps": 623,
+      "action": "take_switch",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "92.775:1.000_DUAL_BAND_MAXIMA",
+        "onset_strength": 1.0
+      },
+      "prior_gemini_intensity": 0.95,
+      "expression_note": "SWITCH_TO_HERO_CLOSEUP_AT_PEAK_EMISSION",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 0,
+      "recovery_frames": 0,
+      "cut_requires_lipsync_match": true,
+      "cut_requires_expression_continuity_review": true
+    },
+    {
+      "master_time_s": 94.772,
+      "master_frame_30fps": 2843,
+      "excerpt_frame_30fps": 683,
+      "action": "hold",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "94.772:0.807",
+        "onset_strength": 0.807
+      },
+      "prior_gemini_intensity": 0.0,
+      "expression_note": "ZERO_MOTION_FREEZE_ON_LAST_BREATH_OF_WINDOW",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 37,
+      "recovery_frames": 0
+    }
+  ],
+  "unresolved_before_render": [
+    "Nitin selects policy or hybrid",
+    "human/perceptual verification of event musicality and singing expression",
+    "validate take-specific lip-sync and safe crop",
+    "manual bar-one only if bar emphasis is desired"
+  ]
+}

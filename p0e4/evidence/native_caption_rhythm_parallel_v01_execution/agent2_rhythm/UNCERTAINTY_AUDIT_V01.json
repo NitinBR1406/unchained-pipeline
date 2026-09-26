@@ -1,0 +1,32 @@
+{
+  "schema": "AGENT2_RHYTHM_UNCERTAINTY_AUDIT_V01",
+  "confirmed": [
+    "MASTER2 SHA binding and 214.4000417s authoritative duration",
+    "exact recovered detector source hashes and parameters",
+    "24s excerpt byte hash and detector-event timings",
+    "V06 performance-only preview is 1080x1920, 30fps, 10-bit HEVC, BT.2020/HLG",
+    "detector re-run covers full MASTER2"
+  ],
+  "not_confirmed": [
+    "low-band events are physical kick-drum strikes",
+    "high-band events are physical snare strikes",
+    "each fourth beat is measure bar-one/downbeat",
+    "92.775s is a musical or vocal climax",
+    "specific vowel/rest/head gesture claims in prior Gemini text",
+    "retention or watch-time lift",
+    "native Resolve beat-line equivalence"
+  ],
+  "validation_performed_this_run": {
+    "waveform_decode": true,
+    "file_hashing": true,
+    "detector_reuse_only": true,
+    "new_detector": false,
+    "resolve": false,
+    "render": false,
+    "direct_audio_listening": false,
+    "direct_video_playback": false,
+    "new_gemini_run": false,
+    "existing_frozen_gemini_result_reused": true
+  },
+  "decision_boundary": "Nitin must select Controlled Groove, Stronger Performance Energy, or an explicit hybrid after reviewing the concrete rules. No winner selected."
+}

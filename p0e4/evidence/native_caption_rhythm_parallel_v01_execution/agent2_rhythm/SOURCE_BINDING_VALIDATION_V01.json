@@ -1,0 +1,50 @@
+{
+  "schema": "AGENT2_MASTER2_BINDING_VALIDATION_V01",
+  "status": "GREEN_EXACT_BOUND_EXCERPT",
+  "authoritative_master": {
+    "name": "AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "duration_s": 214.4000417
+  },
+  "excerpt": {
+    "start_s": 72.0,
+    "end_s": 96.0,
+    "duration_s": 24.0,
+    "audio_sha256": "6c4ccf3da19a9ba98f7a9d6de372fd08eb5df058c7c4114cb239c779696074b3",
+    "video_sha256": "c66317f42d041e81d7b46880a22cbeb4d683d57559b0aed72bf6b38853e55750"
+  },
+  "detector": {
+    "app_py_sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb",
+    "app_version": "v19-hostasset",
+    "clip_fx_py_sha256": "04fa93aff2847eaa9ae7b8542192ca37892c46b6b149c5235360a5c14abe3e97",
+    "execution": "exact detect_beats AST function plus exact clip_fx.detect_hits_detailed; no source modification",
+    "parameters": {
+      "HOP": 256,
+      "KICK_BAND_HZ": [
+        30.0,
+        140.0
+      ],
+      "KICK_MIN_GAP_S": 0.14,
+      "KICK_THRESH_K": 1.5,
+      "NFFT": 1024,
+      "SNARE_BAND_HZ": [
+        1600.0,
+        6500.0
+      ],
+      "SNARE_MIN_GAP_S": 0.1,
+      "SNARE_THRESH_K": 1.8,
+      "SR": 22050,
+      "every": 4
+    },
+    "requirements_sha256": "fb8be88c19245f9e21faa198a7f88426a39b555dddd848c03b884a9610834653"
+  },
+  "analysis_semantics": {
+    "kick_band": "LOW_FREQUENCY_SPECTRAL_FLUX_CLASS_NOT_PROVEN_KICK",
+    "snare_band": "HIGH_FREQUENCY_SPECTRAL_FLUX_CLASS_NOT_PROVEN_SNARE",
+    "downbeats_every_nth": "EVERY_FOURTH_TRACKED_BEAT_NOT_PROVEN_BAR_ONE",
+    "onset_strength": "LOCALLY_NORMALIZED_SPECTRAL_FLUX_NOT_PROBABILITY"
+  },
+  "no_new_detector_built": true,
+  "resolve_used": false,
+  "render_performed": false
+}

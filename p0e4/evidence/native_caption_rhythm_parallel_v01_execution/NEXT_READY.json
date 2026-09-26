@@ -1,0 +1,22 @@
+{
+  "beat_effect_render_exists": false,
+  "caption_preview_exists": false,
+  "gates": [
+    {
+      "action": "Make licensed Montserrat and Cinzel available to Resolve FontManager.",
+      "id": "NITIN_FONT_AVAILABILITY"
+    },
+    {
+      "action": "Choose Controlled Groove, Stronger Performance Energy, or hybrid.",
+      "id": "NITIN_CONTINUOUS_POLICY_SELECTION"
+    }
+  ],
+  "independent_ready": [
+    {
+      "id": "LEDGER_RECOVERY_PROPOSAL",
+      "status": "READY_READ_ONLY"
+    }
+  ],
+  "schema": "NEXT_READY_V01",
+  "status": "WAITING_FOR_NITIN"
+}

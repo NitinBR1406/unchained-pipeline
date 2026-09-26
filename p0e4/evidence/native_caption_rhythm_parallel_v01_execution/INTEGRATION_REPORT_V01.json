@@ -1,0 +1,59 @@
+{
+  "agent1": {
+    "implemented": [
+      "134-template native inventory",
+      "reusable kit configuration",
+      "MASTER2/V06/EDL binding",
+      "cache invalidation second-text proof",
+      "HLG Main10 contract"
+    ],
+    "preview_link": null,
+    "project_mutated": false,
+    "rendered": false,
+    "resolve_exclusive": true,
+    "smallest_gate": "Make licensed Montserrat and Cinzel visible in Resolve FontManager; then execute prepared caption-only preview.",
+    "status": "BLOCKED_REQUIRED_BRAND_FONTS_NOT_INSTALLED"
+  },
+  "agent2": {
+    "controlled_groove": {
+      "cut_density_per_minute": 10.0,
+      "cuts_or_switches": 4,
+      "events": 12,
+      "max_shake_px": 2.5,
+      "zoom_reframe_percent": "0.8-2.4"
+    },
+    "resolve_used": false,
+    "status": "GREEN_TWO_PROPOSALS_NO_RENDER",
+    "stronger_performance_energy": {
+      "cut_density_per_minute": 12.5,
+      "cuts_or_switches": 5,
+      "events": 16,
+      "shake_px": "3-9",
+      "zoom_percent": "1.5-4.5"
+    },
+    "winner_selected": false
+  },
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "V06": "PROVISIONAL",
+    "full_master_rendered": false,
+    "new_beat_effect_rendered": false
+  },
+  "integrity_hold": {
+    "evidence_timestamp_note": "daily audit recorded 2026-09-25T23:47:39Z while folder/checkpoint is dated 20260926",
+    "ledger_error": "tamper detected at seq 31",
+    "malformed_event_index": 34,
+    "master_state_updated": false,
+    "pointer_sidecar_matches": false
+  },
+  "nitin_choices": [
+    "Provide/activate verified licensed Montserrat and Cinzel for caption preview.",
+    "Select Controlled Groove, Stronger Performance Energy, or an explicit hybrid after review.",
+    "Confirm manual bar-one alignment requirement before any effect render."
+  ],
+  "repository_base": "e92e56fa1cad429dc418c4bbaae19ed63bf706ea",
+  "schema": "PARALLEL_CAPTION_RHYTHM_EXECUTION_V01",
+  "status": "PARTIAL_GREEN_CAPTION_RENDER_BLOCKED_FONT_GATE"
+}

@@ -1,0 +1,31 @@
+{
+  "audio_lipsync": "NOT_RUN_NO_OUTPUT",
+  "blocking_condition": "Montserrat and Cinzel absent from Resolve FontManager; silent fallback forbidden",
+  "fonts": {
+    "Cinzel": {
+      "installed": false,
+      "styles": {}
+    },
+    "Montserrat": {
+      "installed": false,
+      "styles": {}
+    }
+  },
+  "full_frame_decode": "NOT_RUN_NO_OUTPUT",
+  "gemini_visual_qc": "NOT_RUN_NO_RENDER",
+  "governance": {
+    "beat_effects_rendered": false,
+    "full_master_rendered": false,
+    "production_deployment": false,
+    "publication": false
+  },
+  "hlg_10bit": "CONTRACTED_NOT_RENDER_VERIFIED",
+  "preview_exists": false,
+  "render_executed": false,
+  "resolve_api": "GREEN",
+  "safe_area": "CONFIGURED_NOT_VISUALLY_VERIFIED",
+  "schema": "TECHNICAL_QC_V01",
+  "smallest_human_action": "Install/activate licensed Montserrat and Cinzel fonts locally so Resolve FontManager reports them, then rerun this prepared caption-only preview. No source, edit, grade, or motion rework required.",
+  "source_binding": "GREEN",
+  "status": "BLOCKED_PRE_RENDER"
+}

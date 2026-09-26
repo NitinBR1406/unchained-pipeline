@@ -1,0 +1,397 @@
+{
+  "schema": "AGENT2_AUDIO_WAVEFORM_VALIDATION_V01",
+  "method": "exact 24-bit MASTER2 excerpt decoded to mono float32 48k; 10ms-hop RMS plus fixed event windows",
+  "audio_sha256": "6c4ccf3da19a9ba98f7a9d6de372fd08eb5df058c7c4114cb239c779696074b3",
+  "duration_s": 24.0,
+  "sample_rate_hz": 48000,
+  "section_2s_metrics": [
+    {
+      "excerpt_start_s": 0,
+      "master_start_s": 72,
+      "rms": 0.327001,
+      "peak": 1.366045
+    },
+    {
+      "excerpt_start_s": 2,
+      "master_start_s": 74,
+      "rms": 0.385529,
+      "peak": 1.366045
+    },
+    {
+      "excerpt_start_s": 4,
+      "master_start_s": 76,
+      "rms": 0.333666,
+      "peak": 1.366045
+    },
+    {
+      "excerpt_start_s": 6,
+      "master_start_s": 78,
+      "rms": 0.294541,
+      "peak": 1.366045
+    },
+    {
+      "excerpt_start_s": 8,
+      "master_start_s": 80,
+      "rms": 0.431155,
+      "peak": 1.366045
+    },
+    {
+      "excerpt_start_s": 10,
+      "master_start_s": 82,
+      "rms": 0.39708,
+      "peak": 1.366045
+    },
+    {
+      "excerpt_start_s": 12,
+      "master_start_s": 84,
+      "rms": 0.344526,
+      "peak": 1.366045
+    },
+    {
+      "excerpt_start_s": 14,
+      "master_start_s": 86,
+      "rms": 0.412224,
+      "peak": 1.366045
+    },
+    {
+      "excerpt_start_s": 16,
+      "master_start_s": 88,
+      "rms": 0.260639,
+      "peak": 1.366045
+    },
+    {
+      "excerpt_start_s": 18,
+      "master_start_s": 90,
+      "rms": 0.156826,
+      "peak": 0.69639
+    },
+    {
+      "excerpt_start_s": 20,
+      "master_start_s": 92,
+      "rms": 0.318308,
+      "peak": 1.366045
+    },
+    {
+      "excerpt_start_s": 22,
+      "master_start_s": 94,
+      "rms": 0.330515,
+      "peak": 1.366045
+    }
+  ],
+  "selected_event_checks": [
+    {
+      "master_time_s": 73.189,
+      "frame_30fps": 2196,
+      "excerpt_frame_30fps": 36,
+      "pre_100_50ms": {
+        "rms": 0.095906,
+        "peak": 0.268264
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.10372,
+        "peak": 0.44634
+      },
+      "post_50_100ms": {
+        "rms": 0.308771,
+        "peak": 0.633464
+      },
+      "rms_ratio_event_to_pre": 1.081
+    },
+    {
+      "master_time_s": 74.977,
+      "frame_30fps": 2249,
+      "excerpt_frame_30fps": 89,
+      "pre_100_50ms": {
+        "rms": 0.301234,
+        "peak": 1.120763
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.386292,
+        "peak": 1.366045
+      },
+      "post_50_100ms": {
+        "rms": 0.603959,
+        "peak": 1.366045
+      },
+      "rms_ratio_event_to_pre": 1.282
+    },
+    {
+      "master_time_s": 77.172,
+      "frame_30fps": 2315,
+      "excerpt_frame_30fps": 155,
+      "pre_100_50ms": {
+        "rms": 0.263068,
+        "peak": 0.707823
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.229126,
+        "peak": 0.59129
+      },
+      "post_50_100ms": {
+        "rms": 0.591796,
+        "peak": 1.366045
+      },
+      "rms_ratio_event_to_pre": 0.871
+    },
+    {
+      "master_time_s": 78.17,
+      "frame_30fps": 2345,
+      "excerpt_frame_30fps": 185,
+      "pre_100_50ms": {
+        "rms": 0.168976,
+        "peak": 0.404571
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.143444,
+        "peak": 0.37367
+      },
+      "post_50_100ms": {
+        "rms": 0.582439,
+        "peak": 1.366045
+      },
+      "rms_ratio_event_to_pre": 0.849
+    },
+    {
+      "master_time_s": 78.785,
+      "frame_30fps": 2364,
+      "excerpt_frame_30fps": 204,
+      "pre_100_50ms": {
+        "rms": 0.128545,
+        "peak": 0.302942
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.518053,
+        "peak": 1.366045
+      },
+      "post_50_100ms": {
+        "rms": 0.546075,
+        "peak": 1.276732
+      },
+      "rms_ratio_event_to_pre": 4.03
+    },
+    {
+      "master_time_s": 81.386,
+      "frame_30fps": 2442,
+      "excerpt_frame_30fps": 282,
+      "pre_100_50ms": {
+        "rms": 0.314527,
+        "peak": 1.156425
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.575947,
+        "peak": 1.366045
+      },
+      "post_50_100ms": {
+        "rms": 0.505041,
+        "peak": 1.366045
+      },
+      "rms_ratio_event_to_pre": 1.831
+    },
+    {
+      "master_time_s": 81.978,
+      "frame_30fps": 2459,
+      "excerpt_frame_30fps": 299,
+      "pre_100_50ms": {
+        "rms": 0.407543,
+        "peak": 0.975404
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.407072,
+        "peak": 1.366045
+      },
+      "post_50_100ms": {
+        "rms": 0.577408,
+        "peak": 1.366045
+      },
+      "rms_ratio_event_to_pre": 0.999
+    },
+    {
+      "master_time_s": 82.373,
+      "frame_30fps": 2471,
+      "excerpt_frame_30fps": 311,
+      "pre_100_50ms": {
+        "rms": 0.137992,
+        "peak": 0.31016
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.232625,
+        "peak": 1.366045
+      },
+      "post_50_100ms": {
+        "rms": 0.325231,
+        "peak": 0.96744
+      },
+      "rms_ratio_event_to_pre": 1.686
+    },
+    {
+      "master_time_s": 83.174,
+      "frame_30fps": 2495,
+      "excerpt_frame_30fps": 335,
+      "pre_100_50ms": {
+        "rms": 0.27621,
+        "peak": 0.604879
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.304545,
+        "peak": 1.124177
+      },
+      "post_50_100ms": {
+        "rms": 0.763476,
+        "peak": 1.366045
+      },
+      "rms_ratio_event_to_pre": 1.103
+    },
+    {
+      "master_time_s": 85.171,
+      "frame_30fps": 2555,
+      "excerpt_frame_30fps": 395,
+      "pre_100_50ms": {
+        "rms": 0.245872,
+        "peak": 0.533411
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.229449,
+        "peak": 0.504943
+      },
+      "post_50_100ms": {
+        "rms": 0.647956,
+        "peak": 1.366045
+      },
+      "rms_ratio_event_to_pre": 0.933
+    },
+    {
+      "master_time_s": 85.983,
+      "frame_30fps": 2579,
+      "excerpt_frame_30fps": 419,
+      "pre_100_50ms": {
+        "rms": 0.09698,
+        "peak": 0.256072
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.10503,
+        "peak": 0.390701
+      },
+      "post_50_100ms": {
+        "rms": 0.345214,
+        "peak": 0.84784
+      },
+      "rms_ratio_event_to_pre": 1.083
+    },
+    {
+      "master_time_s": 88.375,
+      "frame_30fps": 2651,
+      "excerpt_frame_30fps": 491,
+      "pre_100_50ms": {
+        "rms": 0.269158,
+        "peak": 0.809031
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.276331,
+        "peak": 1.135468
+      },
+      "post_50_100ms": {
+        "rms": 0.621513,
+        "peak": 1.329044
+      },
+      "rms_ratio_event_to_pre": 1.027
+    },
+    {
+      "master_time_s": 88.99,
+      "frame_30fps": 2670,
+      "excerpt_frame_30fps": 510,
+      "pre_100_50ms": {
+        "rms": 0.178871,
+        "peak": 0.735766
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.139059,
+        "peak": 0.518161
+      },
+      "post_50_100ms": {
+        "rms": 0.310583,
+        "peak": 0.9427
+      },
+      "rms_ratio_event_to_pre": 0.777
+    },
+    {
+      "master_time_s": 90.778,
+      "frame_30fps": 2723,
+      "excerpt_frame_30fps": 563,
+      "pre_100_50ms": {
+        "rms": 0.017999,
+        "peak": 0.053763
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.022127,
+        "peak": 0.109724
+      },
+      "post_50_100ms": {
+        "rms": 0.325278,
+        "peak": 0.69639
+      },
+      "rms_ratio_event_to_pre": 1.229
+    },
+    {
+      "master_time_s": 91.591,
+      "frame_30fps": 2748,
+      "excerpt_frame_30fps": 588,
+      "pre_100_50ms": {
+        "rms": 0.007166,
+        "peak": 0.021056
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.039933,
+        "peak": 0.181376
+      },
+      "post_50_100ms": {
+        "rms": 0.298287,
+        "peak": 0.617813
+      },
+      "rms_ratio_event_to_pre": 5.573
+    },
+    {
+      "master_time_s": 92.775,
+      "frame_30fps": 2783,
+      "excerpt_frame_30fps": 623,
+      "pre_100_50ms": {
+        "rms": 0.004898,
+        "peak": 0.010991
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.14727,
+        "peak": 1.317508
+      },
+      "post_50_100ms": {
+        "rms": 0.67761,
+        "peak": 1.366045
+      },
+      "rms_ratio_event_to_pre": 30.067
+    },
+    {
+      "master_time_s": 94.772,
+      "frame_30fps": 2843,
+      "excerpt_frame_30fps": 683,
+      "pre_100_50ms": {
+        "rms": 0.275024,
+        "peak": 0.736979
+      },
+      "event_15ms_pre_30ms_post": {
+        "rms": 0.224374,
+        "peak": 0.615401
+      },
+      "post_50_100ms": {
+        "rms": 0.647743,
+        "peak": 1.344661
+      },
+      "rms_ratio_event_to_pre": 0.816
+    }
+  ],
+  "listening_validation_performed": false,
+  "visual_playback_validation_performed": false,
+  "interpretation": "Reproducible waveform amplitude evidence only. It does not prove musical instrument identity, bar phase, lyric phrase, emotional climax, or perceptual fit.",
+  "notable_findings": [
+    "92.775s detector maximum occurs in a very low-amplitude local window; therefore normalized detector strength must not be treated as absolute musical climax.",
+    "Several high normalized band events have event-window RMS below their pre-window RMS; event class is spectral-change evidence, not loudness.",
+    "Continuous rhythmic editing needs filtered cadence and phrase protection rather than triggering every detected event."
+  ]
+}

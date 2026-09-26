@@ -1,0 +1,322 @@
+{
+  "schema": "UNCHAINED_CONTINUOUS_RHYTHM_CONCRETE_POLICY_V02",
+  "policy_id": "CONTROLLED_GROOVE_V02",
+  "status": "PROPOSAL_FOR_NITIN_SELECTION_NO_RENDER",
+  "window": {
+    "master_s": [
+      72,
+      96
+    ],
+    "duration_s": 24,
+    "fps": 30
+  },
+  "source_binding_ref": "SOURCE_BINDING_VALIDATION_V01.json",
+  "waveform_ref": "AUDIO_WAVEFORM_VALIDATION_V01.json",
+  "continuous_rhythm_interpretation": "rhythm maintained through alternating cuts, take changes, bounded focal motion and recovery; never continuous shake",
+  "event_count": 12,
+  "cut_or_take_switch_count": 4,
+  "motion_event_count": 6,
+  "cut_density_per_minute": 10.0,
+  "all_action_density_per_minute": 25.0,
+  "global_rules": {
+    "default_enabled": false,
+    "instrument_labels_used_as_truth": false,
+    "bar_one_used_as_truth": false,
+    "one_motion_event_at_a_time": true,
+    "no_motion_across_cut": true,
+    "safe_crop_must_pass_peak_scale": true,
+    "vocal_protection": "adapt action/amplitude; do not suspend overall rhythm",
+    "event_collision_priority": [
+      "cut_or_take_switch",
+      "expression_protection_hold",
+      "zoom_or_reframe",
+      "shake"
+    ],
+    "same_frame_dual_band": "collapse to one visual action; never stack zoom and shake",
+    "motion_cooldown_frames": 9,
+    "cut_cooldown_frames": 48,
+    "shake_cooldown_frames": 90,
+    "cut_on_visible_vowel": "allowed only after lipsync/expression review; otherwise move to nearest validated boundary within +/-6 frames",
+    "closeup_shake": "replace with micro-reframe or cut when mouth/eyes lose legibility",
+    "maximum_consecutive_kinetic_actions": 2,
+    "mandatory_recovery_after_sequence_frames": 12
+  },
+  "events": [
+    {
+      "master_time_s": 72.0,
+      "master_frame_30fps": 2160,
+      "excerpt_frame_30fps": 0,
+      "action": "hold",
+      "source_detector_evidence": {
+        "band_class": "beat_grid_boundary",
+        "matched_detector_event": "excerpt_entry_beat",
+        "onset_strength": 0
+      },
+      "prior_gemini_intensity": 0.0,
+      "expression_note": "FULL_STABILITY_OPENING_FACE_SHOT",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 1,
+      "recovery_frames": 0
+    },
+    {
+      "master_time_s": 73.189,
+      "master_frame_30fps": 2196,
+      "excerpt_frame_30fps": 36,
+      "action": "reframe",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "73.189:0.657",
+        "onset_strength": 0.657
+      },
+      "prior_gemini_intensity": 0.25,
+      "expression_note": "SMOOTH_PUSH_MAINTAINS_EYE_AXIS",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.012,
+      "zoom_percent": 1.2,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 2,
+      "hold_frames": 1,
+      "recovery_frames": 9
+    },
+    {
+      "master_time_s": 74.977,
+      "master_frame_30fps": 2249,
+      "excerpt_frame_30fps": 89,
+      "action": "cut",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "74.977:0.731",
+        "onset_strength": 0.731
+      },
+      "prior_gemini_intensity": 0.7,
+      "expression_note": "MATCH_ON_ACTION_MID_PHRASE",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 0,
+      "recovery_frames": 0,
+      "cut_requires_lipsync_match": true,
+      "cut_requires_expression_continuity_review": true
+    },
+    {
+      "master_time_s": 77.172,
+      "master_frame_30fps": 2315,
+      "excerpt_frame_30fps": 155,
+      "action": "zoom",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "77.172:0.923",
+        "onset_strength": 0.923
+      },
+      "prior_gemini_intensity": 0.2,
+      "expression_note": "SUBTLE_SCALE_PULSE_NO_FACIAL_CROP",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.0112,
+      "zoom_percent": 1.12,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 2,
+      "hold_frames": 1,
+      "recovery_frames": 9
+    },
+    {
+      "master_time_s": 78.785,
+      "master_frame_30fps": 2364,
+      "excerpt_frame_30fps": 204,
+      "action": "take_switch",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "78.785:0.645",
+        "onset_strength": 0.645
+      },
+      "prior_gemini_intensity": 0.65,
+      "expression_note": "PRESERVES_VOWEL_ELONGATION",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 0,
+      "recovery_frames": 0,
+      "cut_requires_lipsync_match": true,
+      "cut_requires_expression_continuity_review": true
+    },
+    {
+      "master_time_s": 81.978,
+      "master_frame_30fps": 2459,
+      "excerpt_frame_30fps": 299,
+      "action": "reframe",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "81.978:0.535",
+        "onset_strength": 0.535
+      },
+      "prior_gemini_intensity": 0.3,
+      "expression_note": "MAINTAINS_HEADROOM_DURING_HEAD_GESTURE",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.0128,
+      "zoom_percent": 1.28,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 3,
+      "hold_frames": 1,
+      "recovery_frames": 9
+    },
+    {
+      "master_time_s": 83.174,
+      "master_frame_30fps": 2495,
+      "excerpt_frame_30fps": 335,
+      "action": "zoom",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "83.174:0.916",
+        "onset_strength": 0.916
+      },
+      "prior_gemini_intensity": 0.25,
+      "expression_note": "MICRO_ZOOM_SETTLES_BEFORE_NEXT_WORD",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.012,
+      "zoom_percent": 1.2,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 2,
+      "hold_frames": 1,
+      "recovery_frames": 9
+    },
+    {
+      "master_time_s": 85.171,
+      "master_frame_30fps": 2555,
+      "excerpt_frame_30fps": 395,
+      "action": "cut",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "85.171:0.961",
+        "onset_strength": 0.961
+      },
+      "prior_gemini_intensity": 0.75,
+      "expression_note": "CLEAN_ANGLE_SHIFT_AT_VOCAL_REST",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 0,
+      "recovery_frames": 0,
+      "cut_requires_lipsync_match": true,
+      "cut_requires_expression_continuity_review": true
+    },
+    {
+      "master_time_s": 88.99,
+      "master_frame_30fps": 2670,
+      "excerpt_frame_30fps": 510,
+      "action": "reframe",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "88.990:0.657",
+        "onset_strength": 0.657
+      },
+      "prior_gemini_intensity": 0.35,
+      "expression_note": "GENTLE_TRACKING_ON_VOCAL_RISE",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.0136,
+      "zoom_percent": 1.36,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 3,
+      "hold_frames": 1,
+      "recovery_frames": 9
+    },
+    {
+      "master_time_s": 90.778,
+      "master_frame_30fps": 2723,
+      "excerpt_frame_30fps": 563,
+      "action": "shake",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "90.778:0.868",
+        "onset_strength": 0.868
+      },
+      "prior_gemini_intensity": 0.3,
+      "expression_note": "TIGHTENS_INTIMACY_ON_EXTENDED_SYLLABLE",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0.005,
+      "zoom_percent": 0.5,
+      "shake_displacement_fraction": 0.0023,
+      "shake_px_at_1080": 2.5,
+      "attack_frames": 1,
+      "hold_frames": 1,
+      "recovery_frames": 5,
+      "rotation_degrees": 0,
+      "agent2_concrete_derivation": "Converted prior abstract zoom to one restrained micro-shake so the controlled proposal exercises all requested action families; remains optional and must yield to facial legibility."
+    },
+    {
+      "master_time_s": 92.775,
+      "master_frame_30fps": 2783,
+      "excerpt_frame_30fps": 623,
+      "action": "cut",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "92.775:1.000_PEAK_COINCIDENT",
+        "onset_strength": 1.0
+      },
+      "prior_gemini_intensity": 0.8,
+      "expression_note": "DYNAMIC_RECENTER_ON_PHRASE_CLIMAX",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 0,
+      "recovery_frames": 0,
+      "cut_requires_lipsync_match": true,
+      "cut_requires_expression_continuity_review": true
+    },
+    {
+      "master_time_s": 94.772,
+      "master_frame_30fps": 2843,
+      "excerpt_frame_30fps": 683,
+      "action": "hold",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "94.772:0.807",
+        "onset_strength": 0.807
+      },
+      "prior_gemini_intensity": 0.0,
+      "expression_note": "STABILIZED_OUTRO_OF_WINDOW_FOR_EMOTIVE_DECAY",
+      "expression_verification": "UNVERIFIED_TEXTUAL_HYPOTHESIS_NOT_DIRECT_PLAYBACK_CONFIRMED",
+      "scale_delta_fraction": 0,
+      "zoom_percent": 0,
+      "shake_displacement_fraction": 0,
+      "shake_px_at_1080": 0,
+      "attack_frames": 0,
+      "hold_frames": 37,
+      "recovery_frames": 0
+    }
+  ],
+  "unresolved_before_render": [
+    "Nitin selects policy or hybrid",
+    "human/perceptual verification of event musicality and singing expression",
+    "validate take-specific lip-sync and safe crop",
+    "manual bar-one only if bar emphasis is desired"
+  ],
+  "action_family_counts": {
+    "cut": 3,
+    "take_switch": 1,
+    "zoom": 2,
+    "reframe": 3,
+    "shake": 1,
+    "hold": 2
+  }
+}
