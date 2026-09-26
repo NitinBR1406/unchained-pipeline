@@ -1,0 +1,19 @@
+{
+  "authoritative_master": {
+    "duration_ms": 214400,
+    "format": "48kHz stereo 24-bit PCM",
+    "name": "AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "drum_stem_verified": false,
+  "local_source_match": "GREEN_EXACT_SHA",
+  "other_files_observed": [
+    "AAKHRI ISHQ IT T75.wav",
+    "AAKHRI ISHQ MASTER 1.wav",
+    "AAKHRI ISHQ VOCALS.wav",
+    "AAKHRI ISHQ 1.wav"
+  ],
+  "other_files_used_for_detection": false,
+  "reason": "Filenames do not establish isolated drums, lineage, or timing equivalence. Analysis therefore remains bound only to MASTER 2.",
+  "schema": "SOURCE_AND_STEM_AUDIT_V01"
+}

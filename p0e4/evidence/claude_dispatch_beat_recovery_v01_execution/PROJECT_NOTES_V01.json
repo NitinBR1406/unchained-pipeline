@@ -1,0 +1,13 @@
+{
+  "limits": [
+    "Detector commit absent.",
+    "Deployed byte parity unproven.",
+    "Band labels remain uncertain.",
+    "No persisted native Resolve beat-line export.",
+    "Claude historical 375-event corpus is a different heuristic."
+  ],
+  "master_state": "V16.19/state_version 45 remains the latest registered pointer but is not replay-verified; no promotion made.",
+  "next": "Nitin jointly selects effect rules; ledger recovery remains independent READY work.",
+  "outcome": "Recovered Claude v19 detector source and historical MASTER 2 corpus; reran original detector unchanged on exact MASTER 2; generated two Gemini treatments; no effect render.",
+  "schema": "PROJECT_NOTES_V01"
+}

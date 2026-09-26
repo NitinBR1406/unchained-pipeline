@@ -1,0 +1,24 @@
+{
+  "choices": [
+    "CONTROLLED_GROOVE",
+    "STRONGER_PERFORMANCE_ENERGY",
+    "CUSTOM_HYBRID"
+  ],
+  "effects_enabled": false,
+  "gate": "NITIN_CONTINUOUS_POLICY_SELECTION",
+  "independent_ready": [
+    {
+      "action": "Prepare additive ledger recovery proposal for seq 31 and malformed event without rewriting frozen snapshots.",
+      "status": "READY_READ_ONLY"
+    }
+  ],
+  "new_effect_render_authorized": false,
+  "questions": [
+    "Choose treatment direction or hybrid.",
+    "Confirm band-event mapping polarity by phrase; labels are not proven instruments.",
+    "Confirm maximum cut density and shake amplitude for vocal close-ups.",
+    "Confirm whether manual bar-one phase alignment is required before any render."
+  ],
+  "schema": "NEXT_READY_V01",
+  "status": "WAITING_FOR_NITIN"
+}

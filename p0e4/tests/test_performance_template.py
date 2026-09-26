@@ -59,7 +59,7 @@ class PerformanceTemplateTests(unittest.TestCase):
         self.assertIn("NO_THREE_ACCENT_CAP", policy["creative_direction_constraints"])
         self.assertEqual("UNSELECTED", policy["selected_policy_version"])
         self.assertFalse(policy["default_enabled"])
-        self.assertEqual("HOLD_SOURCE_AND_OUTPUTS_NOT_RETRIEVED", policy["detector_binding"]["status"])
+        self.assertEqual("RECOVERED_SOURCE_MASTER2_FULL_ANALYSIS_READY_POLICY_UNSELECTED", policy["detector_binding"]["status"])
 
 
 if __name__ == "__main__":

@@ -1,0 +1,142 @@
+{
+  "destination_folder_id": "NOT_AVAILABLE_FROM_LOCAL_MOUNT",
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/TEMPLATES/UNCHAINED_PERFORMANCE_TEMPLATE_V01/V03_CLAUDE_DETECTOR_RECOVERY_20260926",
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "renders": 0
+  },
+  "master_state_pointer_updated": false,
+  "overwrite_performed": false,
+  "schema": "SHARED_DRIVE_DETECTOR_RECOVERY_PERSISTENCE_V01",
+  "source_preserved": true,
+  "source_to_destination": [
+    {
+      "bytes": 3592,
+      "destination_sha256": "6e900a1bbab36647fd8085ba501c6e8ad65acdd8e97ee977db6a5f6f2542a2cf",
+      "match": true,
+      "path": "evidence/ACCEPTANCE_V01.json",
+      "source_sha256": "6e900a1bbab36647fd8085ba501c6e8ad65acdd8e97ee977db6a5f6f2542a2cf"
+    },
+    {
+      "bytes": 10610,
+      "destination_sha256": "6dfd5201fa6c537226afeabb002171eb1fa0226bad221ad55a59dc906e2edb50",
+      "match": true,
+      "path": "evidence/CLAUDE_DISPATCH_RETRIEVAL_MANIFEST_V01.json",
+      "source_sha256": "6dfd5201fa6c537226afeabb002171eb1fa0226bad221ad55a59dc906e2edb50"
+    },
+    {
+      "bytes": 214160,
+      "destination_sha256": "5016a5db932aa4a74f4357463c1ef0e8bb90ba7682f91b980e7138b28d0e995f",
+      "match": true,
+      "path": "evidence/CLAUDE_EXISTING_DETECTOR_MASTER2_ANALYSIS_V01.json",
+      "source_sha256": "5016a5db932aa4a74f4357463c1ef0e8bb90ba7682f91b980e7138b28d0e995f"
+    },
+    {
+      "bytes": 16069,
+      "destination_sha256": "849e89021222635efb647ecb7b01e07d5afc22a7d53136fd824a32c9d1866132",
+      "match": true,
+      "path": "evidence/GEMINI_CONTINUOUS_TREATMENTS_FROM_VALIDATED_MAP_V01.json",
+      "source_sha256": "849e89021222635efb647ecb7b01e07d5afc22a7d53136fd824a32c9d1866132"
+    },
+    {
+      "bytes": 22355,
+      "destination_sha256": "ed2cfade15ab3729760537d731475bd0f846decc5ddf5c6aab04c61680dd8989",
+      "match": true,
+      "path": "evidence/MASTER2_VALIDATED_RHYTHM_EXCERPT_72_96_V01.json",
+      "source_sha256": "ed2cfade15ab3729760537d731475bd0f846decc5ddf5c6aab04c61680dd8989"
+    },
+    {
+      "bytes": 802,
+      "destination_sha256": "0fe2c6b189ca60d35976c9dcb90fd07bf49b7c27dfba54d87c2107fb6031ffde",
+      "match": true,
+      "path": "evidence/NEXT_READY.json",
+      "source_sha256": "0fe2c6b189ca60d35976c9dcb90fd07bf49b7c27dfba54d87c2107fb6031ffde"
+    },
+    {
+      "bytes": 697,
+      "destination_sha256": "93340597e8936e116ce139c471f131f5a672cb490e9fa017e7434d6f9f283c72",
+      "match": true,
+      "path": "evidence/PROJECT_NOTES_V01.json",
+      "source_sha256": "93340597e8936e116ce139c471f131f5a672cb490e9fa017e7434d6f9f283c72"
+    },
+    {
+      "bytes": 1589,
+      "destination_sha256": "1691e54520cf0c59ef38f3860871064d1b74c21456bf2570d59f278204a9a474",
+      "match": true,
+      "path": "evidence/SHA256SUMS.txt",
+      "source_sha256": "1691e54520cf0c59ef38f3860871064d1b74c21456bf2570d59f278204a9a474"
+    },
+    {
+      "bytes": 5939,
+      "destination_sha256": "73822a23d063fef1003cbf272d30beb7c106efed4f60cdfab9f2f390ccffb06e",
+      "match": true,
+      "path": "evidence/TIMING_SPOTCHECK_V01.json",
+      "source_sha256": "73822a23d063fef1003cbf272d30beb7c106efed4f60cdfab9f2f390ccffb06e"
+    },
+    {
+      "bytes": 1358,
+      "destination_sha256": "8b6823f683f8cb85b70cda6df570155c353232bef313601a596addfa7caaff16",
+      "match": true,
+      "path": "evidence/detector/Dockerfile",
+      "source_sha256": "8b6823f683f8cb85b70cda6df570155c353232bef313601a596addfa7caaff16"
+    },
+    {
+      "bytes": 96083,
+      "destination_sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb",
+      "match": true,
+      "path": "evidence/detector/app.py",
+      "source_sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb"
+    },
+    {
+      "bytes": 14834,
+      "destination_sha256": "04fa93aff2847eaa9ae7b8542192ca37892c46b6b149c5235360a5c14abe3e97",
+      "match": true,
+      "path": "evidence/detector/clip_fx.py",
+      "source_sha256": "04fa93aff2847eaa9ae7b8542192ca37892c46b6b149c5235360a5c14abe3e97"
+    },
+    {
+      "bytes": 156,
+      "destination_sha256": "fb8be88c19245f9e21faa198a7f88426a39b555dddd848c03b884a9610834653",
+      "match": true,
+      "path": "evidence/detector/requirements.txt",
+      "source_sha256": "fb8be88c19245f9e21faa198a7f88426a39b555dddd848c03b884a9610834653"
+    },
+    {
+      "bytes": 1431,
+      "destination_sha256": "c1ed3c3f1529ddd6180a0e9443c63925835db9092f9f6d5d840934e3e24750c3",
+      "match": true,
+      "path": "evidence/drive/EXISTING_DETECTOR_AUDIT_V01.json",
+      "source_sha256": "c1ed3c3f1529ddd6180a0e9443c63925835db9092f9f6d5d840934e3e24750c3"
+    },
+    {
+      "bytes": 992,
+      "destination_sha256": "95217a65d680586d6b3d09c5f71bfb387a9efc9ae98f96d7fec4cf162e006a1e",
+      "match": true,
+      "path": "evidence/drive/GEMINI_TAIL_COVERAGE_RECEIPT_V01.json",
+      "source_sha256": "95217a65d680586d6b3d09c5f71bfb387a9efc9ae98f96d7fec4cf162e006a1e"
+    },
+    {
+      "bytes": 133671,
+      "destination_sha256": "24527d1a4fef62ed33bcb03d47c90d77e2106f1e4c559f8b6003ddc3ee98a7ff",
+      "match": true,
+      "path": "evidence/drive/KICK_SNARE_MIXED_MASTER_EVENTS_V01.json",
+      "source_sha256": "24527d1a4fef62ed33bcb03d47c90d77e2106f1e4c559f8b6003ddc3ee98a7ff"
+    },
+    {
+      "bytes": 673,
+      "destination_sha256": "6fad538c64dc8603b56e388233e806f6386f4df894515f5d1e09c8100a499a27",
+      "match": true,
+      "path": "evidence/drive/SOURCE_AND_STEM_AUDIT_V01.json",
+      "source_sha256": "6fad538c64dc8603b56e388233e806f6386f4df894515f5d1e09c8100a499a27"
+    },
+    {
+      "bytes": 2533,
+      "destination_sha256": "cfdb9213c133bdf417a3f51648e36573fc7b292db1e8994cbbf3ed90c6826fee",
+      "match": true,
+      "path": "motion_policy.json",
+      "source_sha256": "cfdb9213c133bdf417a3f51648e36573fc7b292db1e8994cbbf3ed90c6826fee"
+    }
+  ],
+  "status": "GREEN_READBACK_SHA_MATCH"
+}

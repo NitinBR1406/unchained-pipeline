@@ -1,10 +1,7 @@
 {
-  "creative_direction": "CONTINUOUS_RHYTHMIC_UNCHAINED_NITIN",
-  "creative_direction_constraints": [
-    "CONTINUOUS_RHYTHM_IS_NOT_CONTINUOUS_SHAKE",
-    "DENSITY_AND_AMPLITUDE_FOLLOW_PHRASE_AND_SECTION_ENERGY",
-    "VOCAL_AND_EXPRESSION_PROTECTION_ADAPTS_ACTION_TYPE_AND_AMPLITUDE",
-    "NO_THREE_ACCENT_CAP"
+  "candidate_treatments": [
+    "CONTROLLED_GROOVE",
+    "STRONGER_PERFORMANCE_ENERGY"
   ],
   "collision_rules": [
     "ONE_MOTION_EVENT_AT_A_TIME",
@@ -13,20 +10,34 @@
     "SAFE_CROP_MUST_PASS_AT_PEAK_SCALE"
   ],
   "cooldown_frames": 45,
+  "creative_direction": "CONTINUOUS_RHYTHMIC_UNCHAINED_NITIN",
+  "creative_direction_constraints": [
+    "CONTINUOUS_RHYTHM_IS_NOT_CONTINUOUS_SHAKE",
+    "DENSITY_AND_AMPLITUDE_FOLLOW_PHRASE_AND_SECTION_ENERGY",
+    "VOCAL_AND_EXPRESSION_PROTECTION_ADAPTS_ACTION_TYPE_AND_AMPLITUDE",
+    "NO_THREE_ACCENT_CAP"
+  ],
   "default_enabled": false,
+  "detector_binding": {
+    "analysis_ref": "p0e4/evidence/claude_dispatch_beat_recovery_v01_execution/CLAUDE_EXISTING_DETECTOR_MASTER2_ANALYSIS_V01.json",
+    "analysis_sha256": "5016a5db932aa4a74f4357463c1ef0e8bb90ba7682f91b980e7138b28d0e995f",
+    "app_py_sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb",
+    "app_version": "v19-hostasset",
+    "authoritative_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "bpm_estimate": 151.999081,
+    "clip_fx_py_sha256": "04fa93aff2847eaa9ae7b8542192ca37892c46b6b149c5235360a5c14abe3e97",
+    "coverage_end_s": 214.4,
+    "downbeat_semantics": "EVERY_FOURTH_TRACKED_BEAT_NOT_TRUE_BAR_PHASE_ESTIMATION",
+    "effect_mapping_selected": false,
+    "high_band_events": 586,
+    "instrument_identity": "NOT_PROVEN",
+    "low_band_events": 793,
+    "new_detector_authorized": false,
+    "status": "RECOVERED_SOURCE_MASTER2_FULL_ANALYSIS_READY_POLICY_UNSELECTED",
+    "tracked_beats": 518
+  },
   "event_requirement": "NITIN_SELECTED_AND_VALIDATED",
   "native_overlay_semantics": "VISUAL_PULSE_GUIDANCE_ONLY_NOT_KICK_SNARE_TRUTH",
-  "detector_binding": {
-    "status": "HOLD_SOURCE_AND_OUTPUTS_NOT_RETRIEVED",
-    "authoritative_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
-    "downbeat_semantics": "EVERY_NTH_BEAT_SELECTION_INDICATED_NOT_SOURCE_VERIFIED",
-    "instrument_identity": "NOT_PROVEN",
-    "new_detector_authorized": false
-  },
-  "candidate_treatments": [
-    "CONTROLLED_GROOVE",
-    "STRONGER_PERFORMANCE_ENERGY"
-  ],
   "parameters": {
     "micro_push": {
       "attack_frames": 10,

@@ -1,0 +1,16 @@
+{
+  "chat_url": "https://gemini.google.com/app/95642e88746db701",
+  "coverage_parent_master": "03:08.000-03:34.4000417",
+  "creative_winner_selected": false,
+  "effect_render_requested": false,
+  "full_tail_reviewed": true,
+  "initial_response_issue": "Two JSON objects accidentally concatenated and unverified lyric fragments included.",
+  "instrument_identity": "UNKNOWN_WITHOUT_STEMS",
+  "normalized_result_ref": "GEMINI_TAIL_NORMALIZED_RESULT_V01.json",
+  "normalized_result_sha256": "22b4f5b42c52bd6f9c8e8ec3e463473f7711c7867b6155c535eabb02a12e9279",
+  "parent_master_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "repair": "Same Gemini conversation reformatted only; preserved common observaties, removed lyric fragments, retained conservatieve stillness guidance.",
+  "schema": "GEMINI_TAIL_COVERAGE_RECEIPT_V01",
+  "status": "COMPLETE_WITH_FORMAT_REPAIR",
+  "uploaded_tail_sha256": "d18eb6dc5f8a17c46f9bba3ceab2c0b83aa43429d299989ed6da28428eb36a2f"
+}

@@ -1,0 +1,1015 @@
+{
+  "beats": [
+    72.377,
+    72.771,
+    73.178,
+    73.572,
+    73.979,
+    74.374,
+    74.78,
+    75.175,
+    75.569,
+    75.976,
+    76.382,
+    76.777,
+    77.172,
+    77.578,
+    77.984,
+    78.379,
+    78.774,
+    79.168,
+    79.575,
+    79.97,
+    80.376,
+    80.771,
+    81.177,
+    81.572,
+    81.978,
+    82.373,
+    82.779,
+    83.174,
+    83.569,
+    83.975,
+    84.381,
+    84.776,
+    85.171,
+    85.577,
+    85.983,
+    86.378,
+    86.773,
+    87.168,
+    87.574,
+    87.969,
+    88.375,
+    88.77,
+    89.176,
+    89.571,
+    89.966,
+    90.36,
+    90.755,
+    91.15,
+    91.556,
+    91.963,
+    92.369,
+    92.775,
+    93.17,
+    93.576,
+    93.983,
+    94.378,
+    94.772,
+    95.167,
+    95.573,
+    95.98
+  ],
+  "detector": {
+    "app_py_sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb",
+    "app_version": "v19-hostasset",
+    "clip_fx_py_sha256": "04fa93aff2847eaa9ae7b8542192ca37892c46b6b149c5235360a5c14abe3e97",
+    "execution": "exact detect_beats AST function plus exact clip_fx.detect_hits_detailed; no source modification",
+    "parameters": {
+      "HOP": 256,
+      "KICK_BAND_HZ": [
+        30.0,
+        140.0
+      ],
+      "KICK_MIN_GAP_S": 0.14,
+      "KICK_THRESH_K": 1.5,
+      "NFFT": 1024,
+      "SNARE_BAND_HZ": [
+        1600.0,
+        6500.0
+      ],
+      "SNARE_MIN_GAP_S": 0.1,
+      "SNARE_THRESH_K": 1.8,
+      "SR": 22050,
+      "every": 4
+    },
+    "requirements_sha256": "fb8be88c19245f9e21faa198a7f88426a39b555dddd848c03b884a9610834653"
+  },
+  "downbeats_every_nth": [
+    73.178,
+    74.78,
+    76.382,
+    77.984,
+    79.575,
+    81.177,
+    82.779,
+    84.381,
+    85.983,
+    87.574,
+    89.176,
+    90.755,
+    92.369,
+    93.983,
+    95.573
+  ],
+  "kick_band": [
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 5.0058,
+      "strength_norm": 0.4616,
+      "t": 72.377
+    },
+    {
+      "nearest_downbeat_offset": 0.592,
+      "onset_strength": 1.9384,
+      "strength_norm": 0.1788,
+      "t": 72.586
+    },
+    {
+      "nearest_downbeat_offset": 0.395,
+      "onset_strength": 3.7255,
+      "strength_norm": 0.3436,
+      "t": 72.783
+    },
+    {
+      "nearest_downbeat_offset": -0.011,
+      "onset_strength": 7.1298,
+      "strength_norm": 0.6575,
+      "t": 73.189
+    },
+    {
+      "nearest_downbeat_offset": -0.302,
+      "onset_strength": 1.7756,
+      "strength_norm": 0.1637,
+      "t": 73.48
+    },
+    {
+      "nearest_downbeat_offset": -0.534,
+      "onset_strength": 2.3581,
+      "strength_norm": 0.2175,
+      "t": 73.712
+    },
+    {
+      "nearest_downbeat_offset": 0.79,
+      "onset_strength": 4.3055,
+      "strength_norm": 0.3971,
+      "t": 73.99
+    },
+    {
+      "nearest_downbeat_offset": 0.65,
+      "onset_strength": 2.7296,
+      "strength_norm": 0.2517,
+      "t": 74.13
+    },
+    {
+      "nearest_downbeat_offset": 0.047,
+      "onset_strength": 2.0319,
+      "strength_norm": 0.1874,
+      "t": 74.733
+    },
+    {
+      "nearest_downbeat_offset": -0.197,
+      "onset_strength": 7.9286,
+      "strength_norm": 0.7312,
+      "t": 74.977
+    },
+    {
+      "nearest_downbeat_offset": -0.406,
+      "onset_strength": 2.8701,
+      "strength_norm": 0.2647,
+      "t": 75.186
+    },
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 4.0443,
+      "strength_norm": 0.373,
+      "t": 75.581
+    },
+    {
+      "nearest_downbeat_offset": 0.58,
+      "onset_strength": 2.8488,
+      "strength_norm": 0.2627,
+      "t": 75.802
+    },
+    {
+      "nearest_downbeat_offset": 0.371,
+      "onset_strength": 1.6981,
+      "strength_norm": 0.1566,
+      "t": 76.011
+    },
+    {
+      "nearest_downbeat_offset": 0.221,
+      "onset_strength": 1.5629,
+      "strength_norm": 0.1441,
+      "t": 76.161
+    },
+    {
+      "nearest_downbeat_offset": -0.012,
+      "onset_strength": 5.9876,
+      "strength_norm": 0.5522,
+      "t": 76.394
+    },
+    {
+      "nearest_downbeat_offset": -0.279,
+      "onset_strength": 5.4295,
+      "strength_norm": 0.5007,
+      "t": 76.661
+    },
+    {
+      "nearest_downbeat_offset": 0.801,
+      "onset_strength": 5.5191,
+      "strength_norm": 0.509,
+      "t": 77.183
+    },
+    {
+      "nearest_downbeat_offset": 0.592,
+      "onset_strength": 2.4563,
+      "strength_norm": 0.2265,
+      "t": 77.392
+    },
+    {
+      "nearest_downbeat_offset": 0.348,
+      "onset_strength": 1.1054,
+      "strength_norm": 0.1019,
+      "t": 77.636
+    },
+    {
+      "nearest_downbeat_offset": 0.139,
+      "onset_strength": 0.9474,
+      "strength_norm": 0.0874,
+      "t": 77.845
+    },
+    {
+      "nearest_downbeat_offset": -0.198,
+      "onset_strength": 5.7971,
+      "strength_norm": 0.5346,
+      "t": 78.182
+    },
+    {
+      "nearest_downbeat_offset": -0.407,
+      "onset_strength": 1.8982,
+      "strength_norm": 0.1751,
+      "t": 78.391
+    },
+    {
+      "nearest_downbeat_offset": 0.79,
+      "onset_strength": 6.993,
+      "strength_norm": 0.6449,
+      "t": 78.785
+    },
+    {
+      "nearest_downbeat_offset": 0.523,
+      "onset_strength": 2.282,
+      "strength_norm": 0.2104,
+      "t": 79.052
+    },
+    {
+      "nearest_downbeat_offset": 0.383,
+      "onset_strength": 3.9057,
+      "strength_norm": 0.3602,
+      "t": 79.192
+    },
+    {
+      "nearest_downbeat_offset": 0.012,
+      "onset_strength": 1.1031,
+      "strength_norm": 0.1017,
+      "t": 79.563
+    },
+    {
+      "nearest_downbeat_offset": -0.29,
+      "onset_strength": 2.3207,
+      "strength_norm": 0.214,
+      "t": 79.865
+    },
+    {
+      "nearest_downbeat_offset": 0.79,
+      "onset_strength": 5.6792,
+      "strength_norm": 0.5237,
+      "t": 80.387
+    },
+    {
+      "nearest_downbeat_offset": 0.557,
+      "onset_strength": 2.2186,
+      "strength_norm": 0.2046,
+      "t": 80.62
+    },
+    {
+      "nearest_downbeat_offset": 0.383,
+      "onset_strength": 1.8339,
+      "strength_norm": 0.1691,
+      "t": 80.794
+    },
+    {
+      "nearest_downbeat_offset": -0.209,
+      "onset_strength": 5.7071,
+      "strength_norm": 0.5263,
+      "t": 81.386
+    },
+    {
+      "nearest_downbeat_offset": -0.534,
+      "onset_strength": 1.6458,
+      "strength_norm": 0.1518,
+      "t": 81.711
+    },
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 5.7996,
+      "strength_norm": 0.5349,
+      "t": 81.978
+    },
+    {
+      "nearest_downbeat_offset": 0.58,
+      "onset_strength": 1.5669,
+      "strength_norm": 0.1445,
+      "t": 82.199
+    },
+    {
+      "nearest_downbeat_offset": 0.395,
+      "onset_strength": 1.5706,
+      "strength_norm": 0.1448,
+      "t": 82.384
+    },
+    {
+      "nearest_downbeat_offset": 0.244,
+      "onset_strength": 1.6714,
+      "strength_norm": 0.1541,
+      "t": 82.535
+    },
+    {
+      "nearest_downbeat_offset": -0.012,
+      "onset_strength": 5.2108,
+      "strength_norm": 0.4806,
+      "t": 82.791
+    },
+    {
+      "nearest_downbeat_offset": -0.348,
+      "onset_strength": 3.0763,
+      "strength_norm": 0.2837,
+      "t": 83.127
+    },
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 5.1253,
+      "strength_norm": 0.4727,
+      "t": 83.58
+    },
+    {
+      "nearest_downbeat_offset": 0.58,
+      "onset_strength": 1.1535,
+      "strength_norm": 0.1064,
+      "t": 83.801
+    },
+    {
+      "nearest_downbeat_offset": 0.418,
+      "onset_strength": 2.236,
+      "strength_norm": 0.2062,
+      "t": 83.963
+    },
+    {
+      "nearest_downbeat_offset": 0.023,
+      "onset_strength": 1.0313,
+      "strength_norm": 0.0951,
+      "t": 84.358
+    },
+    {
+      "nearest_downbeat_offset": -0.198,
+      "onset_strength": 4.3043,
+      "strength_norm": 0.397,
+      "t": 84.579
+    },
+    {
+      "nearest_downbeat_offset": -0.418,
+      "onset_strength": 1.5701,
+      "strength_norm": 0.1448,
+      "t": 84.799
+    },
+    {
+      "nearest_downbeat_offset": -0.569,
+      "onset_strength": 1.2246,
+      "strength_norm": 0.1129,
+      "t": 84.95
+    },
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 5.0038,
+      "strength_norm": 0.4615,
+      "t": 85.182
+    },
+    {
+      "nearest_downbeat_offset": 0.499,
+      "onset_strength": 1.8201,
+      "strength_norm": 0.1679,
+      "t": 85.484
+    },
+    {
+      "nearest_downbeat_offset": 0.29,
+      "onset_strength": 1.1394,
+      "strength_norm": 0.1051,
+      "t": 85.693
+    },
+    {
+      "nearest_downbeat_offset": 0.0,
+      "onset_strength": 7.0638,
+      "strength_norm": 0.6514,
+      "t": 85.983
+    },
+    {
+      "nearest_downbeat_offset": -0.395,
+      "onset_strength": 4.2885,
+      "strength_norm": 0.3955,
+      "t": 86.378
+    },
+    {
+      "nearest_downbeat_offset": 0.789,
+      "onset_strength": 4.2179,
+      "strength_norm": 0.389,
+      "t": 86.785
+    },
+    {
+      "nearest_downbeat_offset": 0.604,
+      "onset_strength": 3.5923,
+      "strength_norm": 0.3313,
+      "t": 86.97
+    },
+    {
+      "nearest_downbeat_offset": 0.371,
+      "onset_strength": 2.0429,
+      "strength_norm": 0.1884,
+      "t": 87.203
+    },
+    {
+      "nearest_downbeat_offset": 0.151,
+      "onset_strength": 1.1837,
+      "strength_norm": 0.1092,
+      "t": 87.423
+    },
+    {
+      "nearest_downbeat_offset": -0.209,
+      "onset_strength": 3.9444,
+      "strength_norm": 0.3638,
+      "t": 87.783
+    },
+    {
+      "nearest_downbeat_offset": 0.789,
+      "onset_strength": 3.8826,
+      "strength_norm": 0.3581,
+      "t": 88.387
+    },
+    {
+      "nearest_downbeat_offset": 0.638,
+      "onset_strength": 2.3531,
+      "strength_norm": 0.217,
+      "t": 88.538
+    },
+    {
+      "nearest_downbeat_offset": 0.499,
+      "onset_strength": 2.3976,
+      "strength_norm": 0.2211,
+      "t": 88.677
+    },
+    {
+      "nearest_downbeat_offset": 0.186,
+      "onset_strength": 7.1246,
+      "strength_norm": 0.657,
+      "t": 88.99
+    },
+    {
+      "nearest_downbeat_offset": -0.082,
+      "onset_strength": 2.0296,
+      "strength_norm": 0.1872,
+      "t": 89.258
+    },
+    {
+      "nearest_downbeat_offset": -0.325,
+      "onset_strength": 1.9553,
+      "strength_norm": 0.1803,
+      "t": 89.501
+    },
+    {
+      "nearest_downbeat_offset": -0.476,
+      "onset_strength": 1.6181,
+      "strength_norm": 0.1492,
+      "t": 89.652
+    },
+    {
+      "nearest_downbeat_offset": 0.766,
+      "onset_strength": 1.5685,
+      "strength_norm": 0.1446,
+      "t": 89.989
+    },
+    {
+      "nearest_downbeat_offset": 0.604,
+      "onset_strength": 2.4823,
+      "strength_norm": 0.2289,
+      "t": 90.151
+    },
+    {
+      "nearest_downbeat_offset": 0.441,
+      "onset_strength": 2.1396,
+      "strength_norm": 0.1973,
+      "t": 90.314
+    },
+    {
+      "nearest_downbeat_offset": 0.302,
+      "onset_strength": 2.0003,
+      "strength_norm": 0.1845,
+      "t": 90.453
+    },
+    {
+      "nearest_downbeat_offset": -0.023,
+      "onset_strength": 9.4152,
+      "strength_norm": 0.8683,
+      "t": 90.778
+    },
+    {
+      "nearest_downbeat_offset": -0.348,
+      "onset_strength": 0.5966,
+      "strength_norm": 0.055,
+      "t": 91.103
+    },
+    {
+      "nearest_downbeat_offset": 0.778,
+      "onset_strength": 10.557,
+      "strength_norm": 0.9736,
+      "t": 91.591
+    },
+    {
+      "nearest_downbeat_offset": 0.348,
+      "onset_strength": 2.0904,
+      "strength_norm": 0.1928,
+      "t": 92.021
+    },
+    {
+      "nearest_downbeat_offset": 0.035,
+      "onset_strength": 2.116,
+      "strength_norm": 0.1951,
+      "t": 92.334
+    },
+    {
+      "nearest_downbeat_offset": -0.163,
+      "onset_strength": 1.9663,
+      "strength_norm": 0.1813,
+      "t": 92.532
+    },
+    {
+      "nearest_downbeat_offset": -0.406,
+      "onset_strength": 10.8434,
+      "strength_norm": 1.0,
+      "t": 92.775
+    },
+    {
+      "nearest_downbeat_offset": 0.801,
+      "onset_strength": 4.5083,
+      "strength_norm": 0.4158,
+      "t": 93.182
+    },
+    {
+      "nearest_downbeat_offset": 0.569,
+      "onset_strength": 1.1037,
+      "strength_norm": 0.1018,
+      "t": 93.414
+    },
+    {
+      "nearest_downbeat_offset": 0.383,
+      "onset_strength": 1.3492,
+      "strength_norm": 0.1244,
+      "t": 93.6
+    },
+    {
+      "nearest_downbeat_offset": 0.244,
+      "onset_strength": 2.0327,
+      "strength_norm": 0.1875,
+      "t": 93.739
+    },
+    {
+      "nearest_downbeat_offset": 0.023,
+      "onset_strength": 1.0332,
+      "strength_norm": 0.0953,
+      "t": 93.96
+    },
+    {
+      "nearest_downbeat_offset": -0.209,
+      "onset_strength": 4.6073,
+      "strength_norm": 0.4249,
+      "t": 94.192
+    },
+    {
+      "nearest_downbeat_offset": -0.534,
+      "onset_strength": 1.4071,
+      "strength_norm": 0.1298,
+      "t": 94.517
+    },
+    {
+      "nearest_downbeat_offset": 0.789,
+      "onset_strength": 4.9931,
+      "strength_norm": 0.4605,
+      "t": 94.784
+    },
+    {
+      "nearest_downbeat_offset": 0.464,
+      "onset_strength": 2.0672,
+      "strength_norm": 0.1906,
+      "t": 95.109
+    },
+    {
+      "nearest_downbeat_offset": -0.012,
+      "onset_strength": 5.0539,
+      "strength_norm": 0.4661,
+      "t": 95.585
+    },
+    {
+      "nearest_downbeat_offset": -0.244,
+      "onset_strength": 2.6587,
+      "strength_norm": 0.2452,
+      "t": 95.817
+    },
+    {
+      "nearest_downbeat_offset": -0.418,
+      "onset_strength": 3.5759,
+      "strength_norm": 0.3298,
+      "t": 95.991
+    }
+  ],
+  "schema": "MASTER2_VALIDATED_RHYTHM_EXCERPT_V01",
+  "semantic_limits": {
+    "downbeats": "EVERY_FOURTH_TRACKED_BEAT_NOT_TRUE_BAR_PHASE",
+    "kick_band": "LOW_FREQUENCY_ONSET_CLASS_NOT_PROVEN_KICK",
+    "snare_band": "HIGH_FREQUENCY_ONSET_CLASS_NOT_PROVEN_SNARE"
+  },
+  "snare_band": [
+    {
+      "nearest_downbeat_offset": -0.603,
+      "onset_strength": 61.5501,
+      "strength_norm": 0.2601,
+      "t": 72.179
+    },
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 160.7189,
+      "strength_norm": 0.6793,
+      "t": 72.377
+    },
+    {
+      "nearest_downbeat_offset": 0.407,
+      "onset_strength": 215.8914,
+      "strength_norm": 0.9125,
+      "t": 72.771
+    },
+    {
+      "nearest_downbeat_offset": 0.0,
+      "onset_strength": 46.9175,
+      "strength_norm": 0.1983,
+      "t": 73.178
+    },
+    {
+      "nearest_downbeat_offset": -0.197,
+      "onset_strength": 68.3429,
+      "strength_norm": 0.2888,
+      "t": 73.375
+    },
+    {
+      "nearest_downbeat_offset": -0.394,
+      "onset_strength": 162.1827,
+      "strength_norm": 0.6855,
+      "t": 73.572
+    },
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 100.6322,
+      "strength_norm": 0.4253,
+      "t": 73.979
+    },
+    {
+      "nearest_downbeat_offset": 0.406,
+      "onset_strength": 133.229,
+      "strength_norm": 0.5631,
+      "t": 74.374
+    },
+    {
+      "nearest_downbeat_offset": 0.0,
+      "onset_strength": 63.3001,
+      "strength_norm": 0.2675,
+      "t": 74.78
+    },
+    {
+      "nearest_downbeat_offset": -0.197,
+      "onset_strength": 130.2219,
+      "strength_norm": 0.5504,
+      "t": 74.977
+    },
+    {
+      "nearest_downbeat_offset": -0.604,
+      "onset_strength": 64.1342,
+      "strength_norm": 0.2711,
+      "t": 75.384
+    },
+    {
+      "nearest_downbeat_offset": -0.789,
+      "onset_strength": 122.4508,
+      "strength_norm": 0.5175,
+      "t": 75.569
+    },
+    {
+      "nearest_downbeat_offset": 0.406,
+      "onset_strength": 121.8058,
+      "strength_norm": 0.5148,
+      "t": 75.976
+    },
+    {
+      "nearest_downbeat_offset": 0.0,
+      "onset_strength": 38.3768,
+      "strength_norm": 0.1622,
+      "t": 76.382
+    },
+    {
+      "nearest_downbeat_offset": -0.174,
+      "onset_strength": 45.8173,
+      "strength_norm": 0.1936,
+      "t": 76.556
+    },
+    {
+      "nearest_downbeat_offset": -0.395,
+      "onset_strength": 164.6525,
+      "strength_norm": 0.6959,
+      "t": 76.777
+    },
+    {
+      "nearest_downbeat_offset": -0.79,
+      "onset_strength": 218.4151,
+      "strength_norm": 0.9231,
+      "t": 77.172
+    },
+    {
+      "nearest_downbeat_offset": 0.418,
+      "onset_strength": 144.695,
+      "strength_norm": 0.6115,
+      "t": 77.566
+    },
+    {
+      "nearest_downbeat_offset": -0.186,
+      "onset_strength": 223.093,
+      "strength_norm": 0.9429,
+      "t": 78.17
+    },
+    {
+      "nearest_downbeat_offset": -0.592,
+      "onset_strength": 64.1749,
+      "strength_norm": 0.2712,
+      "t": 78.576
+    },
+    {
+      "nearest_downbeat_offset": -0.79,
+      "onset_strength": 217.3447,
+      "strength_norm": 0.9186,
+      "t": 78.774
+    },
+    {
+      "nearest_downbeat_offset": 0.407,
+      "onset_strength": 188.2096,
+      "strength_norm": 0.7955,
+      "t": 79.168
+    },
+    {
+      "nearest_downbeat_offset": -0.011,
+      "onset_strength": 47.8583,
+      "strength_norm": 0.2023,
+      "t": 79.586
+    },
+    {
+      "nearest_downbeat_offset": -0.395,
+      "onset_strength": 184.5393,
+      "strength_norm": 0.7799,
+      "t": 79.97
+    },
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 157.5106,
+      "strength_norm": 0.6657,
+      "t": 80.376
+    },
+    {
+      "nearest_downbeat_offset": 0.406,
+      "onset_strength": 135.2732,
+      "strength_norm": 0.5717,
+      "t": 80.771
+    },
+    {
+      "nearest_downbeat_offset": 0.012,
+      "onset_strength": 42.669,
+      "strength_norm": 0.1803,
+      "t": 81.165
+    },
+    {
+      "nearest_downbeat_offset": -0.197,
+      "onset_strength": 120.0509,
+      "strength_norm": 0.5074,
+      "t": 81.374
+    },
+    {
+      "nearest_downbeat_offset": -0.604,
+      "onset_strength": 42.5012,
+      "strength_norm": 0.1796,
+      "t": 81.781
+    },
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 130.2487,
+      "strength_norm": 0.5505,
+      "t": 81.978
+    },
+    {
+      "nearest_downbeat_offset": 0.406,
+      "onset_strength": 214.7742,
+      "strength_norm": 0.9077,
+      "t": 82.373
+    },
+    {
+      "nearest_downbeat_offset": 0.0,
+      "onset_strength": 60.2043,
+      "strength_norm": 0.2545,
+      "t": 82.779
+    },
+    {
+      "nearest_downbeat_offset": -0.198,
+      "onset_strength": 47.4084,
+      "strength_norm": 0.2004,
+      "t": 82.977
+    },
+    {
+      "nearest_downbeat_offset": -0.395,
+      "onset_strength": 216.8125,
+      "strength_norm": 0.9163,
+      "t": 83.174
+    },
+    {
+      "nearest_downbeat_offset": -0.79,
+      "onset_strength": 169.3496,
+      "strength_norm": 0.7157,
+      "t": 83.569
+    },
+    {
+      "nearest_downbeat_offset": 0.406,
+      "onset_strength": 164.9895,
+      "strength_norm": 0.6973,
+      "t": 83.975
+    },
+    {
+      "nearest_downbeat_offset": 0.0,
+      "onset_strength": 64.4662,
+      "strength_norm": 0.2725,
+      "t": 84.381
+    },
+    {
+      "nearest_downbeat_offset": -0.198,
+      "onset_strength": 124.8851,
+      "strength_norm": 0.5278,
+      "t": 84.579
+    },
+    {
+      "nearest_downbeat_offset": -0.79,
+      "onset_strength": 227.3602,
+      "strength_norm": 0.9609,
+      "t": 85.171
+    },
+    {
+      "nearest_downbeat_offset": 0.417,
+      "onset_strength": 162.033,
+      "strength_norm": 0.6848,
+      "t": 85.566
+    },
+    {
+      "nearest_downbeat_offset": 0.0,
+      "onset_strength": 60.246,
+      "strength_norm": 0.2546,
+      "t": 85.983
+    },
+    {
+      "nearest_downbeat_offset": -0.395,
+      "onset_strength": 138.9563,
+      "strength_norm": 0.5873,
+      "t": 86.378
+    },
+    {
+      "nearest_downbeat_offset": -0.79,
+      "onset_strength": 129.6429,
+      "strength_norm": 0.5479,
+      "t": 86.773
+    },
+    {
+      "nearest_downbeat_offset": 0.406,
+      "onset_strength": 143.6166,
+      "strength_norm": 0.607,
+      "t": 87.168
+    },
+    {
+      "nearest_downbeat_offset": -0.197,
+      "onset_strength": 171.1013,
+      "strength_norm": 0.7232,
+      "t": 87.771
+    },
+    {
+      "nearest_downbeat_offset": -0.43,
+      "onset_strength": 36.028,
+      "strength_norm": 0.1523,
+      "t": 88.004
+    },
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 173.3692,
+      "strength_norm": 0.7327,
+      "t": 88.375
+    },
+    {
+      "nearest_downbeat_offset": 0.406,
+      "onset_strength": 170.9937,
+      "strength_norm": 0.7227,
+      "t": 88.77
+    },
+    {
+      "nearest_downbeat_offset": 0.0,
+      "onset_strength": 29.9229,
+      "strength_norm": 0.1265,
+      "t": 89.176
+    },
+    {
+      "nearest_downbeat_offset": -0.209,
+      "onset_strength": 16.4144,
+      "strength_norm": 0.0694,
+      "t": 89.385
+    },
+    {
+      "nearest_downbeat_offset": -0.035,
+      "onset_strength": 28.8942,
+      "strength_norm": 0.1221,
+      "t": 92.404
+    },
+    {
+      "nearest_downbeat_offset": -0.406,
+      "onset_strength": 198.3802,
+      "strength_norm": 0.8384,
+      "t": 92.775
+    },
+    {
+      "nearest_downbeat_offset": -0.801,
+      "onset_strength": 169.3772,
+      "strength_norm": 0.7159,
+      "t": 93.17
+    },
+    {
+      "nearest_downbeat_offset": 0.407,
+      "onset_strength": 138.0396,
+      "strength_norm": 0.5834,
+      "t": 93.576
+    },
+    {
+      "nearest_downbeat_offset": -0.186,
+      "onset_strength": 158.7416,
+      "strength_norm": 0.6709,
+      "t": 94.169
+    },
+    {
+      "nearest_downbeat_offset": -0.592,
+      "onset_strength": 44.2701,
+      "strength_norm": 0.1871,
+      "t": 94.575
+    },
+    {
+      "nearest_downbeat_offset": -0.789,
+      "onset_strength": 191.0152,
+      "strength_norm": 0.8073,
+      "t": 94.772
+    },
+    {
+      "nearest_downbeat_offset": 0.406,
+      "onset_strength": 120.4537,
+      "strength_norm": 0.5091,
+      "t": 95.167
+    },
+    {
+      "nearest_downbeat_offset": -0.012,
+      "onset_strength": 34.094,
+      "strength_norm": 0.1441,
+      "t": 95.585
+    },
+    {
+      "nearest_downbeat_offset": -0.395,
+      "onset_strength": 117.0952,
+      "strength_norm": 0.4949,
+      "t": 95.968
+    }
+  ],
+  "source_binding": {
+    "ffprobe": {
+      "format": {
+        "duration": "214.400042"
+      },
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "bits_per_sample": 24,
+          "channels": 2,
+          "codec_name": "pcm_s24le",
+          "sample_rate": "48000"
+        }
+      ]
+    },
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/private-real-media-v01/bound-inputs/AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "window_s": [
+    72,
+    96
+  ]
+}

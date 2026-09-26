@@ -1,0 +1,239 @@
+{
+  "schema": "AKI_BEAT_RETRIEVAL_MANIFEST_V01",
+  "request_id": "beat-detector + Aakhri Ishq analysis retrieval",
+  "generated_at_utc": "2026-09-26",
+  "gates": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "detector_run_on_master2": {
+    "performed": false,
+    "reason": "Access boundary: exact MASTER 2 bytes are NOT available inside the bash sandbox. AAKHRI ISHQ MASTER 2.wav lives on Google Drive (id 10zkJH9QvMDNcjVb00JVE6PEm4UOwOUZn, 61,749,398 bytes) and at an iCloud path (~/Library/Mobile Documents/com~apple~CloudDocs/Aakhri Ishq/AAKHRI ISHQ MASTER 2.wav); neither is under a sandbox mount, and 61.7MB exceeds the connector base64 crossing limit (workspace shell has no outbound network). Per instructions, the detector was NOT run.",
+    "would_run_iff": "detector bytes recovered (TRUE) AND exact MASTER 2 bytes safely in-sandbox (FALSE)"
+  },
+  "authoritative_target": {
+    "name": "AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "duration_s": 214.4000417,
+    "duration_ms_recorded": 214400,
+    "format_recorded": "48kHz stereo 24-bit PCM",
+    "drive_file_id": "10zkJH9QvMDNcjVb00JVE6PEm4UOwOUZn",
+    "drive_bytes": 61749398
+  },
+  "recovered_detector": {
+    "location_source_of_record": "outputs/beat-service/ (copied to AKI_BEAT_RECOVERY/detector/)",
+    "app_version": "v19-hostasset (APP_VERSION in app.py)",
+    "commit": "NOT_RECORDED (no VCS commit hash present in files)",
+    "files": {
+      "app.py": {
+        "sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb",
+        "bytes": 96083
+      },
+      "clip_fx.py": {
+        "sha256": "04fa93aff2847eaa9ae7b8542192ca37892c46b6b149c5235360a5c14abe3e97",
+        "bytes": 14834
+      },
+      "requirements.txt": {
+        "sha256": "fb8be88c19245f9e21faa198a7f88426a39b555dddd848c03b884a9610834653",
+        "bytes": 156
+      },
+      "Dockerfile": {
+        "sha256": "8b6823f683f8cb85b70cda6df570155c353232bef313601a596addfa7caaff16",
+        "bytes": 1358
+      }
+    },
+    "library": "pure NumPy FFT spectral-flux (NO librosa); ffmpeg used only to decode audio to mono f32le",
+    "detect_hits": {
+      "impl": "clip_fx.py FX.detect_hits / detect_hits_detailed via _band_onsets",
+      "sr": 22050,
+      "nfft": 1024,
+      "hop": 256,
+      "frame_rate_hz": 86.13,
+      "kick_band_hz": [
+        30.0,
+        140.0
+      ],
+      "kick_min_gap_s": 0.14,
+      "kick_thresh_k": 1.5,
+      "snare_band_hz": [
+        1600.0,
+        6500.0
+      ],
+      "snare_min_gap_s": 0.1,
+      "snare_thresh_k": 1.8,
+      "threshold": "adaptive local_mean + k*std over ~0.4s window; local-max peak picking; FLOOR 0.05 in detailed",
+      "outputs": "{kick:[t|{t,onset_strength(raw spectral flux),strength_norm(0..1)}], snare:[...], duration}",
+      "class_semantics": "UNCERTAIN — 'kick'/'snare' are LOW-band vs MID/HIGH-band spectral-flux onset detectors, NOT trained instrument classifiers"
+    },
+    "beats_endpoint": {
+      "impl": "app.py detect_beats + /beats",
+      "method": "spectral-flux onset -> autocorrelation best-lag -> tempo=60*fps/best_lag -> dynamic-programming beat tracking (cumscore)",
+      "downbeats": "downbeats = bt[::every] (default every=4) — EVERY-Nth TRACKED BEAT, NOT true bar-phase / downbeat estimation",
+      "response": "{duration,bpm,num_beats,beats[],downbeats[],every}"
+    },
+    "hits_endpoint": {
+      "impl": "app.py /hits -> FX.detect_hits_detailed + nearest_downbeat_offset (offset to every-Nth beat)",
+      "note": "analysis-only, mutates nothing"
+    }
+  },
+  "recovered_analyses": {
+    "PRIMARY_bound_to_master2": {
+      "file": "drive/KICK_SNARE_MIXED_MASTER_EVENTS_V01.json",
+      "sha256": "24527d1a4fef62ed33bcb03d47c90d77e2106f1e4c559f8b6003ddc3ee98a7ff",
+      "bytes": 133671,
+      "schema": "KICK_SNARE_MIXED_MASTER_HEURISTIC_V01",
+      "binds_to_master2": true,
+      "binding_evidence": "input.sha256==670e5ddf... , duration_ms 214400, sample_rate 48000, 24-bit, 2ch; SOURCE_AND_STEM_AUDIT local_source_match=GREEN_EXACT_SHA",
+      "detector_used": "NOT the beat-service detect_hits — a newer robust-z onset+band-ratio heuristic (per EXISTING_DETECTOR_AUDIT: p0e4/multitake/creative_revision.py, 20ms RMS family)",
+      "params": {
+        "candidate_robust_z": 2.4,
+        "high_confidence_margin": 0.28,
+        "medium_confidence_margin": 0.12,
+        "hop_ms": 10,
+        "window_ms": 42.667,
+        "minimum_gap_ms": 120,
+        "broad_band_hz": [
+          35,
+          9000
+        ],
+        "kick_band_hz": [
+          35,
+          180
+        ],
+        "snare_band_hz": [
+          700,
+          6000
+        ]
+      },
+      "events": {
+        "count": 375,
+        "classification": {
+          "snare": 367,
+          "kick": 5,
+          "uncertain": 3
+        },
+        "confidence": {
+          "high": 352,
+          "medium": 20,
+          "low": 3
+        },
+        "per_event_fields": [
+          "time_ms",
+          "frame_30fps",
+          "classification",
+          "confidence",
+          "confidence_score",
+          "broadband_robust_z",
+          "low_band_robust_z",
+          "snare_band_robust_z",
+          "kick_ratio",
+          "snare_ratio",
+          "source"
+        ],
+        "no_arrays_for": [
+          "beats",
+          "bpm/tempo map",
+          "downbeats",
+          "generic onset (separate)"
+        ]
+      },
+      "coverage": {
+        "first_event_ms": 3190,
+        "last_event_ms": 207540,
+        "master_ms": 214400,
+        "uncovered_tail_ms": 6860,
+        "note": "events span 3.19s..207.54s; stops ~6.9s before end. Only 5 kick events (1 near 3.2s + cluster in final ~20s); snare 31.9s..207.4s"
+      },
+      "semantic_limitations": [
+        "Heuristic classification from a mastered stereo MIX, not isolated drum stems (source=MIXED_MASTER_ONLY)",
+        "Vocals/bass/cymbals/arrangement transients can cause false positives or class ambiguity",
+        "confidence is method-internal, uncalibrated, NOT a probability of correctness",
+        "no beat/tempo/downbeat semantics present",
+        "no event implies an effect; no creative mapping selected"
+      ]
+    },
+    "TAIL_coverage": {
+      "file": "drive/GEMINI_TAIL_COVERAGE_RECEIPT_V01.json",
+      "sha256": "95217a65d680586d6b3d09c5f71bfb387a9efc9ae98f96d7fec4cf162e006a1e",
+      "covers": "03:08.000-03:34.4000417 of master (188.0s..214.4s) — the tail the primary events file did not cover",
+      "full_tail_reviewed": true,
+      "instrument_identity": "UNKNOWN_WITHOUT_STEMS",
+      "parent_master_sha256": "670e5ddf...",
+      "normalized_result_ref": "GEMINI_TAIL_NORMALIZED_RESULT_V01.json (sha 22b4f5b4...) — NOT pulled",
+      "status": "COMPLETE_WITH_FORMAT_REPAIR"
+    },
+    "DETECTOR_AUDIT": {
+      "file": "drive/EXISTING_DETECTOR_AUDIT_V01.json",
+      "sha256": "c1ed3c3f1529ddd6180a0e9443c63925835db9092f9f6d5d840934e3e24750c3",
+      "status": "AUDITED_NOT_REUSABLE_AS_PROVEN_LIVE_CLASSIFIER",
+      "detector_source_located": false,
+      "deployed_parity_proven": false,
+      "live_consumption_proven": false,
+      "conclusion": "Do not reuse historical detect_hits or current RMS events as verified kick/snare triggers"
+    },
+    "SOURCE_STEM_AUDIT": {
+      "file": "drive/SOURCE_AND_STEM_AUDIT_V01.json",
+      "sha256": "6fad538c64dc8603b56e388233e806f6386f4df894515f5d1e09c8100a499a27",
+      "local_source_match": "GREEN_EXACT_SHA",
+      "drum_stem_verified": false,
+      "other_files_observed": [
+        "AAKHRI ISHQ IT T75.wav",
+        "AAKHRI ISHQ MASTER 1.wav",
+        "AAKHRI ISHQ VOCALS.wav",
+        "AAKHRI ISHQ 1.wav"
+      ],
+      "analysis_bound_only_to": "MASTER 2"
+    }
+  },
+  "historical_mismatch": {
+    "AKI_SMART_CUES_V02/V03 (outputs/)": {
+      "status": "HISTORICAL_MISMATCH",
+      "reason": "bound to source 'AKI_SOURCE_0902_V01.mov', duration 214.552s, bpm 152 (stated). NOT MASTER 2 (214.4s), and these are Gemini/ChatGPT CREATIVE cues (zoom/flash), NOT beat-detector output. No beats/kick/snare/onset arrays."
+    },
+    "beat_service_detect_hits_on_AKI": {
+      "status": "NO_PERSISTED_OUTPUT_FOUND",
+      "reason": "No AKI beat/hit JSON produced by beat-service detect_hits/ /beats was found bound to MASTER 2 (or any AKI source). The beat-service detector has recovered BYTES but no recovered AKI RESULT."
+    }
+  },
+  "documented_service_location": {
+    "code": "outputs/beat-service/ (app.py v19-hostasset, clip_fx.py, Dockerfile, requirements.txt)",
+    "deploy_artifacts": "outputs/beat-service-clip-deploy-v19.zip (+ v1..v19 history)",
+    "runtime_base_url": "held in Make datastore 169690 {base_url, api_key} — NOT read; deployed instance reachability/byte-parity UNPROVEN",
+    "auth": "X-API-Key header == env BEAT_API_KEY (value not exposed)",
+    "output_sink": "public GCS bucket (BUCKET_NAME / unchained-nitin-media)"
+  },
+  "safe_reuse_interface": {
+    "note": "ANALYSIS-ONLY endpoints; do NOT deploy/modify. Not executed in this task.",
+    "/beats": "POST {audio_url|file, every?} -> {duration,bpm,num_beats,beats[],downbeats(every-Nth)[]}",
+    "/hits": "POST {audio_url|video_url|url, every?} -> kick/snare hits with onset_strength + nearest_downbeat_offset (analysis-only)",
+    "local_offline": "python3 -c 'import clip_fx,json; print(json.dumps(clip_fx.detect_hits_detailed(\"<local.wav>\")))' inside outputs/beat-service (needs ffmpeg+numpy) — pure function, no network/GCS",
+    "caution": "kick/snare are band-onset classes (uncertain); /beats downbeats are every-Nth tracked beats, not bar-phase"
+  },
+  "other_drive_files_referenced_not_pulled": [
+    {
+      "title": "KICK_SNARE_LISTENING_SAMPLE_MAP_V01.json",
+      "id": "1nMZGS8R2LF6RLfmg7hA-bQgOtoAVgtvl"
+    },
+    {
+      "title": "ORCHESTRATOR_AUDIT_AND_ANALYSIS_FIRST_REQUEST.json",
+      "id": "1rdovSdvRN0h7P-SngU4MJXJojKiRQK5P"
+    },
+    {
+      "title": "TAIL_EXTRACTION_PROVENANCE_V01.json",
+      "id": "1kFbSyulY_cJxQe0xjfxBm0Ggv7E25Z75"
+    },
+    {
+      "title": "GEMINI_TAIL_NORMALIZED_RESULT_V01.json (sha 22b4f5b4...)",
+      "id": "referenced_in_tail_receipt"
+    }
+  ],
+  "actual_tools_used": [
+    "make/local grep+sed over outputs/beat-service (detector bytes)",
+    "Grep over ~/Downloads (found handover markdown w/ MASTER 2 path+SHA)",
+    "gdrive.search_files + download_file_content (audit + events JSON)",
+    "subagent to move/decode/persist 133KB events file",
+    "workspace.bash sha256 + json probes"
+  ],
+  "secrets_exposed": false
+}

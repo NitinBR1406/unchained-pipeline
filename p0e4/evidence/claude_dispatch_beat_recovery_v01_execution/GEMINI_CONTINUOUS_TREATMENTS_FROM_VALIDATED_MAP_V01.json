@@ -1,0 +1,437 @@
+{
+  "authoritative_source_binding": {
+    "detector_metadata": {
+      "bpm_estimate": 151.999081,
+      "coverage_seconds": 214.400045,
+      "detector_version": "v19-hostasset",
+      "high_band_events_total": 586,
+      "low_band_events_total": 793,
+      "tracked_beats_total": 518,
+      "window_analyzed": "72.000-96.000",
+      "window_beat_grid_count": 60
+    },
+    "duration_seconds": 214.400042,
+    "filename": "AAKHRI ISHQ MASTER 2.wav",
+    "format": "PCM 24-bit 48 kHz stereo",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "color_pipeline_version": "V06_PROVISIONAL",
+  "detector_limitations": [
+    "downbeats_are_every_fourth_tracked_beat_not_ground_truth_bar_phase",
+    "kick_band_and_snare_band_represent_spectral_energy_slices_not_isolated_acoustic_instruments",
+    "onset_strength_is_relative_spectral_flux_not_probabilistic_detection_confidence",
+    "dense_event_overlap_requires_selective_decimation_to_prevent_visual_fatigue",
+    "detector_lacks_lyric_semantic_awareness_and_vocal_formant_tracking"
+  ],
+  "effects_default_state": "OFF",
+  "project": "UNCHAINED NITIN",
+  "provenance": {
+    "audio_bytes_uploaded_this_turn": false,
+    "basis": "exact source binding and detector excerpt values supplied; prior matched excerpt study referenced",
+    "conversation_title": "UNCHAINED NITIN Rhythm Review Treatments",
+    "retrieval": "UI transcript normalized to JSON; content preserved",
+    "surface": "Google Gemini authenticated local Chrome"
+  },
+  "qc_checks": [
+    "VERIFY_NO_EFFECT_TRIGGERED_DURING_CRITICAL_LIP_SYNC_MOMENTS",
+    "VERIFY_MINIMUM_RECOVERY_WINDOW_BETWEEN_CAMERA_SHAKES_GE_200MS",
+    "VERIFY_FRAME_ACCURACY_OF_CUTS_AGAINST_AUDIO_TIMELINE_TOLERANCE_LE_1_FRAME",
+    "VERIFY_ZOOM_SETTLING_DOES_NOT_INFLICT_SACCADIC_MASKING_ON_SUNG_VOWELS",
+    "VERIFY_V06_LUT_INSPECTION_FOR_BLACK_CRUSH_OR_HIGHLIGHT_CLIPPING_UNDER_ZOOM_RESIZE"
+  ],
+  "render_status": "NONE_PENDING_JOINT_APPROVAL",
+  "review_status": "PROVISIONAL_EVALUATION",
+  "reviewer": "independent_gemini_creative_rhythm_reviewer",
+  "rules_to_confirm_with_nitin": [
+    "Confirm baseline mapping polarity: evaluate kick_band->shake vs kick_band->zoom vs cut-only per musical phrase.",
+    "Confirm maximum sustained cut frequency to protect vocal lip-sync and emotional legibility.",
+    "Confirm whether downbeat emphasis requires manual bar-1 alignment or can float on the detected 4-beat cycle.",
+    "Confirm acceptable shake displacement amplitude thresholds when facial close-ups are active.",
+    "Confirm provisional status of V06 grading prior to final visual effect compositing."
+  ],
+  "treatments": {
+    "treatment_A_CONTROLLED_GROOVE": {
+      "concept": "Prioritizes phrase-level stability, rhythmic cadence, and facial legibility through measured cuts and low-amplitude focal adjustments, preserving expressive continuity over sheer kinetic impact.",
+      "hypotheses_with_uncertainty": {
+        "perceptual_fatigue": "Extended recovery spaces between accents could reduce visual fatigue over the 24-second window, though individual viewer tolerance to rhythm cuts varies widely.",
+        "viewer_engagement": "Viewer attention may remain grounded on the vocal narrative rather than camera mechanics, though measurable retention changes cannot be causally attributed without controlled A/B audience testing."
+      },
+      "timeline_events": [
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "beat_grid_boundary",
+            "matched_detector_event": "excerpt_entry_beat",
+            "onset_strength": 0
+          },
+          "intensity": 0,
+          "recovery_ms": 0,
+          "timecode_s": 72.0,
+          "type": "hold",
+          "vocal_expression_protection": "FULL_STABILITY_OPENING_FACE_SHOT"
+        },
+        {
+          "attack_ms": 40,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "73.189:0.657",
+            "onset_strength": 0.657
+          },
+          "intensity": 0.25,
+          "recovery_ms": 220,
+          "timecode_s": 73.189,
+          "type": "reframe",
+          "vocal_expression_protection": "SMOOTH_PUSH_MAINTAINS_EYE_AXIS"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "74.977:0.731",
+            "onset_strength": 0.731
+          },
+          "intensity": 0.7,
+          "recovery_ms": 0,
+          "timecode_s": 74.977,
+          "type": "cut",
+          "vocal_expression_protection": "MATCH_ON_ACTION_MID_PHRASE"
+        },
+        {
+          "attack_ms": 30,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "77.172:0.923",
+            "onset_strength": 0.923
+          },
+          "intensity": 0.2,
+          "recovery_ms": 180,
+          "timecode_s": 77.172,
+          "type": "zoom",
+          "vocal_expression_protection": "SUBTLE_SCALE_PULSE_NO_FACIAL_CROP"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "78.785:0.645",
+            "onset_strength": 0.645
+          },
+          "intensity": 0.65,
+          "recovery_ms": 0,
+          "timecode_s": 78.785,
+          "type": "take_switch",
+          "vocal_expression_protection": "PRESERVES_VOWEL_ELONGATION"
+        },
+        {
+          "attack_ms": 50,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "81.978:0.535",
+            "onset_strength": 0.535
+          },
+          "intensity": 0.3,
+          "recovery_ms": 250,
+          "timecode_s": 81.978,
+          "type": "reframe",
+          "vocal_expression_protection": "MAINTAINS_HEADROOM_DURING_HEAD_GESTURE"
+        },
+        {
+          "attack_ms": 35,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "83.174:0.916",
+            "onset_strength": 0.916
+          },
+          "intensity": 0.25,
+          "recovery_ms": 190,
+          "timecode_s": 83.174,
+          "type": "zoom",
+          "vocal_expression_protection": "MICRO_ZOOM_SETTLES_BEFORE_NEXT_WORD"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "85.171:0.961",
+            "onset_strength": 0.961
+          },
+          "intensity": 0.75,
+          "recovery_ms": 0,
+          "timecode_s": 85.171,
+          "type": "cut",
+          "vocal_expression_protection": "CLEAN_ANGLE_SHIFT_AT_VOCAL_REST"
+        },
+        {
+          "attack_ms": 45,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "88.990:0.657",
+            "onset_strength": 0.657
+          },
+          "intensity": 0.35,
+          "recovery_ms": 260,
+          "timecode_s": 88.99,
+          "type": "reframe",
+          "vocal_expression_protection": "GENTLE_TRACKING_ON_VOCAL_RISE"
+        },
+        {
+          "attack_ms": 30,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "90.778:0.868",
+            "onset_strength": 0.868
+          },
+          "intensity": 0.3,
+          "recovery_ms": 200,
+          "timecode_s": 90.778,
+          "type": "zoom",
+          "vocal_expression_protection": "TIGHTENS_INTIMACY_ON_EXTENDED_SYLLABLE"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "92.775:1.000_PEAK_COINCIDENT",
+            "onset_strength": 1.0
+          },
+          "intensity": 0.8,
+          "recovery_ms": 0,
+          "timecode_s": 92.775,
+          "type": "cut",
+          "vocal_expression_protection": "DYNAMIC_RECENTER_ON_PHRASE_CLIMAX"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "94.772:0.807",
+            "onset_strength": 0.807
+          },
+          "intensity": 0,
+          "recovery_ms": 1228,
+          "timecode_s": 94.772,
+          "type": "hold",
+          "vocal_expression_protection": "STABILIZED_OUTRO_OF_WINDOW_FOR_EMOTIVE_DECAY"
+        }
+      ]
+    },
+    "treatment_B_STRONGER_PERFORMANCE_ENERGY": {
+      "concept": "Emphasizes raw kinetic synchronization across interlocking high- and low-band transient clusters, using tactile micro-shakes and aggressive angle intercuts while bounding displacement to keep mouth position clear.",
+      "hypotheses_with_uncertainty": {
+        "perceptual_fatigue": "Frequent kinetic impulses risk visual clutter if viewer focus is divided; requires strict verification that camera shakes remain below nausea and disorientation limits.",
+        "viewer_engagement": "Higher sync density could produce stronger immediate perceptual punch for music-video contexts, but potential effects on completion rates cannot be confirmed without comparative runtime telemetry."
+      },
+      "timeline_events": [
+        {
+          "attack_ms": 20,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "72.771:0.912",
+            "onset_strength": 0.912
+          },
+          "intensity": 0.45,
+          "recovery_ms": 140,
+          "timecode_s": 72.771,
+          "type": "zoom",
+          "vocal_expression_protection": "FAST_SNAP_IN_BOUNDED_TO_NOSE_TIP_ANCHOR"
+        },
+        {
+          "attack_ms": 15,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "73.189:0.657",
+            "onset_strength": 0.657
+          },
+          "intensity": 0.35,
+          "recovery_ms": 160,
+          "timecode_s": 73.189,
+          "type": "shake",
+          "vocal_expression_protection": "TRANSLATIONAL_XY_ONLY_NO_ROTATION_DURING_CONSONANT"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "74.977:0.731",
+            "onset_strength": 0.731
+          },
+          "intensity": 0.85,
+          "recovery_ms": 0,
+          "timecode_s": 74.977,
+          "type": "take_switch",
+          "vocal_expression_protection": "HARD_CUT_TO_PERFORMANCE_PROFILE"
+        },
+        {
+          "attack_ms": 25,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "77.172:0.923",
+            "onset_strength": 0.923
+          },
+          "intensity": 0.4,
+          "recovery_ms": 130,
+          "timecode_s": 77.172,
+          "type": "zoom",
+          "vocal_expression_protection": "PUNCH_IN_ALIGNED_WITH_PERCUSSIVE_ACCENT"
+        },
+        {
+          "attack_ms": 10,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "78.170:0.943_AND_LOW_78.182:0.535",
+            "onset_strength": 0.943
+          },
+          "intensity": 0.5,
+          "recovery_ms": 150,
+          "timecode_s": 78.17,
+          "type": "shake",
+          "vocal_expression_protection": "ISOLATE_SHAKE_TO_BACKGROUND_KEEP_FACE_STABLE"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "78.785:0.645_AND_HIGH_78.774:0.919",
+            "onset_strength": 0.645
+          },
+          "intensity": 0.8,
+          "recovery_ms": 0,
+          "timecode_s": 78.785,
+          "type": "cut",
+          "vocal_expression_protection": "STRICT_LIP_SYNC_CROSS_PHASE_MATCH"
+        },
+        {
+          "attack_ms": 25,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "81.386:0.526",
+            "onset_strength": 0.526
+          },
+          "intensity": 0.35,
+          "recovery_ms": 160,
+          "timecode_s": 81.386,
+          "type": "zoom",
+          "vocal_expression_protection": "RAPID_STEP_ZOOM_RETRACTION"
+        },
+        {
+          "attack_ms": 12,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "82.373:0.908",
+            "onset_strength": 0.908
+          },
+          "intensity": 0.4,
+          "recovery_ms": 140,
+          "timecode_s": 82.373,
+          "type": "shake",
+          "vocal_expression_protection": "HIGH_FREQUENCY_JITTER_AVOIDS_LIP_BLUR"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "83.174:0.916",
+            "onset_strength": 0.916
+          },
+          "intensity": 0.8,
+          "recovery_ms": 0,
+          "timecode_s": 83.174,
+          "type": "take_switch",
+          "vocal_expression_protection": "DYNAMIC_RE-ANGLE_TO_WIDE_ACTION"
+        },
+        {
+          "attack_ms": 10,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "85.171:0.961_PEAK_HIGH",
+            "onset_strength": 0.961
+          },
+          "intensity": 0.55,
+          "recovery_ms": 180,
+          "timecode_s": 85.171,
+          "type": "shake",
+          "vocal_expression_protection": "DECAY_RECOVERY_PROTECTS_NEXT_VOCAL_ENTRY"
+        },
+        {
+          "attack_ms": 20,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "85.983:0.651",
+            "onset_strength": 0.651
+          },
+          "intensity": 0.4,
+          "recovery_ms": 150,
+          "timecode_s": 85.983,
+          "type": "zoom",
+          "vocal_expression_protection": "EXPONENT_PULLBACK_RESTORING_WIDE_PERSPECTIVE"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "88.375:0.733",
+            "onset_strength": 0.733
+          },
+          "intensity": 0.75,
+          "recovery_ms": 0,
+          "timecode_s": 88.375,
+          "type": "cut",
+          "vocal_expression_protection": "JUMP_CUT_ON_PERCUSSION_SNARL"
+        },
+        {
+          "attack_ms": 15,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "90.778:0.868",
+            "onset_strength": 0.868
+          },
+          "intensity": 0.5,
+          "recovery_ms": 170,
+          "timecode_s": 90.778,
+          "type": "shake",
+          "vocal_expression_protection": "BOUNDED_AMPLITUDE_MAINTAINING_EYE_CONTACT"
+        },
+        {
+          "attack_ms": 20,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "91.591:0.974",
+            "onset_strength": 0.974
+          },
+          "intensity": 0.5,
+          "recovery_ms": 150,
+          "timecode_s": 91.591,
+          "type": "zoom",
+          "vocal_expression_protection": "INTENSE_SNAP_TIGHTENING_TO_CLIMAX"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "low_band",
+            "matched_detector_event": "92.775:1.000_DUAL_BAND_MAXIMA",
+            "onset_strength": 1.0
+          },
+          "intensity": 0.95,
+          "recovery_ms": 0,
+          "timecode_s": 92.775,
+          "type": "take_switch",
+          "vocal_expression_protection": "SWITCH_TO_HERO_CLOSEUP_AT_PEAK_EMISSION"
+        },
+        {
+          "attack_ms": 0,
+          "detector_evidence": {
+            "band_class": "high_band",
+            "matched_detector_event": "94.772:0.807",
+            "onset_strength": 0.807
+          },
+          "intensity": 0,
+          "recovery_ms": 1228,
+          "timecode_s": 94.772,
+          "type": "hold",
+          "vocal_expression_protection": "ZERO_MOTION_FREEZE_ON_LAST_BREATH_OF_WINDOW"
+        }
+      ]
+    }
+  },
+  "winner_selected": false
+}

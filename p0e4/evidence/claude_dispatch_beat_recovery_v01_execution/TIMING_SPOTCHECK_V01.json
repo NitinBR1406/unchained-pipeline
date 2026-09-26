@@ -1,0 +1,240 @@
+{
+  "beat_interval_stats_s": {
+    "mean": 0.399095,
+    "median": 0.395,
+    "p05": 0.394,
+    "p95": 0.407
+  },
+  "conclusion": "TIMINGS_ARE_REPRODUCIBLE_FROM_EXACT_BYTES; INSTRUMENT_IDENTITIES_REMAIN_UNPROVEN; EVENT DENSITY REQUIRES POLICY FILTERING",
+  "listening_status": "GEMINI_PREVIOUS_MATCHED_EXCERPT_STUDY_AVAILABLE; CODEX_DID_NOT_CLAIM_HUMAN_LISTENING",
+  "method": "Decoded exact MASTER 2 mono float32 at 48 kHz; 30 ms RMS/peak proxy around selected detector events versus 60-90 ms pre-event baseline. Proxy is not calibrated listening or native Resolve beat truth.",
+  "resolve_native_status": "NO_PERSISTED_NATIVE_RESOLVE_BEAT_LINE_OR_API_EXPORT_AVAILABLE_FOR_MACHINE_COMPARISON",
+  "schema": "CLAUDE_EXISTING_DETECTOR_TIMING_SPOTCHECK_V01",
+  "source_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "spotchecks": [
+    {
+      "nearest_high_band": {
+        "delta_ms": -11.0,
+        "strength_norm": 0.1983,
+        "t": 73.178
+      },
+      "nearest_low_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.6575,
+        "t": 73.189
+      },
+      "time_s": 73.189,
+      "waveform_proxy": {
+        "peak_at": 0.177135,
+        "rms_at": 0.065273,
+        "rms_pre_60_90ms": 0.100634,
+        "rms_ratio_at_to_pre": 0.649,
+        "window_ms": 30
+      }
+    },
+    {
+      "nearest_high_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.5504,
+        "t": 74.977
+      },
+      "nearest_low_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.7312,
+        "t": 74.977
+      },
+      "time_s": 74.977,
+      "waveform_proxy": {
+        "peak_at": 1.098875,
+        "rms_at": 0.321864,
+        "rms_pre_60_90ms": 0.298685,
+        "rms_ratio_at_to_pre": 1.078,
+        "window_ms": 30
+      }
+    },
+    {
+      "nearest_high_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.9231,
+        "t": 77.172
+      },
+      "nearest_low_band": {
+        "delta_ms": 11.0,
+        "strength_norm": 0.509,
+        "t": 77.183
+      },
+      "time_s": 77.172,
+      "waveform_proxy": {
+        "peak_at": 0.59129,
+        "rms_at": 0.235138,
+        "rms_pre_60_90ms": 0.255669,
+        "rms_ratio_at_to_pre": 0.92,
+        "window_ms": 30
+      }
+    },
+    {
+      "nearest_high_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.9429,
+        "t": 78.17
+      },
+      "nearest_low_band": {
+        "delta_ms": 12.0,
+        "strength_norm": 0.5346,
+        "t": 78.182
+      },
+      "time_s": 78.17,
+      "waveform_proxy": {
+        "peak_at": 0.37367,
+        "rms_at": 0.159246,
+        "rms_pre_60_90ms": 0.170983,
+        "rms_ratio_at_to_pre": 0.931,
+        "window_ms": 30
+      }
+    },
+    {
+      "nearest_high_band": {
+        "delta_ms": -11.0,
+        "strength_norm": 0.9186,
+        "t": 78.774
+      },
+      "nearest_low_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.6449,
+        "t": 78.785
+      },
+      "time_s": 78.785,
+      "waveform_proxy": {
+        "peak_at": 0.277207,
+        "rms_at": 0.102021,
+        "rms_pre_60_90ms": 0.120743,
+        "rms_ratio_at_to_pre": 0.845,
+        "window_ms": 30
+      }
+    },
+    {
+      "nearest_high_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.9163,
+        "t": 83.174
+      },
+      "nearest_low_band": {
+        "delta_ms": -47.0,
+        "strength_norm": 0.2837,
+        "t": 83.127
+      },
+      "time_s": 83.174,
+      "waveform_proxy": {
+        "peak_at": 0.673162,
+        "rms_at": 0.283838,
+        "rms_pre_60_90ms": 0.298255,
+        "rms_ratio_at_to_pre": 0.952,
+        "window_ms": 30
+      }
+    },
+    {
+      "nearest_high_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.9609,
+        "t": 85.171
+      },
+      "nearest_low_band": {
+        "delta_ms": 11.0,
+        "strength_norm": 0.4615,
+        "t": 85.182
+      },
+      "time_s": 85.171,
+      "waveform_proxy": {
+        "peak_at": 0.504943,
+        "rms_at": 0.230506,
+        "rms_pre_60_90ms": 0.248118,
+        "rms_ratio_at_to_pre": 0.929,
+        "window_ms": 30
+      }
+    },
+    {
+      "nearest_high_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.2546,
+        "t": 85.983
+      },
+      "nearest_low_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.6514,
+        "t": 85.983
+      },
+      "time_s": 85.983,
+      "waveform_proxy": {
+        "peak_at": 0.303595,
+        "rms_at": 0.076775,
+        "rms_pre_60_90ms": 0.098419,
+        "rms_ratio_at_to_pre": 0.78,
+        "window_ms": 30
+      }
+    },
+    {
+      "nearest_high_band": {
+        "delta_ms": -1393.0,
+        "strength_norm": 0.0694,
+        "t": 89.385
+      },
+      "nearest_low_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.8683,
+        "t": 90.778
+      },
+      "time_s": 90.778,
+      "waveform_proxy": {
+        "peak_at": 0.04542,
+        "rms_at": 0.017983,
+        "rms_pre_60_90ms": 0.018121,
+        "rms_ratio_at_to_pre": 0.992,
+        "window_ms": 30
+      }
+    },
+    {
+      "nearest_high_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.8384,
+        "t": 92.775
+      },
+      "nearest_low_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 1.0,
+        "t": 92.775
+      },
+      "time_s": 92.775,
+      "waveform_proxy": {
+        "peak_at": 0.00524,
+        "rms_at": 0.001495,
+        "rms_pre_60_90ms": 0.00427,
+        "rms_ratio_at_to_pre": 0.35,
+        "window_ms": 30
+      }
+    },
+    {
+      "nearest_high_band": {
+        "delta_ms": 0.0,
+        "strength_norm": 0.8073,
+        "t": 94.772
+      },
+      "nearest_low_band": {
+        "delta_ms": 12.0,
+        "strength_norm": 0.4605,
+        "t": 94.784
+      },
+      "time_s": 94.772,
+      "waveform_proxy": {
+        "peak_at": 0.612306,
+        "rms_at": 0.22962,
+        "rms_pre_60_90ms": 0.278795,
+        "rms_ratio_at_to_pre": 0.824,
+        "window_ms": 30
+      }
+    }
+  ],
+  "window_s": [
+    72,
+    96
+  ]
+}
