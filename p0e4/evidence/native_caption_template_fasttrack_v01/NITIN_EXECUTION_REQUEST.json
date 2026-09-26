@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "request_id": "NITIN_NATIVE_CAPTION_TEMPLATE_FASTTRACK_V01",
+  "recorded_local_date": "2026-09-26",
+  "user_quote": "Perfect let’s go!",
+  "authorization_context": "User accepted the preceding proposal to adapt built-in Resolve text templates to Unchained Nitin and compare them on one existing short segment, independently of beat-template development.",
+  "status": "AUTHORIZED_PRIVATE_CAPTION_PREVIEW_PENDING_LOCAL_EXECUTION",
+  "execution_started": false,
+  "baseline": {
+    "inspected_repository_head": "6f0e96d",
+    "master_state_pointer": "p0e4/MASTER_STATE_LATEST.json",
+    "pointer_version_observed": "V16.19 / 45",
+    "integrity_note": "Existing ledger/pointer integrity hold must not be bypassed. Read newer evidence as well as pointer; do not assert pointer is a complete current status.",
+    "template_code": "p0e4/resolve/performance_template.py",
+    "prior_renderer": "p0e4/resolve/aakhri_v06_caption_beat_preview_v01.py",
+    "related_request": "p0e4/evidence/reusable_resolve_template_v01/NITIN_TEMPLATE_DEVELOPMENT_REQUEST.json"
+  },
+  "goal": "Deliver a small reusable native caption kit and one consolidated private comparison quickly, without waiting for lyric transcription or the continuous-rhythm effect-policy decision.",
+  "scope": [
+    "Inspect installed Resolve version and actual built-in Titles / Animated templates on the local Mac. Inventory exact names and configurable controls; do not claim a specific native preset exists without inspection.",
+    "Reuse the existing template, source binding, edit plan, V06 color preset and HLG render helpers. Work in a disposable project copy, preserving the original project and all source bytes.",
+    "Use the existing 24-second MASTER 2 window 72–96 seconds if its verified source/edit binding remains valid. Otherwise select one bounded existing review excerpt and document why. Do not render a full master.",
+    "Reuse an unchanged text-free base where possible; compare a reference plus three caption treatments on identical footage, audio, crop and grade. Do not add, retime or select new camera-motion/beat effects.",
+    "Prefer native Fusion title presets. Use ordinary Text+ for short original hooks and song/artist titles; do not require audio transcription for non-lyric overlays. Avoid installing or buying third-party packs.",
+    "Use verified brand fonts: Montserrat for captions, Cinzel for song title if supported by the brand contract. The old renderer hardcodes Helvetica and beat events; do not copy those defaults into this task. Verify installed fonts and rendered glyphs without silent fallback.",
+    "Make three reusable treatments: emotional opening; song title/artist card; selective-lyric layout. Use Some love stories never really end. only as original draft copy, not a verified lyric or translation. Use verified Aakhri Ishq / Unchained Nitin spelling for title content.",
+    "Actual lyric content requires verified text and timing. If unavailable, demonstrate the third layout with clearly labelled non-lyric draft copy; retain actual lyric mode on HOLD without blocking the other previews.",
+    "Expose text, font, size, position, accent color and entrance/hold/exit controls. Default to white and restrained gold accent, no full-screen graphics or face/mouth obstruction. Preserve performance visibility and verify social safe margins.",
+    "Preserve explicit Rec.2100 HLG handling and minimum 10-bit output. Check text luminance/readability in the actual review environment; do not assume SDR-designed title values are HDR-safe.",
+    "Save native reusable presets/project and a machine-readable configuration. Verify reuse on a second text string, not just a single successful render. Hash input text, template, timings, styling and render settings so changed captions cannot reuse a stale render.",
+    "Run relevant template/caption regression, decode all preview frames, check audio continuity/lipsync and title clipping. Obtain independent Gemini visual review where accessible; report unavailable QC honestly rather than indefinitely blocking technical deliverables.",
+    "Publish private review artifacts to the authoritative Shared Drive with hashes and persist narrow code/config/evidence changes in GitHub. Check diffs and do not redistribute third-party assets outside their licence.",
+    "Append the outcome via the existing event/reducer workflow only if integrity checks pass. If the known ledger hold persists, preserve append-only task evidence and report Master State unchanged; do not rewrite frozen history.",
+    "Return one review link with time ranges for all variants, exact template names, measured setup/render time, reuse instructions, QC limits and the single style decision needed from Nitin. Do not assert a running factory job without a dispatch receipt."
+  ],
+  "required_outputs": [
+    "NATIVE_TEMPLATE_INVENTORY.json",
+    "UNCHAINED_CAPTION_KIT_V01 native presets or project export plus configuration",
+    "One private caption comparison video with labelled variants",
+    "TECHNICAL_QC.json and independent review status",
+    "SHA256 manifest and Shared Drive readback receipt",
+    "Execution report distinguishing implemented, rendered, verified and blocked work"
+  ],
+  "governance": {
+    "private_caption_only_preview_render_authorized": true,
+    "new_camera_motion_or_beat_effect_render_authorized": false,
+    "continuous_rhythm_policy_selected": false,
+    "V06": "PROVISIONAL_AAKHRI_COLOR_BASE_ONLY",
+    "full_master_render_authorized": false,
+    "new_purchase_authorized": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "creative_approval_of_new_outputs": "WAITING_FOR_NITIN"
+  },
+  "research_basis": [
+    "https://documents.blackmagicdesign.com/SupportNotes/DaVinci_Resolve_20_New_Features_Guide.pdf"
+  ]
+}
