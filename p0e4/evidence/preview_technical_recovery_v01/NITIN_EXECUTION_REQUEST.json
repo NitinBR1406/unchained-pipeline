@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "request_id": "NITIN_PREVIEW_TECHNICAL_RECOVERY_V01",
+  "user_message_at": "2026-09-26T18:53:03+02:00",
+  "user_quote": "Lets go!!",
+  "authorization_context": "User accepts technical recovery and continuation of already authorized caption and Stronger Performance Energy private previews.",
+  "status": "AUTHORIZED_LOCAL_RECOVERY_PENDING_EXECUTION",
+  "execution_started_in_this_chat": false,
+  "read_first": [
+    "p0e4/evidence/stronger_performance_preview_v01/NITIN_PREVIEW_AUTHORIZATION.json",
+    "p0e4/evidence/native_caption_template_fasttrack_v01/NITIN_EXECUTION_REQUEST.json",
+    "p0e4/evidence/stronger_performance_preview_v01_execution/NEXT_READY.json"
+  ],
+  "actions": [
+    "Fetch current branch and inspect newer execution evidence first. Do not dispatch duplicate jobs or repeat completed preparation.",
+    "Local executor: diagnose Resolve UI/API availability using supported tools. Determine active project, unsaved work and running renders before any restart. Save/export when accessible. Use normal launch/reconnection or graceful restart where safe; do not force quit with unknown unsaved work, delete lock files or mutate project databases. Escalate only a concrete unrecoverable access/data-loss risk.",
+    "Resume the already authorized text-free Stronger Performance Energy private 72–96 second preview once Resolve is responsive. Reuse existing verified bindings; check changed inputs rather than blindly redoing analysis. Validate musical timing, lipsync, expression and crop, then render and QC. No dependency on caption fonts.",
+    "Caption worker: if existing project font bytes remain unavailable, download Montserrat and Cinzel from their verified official publisher or Google Fonts distribution. Read and retain the supplied licence, source URL/version and SHA256; select brand-required styles. No paid pack, font substitution or third-party installer. Install/activate per-user fonts through supported mechanisms when permitted and verify exact family/styles in Resolve FontManager. Obey genuine platform permission prompts; do not label a routine font lookup as a Nitin creative approval.",
+    "Resume caption kit native export and private comparison after font verification. Verify actual glyph rendering, HLG/10-bit output, safe areas and full decode. Do not replace demonstrated preset reuse with a config-only claim.",
+    "Parallel agents may prepare independent files, but only one executor owns Resolve at a time. No concurrent project saves or renders. Do not interrupt an active task in another session.",
+    "Obtain independent Gemini QC on actual rendered outputs when available, preserving explicit technical/display limits. Deliver any completed private preview without waiting indefinitely for an unrelated blocked task.",
+    "Persist completed artifacts and hash/readback evidence in authoritative Shared Drive and narrow GitHub changes. Do not assert a review link or render exists without verification.",
+    "Keep event/ledger history intact. Do not elevate Master State during the known integrity hold. Record actual outcomes in task evidence; absence of font bytes or a transient UI failure is a technical blocker, not a newly invented human creative gate."
+  ],
+  "governance": {
+    "private_caption_preview_authorized": true,
+    "private_24s_stronger_rhythm_preview_authorized": true,
+    "final_effect_policy_approved": false,
+    "full_master_render_authorized": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "purchases_authorized": false,
+    "destructive_recovery_authorized": false
+  }
+}
