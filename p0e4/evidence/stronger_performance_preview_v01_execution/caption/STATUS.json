@@ -1,0 +1,20 @@
+{
+  "blocked": [
+    "Montserrat provenance/bytes absent",
+    "Cinzel provenance/bytes absent"
+  ],
+  "blocking_gate": "Licensed, provenance-verifiable Montserrat and Cinzel bytes must be locally available and hash-bound before any caption render.",
+  "completed": [
+    "exhaustive legitimate-local font filename search outside excluded caches",
+    "reusable kit and source binding carried forward",
+    "caption-only render/QC plan prepared"
+  ],
+  "drive_mutated": false,
+  "fallback_used": false,
+  "further_agent_action": "NONE_UNTIL_FONT_GATE_RESOLVED",
+  "rendered": false,
+  "repo_mutated": false,
+  "resolve_operated": false,
+  "schema": "AGENT_CAPTION_V02_STATUS",
+  "status": "FINAL_BLOCKED_FONT_PROVENANCE_ONLY"
+}

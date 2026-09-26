@@ -1,0 +1,17 @@
+{
+  "schema": "NEXT_READY_V01",
+  "status": "WAITING_FOR_NITIN_LOCAL_ACCESS_AND_FONT_PROVENANCE",
+  "items": [
+    {
+      "priority": 1,
+      "gate": "LOCAL_RESOLVE_ACCESS",
+      "action": "Open responsive Resolve Studio, then resume exact Stronger Performance 72\u201396s preview from frozen bindings."
+    },
+    {
+      "priority": 2,
+      "gate": "FONT_PROVENANCE",
+      "action": "Make licensed Montserrat and Cinzel font files available with provenance for hash binding; do not substitute."
+    }
+  ],
+  "resume_rule": "Do not repeat source validation; resume exact 72-96s Stronger preview once Resolve is responsive. Caption render remains independently held until both brand fonts are licensed/provenance-bound."
+}

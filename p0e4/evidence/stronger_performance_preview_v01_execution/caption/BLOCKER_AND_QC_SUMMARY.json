@@ -1,0 +1,33 @@
+{
+  "font_requirements": {
+    "Cinzel": "MISSING",
+    "Montserrat": "MISSING",
+    "silent_fallback": "FORBIDDEN"
+  },
+  "governance": {
+    "download": false,
+    "drive_mutated": false,
+    "fallback": false,
+    "project_mutated": false,
+    "purchase": false,
+    "repo_mutated": false,
+    "resolve_operated": false
+  },
+  "only_caption_render_gate": "FONT_PROVENANCE",
+  "prepared": {
+    "HLG10_render_contract": true,
+    "four_variant_config": true,
+    "native_inventory": true,
+    "second_text_cache_invalidation": true,
+    "source_binding": true
+  },
+  "qc": {
+    "Gemini": "NOT_RUN_NO_RENDER",
+    "full_decode": "NOT_RUN_NO_RENDER",
+    "lipsync": "NOT_RUN_NO_RENDER",
+    "preflight": "GREEN_EXCEPT_FONTS",
+    "safe_area": "CONFIGURED_NOT_RENDER_VERIFIED"
+  },
+  "schema": "CAPTION_V02_BLOCKER_AND_QC_SUMMARY",
+  "status": "BLOCKED_NOT_RENDERED"
+}

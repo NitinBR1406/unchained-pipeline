@@ -1,0 +1,29 @@
+{
+  "edl": {
+    "declared_edl_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+    "exists": true,
+    "file_sha256": "6ab0cd0d29f65ab445902ec7e852c5da6b6023f439f5a2e05288e6f3583e0354",
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/aakhri_multitake_real_v01/MULTI_TAKE_EDIT_DECISION_LIST_V01.json"
+  },
+  "master": {
+    "exists": true,
+    "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "motion": {
+    "new_beat_effects": false,
+    "new_camera_motion": false,
+    "reuse_existing_motion": false,
+    "rule": "TEXT_ONLY_IDENTICAL_BASE"
+  },
+  "schema": "CAPTION_FASTTRACK_SOURCE_BINDING_V01",
+  "v06_lut": {
+    "exists": true,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v06-softness-caption-prep-v01/luts/NEW_V06_SOFTER_SKIN_LIGHTING.cube",
+    "sha256": "4fdd545d18826ed26ae2a22ef87eeff70e7013ecb7c12924c993100ee9e082c0"
+  },
+  "window_ms": [
+    72000,
+    96000
+  ]
+}

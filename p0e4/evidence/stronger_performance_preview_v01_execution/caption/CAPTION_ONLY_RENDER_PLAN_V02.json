@@ -1,0 +1,78 @@
+{
+  "caption_kit": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-fasttrack-v02-agent/UNCHAINED_CAPTION_KIT_V01.json",
+  "motion_contract": {
+    "all_text_variants_use_identical_text_free_base": true,
+    "new_beat_effects": false,
+    "new_camera_effects": false
+  },
+  "preconditions": {
+    "licensed_montserrat_and_cinzel_found_and_hash_bound": false
+  },
+  "project_strategy": "Create isolated disposable project only after root confirms rhythm preview complete and Resolve free.",
+  "qc_required": [
+    "full frame decode",
+    "HLG/BT.2020/10-bit probe",
+    "audio continuity",
+    "lipsync preservation",
+    "safe-area/readability",
+    "font readback/no fallback",
+    "Gemini independent visual QC"
+  ],
+  "render_contract": {
+    "codec": "H265 Main10",
+    "fps": 30,
+    "gamut_mapping": "None",
+    "input": "Rec.2100 HLG",
+    "minimum_bit_depth": 10,
+    "output": "Rec.2100 HLG",
+    "resolution": [
+      1080,
+      1920
+    ],
+    "timeline": "Rec.2100 HLG",
+    "tone_mapping": "None"
+  },
+  "render_executed": false,
+  "resolve_scheduling_note": "Resolve intentionally remained closed for this agent; once font gate is resolved, root schedules exclusive access.",
+  "schema": "CAPTION_ONLY_RENDER_PLAN_V02",
+  "source_contract": {
+    "edl": {
+      "declared_edl_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5",
+      "exists": true,
+      "file_sha256": "6ab0cd0d29f65ab445902ec7e852c5da6b6023f439f5a2e05288e6f3583e0354",
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/aakhri_multitake_real_v01/MULTI_TAKE_EDIT_DECISION_LIST_V01.json"
+    },
+    "master": {
+      "exists": true,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/AAKHRI ISHQ MASTER 2.wav",
+      "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+    },
+    "motion": {
+      "new_beat_effects": false,
+      "new_camera_motion": false,
+      "reuse_existing_motion": false,
+      "rule": "TEXT_ONLY_IDENTICAL_BASE"
+    },
+    "schema": "CAPTION_FASTTRACK_SOURCE_BINDING_V01",
+    "v06_lut": {
+      "exists": true,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v06-softness-caption-prep-v01/luts/NEW_V06_SOFTER_SKIN_LIGHTING.cube",
+      "sha256": "4fdd545d18826ed26ae2a22ef87eeff70e7013ecb7c12924c993100ee9e082c0"
+    },
+    "window_ms": [
+      72000,
+      96000
+    ]
+  },
+  "source_window_ms": [
+    72000,
+    96000
+  ],
+  "status": "READY_EXCEPT_FONT_PROVENANCE_GATE",
+  "variants": [
+    "REFERENCE_TEXT_FREE",
+    "EMOTIONAL_OPENING",
+    "SONG_TITLE_ARTIST",
+    "SELECTIVE_LYRIC_LAYOUT_NON_LYRIC_DEMO"
+  ]
+}

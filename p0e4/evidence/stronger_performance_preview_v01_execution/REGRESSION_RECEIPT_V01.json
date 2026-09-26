@@ -1,0 +1,17 @@
+{
+  "schema": "REGRESSION_RECEIPT_V01",
+  "captured_utc": "2026-09-26T16:38:55.219971+00:00",
+  "runs": [
+    {
+      "command": "python3 -m unittest p0e4.tests.test_rhythm_rule_proposals p0e4.tests.test_caption_kit p0e4.tests.test_performance_template p0e4.tests.test_v06_caption_beat_preview",
+      "result": "13_PASS_1_IMPORT_PATH_ERROR",
+      "error": "test_v06_caption_beat_preview imports resolve.* and requires PYTHONPATH=p0e4"
+    },
+    {
+      "command": "PYTHONPATH=p0e4 python3 -m unittest p0e4.tests.test_v06_caption_beat_preview",
+      "result": "1_PASS"
+    }
+  ],
+  "semantic_result": "GREEN_ALL_14_TESTS_PASSED_WITH_DOCUMENTED_MODULE_PATH",
+  "render_acceptance": "NOT_APPLICABLE_NO_RENDER"
+}

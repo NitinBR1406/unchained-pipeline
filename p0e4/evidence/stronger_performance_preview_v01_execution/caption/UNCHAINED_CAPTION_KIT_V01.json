@@ -1,0 +1,152 @@
+{
+  "controls": [
+    "text",
+    "font",
+    "style",
+    "size",
+    "position",
+    "accent",
+    "entrance_frames",
+    "hold_timing_ms",
+    "exit_frames"
+  ],
+  "font_contract": {
+    "required": [
+      "Montserrat",
+      "Cinzel"
+    ],
+    "resolve_inventory": {
+      "Cinzel": {
+        "installed": false,
+        "styles": {}
+      },
+      "Montserrat": {
+        "installed": false,
+        "styles": {}
+      }
+    },
+    "silent_fallback_forbidden": true
+  },
+  "preset_export": "HOLD_UNTIL_BRAND_FONTS_INSTALLED_AND_RENDER_VERIFIED",
+  "render_contract": {
+    "codec": "H265_MAIN10",
+    "fps": 30,
+    "gamut_mapping": "None",
+    "height": 1920,
+    "input": "Rec.2100 HLG",
+    "minimum_bit_depth": 10,
+    "output": "Rec.2100 HLG",
+    "timeline": "Rec.2100 HLG",
+    "tone_mapping": "None",
+    "width": 1080
+  },
+  "safe_area": {
+    "face_mouth_exclusion": "REQUIRED_VISUAL_CHECK",
+    "horizontal_percent": 10,
+    "vertical_percent": 10
+  },
+  "schema": "UNCHAINED_CAPTION_KIT_V01",
+  "second_text_reuse_proof": {
+    "cache_key_differs_from_primary": true,
+    "variant": {
+      "accent": "restrained_gold",
+      "cache_key": "8dd56f2d3b0d5a6bcc57704863fe5324acba5ca0db39730f20116d47f06536ee",
+      "classification": "ORIGINAL_DRAFT_NOT_LYRIC_OR_TRANSLATION",
+      "entrance_frames": 8,
+      "exit_frames": 8,
+      "font": "Montserrat",
+      "id": "EMOTIONAL_OPENING_SECOND_TEXT_PROOF",
+      "position": [
+        0.5,
+        0.145
+      ],
+      "size": 0.024,
+      "style": "SemiBold",
+      "template": "Text+",
+      "text": "A feeling that stays.",
+      "timing_ms": [
+        250,
+        3850
+      ]
+    }
+  },
+  "status": "CONFIGURED_NOT_RENDERED_FONT_GATE",
+  "variants": [
+    {
+      "cache_key": "2e9dd8ea9fce23079740972b7c4255ca5881b64e1b475d2a801fe94566fe32a0",
+      "font": null,
+      "id": "REFERENCE_TEXT_FREE",
+      "template": "Text+",
+      "text": null,
+      "timing_ms": [
+        0,
+        24000
+      ]
+    },
+    {
+      "accent": "restrained_gold",
+      "cache_key": "b6fc400ed6770cf526451f9f244847097fd8bbb21362b49f8a1f217a88f1df01",
+      "classification": "ORIGINAL_DRAFT_NOT_LYRIC_OR_TRANSLATION",
+      "entrance_frames": 8,
+      "exit_frames": 8,
+      "font": "Montserrat",
+      "id": "EMOTIONAL_OPENING",
+      "position": [
+        0.5,
+        0.145
+      ],
+      "size": 0.024,
+      "style": "SemiBold",
+      "template": "Text+",
+      "text": "Some love stories never really end.",
+      "timing_ms": [
+        250,
+        3850
+      ]
+    },
+    {
+      "accent": "restrained_gold",
+      "cache_key": "ebab80644f4507cbad1ccc2950d8355a71be9d4157ee7b1b099721a1e7f800dd",
+      "classification": "VERIFIED_TITLE_AND_ARTIST_SPELLING",
+      "entrance_frames": 10,
+      "exit_frames": 10,
+      "font_primary": "Cinzel",
+      "font_secondary": "Montserrat",
+      "id": "SONG_TITLE_ARTIST",
+      "position": [
+        0.5,
+        0.78
+      ],
+      "size_primary": 0.047,
+      "size_secondary": 0.022,
+      "template": "Simple Two Lines",
+      "text": "AAKHRI ISHQ\\nUNCHAINED NITIN",
+      "timing_ms": [
+        6200,
+        10200
+      ]
+    },
+    {
+      "accent": "white_with_gold_marker",
+      "actual_lyric_mode": "HOLD",
+      "cache_key": "567ca5e471d1e8b5b57cfded173935f52d466d63cf0279073e59eac0b6b12b3f",
+      "classification": "NON_LYRIC_DEMONSTRATION_TEXT",
+      "entrance_frames": 6,
+      "exit_frames": 6,
+      "font": "Montserrat",
+      "id": "SELECTIVE_LYRIC_LAYOUT_NON_LYRIC_DEMO",
+      "position": [
+        0.5,
+        0.18
+      ],
+      "size": 0.025,
+      "style": "SemiBold",
+      "template": "Text+",
+      "text": "NON-LYRIC LAYOUT DEMO\\nReplace only with verified lyric + timing",
+      "timing_ms": [
+        14200,
+        18200
+      ]
+    }
+  ]
+}
