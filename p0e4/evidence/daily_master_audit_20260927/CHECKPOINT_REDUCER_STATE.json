@@ -1,0 +1,79 @@
+{
+  "approvals": {},
+  "architecture_locks": {
+    "adr_ref": null,
+    "architecture_bakeoff": null,
+    "production_deployment_authorized": false,
+    "selected_control_plane": null,
+    "winner": null
+  },
+  "autonomous_execution": {
+    "active_tasks": [],
+    "current_task": null,
+    "waiting_for_nitin": []
+  },
+  "backlog_summary": {
+    "blocked": 0,
+    "completed": 0,
+    "ready": 0,
+    "running": 0,
+    "waiting_for_nitin": 0
+  },
+  "current_content": null,
+  "current_release": null,
+  "datastore_ids": {},
+  "deployments": [],
+  "duplicate_side_effect_count": 0,
+  "evidence_refs": [
+    {
+      "checkpoint_sha256": "0a28ea2cd1eb8a4b20639071f69543693b7cf32750874ad205f0aac5df1a7595",
+      "master_transition": false,
+      "result": "NO_MASTER_TRANSITION_INTEGRITY_HOLD",
+      "scope": "INDEPENDENT_AUDIT_CHECKPOINT_NOT_PROJECT_MASTER_LINEAGE",
+      "source_commit": "5d3cc76d0b720ef6d4c1b338b6d1442989f82d02"
+    },
+    {
+      "checkpoint_sha256": "420f5347c78079711f847307159f4239163e899ff52c6015123786865233c595",
+      "master_transition": false,
+      "result": "NO_MASTER_TRANSITION_INTEGRITY_HOLD",
+      "scope": "INDEPENDENT_AUDIT_CHECKPOINT_NOT_PROJECT_MASTER_LINEAGE",
+      "source_commit": "258b5f2db5f6877caa63237f6a2c50bda81b649d"
+    }
+  ],
+  "git": {
+    "branch": null,
+    "commit_sha": null,
+    "repository": null
+  },
+  "grants": {},
+  "invariants": {
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "STATE_RECOVERED_AFTER_RESTART": null,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": null,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": null
+  },
+  "issue_classes": {
+    "material": [],
+    "must_fix": [],
+    "nice_to_have": []
+  },
+  "ledger_head_hash": "ec484caea4e60992118a3a460919b1faea767758674ea711cd7939db1e4f297b",
+  "milestone": "TEMPORAL CONTROL PLANE FOUNDATION",
+  "phase": "P0-E1",
+  "production_state": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "mutated": false,
+    "p1_scenario": "9627055"
+  },
+  "project": "UNCHAINED NITIN — MASTER",
+  "proven_tests": [],
+  "provenance": [],
+  "runner_health": {},
+  "scenario_ids": {},
+  "schema_version": 1,
+  "state_hash": "cc076ac75c406437b17ae444805fe0207865758f30dbc70dbd84e3d83afccdad",
+  "state_version": 2,
+  "updated_at": "2026-09-26T23:01:53.880650+00:00",
+  "updated_by": "00_MASTER_ORCHESTRATOR"
+}

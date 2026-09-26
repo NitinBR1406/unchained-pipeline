@@ -1,0 +1,15 @@
+{
+  "compared_file": {
+    "bytes_equal": true,
+    "id": "1K5Pu7GdnPt2L6DOGAA-6Oj1y69K9xsh0",
+    "repository_path": "p0e4/evidence/stronger_performance_preview_v01_execution/BUNDLED_REVIEW_STATUS_V01.json",
+    "sha256": "9f25bbaa61c75292e7598103b13de31f73a72d0bde98dd19a2b26ec2265183ff",
+    "url": "https://drive.google.com/file/d/1K5Pu7GdnPt2L6DOGAA-6Oj1y69K9xsh0/view"
+  },
+  "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+  "inventory": "DRIVE_INVENTORY.json",
+  "observed_at": "2026-09-26T23:01:53.880650+00:00",
+  "result": "Drive latest bundled status agrees with repository: both previews blocked, no review assets. Template recovery and caption/rhythm preparation folders present.",
+  "schema": "TARGETED_DRIVE_RECONCILIATION_V01",
+  "scope_limit": "Targeted metadata inventory and one exact-byte status comparison; not exhaustive Shared Drive or media validation. No Drive write."
+}
