@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "request_id": "NITIN_STRONGER_PERFORMANCE_PRIVATE_PREVIEW_V01",
+  "user_message_at": "2026-09-26T18:25:17+02:00",
+  "user_quote": "Akkoord",
+  "approval_context": "Response to: Geef je akkoord om Stronger Performance Energy als korte ritmische preview te laten renderen?",
+  "status": "AUTHORIZED_BOUNDED_PREVIEW_PENDING_LOCAL_EXECUTION",
+  "selected_direction_for_preview": "STRONGER_PERFORMANCE_ENERGY_V02",
+  "policy_path": "p0e4/evidence/native_caption_rhythm_parallel_v01_execution/agent2_rhythm/STRONGER_PERFORMANCE_ENERGY_V02.json",
+  "policy_blob_sha": "80c8036bc3bf136c4a1aa77790fb391c0d41d9d6",
+  "window_master_seconds": [
+    72,
+    96
+  ],
+  "scope": [
+    "Read current state and newer evidence before execution. Reuse existing detector/analysis, source hash binding, V06 and prepared template. No new detector or full-song rerender.",
+    "Create an isolated project copy and render one 24-second private Stronger Performance Energy preview after musical timing, take-specific lipsync, expression and safe-crop validation. Use exact policy events as a proposal, not proof of kick/snare identity or vocal climaxes.",
+    "Resolve collisions and frame quantization with existing rules; make only bounded safety/timing adjustments within the selected treatment and document them. Do not imply that Nitin approved exact unreviewed events or final style.",
+    "Do not infer bar one from every fourth beat. No bar-phase-dependent emphasis unless verified; true bar-one alignment is not required for event-based preview.",
+    "Keep captions as an independently authorized workstream. Local executor may diagnose existing Montserrat/Cinzel availability and activate already-authorized project fonts using supported access; escalate genuine installation permissions or licence issues only. Do not silently substitute fonts.",
+    "Serialize Resolve UI/render access across agents. Caption font issues must not block a text-free rhythm preview. Keep the existing source audio unchanged.",
+    "Technical QC: full decode, actual minimum 10-bit HLG metadata, audio/lipsync, peak crop, clear face/mouth and motion recovery. Obtain independent Gemini visual/music QC where available and report limitations.",
+    "Persist private review video/project/config and SHA manifests to authoritative Shared Drive, narrow code/evidence to GitHub. Return verified review link and exact scope of executed work.",
+    "Keep Master State unchanged if ledger/reducer integrity checks fail. Record append-only task evidence without editing frozen history or manufacturing approvals."
+  ],
+  "governance": {
+    "private_24s_rhythm_preview_render_authorized": true,
+    "private_caption_preview_authorization": "EXISTING_REQUEST_UNCHANGED",
+    "final_effect_policy_approved": false,
+    "final_asset_or_video_approved": false,
+    "full_master_render_authorized": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "V06": "PROVISIONAL"
+  },
+  "execution_started_in_this_chat": false
+}
