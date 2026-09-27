@@ -1,0 +1,44 @@
+{
+  "schema": "GEMINI_INDEPENDENT_QC_V01",
+  "status": "COMPLETE_WITH_LIMITATIONS",
+  "candidate": {
+    "filename": "AAKHRI_STRONGER_PERFORMANCE_ENERGY_V02_72_96_HLG.mp4",
+    "sha256": "d99af26236f98ec5927577d71f391e70350c2c6b1d2feb883b10b87f89ed9288",
+    "duration_seconds": 24,
+    "attachment_verified_before_submit": true
+  },
+  "isolation": {
+    "new_context": true,
+    "prior_ai_conclusions_supplied": false,
+    "conversation_url": "https://gemini.google.com/app/2711806035633ed5"
+  },
+  "qc_metadata": {
+    "file_duration_evaluated": "00:00:24.000",
+    "entire_duration_accessible": true,
+    "limitations": "Standard digital video playback; no calibrated HDR/HLG hardware grading monitor used. Audio-visual sync assessed via visual cues vs audio transients."
+  },
+  "scores": {
+    "performance_continuity": 6,
+    "camera_movement_control": 5,
+    "lip_sync_accuracy": 7,
+    "framing_and_edits": 5
+  },
+  "findings": [
+    {"timecode_excerpt":"00:00.000 - 00:02.500","timecode_programme":"01:12.000 - 01:14.500","category":"performance & lip-sync","severity":"PASS","confidence":0.85,"observed_evidence":"Performer faces pop filter in side profile; mouth articulations closely align with acoustic track.","uncertainty":"Profile angle partially occludes exact labial closure."},
+    {"timecode_excerpt":"00:02.600 - 00:04.200","timecode_programme":"01:14.600 - 01:16.200","category":"camera & framing","severity":"MINOR","confidence":0.88,"observed_evidence":"Rapid punch-in cut / reframing to performer's direct eye-line on vocal accent, followed by a slight hand-held settle.","uncertainty":"Whether camera punch was dynamic in-camera whip/push or digital scale."},
+    {"timecode_excerpt":"00:04.300 - 00:07.500","timecode_programme":"01:16.300 - 01:19.500","category":"framing & motion","severity":"MINOR","confidence":0.82,"observed_evidence":"Camera drifts back to profile view; edge of pop filter shifts frame boundary abruptly during transition.","uncertainty":"Distinction between deliberate rhythmic whip reset vs operator compensation."},
+    {"timecode_excerpt":"00:07.600 - 00:13.500","timecode_programme":"01:19.600 - 01:25.500","category":"musical timing & performance","severity":"INFO","confidence":0.90,"observed_evidence":"Performer alternates between micro-rests and expressive vocal delivery matching the rhythm track.","uncertainty":"None."},
+    {"timecode_excerpt":"00:13.600 - 00:16.500","timecode_programme":"01:25.600 - 01:28.500","category":"camera & framing","severity":"MINOR","confidence":0.85,"observed_evidence":"Second prominent frontal punch-in cut / pivot towards lens during phrasing peak.","uncertainty":"Subtle motion blur limits precision of start frame boundary."},
+    {"timecode_excerpt":"00:17.000 - 00:24.000","timecode_programme":"01:29.000 - 01:36.000","category":"continuity & direction","severity":"INFO","confidence":0.80,"observed_evidence":"Performer turns back towards acoustic panel / mic, holding post-phrase composure as instrumental plays out.","uncertainty":"Head angle obscures mouth during final instrumental tail."}
+  ],
+  "human_summary": [
+    "Performance: strong vocal accents, while energy settles during instrumental gaps instead of sustaining uninterrupted drive.",
+    "Movement: two notable punch-in/reframing moments around excerpt 00:02.6 and 00:13.6, with settling adjustments between them.",
+    "Lip-sync: Gemini reports tight visible articulation where the mouth is visible; profile/head angle limits confidence. Minor pop-filter and edge crowding, with no critical compression or hard-sync corruption observed."
+  ],
+  "governance": {
+    "creative_winner_selected": false,
+    "publication_authorized": false,
+    "production_deployment_authorized": false
+  }
+}

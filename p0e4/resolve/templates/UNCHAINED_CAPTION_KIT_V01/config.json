@@ -18,17 +18,22 @@
     ],
     "resolve_inventory": {
       "Cinzel": {
-        "installed": false,
-        "styles": {}
+        "installed": true,
+        "styles": {
+          "SemiBold": "059afc21ea38c3ac0aaab344fa2c96443dd5cba76ca87daddd7306bfc15881ef"
+        }
       },
       "Montserrat": {
-        "installed": false,
-        "styles": {}
+        "installed": true,
+        "styles": {
+          "Medium": "f21bca5d2935b2cd626adea0de89a0671f52b02a352b64f960556356c1c20a4c",
+          "Regular": "4643dabf7b5d1a230f0358271b1f32b4c96a7415a66ca87c446cdf6f1c254469"
+        }
       }
     },
     "silent_fallback_forbidden": true
   },
-  "preset_export": "HOLD_UNTIL_BRAND_FONTS_INSTALLED_AND_RENDER_VERIFIED",
+  "preset_export": "RESOLVE_DRP_PLUS_MACHINE_READABLE_CONFIG",
   "render_contract": {
     "codec": "H265_MAIN10",
     "fps": 30,
@@ -41,7 +46,7 @@
     "tone_mapping": "None",
     "width": 1080
   },
-  "render_gate": "BLOCKED_REQUIRED_BRAND_FONTS_NOT_INSTALLED",
+  "render_gate": "PASS_BRAND_FONTS_HASH_BOUND_AND_RENDER_VERIFIED",
   "safe_area": {
     "face_mouth_exclusion": "REQUIRED_VISUAL_CHECK",
     "horizontal_percent": 10,
@@ -50,9 +55,11 @@
   "schema": "UNCHAINED_CAPTION_KIT_V01",
   "second_text_reuse_proof": {
     "cache_key_differs_from_primary": true,
+    "output_sha256": "c496db726fc4c8b909bca5d5fd1f855ea38076f292b7f70083a2b831f2d3a658",
+    "rendered": true,
     "variant": {
       "accent": "restrained_gold",
-      "cache_key": "9ae8bf72fb70549edfc5ff537f29c1c3d48724fb57b22598764d568e6d1463b3",
+      "cache_key": "60aefd728ccb5ef3b65ab4a41ecd789e8b48dfad9297e0cb11ea7c304abfe672",
       "classification": "ORIGINAL_DRAFT_NOT_LYRIC_OR_TRANSLATION",
       "entrance_frames": 8,
       "exit_frames": 8,
@@ -63,7 +70,7 @@
         0.145
       ],
       "size": 0.024,
-      "style": "SemiBold",
+      "style": "Medium",
       "template": "Text+",
       "template_sha256": "07cc0e0950298f4205bed04e562aadb77b2168417698417af103c14d78d0f214",
       "text": "A feeling that stays.",
@@ -73,10 +80,10 @@
       ]
     }
   },
-  "status": "CONFIGURED_NOT_RENDERED_FONT_GATE",
+  "status": "RENDER_VERIFIED_PRIVATE_PREVIEW",
   "variants": [
     {
-      "cache_key": "39c3f0892b8f6f57517e4f0a88d2cbf5d84ec7f5121b00178de000de66a0c259",
+      "cache_key": "2d58a21b70ea82576698d1d680e69d59bd7fa9653b72fa7a11744d1651f6032b",
       "font": null,
       "id": "REFERENCE_TEXT_FREE",
       "template": "Text+",
@@ -89,7 +96,7 @@
     },
     {
       "accent": "restrained_gold",
-      "cache_key": "7cea211619aadf9055e6fc60c60fefcef9a3c33c0b1d4f587f5d24f5449260b1",
+      "cache_key": "21089fe3526811148014bbd1a726a027d1d73ab54123412d446b84eb9c38bb4c",
       "classification": "ORIGINAL_DRAFT_NOT_LYRIC_OR_TRANSLATION",
       "entrance_frames": 8,
       "exit_frames": 8,
@@ -100,7 +107,7 @@
         0.145
       ],
       "size": 0.024,
-      "style": "SemiBold",
+      "style": "Medium",
       "template": "Text+",
       "template_sha256": "07cc0e0950298f4205bed04e562aadb77b2168417698417af103c14d78d0f214",
       "text": "Some love stories never really end.",
@@ -111,7 +118,7 @@
     },
     {
       "accent": "restrained_gold",
-      "cache_key": "0f6f04dbea6467b38d8b312a678e0caca84c09da7c7e70ce44849e010ea0b697",
+      "cache_key": "9b44080e100e95516bad7a994b6961b066a32434cdd9bd98ad3f16804bd228ed",
       "classification": "VERIFIED_TITLE_AND_ARTIST_SPELLING",
       "entrance_frames": 10,
       "exit_frames": 10,
@@ -120,10 +127,16 @@
       "id": "SONG_TITLE_ARTIST",
       "position": [
         0.5,
-        0.78
+        0.205
       ],
-      "size_primary": 0.047,
-      "size_secondary": 0.022,
+      "position_secondary": [
+        0.5,
+        0.165
+      ],
+      "size_primary": 0.038,
+      "size_secondary": 0.018,
+      "style_primary": "SemiBold",
+      "style_secondary": "Medium",
       "template": "Simple Two Lines",
       "template_sha256": "e98de89ac7ffab4a950b2898698f979e5c172a5c720e7c6108b54f0f6cb8736d",
       "text": "AAKHRI ISHQ\\nUNCHAINED NITIN",
@@ -135,7 +148,7 @@
     {
       "accent": "white_with_gold_marker",
       "actual_lyric_mode": "HOLD",
-      "cache_key": "54ee30608a2681cfec4ba0bd689d04ee56472226c59859af26520d69b230ee5a",
+      "cache_key": "42b651c70194a0b9b98d456c2d6d4a256c97f0bdfac8f93223c10a94a4fa7412",
       "classification": "NON_LYRIC_DEMONSTRATION_TEXT",
       "entrance_frames": 6,
       "exit_frames": 6,
@@ -143,13 +156,13 @@
       "id": "SELECTIVE_LYRIC_LAYOUT_NON_LYRIC_DEMO",
       "position": [
         0.5,
-        0.18
+        0.19
       ],
-      "size": 0.025,
-      "style": "SemiBold",
+      "size": 0.018,
+      "style": "Medium",
       "template": "Text+",
       "template_sha256": "07cc0e0950298f4205bed04e562aadb77b2168417698417af103c14d78d0f214",
-      "text": "NON-LYRIC LAYOUT DEMO\\nReplace only with verified lyric + timing",
+      "text": "NON-LYRIC LAYOUT DEMO\nReplace only with verified lyric + timing",
       "timing_ms": [
         14200,
         18200

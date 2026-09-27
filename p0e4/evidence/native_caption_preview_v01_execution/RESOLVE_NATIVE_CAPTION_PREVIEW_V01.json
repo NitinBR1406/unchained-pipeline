@@ -1,0 +1,527 @@
+{
+  "classification": "PRIVATE_CAPTION_ONLY_COMPARISON",
+  "edl": {
+    "file_sha256": "6ab0cd0d29f65ab445902ec7e852c5da6b6023f439f5a2e05288e6f3583e0354",
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/aakhri_multitake_real_v01/MULTI_TAKE_EDIT_DECISION_LIST_V01.json",
+    "semantic_sha256": "5d76c3d4ffcde938411b48319136214695226921b86fc3d2268272b64eadf9b5"
+  },
+  "font_files": {
+    "Cinzel SemiBold": {
+      "bytes": 77164,
+      "path": "/Users/nitinramdaras/Library/Fonts/UNCHAINED-Cinzel-SemiBold.ttf",
+      "sha256": "059afc21ea38c3ac0aaab344fa2c96443dd5cba76ca87daddd7306bfc15881ef"
+    },
+    "Montserrat Medium": {
+      "bytes": 374300,
+      "path": "/Users/nitinramdaras/Library/Fonts/UNCHAINED-Montserrat-Medium.ttf",
+      "sha256": "f21bca5d2935b2cd626adea0de89a0671f52b02a352b64f960556356c1c20a4c"
+    },
+    "Montserrat Regular": {
+      "bytes": 374504,
+      "path": "/Users/nitinramdaras/Library/Fonts/UNCHAINED-Montserrat-Regular.ttf",
+      "sha256": "4643dabf7b5d1a230f0358271b1f32b4c96a7415a66ca87c446cdf6f1c254469"
+    }
+  },
+  "full_master_rendered": false,
+  "isolated_project_closed": true,
+  "kit_config_sha256": "f143421677d705d4866abf7be8883b057c390d8b2f357b69643708cd57548e3f",
+  "master": {
+    "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2"
+  },
+  "new_beat_effects": false,
+  "new_camera_effects": false,
+  "outputs": [
+    {
+      "bytes": 22069123,
+      "clip_receipts": [
+        {
+          "base_center": [
+            0.5,
+            0.49
+          ],
+          "base_scale": 2.02,
+          "captions": [],
+          "segment_id": "S03",
+          "source_ms": [
+            74044,
+            94044
+          ],
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "timeline_ms": [
+            72000,
+            92000
+          ]
+        },
+        {
+          "base_center": [
+            0.5,
+            0.49
+          ],
+          "base_scale": 2.02,
+          "captions": [],
+          "segment_id": "S04",
+          "source_ms": [
+            94044,
+            98044
+          ],
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "timeline_ms": [
+            92000,
+            96000
+          ]
+        }
+      ],
+      "frames": 720,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_CAPTION_REFERENCE_TEXT_FREE_72_96_HLG.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 25746
+      },
+      "sha256": "3d0675f3b685c0512bc2f76b356d3dfb5fec168d24407d381747762ec49da4d2",
+      "variant_id": "REFERENCE_TEXT_FREE"
+    },
+    {
+      "bytes": 22072012,
+      "clip_receipts": [
+        {
+          "base_center": [
+            0.5,
+            0.49
+          ],
+          "base_scale": 2.02,
+          "captions": [
+            {
+              "clip_local_frames": [
+                8,
+                116
+              ],
+              "font_requested": "Montserrat",
+              "style_requested": "Medium",
+              "text": "Some love stories never really end.",
+              "tool_font_readback": "Montserrat",
+              "tool_style_readback": "Medium"
+            }
+          ],
+          "segment_id": "S03",
+          "source_ms": [
+            74044,
+            94044
+          ],
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "timeline_ms": [
+            72000,
+            92000
+          ]
+        },
+        {
+          "base_center": [
+            0.5,
+            0.49
+          ],
+          "base_scale": 2.02,
+          "captions": [],
+          "segment_id": "S04",
+          "source_ms": [
+            94044,
+            98044
+          ],
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "timeline_ms": [
+            92000,
+            96000
+          ]
+        }
+      ],
+      "frames": 720,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_CAPTION_EMOTIONAL_OPENING_72_96_HLG.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 25453
+      },
+      "sha256": "21c66e7d52b06fa9df6222b8612f178331737a03096fb9ba4a552862221ba21b",
+      "variant_id": "EMOTIONAL_OPENING"
+    },
+    {
+      "bytes": 22073542,
+      "clip_receipts": [
+        {
+          "base_center": [
+            0.5,
+            0.49
+          ],
+          "base_scale": 2.02,
+          "captions": [
+            {
+              "clip_local_frames": [
+                186,
+                306
+              ],
+              "font_requested": "Cinzel",
+              "style_requested": "SemiBold",
+              "text": "AAKHRI ISHQ",
+              "tool_font_readback": "Cinzel",
+              "tool_style_readback": "SemiBold"
+            },
+            {
+              "clip_local_frames": [
+                186,
+                306
+              ],
+              "font_requested": "Montserrat",
+              "style_requested": "Medium",
+              "text": "UNCHAINED NITIN",
+              "tool_font_readback": "Montserrat",
+              "tool_style_readback": "Medium"
+            }
+          ],
+          "segment_id": "S03",
+          "source_ms": [
+            74044,
+            94044
+          ],
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "timeline_ms": [
+            72000,
+            92000
+          ]
+        },
+        {
+          "base_center": [
+            0.5,
+            0.49
+          ],
+          "base_scale": 2.02,
+          "captions": [],
+          "segment_id": "S04",
+          "source_ms": [
+            94044,
+            98044
+          ],
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "timeline_ms": [
+            92000,
+            96000
+          ]
+        }
+      ],
+      "frames": 720,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_CAPTION_SONG_TITLE_ARTIST_72_96_HLG.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 30170
+      },
+      "sha256": "3e02bbd711a08c5d337ae215f3fc68a58eeb5eee1e04fa0a62ed96d7a9ac83ed",
+      "variant_id": "SONG_TITLE_ARTIST"
+    },
+    {
+      "bytes": 22064702,
+      "clip_receipts": [
+        {
+          "base_center": [
+            0.5,
+            0.49
+          ],
+          "base_scale": 2.02,
+          "captions": [
+            {
+              "clip_local_frames": [
+                426,
+                546
+              ],
+              "font_requested": "Montserrat",
+              "style_requested": "Medium",
+              "text": "NON-LYRIC LAYOUT DEMO\nReplace only with verified lyric + timing",
+              "tool_font_readback": "Montserrat",
+              "tool_style_readback": "Medium"
+            }
+          ],
+          "segment_id": "S03",
+          "source_ms": [
+            74044,
+            94044
+          ],
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "timeline_ms": [
+            72000,
+            92000
+          ]
+        },
+        {
+          "base_center": [
+            0.5,
+            0.49
+          ],
+          "base_scale": 2.02,
+          "captions": [],
+          "segment_id": "S04",
+          "source_ms": [
+            94044,
+            98044
+          ],
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "timeline_ms": [
+            92000,
+            96000
+          ]
+        }
+      ],
+      "frames": 720,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_CAPTION_SELECTIVE_LYRIC_LAYOUT_NON_LYRIC_DEMO_72_96_HLG.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 29776
+      },
+      "sha256": "b64b1122f70acde7c0d875363459453a50b865bd5b39b4afea24c14b809fd4ff",
+      "variant_id": "SELECTIVE_LYRIC_LAYOUT_NON_LYRIC_DEMO"
+    },
+    {
+      "bytes": 22067870,
+      "clip_receipts": [
+        {
+          "base_center": [
+            0.5,
+            0.49
+          ],
+          "base_scale": 2.02,
+          "captions": [
+            {
+              "clip_local_frames": [
+                8,
+                116
+              ],
+              "font_requested": "Montserrat",
+              "style_requested": "Medium",
+              "text": "A feeling that stays.",
+              "tool_font_readback": "Montserrat",
+              "tool_style_readback": "Medium"
+            }
+          ],
+          "segment_id": "S03",
+          "source_ms": [
+            74044,
+            94044
+          ],
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "timeline_ms": [
+            72000,
+            92000
+          ]
+        },
+        {
+          "base_center": [
+            0.5,
+            0.49
+          ],
+          "base_scale": 2.02,
+          "captions": [],
+          "segment_id": "S04",
+          "source_ms": [
+            94044,
+            98044
+          ],
+          "take_asset_id": "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8",
+          "timeline_ms": [
+            92000,
+            96000
+          ]
+        }
+      ],
+      "frames": 720,
+      "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_CAPTION_SECOND_TEXT_REUSE_PROOF_72_96_HLG.mp4",
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 25937
+      },
+      "sha256": "c496db726fc4c8b909bca5d5fd1f855ea38076f292b7f70083a2b831f2d3a658",
+      "variant_id": "SECOND_TEXT_REUSE_PROOF"
+    }
+  ],
+  "prior_project_restored": true,
+  "production_deployment_authorized": false,
+  "project_export": {
+    "bytes": 293113,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/UNCHAINED_AAKHRI_NATIVE_CAPTION_PREVIEW_V01_R1.drp",
+    "sha256": "fea0d066024335c5318fe90c2c40a1ecff2b0d6fe382d5f8a2b0a432b9d6ea95"
+  },
+  "project_settings_actual": {
+    "colorScienceMode": "davinciYRGBColorManaged",
+    "colorSpaceInput": "Rec.2100 HLG",
+    "colorSpaceOutput": "Rec.2100 HLG",
+    "colorSpaceOutputGamutMapping": "None",
+    "colorSpaceOutputToneMapping": "None",
+    "colorSpaceTimeline": "Rec.2100 HLG",
+    "isAutoColorManage": "0",
+    "timelineFrameRate": "30.0",
+    "timelineResolutionHeight": "1920",
+    "timelineResolutionWidth": "1080"
+  },
+  "publication_authorized": false,
+  "resolve_font_readback": {
+    "Cinzel": [
+      "Black",
+      "Bold",
+      "Regular",
+      "SemiBold"
+    ],
+    "Montserrat": [
+      "Black",
+      "Bold",
+      "ExtraBold",
+      "ExtraLight",
+      "Light",
+      "Medium",
+      "Regular",
+      "SemiBold",
+      "Thin"
+    ]
+  },
+  "schema": "RESOLVE_NATIVE_CAPTION_PREVIEW_V01",
+  "source_window_ms": [
+    72000,
+    96000
+  ],
+  "sources": {
+    "1Bw6cH1pqe1vAzKmsHMTzihcAxzLXOFin": {
+      "bytes": 216042666,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5740.MOV",
+      "sha256": "4082202982f9d063197305f45ef27bbef95274cf909e3fc918b7a9f5e37ec9fb"
+    },
+    "1DUEqRsDHRDUE7aOV9q0akUyBEtPHjhsW": {
+      "bytes": 504008133,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5742.MOV",
+      "sha256": "3697fd0193386e25c0d2c62e18dc5a97b62492b7f87e7eeddfb1c9bd876c09b9"
+    },
+    "1jaUADjUEpyPN1qzdLs_Q-dKp62NzMsF8": {
+      "bytes": 926438315,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5741.MOV",
+      "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+    },
+    "1xX_RH8gfRGkZGeHU0OeI3u9JCOAR23N8": {
+      "bytes": 942419948,
+      "path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/RAW_INTAKE/MULTI_TAKE/Aakhri-Ishq/IMG_5739.MOV",
+      "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+    }
+  },
+  "status": "RENDERED_PRIVATE_PENDING_TECHNICAL_QC",
+  "v06_lut": {
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-v06-softness-caption-prep-v01/luts/NEW_V06_SOFTER_SKIN_LIGHTING.cube",
+    "sha256": "4fdd545d18826ed26ae2a22ef87eeff70e7013ecb7c12924c993100ee9e082c0"
+  },
+  "variants": [
+    {
+      "elements": [],
+      "id": "REFERENCE_TEXT_FREE"
+    },
+    {
+      "elements": [
+        {
+          "center": [
+            0.5,
+            0.145
+          ],
+          "color": [
+            0.94,
+            0.86,
+            0.68
+          ],
+          "end": 3850,
+          "font": "Montserrat",
+          "size": 0.024,
+          "start": 250,
+          "style": "Medium",
+          "text": "Some love stories never really end."
+        }
+      ],
+      "id": "EMOTIONAL_OPENING"
+    },
+    {
+      "elements": [
+        {
+          "center": [
+            0.5,
+            0.205
+          ],
+          "color": [
+            0.94,
+            0.86,
+            0.68
+          ],
+          "end": 10200,
+          "font": "Cinzel",
+          "size": 0.038,
+          "start": 6200,
+          "style": "SemiBold",
+          "text": "AAKHRI ISHQ"
+        },
+        {
+          "center": [
+            0.5,
+            0.165
+          ],
+          "color": [
+            0.96,
+            0.96,
+            0.96
+          ],
+          "end": 10200,
+          "font": "Montserrat",
+          "size": 0.018,
+          "start": 6200,
+          "style": "Medium",
+          "text": "UNCHAINED NITIN"
+        }
+      ],
+      "id": "SONG_TITLE_ARTIST"
+    },
+    {
+      "elements": [
+        {
+          "center": [
+            0.5,
+            0.19
+          ],
+          "color": [
+            0.96,
+            0.96,
+            0.96
+          ],
+          "end": 18200,
+          "font": "Montserrat",
+          "size": 0.018,
+          "start": 14200,
+          "style": "Medium",
+          "text": "NON-LYRIC LAYOUT DEMO\nReplace only with verified lyric + timing"
+        }
+      ],
+      "id": "SELECTIVE_LYRIC_LAYOUT_NON_LYRIC_DEMO"
+    },
+    {
+      "elements": [
+        {
+          "center": [
+            0.5,
+            0.145
+          ],
+          "color": [
+            0.94,
+            0.86,
+            0.68
+          ],
+          "end": 3850,
+          "font": "Montserrat",
+          "size": 0.024,
+          "start": 250,
+          "style": "Medium",
+          "text": "A feeling that stays."
+        }
+      ],
+      "id": "SECOND_TEXT_REUSE_PROOF"
+    }
+  ]
+}

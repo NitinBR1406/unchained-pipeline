@@ -1,0 +1,22 @@
+{
+  "schema": "FONT_ACTIVATION_PROVENANCE_V01",
+  "official_package_drive_id": "1g0MW3_BdQ2S6jGso_tucdWL7z24pnr8d",
+  "official_package_sha256": "ad3a36d9fd998210e636c856842f2ef9bee14f5c5cbb80941d3a3fcd6a826a73",
+  "source": "official Google Fonts repository package with SIL OFL 1.1 licenses",
+  "variable_sources": {
+    "Montserrat": "0f7b311b2f3279e4eef9b2f968bcdbab6e28f4daeb1f049f4f278a902bcd82f7",
+    "Cinzel": "f4d83d34d1f6c741193e4acf4b3dff9531e5a67b6aa65228d00a7db72a4e0f34"
+  },
+  "resolve_static_instances": {
+    "Montserrat Regular": "4643dabf7b5d1a230f0358271b1f32b4c96a7415a66ca87c446cdf6f1c254469",
+    "Montserrat Medium": "f21bca5d2935b2cd626adea0de89a0671f52b02a352b64f960556356c1c20a4c",
+    "Cinzel SemiBold": "059afc21ea38c3ac0aaab344fa2c96443dd5cba76ca87daddd7306bfc15881ef"
+  },
+  "derivation": "FontTools 4.60.1 variable-font instancing at wght 400, 500 and 600; name tables fixed to explicit static family/style for Resolve compatibility",
+  "overwrite_existing_fonts": false,
+  "resolve_readback": {
+    "Montserrat": ["Regular", "Medium"],
+    "Cinzel": ["SemiBold"]
+  },
+  "silent_fallback": false
+}

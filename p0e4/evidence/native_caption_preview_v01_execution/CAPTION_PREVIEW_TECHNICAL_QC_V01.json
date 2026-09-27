@@ -1,0 +1,175 @@
+{
+  "audio_alignment": {
+    "best_lag_ms": 0,
+    "correlation": 0.9998492415608237,
+    "downsampled_points_compared": 2400,
+    "interpretation": "technical sampled waveform correlation supports preserved audio timing; it does not independently prove visible lip-sync",
+    "master_segment_ms": [
+      72000,
+      96000
+    ]
+  },
+  "expected": {
+    "codec": "hevc",
+    "color_primaries": "bt2020",
+    "color_space": "bt2020nc",
+    "color_transfer": "arib-std-b67",
+    "fps": "30/1",
+    "pix_fmt": "yuv420p10le",
+    "profile": "Main 10",
+    "resolution": [
+      1080,
+      1920
+    ]
+  },
+  "files": [
+    {
+      "bytes": 22072012,
+      "duration": 24.064,
+      "file": "AAKHRI_CAPTION_EMOTIONAL_OPENING_72_96_HLG.mp4",
+      "full_decode": "PASS",
+      "sha256": "21c66e7d52b06fa9df6222b8612f178331737a03096fb9ba4a552862221ba21b",
+      "video": {
+        "codec_name": "hevc",
+        "color_primaries": "bt2020",
+        "color_space": "bt2020nc",
+        "color_transfer": "arib-std-b67",
+        "height": 1920,
+        "index": 0,
+        "pix_fmt": "yuv420p10le",
+        "profile": "Main 10",
+        "r_frame_rate": "30/1",
+        "width": 1080
+      }
+    },
+    {
+      "bytes": 22069123,
+      "duration": 24.064,
+      "file": "AAKHRI_CAPTION_REFERENCE_TEXT_FREE_72_96_HLG.mp4",
+      "full_decode": "PASS",
+      "sha256": "3d0675f3b685c0512bc2f76b356d3dfb5fec168d24407d381747762ec49da4d2",
+      "video": {
+        "codec_name": "hevc",
+        "color_primaries": "bt2020",
+        "color_space": "bt2020nc",
+        "color_transfer": "arib-std-b67",
+        "height": 1920,
+        "index": 0,
+        "pix_fmt": "yuv420p10le",
+        "profile": "Main 10",
+        "r_frame_rate": "30/1",
+        "width": 1080
+      }
+    },
+    {
+      "bytes": 22067870,
+      "duration": 24.064,
+      "file": "AAKHRI_CAPTION_SECOND_TEXT_REUSE_PROOF_72_96_HLG.mp4",
+      "full_decode": "PASS",
+      "sha256": "c496db726fc4c8b909bca5d5fd1f855ea38076f292b7f70083a2b831f2d3a658",
+      "video": {
+        "codec_name": "hevc",
+        "color_primaries": "bt2020",
+        "color_space": "bt2020nc",
+        "color_transfer": "arib-std-b67",
+        "height": 1920,
+        "index": 0,
+        "pix_fmt": "yuv420p10le",
+        "profile": "Main 10",
+        "r_frame_rate": "30/1",
+        "width": 1080
+      }
+    },
+    {
+      "bytes": 22064702,
+      "duration": 24.064,
+      "file": "AAKHRI_CAPTION_SELECTIVE_LYRIC_LAYOUT_NON_LYRIC_DEMO_72_96_HLG.mp4",
+      "full_decode": "PASS",
+      "sha256": "b64b1122f70acde7c0d875363459453a50b865bd5b39b4afea24c14b809fd4ff",
+      "video": {
+        "codec_name": "hevc",
+        "color_primaries": "bt2020",
+        "color_space": "bt2020nc",
+        "color_transfer": "arib-std-b67",
+        "height": 1920,
+        "index": 0,
+        "pix_fmt": "yuv420p10le",
+        "profile": "Main 10",
+        "r_frame_rate": "30/1",
+        "width": 1080
+      }
+    },
+    {
+      "bytes": 22073542,
+      "duration": 24.064,
+      "file": "AAKHRI_CAPTION_SONG_TITLE_ARTIST_72_96_HLG.mp4",
+      "full_decode": "PASS",
+      "sha256": "3e02bbd711a08c5d337ae215f3fc68a58eeb5eee1e04fa0a62ed96d7a9ac83ed",
+      "video": {
+        "codec_name": "hevc",
+        "color_primaries": "bt2020",
+        "color_space": "bt2020nc",
+        "color_transfer": "arib-std-b67",
+        "height": 1920,
+        "index": 0,
+        "pix_fmt": "yuv420p10le",
+        "profile": "Main 10",
+        "r_frame_rate": "30/1",
+        "width": 1080
+      }
+    },
+    {
+      "bytes": 75221849,
+      "duration": 96.256,
+      "file": "AAKHRI_NATIVE_CAPTION_COMPARISON_V01_R1_HLG.mp4",
+      "full_decode": "PASS",
+      "sha256": "9dbbb857773ad88b778969a5e0df9bb5045227f0e805dbc729a6952b066d1851",
+      "video": {
+        "codec_name": "hevc",
+        "color_primaries": "bt2020",
+        "color_space": "bt2020nc",
+        "color_transfer": "arib-std-b67",
+        "height": 1920,
+        "index": 0,
+        "pix_fmt": "yuv420p10le",
+        "profile": "Main 10",
+        "r_frame_rate": "30/1",
+        "width": 1080
+      }
+    }
+  ],
+  "font_qc": {
+    "rendered_glyphs_visual_check": "PASS",
+    "resolve_family_style_readback": {
+      "Cinzel": [
+        "SemiBold"
+      ],
+      "Montserrat": [
+        "Regular",
+        "Medium"
+      ]
+    },
+    "silent_fallback": "NOT_OBSERVED"
+  },
+  "limitations": [
+    "HDR tags and 10-bit decode are verified; display judgement is not calibrated HDR review",
+    "sampled visual inspection plus full decode does not replace Nitin creative approval"
+  ],
+  "schema": "CAPTION_PREVIEW_TECHNICAL_QC_V01",
+  "status": "GREEN_PRIVATE_REVIEW",
+  "visual_qc": {
+    "bounded_repair": [
+      "title moved to lower chest field and resized",
+      "demo uses true line break and smaller type"
+    ],
+    "face_mouth_exclusion": "PASS on sampled active caption frames",
+    "first_candidate_defects": [
+      "title overlapped face",
+      "demo linebreak escaped incorrectly"
+    ],
+    "new_camera_or_beat_effects": false,
+    "readability": "PASS on sampled frames; final creative size/placement remains Nitin choice",
+    "representative_frames_inspected": 4,
+    "safe_area": "PASS after bounded R1 repair; text centered and inside 10% horizontal/vertical margins"
+  }
+}

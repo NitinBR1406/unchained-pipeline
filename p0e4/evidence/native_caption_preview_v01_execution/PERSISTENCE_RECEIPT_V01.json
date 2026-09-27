@@ -1,0 +1,124 @@
+{
+  "created_at_utc": "2026-09-27T15:43:37.966839+00:00",
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1",
+  "mapping": [
+    {
+      "action": "COPIED",
+      "bytes": 75221849,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/AAKHRI_NATIVE_CAPTION_COMPARISON_V01_R1_HLG.mp4",
+      "readback_verified": true,
+      "sha256": "9dbbb857773ad88b778969a5e0df9bb5045227f0e805dbc729a6952b066d1851",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_NATIVE_CAPTION_COMPARISON_V01_R1_HLG.mp4"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 22069123,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/AAKHRI_CAPTION_REFERENCE_TEXT_FREE_72_96_HLG.mp4",
+      "readback_verified": true,
+      "sha256": "3d0675f3b685c0512bc2f76b356d3dfb5fec168d24407d381747762ec49da4d2",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_CAPTION_REFERENCE_TEXT_FREE_72_96_HLG.mp4"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 22072012,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/AAKHRI_CAPTION_EMOTIONAL_OPENING_72_96_HLG.mp4",
+      "readback_verified": true,
+      "sha256": "21c66e7d52b06fa9df6222b8612f178331737a03096fb9ba4a552862221ba21b",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_CAPTION_EMOTIONAL_OPENING_72_96_HLG.mp4"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 22073542,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/AAKHRI_CAPTION_SONG_TITLE_ARTIST_72_96_HLG.mp4",
+      "readback_verified": true,
+      "sha256": "3e02bbd711a08c5d337ae215f3fc68a58eeb5eee1e04fa0a62ed96d7a9ac83ed",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_CAPTION_SONG_TITLE_ARTIST_72_96_HLG.mp4"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 22064702,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/AAKHRI_CAPTION_SELECTIVE_LYRIC_LAYOUT_NON_LYRIC_DEMO_72_96_HLG.mp4",
+      "readback_verified": true,
+      "sha256": "b64b1122f70acde7c0d875363459453a50b865bd5b39b4afea24c14b809fd4ff",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_CAPTION_SELECTIVE_LYRIC_LAYOUT_NON_LYRIC_DEMO_72_96_HLG.mp4"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 22067870,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/AAKHRI_CAPTION_SECOND_TEXT_REUSE_PROOF_72_96_HLG.mp4",
+      "readback_verified": true,
+      "sha256": "c496db726fc4c8b909bca5d5fd1f855ea38076f292b7f70083a2b831f2d3a658",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/AAKHRI_CAPTION_SECOND_TEXT_REUSE_PROOF_72_96_HLG.mp4"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 293113,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/UNCHAINED_AAKHRI_NATIVE_CAPTION_PREVIEW_V01_R1.drp",
+      "readback_verified": true,
+      "sha256": "fea0d066024335c5318fe90c2c40a1ecff2b0d6fe382d5f8a2b0a432b9d6ea95",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/UNCHAINED_AAKHRI_NATIVE_CAPTION_PREVIEW_V01_R1.drp"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 15823,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/RESOLVE_NATIVE_CAPTION_PREVIEW_V01.json",
+      "readback_verified": true,
+      "sha256": "5ddd5c0b235c6b8a2b2726f7b9d0303454e34649d6c8d549fa9797b25d2a0b07",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/RESOLVE_NATIVE_CAPTION_PREVIEW_V01.json"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 5263,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/CAPTION_PREVIEW_TECHNICAL_QC_V01.json",
+      "readback_verified": true,
+      "sha256": "4e090d22079648139a997ff0ad4dc279cf46b24efedefa9cef42719672ae343d",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/CAPTION_PREVIEW_TECHNICAL_QC_V01.json"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 1722,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/SHA256SUMS.txt",
+      "readback_verified": true,
+      "sha256": "489dbe22db6917e44cc3287c6c0e03fb8b3ffd199086d4648857b39992ba0ca0",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/native-caption-preview-v01-execution-r1/SHA256SUMS.txt"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 4949,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/config.json",
+      "readback_verified": true,
+      "sha256": "e15497d0ecd3c1a2135dadd877734b2f6dadaf64dad038aa625d330cc671d863",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/resolve/templates/UNCHAINED_CAPTION_KIT_V01/config.json"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 522,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/README.md",
+      "readback_verified": true,
+      "sha256": "dd043c5f83df9e810a54c2b9d9af7ce1ce523875d60fd95a99da1da9b35407cc",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/resolve/templates/UNCHAINED_CAPTION_KIT_V01/README.md"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 1131,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/FONT_ACTIVATION_PROVENANCE_V01.json",
+      "readback_verified": true,
+      "sha256": "b68e7a6f13e741b66e0d8de5d4cc332f9ab7fa273825a404d142b506f262f6f6",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/native_caption_preview_v01_execution/FONT_ACTIVATION_PROVENANCE_V01.json"
+    },
+    {
+      "action": "COPIED",
+      "bytes": 3757,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/CAPTION_PREVIEW_V01_REVIEW_20260927_R1/GEMINI_INDEPENDENT_QC_V01.json",
+      "readback_verified": true,
+      "sha256": "9e0c5fa272c05d694fa842d9204e0573bb80aecc278119620c9acec2c0947cbe",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/p0e4/evidence/stronger_performance_preview_v01_execution/GEMINI_INDEPENDENT_QC_V01.json"
+    }
+  ],
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "receipt_sha256": "93ea591fdc3e715f8240e25138883d5bc09188fd972793706f265de32334e636",
+  "schema": "CAPTION_PREVIEW_PERSISTENCE_RECEIPT_V01",
+  "source_staging_untouched": true,
+  "status": "GREEN_NON_DESTRUCTIVE_READBACK_VERIFIED"
+}
