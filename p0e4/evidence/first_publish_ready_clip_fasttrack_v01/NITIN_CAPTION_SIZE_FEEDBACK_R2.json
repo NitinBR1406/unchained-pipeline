@@ -1,0 +1,24 @@
+{
+  "schema": "NITIN_CAPTION_SIZE_FEEDBACK_R2",
+  "recorded_utc": "2026-09-27T16:57:51.915Z",
+  "user_verbatim": "Hetvmagbiwta groter",
+  "interpreted_feedback": "Het mag iets groter.",
+  "source_review": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/CAPTION_TREATMENT_REVIEW_V01.json",
+  "treatment_selected": null,
+  "action": "Revise both current A and B still candidates with slightly larger typography; preserve current comparison source/frame/color and layout wherever safe. Do not infer treatment selection.",
+  "implementation_proposal": {
+    "size_multiplier_start": 1.2,
+    "attribution": "Executor starting point, not an exact percentage requested by Nitin.",
+    "verification": "Verify actual rendered glyph size at 1080x1920 and phone-size 360x640. Maintain face/mouth exclusion and safe bounds; adapt line breaks if needed rather than clipping. Preserve originals and provide R2 side-by-side still links."
+  },
+  "execution_status": "FEEDBACK_RECORDED_NOT_RENDERED_BY_THIS_SESSION",
+  "next_gate": "NITIN_SELECTS_REVISED_TREATMENT",
+  "governance": {
+    "final_style_approved": false,
+    "final_video_approved": false,
+    "publication_authorized": false,
+    "production_deployment_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "master_state_update": false
+  }
+}
