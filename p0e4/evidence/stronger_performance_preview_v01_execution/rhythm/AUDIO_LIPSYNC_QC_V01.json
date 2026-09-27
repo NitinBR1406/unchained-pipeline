@@ -1,0 +1,13 @@
+{
+  "schema": "STRONGER_PREVIEW_AUDIO_LIPSYNC_QC_V01",
+  "output_sha256": "d99af26236f98ec5927577d71f391e70350c2c6b1d2feb883b10b87f89ed9288",
+  "decoded_audio_samples": 1152960,
+  "decoded_audio_duration_s": 24.02,
+  "master_excerpt_samples": 1152000,
+  "master_excerpt_duration_s": 24.0,
+  "best_envelope_correlation": 0.999982,
+  "best_lag_10ms_units": 0,
+  "best_lag_ms": 0,
+  "interpretation": "AAC programme audio matches exact MASTER2 excerpt envelope; alignment also rests on frozen per-take guide-audio offsets and <=16.7ms frame quantization. This is technical sync evidence, not manual lip-reading.",
+  "status": "GREEN"
+}

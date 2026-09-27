@@ -1,0 +1,19 @@
+{
+  "schema": "NEXT_READY_V02",
+  "status": "WAITING_FOR_NITIN_RHYTHM_PREVIEW_REVIEW_AND_TWO_INDEPENDENT_GATES",
+  "items": [
+    {
+      "gate": "NITIN_RHYTHM_PREVIEW_REVIEW",
+      "action": "Review exact rendered candidate; no approval inferred."
+    },
+    {
+      "gate": "GEMINI_UPLOAD_INTERFACE",
+      "action": "Upload exact candidate SHA in isolated Gemini context and obtain independent QC without rerender."
+    },
+    {
+      "gate": "FONT_PROVENANCE",
+      "action": "Provide licensed Montserrat and Cinzel bytes for caption render; do not substitute."
+    }
+  ],
+  "resume_rule": "Do not rerender candidate d99af262...; complete Gemini QC on exact bytes and caption render only after font provenance is resolved."
+}

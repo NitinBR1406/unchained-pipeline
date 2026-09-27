@@ -1,0 +1,84 @@
+{
+  "schema": "STRONGER_PREVIEW_TECHNICAL_QC_V01",
+  "status": "GREEN",
+  "full_decode": "PASS_VIDEO_AND_AUDIO",
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [
+      {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "hevc",
+            "profile": "Main 10",
+            "width": 1080,
+            "height": 1920,
+            "pix_fmt": "yuv420p10le",
+            "color_space": "bt2020nc",
+            "color_transfer": "arib-std-b67",
+            "color_primaries": "bt2020",
+            "avg_frame_rate": "30/1",
+            "nb_read_frames": "720"
+          },
+          {
+            "index": 2,
+            "avg_frame_rate": "15360/512"
+          }
+        ]
+      }
+    ],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "hevc",
+        "profile": "Main 10",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p10le",
+        "color_space": "bt2020nc",
+        "color_transfer": "arib-std-b67",
+        "color_primaries": "bt2020",
+        "avg_frame_rate": "30/1",
+        "nb_read_frames": "720"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "profile": "LC",
+        "sample_rate": "48000",
+        "channels": 2,
+        "avg_frame_rate": "0/0",
+        "nb_read_frames": "1126"
+      },
+      {
+        "index": 2,
+        "avg_frame_rate": "15360/512"
+      }
+    ],
+    "format": {
+      "duration": "24.064000",
+      "size": "22035731"
+    }
+  },
+  "expected_frame_count": 720,
+  "actual_frame_count": 720,
+  "minimum_10bit_hlg": true,
+  "black_frames_or_gaps": "NONE_DETECTED",
+  "face_mouth_crop_review": {
+    "method": "16 policy-event frame contact sheet visual inspection",
+    "status": "PASS",
+    "findings": "Face and mouth remain visible at all sampled policy moments; no ceiling/floor/white-border reappearance; no peak-scale edge exposure. Hair approaches top edge in tighter frames but is consistent with provisional V06 base framing."
+  },
+  "motion_recovery": {
+    "method": "Fusion keyframe receipt plus rendered event-frame contact sheet",
+    "status": "PASS_BOUNDED",
+    "constraints": "one motion event at a time; recovery ends recorded before cuts; no motion spans a cut"
+  },
+  "color": "V06 provisional LUT, unchanged",
+  "captions": false,
+  "full_master": false,
+  "limitations": [
+    "Contact sheet is sampled QC, not calibrated HDR viewing",
+    "Technical lip-sync uses audio correlation and frozen take offsets; independent Gemini visual/music review pending"
+  ]
+}

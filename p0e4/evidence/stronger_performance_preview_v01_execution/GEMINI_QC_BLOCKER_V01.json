@@ -1,0 +1,23 @@
+{
+  "schema": "GEMINI_INDEPENDENT_QC_EXECUTION_BLOCKER_V01",
+  "captured_utc": "2026-09-27T14:20:14.979116+00:00",
+  "status": "NOT_RUN_UPLOAD_INTERFACE_BLOCKED",
+  "candidate_path": "p0e4/evidence/stronger_performance_preview_v01_execution/rhythm/AAKHRI_STRONGER_PERFORMANCE_ENERGY_V02_72_96_HLG.mp4",
+  "candidate_sha256": "d99af26236f98ec5927577d71f391e70350c2c6b1d2feb883b10b87f89ed9288",
+  "isolation": "NEW_BLANK_GEMINI_CHAT_NO_PRIOR_AGENT_CONCLUSIONS_EXPOSED",
+  "observed": {
+    "url": "https://gemini.google.com/app",
+    "conversation_id": null,
+    "attachment_present": false,
+    "prompt_submitted": false,
+    "response_present": false,
+    "verdict": null
+  },
+  "blocker": "Chrome/Gemini native file chooser did not return or attach the 22 MB local HEVC preview through the callable UI surface.",
+  "claims_forbidden": [
+    "GEMINI_PASS",
+    "GEMINI_FAIL",
+    "INDEPENDENT_QC_COMPLETE"
+  ],
+  "retry_rule": "Retry exact existing candidate once a callable upload route is available; do not rerender or change candidate SHA."
+}

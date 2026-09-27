@@ -1,0 +1,499 @@
+{
+  "audio": {
+    "end_frame": 2880,
+    "guide_audio_used": false,
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "start_frame": 2160
+  },
+  "captions_used": false,
+  "classification": "PRIVATE_TEXT_FREE_24S_BOUNDED_PREVIEW",
+  "clip_receipts": [
+    {
+      "events_applied": [
+        {
+          "action": "zoom",
+          "frame": 23,
+          "local_frame": 23,
+          "peak_scale": 2.07757,
+          "recovery_end_frame": 31
+        },
+        {
+          "action": "shake",
+          "frame": 36,
+          "local_frame": 36,
+          "peak_displacement_fraction": 0.0051,
+          "peak_scale": 2.03919,
+          "recovery_end_frame": 41
+        }
+      ],
+      "master_ms": [
+        72000.0,
+        74966.66666666667
+      ],
+      "source_frames": [
+        2221,
+        2310
+      ],
+      "take": "5741",
+      "timeline_frames": [
+        0,
+        89
+      ]
+    },
+    {
+      "events_applied": [
+        {
+          "action": "zoom",
+          "frame": 155,
+          "local_frame": 66,
+          "peak_scale": 2.3620999999999994,
+          "recovery_end_frame": 163
+        },
+        {
+          "action": "shake",
+          "frame": 185,
+          "local_frame": 96,
+          "peak_displacement_fraction": 0.006,
+          "peak_scale": 2.3252999999999995,
+          "recovery_end_frame": 191
+        }
+      ],
+      "master_ms": [
+        74966.66666666667,
+        78800.0
+      ],
+      "source_frames": [
+        2233,
+        2348
+      ],
+      "take": "5739",
+      "timeline_frames": [
+        89,
+        204
+      ]
+    },
+    {
+      "events_applied": [
+        {
+          "action": "zoom",
+          "frame": 282,
+          "local_frame": 78,
+          "peak_scale": 2.07151,
+          "recovery_end_frame": 290
+        },
+        {
+          "action": "shake",
+          "frame": 311,
+          "local_frame": 107,
+          "peak_displacement_fraction": 0.0054,
+          "peak_scale": 2.0402,
+          "recovery_end_frame": 316
+        }
+      ],
+      "master_ms": [
+        78800.0,
+        83166.66666666667
+      ],
+      "source_frames": [
+        2425,
+        2556
+      ],
+      "take": "5741",
+      "timeline_frames": [
+        204,
+        335
+      ]
+    },
+    {
+      "events_applied": [
+        {
+          "action": "shake",
+          "frame": 395,
+          "local_frame": 60,
+          "peak_displacement_fraction": 0.0063,
+          "peak_scale": 2.32645,
+          "recovery_end_frame": 401
+        },
+        {
+          "action": "zoom",
+          "frame": 419,
+          "local_frame": 84,
+          "peak_scale": 2.3620999999999994,
+          "recovery_end_frame": 427
+        }
+      ],
+      "master_ms": [
+        83166.66666666667,
+        88366.66666666667
+      ],
+      "source_frames": [
+        2479,
+        2635
+      ],
+      "take": "5739",
+      "timeline_frames": [
+        335,
+        491
+      ]
+    },
+    {
+      "events_applied": [
+        {
+          "action": "shake",
+          "frame": 563,
+          "local_frame": 72,
+          "peak_displacement_fraction": 0.006,
+          "peak_scale": 2.04222,
+          "recovery_end_frame": 569
+        },
+        {
+          "action": "zoom",
+          "frame": 588,
+          "local_frame": 97,
+          "peak_scale": 2.0806,
+          "recovery_end_frame": 595
+        }
+      ],
+      "master_ms": [
+        88366.66666666667,
+        92766.66666666666
+      ],
+      "source_frames": [
+        2712,
+        2844
+      ],
+      "take": "5741",
+      "timeline_frames": [
+        491,
+        623
+      ]
+    },
+    {
+      "events_applied": [],
+      "master_ms": [
+        92766.66666666666,
+        96000.0
+      ],
+      "source_frames": [
+        2767,
+        2864
+      ],
+      "take": "5739",
+      "timeline_frames": [
+        623,
+        720
+      ]
+    }
+  ],
+  "full_master_rendered": false,
+  "isolated_project_created": true,
+  "new_detector_built": false,
+  "output": {
+    "bytes": 22035731,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/stronger-performance-preview-v01-agent-resume/AAKHRI_STRONGER_PERFORMANCE_ENERGY_V02_72_96_HLG.mp4",
+    "sha256": "d99af26236f98ec5927577d71f391e70350c2c6b1d2feb883b10b87f89ed9288"
+  },
+  "preflight": {
+    "crop_validation": "V06 SAFE BASE FRAMING PRESERVED; PEAK MOTION ONLY INCREASES SCALE; TRANSLATION MAX 6.8px WITH SCALE GUARD",
+    "cut_frames": [
+      89,
+      204,
+      335,
+      491,
+      623
+    ],
+    "expression_validation": "TAKE-SPECIFIC SOURCE FRAMES REVIEWED AT 7 POLICY MOMENTS; FACE/MOUTH VISIBLE; NO CLAIM OF LYRIC OR CLIMAX SEMANTICS",
+    "fps": 30,
+    "frame_count": 720,
+    "source_hashes": {
+      "5739": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+      "5741": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313",
+      "master": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+      "policy": "d1a8148d35498c101bad4657761afbad860dbfc14183f9b9ca89a99742fce9cd",
+      "v06_lut": "4fdd545d18826ed26ae2a22ef87eeff70e7013ecb7c12924c993100ee9e082c0"
+    },
+    "status": "GREEN_FOR_BOUNDED_PRIVATE_RENDER",
+    "sync_validation": [
+      {
+        "drift_effect_under_window_ms": "<2ms",
+        "excerpt_frames": [
+          0,
+          89
+        ],
+        "green": true,
+        "master_ms": [
+          72000.0,
+          74966.667
+        ],
+        "offset_ms": -2044,
+        "take": "5741",
+        "usable_master_ms": [
+          0,
+          214390
+        ]
+      },
+      {
+        "drift_effect_under_window_ms": "<2ms",
+        "excerpt_frames": [
+          89,
+          204
+        ],
+        "green": true,
+        "master_ms": [
+          74966.667,
+          78800.0
+        ],
+        "offset_ms": 526,
+        "take": "5739",
+        "usable_master_ms": [
+          526,
+          211796
+        ]
+      },
+      {
+        "drift_effect_under_window_ms": "<2ms",
+        "excerpt_frames": [
+          204,
+          335
+        ],
+        "green": true,
+        "master_ms": [
+          78800.0,
+          83166.667
+        ],
+        "offset_ms": -2044,
+        "take": "5741",
+        "usable_master_ms": [
+          0,
+          214390
+        ]
+      },
+      {
+        "drift_effect_under_window_ms": "<2ms",
+        "excerpt_frames": [
+          335,
+          491
+        ],
+        "green": true,
+        "master_ms": [
+          83166.667,
+          88366.667
+        ],
+        "offset_ms": 526,
+        "take": "5739",
+        "usable_master_ms": [
+          526,
+          211796
+        ]
+      },
+      {
+        "drift_effect_under_window_ms": "<2ms",
+        "excerpt_frames": [
+          491,
+          623
+        ],
+        "green": true,
+        "master_ms": [
+          88366.667,
+          92766.667
+        ],
+        "offset_ms": -2044,
+        "take": "5741",
+        "usable_master_ms": [
+          0,
+          214390
+        ]
+      },
+      {
+        "drift_effect_under_window_ms": "<2ms",
+        "excerpt_frames": [
+          623,
+          720
+        ],
+        "green": true,
+        "master_ms": [
+          92766.667,
+          96000.0
+        ],
+        "offset_ms": 526,
+        "take": "5739",
+        "usable_master_ms": [
+          526,
+          211796
+        ]
+      }
+    ],
+    "take_order": [
+      "5741",
+      "5739",
+      "5741",
+      "5739",
+      "5741",
+      "5739"
+    ],
+    "timing_adjustments": [
+      {
+        "action": "zoom",
+        "bounded": true,
+        "ideal_fractional_frame": 23.13,
+        "master_time_s": 72.771,
+        "policy_frame": 23,
+        "quantization_delta_ms": -4.333
+      },
+      {
+        "action": "shake",
+        "bounded": true,
+        "ideal_fractional_frame": 35.67,
+        "master_time_s": 73.189,
+        "policy_frame": 36,
+        "quantization_delta_ms": 11.0
+      },
+      {
+        "action": "take_switch",
+        "bounded": true,
+        "ideal_fractional_frame": 89.31,
+        "master_time_s": 74.977,
+        "policy_frame": 89,
+        "quantization_delta_ms": -10.333
+      },
+      {
+        "action": "zoom",
+        "bounded": true,
+        "ideal_fractional_frame": 155.16,
+        "master_time_s": 77.172,
+        "policy_frame": 155,
+        "quantization_delta_ms": -5.333
+      },
+      {
+        "action": "shake",
+        "bounded": true,
+        "ideal_fractional_frame": 185.1,
+        "master_time_s": 78.17,
+        "policy_frame": 185,
+        "quantization_delta_ms": -3.333
+      },
+      {
+        "action": "cut",
+        "bounded": true,
+        "ideal_fractional_frame": 203.55,
+        "master_time_s": 78.785,
+        "policy_frame": 204,
+        "quantization_delta_ms": 15.0
+      },
+      {
+        "action": "zoom",
+        "bounded": true,
+        "ideal_fractional_frame": 281.58,
+        "master_time_s": 81.386,
+        "policy_frame": 282,
+        "quantization_delta_ms": 14.0
+      },
+      {
+        "action": "shake",
+        "bounded": true,
+        "ideal_fractional_frame": 311.19,
+        "master_time_s": 82.373,
+        "policy_frame": 311,
+        "quantization_delta_ms": -6.333
+      },
+      {
+        "action": "take_switch",
+        "bounded": true,
+        "ideal_fractional_frame": 335.22,
+        "master_time_s": 83.174,
+        "policy_frame": 335,
+        "quantization_delta_ms": -7.333
+      },
+      {
+        "action": "shake",
+        "bounded": true,
+        "ideal_fractional_frame": 395.13,
+        "master_time_s": 85.171,
+        "policy_frame": 395,
+        "quantization_delta_ms": -4.333
+      },
+      {
+        "action": "zoom",
+        "bounded": true,
+        "ideal_fractional_frame": 419.49,
+        "master_time_s": 85.983,
+        "policy_frame": 419,
+        "quantization_delta_ms": -16.333
+      },
+      {
+        "action": "cut",
+        "bounded": true,
+        "ideal_fractional_frame": 491.25,
+        "master_time_s": 88.375,
+        "policy_frame": 491,
+        "quantization_delta_ms": -8.333
+      },
+      {
+        "action": "shake",
+        "bounded": true,
+        "ideal_fractional_frame": 563.34,
+        "master_time_s": 90.778,
+        "policy_frame": 563,
+        "quantization_delta_ms": -11.333
+      },
+      {
+        "action": "zoom",
+        "bounded": true,
+        "ideal_fractional_frame": 587.73,
+        "master_time_s": 91.591,
+        "policy_frame": 588,
+        "quantization_delta_ms": 9.0
+      },
+      {
+        "action": "take_switch",
+        "bounded": true,
+        "ideal_fractional_frame": 623.25,
+        "master_time_s": 92.775,
+        "policy_frame": 623,
+        "quantization_delta_ms": -8.333
+      },
+      {
+        "action": "hold",
+        "bounded": true,
+        "ideal_fractional_frame": 683.16,
+        "master_time_s": 94.772,
+        "policy_frame": 683,
+        "quantization_delta_ms": -5.333
+      }
+    ],
+    "window_ms": [
+      72000,
+      96000
+    ]
+  },
+  "prior_project": "Untitled Project",
+  "prior_project_restored": true,
+  "production_deployment_authorized": false,
+  "project_closed": true,
+  "project_export": {
+    "bytes": 117477,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/stronger-performance-preview-v01-agent-resume/UNCHAINED_AAKHRI_STRONGER_PERFORMANCE_PREVIEW_V01_AGENT_RESUME.drp",
+    "sha256": "f270002424c8ab621e5bb57c94caa85e9845e46edd8e240338768075eef6ab6b"
+  },
+  "project_settings_actual": {
+    "colorScienceMode": "davinciYRGBColorManaged",
+    "colorSpaceInput": "Rec.2100 HLG",
+    "colorSpaceOutput": "Rec.2100 HLG",
+    "colorSpaceOutputGamutMapping": "None",
+    "colorSpaceOutputToneMapping": "None",
+    "colorSpaceTimeline": "Rec.2100 HLG",
+    "isAutoColorManage": "0",
+    "timelineFrameRate": "30.0",
+    "timelineResolutionHeight": "1920",
+    "timelineResolutionWidth": "1080"
+  },
+  "publication_authorized": false,
+  "render_started": true,
+  "render_status": {
+    "CompletionPercentage": 100,
+    "JobStatus": "Complete",
+    "TimeTakenToRenderInMs": 25699
+  },
+  "schema": "RESOLVE_STRONGER_PERFORMANCE_PREVIEW_V01",
+  "status": "RENDERED_PRIVATE_PENDING_QC"
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "STRONGER_PERFORMANCE_AND_CAPTION_BUNDLED_REVIEW_V02",
+  "captured_utc": "2026-09-27T14:20:14.979116+00:00",
+  "overall_status": "RHYTHM_PREVIEW_RENDERED_TECHNICAL_QC_GREEN_INDEPENDENT_GEMINI_QC_PENDING_CAPTION_FONT_GATE",
+  "rhythm_preview": {
+    "status": "RENDERED_PRIVATE_REVIEW_CANDIDATE",
+    "path": "p0e4/evidence/stronger_performance_preview_v01_execution/rhythm/AAKHRI_STRONGER_PERFORMANCE_ENERGY_V02_72_96_HLG.mp4",
+    "sha256": "d99af26236f98ec5927577d71f391e70350c2c6b1d2feb883b10b87f89ed9288",
+    "window_seconds": [
+      72,
+      96
+    ],
+    "technical_qc": "GREEN",
+    "gemini_qc": "NOT_RUN_UPLOAD_INTERFACE_BLOCKED",
+    "full_master": false,
+    "final_effect_policy_approved": false
+  },
+  "caption_preview": {
+    "status": "BLOCKED_NOT_RENDERED",
+    "reason": "Licensed provenance-verifiable Montserrat and Cinzel bytes absent",
+    "kit_and_plan_prepared": true,
+    "silent_fallback": false
+  },
+  "qc": {
+    "frames": "720/720 decoded",
+    "codec": "HEVC Main 10 yuv420p10le",
+    "color": "BT.2020 / Rec.2100 HLG",
+    "audio_envelope_correlation": 0.999982,
+    "audio_lag_ms": 0,
+    "black_frames_or_gaps": "NONE_DETECTED",
+    "sampled_face_mouth_crop": "PASS",
+    "motion_recovery": "PASS_BOUNDED",
+    "gemini": "NOT_RUN"
+  },
+  "review_scope": "PRIVATE_24S_TEXT_FREE_RHYTHM_PREVIEW_ONLY",
+  "master_state_update": "NOT_APPLIED_KNOWN_LEDGER_REDUCER_INTEGRITY_HOLDS",
+  "governance": {
+    "publication": false,
+    "deployment": false,
+    "full_master": false,
+    "final_video_or_asset_approval_inferred": false
+  },
+  "next_ready": [
+    {
+      "gate": "NITIN_RHYTHM_PREVIEW_REVIEW",
+      "action": "Review exact rendered candidate; no approval inferred."
+    },
+    {
+      "gate": "GEMINI_UPLOAD_INTERFACE",
+      "action": "Upload exact candidate SHA in isolated Gemini context and obtain independent QC without rerender."
+    },
+    {
+      "gate": "FONT_PROVENANCE",
+      "action": "Provide licensed Montserrat and Cinzel bytes for caption render; do not substitute."
+    }
+  ],
+  "review_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/STRONGER_PERFORMANCE_PREVIEW_V01_REVIEW_20260927",
+  "review_video": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/STRONGER_PERFORMANCE_PREVIEW_V01_REVIEW_20260927/rhythm/AAKHRI_STRONGER_PERFORMANCE_ENERGY_V02_72_96_HLG.mp4",
+  "project_archive": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/STRONGER_PERFORMANCE_PREVIEW_V01_REVIEW_20260927/rhythm/UNCHAINED_AAKHRI_STRONGER_PERFORMANCE_PREVIEW_V01_AGENT_RESUME.drp"
+}
