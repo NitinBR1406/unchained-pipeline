@@ -1,0 +1,11 @@
+{
+  "schema": "NEXT_READY_V01",
+  "status": "WAITING_FOR_NITIN_FINAL_VIDEO_REVIEW",
+  "candidate_sha256": "18e367fbf89fd021e15c443bcb8717b1d48a8b2b834d81b99cecd01e9c07d25e",
+  "technical_qc": "GREEN",
+  "independent_gemini_qc": "PASS_AFTER_CLARIFICATION",
+  "remaining_human_decision": "Nitin accepts or rejects this repaired private candidate as final video direction.",
+  "rights_hold_unchanged": true,
+  "master_state_promoted": false,
+  "master_state_reason": "Known ledger/pointer integrity hold remains; no history rewrite or invalid reducer promotion."
+}

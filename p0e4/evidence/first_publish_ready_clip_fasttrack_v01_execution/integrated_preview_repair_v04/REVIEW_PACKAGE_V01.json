@@ -1,0 +1,23 @@
+{
+  "schema": "INTEGRATED_PREVIEW_REPAIR_REVIEW_PACKAGE_V01",
+  "status": "PRIVATE_REVIEW_TECHNICAL_GREEN_GEMINI_PASS_WAITING_NITIN",
+  "candidate": {
+    "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V04_REPAIR2_HLG.mp4",
+    "sha256": "18e367fbf89fd021e15c443bcb8717b1d48a8b2b834d81b99cecd01e9c07d25e",
+    "duration_s": 20.7,
+    "review_folder_url": "https://drive.google.com/drive/folders/1n-Cc8y72h0MmQLRZQKoNBcUdZK6iigtL"
+  },
+  "before_after": {
+    "before": "24.0s; stronger late recovery; abrupt fixed endpoint; large centered lockup covering face.",
+    "after": "20.7s; damped late recovery; phrase-pause endpoint with 0.20s fade; smaller lower-chest lockup clear of eyes, nose and mouth."
+  },
+  "technical_qc": "GREEN",
+  "independent_gemini_qc": "PASS_AFTER_CLARIFICATION",
+  "governance": {
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

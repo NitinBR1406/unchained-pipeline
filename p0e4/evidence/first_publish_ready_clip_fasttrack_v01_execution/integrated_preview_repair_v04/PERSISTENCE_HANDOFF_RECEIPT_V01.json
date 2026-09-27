@@ -1,0 +1,19 @@
+{
+  "schema": "PERSISTENCE_HANDOFF_RECEIPT_V01",
+  "status": "COPIED_NON_DESTRUCTIVELY_READBACK_SHA256_GREEN",
+  "destination": {
+    "drive": "Unchained Nitin — Master",
+    "folder_id": "1n-Cc8y72h0MmQLRZQKoNBcUdZK6iigtL",
+    "path": "P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/INTEGRATED_PREVIEW_REPAIR_V04_20260927",
+    "url": "https://drive.google.com/drive/folders/1n-Cc8y72h0MmQLRZQKoNBcUdZK6iigtL"
+  },
+  "readback_manifest": {
+    "file_id": "1_5wTq-B82Yu8RNCDeH7eGvLnQNbrFOhq",
+    "url": "https://drive.google.com/file/d/1_5wTq-B82Yu8RNCDeH7eGvLnQNbrFOhq/view?usp=drivesdk",
+    "initial_artifact_readback_sha256": "8640ccacd07542f19d7806375653055562a6af4c04479009639552be75516820",
+    "note": "The destination manifest was regenerated after adding repository receipts; its own hash is intentionally not embedded recursively."
+  },
+  "required_artifact_sha256_equal": true,
+  "source_staging_untouched": true,
+  "publication_authorized": false
+}

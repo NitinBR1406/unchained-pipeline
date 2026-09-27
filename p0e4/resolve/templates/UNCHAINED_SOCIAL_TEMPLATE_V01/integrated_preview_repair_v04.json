@@ -1,0 +1,28 @@
+{
+  "schema": "UNCHAINED_SOCIAL_TEMPLATE_INTEGRATED_PREVIEW_REPAIR_V04",
+  "inherits": "integrated_preview_v01.json",
+  "candidate_sha256": "18e367fbf89fd021e15c443bcb8717b1d48a8b2b834d81b99cecd01e9c07d25e",
+  "source_window_s": [72.0, 92.7],
+  "duration_frames": 621,
+  "motion_repair": {
+    "window_preview_s": [16.0, 20.7],
+    "post_cut_settle_frames": 20,
+    "peak_scale": 2.03616,
+    "base_scale": 2.02,
+    "recovery_complete_local_frame": 116
+  },
+  "outro": {
+    "logo_zoom": 0.48,
+    "logo_tilt": -520.0,
+    "placement": "LOWER_CHEST_SAFE_ZONE",
+    "covers_eyes_nose_mouth": false
+  },
+  "audio_tail": {
+    "source_identity_preserved": true,
+    "time_stretch": false,
+    "fade_out_start_s": 20.5,
+    "fade_out_duration_s": 0.2,
+    "selected_master_endpoint_s": 92.7
+  },
+  "cache_invalidation_additions": ["selected_master_endpoint_s", "audio_fade", "logo_transform", "motion_repair_keyframes"]
+}

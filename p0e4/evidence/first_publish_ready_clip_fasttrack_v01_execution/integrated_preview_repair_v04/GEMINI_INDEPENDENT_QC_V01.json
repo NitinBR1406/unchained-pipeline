@@ -1,0 +1,20 @@
+{
+  "schema": "GEMINI_INDEPENDENT_EXACT_OUTPUT_QC_V01",
+  "candidate_sha256": "18e367fbf89fd021e15c443bcb8717b1d48a8b2b834d81b99cecd01e9c07d25e",
+  "context_url": "https://gemini.google.com/app/f72fd23f131bacdf",
+  "new_independent_context": true,
+  "attachment_fully_available": true,
+  "initial_response_conflict": "Response contained both REPAIR and PASS sections; a targeted clarification was required.",
+  "clarified_final_verdict": "PASS",
+  "clarified_statement": "No concrete technical defects, occlusions of the eyes, nose, or mouth, or unnatural audio cutoffs remain in the file.",
+  "observations": [
+    "Motion from 00:16 to end was smooth and continuous.",
+    "Captions and final lockup remained in lower-third/chest area without covering eyes, nose or mouth.",
+    "No black frames, flash frames, unexpected cuts, borders or visible compression dropouts were reported.",
+    "The trailing vocal/reverb fade was assessed as musically natural."
+  ],
+  "limitations": [
+    "Browser proxy cannot prove calibrated HLG appearance.",
+    "Visible lipsync correlation is not sub-frame certification."
+  ]
+}
