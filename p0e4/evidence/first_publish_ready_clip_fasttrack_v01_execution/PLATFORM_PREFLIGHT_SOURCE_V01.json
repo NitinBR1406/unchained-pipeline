@@ -1,0 +1,67 @@
+{
+  "numeric_margin_status": "INTERNAL_CONSERVATIVE_ENGINEERING_PRESETS_NOT_CLAIMED_AS_OFFICIAL_PIXEL_REQUIREMENTS",
+  "official_sources": [
+    {
+      "evidence": "Meta recommends 9:16 video with audio and keeping key messages in the safe zone.",
+      "platform": "Instagram Reels",
+      "scope": "Official Reels ads guidance; organic client overlays can differ.",
+      "url": "https://www.facebook.com/business/ads/facebook-instagram-reels-ads"
+    },
+    {
+      "evidence": "TikTok says important elements should remain in safe zones because fixed UI overlays content.",
+      "platform": "TikTok",
+      "scope": "Official Creative Center guidance.",
+      "url": "https://ads.tiktok.com/business/creativecenter/quicktok/online/tiktok_creative_accelerator/pc/en"
+    },
+    {
+      "evidence": "Vertical 9:16 is recommended; safe zone varies with caption length and other UI.",
+      "platform": "TikTok",
+      "scope": "Official in-feed ads specification, updated 2026.",
+      "url": "https://ads.tiktok.com/resources/help/article/tiktok-auction-in-feed-ads?lang=en-GB"
+    },
+    {
+      "evidence": "YouTube supports square or vertical Shorts uploads through Studio.",
+      "platform": "YouTube Shorts",
+      "scope": "Official upload guidance.",
+      "url": "https://support.google.com/youtube/answer/12779649?hl=en-IN"
+    },
+    {
+      "evidence": "Square or vertical videos up to three minutes can be categorized as Shorts; copyright restrictions still apply.",
+      "platform": "YouTube Shorts",
+      "scope": "Official help.",
+      "url": "https://support.google.com/youtube/answer/15424877?hl=en"
+    }
+  ],
+  "presets": [
+    {
+      "clear_percent": {
+        "bottom": 20,
+        "left": 8,
+        "right": 12,
+        "top": 14
+      },
+      "id": "REELS_CONSERVATIVE_PREVIEW_V01"
+    },
+    {
+      "clear_percent": {
+        "bottom": 22,
+        "left": 8,
+        "right": 18,
+        "top": 12
+      },
+      "id": "TIKTOK_CONSERVATIVE_PREVIEW_V01"
+    },
+    {
+      "clear_percent": {
+        "bottom": 22,
+        "left": 8,
+        "right": 18,
+        "top": 10
+      },
+      "id": "SHORTS_CONSERVATIVE_PREVIEW_V01"
+    }
+  ],
+  "publish_preflight_requirement": "Verify in each current platform preview UI immediately before any separately authorized publication.",
+  "schema": "PLATFORM_PREFLIGHT_SOURCE_V01",
+  "verified_utc": "2026-09-27T16:17:09.295025+00:00"
+}

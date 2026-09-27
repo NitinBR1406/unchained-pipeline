@@ -1,0 +1,13 @@
+{
+  "after_selection": [
+    "Render one integrated 24-second candidate with selected caption treatment and prepared rhythm V03.",
+    "Run decode, HLG, mobile-legibility, lipsync/motion and independent Gemini QC.",
+    "Finalize review package; do not publish without separate approval."
+  ],
+  "gate": "NITIN_SELECTS_TWO_STILL_TREATMENTS",
+  "master_state_update": "BLOCKED_BY_EXISTING_LEDGER_POINTER_INTEGRITY_HOLDS",
+  "publication_authorized": false,
+  "question": "Choose A_PERFORMANCE_HOOK or B_TITLE_HERO for the integrated 24-second candidate.",
+  "schema": "NEXT_READY",
+  "status": "WAITING_FOR_NITIN"
+}

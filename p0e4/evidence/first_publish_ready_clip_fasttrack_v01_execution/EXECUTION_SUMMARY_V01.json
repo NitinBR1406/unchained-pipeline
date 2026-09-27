@@ -1,0 +1,19 @@
+{
+  "caption_stills_rendered": true,
+  "drive_destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/STILL_TREATMENTS_R1_20260927",
+  "full_master_rendered": false,
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "integrated_candidate_rendered": false,
+  "master_state_promoted": false,
+  "master_state_reason": "Known event-31 ledger, pointer checksum and timestamp integrity holds remain; history was not rewritten.",
+  "publication_package_prepared": true,
+  "recorded_utc": "2026-09-27T16:17:09.295025+00:00",
+  "rhythm_revision_prepared": true,
+  "schema": "FIRST_PUBLISH_READY_CLIP_FASTTRACK_EXECUTION_SUMMARY_V01",
+  "status": "INDEPENDENT_PREPARATION_COMPLETE_WAITING_NITIN_CAPTION_SELECTION",
+  "template_prepared": true
+}

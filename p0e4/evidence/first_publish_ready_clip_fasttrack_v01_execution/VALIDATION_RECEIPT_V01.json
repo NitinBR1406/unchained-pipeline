@@ -1,0 +1,32 @@
+{
+  "schema": "FIRST_PUBLISH_READY_CLIP_FASTTRACK_VALIDATION_RECEIPT_V01",
+  "recorded_utc": "2026-09-27T16:20:00Z",
+  "status": "GREEN_WITH_HUMAN_CREATIVE_GATE",
+  "tests": {
+    "command": "python3 -m unittest -v p0e4.tests.test_social_template_v01 p0e4.tests.test_caption_kit p0e4.tests.test_rhythm_rule_proposals p0e4.tests.test_performance_template p0e4.tests.test_claude_detector_reuse",
+    "passed": 22,
+    "failed": 0
+  },
+  "verified": [
+    "Resolve rendered both caption treatments from the same SHA-bound source frame and V06 LUT",
+    "Resolve read back Montserrat Medium and Cinzel SemiBold",
+    "actual TextPlus glyph domains were measured",
+    "1080x1920 and exact 360x640 review images exist",
+    "Shared Drive copies match local SHA256 and byte counts",
+    "unverified lyrics are omitted from a publish candidate",
+    "platform presets are distinct and explicitly described as conservative engineering previews",
+    "rhythm V03 does not upgrade detector bands into kick/snare or infer downbeats",
+    "publication, scheduling and social upload remain false"
+  ],
+  "not_yet_executed": [
+    "integrated 24-second caption plus rhythm render",
+    "final technical QC of integrated candidate",
+    "independent Gemini QC of integrated candidate",
+    "rights confirmation",
+    "Nitin final video approval",
+    "Nitin publish approval"
+  ],
+  "next_gate": "NITIN_SELECTS_TREATMENT_A_OR_B",
+  "master_state_promoted": false,
+  "master_state_reason": "Known event-31 ledger, pointer checksum and evidence timestamp integrity holds remain. History was not rewritten."
+}

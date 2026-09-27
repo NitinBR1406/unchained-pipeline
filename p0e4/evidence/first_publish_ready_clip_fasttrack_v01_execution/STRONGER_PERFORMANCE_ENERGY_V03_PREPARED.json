@@ -1,0 +1,223 @@
+{
+  "direction": "CONTINUOUS_RHYTHMIC_PERFORMANCE_EDIT_WITH_DELIBERATE_RECOVERY",
+  "master_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "master_window_s": [
+    72,
+    96
+  ],
+  "prepared_event_reviews": [
+    {
+      "master_time_s": 72.771,
+      "new_rule": "Keep only if full-motion playback confirms musical and performance continuity.",
+      "prior_action": "zoom",
+      "revision": "PRESERVE_WITH_EXPRESSION_REVIEW",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "72.771:0.912",
+        "onset_strength": 0.912
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 73.189,
+      "new_rule": "Translation only, <=4 px at 1080, no rotation, recovery >=6 frames; replace with hold when face or mouth loses legibility.",
+      "prior_action": "shake",
+      "revision": "BOUNDED_SHAKE",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "73.189:0.657",
+        "onset_strength": 0.657
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 74.977,
+      "new_rule": "Cut/reframe only after crop and lipsync check; suppress shake; max zoom 1.8%; recovery 12 frames; allow boundary shift within +/-6 frames.",
+      "prior_action": "take_switch",
+      "reason": "Independent Gemini minor issue at excerpt 00:02.6-00:07.5.",
+      "revision": "REDUCE_EDGE_CROWDING_AND_SETTLE",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "74.977:0.731",
+        "onset_strength": 0.731
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 77.172,
+      "new_rule": "Cut/reframe only after crop and lipsync check; suppress shake; max zoom 1.8%; recovery 12 frames; allow boundary shift within +/-6 frames.",
+      "prior_action": "zoom",
+      "reason": "Independent Gemini minor issue at excerpt 00:02.6-00:07.5.",
+      "revision": "REDUCE_EDGE_CROWDING_AND_SETTLE",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "77.172:0.923",
+        "onset_strength": 0.923
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 78.17,
+      "new_rule": "Cut/reframe only after crop and lipsync check; suppress shake; max zoom 1.8%; recovery 12 frames; allow boundary shift within +/-6 frames.",
+      "prior_action": "shake",
+      "reason": "Independent Gemini minor issue at excerpt 00:02.6-00:07.5.",
+      "revision": "REDUCE_EDGE_CROWDING_AND_SETTLE",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "78.170:0.943_AND_LOW_78.182:0.535",
+        "onset_strength": 0.943
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 78.785,
+      "new_rule": "Cut/reframe only after crop and lipsync check; suppress shake; max zoom 1.8%; recovery 12 frames; allow boundary shift within +/-6 frames.",
+      "prior_action": "cut",
+      "reason": "Independent Gemini minor issue at excerpt 00:02.6-00:07.5.",
+      "revision": "REDUCE_EDGE_CROWDING_AND_SETTLE",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "78.785:0.645_AND_HIGH_78.774:0.919",
+        "onset_strength": 0.645
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 81.386,
+      "new_rule": "Keep only if full-motion playback confirms musical and performance continuity.",
+      "prior_action": "zoom",
+      "revision": "PRESERVE_WITH_EXPRESSION_REVIEW",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "81.386:0.526",
+        "onset_strength": 0.526
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 82.373,
+      "new_rule": "Translation only, <=4 px at 1080, no rotation, recovery >=6 frames; replace with hold when face or mouth loses legibility.",
+      "prior_action": "shake",
+      "revision": "BOUNDED_SHAKE",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "82.373:0.908",
+        "onset_strength": 0.908
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 83.174,
+      "new_rule": "Keep only if full-motion playback confirms musical and performance continuity.",
+      "prior_action": "take_switch",
+      "revision": "PRESERVE_WITH_EXPRESSION_REVIEW",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "83.174:0.916",
+        "onset_strength": 0.916
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 85.171,
+      "new_rule": "Translation only, <=4 px at 1080, no rotation, recovery >=6 frames; replace with hold when face or mouth loses legibility.",
+      "prior_action": "shake",
+      "revision": "BOUNDED_SHAKE",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "85.171:0.961_PEAK_HIGH",
+        "onset_strength": 0.961
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 85.983,
+      "new_rule": "Max zoom 2.0%; attack 3 frames; recovery 12 frames; preserve mouth/eyes and avoid motion-blur boundary.",
+      "prior_action": "zoom",
+      "reason": "Independent Gemini minor issue at excerpt 00:13.6-00:16.5.",
+      "revision": "SOFTEN_SECOND_PUNCH_IN",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "85.983:0.651",
+        "onset_strength": 0.651
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 88.375,
+      "new_rule": "Max zoom 2.0%; attack 3 frames; recovery 12 frames; preserve mouth/eyes and avoid motion-blur boundary.",
+      "prior_action": "cut",
+      "reason": "Independent Gemini minor issue at excerpt 00:13.6-00:16.5.",
+      "revision": "SOFTEN_SECOND_PUNCH_IN",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "88.375:0.733",
+        "onset_strength": 0.733
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 90.778,
+      "new_rule": "Translation only, <=4 px at 1080, no rotation, recovery >=6 frames; replace with hold when face or mouth loses legibility.",
+      "prior_action": "shake",
+      "revision": "BOUNDED_SHAKE",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "90.778:0.868",
+        "onset_strength": 0.868
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 91.591,
+      "new_rule": "Keep only if full-motion playback confirms musical and performance continuity.",
+      "prior_action": "zoom",
+      "revision": "PRESERVE_WITH_EXPRESSION_REVIEW",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "91.591:0.974",
+        "onset_strength": 0.974
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 92.775,
+      "new_rule": "Keep only if full-motion playback confirms musical and performance continuity.",
+      "prior_action": "take_switch",
+      "revision": "PRESERVE_WITH_EXPRESSION_REVIEW",
+      "source_detector_evidence": {
+        "band_class": "low_band",
+        "matched_detector_event": "92.775:1.000_DUAL_BAND_MAXIMA",
+        "onset_strength": 1.0
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    },
+    {
+      "master_time_s": 94.772,
+      "new_rule": "Keep only if full-motion playback confirms musical and performance continuity.",
+      "prior_action": "hold",
+      "revision": "PRESERVE_WITH_EXPRESSION_REVIEW",
+      "source_detector_evidence": {
+        "band_class": "high_band",
+        "matched_detector_event": "94.772:0.807",
+        "onset_strength": 0.807
+      },
+      "status": "PREPARED_NOT_RENDERED"
+    }
+  ],
+  "recorded_utc": "2026-09-27T16:17:09.295025+00:00",
+  "rendered": false,
+  "rules": {
+    "band_labels_as_kick_snare": false,
+    "effect_on_every_beat": false,
+    "every_fourth_beat_as_downbeat": false,
+    "full_24s_review_required_before_render": true,
+    "no_motion_across_cut": true,
+    "one_motion_event_at_a_time": true,
+    "vocal_expression_protected": true
+  },
+  "schema": "STRONGER_PERFORMANCE_ENERGY_V03_PREPARED",
+  "selection_by_ai": false,
+  "source_policy": "p0e4/evidence/native_caption_rhythm_parallel_v01_execution/agent2_rhythm/STRONGER_PERFORMANCE_ENERGY_V02.json",
+  "status": "PREPARED_NOT_RENDERED_WAITING_CAPTION_SELECTION"
+}

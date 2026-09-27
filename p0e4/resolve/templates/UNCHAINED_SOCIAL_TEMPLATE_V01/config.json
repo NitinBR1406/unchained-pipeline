@@ -1,0 +1,80 @@
+{
+  "cache_key_fields": [
+    "source_sha256",
+    "source_window",
+    "text",
+    "linebreaks",
+    "timing",
+    "font_file_sha256",
+    "font_style",
+    "size",
+    "position",
+    "color",
+    "template_sha256",
+    "platform_preset",
+    "render_contract"
+  ],
+  "canvas": {
+    "color": "Rec.2100 HLG",
+    "fps": 30,
+    "height": 1920,
+    "minimum_bit_depth": 10,
+    "width": 1080
+  },
+  "effects_default_enabled": false,
+  "face_mouth_exclusion_required": true,
+  "fonts": {
+    "Cinzel SemiBold": "059afc21ea38c3ac0aaab344fa2c96443dd5cba76ca87daddd7306bfc15881ef",
+    "Montserrat Medium": "f21bca5d2935b2cd626adea0de89a0671f52b02a352b64f960556356c1c20a4c"
+  },
+  "lyrics_may_be_invented": false,
+  "platform_presets_ref": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/PLATFORM_PREFLIGHT_SOURCE_V01.json",
+  "schema": "UNCHAINED_SOCIAL_TEMPLATE_V01",
+  "second_text_reuse_required": true,
+  "sections": [
+    {
+      "duration_s": [
+        2.5,
+        4.0
+      ],
+      "id": "HOOK",
+      "required": false,
+      "styles": [
+        "A_PERFORMANCE_HOOK"
+      ],
+      "text_class": "ORIGINAL_DRAFT_OR_VERIFIED_COPY"
+    },
+    {
+      "duration_s": [
+        3.0,
+        4.5
+      ],
+      "id": "TITLE_ARTIST",
+      "required": true,
+      "styles": [
+        "B_TITLE_HERO"
+      ],
+      "text_class": "VERIFIED_TITLE_AND_ARTIST"
+    },
+    {
+      "id": "SELECTIVE_LYRICS",
+      "required": false,
+      "text_class": "VERIFIED_LYRIC_AND_TIMING_ONLY",
+      "unverified_behavior": "OMIT"
+    },
+    {
+      "duration_s": [
+        1.0,
+        2.0
+      ],
+      "id": "ENDING",
+      "required": false,
+      "text_class": "VERIFIED_TITLE_ARTIST_OR_APPROVED_CTA"
+    }
+  ],
+  "source_window_s": [
+    72,
+    96
+  ],
+  "status": "PREPARED_WAITING_TREATMENT_SELECTION"
+}
