@@ -1,0 +1,39 @@
+{
+  "schema": "NITIN_V04_LIPSYNC_DEFECT_V01",
+  "recorded_utc": "2026-09-27T20:03:19.061Z",
+  "user_verbatim": "Lipsync klopt niet in het eerste deel",
+  "reported_by": "Nitin",
+  "candidate": {
+    "filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V04_REPAIR2_HLG.mp4",
+    "sha256": "18e367fbf89fd021e15c443bcb8717b1d48a8b2b834d81b99cecd01e9c07d25e"
+  },
+  "status": "NITIN_REPORTED_LIPSYNC_DEFECT_REQUIRES_DIAGNOSIS_AND_REPAIR",
+  "affected_window": {
+    "user_description": "eerste deel",
+    "precise_timecode": "UNKNOWN_DO_NOT_INVENT",
+    "inspection_scope": "Inspect entire opening and first take transitions; expand through full 20.7s to identify whether local, cut-specific or global."
+  },
+  "acceptance": {
+    "candidate_acceptable": false,
+    "prior_gemini_pass": "Retain historical result, but it is not sufficient for acceptance after Nitin reports visible mismatch.",
+    "audio_correlation_limit": "Programme audio matching MASTER2 does not prove correct alignment of picture or sung articulation."
+  },
+  "factory_work": [
+    "Inspect current source-bound Resolve timeline, exported V04 and original takes alongside authoritative MASTER2. Reproduce visible mouth/audio mismatch at normal speed and frame-by-frame. Do not infer a direction or correction magnitude without measurement.",
+    "Validate per-take source in/out points, offset sign, guide-audio alignment, timeline vs source frame rates, timestamps/variable-frame-rate handling and any conversion, cuts, drift and rendering retimes. Preserve frozen components; any proven frozen-component defect requires separate change control.",
+    "Compare multiple visible vocal articulations before and after each opening cut. Distinguish global audio offset from per-take offset or genuine performance mismatch. Do not apply a blanket audio shift merely because output audio correlation is high.",
+    "Correct narrowly in an isolated preview project. Keep MASTER2 and original sources unchanged; preserve existing color, branding, captions, musical endpoint and nonaffected timing where possible. If a take cannot be aligned across the phrase, use a demonstrably aligned alternative within existing source scope; document any take/cut change.",
+    "Produce focused before/after sync evidence with exact timecodes, measured frame/ms correction and remaining uncertainty. Check whole final output for regression; normal-speed perception is required in addition to waveform analysis. At 30fps one frame is approximately 33.33ms; this is not an automatic acceptance tolerance.",
+    "Render a new private candidate only after a defensible correction is established, retain V04, obtain fresh independent QC and return exact SHA-bound review link for Nitin's visual acceptance. Persist source/correction/render evidence in GitHub and assets on Shared Drive with readback."
+  ],
+  "execution_status": "DEFECT_RECORDED_LOCAL_DIAGNOSIS_NOT_STARTED_BY_THIS_SESSION",
+  "governance": {
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "master_state_promoted": false,
+    "history_rewritten": false
+  }
+}
