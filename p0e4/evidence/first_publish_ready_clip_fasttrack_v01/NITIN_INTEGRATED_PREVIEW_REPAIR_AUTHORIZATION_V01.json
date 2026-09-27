@@ -1,0 +1,38 @@
+{
+  "schema": "NITIN_INTEGRATED_PREVIEW_REPAIR_AUTHORIZATION_V01",
+  "recorded_utc": "2026-09-27T19:21:54.058Z",
+  "user_verbatim": "Ik ga mee met je voorstel.",
+  "decision_context": "Nitin accepts proposal to soften motion/recovery at excerpt 00:16–00:19 and choose a musically natural ending.",
+  "baseline": {
+    "review": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_v01/REVIEW_PACKAGE_V01.json",
+    "video_sha256": "0977c156388fb69b65ae8b521839198bf3d8ad26da71d50dd5075397be31271c",
+    "source_window_s": [
+      72,
+      96
+    ],
+    "color": "V06 provisional",
+    "brand_standard": "p0e4/branding/UNCHAINED_BRAND_STANDARD_V01.json"
+  },
+  "authorized_work": [
+    "Soften motion/recovery around excerpt 16–19s (MASTER2 88–91s). Inspect adjacent cut boundaries and transitions; adjust only what is necessary while preserving continuous musical energy, face readability and lipsync.",
+    "Choose nearest suitable musical phrase ending by listening and viewing authoritative MASTER2/takes. A bounded local trim/extension or natural audio/video tail is authorized for this short private candidate; exact 24s duration is no longer a hard requirement for this repair. Keep source start where practicable and avoid cutting a sung word or phrase. No full-master scope expansion.",
+    "Preserve branding, R2 caption size, fonts, existing hook/title and V06 baseline except ending timing needed for chosen endpoint. Preserve source audio identity and offsets; no source-master overwrite, time stretching or invented audio. Document any clip-level fade and new in/out points.",
+    "Review tail against actual source coverage and take sync. Retain brief brand outro timed to the natural endpoint; do not merely insert silence or a black tail to claim musical repair.",
+    "Render one new version in isolated Resolve project, retain baseline and exact hashes. Run full decode, HLG/10-bit checks, phone-size text/crop review and perceptual lipsync/motion/tail checks. Obtain fresh independent Gemini QC of exact output, reconcile disputed observations with evidence.",
+    "Persist new video, reusable configuration and QC in authoritative Shared Drive and repository with readback. Supply direct review link and concise before/after change report; finish at final video review, not publication."
+  ],
+  "autonomy": "Do not ask again for routine repair or a minor exact endpoint choice. Choose and document a suitable short-clip endpoint within this authorization; escalate only if material scope expansion or genuine access/governance gate prevents execution.",
+  "approval_scope": {
+    "repair_and_private_render_authorized": true,
+    "final_style_approval_inferred": false,
+    "NITIN_FINAL_ASSET_APPROVAL": false,
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "rights_clearance_inferred": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "state": "Additive authorization evidence only. Existing Master State ledger/pointer integrity hold remains; no promotion or history rewrite.",
+  "execution_status": "AUTHORIZATION_RECORDED_NOT_DISPATCHED_OR_RENDERED_BY_THIS_SESSION"
+}
