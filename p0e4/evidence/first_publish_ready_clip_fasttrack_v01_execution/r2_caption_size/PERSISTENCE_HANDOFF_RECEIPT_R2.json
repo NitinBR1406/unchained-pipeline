@@ -1,0 +1,76 @@
+{
+  "all_readback_verified": true,
+  "copy_mode": "COPY_NEVER_MOVE",
+  "destination_folder_id": "1bHaU4Ro9wErdcamcvsKmThiRhGM8L60f",
+  "destination_folder_url": "https://drive.google.com/drive/folders/1bHaU4Ro9wErdcamcvsKmThiRhGM8L60f",
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/STILL_TREATMENTS_R2_20260927",
+  "mappings": [
+    {
+      "bytes": 7798177,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/STILL_TREATMENTS_R2_20260927/A_PERFORMANCE_HOOK_R2_1080x1920.png",
+      "name": "A_PERFORMANCE_HOOK_R2_1080x1920.png",
+      "readback_sha256": "2aafb565aeb87e4691ffb0b83a7390dab909bfa90bbd931548198fea3179590a",
+      "readback_verified": true,
+      "sha256": "2aafb565aeb87e4691ffb0b83a7390dab909bfa90bbd931548198fea3179590a",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/first-publish-ready-clip-fasttrack-r2-v01/A_PERFORMANCE_HOOK_R2_1080x1920.png"
+    },
+    {
+      "bytes": 379646,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/STILL_TREATMENTS_R2_20260927/A_PERFORMANCE_HOOK_R2_360x640.png",
+      "name": "A_PERFORMANCE_HOOK_R2_360x640.png",
+      "readback_sha256": "3653dc5f41ff1cb1a796621fb1d697e9fd63b0a8a62dc74341f07a281c6a7fe0",
+      "readback_verified": true,
+      "sha256": "3653dc5f41ff1cb1a796621fb1d697e9fd63b0a8a62dc74341f07a281c6a7fe0",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/first-publish-ready-clip-fasttrack-r2-v01/A_PERFORMANCE_HOOK_R2_360x640.png"
+    },
+    {
+      "bytes": 7788663,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/STILL_TREATMENTS_R2_20260927/B_TITLE_HERO_R2_1080x1920.png",
+      "name": "B_TITLE_HERO_R2_1080x1920.png",
+      "readback_sha256": "4c22daf786151394df0a86515f042d1f4a6948084deec3c32a53f1678fa78ea0",
+      "readback_verified": true,
+      "sha256": "4c22daf786151394df0a86515f042d1f4a6948084deec3c32a53f1678fa78ea0",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/first-publish-ready-clip-fasttrack-r2-v01/B_TITLE_HERO_R2_1080x1920.png"
+    },
+    {
+      "bytes": 378254,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/STILL_TREATMENTS_R2_20260927/B_TITLE_HERO_R2_360x640.png",
+      "name": "B_TITLE_HERO_R2_360x640.png",
+      "readback_sha256": "a978477c8576f1cc1359a60232f09a1ffc255c0b285a5175216caa01ed6b97f6",
+      "readback_verified": true,
+      "sha256": "a978477c8576f1cc1359a60232f09a1ffc255c0b285a5175216caa01ed6b97f6",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/first-publish-ready-clip-fasttrack-r2-v01/B_TITLE_HERO_R2_360x640.png"
+    },
+    {
+      "bytes": 1875060,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/STILL_TREATMENTS_R2_20260927/A_PERFORMANCE_HOOK_R2_HLG.mp4",
+      "name": "A_PERFORMANCE_HOOK_R2_HLG.mp4",
+      "readback_sha256": "533b8e92ee164ed031af0044b678cbd4c8dc381b361be8323002dd16ef9f28f5",
+      "readback_verified": true,
+      "sha256": "533b8e92ee164ed031af0044b678cbd4c8dc381b361be8323002dd16ef9f28f5",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/first-publish-ready-clip-fasttrack-r2-v01/A_PERFORMANCE_HOOK_R2_HLG.mp4"
+    },
+    {
+      "bytes": 1875111,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/STILL_TREATMENTS_R2_20260927/B_TITLE_HERO_R2_HLG.mp4",
+      "name": "B_TITLE_HERO_R2_HLG.mp4",
+      "readback_sha256": "4263359974b4e7ef1d69b5d48df37434953adc4192f172ff28aa907c8c37c3f4",
+      "readback_verified": true,
+      "sha256": "4263359974b4e7ef1d69b5d48df37434953adc4192f172ff28aa907c8c37c3f4",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/first-publish-ready-clip-fasttrack-r2-v01/B_TITLE_HERO_R2_HLG.mp4"
+    },
+    {
+      "bytes": 96352,
+      "destination": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/STILL_TREATMENTS_R2_20260927/UNCHAINED_FIRST_PUBLISH_READY_CAPTION_STILLS_R2_V01.drp",
+      "name": "UNCHAINED_FIRST_PUBLISH_READY_CAPTION_STILLS_R2_V01.drp",
+      "readback_sha256": "1a2bc1e250cbd2ce80eaa1732a44b5dbca46f5c3a9e6920b66e5009f7241ebe4",
+      "readback_verified": true,
+      "sha256": "1a2bc1e250cbd2ce80eaa1732a44b5dbca46f5c3a9e6920b66e5009f7241ebe4",
+      "source": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/first-publish-ready-clip-fasttrack-r2-v01/UNCHAINED_FIRST_PUBLISH_READY_CAPTION_STILLS_R2_V01.drp"
+    }
+  ],
+  "r1_preserved": true,
+  "recorded_utc": "2026-09-27T17:04:09.336314+00:00",
+  "schema": "PERSISTENCE_HANDOFF_RECEIPT_R2",
+  "source_staging_untouched": true
+}

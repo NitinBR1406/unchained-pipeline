@@ -12,6 +12,21 @@ def load(path):
 
 
 class SocialTemplateV01Tests(unittest.TestCase):
+    def test_r2_is_about_twenty_percent_larger_and_preserves_clearance(self):
+        review = load(EVID / "r2_caption_size/CAPTION_TREATMENT_REVIEW_R2.json")
+        self.assertEqual(review["status"], "READY_FOR_NITIN_REVIEW")
+        self.assertEqual(review["comparison_controls"]["size_multiplier"], 1.2)
+        self.assertEqual(review["next_gate"], "NITIN_SELECTS_REVISED_TREATMENT_A_OR_B")
+        self.assertFalse(review["publication_authorized"])
+        for treatment in review["treatments"]:
+            self.assertEqual(treatment["mobile_visual_check"], "PASS_READABLE_AT_360X640")
+            self.assertEqual(treatment["face_mouth_exclusion"], "PASS_NO_TEXT_OVER_EYES_NOSE_MOUTH")
+            self.assertEqual(treatment["frame_edge_check"], "PASS_NO_CLIPPING")
+            for element in treatment["elements"]:
+                self.assertAlmostEqual(element["configured_size_change_percent"], 20.0, places=1)
+                self.assertGreaterEqual(element["rendered_width_change_percent"], 19.5)
+                self.assertLessEqual(element["rendered_width_change_percent"], 20.5)
+
     def test_caption_candidates_are_larger_native_and_mobile_reviewable(self):
         review = load(EVID / "CAPTION_TREATMENT_REVIEW_V01.json")
         self.assertEqual(review["status"], "READY_FOR_NITIN_REVIEW")

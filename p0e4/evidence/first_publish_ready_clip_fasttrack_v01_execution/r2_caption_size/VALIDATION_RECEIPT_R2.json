@@ -1,0 +1,13 @@
+{
+  "all_outputs_readback_verified": true,
+  "configured_size_multiplier": 1.2,
+  "face_mouth_clearance_pass": true,
+  "font_fallback_detected": false,
+  "integrated_24s_rendered": false,
+  "mobile_legibility_pass": true,
+  "publication_authorized": false,
+  "recorded_utc": "2026-09-27T17:04:09.336314+00:00",
+  "same_source_frame_crop_color": true,
+  "schema": "CAPTION_SIZE_R2_VALIDATION_RECEIPT",
+  "status": "GREEN_WAITING_CREATIVE_SELECTION"
+}

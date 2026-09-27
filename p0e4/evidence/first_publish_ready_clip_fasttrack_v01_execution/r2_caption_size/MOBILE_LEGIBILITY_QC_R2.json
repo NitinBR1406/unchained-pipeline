@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "eyes_obscured": false,
+    "face_subject_priority_preserved": true,
+    "frame_edges_clear": true,
+    "glyphs_clipped": false,
+    "mouth_obscured": false,
+    "nose_obscured": false,
+    "readable_at_actual_360x640": true
+  },
+  "inspection_assets": [
+    "A_PERFORMANCE_HOOK_R2_360x640.png",
+    "B_TITLE_HERO_R2_360x640.png"
+  ],
+  "limitations": [
+    "Creative preference remains Nitin-only.",
+    "Desktop PNG inspection is not calibrated HDR monitoring."
+  ],
+  "method": "Actual 360x640 downscale visually inspected against corresponding 1080x1920 render; TextPlus DoD retained for size verification.",
+  "recorded_utc": "2026-09-27T17:04:09.336314+00:00",
+  "schema": "MOBILE_LEGIBILITY_QC_R2",
+  "status": "PASS"
+}
