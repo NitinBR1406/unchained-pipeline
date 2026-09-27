@@ -1,0 +1,53 @@
+{
+  "schema": "DAILY_MASTER_VALIDATION_V01",
+  "source_commit": "73d6a61d2c5fb96f9f38899e02daa37fc8d97734",
+  "pointer_actual_sha256": "e35b1e49fb392ec5a6ffaf05f2558af4e8ce0a016ed7d8772d314b369915c70c",
+  "pointer_sidecar_expected_sha256": "57c0d9caa5c1cef2ea7961f74c2d293202f708aa8574c6fa5fb6e8b06d2f087d",
+  "pointer_sidecar_matches": false,
+  "pointer_target_sha256_matches": true,
+  "pointer_and_internal_version_match": true,
+  "ledger_record_count": 35,
+  "ledger_replay_error": "LedgerError: tamper detected at seq 31",
+  "malformed_event_indices": [
+    34
+  ],
+  "master_manifest": {
+    "path": "p0e4/evidence/continuous_rhythm_claude_reuse_v01_execution/SHA256SUMS.txt",
+    "entries_checked": 15,
+    "all_match": true
+  },
+  "v05_manifest": {
+    "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_lipsync_v05/SHA256SUMS.txt",
+    "sha256": "236636fb1c83ca3dfb8d0253519409b5b45381a85d1e8903c9d64d11c8bad0fb",
+    "entries_checked": 7,
+    "all_match": true,
+    "drive_copy_byte_identical": true
+  },
+  "targeted_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest p0e4.tests.test_social_template_v01 p0e4.tests.test_unchained_social_template_integrated_preview p0e4.tests.test_caption_kit p0e4.tests.test_state_update p0e4.tests.test_v1615_projection -q",
+    "passed": 12,
+    "failed": 0,
+    "scope": "Offline contracts and projections; not proof of V16.19 replay, calibrated HLG appearance or human lipsync acceptance."
+  },
+  "v05_technical_qc": {
+    "status": "GREEN",
+    "full_video_decode": "PASS",
+    "full_audio_decode": "PASS",
+    "frames": 621,
+    "black_segments": 0,
+    "audio_shift_ms": 0,
+    "opening_source_slip_only": true
+  },
+  "governance_invariants": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "frozen_P0_E0_E1_E2_E3_modified": false
+  },
+  "state_lineage_as_registered": {
+    "parent_version": 40,
+    "engineering_transition_count": 31,
+    "engineering_ledger_head_hash": "a6b3c0afabf7385f583e6d68d8e80a3e7f12d4360e899b372019ee9e600fd35c",
+    "parent_sha256": "39c93122ced4e4592d6ea2068796fdae7709138cf2f01155a94a4ec30e5b2d3c"
+  }
+}

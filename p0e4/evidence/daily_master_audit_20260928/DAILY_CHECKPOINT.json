@@ -1,0 +1,149 @@
+{
+  "schema": "DAILY_MASTER_RECONCILIATION_V01",
+  "date": "2026-09-28",
+  "timezone": "Europe/Amsterdam",
+  "observed_at": "2026-09-27T23:44:13.160496+00:00",
+  "branch": "p0e4/slice1-production-handoff",
+  "source_commit": "73d6a61d2c5fb96f9f38899e02daa37fc8d97734",
+  "result": "NO_MASTER_TRANSITION_INTEGRITY_HOLD",
+  "registered_master_version": "V16.19",
+  "registered_state_version": 45,
+  "master_pointer_unchanged": true,
+  "master_state_written": false,
+  "master_replay_verified": false,
+  "milestone_advanced": false,
+  "changes_since_previous_daily_checkpoint": [
+    "Fourteen newer remote commits were reconciled after the 2026-09-27 checkpoint; branch HEAD is now 73d6a61d2c5fb96f9f38899e02daa37fc8d97734.",
+    "Official Cinzel and Montserrat fonts were recovered and activated, Resolve rendering recovered, and the previously reported font and Resolve blockers are superseded by rendered evidence.",
+    "Nitin approved the fixed Unchained Nitin brand direction and the bounded integrated-preview repair, but explicitly rejected V04 opening lipsync; that human rejection overrides prior automated PASS evidence.",
+    "V05 applies a one-frame (+33.333333 ms) source slip only to IMG_5741.MOV during 00:00.000-00:02.966667; programme audio, cuts, captions, branding, colour and improved endpoint remain unchanged.",
+    "V05 technical QC is GREEN and independent Gemini comparative QC reports AFTER_VISIBLE_BETTER/PASS; neither substitutes for Nitin visual acceptance.",
+    "The V05 candidate, before/after comparison, ProRes mezzanine, Resolve project, templates and evidence are present in Shared Drive with a readback manifest; the Drive evidence SHA256SUMS is byte-identical to GitHub."
+  ],
+  "proven_results": [
+    "The V05 seven-entry repository SHA256SUMS verifies completely.",
+    "The registered V16.19 fifteen-entry evidence manifest verifies completely and its state target SHA-256 matches the pointer.",
+    "Twelve targeted offline tests pass for state projection, caption kit, social template and integrated preview contracts.",
+    "V05 fully decodes 621 video frames and complete audio at 1080x1920, 30 fps, HEVC Main 10, BT.2020/HLG, with zero black segments.",
+    "Live Shared Drive listing confirms the V05 review folder and seven top-level items; its EVIDENCE folder contains eight expected evidence files."
+  ],
+  "blockers": [
+    "Project ledger still fails tamper verification at zero-based seq 31; record 34 remains malformed; MASTER_STATE_LATEST.sha256 remains stale.",
+    "V05 is not human-approved: NITIN_V05_LIPSYNC_VISUAL_ACCEPTANCE remains open.",
+    "Composition/publishing, synchronization/publication permissions and required contributor credits remain undocumented in the current rights evidence.",
+    "Final video approval, publish approval and production deployment authorization remain false."
+  ],
+  "human_gates": [
+    "Nitin visually accepts or rejects V05 opening lipsync at normal speed.",
+    "NITIN_FINAL_VIDEO_APPROVAL for the exact accepted file.",
+    "Rights/credits clearance followed by separate NITIN_PUBLISH_APPROVAL; deployment remains separately unauthorized."
+  ],
+  "next_ready_action": {
+    "status": "WAITING_FOR_NITIN_V05_LIPSYNC_VISUAL_ACCEPTANCE",
+    "action": "Nitin reviews the V05 candidate and the normal-speed first-six-second before/after comparison; record accept or reject against candidate SHA-256 a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a.",
+    "review_folder_url": "https://drive.google.com/drive/folders/1EPrCoYffE2RIdXc8Pku2jLEv-y28BHBO",
+    "audit_parallel_action": "Prepare an additive ledger/pointer integrity recovery proposal through the existing reducer without rewriting frozen history.",
+    "this_run_scope": "Status/evidence reconciliation only; no production render, publication or deployment."
+  },
+  "lessons_learned": [
+    "Human visual rejection overrides prior automated lipsync PASS evidence.",
+    "A bounded per-take frame slip can repair a local opening defect without moving the programme audio or later cuts.",
+    "Technical GREEN and independent AI PASS establish review readiness, not final creative or publication approval.",
+    "Cloud presence is not byte proof; use the Drive readback manifest and exact evidence-manifest comparison.",
+    "New additive production evidence does not justify Master State promotion while the registered ledger and pointer sidecar fail integrity checks."
+  ],
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "HLG_native_BT2020_minimum_10bit_preserved": true,
+    "full_Dolby_Vision_display_identity_claimed": false,
+    "frozen_P0_E0_E1_E2_E3_modified": false,
+    "publications": 0,
+    "deployments": 0,
+    "full_master_rendered": false
+  },
+  "instructions_check": "No AGENTS.md found in the tracked checkout or workspace ancestors.",
+  "drive_reconciliation_ref": "DRIVE_RECONCILIATION.json",
+  "validation_ref": "VALIDATION.json",
+  "project_memory": "PROJECT_NOTES_V04.json is a versioned repository handover supplement; no ChatGPT memory write was available or claimed.",
+  "source_refs": [
+    {
+      "path": "p0e4/MASTER_STATE_LATEST.json",
+      "git_blob_sha": "74bf701cb9db77404f6c3097c27f19d3df81d3fd",
+      "sha256": "e35b1e49fb392ec5a6ffaf05f2558af4e8ce0a016ed7d8772d314b369915c70c"
+    },
+    {
+      "path": "p0e4/MASTER_STATE_LATEST.sha256",
+      "git_blob_sha": "e159fb7390221d00567737307253c0561b60feb0",
+      "sha256": "83688752202b9b354acff4282be95ffa7096287f7961aa5a564fcfcf68c7183c"
+    },
+    {
+      "path": "p0e4/evidence/continuous_rhythm_claude_reuse_v01_execution/UNCHAINED_MASTER_PROJECT_STATE_V16_19.json",
+      "git_blob_sha": "86f7f99e49c200176cf979a96038159cf4421348",
+      "sha256": "e25717a8a74a243c18916d5beadce7c9b72341d7d65af779518bfffc1756d55f"
+    },
+    {
+      "path": "p0e4/evidence/continuous_rhythm_claude_reuse_v01_execution/ENGINEERING_EVENT_LEDGER.jsonl",
+      "git_blob_sha": "fca8346ae9193276c19648ee2ab256973d3f1ac6",
+      "sha256": "7c9b1ff4b674ff36e52e721993d54a5967c7a3dc5bb189d8d60c95960a0d8cc7"
+    },
+    {
+      "path": "p0e4/evidence/daily_master_audit_20260927/DAILY_CHECKPOINT.json",
+      "git_blob_sha": "6d94f3498c693bef77c6ab44717978902b609b17",
+      "sha256": "420f5347c78079711f847307159f4239163e899ff52c6015123786865233c595"
+    },
+    {
+      "path": "p0e4/evidence/daily_master_audit_20260927/PROJECT_NOTES_V03.json",
+      "git_blob_sha": "a363d0b9dfde6ff363f8b1bd4be8a32d4f60e407",
+      "sha256": "2aec8b55bcff5ace1e760f9335cf45fae1833768c394a4cb38dbaff334eaeb93"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01/NITIN_V04_LIPSYNC_DEFECT_V01.json",
+      "git_blob_sha": "e7631b2b128f07a658fb19fcaee0988be422e9cf",
+      "sha256": "6156312f65692cb5562790dc3fdc6111b6c51a4013e689cbb96334822ebee6ba"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_lipsync_v05/DIAGNOSIS_RECEIPT_V01.json",
+      "git_blob_sha": "07e2a15a7c001bac837b35487961919904492222",
+      "sha256": "b27be6386e60e96cac45602ca3c12654cd2826f431da5c2d0bc20bfec59f94fa"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_lipsync_v05/EXECUTION_RECEIPT_V01.json",
+      "git_blob_sha": "9a12d5cd8c401960640bc393c0bfb450344ae0f6",
+      "sha256": "532c749ee9677eb117bd2e42b01b4710e6c7ec70ca23d6dbab3f078a1f1fa274"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_lipsync_v05/TECHNICAL_QC_V01.json",
+      "git_blob_sha": "9d339b951fb7ab2b81e1de6fda50c1a2b444d959",
+      "sha256": "ebb4de00dd5f78824830313001a44efad1f56bdbf71ab010fc7f1d99688ece7d"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_lipsync_v05/GEMINI_INDEPENDENT_QC_V01.json",
+      "git_blob_sha": "b1e4dbc8c6357a6335bd7c40008e1ff698b3ebcb",
+      "sha256": "68dee91a254b21b48a06e880a7afcf4eb37b1382e6a59f00e031dedc3841f7d2"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_lipsync_v05/REVIEW_PACKAGE_V01.json",
+      "git_blob_sha": "4510a72be0a5b388700011e94512fb105a827cde",
+      "sha256": "42257e3b2fc1ec5048f86392fee87af78e517d8cc03d77da243f9353dcb794ae"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_lipsync_v05/NEXT_READY.json",
+      "git_blob_sha": "599abf4a84ebdb0cbaed3afca0f0570239a12421",
+      "sha256": "ad26b151278a7a638571114017506edce4d33ae53010c4ddfbc1365115826c73"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_lipsync_v05/PERSISTENCE_HANDOFF_RECEIPT_V01.json",
+      "git_blob_sha": "1582842ff5c71da7234543a6a07960a077dc3b4c",
+      "sha256": "b6a3b6389c5bf2383d278cf8cffd078523c52ac0d8c1fd7bfeae0b62f4e96798"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_lipsync_v05/SHA256SUMS.txt",
+      "git_blob_sha": "470acb23955a6f526e2686caa1d1268e63fa4d6c",
+      "sha256": "236636fb1c83ca3dfb8d0253519409b5b45381a85d1e8903c9d64d11c8bad0fb"
+    }
+  ]
+}

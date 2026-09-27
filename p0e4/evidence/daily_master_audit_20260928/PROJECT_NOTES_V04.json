@@ -1,0 +1,37 @@
+{
+  "schema": "PROJECT_NOTES_V04",
+  "date": "2026-09-28",
+  "source_commit": "73d6a61d2c5fb96f9f38899e02daa37fc8d97734",
+  "authority": "Subordinate to source state/evidence; supplements immutable prior project notes. Not a Master State promotion.",
+  "supplements": "p0e4/evidence/daily_master_audit_20260927/PROJECT_NOTES_V03.json",
+  "summary": "Integrated branded preview is now V05 after a bounded opening lipsync repair. Technical QC and Gemini comparative QC pass, but Nitin visual acceptance and rights/credits clearance remain open. V16.19 / 45 remains registered under the unchanged integrity hold.",
+  "changes": [
+    "Font and Resolve recovery are evidenced; caption, rhythm and branding previews were rendered.",
+    "Nitin rejected V04 opening lipsync after automated QC had passed.",
+    "V05 slips only the opening IMG_5741.MOV source by one 30 fps frame; audio and all later edit decisions remain unchanged.",
+    "V05 is persisted to Shared Drive and is review-ready, not final-approved or publication-ready."
+  ],
+  "blockers": [
+    "Ledger tamper failure at seq 31, malformed record 34 and stale pointer checksum sidecar.",
+    "NITIN_V05_LIPSYNC_VISUAL_ACCEPTANCE.",
+    "Rights and required contributor credits remain undocumented.",
+    "Final video, publication and deployment approvals remain false."
+  ],
+  "human_gates": [
+    "Nitin accepts or rejects V05 at normal speed.",
+    "Exact-file final video approval.",
+    "Rights/credits clearance and separate publish approval."
+  ],
+  "next_ready_action": {
+    "status": "WAITING_FOR_NITIN_V05_LIPSYNC_VISUAL_ACCEPTANCE",
+    "candidate_sha256": "a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a",
+    "review_folder_url": "https://drive.google.com/drive/folders/1EPrCoYffE2RIdXc8Pku2jLEv-y28BHBO"
+  },
+  "lessons_learned": [
+    "Human visual review is the controlling creative gate.",
+    "Per-take source slips must not be confused with global audio shifts.",
+    "A review-ready preview does not satisfy rights, final video or publication gates."
+  ],
+  "chatgpt_memory_updated": false,
+  "source_refs": "See DAILY_CHECKPOINT.json for exact Git blob and SHA-256 references."
+}

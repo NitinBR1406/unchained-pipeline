@@ -1,0 +1,13 @@
+{
+  "schema": "CHECKPOINT_REPLAY_V01",
+  "scope": "Independent audit checkpoint continuation only, NOT project Master State replay.",
+  "source_commit": "73d6a61d2c5fb96f9f38899e02daa37fc8d97734",
+  "prior_ledger_path": "p0e4/evidence/daily_master_audit_20260927/CHECKPOINT_EVENT_LEDGER.jsonl",
+  "prior_ledger_sha256": "0624f8dbdf0b3171ee10effde894000c083bc5e339a576db320cefe7e7ab4c2c",
+  "prior_bytes_preserved": true,
+  "event_contracts_and_input_hashes_valid": true,
+  "ledger_head_hash": "610aebe4c63b89ef50c4a6d00d9c97e6f27da1127123537dee029d3d2a54da3f",
+  "reducer_state_version": 3,
+  "verified": true,
+  "detail": "OK"
+}

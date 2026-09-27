@@ -1,0 +1,54 @@
+{
+  "schema": "TARGETED_DRIVE_RECONCILIATION_V01",
+  "observed_at": "2026-09-27T23:44:13.160496+00:00",
+  "drive": "Unchained Nitin — Master",
+  "drive_id": "0AG0CqqUZ6YuXUk9PVA",
+  "folder": {
+    "id": "1EPrCoYffE2RIdXc8Pku2jLEv-y28BHBO",
+    "name": "INTEGRATED_PREVIEW_LIPSYNC_V05_20260928",
+    "url": "https://drive.google.com/drive/folders/1EPrCoYffE2RIdXc8Pku2jLEv-y28BHBO",
+    "parent_id": "11We43D6xqqDtKVVjC1uJvOg-fIr-Z6ro"
+  },
+  "live_listing": {
+    "top_level_item_count": 7,
+    "evidence_item_count": 8,
+    "candidate": {
+      "id": "1RUhbmiE0WRrRdE5gas01B0NGwdWpPPOe",
+      "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V05_LIPSYNC_HLG.mp4",
+      "size_bytes": 23006732,
+      "sha256_from_readback_manifest": "a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a"
+    },
+    "comparison": {
+      "id": "17AuL3dMaBfONH46TrzmLpBGMAahWY2hx",
+      "name": "LIPSYNC_BEFORE_AFTER_00_06.mp4",
+      "size_bytes": 4579424,
+      "sha256_from_readback_manifest": "dc4956269369a9fa6cfcdf9874d2be07bd8a17a44ad41b40205f2851d376298c"
+    },
+    "prores": {
+      "id": "17QhmfBzNQ499wk1vZ9uaPb6NRzOppVZG",
+      "size_bytes": 549332238,
+      "sha256_from_readback_manifest": "61c28121a00bee6a6214d8f69a11fb6142f4dea850f4d1104d2c0e8cde796a3f"
+    },
+    "resolve_project": {
+      "id": "1jnYUMJxmtfxei0xGswE7HvCx7o1c0ooA",
+      "size_bytes": 136492,
+      "sha256_from_readback_manifest": "bb63bee2dbc46cb17ff1a8e0dbbe3c39e0a2a779477a3a3b6aec4432c5873e1b"
+    }
+  },
+  "readback_manifest": {
+    "id": "13BJFI80e_kLmXCuymb4EPOjzbR-jPg0b",
+    "url": "https://drive.google.com/file/d/13BJFI80e_kLmXCuymb4EPOjzbR-jPg0b/view?usp=drivesdk",
+    "sha256_from_repository_receipt": "b7829346db5c50bcd4013bca86501d98df41e6c6c1ef54d43c6018236ad3db44",
+    "candidate_and_comparison_readback_equal": true
+  },
+  "evidence_manifest": {
+    "id": "1EnujIktdDHN4zUEhIADJH029vcheHyuQ",
+    "url": "https://drive.google.com/file/d/1EnujIktdDHN4zUEhIADJH029vcheHyuQ/view?usp=drivesdk",
+    "size_bytes": 646,
+    "sha256": "236636fb1c83ca3dfb8d0253519409b5b45381a85d1e8903c9d64d11c8bad0fb",
+    "byte_identical_to_repository": true,
+    "entries_verified_in_repository": 7
+  },
+  "result": "V05 review package exists in Shared Drive and its evidence manifest exactly matches the repository. Media hashes are grounded in the Drive readback manifest; no media download or re-render was performed.",
+  "scope_limit": "Targeted read-only listing and manifest comparison; not exhaustive Shared Drive inventory or calibrated media review. No Drive write."
+}
