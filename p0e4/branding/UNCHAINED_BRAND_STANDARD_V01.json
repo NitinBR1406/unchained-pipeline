@@ -1,0 +1,101 @@
+{
+  "schema": "UNCHAINED_BRAND_STANDARD_V01",
+  "version": 1,
+  "recorded_utc": "2026-09-27T17:14:13.542Z",
+  "status": "NITIN_AGREED_BRAND_DIRECTION_IMPLEMENTATION_PENDING",
+  "decision": {
+    "user_verbatim": "Oké laten we dit vastleggen",
+    "context": "Response to proposed unified brand standard for every post; A and B are applications of one house style.",
+    "scope": "Record agreed brand direction and apply to reusable templates. No approval of unrendered assets, exact design parameters or publication.",
+    "source": "Direct Nitin message in this conversation, 2026-09-27 19:13 Europe/Amsterdam"
+  },
+  "identity": {
+    "artist_name": "UNCHAINED NITIN",
+    "tagline": "THE INDESTRUCTIBLE VOICE",
+    "positioning": "A Western Sound with Eastern Soul",
+    "ambition": "WORLDWIDE",
+    "positioning_usage": "Bio, campaign copy and longer closing variants; do not stack every slogan on each video."
+  },
+  "visual": {
+    "palette": {
+      "direction": [
+        "deep black",
+        "warm metallic gold",
+        "clear white"
+      ],
+      "exact_values": "Resolve from authoritative existing brand assets; record color-space-aware values and validate in actual HLG output. No newly invented hex values treated as approved."
+    },
+    "typography": {
+      "brand_and_song_title": "Cinzel SemiBold",
+      "hooks_and_lyrics": "Montserrat Medium",
+      "supporting_copy": "Montserrat Regular or Medium where hierarchy requires",
+      "silent_font_fallback": false,
+      "size_baseline": "R2 enlarged typography as starting point; verify real glyph dimensions and mobile readability per layout, not a universal fixed size."
+    },
+    "logo": {
+      "full_lockup": "Reuse existing authoritative full lockup; verify original file and provenance/hash. Do not recreate or falsely claim verification.",
+      "monogram": "Existing UN monogram only at intro/outro",
+      "continuous_watermark_required": false
+    },
+    "motion": "Musically timed text entrances and continuous rhythmic performance editing; effect strength and exact motion settings remain reviewable."
+  },
+  "post_structure": {
+    "opening": "Performance starts immediately with short hook or song title; no prolonged logo intro.",
+    "performance": "Selective large captions; preserve face, mouth, expression and performance-first composition. Do not require continuous captions.",
+    "ending": "Short consistent full lockup/brand ending with UNCHAINED NITIN and THE INDESTRUCTIBLE VOICE.",
+    "cover": "Consistent song-title/brand-lockup composition, adapted to target crop.",
+    "static_posts": "Apply same palette, typography and verified lockup; intro/outro rules apply only to moving media."
+  },
+  "template_roles": {
+    "A_PERFORMANCE_HOOK_R2": "Emotional opening option",
+    "B_TITLE_HERO_R2": "Title/cover option",
+    "relationship": "Complementary components of same house style, not competing brand identities.",
+    "exact_copy_timing_and_combination": "Not yet final-asset approved; demonstrate in integrated preview."
+  },
+  "implementation_contract": {
+    "source_template": "p0e4/resolve/templates/UNCHAINED_SOCIAL_TEMPLATE_V01/config.json",
+    "required_controls": [
+      "brand_standard_version",
+      "logo_file_sha256",
+      "font_file_sha256",
+      "colors_and_color_space",
+      "text",
+      "sizes",
+      "positions",
+      "safe_zone_preset",
+      "entrance_and_exit_timing",
+      "ending_duration"
+    ],
+    "per_post_variables": [
+      "performance footage",
+      "song title",
+      "approved hook or post text",
+      "verified lyrics and timing",
+      "platform crop/safe zones"
+    ],
+    "required_qc": [
+      "Correct name/tagline and verified lockup",
+      "Mobile legibility and no face/mouth obstruction",
+      "Platform-specific safe areas verified; do not equate generic margins with platform compliance",
+      "HLG/10-bit and exact source/color binding preserved for current Aakhri workflow",
+      "Cache invalidation includes brand standard, logo/font hashes and styling",
+      "Review actual integrated output before final approval"
+    ],
+    "next_action": "Local factory: resolve authoritative logo and exact palette, bind this versioned standard to template/config, demonstrate complete branding in bounded Aakhri preview. Reuse R2 components and existing audio/footage. Persist assets on authoritative Shared Drive and code/evidence in GitHub with readback. No new purchases, frozen-component changes or full-master render."
+  },
+  "governance": {
+    "master_state_updated": false,
+    "reason": "Existing ledger/reducer and pointer integrity hold; this is additive brand decision evidence, not Master State promotion.",
+    "NITIN_FINAL_ASSET_APPROVAL": false,
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "execution": {
+    "standard_recorded": true,
+    "template_implementation_complete": false,
+    "integrated_branded_preview_rendered": false
+  }
+}
