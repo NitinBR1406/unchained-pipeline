@@ -38,10 +38,10 @@
   },
   "integrated_preview_contract": "integrated_preview_v01.json",
   "latest_private_instance": {
-    "candidate_sha256": "18e367fbf89fd021e15c443bcb8717b1d48a8b2b834d81b99cecd01e9c07d25e",
+    "candidate_sha256": "a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a",
     "default_effects_enabled": false,
     "effects_enabled_for_instance": true,
-    "status": "PRIVATE_REVIEW_TECHNICAL_GREEN_GEMINI_PASS_WAITING_NITIN"
+    "status": "PRIVATE_REVIEW_LIPSYNC_REPAIRED_TECHNICAL_GREEN_GEMINI_PASS_WAITING_NITIN"
   },
   "lyrics_may_be_invented": false,
   "platform_presets_ref": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/PLATFORM_PREFLIGHT_SOURCE_V01.json",

@@ -1,0 +1,16 @@
+{
+  "schema": "UNCHAINED_SOCIAL_TEMPLATE_INTEGRATED_PREVIEW_LIPSYNC_V05",
+  "inherits": "integrated_preview_repair_v04.json",
+  "candidate_sha256": "a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a",
+  "opening_sync_repair": {
+    "take": "IMG_5741.MOV",
+    "timeline_frames": [0, 89],
+    "before_source_frames": [2221, 2310],
+    "after_source_frames": [2222, 2311],
+    "slip_source_frames": 1,
+    "slip_ms_at_30fps": 33.333333,
+    "audio_shift_ms": 0
+  },
+  "unchanged": ["programme_audio", "cut_positions", "captions", "branding", "V06_color", "motion_after_first_take", "92.70s_endpoint", "0.20s_end_fade"],
+  "cache_invalidation_additions": ["per_take_source_in_out_frames", "opening_lipsync_correction"]
+}

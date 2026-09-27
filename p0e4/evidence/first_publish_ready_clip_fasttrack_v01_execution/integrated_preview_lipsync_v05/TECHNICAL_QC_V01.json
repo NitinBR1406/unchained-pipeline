@@ -1,0 +1,11 @@
+{
+  "schema": "OPENING_LIPSYNC_REPAIR_TECHNICAL_QC_V01",
+  "candidate_sha256": "a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a",
+  "status": "GREEN",
+  "full_video_decode": "PASS",
+  "full_audio_decode": "PASS",
+  "black_segments": 0,
+  "properties": {"resolution":"1080x1920","fps":"30/1","frames":621,"duration_s":20.7,"video":"HEVC Main 10 yuv420p10le","color_primaries":"bt2020","color_transfer":"arib-std-b67","color_space":"bt2020nc","audio":"AAC LC 48000Hz stereo"},
+  "timeline_regression": {"opening_source_slip_only":true,"audio_shift_ms":0,"cuts_changed":false,"captions_branding_ending_changed":false},
+  "sync_acceptance": "Measured one-frame local correction plus normal-speed comparative review; sub-frame perfection is not claimed."
+}

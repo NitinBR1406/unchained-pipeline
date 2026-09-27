@@ -1,0 +1,18 @@
+{
+  "schema": "PERSISTENCE_HANDOFF_RECEIPT_V01",
+  "status": "COPIED_NON_DESTRUCTIVELY_READBACK_SHA256_GREEN",
+  "destination": {
+    "drive": "Unchained Nitin — Master",
+    "folder_id": "1EPrCoYffE2RIdXc8Pku2jLEv-y28BHBO",
+    "path": "P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/INTEGRATED_PREVIEW_LIPSYNC_V05_20260928",
+    "url": "https://drive.google.com/drive/folders/1EPrCoYffE2RIdXc8Pku2jLEv-y28BHBO"
+  },
+  "initial_readback_manifest": {
+    "file_id": "13BJFI80e_kLmXCuymb4EPOjzbR-jPg0b",
+    "url": "https://drive.google.com/file/d/13BJFI80e_kLmXCuymb4EPOjzbR-jPg0b/view?usp=drivesdk",
+    "sha256": "b7829346db5c50bcd4013bca86501d98df41e6c6c1ef54d43c6018236ad3db44"
+  },
+  "candidate_and_comparison_readback_equal": true,
+  "source_staging_untouched": true,
+  "publication_authorized": false
+}

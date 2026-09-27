@@ -1,0 +1,18 @@
+{
+  "schema": "GEMINI_INDEPENDENT_OPENING_LIPSYNC_QC_V01",
+  "context_url": "https://gemini.google.com/app/ddc3f683f7c68854",
+  "attachments_fully_available": true,
+  "candidate_sha256": "a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a",
+  "comparison_sha256": "dc4956269369a9fa6cfcdf9874d2be07bd8a17a44ad41b40205f2851d376298c",
+  "verdict": "PASS",
+  "comparative_result": "AFTER_VISIBLE_BETTER",
+  "timecoded_findings": [
+    {"timecode":"00:00.95-00:01.35","finding":"V05 mouth release is closer to the audible Mi- transient than V04."},
+    {"timecode":"00:01.40-00:02.30","finding":"V05 jaw expansion tracks the sustained vowel more tightly."},
+    {"timecode":"00:02.80-00:02.97","finding":"V05 outgoing articulation continues cleanly into the unchanged first cut."},
+    {"timecode":"00:07.50-00:16.80","finding":"No later cumulative lipsync drift was observed."},
+    {"timecode":"00:16.80-00:20.70","finding":"Outro articulation and natural fade remained intact."}
+  ],
+  "other_qc": "No black frames, dropped cadence, edge tearing, caption instability or branding collision reported.",
+  "limitations": ["Compressed browser proxy cannot certify sub-frame phase alignment.","Browser display cannot certify calibrated HLG/BT.2020 appearance."]
+}

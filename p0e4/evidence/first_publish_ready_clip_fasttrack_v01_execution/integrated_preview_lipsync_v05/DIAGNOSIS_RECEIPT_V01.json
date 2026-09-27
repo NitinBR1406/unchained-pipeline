@@ -1,0 +1,22 @@
+{
+  "schema": "OPENING_LIPSYNC_DIAGNOSIS_RECEIPT_V01",
+  "defect_report": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01/NITIN_V04_LIPSYNC_DEFECT_V01.json",
+  "baseline_sha256": "18e367fbf89fd021e15c443bcb8717b1d48a8b2b834d81b99cecd01e9c07d25e",
+  "finding": "LOCAL_FIRST_TAKE_SOURCE_FRAME_QUANTIZATION",
+  "source": {
+    "take": "IMG_5741.MOV",
+    "nominal_fps": 29.983623504638672,
+    "timeline_fps": 30,
+    "authoritative_global_offset_ms": -2044,
+    "v04_source_start_frame": 2221,
+    "v04_reported_source_start_s": 74.03333333333333
+  },
+  "local_measurements": {
+    "guide_audio_envelope_best_residual_ms_before": -15.0,
+    "band_limited_waveform_best_residual_ms_before": -29.0,
+    "second_take_first_cut_residual_ms": 0.25,
+    "interpretation": "The first take picture/guide articulation leads MASTER2 locally; the next representable video correction is +1 source frame. The second opening take does not justify adjustment."
+  },
+  "rejected_repairs": ["blanket programme-audio shift", "global offset sign reversal", "moving the first cut", "retiming or time stretching"],
+  "remaining_measurement_uncertainty": "Guide/master signals differ acoustically; residual values support frame direction and bounded magnitude, not sub-frame certification."
+}

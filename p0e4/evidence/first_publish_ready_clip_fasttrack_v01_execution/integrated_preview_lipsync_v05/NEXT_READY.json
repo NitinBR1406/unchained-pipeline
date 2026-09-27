@@ -1,0 +1,11 @@
+{
+  "schema": "NEXT_READY_V01",
+  "status": "WAITING_FOR_NITIN_V05_LIPSYNC_VISUAL_ACCEPTANCE",
+  "candidate_sha256": "a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a",
+  "technical_qc": "GREEN",
+  "independent_gemini_qc": "PASS",
+  "smallest_human_gate": "Nitin visually accepts or rejects the repaired opening lipsync at normal speed.",
+  "master_state_promoted": false,
+  "master_state_reason": "Known ledger/pointer integrity hold remains; additive evidence only.",
+  "publication_authorized": false
+}

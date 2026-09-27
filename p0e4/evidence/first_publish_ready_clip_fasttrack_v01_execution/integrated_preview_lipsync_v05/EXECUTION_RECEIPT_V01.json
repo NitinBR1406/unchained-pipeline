@@ -1,0 +1,11 @@
+{
+  "schema": "OPENING_LIPSYNC_REPAIR_EXECUTION_RECEIPT_V01",
+  "candidate": {"name":"AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V05_LIPSYNC_HLG.mp4","sha256":"a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a","duration_s":20.7},
+  "correction": {"take":"IMG_5741.MOV","timeline_window_s":[0.0,2.966667],"source_slip_frames":1,"source_slip_ms":33.333333,"before_source_frames":[2221,2310],"after_source_frames":[2222,2311]},
+  "before_after": {"name":"LIPSYNC_BEFORE_AFTER_00_06.mp4","sha256":"dc4956269369a9fa6cfcdf9874d2be07bd8a17a44ad41b40205f2851d376298c","speed":"NORMAL","audio":"V05 programme audio"},
+  "resolve_project_sha256": "bb63bee2dbc46cb17ff1a8e0dbbe3c39e0a2a779477a3a3b6aec4432c5873e1b",
+  "prores_sha256": "61c28121a00bee6a6214d8f69a11fb6142f4dea850f4d1104d2c0e8cde796a3f",
+  "unchanged": ["MASTER2 bytes and placement","all timeline cuts","Fusion caption composition","V06 LUT","branding","motion outside first source slip","improved musical endpoint and fade"],
+  "full_master_rendered": false,
+  "publication_authorized": false
+}
