@@ -1,4 +1,9 @@
 {
+  "brand_binding": {
+    "logo_sha256": "c72f13fb2b0a684eff37e6294afb68704ba821fa4d528a41839f09ecdaf3c921",
+    "sha256": "2c9875b83c9385e5ae8b5bbc262e6050eba2cdd5cc9e2faed34ddffbd388e7f3",
+    "standard": "UNCHAINED_BRAND_STANDARD_V01"
+  },
   "cache_key_fields": [
     "source_sha256",
     "source_window",
@@ -12,7 +17,11 @@
     "color",
     "template_sha256",
     "platform_preset",
-    "render_contract"
+    "render_contract",
+    "brand_standard_sha256",
+    "logo_sha256",
+    "rhythm_event_schedule",
+    "effect_strength"
   ],
   "canvas": {
     "color": "Rec.2100 HLG",
@@ -26,6 +35,13 @@
   "fonts": {
     "Cinzel SemiBold": "059afc21ea38c3ac0aaab344fa2c96443dd5cba76ca87daddd7306bfc15881ef",
     "Montserrat Medium": "f21bca5d2935b2cd626adea0de89a0671f52b02a352b64f960556356c1c20a4c"
+  },
+  "integrated_preview_contract": "integrated_preview_v01.json",
+  "latest_private_instance": {
+    "candidate_sha256": "0977c156388fb69b65ae8b521839198bf3d8ad26da71d50dd5075397be31271c",
+    "default_effects_enabled": false,
+    "effects_enabled_for_instance": true,
+    "status": "PRIVATE_REVIEW_REPAIR_RECOMMENDED"
   },
   "lyrics_may_be_invented": false,
   "platform_presets_ref": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/PLATFORM_PREFLIGHT_SOURCE_V01.json",
@@ -76,5 +92,5 @@
     72,
     96
   ],
-  "status": "PREPARED_WAITING_TREATMENT_SELECTION"
+  "status": "REUSABLE_TEMPLATE_EXERCISED_WITH_PRIVATE_INTEGRATED_PREVIEW"
 }

@@ -1,0 +1,78 @@
+{
+  "candidate": {
+    "drive_url": "https://drive.google.com/drive/folders/18QuRSbcf6gNxoOchwoYpAcxZbP0ANJFM",
+    "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V02_72_96_HLG.mp4",
+    "sha256": "0977c156388fb69b65ae8b521839198bf3d8ad26da71d50dd5075397be31271c"
+  },
+  "content": {
+    "hook": {
+      "class": "ORIGINAL_DRAFT_NOT_LYRIC_OR_TRANSLATION",
+      "frames": [
+        18,
+        84
+      ],
+      "text": "SOME LOVE STORIES\\nNEVER REALLY END."
+    },
+    "lyrics_used": false,
+    "outro_lockup_frames": [
+      675,
+      720
+    ],
+    "source_window_s": [
+      72,
+      96
+    ],
+    "title_artist_frames": [
+      186,
+      306
+    ]
+  },
+  "cover": {
+    "drive_url": "https://drive.google.com/drive/folders/18QuRSbcf6gNxoOchwoYpAcxZbP0ANJFM",
+    "name": "AAKHRI_ISHQ_COVER_V01.png",
+    "new_asset_approval_inferred": false,
+    "sha256": "4c22daf786151394df0a86515f042d1f4a6948084deec3c32a53f1678fa78ea0",
+    "source": "B_TITLE_HERO_R2"
+  },
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "mezzanine": {
+    "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V02_72_96_HLG_PRORES.mov",
+    "sha256": "42783511a24c7ae5d2054fc166f1c5cf6d33dfa670fceb988fee6aa404886c01"
+  },
+  "remaining_creative_decisions": [
+    "Accept or further soften motion/recovery around 00:16-00:19.",
+    "Choose whether the fixed 24-second excerpt may receive an audio/video tail or should use a different musical endpoint.",
+    "Approve/revise hook copy, title timing, cover and final lockup placement."
+  ],
+  "resolve_project": {
+    "name": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V02.drp",
+    "sha256": "6267810c6f662400a37e4c2aca8ac7a4f64d68504be89a79d79691c78204fa74"
+  },
+  "rhythm": {
+    "band_events_promoted_to_kick_snare": false,
+    "cuts": [
+      89,
+      204,
+      335,
+      491,
+      623
+    ],
+    "every_fourth_beat_promoted_to_downbeat": false,
+    "shakes": 4,
+    "zooms": 5
+  },
+  "schema": "AAKHRI_ISHQ_INTEGRATED_24S_REVIEW_PACKAGE_V01",
+  "shared_drive_folder": {
+    "id": "18QuRSbcf6gNxoOchwoYpAcxZbP0ANJFM",
+    "path": "Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/INTEGRATED_24S_PREVIEW_V02_20260927",
+    "url": "https://drive.google.com/drive/folders/18QuRSbcf6gNxoOchwoYpAcxZbP0ANJFM"
+  },
+  "state_note": "Master State not promoted because ledger/pointer integrity blocker remains; additive evidence only.",
+  "status": "PRIVATE_REVIEW_REPAIR_RECOMMENDED_NOT_PUBLICATION_READY"
+}

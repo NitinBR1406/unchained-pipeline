@@ -1,0 +1,24 @@
+{
+  "candidate_format": "9:16 1080x1920 24s with audio",
+  "numeric_safe_zone_status": "INTERNAL_CONSERVATIVE_PRESETS_ONLY_NOT_OFFICIAL_UNIVERSAL_PIXEL_REQUIREMENTS",
+  "official_sources": [
+    {
+      "evidence": "Official guidance recommends 9:16 video with audio and key messages in safe zone.",
+      "platform": "Meta Reels",
+      "url": "https://www.facebook.com/business/ads/facebook-instagram-reels-ads"
+    },
+    {
+      "evidence": "Official Creative Codes says shoot 9:16 and keep elements clear of TikTok UI safe space.",
+      "platform": "TikTok",
+      "url": "https://ads.tiktok.com/business/library/Creative_Codes_One_Pager.pdf"
+    },
+    {
+      "evidence": "Official upload guidance accepts square or vertical video up to three minutes and requires approval for copyrighted material.",
+      "platform": "YouTube Shorts",
+      "url": "https://support.google.com/youtube/answer/12779649?hl=en-IN"
+    }
+  ],
+  "publish_time_requirement": "Recheck current platform preview UI before any separately authorized publication.",
+  "schema": "PLATFORM_PREFLIGHT_CURRENT_V02",
+  "verified_date": "2026-09-27"
+}

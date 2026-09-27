@@ -1,0 +1,16 @@
+{
+  "answered_from_evidence": [
+    "authoritative production audio is SHA-bound MASTER 2",
+    "performer identity and artist brand are bound",
+    "video source takes are hash-bound"
+  ],
+  "genuinely_open": [
+    "Who controls composition/publishing rights and has synchronization/publication use been cleared?",
+    "Who must receive production/songwriting/engineering credits, including Vatsal or prior contributors?",
+    "Are platform/distributor-specific master and neighbouring-rights permissions documented?"
+  ],
+  "note": "Credit text is not rights evidence.",
+  "rights_clearance_inferred": false,
+  "schema": "RIGHTS_AND_CREDITS_OPEN_V01",
+  "status": "RIGHTS_HOLD"
+}

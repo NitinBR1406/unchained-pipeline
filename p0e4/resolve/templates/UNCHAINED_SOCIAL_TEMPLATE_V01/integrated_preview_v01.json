@@ -1,0 +1,120 @@
+{
+  "brand_standard_sha256": "2c9875b83c9385e5ae8b5bbc262e6050eba2cdd5cc9e2faed34ddffbd388e7f3",
+  "brand_standard_version": "V01",
+  "cache_invalidation": [
+    "source_sha256",
+    "audio_sha256",
+    "source_window",
+    "take_offsets",
+    "brand_standard_sha256",
+    "logo_sha256",
+    "font_sha256",
+    "text",
+    "linebreaks",
+    "timing",
+    "style",
+    "platform_safe_zone",
+    "rhythm_event_schedule",
+    "effect_strength",
+    "render_contract"
+  ],
+  "defaults": {
+    "effects_enabled": false,
+    "full_lockup": "OUTRO_ONLY",
+    "lyrics_on_missing_verification": "OMIT"
+  },
+  "instance": {
+    "artist_name": "UNCHAINED NITIN",
+    "color": "Rec.2100 HLG",
+    "hook": "SOME LOVE STORIES\\nNEVER REALLY END.",
+    "lyrics": null,
+    "minimum_bit_depth": 10,
+    "output": "9:16",
+    "song_title": "AAKHRI ISHQ",
+    "window_s": [
+      72,
+      96
+    ]
+  },
+  "logo_sha256": "c72f13fb2b0a684eff37e6294afb68704ba821fa4d528a41839f09ecdaf3c921",
+  "rhythm_instance": {
+    "counts": {
+      "cuts": 5,
+      "shakes": 4,
+      "zooms": 5
+    },
+    "cuts": [
+      89,
+      204,
+      335,
+      491,
+      623
+    ],
+    "enabled": true,
+    "shake_displacement_px_max": 4,
+    "shakes": [
+      36,
+      311,
+      395,
+      563
+    ],
+    "unclassified_band_events_remain_unclassified": true,
+    "zooms": [
+      23,
+      155,
+      282,
+      419,
+      588
+    ]
+  },
+  "schema": "UNCHAINED_SOCIAL_TEMPLATE_INTEGRATED_PREVIEW_V01",
+  "sections": [
+    {
+      "frames": [
+        0,
+        17
+      ],
+      "id": "DIRECT_PERFORMANCE"
+    },
+    {
+      "frames": [
+        18,
+        84
+      ],
+      "id": "HOOK"
+    },
+    {
+      "frames": [
+        186,
+        306
+      ],
+      "id": "TITLE_ARTIST"
+    },
+    {
+      "frames": [
+        675,
+        720
+      ],
+      "id": "LOCKUP"
+    }
+  ],
+  "variables": [
+    "source_video_set",
+    "programme_audio",
+    "source_window",
+    "song_title",
+    "artist_name",
+    "hook",
+    "optional_verified_lyrics",
+    "font_size",
+    "linebreaks",
+    "position",
+    "timing",
+    "logo",
+    "outro",
+    "brand_colors",
+    "rhythm_events",
+    "effect_strength",
+    "platform_safe_zone_preset"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "PERSISTENCE_HANDOFF_RECEIPT_V01",
+  "status": "COPIED_NON_DESTRUCTIVELY_READBACK_SHA256_GREEN",
+  "destination": {
+    "drive": "Unchained Nitin — Master",
+    "folder_id": "18QuRSbcf6gNxoOchwoYpAcxZbP0ANJFM",
+    "path": "P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/INTEGRATED_24S_PREVIEW_V02_20260927",
+    "url": "https://drive.google.com/drive/folders/18QuRSbcf6gNxoOchwoYpAcxZbP0ANJFM"
+  },
+  "copy_policy": "COPY_NEVER_MOVE_NO_OVERWRITE_OF_DIFFERING_BYTES",
+  "readback": {
+    "method": "destination byte SHA256 plus Drive folder visibility",
+    "manifest_file_id": "15AKR3bGLQam6z2HtATdyzJpPEr1o7eiV",
+    "manifest_url": "https://drive.google.com/file/d/15AKR3bGLQam6z2HtATdyzJpPEr1o7eiV/view?usp=drivesdk",
+    "all_required_artifact_sha256_equal": true
+  },
+  "artifacts": [
+    {"name":"AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V02_72_96_HLG.mp4","sha256":"0977c156388fb69b65ae8b521839198bf3d8ad26da71d50dd5075397be31271c"},
+    {"name":"AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V02_72_96_HLG_PRORES.mov","sha256":"42783511a24c7ae5d2054fc166f1c5cf6d33dfa670fceb988fee6aa404886c01"},
+    {"name":"AAKHRI_ISHQ_COVER_V01.png","sha256":"4c22daf786151394df0a86515f042d1f4a6948084deec3c32a53f1678fa78ea0"},
+    {"name":"UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V02.drp","sha256":"6267810c6f662400a37e4c2aca8ac7a4f64d68504be89a79d79691c78204fa74"}
+  ],
+  "source_staging_untouched": true,
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

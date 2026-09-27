@@ -1,0 +1,16 @@
+{
+  "schema": "NEXT_READY_V01",
+  "status": "WAITING_FOR_NITIN_INTEGRATED_PREVIEW_REVIEW",
+  "candidate_sha256": "0977c156388fb69b65ae8b521839198bf3d8ad26da71d50dd5075397be31271c",
+  "smallest_human_decisions": [
+    "Accept or request softer motion/recovery around 00:16-00:19.",
+    "Choose a permitted audio/video tail or a different musical endpoint for the abrupt 24-second boundary.",
+    "Approve or revise the hook copy, title timing, cover and final lockup placement.",
+    "Resolve the documented composition, sync/publication, neighbouring-rights and credit questions before any release gate."
+  ],
+  "master_state_update": {
+    "performed": false,
+    "reason": "Known event-31 ledger, latest-pointer checksum and evidence timestamp integrity blocker remains. Additive execution evidence was persisted without rewriting history."
+  },
+  "prohibited_inferences": ["NITIN_FINAL_VIDEO_APPROVAL","NITIN_FINAL_ASSET_APPROVAL","NITIN_PUBLISH_APPROVAL","RIGHTS_CLEARANCE"]
+}

@@ -1,0 +1,45 @@
+{
+  "audio": {
+    "channels": 2,
+    "codec": "AAC LC",
+    "sample_rate_hz": 48000
+  },
+  "candidate": {
+    "bytes": 30381158,
+    "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V02_72_96_HLG.mp4",
+    "sha256": "0977c156388fb69b65ae8b521839198bf3d8ad26da71d50dd5075397be31271c"
+  },
+  "decode": {
+    "audio_duration_s": 24.02,
+    "audio_full_decode": "PASS",
+    "black_segments_detected": 0,
+    "video_duration_s": 24.0,
+    "video_frames": 720,
+    "video_full_decode": "PASS"
+  },
+  "mobile_visual_review": {
+    "calibrated_hdr_claim": false,
+    "captions_clipped": false,
+    "contact_sheet_sha256": "dce20f954d497bee33771d4062eb9d63aa2166f8e1557c7b330201af509bd49f",
+    "logo_or_text_over_eyes_nose_mouth": false,
+    "unwanted_edges_observed": false
+  },
+  "schema": "INTEGRATED_PREVIEW_TECHNICAL_QC_V01",
+  "scope_limits": [
+    "Visible lipsync assessed independently by Gemini; technical audio continuity is not visual lipsync proof.",
+    "Tone-mapped contact sheet is not calibrated HDR evidence."
+  ],
+  "status": "GREEN",
+  "video": {
+    "codec": "HEVC",
+    "color_primaries": "bt2020",
+    "color_range": "tv",
+    "color_space": "bt2020nc",
+    "color_transfer": "arib-std-b67",
+    "fps": "30/1",
+    "height": 1920,
+    "pix_fmt": "yuv420p10le",
+    "profile": "Main 10",
+    "width": 1080
+  }
+}

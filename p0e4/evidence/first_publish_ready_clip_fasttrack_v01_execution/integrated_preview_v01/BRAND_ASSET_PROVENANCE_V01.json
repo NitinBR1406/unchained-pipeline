@@ -1,0 +1,30 @@
+{
+  "brand_standard": {
+    "commit": "2f488ffd3b5445cde28a8561f8852cf7712202fe",
+    "sha256": "2c9875b83c9385e5ae8b5bbc262e6050eba2cdd5cc9e2faed34ddffbd388e7f3",
+    "version": "V01"
+  },
+  "colors": {
+    "gold_execution_rgb": [
+      216,
+      184,
+      80
+    ],
+    "hdr_note": "visual browser values are not calibrated HDR measurements",
+    "source": "sampled representative gold from verified lockup"
+  },
+  "excluded_asset": {
+    "name": "logo_large.png",
+    "reason": "inspected and found unrelated RGS Software logo"
+  },
+  "fonts": {
+    "Cinzel SemiBold": "059afc21ea38c3ac0aaab344fa2c96443dd5cba76ca87daddd7306bfc15881ef",
+    "Montserrat Medium": "f21bca5d2935b2cd626adea0de89a0671f52b02a352b64f960556356c1c20a4c"
+  },
+  "full_lockup": {
+    "sha256": "c72f13fb2b0a684eff37e6294afb68704ba821fa4d528a41839f09ecdaf3c921",
+    "status": "EXISTING_AUTHORITATIVE_PROJECT_ASSET_REUSED_NOT_NEWLY_APPROVED",
+    "usage": "OUTRO_ONLY"
+  },
+  "schema": "BRAND_ASSET_PROVENANCE_V01"
+}

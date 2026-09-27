@@ -1,0 +1,47 @@
+{
+  "attachment_verified_visible": "0:24 video preview",
+  "candidate_sha256": "0977c156388fb69b65ae8b521839198bf3d8ad26da71d50dd5075397be31271c",
+  "context_url": "https://gemini.google.com/app/ea610e032234777a",
+  "evidence_reconciliation": {
+    "conflicts_with_machine_timeline": [
+      {
+        "gemini_claim": "No clear hard cuts",
+        "machine_evidence": "five cut/take-switch frames 89,204,335,491,623; prior Gemini follow-up observed all five"
+      },
+      {
+        "gemini_claim": "hook/title overlap 00:03-00:06",
+        "machine_evidence": "bounded V02 hook fades to zero by frame 84 (2.800s); main title starts frame 186 (6.200s); mobile contact sheet shows no simultaneous hook/main-title layer"
+      }
+    ],
+    "policy": "Do not erase independent verdict; do not promote disputed perceptual claims to machine fact.",
+    "supported_items": [
+      "motion/recovery at 00:16-00:19 merits Nitin review",
+      "24-second excerpt/audio boundary is abrupt"
+    ],
+    "verdict_preserved": "REPAIR"
+  },
+  "new_independent_context": true,
+  "response": {
+    "artifacts": "Gemini reported no black or missing frames.",
+    "attachment_fully_available": true,
+    "face_mouth_crop_and_visible_lipsync": "Popfilter partially obscures mouth in profile; where visible Gemini observed correlation but this is not hard proof.",
+    "limitations": "Browser proxy; no calibrated HDR assessment.",
+    "musical_timing_and_performance_energy": "Performance follows musical rhythm and vocal line; energy build was assessed as synchronized.",
+    "overall_verdict": "REPAIR",
+    "timecoded_findings": [
+      {
+        "issue": "Gemini reported text overlap between hook and title.",
+        "timecode": "00:03 - 00:06"
+      },
+      {
+        "issue": "Gemini reported abrupt/inconsistent framing and recovery during vocal passage.",
+        "timecode": "00:16 - 00:19"
+      },
+      {
+        "issue": "Gemini reported abrupt audio/outro end at the 24-second boundary.",
+        "timecode": "00:22 - 00:24"
+      }
+    ]
+  },
+  "schema": "GEMINI_INDEPENDENT_EXACT_OUTPUT_QC_V02"
+}
