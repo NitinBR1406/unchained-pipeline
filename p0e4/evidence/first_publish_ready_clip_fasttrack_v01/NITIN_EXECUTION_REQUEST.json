@@ -1,0 +1,81 @@
+{
+  "schema": "NITIN_FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01",
+  "recorded_utc": "2026-09-27T16:06:28.494Z",
+  "authorization_basis": {
+    "user_feedback": "Ik vind de captions veel te klein. Ik dacht dat er kant en klare templates waren voor de verschillende social media post!",
+    "user_instruction": "Oké Lets go laten we werken aan asap publiceren",
+    "interpretation": "Authorize preparation and revision of one first publish-ready clip and reusable social template; no publication authorization inferred."
+  },
+  "priority": "ONE_FINISHED_CLIP_BEFORE_BROAD_FACTORY_EXPANSION",
+  "baseline": {
+    "caption_config": "p0e4/resolve/templates/UNCHAINED_CAPTION_KIT_V01/config.json",
+    "caption_evidence": "p0e4/evidence/native_caption_preview_v01_execution/",
+    "rhythm_policy": "p0e4/evidence/native_caption_rhythm_parallel_v01_execution/agent2_rhythm/STRONGER_PERFORMANCE_ENERGY_V02.json",
+    "rhythm_qc": "p0e4/evidence/stronger_performance_preview_v01_execution/GEMINI_INDEPENDENT_QC_V01.json",
+    "source_window_s": [
+      72,
+      96
+    ],
+    "color": "V06 provisional, preserve exact current source/color binding"
+  },
+  "creative_feedback": {
+    "caption_size": "REJECTED_TOO_SMALL_BY_NITIN",
+    "current_sizes": {
+      "opening": 0.024,
+      "title": 0.038,
+      "artist": 0.018,
+      "lyric_demo": 0.018
+    },
+    "not_approved": [
+      "final caption style",
+      "final rhythm style",
+      "final video",
+      "publication"
+    ]
+  },
+  "execution": [
+    {
+      "step": 1,
+      "action": "Inspect latest repo and local instructions. Reuse installed verified fonts and existing native templates/project. Preserve existing local changes and originals. Only one process controls Resolve."
+    },
+    {
+      "step": 2,
+      "action": "Create two mobile-first still treatments on representative real frames from current 24-second clip, with clearly larger typography, short text chunks and strong hierarchy. Initial size exploration may use 1.5x and 2x current body/artist sizing, then fit by actual rendered glyph dimensions, not blindly multiplying all sizes. These are design candidates, not Nitin-selected settings. Show both actual 1080x1920 output and an accurately scaled 360x640 phone-size comparison. Keep face/mouth unobscured and verify actual text bounds. Use actual linebreaks. Return review links before another full comparison render."
+    },
+    {
+      "step": 3,
+      "action": "Develop one complete reusable 9:16 social template around existing native components: brief hook, song/artist identifier, optional verified selective lyrics, brief ending. Captions need not be continuous. Preserve performance-first branding. Include separately verified platform-safe overlay presets for Reels, TikTok and Shorts; generic 10% margins are not evidence of platform safety. Verify current official upload and display requirements during execution, record source/date and uncertainty. Do not buy packs or install third-party effects."
+    },
+    {
+      "step": 4,
+      "action": "In parallel with still review, prepare concrete rhythm revision using recovered Claude detector map and Gemini output QC. Cover the full 24s with deliberate musical pacing; review gaps and recovery curves. Do not force an effect on every beat, assume low/high bands are kick/snare, or label every fourth beat a true downbeat. Validate music and expression against playback. Stay within the existing bounded preview scope; do not expand to a full master."
+    },
+    {
+      "step": 5,
+      "action": "After Nitin selects the still treatment, render one integrated 24s candidate using chosen caption design and prepared rhythm revision. Include no lyric-demo placeholders in a publish candidate; omit optional lyrics if unverifiable. Do not treat still selection as final video or publish approval. Export reusable DRP/config with verified second-text reuse, proper cache invalidation and hashes."
+    },
+    {
+      "step": 6,
+      "action": "Prepare one review bundle: exact video, cover image, draft post text, verified credits/rights questions, platform-specific preflight results, source/hash manifest and remaining decisions. No platform upload, schedule or post without a separate explicit gate. If cover clearance/platform check is unresolved label candidate accordingly, not unconditionally publish-ready."
+    },
+    {
+      "step": 7,
+      "action": "Run full video/audio decode, 10-bit HLG metadata checks, mobile legibility/safe-zone visual inspection and lipsync/motion playback review. Obtain independent Gemini review of exact final candidate when available; describe limitations, not calibrated HDR claims. Persist production assets on Shared Drive and code/evidence in GitHub, verify readback, supply direct links."
+    }
+  ],
+  "autonomy": "Routine font/Resolve recovery already authorized. Do not ask Nitin to relay agent messages or execute routine commands. Do not wait for unrelated ledger work to prepare assets; report concrete unavailable access accurately.",
+  "state": {
+    "master_pointer_version": "V16.19 / 45",
+    "instruction": "Do not promote or rewrite Master State while ledger/reducer and pointer integrity holds remain. Preserve append-only evidence. No frozen component reopening."
+  },
+  "gates": {
+    "next_creative_gate": "NITIN_SELECTS_TWO_STILL_TREATMENTS",
+    "final_video_approval_required": true,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false
+  },
+  "execution_status": "REQUEST_RECORDED_LOCAL_RESOLVE_EXECUTION_NOT_STARTED_BY_THIS_SESSION"
+}
