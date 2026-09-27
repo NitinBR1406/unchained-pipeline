@@ -1,0 +1,70 @@
+{
+  "schema": "PREVIEW_REVIEW_LINK_AND_FONT_RECOVERY_V01",
+  "observed_utc": "2026-09-27T14:36:23.495Z",
+  "review_video": {
+    "id": "1faEtXgD_BekiKQDfn-hs5aF-UjWDzyGx",
+    "url": "https://drive.google.com/file/d/1faEtXgD_BekiKQDfn-hs5aF-UjWDzyGx/view?usp=drivesdk",
+    "size": 22035731,
+    "expected_sha256": "d99af26236f98ec5927577d71f391e70350c2c6b1d2feb883b10b87f89ed9288",
+    "verification": "Drive metadata and parent folder inspected; video bytes not independently re-downloaded in this run"
+  },
+  "fonts": {
+    "status": "OFFICIAL_BYTES_RECOVERED_AND_DRIVE_READBACK_VERIFIED",
+    "url": "https://drive.google.com/file/d/1g0MW3_BdQ2S6jGso_tucdWL7z24pnr8d/view?usp=drivesdk",
+    "drive_id": "1g0MW3_BdQ2S6jGso_tucdWL7z24pnr8d",
+    "archive_sha256": "ad3a36d9fd998210e636c856842f2ef9bee14f5c5cbb80941d3a3fcd6a826a73",
+    "readback_sha256": "ad3a36d9fd998210e636c856842f2ef9bee14f5c5cbb80941d3a3fcd6a826a73",
+    "source": "https://github.com/google/fonts",
+    "paths": [
+      "ofl/montserrat/Montserrat[wght].ttf",
+      "ofl/montserrat/OFL.txt",
+      "ofl/cinzel/Cinzel[wght].ttf",
+      "ofl/cinzel/OFL.txt"
+    ],
+    "licenses": "Both SIL OFL 1.1 checked",
+    "fontTools_parse": "PASS",
+    "weights": {
+      "Montserrat": [
+        100,
+        900
+      ],
+      "Cinzel": [
+        400,
+        900
+      ]
+    },
+    "warning": "Montserrat legacy family is Montserrat Thin; typographic family is Montserrat. Verify chosen Regular/Medium weight in Resolve; do not silently use Thin.",
+    "installed_on_mac": false,
+    "resolve_visibility_verified": false,
+    "caption_rendered": false
+  },
+  "gemini": {
+    "status": "NOT_RUN_SIGNED_OUT_CLOUD_BROWSER",
+    "url": "https://gemini.google.com/app",
+    "attachment_sent": false,
+    "prompt_sent": false,
+    "independent_qc_complete": false
+  },
+  "executor": {
+    "host": "Linux cloud workspace",
+    "native_mac_resolve_control_available": false,
+    "existing_dirty_checkout_untouched": true
+  },
+  "next_ready": [
+    "Local executor: fetch verified font ZIP from caption folder, verify hash, activate fonts on authorized Resolve host and confirm intended weights; complete already authorized native caption preview and QC.",
+    "Use exact existing rhythm candidate for independent Gemini QC in authenticated session; no rerender required.",
+    "Nitin can review direct existing video link now; no final approval inferred."
+  ],
+  "master_state": {
+    "version": "V16.19",
+    "state_version": 45,
+    "updated": false,
+    "reason": "Known ledger/reducer and pointer checksum integrity holds remain unresolved"
+  },
+  "governance": {
+    "publication": false,
+    "production_deployment": false,
+    "full_master_render": false,
+    "final_creative_approval_inferred": false
+  }
+}
