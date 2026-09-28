@@ -1,0 +1,58 @@
+{
+  "schema": "NITIN_V07_BASE_CROP_DEFECT_AND_REPAIR_REQUEST_V01",
+  "recorded_local": "2026-09-28T10:41:43+02:00",
+  "source": "Direct Nitin instruction in current conversation",
+  "user_verbatim": "Let op ik zie in de laatste versie het warte plafond. hiervan hadden we gezegd dat dit niet zichtbaar moest zijn. Alle edits moeten plaatsvinden op de gezoomde versie van de video. kun je dit controleren en herstellen.",
+  "candidate": {
+    "filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V07_SOURCE_TAKE_SYNC_HLG.mp4",
+    "sha256": "71c3f904f667c6b6f6dd83465e93820db22e85951292c84f611c3080a0e561c1",
+    "status": "NITIN_REPORTED_CEILING_VISIBLE_REPAIR_REQUIRED_NOT_ACCEPTED"
+  },
+  "inspection": {
+    "source": "p0e4/resolve/render_aakhri_source_sync_v07.py",
+    "source_blob_sha": "5ef27c7164472b3f483bd7a00beccd978d6c8c23",
+    "confirmed": [
+      "Replaces timeline video clips with IMG_5739 source frames.",
+      "Exports/imports Fusion compositions and copies LUT.",
+      "Does not explicitly capture/restore/verify clip transform properties such as ZoomX, ZoomY, Pan, Tilt or crop.",
+      "Does not enforce a source-specific ceiling-exclusion invariant before rendering."
+    ],
+    "hypotheses": [
+      "Clip-level base framing may have been lost on replacement.",
+      "Copied Fusion geometry from a different take may not exclude the ceiling on IMG_5739."
+    ],
+    "limitations": "Code inspection only; no local Resolve host, project or candidate media available in this Linux session. Exact visual cause not independently confirmed."
+  },
+  "authorization": {
+    "scope": "Diagnose and restore the established ceiling-free zoomed performance base, repair template/render path and create a bounded private review render.",
+    "new_permission_required_for_routine_repair": false
+  },
+  "required_execution": [
+    "Read latest repository and local instructions; preserve working changes and existing versions.",
+    "Inspect earlier ceiling-free zoomed reference and actual Resolve clip/Fusion/sizing/crop settings. Recover verified baseline; do not invent an approved zoom value.",
+    "Use isolated project copy. Preserve V07 source-frame/audio synchronisation while restoring framing for the actual selected take. Do not blindly copy another take's crop.",
+    "All cuts, reframes, beat zooms, shakes and recovery motion must remain inside the established ceiling-free base. Never recover to uncropped source. Check worst displacement, overshoot, interpolation and cut boundaries.",
+    "Apply base framing to performance image before text/logo composition; do not simply enlarge the final branded export and crop captions.",
+    "Repair source replacement and template to preserve and read back required framing properties; verify any keyframed framing separately. Fail closed if framing contract is unavailable.",
+    "Record per-take baseline transforms, effect bounds, reference hashes and cache invalidation. Avoid double-applying zoom if source is already cropped.",
+    "Check every output frame for ceiling exposure and unwanted borders, plus full-motion playback, mouth/face crop, captions and visible lipsync. Zero ceiling-visible frames is required. Black-frame detection alone cannot detect a black ceiling.",
+    "Preserve programme audio, duration, branding, established end fade and musical timing unless repair proves a specific necessary adjustment.",
+    "Deliver new version with exact-file QC, before/after framing evidence, direct private review link and Resolve/template configuration. Do not call repaired until new media exists and has passed actual output checks.",
+    "Persist production assets to Shared Drive with readback hashes, code/config/evidence to GitHub. Keep ledger integrity hold explicit; no history rewrite or invalid state promotion."
+  ],
+  "current_execution": {
+    "code_inspection_completed": true,
+    "defect_registered": true,
+    "resolve_repair_executed": false,
+    "new_render_created": false,
+    "blocker": "This session exposes Linux execution and GitHub connector; no callable connection to the local Mac/Resolve render host was found. Repository registration does not start the factory."
+  },
+  "governance": {
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "full_master_render_authorized": false
+  }
+}
