@@ -1,0 +1,41 @@
+{
+  "schema": "NITIN_CAPTION_OVERLAP_LEGIBILITY_DEFECT_V01",
+  "recorded_local": "2026-09-28T15:11:08+02:00",
+  "source": "Direct Nitin feedback with screenshot IMG_5832.jpeg",
+  "user_verbatim": "De tekst komt overelkaar. De tekst mag duidelijker weergegeven worden en mag groter gemaakt worden",
+  "inspected_repository_head": "3368600a5373ac84bf6d3589d6613e0bf5945ae5",
+  "evidence": {
+    "screenshot": "IMG_5832.jpeg",
+    "library_file_id": "libfile_2bedf1baaecc8191b291f9c0e881e412",
+    "visual_observation": "Hook SOME LOVE STORIES / NEVER REALLY END., AAKHRI ISHQ title and artist/title elements occupy intersecting areas; text has weak contrast.",
+    "limits": "Screenshot visually inspected in conversation; exact frame/timecode and source video hash not provided. Do not infer compositing root cause from still alone."
+  },
+  "status": "REPAIR_REQUIRED_NOT_FINAL_VIDEO_APPROVED",
+  "execution_contract": [
+    "Inspect latest actual Resolve timeline and exported candidate; reproduce overlapping text and bind finding to frame/timecode and media SHA.",
+    "Inspect duplicate tracks, inherited/baked text, nested/Fusion titles, animation visibility and local-versus-global frame ranges. Establish root cause before changing layout.",
+    "Separate opening hook, title/artist block and brand outro in time. No overlapping text blocks during transitions; title and artist may form a single clearly separated hierarchy.",
+    "Increase actual rendered glyph size materially from screenshot/current defective output; preserve Cinzel SemiBold and Montserrat Medium. Size to mobile readability and available width rather than blindly scaling an entire composite.",
+    "Use strong readable white main text with restrained brand-gold accents and suitable shadow or local dark backing as needed. Ensure full intended opacity during readable hold, not permanently faint text.",
+    "Keep face and mouth clear and use established platform-safe positions. Do not modify source zoom/crop to create text space; retain ceiling-free V08 geometry.",
+    "Keep source frames, audio timing, beat schedule and duration intact; do not claim lipsync accepted.",
+    "Render bounded new private candidate in isolated project copy, preserving previous versions. Verify text visibility on all frames, including entrances/exits and cut boundaries, normal-speed playback and phone-size review.",
+    "Provide integrated video plus representative mobile-size stills showing hook, title/artist and outro separately; avoid another preliminary A/B approval loop.",
+    "Update reusable caption template and relevant regression evidence so timing/visibility cannot leak between sections. Verify rendered output; configuration-only tests are insufficient.",
+    "Persist assets in Shared Drive, code/config/evidence in GitHub, read back uploads and provide direct links. Keep state integrity hold explicit."
+  ],
+  "authorization": "User requested correction, clearer and larger text. Routine implementation/private preview authorized; final styling and final video remain reviewable.",
+  "execution_in_this_session": {
+    "screenshot_inspected": true,
+    "repository_checked": true,
+    "resolve_render_started": false,
+    "blocker": "No available connection to local Resolve host in this session; registering request does not execute a render."
+  },
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false
+  }
+}
