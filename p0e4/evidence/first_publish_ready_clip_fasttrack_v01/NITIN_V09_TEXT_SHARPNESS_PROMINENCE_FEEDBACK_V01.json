@@ -1,0 +1,36 @@
+{
+  "schema": "NITIN_V09_TEXT_SHARPNESS_PROMINENCE_FEEDBACK_V01",
+  "recorded_local": "2026-09-28T17:25:15+02:00",
+  "user_verbatim": "De tekst mag nog zichtbaarder, momenteel wazig maak het zicht baarder en prominenter",
+  "source": "Direct Nitin feedback",
+  "baseline": {
+    "repository_head": "454d24de5c31adb64fcfc5df3576115435fd69f3",
+    "candidate_sha256": "3d4bf164130dca285ebe96045f31406eb6a11d6a438dad5f1e31f13f8d49dce7",
+    "version": "V09"
+  },
+  "status": "TEXT_NOT_ACCEPTED_REPAIR_AUTHORIZED",
+  "diagnosis_status": "USER_REPORTED_BLUR_NOT_YET_INDEPENDENTLY_REPRODUCED",
+  "required_execution": [
+    "Inspect actual full-resolution V09 export and its phone playback; distinguish source text softness from Drive proxy/compression or HDR display effects. Do not assume a cause or dismiss Nitin's observation.",
+    "Inspect text fill alpha, inherited blend animations, blur/glow/soft shadow, outline thickness, render resolution and post-text transforms. Correct the proven cause before enlarging text further.",
+    "Use crisp native text rendered at final output resolution, full intended text opacity during readable hold, bright white primary copy and restrained high-contrast brand-gold accents. Preserve approved fonts; no silent font substitution.",
+    "Make text more prominent via clear hierarchy, deliberate spacing and a sufficiently dark local backing. Avoid heavy soft outlines or glow that merge glyph edges. Increase size as needed without clipping; do not blindly scale the entire composite.",
+    "Keep hook, title/artist and outro separated in time, including transitions. Keep face and mouth free and preserve platform-safe placement.",
+    "Preserve ceiling-free V08 framing, V09 overlap fix, source frames, programme audio, beat timing, colour and end fade. No inferred lipsync or final-video acceptance.",
+    "Render a new bounded private version from an isolated project copy; preserve earlier versions. Compare readable hold frames at native 1080x1920 and phone size and review actual playback. Verify sharpness, contrast, glyph spacing, timing, no overlap, face clearance, full decode and HLG/10-bit.",
+    "Deliver one integrated preview and a same-frame before/after text comparison; no preliminary A/B round. Document exact styling changes and limitations. Update reusable template and targeted regressions.",
+    "Persist media to authoritative Shared Drive and code/config/evidence to GitHub; verify readback/hashes and return direct review links. Do not promote Master State through the unresolved ledger/pointer hold."
+  ],
+  "execution_in_this_session": {
+    "feedback_registered": true,
+    "render_executed": false,
+    "blocker": "No callable local Resolve-host connection in this session. Repository write does not start rendering."
+  },
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
