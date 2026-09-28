@@ -1,0 +1,42 @@
+{
+  "schema": "NITIN_CLAUDE_INTRO_OUTRO_REUSE_REQUEST_V01",
+  "recorded_local": "2026-09-28T20:56:02+02:00",
+  "user_verbatim": "Claude had een ander outtro tekst en een intrologo. Kun je die laten ophalen en gebruiken?",
+  "authorization": "Retrieve Claude's original outro wording and intro logo and use verified originals in a bounded private integrated preview. Not final video or publish approval.",
+  "status": "PERSISTED_FOR_WORKTHREAD_RETRIEVAL_NOT_YET_RETRIEVED",
+  "parent_dispatch": "p0e4/evidence/claude_edit_posting_handoff_review_v01/WORKTHREAD_DISPATCH_REQUEST_V01.json",
+  "source_clues": {
+    "repository_head": "724611459e5510326e222b517b7e46f55a200cec",
+    "path": "p0e4/evidence/claude_dispatch_beat_recovery_v01_execution/detector/app.py",
+    "blob_sha": "c8bf6584b34b21237af2f7f11cb0f1f0483e99d8",
+    "references": [
+      "LOGO_PATH default unchained_chain_emblem.png",
+      "OUTRO_PATH default visualizer_outro.png",
+      "intro_url/intro_png supplied by request"
+    ],
+    "limits": "Code references are discovery clues only, not proof of the intended asset identity, exact outro wording or approval. Deployed environment overrides may differ."
+  },
+  "workthread_instructions": [
+    "Use the existing communication layer to Claude; append this retrieval to the review task if already dispatched instead of duplicating it.",
+    "Ask Claude for exact original outro wording, exact intro logo bytes/source or authoritative Drive ID, relevant prior preview/config, timing and provenance. Search existing Shared Drive/project assets where accessible; no replacement logo or invented wording.",
+    "Inspect actual recovered assets and bind SHA256 plus source record. If several candidates conflict, resolve against Claude's source/config and prior evidence; ask Nitin only for a genuinely unresolved creative choice.",
+    "Use verified originals in the next isolated private preview based on newest accepted engineering fixes. Preserve clean enlarged text with no halo, ceiling-free crop, source/audio sync and beat timing. Keep original files immutable.",
+    "Use a brief intro-logo treatment over direct performance and the recovered outro wording in a legible separate ending section. Do not extend or modify audio silently. UN monogram only intro/outro; retain agreed brand identity and current fonts for newly rendered editable text. Do not blindly restore old Poppins fallback, always-on watermark or four-second end-card defaults.",
+    "Inspect recovered flattened graphics for text/shadow conflicts; do not silently redesign the original. Report an actual conflict before making material brand changes.",
+    "Persist retrieval/Claude acknowledgement receipts, exact wording, logo hash, template bindings, new preview/QC and direct review links. Stop claiming retrieval or use until source bytes and render evidence exist.",
+    "This request does not authorize production deployment, real social upload, scheduling, publication or full-master render."
+  ],
+  "execution": {
+    "assets_retrieved": false,
+    "claude_delivery_confirmed": false,
+    "preview_rendered": false,
+    "current_session_limitation": "No callable local workthread/Claude Desktop connection; previous cloud browser blocked. GitHub request persistence does not start execution."
+  },
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false
+  }
+}
