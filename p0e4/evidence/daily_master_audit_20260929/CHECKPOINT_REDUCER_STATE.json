@@ -1,0 +1,93 @@
+{
+  "approvals": {},
+  "architecture_locks": {
+    "adr_ref": null,
+    "architecture_bakeoff": null,
+    "production_deployment_authorized": false,
+    "selected_control_plane": null,
+    "winner": null
+  },
+  "autonomous_execution": {
+    "active_tasks": [],
+    "current_task": null,
+    "waiting_for_nitin": []
+  },
+  "backlog_summary": {
+    "blocked": 0,
+    "completed": 0,
+    "ready": 0,
+    "running": 0,
+    "waiting_for_nitin": 0
+  },
+  "current_content": null,
+  "current_release": null,
+  "datastore_ids": {},
+  "deployments": [],
+  "duplicate_side_effect_count": 0,
+  "evidence_refs": [
+    {
+      "checkpoint_sha256": "0a28ea2cd1eb8a4b20639071f69543693b7cf32750874ad205f0aac5df1a7595",
+      "master_transition": false,
+      "result": "NO_MASTER_TRANSITION_INTEGRITY_HOLD",
+      "scope": "INDEPENDENT_AUDIT_CHECKPOINT_NOT_PROJECT_MASTER_LINEAGE",
+      "source_commit": "5d3cc76d0b720ef6d4c1b338b6d1442989f82d02"
+    },
+    {
+      "checkpoint_sha256": "420f5347c78079711f847307159f4239163e899ff52c6015123786865233c595",
+      "master_transition": false,
+      "result": "NO_MASTER_TRANSITION_INTEGRITY_HOLD",
+      "scope": "INDEPENDENT_AUDIT_CHECKPOINT_NOT_PROJECT_MASTER_LINEAGE",
+      "source_commit": "258b5f2db5f6877caa63237f6a2c50bda81b649d"
+    },
+    {
+      "checkpoint_sha256": "48b09322ebe404eec020aea7ad5c77461c868c236d61f30ac9f07de3a140b0f9",
+      "master_transition": false,
+      "result": "NO_MASTER_TRANSITION_INTEGRITY_HOLD",
+      "scope": "INDEPENDENT_AUDIT_CHECKPOINT_NOT_PROJECT_MASTER_LINEAGE",
+      "source_commit": "73d6a61d2c5fb96f9f38899e02daa37fc8d97734"
+    },
+    {
+      "checkpoint_sha256": "b43f34fc2b6780de64baf6837254a68bdddc845c26a01f774a8347dd932b8e96",
+      "master_transition": false,
+      "result": "NO_MASTER_TRANSITION_INTEGRITY_HOLD",
+      "scope": "INDEPENDENT_AUDIT_CHECKPOINT_NOT_PROJECT_MASTER_LINEAGE",
+      "source_commit": "108f6b31ab70cd66dd7f1ae781dba29b8831b997"
+    }
+  ],
+  "git": {
+    "branch": null,
+    "commit_sha": null,
+    "repository": null
+  },
+  "grants": {},
+  "invariants": {
+    "DUPLICATE_SIDE_EFFECT_COUNT": 0,
+    "HUMAN_MESSAGE_RELAY_REQUIRED": false,
+    "STATE_RECOVERED_AFTER_RESTART": null,
+    "WAITING_WORKFLOW_BLOCKS_OTHER_WORK": null,
+    "WORKER_SLOT_HELD_DURING_HUMAN_WAIT": null
+  },
+  "issue_classes": {
+    "material": [],
+    "must_fix": [],
+    "nice_to_have": []
+  },
+  "milestone": "TEMPORAL CONTROL PLANE FOUNDATION",
+  "phase": "P0-E1",
+  "production_state": {
+    "first_real_poster": "PAUSED_BY_NITIN",
+    "mutated": false,
+    "p1_scenario": "9627055"
+  },
+  "project": "UNCHAINED NITIN — MASTER",
+  "proven_tests": [],
+  "provenance": [],
+  "runner_health": {},
+  "scenario_ids": {},
+  "schema_version": 1,
+  "state_version": 4,
+  "updated_at": "2026-09-28T23:33:25Z",
+  "updated_by": "00_MASTER_ORCHESTRATOR",
+  "ledger_head_hash": "11ad6b1c6b57c482a0175a06d363b2c3b521cffb7002a5969752a5d57166aa70",
+  "state_hash": "3305e02461e823cc1069c7fc02bdfa03e0c88da86375e7d69be3b7bf4dee5c42"
+}

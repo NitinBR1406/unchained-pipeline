@@ -1,0 +1,66 @@
+{
+  "schema": "TARGETED_DRIVE_RECONCILIATION_V01",
+  "observed_at": "2026-09-28T23:33:25Z",
+  "drive": {
+    "id": "0AG0CqqUZ6YuXUk9PVA",
+    "name": "Unchained Nitin — Master"
+  },
+  "root_listing": {
+    "p0e4_production_integration": {
+      "id": "1a0i1SJXd80_iq0StUUvQASDK0IQuiKuR",
+      "modified_time": "2026-09-25T20:52:25.370Z"
+    },
+    "private_review_output": {
+      "id": "18mdcLNPMWqkVY23ws5fk89lzpYgS_nxM"
+    },
+    "aakhri_ishq": {
+      "id": "1a7c5_vxUK9SFmFUSn4ISY9U321pw0DfO",
+      "modified_time": "2026-09-28T20:27:30.492Z"
+    }
+  },
+  "latest_observed_review_folder": {
+    "id": "1Z4lu9zuVotlLqnAN8GfV-jhCKXCG9MbS",
+    "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS",
+    "url": "https://drive.google.com/drive/folders/1Z4lu9zuVotlLqnAN8GfV-jhCKXCG9MbS",
+    "created_time": "2026-09-28T20:27:30.492Z",
+    "modified_time": "2026-09-28T20:27:47.519Z",
+    "item_count": 5,
+    "items": [
+      {
+        "id": "1umMpKh9xXLQWveW1-iouSGlQHu8-YZxU",
+        "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS_HLG_PRORES.mov",
+        "size_bytes": 622719622,
+        "sha256_from_repository_receipt": "17c10e08fdf409b60023eb1b2ab36fffcf72603a42899cc39dbf0bf5971940e9"
+      },
+      {
+        "id": "1B-LcGyk8sqkIsPWzIGJUELK623-wuvpk",
+        "name": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS.drp",
+        "size_bytes": 139036,
+        "sha256_from_repository_receipt": "3f85dd698a1edbbab6570e705aee78ffb9e68c3a8e9153318e8e078716c384ca"
+      },
+      {
+        "id": "13g9MGX8d6sbTf0i5-TAM_vviaQUoG1gJ",
+        "name": "RESOLVE_CLAUDE_ORIGINAL_INTRO_OUTRO_V12.json",
+        "size_bytes": 1623
+      },
+      {
+        "id": "1o8-uksMrKmp64FeNY78LQUKEYorgzS9J",
+        "name": "ORIGINAL_unchained_nitin_logo.png",
+        "size_bytes": 148640
+      },
+      {
+        "id": "1yJOows1HxD4R77_Ei7U-XnbDww4naJaY",
+        "name": "ORIGINAL_visualizer_outro.png",
+        "size_bytes": 234197
+      }
+    ]
+  },
+  "v13_observation": {
+    "repository_code_repair_present": true,
+    "drive_render_folder_present": false,
+    "exact_v13_render_present": false,
+    "shared_drive_persistence_complete": false
+  },
+  "result": "V12 private-review bytes and project remain present. No V13 repaired render or V13 Drive handoff is visible; repository code readiness must not be reported as rendered output.",
+  "scope_limit": "Read-only targeted folder listing. No media download, calibrated visual audit, Drive write, publication or deployment."
+}

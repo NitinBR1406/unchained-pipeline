@@ -1,0 +1,29 @@
+{
+  "schema": "PROJECT_NOTES_V05",
+  "date": "2026-09-29",
+  "source_commit": "108f6b31ab70cd66dd7f1ae781dba29b8831b997",
+  "authority": "Subordinate to versioned state and immutable evidence; supplements prior project notes.",
+  "registered_master_state": "V16.19 / state_version 45 remains registered; no promotion because project-ledger and pointer-sidecar integrity failures persist.",
+  "current_operational_status": "V13 code repair is verified and repository-safe, but no repaired Resolve render exists. Latest Shared Drive output is rejected V12.",
+  "accepted_facts": [
+    "Nitin rejected V05 opening lipsync.",
+    "Nitin rejected the V12 lightning intro and requires the gold UN broken-chain logo.",
+    "Nitin reported caption overlap in V12; full-program typography audit is mandatory.",
+    "V13 code hashes match the committed repair receipt and compile.",
+    "The Mac Resolve boundary remains the next execution dependency."
+  ],
+  "do_not_claim": [
+    "Do not call V12 or V13 final approved.",
+    "Do not claim V13 rendered, decoded, Gemini-reviewed or persisted to Drive.",
+    "Do not infer approval from technical GREEN, AI PASS, recovered historical assets or code tests.",
+    "Do not claim ChatGPT memory was updated."
+  ],
+  "next_handoff": "Run the committed V13 repair once on the existing Mac Resolve worker; audit the exact output completely; only then request Nitin's creative review.",
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "chatgpt_memory_updated": false,
+  "source_refs": "See DAILY_CHECKPOINT.json and VALIDATION.json for exact commit, blob and SHA references."
+}
