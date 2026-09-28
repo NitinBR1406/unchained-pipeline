@@ -1,0 +1,44 @@
+{
+  "schema": "CLAUDE_EDIT_POSTING_HANDOFF_REVIEW_REQUEST_V01",
+  "recorded_local": "2026-09-28T20:42:27+02:00",
+  "user_verbatim": "Oké laat een review doen door Claude. Zodadelijk tijdens het posting proces heeft Claude de flow hè",
+  "authorization": "Direct authorization to ask Claude for a technical review of edit pipeline and existing posting handoff; not authorization to activate, schedule, upload or publish.",
+  "source_commit": "151cdb1446b038f4d6506d789b773f60f5cefeda",
+  "status": "PREPARED_NOT_DISPATCHED_CLOUD_BROWSER_BLOCKED",
+  "dispatch": {
+    "preferred_route": "Factory's existing authenticated Claude Desktop / Dispatch route; inspect prior verified receipts and current session before use.",
+    "this_session_attempt": "claude.ai showed Cloudflare Performing security verification; same screen after one reload. No review prompt submitted.",
+    "no_duplicate_dispatch": true,
+    "receipt_required": [
+      "provider context/task URL or ID",
+      "request hash",
+      "exact reviewed commit",
+      "files actually accessible/read",
+      "response location"
+    ],
+    "instruction": "Factory: deliver this request directly to Claude through the established route and persist response. Do not require Nitin to relay prompts or responses. Do not claim review running until acknowledged. Cloud-browser block is not evidence that local Desktop route is blocked."
+  },
+  "review_prompt": [
+    "Perform an independent technical review of NitinBR1406/unchained-pipeline branch p0e4/slice1-production-handoff. Pin exact current SHA, inspect local instructions and report unavailable sources. No production mutation.",
+    "Review current Resolve render code and UNCHAINED_SOCIAL_TEMPLATE_V01, plus V07-V10 and newest halo-repair code/evidence. Review repeated defects: take/source frame binding and lipsync, source-specific Fusion crop lost on replacement, caption overlap/time scope, inherited layers, Text+ softness, border-fill/backing and heavy halo. Distinguish proven code defects, parameter readback and actual visible media proof.",
+    "Assess beat-event generation and selection, frame mapping and rendered effect peaks/recovery, source-safe framing during motion, per-take crop preservation, cache invalidation, media hashes, and reuse on a second fragment. Do not assume arbitrary low/high-band labels prove kick/snare or downbeats.",
+    "Review test quality: identify acceptance tests mirroring implementation or asserting configuration without output validation. Specify minimal meaningful regressions for the reported failures.",
+    "Inspect existing Claude Social Media Post System / Make integrations and actual handoff contracts. Report exact components under Claude/integration control, factory ownership, credential/access blockers and provider run evidence. Do not assume live e2e readiness from offline tests or historical agent claims.",
+    "Check posting package binding to exact media SHA, final creative/video versus publish approvals, explicit authorized destinations/time, rights/credits fields, idempotency and duplicate-post protection, fail-closed retries, receipts and state reconciliation. Do not issue real social upload/schedule/publish or activate Make flows.",
+    "Deliver prioritized findings with file/line or media-timecode evidence, impact, narrow proposed fix, test needed and owner. Separate read-only review from proposed implementation. Report REVIEW_COMPLETE only after real inspection. No blanket GREEN or fabricated human approval.",
+    "Persist review and readback/dispatch evidence in repository and relevant production evidence in Shared Drive. Keep current ledger/pointer integrity issue explicit and history intact. Independent review must not block already authorized caption repair."
+  ],
+  "expected_outputs": [
+    "CLAUDE_REVIEW_DISPATCH_RECEIPT.json",
+    "CLAUDE_TECHNICAL_REVIEW.md",
+    "FINDINGS.json",
+    "POSTING_HANDOFF_READINESS.json"
+  ],
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_PUBLISH_APPROVAL": false,
+    "NITIN_FINAL_VIDEO_APPROVAL": false
+  }
+}
