@@ -1,0 +1,11 @@
+{
+  "schema": "AAKHRI_SOURCE_SYNC_V07_DIRECT_REVIEW_LINKS_V01",
+  "folder": "https://drive.google.com/drive/folders/1xtKrKy5lJsJJ8dfszG4LdDsfU7vgu0T5",
+  "candidate": "https://drive.google.com/file/d/1vLjBEM8Mc520FCgAZT9LuW0VG5hnOrum/view?usp=drivesdk",
+  "normal_speed_before_after": "https://drive.google.com/file/d/1s9Dq-yP02g3zbP4VQiHWXKEJyrqoEHQj/view?usp=drivesdk",
+  "half_speed_supporting_comparison": "https://drive.google.com/file/d/1rrknX7nPnxY2albP2Sw_AP1TNoB77QZM/view?usp=drivesdk",
+  "cover": "https://drive.google.com/file/d/1y5Dnimcy23vT-Q8jhTiyIcYfsUiwt3dQ/view?usp=drivesdk",
+  "scope": "PRIVATE_REVIEW_ONLY",
+  "approval_inferred": false,
+  "publication_authorized": false
+}

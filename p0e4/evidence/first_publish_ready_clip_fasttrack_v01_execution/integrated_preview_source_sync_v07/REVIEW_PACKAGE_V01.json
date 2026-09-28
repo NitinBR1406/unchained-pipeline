@@ -1,0 +1,25 @@
+{
+  "before_after": {
+    "half_speed_support": "V05_VS_V07_LIPSYNC_SLOW_00_04.mp4",
+    "normal_speed": "V05_VS_V07_LIPSYNC_BEFORE_AFTER_00_09.mp4"
+  },
+  "candidate": {
+    "filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V07_SOURCE_TAKE_SYNC_HLG.mp4",
+    "sha256": "71c3f904f667c6b6f6dd83465e93820db22e85951292c84f611c3080a0e561c1"
+  },
+  "correction": "All video segments use contiguous guide-baseline frames from SHA-bound IMG_5739; programme audio and montage timing are unchanged.",
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_FINAL_ASSET_APPROVAL": false,
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "human_gate": "NITIN_V07_EXACT_VIDEO_REVIEW",
+  "independent_gemini_qc": "PASS_MODERATE_VISIBLE_LIPSYNC_CONFIDENCE",
+  "review_folder_url": "https://drive.google.com/drive/folders/1xtKrKy5lJsJJ8dfszG4LdDsfU7vgu0T5",
+  "schema": "AAKHRI_SOURCE_SYNC_V07_REVIEW_PACKAGE_V01",
+  "status": "PRIVATE_REVIEW_TECHNICAL_GREEN_GEMINI_PASS_WAITING_NITIN",
+  "technical_qc": "GREEN"
+}

@@ -1,0 +1,50 @@
+{
+  "attachment_duration_s": 21,
+  "attachment_fully_available": true,
+  "candidate_sha256": "71c3f904f667c6b6f6dd83465e93820db22e85951292c84f611c3080a0e561c1",
+  "context_url": "https://gemini.google.com/app/26595a9b1861e4df",
+  "limitations": [
+    "Browser playback cannot certify sub-frame sync or calibrated HDR.",
+    "Technical audio correlation alone does not prove visual lipsync.",
+    "AI QC does not replace Nitin approval."
+  ],
+  "lipsync": [
+    {
+      "confidence": "MODERATE",
+      "interval": "00:00-00:03",
+      "observation_timecode": "00:01.50",
+      "status": "ALIGNED"
+    },
+    {
+      "confidence": "MODERATE",
+      "interval": "cut 00:02.97",
+      "status": "ALIGNED"
+    },
+    {
+      "confidence": "MODERATE",
+      "interval": "cut 00:06.80",
+      "status": "ALIGNED"
+    },
+    {
+      "confidence": "MODERATE",
+      "interval": "cut 00:11.17",
+      "status": "ALIGNED"
+    },
+    {
+      "confidence": "MODERATE",
+      "interval": "cut 00:16.37",
+      "status": "ALIGNED"
+    }
+  ],
+  "new_independent_context": true,
+  "other_findings": {
+    "black_gaps_jump_artifacts": "none",
+    "captions_logo": "clear and visible",
+    "compression": "minor",
+    "concrete_defect": "mouth approaches bottom boundary tightly from 00:07-00:11; no clipping reported",
+    "ending": "coherent through 20.7s fade",
+    "timing_motion": "continuous; shakes and zooms recover smoothly"
+  },
+  "schema": "GEMINI_INDEPENDENT_AAKHRI_SOURCE_SYNC_V07_QC_V01",
+  "verdict": "PASS"
+}

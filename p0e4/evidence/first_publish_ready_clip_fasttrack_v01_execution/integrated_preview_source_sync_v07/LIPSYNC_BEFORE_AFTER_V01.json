@@ -1,0 +1,25 @@
+{
+  "candidate": {
+    "filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V07_SOURCE_TAKE_SYNC_HLG.mp4",
+    "sha256": "71c3f904f667c6b6f6dd83465e93820db22e85951292c84f611c3080a0e561c1"
+  },
+  "half_speed_supporting_view": {
+    "filename": "V05_VS_V07_LIPSYNC_SLOW_00_04.mp4",
+    "sha256": "8dca8879b3dd8aa9dccd89fc52e05ef371f64c6142927ff136d60d3c20f03008",
+    "source_window_s": [
+      0,
+      4
+    ]
+  },
+  "normal_speed": {
+    "filename": "V05_VS_V07_LIPSYNC_BEFORE_AFTER_00_09.mp4",
+    "sha256": "c8c68317cafa951e478caf8dcc7110c72984d0a8f8df7d4ec6ac05fde92b663c",
+    "window_s": [
+      0,
+      9
+    ]
+  },
+  "review_rule": "Normal-speed perception is primary; half-speed view is supporting evidence only.",
+  "same_programme_audio": true,
+  "schema": "AAKHRI_LIPSYNC_BEFORE_AFTER_V01"
+}

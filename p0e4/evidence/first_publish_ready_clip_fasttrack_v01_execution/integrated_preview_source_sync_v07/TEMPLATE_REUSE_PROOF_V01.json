@@ -1,0 +1,33 @@
+{
+  "note": "This proves deterministic rebinding/configuration on a second in-scope fragment; it is not an additional creative montage or human approval.",
+  "schema": "UNCHAINED_SOCIAL_TEMPLATE_SOURCE_SYNC_REUSE_PROOF_V01",
+  "second_fragment": {
+    "derived_contiguous_source_frames": [
+      2624,
+      2744
+    ],
+    "duration_frames": 120,
+    "master_window_s": [
+      88,
+      92
+    ],
+    "programme_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "take": "IMG_5739.MOV",
+    "take_sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+  },
+  "status": "COMPACT_DRY_RUN_GREEN_NO_EXTRA_CREATIVE_RENDER",
+  "template": "integrated_preview_source_sync_v07.json",
+  "validated_variables": [
+    "source_window",
+    "programme_audio",
+    "selected_take",
+    "source_frames",
+    "text",
+    "timing",
+    "style",
+    "logo",
+    "safe_zone",
+    "rhythm_events",
+    "effect_strength"
+  ]
+}

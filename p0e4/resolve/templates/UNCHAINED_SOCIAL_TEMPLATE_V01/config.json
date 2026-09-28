@@ -36,12 +36,12 @@
     "Cinzel SemiBold": "059afc21ea38c3ac0aaab344fa2c96443dd5cba76ca87daddd7306bfc15881ef",
     "Montserrat Medium": "f21bca5d2935b2cd626adea0de89a0671f52b02a352b64f960556356c1c20a4c"
   },
-  "integrated_preview_contract": "integrated_preview_v01.json",
+  "integrated_preview_contract": "integrated_preview_source_sync_v07.json",
   "latest_private_instance": {
-    "candidate_sha256": "a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a",
+    "candidate_sha256": "71c3f904f667c6b6f6dd83465e93820db22e85951292c84f611c3080a0e561c1",
     "default_effects_enabled": false,
     "effects_enabled_for_instance": true,
-    "status": "PRIVATE_REVIEW_LIPSYNC_REPAIRED_TECHNICAL_GREEN_GEMINI_PASS_WAITING_NITIN"
+    "status": "PRIVATE_REVIEW_SOURCE_TAKE_SYNC_TECHNICAL_GREEN_GEMINI_PASS_WAITING_NITIN"
   },
   "lyrics_may_be_invented": false,
   "platform_presets_ref": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/PLATFORM_PREFLIGHT_SOURCE_V01.json",

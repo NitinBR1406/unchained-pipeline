@@ -1,0 +1,17 @@
+{
+  "branch_head_before_execution": "34bb487380dca001645a3bfef5350fbf20e15c55",
+  "history_rewritten": false,
+  "new_execution_evidence_persisted": true,
+  "observed_utc": "2026-09-28T08:23:34Z",
+  "promotion": "BLOCKED_NOT_ATTEMPTED",
+  "reasons": [
+    "MASTER_STATE_LATEST.sha256 does not match the current pointer bytes.",
+    "Authoritative ledger replay fails tamper verification at zero-based seq 31.",
+    "Ledger record at zero-based index 34 is malformed."
+  ],
+  "registered_master": {
+    "state_version": 45,
+    "version": "V16.19"
+  },
+  "schema": "MASTER_STATE_UPDATE_STATUS_V01"
+}

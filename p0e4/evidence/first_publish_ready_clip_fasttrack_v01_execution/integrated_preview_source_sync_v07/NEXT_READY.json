@@ -1,0 +1,13 @@
+{
+  "candidate_sha256": "71c3f904f667c6b6f6dd83465e93820db22e85951292c84f611c3080a0e561c1",
+  "not_implied": [
+    "NITIN_FINAL_VIDEO_APPROVAL",
+    "NITIN_FINAL_ASSET_APPROVAL",
+    "RIGHTS_CLEARANCE",
+    "NITIN_PUBLISH_APPROVAL",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZATION"
+  ],
+  "schema": "NEXT_READY_V01",
+  "smallest_human_action": "Nitin reviews the exact V07 candidate and normal-speed V05-versus-V07 comparison, then accepts or rejects visible lipsync and overall private preview.",
+  "status": "WAITING_FOR_NITIN_V07_EXACT_VIDEO_REVIEW"
+}

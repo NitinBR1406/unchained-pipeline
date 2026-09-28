@@ -1,0 +1,39 @@
+{
+  "black_segments": 0,
+  "candidate_sha256": "71c3f904f667c6b6f6dd83465e93820db22e85951292c84f611c3080a0e561c1",
+  "full_audio_decode": "PASS",
+  "full_video_decode": "PASS",
+  "limits": [
+    "Not a calibrated HDR display certification.",
+    "Technical decode does not replace human visible-lipsync review."
+  ],
+  "properties": {
+    "audio": "AAC LC 48000Hz stereo",
+    "color_primaries": "bt2020",
+    "color_space": "bt2020nc",
+    "color_transfer": "arib-std-b67",
+    "duration_s": 20.7,
+    "fps": "30/1",
+    "frames": 621,
+    "resolution": "1080x1920",
+    "video": "HEVC Main 10 yuv420p10le"
+  },
+  "schema": "AAKHRI_SOURCE_SYNC_V07_TECHNICAL_QC_V01",
+  "status": "GREEN_PRIVATE_REVIEW",
+  "timeline_regression": {
+    "audio_time_stretch": false,
+    "captions_branding_colour_ending_changed": false,
+    "cuts_changed": false,
+    "motion_changed": false,
+    "programme_audio_shift_ms": 0
+  },
+  "visual_checks": {
+    "logo_covers_eyes_nose_mouth": false,
+    "logo_evidence_frames_s": [
+      18.0,
+      19.3,
+      20.0
+    ],
+    "mouth_crop": "not clipped; Gemini flags tight margin 00:07-00:11"
+  }
+}

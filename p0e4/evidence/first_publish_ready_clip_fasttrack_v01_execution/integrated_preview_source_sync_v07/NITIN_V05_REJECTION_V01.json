@@ -1,0 +1,12 @@
+{
+  "authoritative_fact": "On 2026-09-28 Nitin explicitly reported that visible lipsync in the first seconds of V05 remained incorrect.",
+  "candidate": {
+    "filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V05_LIPSYNC_HLG.mp4",
+    "sha256": "a02be56cde51c4fd566b404eb4fc9c3db4dfa07dbae44232d477bd9e9115137a"
+  },
+  "prior_qc_disposition": "RETAINED_AS_HISTORICAL_BUT_INSUFFICIENT_FOR_HUMAN_ACCEPTANCE",
+  "recorded_utc": "2026-09-28T08:23:34Z",
+  "schema": "NITIN_V05_REJECTION_V01",
+  "supplied_by": "Nitin",
+  "v05_status": "REJECTED_FOR_LIPSYNC_NOT_ACCEPTED_VIDEO"
+}

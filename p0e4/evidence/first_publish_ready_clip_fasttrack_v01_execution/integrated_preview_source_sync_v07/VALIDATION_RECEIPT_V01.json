@@ -1,0 +1,21 @@
+{
+  "schema": "AAKHRI_SOURCE_SYNC_V07_VALIDATION_RECEIPT_V01",
+  "observed_utc": "2026-09-28T08:23:34Z",
+  "candidate_sha256": "71c3f904f667c6b6f6dd83465e93820db22e85951292c84f611c3080a0e561c1",
+  "resolve_render": "COMPLETE_621_FRAMES",
+  "full_video_decode": "PASS",
+  "full_audio_decode": "PASS",
+  "black_segments": 0,
+  "independent_gemini_qc": "PASS_WITH_MODERATE_VISIBLE_LIPSYNC_CONFIDENCE",
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=$PWD/p0e4:$PWD python3.13 -m unittest -q p0e4.tests.test_caption_kit p0e4.tests.test_social_template_v01 p0e4.tests.test_performance_template p0e4.tests.test_v06_caption_beat_preview p0e4.tests.test_unchained_social_template_integrated_preview",
+    "passed": 17,
+    "failed": 0
+  },
+  "json_files_parsed": 16,
+  "git_diff_check": "PASS",
+  "drive_readback_sha256": "GREEN",
+  "central_master_state_promoted": false,
+  "central_master_state_blocker": "LEDGER_AND_POINTER_INTEGRITY_HOLD",
+  "publication_authorized": false
+}

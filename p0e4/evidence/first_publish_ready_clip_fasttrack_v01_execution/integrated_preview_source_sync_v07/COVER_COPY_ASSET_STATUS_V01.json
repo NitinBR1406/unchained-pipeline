@@ -1,0 +1,62 @@
+{
+  "assets": [
+    {
+      "approval": "OPEN",
+      "asset": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V07_SOURCE_TAKE_SYNC_HLG.mp4",
+      "state": "READY_FOR_PRIVATE_NITIN_REVIEW"
+    },
+    {
+      "asset": "V05_VS_V07_LIPSYNC_BEFORE_AFTER_00_09.mp4",
+      "state": "READY_LIPSYNC_EVIDENCE"
+    },
+    {
+      "asset": "V05_VS_V07_LIPSYNC_SLOW_00_04.mp4",
+      "state": "READY_SUPPORTING_LIPSYNC_EVIDENCE"
+    },
+    {
+      "approval": "OPEN",
+      "asset": "AAKHRI_V07_COVER_FRAME_06_50.png",
+      "state": "READY_PRIVATE_COVER_REVIEW"
+    },
+    {
+      "asset": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V07_SOURCE_TAKE_SYNC.drp",
+      "state": "READY_REUSABLE_RESOLVE_PROJECT"
+    },
+    {
+      "asset": "integrated_preview_source_sync_v07.json",
+      "state": "READY_REUSABLE_CONFIGURATION"
+    },
+    {
+      "asset": "full-song master and derivatives",
+      "state": "OUT_OF_SCOPE_NOT_RENDERED"
+    },
+    {
+      "asset": "platform publication package",
+      "state": "BLOCKED_BY_RIGHTS_CREDITS_FINAL_VIDEO_AND_PUBLISH_APPROVAL"
+    }
+  ],
+  "concept_copy": {
+    "hashtags": [
+      "#AakhriIshq",
+      "#UnchainedNitin",
+      "#TheIndestructibleVoice",
+      "#HindiMusic",
+      "#MusicPerformance"
+    ],
+    "instagram_facebook": "AAKHRI ISHQ \u2014 UNCHAINED NITIN. Some love stories never really end. A private first look at the performance.",
+    "status": "DRAFT_NOT_APPROVED_NOT_PUBLISHED",
+    "tiktok": "AAKHRI ISHQ. Some love stories never really end. \u2014 UNCHAINED NITIN",
+    "youtube_shorts": "AAKHRI ISHQ | UNCHAINED NITIN \u2014 Performance Preview"
+  },
+  "cover": {
+    "filename": "AAKHRI_V07_COVER_FRAME_06_50.png",
+    "sha256": "a5ae06df9ae57ae908e27f4ecb5a00843ee43270d9cb9eaeeb2432971a932181",
+    "status": "PRIVATE_REVIEW_CANDIDATE_NOT_ASSET_APPROVED"
+  },
+  "rights_and_credits_open": [
+    "Composition/publishing permission remains undocumented in current evidence.",
+    "Synchronization/publication permission remains undocumented in current evidence.",
+    "Required contributor credits remain unresolved."
+  ],
+  "schema": "AAKHRI_V07_COVER_COPY_ASSET_STATUS_V01"
+}

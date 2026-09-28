@@ -1,0 +1,130 @@
+{
+  "audio_time_stretch": false,
+  "baseline_project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V06_SOURCE_TAKE_SYNC",
+  "captions_branding_colour_ending_changed": false,
+  "drp": {
+    "bytes": 137346,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-integrated-preview-lipsync-v07/UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V07_SOURCE_TAKE_SYNC.drp",
+    "sha256": "201d0c44ce647816de75b7f46c5c0ec4b29ba24f1c7b0c63a501d133199c277e"
+  },
+  "fusion_motion_changed": false,
+  "programme_audio_shift_ms": 0,
+  "project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V07_SOURCE_TAKE_SYNC",
+  "prores": {
+    "bytes": 552343022,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-integrated-preview-lipsync-v07/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V07_SOURCE_TAKE_SYNC_HLG_PRORES.mov",
+    "sha256": "a67291acc99b35611d296f0a7647e85681a907baf37aceb384269346acf087ca"
+  },
+  "render_status": {
+    "CompletionPercentage": 100,
+    "JobStatus": "Complete",
+    "TimeTakenToRenderInMs": 31097
+  },
+  "rendered_frames": [
+    0,
+    620
+  ],
+  "schema": "RESOLVE_SOURCE_TAKE_LIPSYNC_REPAIR_V07",
+  "selected_take": "IMG_5739.MOV",
+  "selected_take_sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+  "source_repairs": [
+    {
+      "after_source_frames": [
+        2144,
+        2233
+      ],
+      "after_take": "IMG_5739.MOV",
+      "before_source_frames": [
+        2143,
+        2232
+      ],
+      "before_take": "IMG_5739.MOV",
+      "timeline_frames": [
+        0,
+        89
+      ]
+    },
+    {
+      "after_source_frames": [
+        2233,
+        2348
+      ],
+      "after_take": "IMG_5739.MOV",
+      "before_source_frames": [
+        2232,
+        2347
+      ],
+      "before_take": "IMG_5739.MOV",
+      "timeline_frames": [
+        89,
+        204
+      ]
+    },
+    {
+      "after_source_frames": [
+        2348,
+        2479
+      ],
+      "after_take": "IMG_5739.MOV",
+      "before_source_frames": [
+        2428,
+        2559
+      ],
+      "before_take": "IMG_5741.MOV",
+      "timeline_frames": [
+        204,
+        335
+      ]
+    },
+    {
+      "after_source_frames": [
+        2479,
+        2635
+      ],
+      "after_take": "IMG_5739.MOV",
+      "before_source_frames": [
+        2478,
+        2634
+      ],
+      "before_take": "IMG_5739.MOV",
+      "timeline_frames": [
+        335,
+        491
+      ]
+    },
+    {
+      "after_source_frames": [
+        2635,
+        2767
+      ],
+      "after_take": "IMG_5739.MOV",
+      "before_source_frames": [
+        2715,
+        2847
+      ],
+      "before_take": "IMG_5741.MOV",
+      "timeline_frames": [
+        491,
+        623
+      ]
+    },
+    {
+      "after_source_frames": [
+        2767,
+        2864
+      ],
+      "after_take": "IMG_5739.MOV",
+      "before_source_frames": [
+        2766,
+        2863
+      ],
+      "before_take": "IMG_5739.MOV",
+      "timeline_frames": [
+        623,
+        720
+      ]
+    }
+  ],
+  "timeline": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+  "timeline_cuts_changed": false
+}

@@ -1,0 +1,59 @@
+{
+  "cache_invalidation_additions": [
+    "selected_take_sha256",
+    "per_segment_source_frames",
+    "programme_audio_sha256",
+    "visible_lipsync_qc_context"
+  ],
+  "candidate_sha256": "71c3f904f667c6b6f6dd83465e93820db22e85951292c84f611c3080a0e561c1",
+  "inherits": "integrated_preview_repair_v04.json",
+  "programme_audio": {
+    "name": "AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "shift_ms": 0
+  },
+  "schema": "UNCHAINED_SOCIAL_TEMPLATE_INTEGRATED_PREVIEW_SOURCE_SYNC_V07",
+  "selected_take": {
+    "name": "IMG_5739.MOV",
+    "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+    "source_frame_ranges": [
+      [
+        2144,
+        2233
+      ],
+      [
+        2233,
+        2348
+      ],
+      [
+        2348,
+        2479
+      ],
+      [
+        2479,
+        2635
+      ],
+      [
+        2635,
+        2767
+      ],
+      [
+        2767,
+        2864
+      ]
+    ]
+  },
+  "source_window_s": [
+    72.0,
+    92.7
+  ],
+  "unchanged": [
+    "cut_positions",
+    "rhythm_motion",
+    "V06_colour",
+    "R2_captions",
+    "brand_lockup",
+    "92.70s_endpoint",
+    "0.20s_end_fade"
+  ]
+}

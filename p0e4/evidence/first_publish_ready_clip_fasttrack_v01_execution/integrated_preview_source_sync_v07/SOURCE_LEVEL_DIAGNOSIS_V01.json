@@ -1,0 +1,36 @@
+{
+  "blinded_source_comparison": {
+    "context_url": "https://gemini.google.com/app/7a9b4d5cd99ae1fa",
+    "offset_triplet_result": "one-frame delayed IMG_5739 initially preferred with moderate confidence",
+    "two_take_result": "IMG_5739 safer opening"
+  },
+  "diagnosis": "Per-take performance-to-final-vocal timing differs. V05 used IMG_5741 in the opening; a one-frame source slip was too small and the wrong direction/take for the visible performance mismatch. V06 per-take corrections still left cut-dependent lead/lag in independent exact-output QC.",
+  "limits": [
+    "Guide-audio correlation does not prove visible final-vocal lipsync.",
+    "Browser QC cannot certify sub-frame phase.",
+    "No synthetic mouth correction was used."
+  ],
+  "programme_audio": {
+    "name": "AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "shift_ms": 0,
+    "time_stretch": false
+  },
+  "schema": "AAKHRI_SOURCE_LEVEL_LIPSYNC_DIAGNOSIS_V01",
+  "sources": [
+    {
+      "diagnostic_result": "visibly closest and most consistent against final vocal; source comparison estimated about 40 ms lead at guide baseline",
+      "guide_offset_ms": 526,
+      "name": "IMG_5739.MOV",
+      "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+    },
+    {
+      "diagnostic_result": "variable visible lag estimated 80-120 ms against final vocal",
+      "guide_offset_ms": -2044,
+      "name": "IMG_5741.MOV",
+      "sha256": "8043ab5faac4e5ce768c98268234c9d28eac992ee17b90e063acae02707f8313"
+    }
+  ],
+  "status": "CAUSE_LOCALIZED_AND_BOUNDED_REPAIR_SELECTED",
+  "v07_choice": "Use contiguous IMG_5739 guide-baseline source frames for the full 20.7-second candidate. The V06 one-frame delay produced a residual visible lag, so V07 uses the baseline midpoint and eliminates cross-take performance mismatch."
+}

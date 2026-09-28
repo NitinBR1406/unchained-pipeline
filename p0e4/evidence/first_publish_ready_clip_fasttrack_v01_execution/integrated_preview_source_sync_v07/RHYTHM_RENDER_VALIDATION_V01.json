@@ -1,0 +1,41 @@
+{
+  "counts": {
+    "cuts": 5,
+    "shakes": 4,
+    "zooms": 5
+  },
+  "cuts_frames": [
+    89,
+    204,
+    335,
+    491,
+    623
+  ],
+  "ending": {
+    "candidate_duration_s": 20.7,
+    "fade_s": [
+      20.5,
+      20.7
+    ],
+    "master_endpoint_s": 92.7,
+    "preserved": true
+  },
+  "event_semantics": "Low/high-band events remain unclassified; no kick/snare or downbeat claim is inferred.",
+  "master2_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+  "schema": "AAKHRI_RHYTHM_RENDER_VALIDATION_V01",
+  "shake_peaks_frames": [
+    36,
+    311,
+    395,
+    563
+  ],
+  "status": "UNCHANGED_FROM_V04_RENDER_EVIDENCE_AND_REGRESSION_PRESERVED",
+  "v07_changes": "No cut, Fusion motion, intensity, attack, recovery, caption, brand, colour, audio-tail or endpoint changes.",
+  "zoom_peaks_frames": [
+    23,
+    155,
+    282,
+    419,
+    588
+  ]
+}
