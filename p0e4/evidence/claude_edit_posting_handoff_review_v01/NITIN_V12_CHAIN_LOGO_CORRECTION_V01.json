@@ -1,0 +1,37 @@
+{
+  "schema": "NITIN_V12_CHAIN_LOGO_CORRECTION_V01",
+  "recorded_local": "2026-09-28T22:39:37+02:00",
+  "source_commit": "571369e838a06f60efd85d8111733f9beeeab088",
+  "user_verbatim": "De intro bliksem logo klopt niet er is een ketting logo zie bijlage",
+  "status": "CORRECTION_PERSISTED_EXECUTION_NOT_CONFIRMED",
+  "reference": {
+    "uploaded_name": "342C3C45-C057-4F12-892A-C3AE73D143FE.jpeg",
+    "library_file_id": "libfile_244f3f362ac081919a9c13178741b6ff",
+    "visual_observation": "Metallic gold interlocked UN monogram, broken chain extending left/right, black textured background; UNCHAINED NITIN and ~ THE INDESTRUCTIBLE VOICE ~ underneath.",
+    "inspection": "Image visible in user message; local file bytes/hash not verified."
+  },
+  "decision": {
+    "intro_lightning_logo": "REJECTED_BY_NITIN",
+    "required_identity": "USER_SUPPLIED_GOLD_UN_BROKEN_CHAIN",
+    "scope": "Correct logo identity, not blanket video approval, not a request to generate a new logo.",
+    "supersedes": "Any earlier inference that recovering deployed Claude lightning-logo bytes proves they are the intended approved intro."
+  },
+  "instructions": [
+    "Append to existing premium implementation task; do not dispatch duplicate jobs.",
+    "Locate exact original chain logo matching user image in existing brand assets/Shared Drive and bind bytes/hash. Filename alone is insufficient. If exact matching transparent original unavailable, report missing asset, do not invent a replacement or claim this JPEG is transparent.",
+    "Replace lightning intro with matching chain logo in private preview. Preserve approved source geometry, sync, clean captions and ongoing premium work.",
+    "Ensure no lightning asset remains in active intro template/cache binding; preserve original historical files.",
+    "Gemini checks actual rendered logo against this reference as part of independent QC before asking Nitin for final review.",
+    "Do not silently change outro wording, extend audio or promote final/publish approvals."
+  ],
+  "parent_request": "p0e4/evidence/claude_edit_posting_handoff_review_v01/PREMIUM_IMPLEMENTATION_JOINT_BRIEF_V01.json",
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "NITIN_FINAL_VIDEO_APPROVAL": false
+  },
+  "execution": {
+    "delivered_to_claude": false,
+    "rendered": false
+  }
+}
