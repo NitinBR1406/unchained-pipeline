@@ -1,0 +1,10 @@
+{
+  "schema": "MASTER_STATE_UPDATE_STATUS_V01",
+  "status": "NOT_PROMOTED_INTEGRITY_HOLD",
+  "reason": "Known event-31 ledger failure and pointer checksum mismatch remain unresolved; history was not rewritten and no unsupported reducer promotion was attempted.",
+  "execution_evidence_persisted": true,
+  "authoritative_repository_head_before_execution": "50a44556f48bf6db234df86a257b4d4dfe40cb2f",
+  "publication_authorized": false,
+  "production_deployment_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

@@ -1,0 +1,417 @@
+{
+  "schema": "CLAUDE_BEAT_SERVICE_INTRO_OUTRO_CONFIG_EXTRACT_V01",
+  "task_id": "P0E4_CLAUDE_EDIT_POSTING_INTRO_OUTRO_REVIEW_V01",
+  "source": {
+    "file": "RECOVERED_beat_service_app.py",
+    "sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb",
+    "drive_file_id": "1Gxr7-eqDc7QFXh6cn6r52EBGKghDUMK4",
+    "drive_parent_folder": "16Rc80AbCzMBBITax32QjOaM1hPeFVxpC (detector)",
+    "repo_blob": "c8bf6584b34b21237af2f7f11cb0f1f0483e99d8",
+    "repo_path_at_50a4455": "p0e4/evidence/claude_dispatch_beat_recovery_v01_execution/detector/app.py",
+    "app_version": "v19-hostasset",
+    "deployed_parity_proven": false
+  },
+  "note": "Verbatim code lines copied from the recovered bytes. These prove CONFIGURATION and TIMING defaults only. They do NOT contain the outro wording (the wording is flattened inside visualizer_outro.png, whose bytes were not recovered) and do NOT identify which image was used as intro (intro_png is request-supplied via intro_url).",
+  "asset_defaults": [
+    {
+      "line": 36,
+      "text": "# --- Assets voor /visualizer (meegeleverd in de container-map, of via env-URL) ---"
+    },
+    {
+      "line": 37,
+      "text": "ASSET_DIR = os.path.dirname(os.path.abspath(__file__))"
+    },
+    {
+      "line": 38,
+      "text": "LOGO_PATH = os.environ.get(\"LOGO_PATH\") or os.path.join(ASSET_DIR, \"unchained_chain_emblem.png\")"
+    },
+    {
+      "line": 39,
+      "text": "FONT_BOLD = os.environ.get(\"FONT_BOLD\") or os.path.join(ASSET_DIR, \"Poppins-Bold.ttf\")"
+    },
+    {
+      "line": 40,
+      "text": "FONT_MED = os.environ.get(\"FONT_MED\") or os.path.join(ASSET_DIR, \"Poppins-Medium.ttf\")"
+    },
+    {
+      "line": 41,
+      "text": "CIRCLE_MASK = os.path.join(ASSET_DIR, \"vis_circle720.png\")   # voorgerekend rond masker (stijl C)"
+    },
+    {
+      "line": 42,
+      "text": "RING_IMG = os.path.join(ASSET_DIR, \"vis_ring800.png\")        # voorgerekende gouden ring (stijl C)"
+    },
+    {
+      "line": 43,
+      "text": "OUTRO_PATH = os.environ.get(\"OUTRO_PATH\") or os.path.join(ASSET_DIR, \"visualizer_outro.png\")"
+    },
+    {
+      "line": 44,
+      "text": "OUTRO_DUR = float(os.environ.get(\"OUTRO_DUR\") or 4.0)   # end-card: laatste N seconden"
+    }
+  ],
+  "host_asset_allowlist": [
+    {
+      "line": 291,
+      "text": "def host_asset():"
+    },
+    {
+      "line": 292,
+      "text": "    \"\"\"POST { name } -> upload een gebundeld brand-asset naar de publieke GCS-bucket en"
+    },
+    {
+      "line": 293,
+      "text": "    retourneer de publieke HTTPS-URL (voor externe renderers zoals Shotstack).\"\"\""
+    },
+    {
+      "line": 294,
+      "text": "    if not _authorized():"
+    },
+    {
+      "line": 295,
+      "text": "        return jsonify(error=\"unauthorized\"), 401"
+    },
+    {
+      "line": 296,
+      "text": "    b = request.get_json(silent=True) or {}"
+    },
+    {
+      "line": 297,
+      "text": "    name = b.get(\"name\", \"unchained_chain_emblem.png\")"
+    },
+    {
+      "line": 298,
+      "text": "    allowed = {\"unchained_chain_emblem.png\", \"unchained_nitin_logo.png\", \"visualizer_outro.png\"}"
+    },
+    {
+      "line": 299,
+      "text": "    if name not in allowed:"
+    },
+    {
+      "line": 300,
+      "text": "        return jsonify(error=\"asset niet toegestaan\", allowed=sorted(allowed)), 400"
+    },
+    {
+      "line": 301,
+      "text": "    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), name)"
+    }
+  ],
+  "brand_master_un_asset": [
+    {
+      "line": 509,
+      "text": "UN_ASSET_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), \"unchained_chain_emblem.png\")"
+    },
+    {
+      "line": 510,
+      "text": "_FONT_MAP = {\"cinzel600\": CINZEL_SEMIBOLD, \"mont500\": MONTSERRAT_MEDIUM, \"mont400\": MONTSERRAT_REGULAR}"
+    }
+  ],
+  "build_clip_signature_intro_defaults": [
+    {
+      "line": 1001,
+      "text": "def build_clip(video, out, audio=None, hook_text=None, brand_text=None, hook_y=None,"
+    },
+    {
+      "line": 1002,
+      "text": "               intro_png=None, intro_dur=3.0,"
+    },
+    {
+      "line": 1003,
+      "text": "               lyric_pngs=None, lyric_times=None,"
+    },
+    {
+      "line": 1004,
+      "text": "               kicks=None, snares=None, fps=24,"
+    }
+  ],
+  "build_clip_logo_outro_intro_inputs": [
+    {
+      "line": 1020,
+      "text": "    if audio:"
+    },
+    {
+      "line": 1021,
+      "text": "        base += [\"-i\", audio]; aud_ref = \"[%d:a]\" % idx; idx += 1"
+    },
+    {
+      "line": 1022,
+      "text": "    base += [\"-i\", LOGO_PATH]; logo_i = idx; idx += 1"
+    },
+    {
+      "line": 1023,
+      "text": "    use_outro = (d >= 8.0 and os.path.exists(OUTRO_PATH))"
+    },
+    {
+      "line": 1024,
+      "text": "    if use_outro:"
+    },
+    {
+      "line": 1025,
+      "text": "        base += [\"-loop\", \"1\", \"-i\", OUTRO_PATH]; outro_i = idx; idx += 1"
+    },
+    {
+      "line": 1026,
+      "text": "    intro_i = None"
+    },
+    {
+      "line": 1027,
+      "text": "    if intro_png:"
+    },
+    {
+      "line": 1028,
+      "text": "        base += [\"-loop\", \"1\", \"-i\", intro_png]; intro_i = idx; idx += 1"
+    },
+    {
+      "line": 1029,
+      "text": "    pill_base = idx"
+    }
+  ],
+  "build_clip_logo_hook_brand_outro_filters": [
+    {
+      "line": 1043,
+      "text": "    # ketting-logo linksboven"
+    },
+    {
+      "line": 1044,
+      "text": "    fc += \"[%d:v]scale=280:-1[lg];[vfx][lg]overlay=44:60[vlogo];\" % logo_i"
+    },
+    {
+      "line": 1045,
+      "text": "    cur = \"vlogo\""
+    },
+    {
+      "line": 1046,
+      "text": "    # hook-tekst bovenin, eerste 2,8s"
+    },
+    {
+      "line": 1047,
+      "text": "    if hook_text:"
+    },
+    {
+      "line": 1048,
+      "text": "        hf = _textfile(hook_text.upper()); tmp_txt.append(hf)"
+    },
+    {
+      "line": 1049,
+      "text": "        hy = str(hook_y) if hook_y not in (None, \"\", \"center\") else \"(h-text_h)/2\""
+    },
+    {
+      "line": 1050,
+      "text": "        # bij een intro-titel: hook pas ná de intro tonen (geen overlap met de titelkaart)"
+    },
+    {
+      "line": 1051,
+      "text": "        he = (\"between(t,%.2f,%.2f)\" % (intro_dur + 0.2, intro_dur + 3.0)) if intro_png else \"lt(t,2.8)\""
+    },
+    {
+      "line": 1052,
+      "text": "        fc += (\"[%s]drawtext=fontfile=%s:textfile=%s:fontcolor=white:fontsize=56:\""
+    },
+    {
+      "line": 1053,
+      "text": "               \"x=(w-text_w)/2:y=%s:box=1:boxcolor=black@0.38:boxborderw=20:\""
+    },
+    {
+      "line": 1054,
+      "text": "               \"enable='%s'[vhook];\" % (cur, FONT_BOLD, hf, hy, he))"
+    },
+    {
+      "line": 1055,
+      "text": "        cur = \"vhook\""
+    },
+    {
+      "line": 1056,
+      "text": "    # merk-regel onderin de laatste 2s (alleen als er geen end-card is)"
+    },
+    {
+      "line": 1057,
+      "text": "    if brand_text and not use_outro:"
+    },
+    {
+      "line": 1058,
+      "text": "        bf = _textfile(brand_text.upper()); tmp_txt.append(bf)"
+    },
+    {
+      "line": 1059,
+      "text": "        bst = max(0.0, d - 2.0)"
+    },
+    {
+      "line": 1060,
+      "text": "        fc += (\"[%s]drawtext=fontfile=%s:textfile=%s:fontcolor=%s:fontsize=46:\""
+    },
+    {
+      "line": 1061,
+      "text": "               \"x=(w-text_w)/2:y=1620:enable='gte(t\\\\,%.2f)'[vbrand];\""
+    },
+    {
+      "line": 1062,
+      "text": "               % (cur, FONT_BOLD, bf, GOLD, bst))"
+    },
+    {
+      "line": 1063,
+      "text": "        cur = \"vbrand\""
+    },
+    {
+      "line": 1064,
+      "text": "    # end-card in de laatste seconden"
+    },
+    {
+      "line": 1065,
+      "text": "    if use_outro:"
+    },
+    {
+      "line": 1066,
+      "text": "        ost = max(0.0, d - OUTRO_DUR)"
+    },
+    {
+      "line": 1067,
+      "text": "        fc += (\"[%d:v]scale=1080:1920,format=rgba,fade=t=in:st=%.2f:d=0.6:alpha=1[ov];\""
+    },
+    {
+      "line": 1068,
+      "text": "               \"[%s][ov]overlay=0:0:enable='gte(t\\\\,%.2f)'[vend];\" % (outro_i, ost, cur, ost))"
+    },
+    {
+      "line": 1069,
+      "text": "        cur = \"vend\""
+    }
+  ],
+  "build_clip_intro_overlay": [
+    {
+      "line": 1076,
+      "text": "    if intro_i is not None:"
+    },
+    {
+      "line": 1077,
+      "text": "        fo = max(0.0, float(intro_dur) - 0.5)"
+    },
+    {
+      "line": 1078,
+      "text": "        fc += (\"[%d:v]scale=1000:-1,format=rgba,\""
+    },
+    {
+      "line": 1079,
+      "text": "               \"fade=t=out:st=%.2f:d=0.5:alpha=1[introv];\""
+    },
+    {
+      "line": 1080,
+      "text": "               \"[vbody][introv]overlay=(W-w)/2:(H-h)/2:enable='lt(t,%.2f)'[vo];\""
+    },
+    {
+      "line": 1081,
+      "text": "               % (intro_i, fo, float(intro_dur)))"
+    },
+    {
+      "line": 1082,
+      "text": "    else:"
+    },
+    {
+      "line": 1083,
+      "text": "        fc += \"[vbody]null[vo];\""
+    }
+  ],
+  "visualizer_outro": [
+    {
+      "line": 1341,
+      "text": "    # end-card met de socials in de laatste seconden (alleen bij clips >= 8s)"
+    },
+    {
+      "line": 1342,
+      "text": "    if d >= 8.0 and os.path.exists(OUTRO_PATH):"
+    },
+    {
+      "line": 1343,
+      "text": "        ost = max(0.0, d - OUTRO_DUR)"
+    },
+    {
+      "line": 1344,
+      "text": "        base.extend([\"-loop\", \"1\", \"-i\", OUTRO_PATH])   # input 3"
+    },
+    {
+      "line": 1345,
+      "text": "        fc = (apre"
+    },
+    {
+      "line": 1346,
+      "text": "              + \"[3:v]scale=1080:1920,format=rgba,\""
+    },
+    {
+      "line": 1347,
+      "text": "                \"fade=t=in:st=%.2f:d=0.6:alpha=1[ov];\" % ost"
+    },
+    {
+      "line": 1348,
+      "text": "              + fc + \"[c9];\""
+    },
+    {
+      "line": 1349,
+      "text": "              + \"[c9][ov]overlay=0:0:enable='gte(t,%.2f)'[c10];\" % ost"
+    },
+    {
+      "line": 1350,
+      "text": "              + \"[c10]fade=t=out:st=%.2f:d=0.5[vo]\" % vfo)"
+    }
+  ],
+  "lyric_tail_guard": [
+    {
+      "line": 1416,
+      "text": "def _make_pill_pngs(lines, start, dur):"
+    },
+    {
+      "line": 1417,
+      "text": "    \"\"\"Filter de regels op dit fragment, verschuif de tijden en render pill-PNG's."
+    },
+    {
+      "line": 1418,
+      "text": "    Retourneert (png_paths, times) — times in fragment-tijd (0..dur)."
+    },
+    {
+      "line": 1419,
+      "text": "    Lead-in: eerste seconde geen ondertitel. Outro-guard: tijdens de end-card (laatste"
+    },
+    {
+      "line": 1420,
+      "text": "    OUTRO_DUR sec, alleen bij clips >= 8s) geen ondertitel over de outro-tekst.\"\"\""
+    },
+    {
+      "line": 1421,
+      "text": "    d = max(0.6, float(dur))"
+    },
+    {
+      "line": 1422,
+      "text": "    tail_guard = OUTRO_DUR if (d >= 8.0 and os.path.exists(OUTRO_PATH)) else 0.0"
+    }
+  ],
+  "derived_timing_contract": {
+    "outro": {
+      "asset_default": "visualizer_outro.png (env OUTRO_PATH overrides)",
+      "duration_s_default": 4.0,
+      "env_override": "OUTRO_DUR",
+      "condition": "clip duration >= 8.0 s AND file exists",
+      "start_s": "max(0, d - OUTRO_DUR)",
+      "layout": "full-frame scale 1080x1920 overlay at 0,0",
+      "fade_in": "alpha fade 0.6 s from start",
+      "visualizer_path_extra": "whole-video fade out 0.5 s at vfo",
+      "suppresses": [
+        "brand_text line",
+        "lyric pills during tail_guard"
+      ],
+      "code_comment_verbatim": "# end-card met de socials in de laatste seconden (alleen bij clips >= 8s)"
+    },
+    "intro": {
+      "asset_default": null,
+      "source": "request field intro_url downloaded to temp .png",
+      "duration_s_default": 3.0,
+      "field": "intro_dur",
+      "layout": "scale width 1000 px, centered (W-w)/2,(H-h)/2",
+      "visible": "t < intro_dur",
+      "fade_out": "alpha 0.5 s starting intro_dur-0.5",
+      "hook_text_shift": "hook shown between(intro_dur+0.2, intro_dur+3.0) when intro present"
+    },
+    "persistent_logo": {
+      "asset_default": "unchained_chain_emblem.png (env LOGO_PATH overrides)",
+      "layout": "scale width 280 px, overlay x=44 y=60 (top-left), whole clip",
+      "note": "This is the always-on watermark the reuse request says not to restore blindly; it is NOT the intro."
+    }
+  }
+}

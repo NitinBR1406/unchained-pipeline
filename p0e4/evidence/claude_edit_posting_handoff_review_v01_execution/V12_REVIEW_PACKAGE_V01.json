@@ -1,0 +1,53 @@
+{
+  "schema": "AAKHRI_ISHQ_V12_CLAUDE_ORIGINALS_REVIEW_PACKAGE_V01",
+  "status": "WAITING_FOR_NITIN_PRIVATE_PREVIEW_REVIEW",
+  "review_url": "https://drive.google.com/file/d/1umMpKh9xXLQWveW1-iouSGlQHu8-YZxU/view?usp=drivesdk",
+  "folder_url": "https://drive.google.com/drive/folders/1Z4lu9zuVotlLqnAN8GfV-jhCKXCG9MbS",
+  "candidate": {
+    "filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS_HLG_PRORES.mov",
+    "sha256": "17c10e08fdf409b60023eb1b2ab36fffcf72603a42899cc39dbf0bf5971940e9",
+    "bytes": 622719622,
+    "duration_seconds": 24,
+    "frames": 720,
+    "format": "ProRes 422 HQ MOV",
+    "resolution": [
+      1080,
+      1920
+    ],
+    "frame_rate": 30,
+    "color_contract": "Rec.2100 HLG/BT.2020 project/render contract; no calibrated HDR display claim"
+  },
+  "resolve_project": {
+    "sha256": "3f85dd698a1edbbab6570e705aee78ffb9e68c3a8e9153318e8e078716c384ca",
+    "filename": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS.drp"
+  },
+  "claude_originals": {
+    "intro_logo_sha256": "9ec0183958eebed15e262202918db201bcd669e0d4975c7385ec88ecbc20805d",
+    "outro_card_sha256": "c8997aaeb5e8c024dc1dfa222a31676d591cbf0355936b883c2c2fc4ddc2ca10",
+    "exact_outro_wording": [
+      "UNCHAINED NITIN",
+      "~ THE INDESTRUCTIBLE VOICE ~",
+      "FOLLOW FOR MORE",
+      "@UnchainedNitin"
+    ]
+  },
+  "repairs": [
+    "V11 title/artist visibility blink removed with deterministic fade/hold curves",
+    "full 720-frame timeline rendered",
+    "original deployed Claude lightning logo used for brief intro overlay",
+    "original flattened Claude outro card used for final four seconds"
+  ],
+  "qc": {
+    "resolve_render_complete": true,
+    "shared_drive_readback_sha_match": true,
+    "visual_quicklook_spot_check": true,
+    "full_frame_decode": "NOT_AVAILABLE_NO_LOCAL_DECODER",
+    "independent_gemini_qc": "NOT_RUN_THIS_REVISION",
+    "human_creative_review_required": true
+  },
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

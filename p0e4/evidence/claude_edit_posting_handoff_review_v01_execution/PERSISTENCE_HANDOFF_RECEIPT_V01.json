@@ -1,0 +1,22 @@
+{
+  "schema": "PERSISTENCE_HANDOFF_RECEIPT_V01",
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS",
+  "folder_id": "1Z4lu9zuVotlLqnAN8GfV-jhCKXCG9MbS",
+  "file_id": "1umMpKh9xXLQWveW1-iouSGlQHu8-YZxU",
+  "source_to_destination": [
+    {
+      "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS_HLG_PRORES.mov",
+      "source_sha256": "17c10e08fdf409b60023eb1b2ab36fffcf72603a42899cc39dbf0bf5971940e9",
+      "destination_sha256": "17c10e08fdf409b60023eb1b2ab36fffcf72603a42899cc39dbf0bf5971940e9",
+      "match": true
+    },
+    {
+      "name": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS.drp",
+      "source_sha256": "3f85dd698a1edbbab6570e705aee78ffb9e68c3a8e9153318e8e078716c384ca",
+      "destination_sha256": "3f85dd698a1edbbab6570e705aee78ffb9e68c3a8e9153318e8e078716c384ca",
+      "match": true
+    }
+  ],
+  "source_untouched": true,
+  "overwrite_existing_different": false
+}

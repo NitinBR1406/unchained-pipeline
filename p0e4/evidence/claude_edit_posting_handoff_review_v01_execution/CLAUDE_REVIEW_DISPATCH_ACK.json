@@ -1,0 +1,71 @@
+{
+  "schema": "CLAUDE_REVIEW_DISPATCH_ACK_V01",
+  "task_id": "P0E4_CLAUDE_EDIT_POSTING_INTRO_OUTRO_REVIEW_V01",
+  "acknowledged_at_utc": "2026-09-28T20:05:39Z",
+  "provider": "Claude (Anthropic)",
+  "provider_context": "https://claude.ai/code/session_01Bs6X4ij8MxDcMAM2ETjzM1",
+  "transport": "Direct Claude session linked to Nitin's Mac via Claude desktop app (remote-device folder grants). Not the CodexCLI dispatcher.",
+  "repository": {
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline",
+    "branch": "p0e4/slice1-production-handoff",
+    "pinned_commit": "50a44556f48bf6db234df86a257b4d4dfe40cb2f",
+    "head_at_inspection": "50a44556f48bf6db234df86a257b4d4dfe40cb2f",
+    "tracking": "up to date with origin/p0e4/slice1-production-handoff",
+    "working_tree": "clean apart from untracked .local/ and __pycache__"
+  },
+  "requests": [
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01/NITIN_REVIEW_REQUEST.json",
+      "expected_sha256": "a487e83951bdccdaab4d84ca5621ba831ecba8eb58ccbd7c42431bc339ef9beb",
+      "observed_sha256_at_commit": "a487e83951bdccdaab4d84ca5621ba831ecba8eb58ccbd7c42431bc339ef9beb",
+      "observed_sha256_on_disk": "a487e83951bdccdaab4d84ca5621ba831ecba8eb58ccbd7c42431bc339ef9beb",
+      "match": true
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01/NITIN_CLAUDE_INTRO_OUTRO_REUSE_REQUEST_V01.json",
+      "expected_sha256": "28e9ba550027a4493a48f3079493d19b5b3c7aa3105da811d966881784533809",
+      "observed_sha256_at_commit": "28e9ba550027a4493a48f3079493d19b5b3c7aa3105da811d966881784533809",
+      "observed_sha256_on_disk": "28e9ba550027a4493a48f3079493d19b5b3c7aa3105da811d966881784533809",
+      "match": true
+    }
+  ],
+  "related_request": {
+    "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01/WORKTHREAD_DISPATCH_REQUEST_V01.json",
+    "sha256": "11c5ecb01bb98383674c5cd087c36f5a946732b966fc65c4bf7be29adf8b5e71"
+  },
+  "duplicate_check": {
+    "identical_completed_dispatch_exists": false,
+    "searched": [
+      "repo tree + all refs for task id and output names (no CLAUDE_REVIEW_DISPATCH_RECEIPT/ACK, FINDINGS.json or CLAUDE_TECHNICAL_REVIEW.md for this request)",
+      "~/Claude incl. 'Claude outputs' (only older V16 discovery and beat-retrieval results)",
+      "request status fields: NITIN_REVIEW_REQUEST=PREPARED_NOT_DISPATCHED_CLOUD_BROWSER_BLOCKED; REUSE_REQUEST=PERSISTED_FOR_WORKTHREAD_RETRIEVAL_NOT_YET_RETRIEVED"
+    ],
+    "result": "No prior acknowledgement or result. This is the first execution; both scopes handled in one dispatch (reuse request appended to the review as instructed)."
+  },
+  "response_location": {
+    "device_folder": "/Users/nitinramdaras/Claude/Claude outputs/P0E4_CLAUDE_EDIT_POSTING_INTRO_OUTRO_REVIEW_V01"
+  },
+  "status": "COMPLETED",
+  "completion_marker": "REVIEW_COMPLETE",
+  "side_effects": {
+    "repo_commits": 0,
+    "renders": 0,
+    "deploys": 0,
+    "make_mutations": 0,
+    "make_reads": [
+      "scenarios_list team 2778692",
+      "scenarios_get 9627055"
+    ],
+    "datastore_writes": 0,
+    "social_uploads_or_schedules": 0,
+    "drive_writes": 0,
+    "secrets_read": 0
+  },
+  "governance_observed": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false
+  }
+}

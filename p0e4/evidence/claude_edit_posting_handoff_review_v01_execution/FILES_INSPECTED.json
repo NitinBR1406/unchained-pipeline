@@ -1,0 +1,331 @@
+{
+  "schema": "FILES_INSPECTED_V01",
+  "task_id": "P0E4_CLAUDE_EDIT_POSTING_INTRO_OUTRO_REVIEW_V01",
+  "source_commit": "50a44556f48bf6db234df86a257b4d4dfe40cb2f",
+  "inspected_at_utc": "2026-09-28T20:05:39Z",
+  "repository_files_at_commit": [
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01/NITIN_REVIEW_REQUEST.json",
+      "sha256": "a487e83951bdccdaab4d84ca5621ba831ecba8eb58ccbd7c42431bc339ef9beb",
+      "git_blob": "723d6980b0f4d0fd040ec179df822b12f9fcfc6c",
+      "source": "git show 50a4455:p0e4/evidence/claude_edit_posting_handoff_review_v01/NITIN_REVIEW_REQUEST.json"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01/NITIN_CLAUDE_INTRO_OUTRO_REUSE_REQUEST_V01.json",
+      "sha256": "28e9ba550027a4493a48f3079493d19b5b3c7aa3105da811d966881784533809",
+      "git_blob": "041abfcc095e9dea0f2edf4ad0bf5d9ec2381005",
+      "source": "git show 50a4455:p0e4/evidence/claude_edit_posting_handoff_review_v01/NITIN_CLAUDE_INTRO_OUTRO_REUSE_REQUEST_V01.json"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01/WORKTHREAD_DISPATCH_REQUEST_V01.json",
+      "sha256": "11c5ecb01bb98383674c5cd087c36f5a946732b966fc65c4bf7be29adf8b5e71",
+      "git_blob": "489dee5327a4603bb769b7c597c2a55d15ea6cc4",
+      "source": "git show 50a4455:p0e4/evidence/claude_edit_posting_handoff_review_v01/WORKTHREAD_DISPATCH_REQUEST_V01.json"
+    },
+    {
+      "path": "p0e4/resolve/render_aakhri_caption_clean_v11.py",
+      "sha256": "2f39600524e90fe3b0a3950888bdcdf73c4b2429d3bd339b05296bea6f5558c3",
+      "git_blob": "e31ed93e0d50ae975d74bddeeb822391515f09e9",
+      "source": "git show 50a4455:p0e4/resolve/render_aakhri_caption_clean_v11.py"
+    },
+    {
+      "path": "p0e4/resolve/render_aakhri_caption_sharpness_v10.py",
+      "sha256": "fa1fca1fdc5e333f36788f4a2224a5908b4419cf2dda637645e00c76c3222c15",
+      "git_blob": "276f71a036e3a1916bc95c9e9d1101962550c50e",
+      "source": "git show 50a4455:p0e4/resolve/render_aakhri_caption_sharpness_v10.py"
+    },
+    {
+      "path": "p0e4/resolve/templates/UNCHAINED_SOCIAL_TEMPLATE_V01/config.json",
+      "sha256": "11ceda7f3c7de22652ccaabae92aeeb3a2176828c2efb4e951c7390b99210c7f",
+      "git_blob": "d1bf0a780e8f6bf57773b0daab11fd633b23a120",
+      "source": "git show 50a4455:p0e4/resolve/templates/UNCHAINED_SOCIAL_TEMPLATE_V01/config.json"
+    },
+    {
+      "path": "p0e4/resolve/templates/UNCHAINED_SOCIAL_TEMPLATE_V01/README.md",
+      "sha256": "6d5f37a8ab719854ead5d7d3df5991ae35f83a60244bb0359cd1380f1abdb181",
+      "git_blob": "d95a4ace082443e7a6a4598d291ae69daacafd2b",
+      "source": "git show 50a4455:p0e4/resolve/templates/UNCHAINED_SOCIAL_TEMPLATE_V01/README.md"
+    },
+    {
+      "path": "p0e4/resolve/templates/UNCHAINED_SOCIAL_TEMPLATE_V01/integrated_preview_caption_clean_v11.json",
+      "sha256": "ed7d6a16a4b9589caf7b41f514974f9e53d98e4f4b3c058153f8f48479811de7",
+      "git_blob": "0084aeb85a6701774514d6b034a708f454073f74",
+      "source": "git show 50a4455:p0e4/resolve/templates/UNCHAINED_SOCIAL_TEMPLATE_V01/integrated_preview_caption_clean_v11.json"
+    },
+    {
+      "path": "p0e4/tests/test_unchained_social_template_integrated_preview.py",
+      "sha256": "25fc0d3496f3fa3950f2f3b51406713bfdd29c6519482e39670037d0f6897bc9",
+      "git_blob": "a4fbd2972fb2fefc5a6fa4b31fe0bae9eb285ed7",
+      "source": "git show 50a4455:p0e4/tests/test_unchained_social_template_integrated_preview.py"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_caption_clean_v11/RESOLVE_CAPTION_CLEAN_V11.json",
+      "sha256": "f75a2e96698001f667ede03f31cd50e4a2f83a353674c6608a03e64b4045a15c",
+      "git_blob": "6829730fa38b4dc6856758357d0f7ad414fbcfa9",
+      "source": "git show 50a4455:p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_caption_clean_v11/RESOLVE_CAPTION_CLEAN_V11.json"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_caption_clean_v11/TECHNICAL_QC_V01.json",
+      "sha256": "cf2eed53b0a386c04b4d20e202633f998e4792140c011fc66048e1ab4708b464",
+      "git_blob": "fdbcea1ebae9f1a268bdada714c671e40587ec8c",
+      "source": "git show 50a4455:p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_caption_clean_v11/TECHNICAL_QC_V01.json"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_caption_clean_v11/ROOT_CAUSE_AND_REPAIR_V01.json",
+      "sha256": "707250cd031f8ac1787d99a0e0d2b0d807c1cd8fb658591e5ec771efe835ec7b",
+      "git_blob": "d835df7c7a9efa0527d63e6159af9fd6ca0150a8",
+      "source": "git show 50a4455:p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_caption_clean_v11/ROOT_CAUSE_AND_REPAIR_V01.json"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_caption_clean_v11/MASTER_STATE_UPDATE_STATUS_V01.json",
+      "sha256": "fdcb29a168844db44a05a6809ecb2cfecd6fa47efeeb7ab00f137ba2a1971180",
+      "git_blob": "2ebbe48ac3cf0fecef6f278ff267ab3954194e3b",
+      "source": "git show 50a4455:p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_caption_clean_v11/MASTER_STATE_UPDATE_STATUS_V01.json"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_caption_clean_v11/PERSISTENCE_HANDOFF_RECEIPT_V01.json",
+      "sha256": "05470462c63965d75b04a8f74ab6f7deec780e55ec494c3f1bdde0c4c653da56",
+      "git_blob": "ecb41bcdcdf4d4f70d80713f9aa20fcc39d6c393",
+      "source": "git show 50a4455:p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_caption_clean_v11/PERSISTENCE_HANDOFF_RECEIPT_V01.json"
+    },
+    {
+      "path": "p0e4/handoff.py",
+      "sha256": "71310ca0b1a143761acbd73d507c8c795b38cf12322729e02dc9d5661bb6cc3e",
+      "git_blob": "c96033e42063e12f6d55e034a24291da1afa0a73",
+      "source": "git show 50a4455:p0e4/handoff.py"
+    },
+    {
+      "path": "p0e4/integration/post_ready.py",
+      "sha256": "60868584c42a59b6250a6cec3d9e43ea081687565960dbf395ebd1ab2a18417d",
+      "git_blob": "e5dc06e2b87695c218d28e3fc0e2995cc2470582",
+      "source": "git show 50a4455:p0e4/integration/post_ready.py"
+    },
+    {
+      "path": "p0e4/hardening/post_ready.py",
+      "sha256": "266b1ff0e8a2f28c5b999a4b02e5649263c21da52b87b3a1233d1bcbb061f21e",
+      "git_blob": "0bf36035f7461893dad94b6212377eb7b57f6399",
+      "source": "git show 50a4455:p0e4/hardening/post_ready.py"
+    },
+    {
+      "path": "p0e4/hardening/shadow_distribution.py",
+      "sha256": "335df7c2762e8734f3922be33c6e8e8423a00129aa81f937f6f93b591016a3bc",
+      "git_blob": "2683aa2781263ff4df74458204df913c9739409d",
+      "source": "git show 50a4455:p0e4/hardening/shadow_distribution.py"
+    },
+    {
+      "path": "unpipe/publish_approval.py",
+      "sha256": "20e777da33a91461d454ee0aa7b8c76180bae4d66c6a723351498a6245fb8281",
+      "git_blob": "bf5b8646eadfc7f00b9c518220ce0af53409175c",
+      "source": "git show 50a4455:unpipe/publish_approval.py"
+    },
+    {
+      "path": "campaigns/aakhri-ishq/state/approvals.json",
+      "sha256": "3c27207443e809189e386e2fc7098d48017fa7cb8191b42b2e54bd1ea2b4cdd5",
+      "git_blob": "d4a6a3235697753887e591c176703edcd2ea10aa",
+      "source": "git show 50a4455:campaigns/aakhri-ishq/state/approvals.json"
+    },
+    {
+      "path": "campaigns/aakhri-ishq/state/PACKAGING.json",
+      "sha256": "af67ca495e007bb60ded0dd7486a745b520535236a1470758448cfa4b54062e0",
+      "git_blob": "fc3d1656bad9c28f2828609f3cf7250430aff869",
+      "source": "git show 50a4455:campaigns/aakhri-ishq/state/PACKAGING.json"
+    },
+    {
+      "path": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_v01/BRAND_ASSET_PROVENANCE_V01.json",
+      "sha256": "203fb67413fcbb0b774ac3bd9a80b3158221494f2a4234b7daaca8f67a8f00ff",
+      "git_blob": "16d1bda1b5ca0342b5f845a8b590f5639d65a51b",
+      "source": "git show 50a4455:p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_v01/BRAND_ASSET_PROVENANCE_V01.json"
+    },
+    {
+      "path": "p0e4/evidence/claude_dispatch_beat_recovery_v01_execution/detector/app.py",
+      "sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb",
+      "git_blob": "c8bf6584b34b21237af2f7f11cb0f1f0483e99d8",
+      "source": "git show 50a4455:p0e4/evidence/claude_dispatch_beat_recovery_v01_execution/detector/app.py"
+    },
+    {
+      "path": "p0e4/evidence/claude_dispatch_beat_recovery_v01_execution/detector/Dockerfile",
+      "sha256": "8b6823f683f8cb85b70cda6df570155c353232bef313601a596addfa7caaff16",
+      "git_blob": "9ab30de93e8ee043b92e5c66d92609fd63a5b75a",
+      "source": "git show 50a4455:p0e4/evidence/claude_dispatch_beat_recovery_v01_execution/detector/Dockerfile"
+    },
+    {
+      "path": "p0e4/canonical/RENDER_INTERFACE_V16.json",
+      "sha256": "c4da68ff4c9db59099b952851f5fb8af017d47c456a9846588607ff56d7cfbcd",
+      "git_blob": "d00675a3cb6a9f7d5e4e4d5026cb7dac7f9b6061",
+      "source": "git show 50a4455:p0e4/canonical/RENDER_INTERFACE_V16.json"
+    }
+  ],
+  "local_untracked_files": [
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_00_readback.comp",
+      "sha256": "5b71d540dd8585f3c5bd7c839b6cf0fe9a9befa5bdee8c11c7bc2c9b07b0b0b2",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_01_readback.comp",
+      "sha256": "601e5c0271d00c2be12a577f89b397e0e90e0edb4f2735ff9b24f290cdb19749",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_02_readback.comp",
+      "sha256": "3ee25952c33eafd37ca0c5e38e9ef1be8f875c3c507b38d8da40287404a31bc3",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_03_readback.comp",
+      "sha256": "202d004293f40fa2d4b42942b8a5b93055517a6fb0a7edf4aa6140cfc3617794",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_04_readback.comp",
+      "sha256": "f150f21f66dd309144288f3241779fa707886356ae5d55ea22f6b6c1372d0971",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_05_readback.comp",
+      "sha256": "1a60fb7b2c5469f7aa05ebe835b166b015a9ddfe76604c0e5fcb5489fb452f07",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_00_v10.comp",
+      "sha256": "2ce169304d7367ffdcde87f1a0db81f8b5fee56210fe92db8ed64d4dfcf5b4ab",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_00_v11.comp",
+      "sha256": "8a01a39b25556802cc5085c179efec9225c61d50c5f441d67aa978166ef1e70e",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_01_v10.comp",
+      "sha256": "6138868db8267287edc68627430f61d7fcd9eae848c7031df41db5bbdcb377a5",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_01_v11.comp",
+      "sha256": "79aa895c00913ca7eb93fe6c8f57acdc5af21e779e28666121369e77879e3770",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_02_v10.comp",
+      "sha256": "2bec4b098cfa705568ea95ce60a986c684d590afbe8b96f2ddc3012e765eba9d",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/clip_02_v11.comp",
+      "sha256": "c9da914a24f79335292d2204de06f1bebddc6e383211d798634abe448926f939",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-clean-v11/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V11_CLEAN_TYPOGRAPHY_HLG.mp4",
+      "sha256": "b1e8558ec6f95e884429e44969b3c2528ca21a418df3e585301c792dd6a4dc14",
+      "source": "Nitin Mac working tree (untracked)"
+    },
+    {
+      "path": ".local/repair_integrated_logo_overlay.py",
+      "sha256": "af27ac1f6c3e5b06a341fca59c9bf9611609cb945b164ebc67c52949f06e713d",
+      "source": "untracked"
+    },
+    {
+      "path": ".local/aakhri-first-publish-preview-v01-recovery2/LOGO_OVERLAY_REPAIR_V01.json",
+      "sha256": "ca983eaf86b4f05c8f48e33fc9476b918def7195279a65efb6374835105fc699",
+      "source": "untracked"
+    },
+    {
+      "path": ".local/aakhri-integrated-preview-caption-legibility-v09-precontrast/MOBILE_OUTRO_19_50.png",
+      "sha256": "ba87b541331be0666997f9c32f01a29324560a796f170afd072d80ad9a47de09",
+      "source": "untracked; V09 render frame, not an original asset"
+    }
+  ],
+  "google_drive": [
+    {
+      "file_id": "1Gxr7-eqDc7QFXh6cn6r52EBGKghDUMK4",
+      "title": "app.py",
+      "sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb",
+      "bytes": 96083,
+      "read": "full download"
+    },
+    {
+      "file_id": "16Rc80AbCzMBBITax32QjOaM1hPeFVxpC",
+      "title": "detector (folder)",
+      "read": "listing: app.py, clip_fx.py, requirements.txt, Dockerfile only"
+    }
+  ],
+  "remote_objects": [
+    {
+      "url": "https://storage.googleapis.com/unchained-nitin-media/assets/unchained_chain_emblem.png",
+      "status": 200,
+      "bytes": 590916,
+      "sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509"
+    },
+    {
+      "url": "https://storage.googleapis.com/unchained-nitin-media/assets/visualizer_outro.png",
+      "status": 404
+    },
+    {
+      "url": "https://storage.googleapis.com/unchained-nitin-media/assets/unchained_nitin_logo.png",
+      "status": 404
+    }
+  ],
+  "make_read_only": [
+    {
+      "call": "scenarios_list",
+      "team_id": 2778692,
+      "scenarios": 32,
+      "active": 14
+    },
+    {
+      "call": "scenarios_get",
+      "scenario_id": 9627055
+    }
+  ],
+  "prior_claude_outputs": [
+    {
+      "path": "~/Claude/Claude outputs/CLAUDE_DISCOVERY_RESULT.json"
+    },
+    {
+      "path": "~/Claude/Claude outputs/SOURCE_VERIFICATION.json"
+    },
+    {
+      "path": "~/Claude/Claude outputs/CLAUDE_EXISTING_BEAT_RETRIEVAL_RESULT_V01.json"
+    },
+    {
+      "path": "~/Claude/Claude outputs/clip_source.txt"
+    }
+  ],
+  "not_accessible": [
+    {
+      "path": "~/Library/Application Support/Claude/local-agent-mode-sessions",
+      "reason": "cannot be granted to this session"
+    },
+    {
+      "host": "storage.googleapis.com via shell",
+      "reason": "egress proxy 403"
+    }
+  ],
+  "secrets_read": 0,
+  "followup_V02_files": [
+    {
+      "path": "~/Claude/ORIGINAL_INTRO_OUTRO_ASSETS_V01/visualizer_outro.png",
+      "sha256": "c8997aaeb5e8c024dc1dfa222a31676d591cbf0355936b883c2c2fc4ddc2ca10",
+      "bytes": 234197,
+      "read": "full bytes, pixels, OCR"
+    },
+    {
+      "path": "~/Claude/ORIGINAL_INTRO_OUTRO_ASSETS_V01/unchained_nitin_logo.png",
+      "sha256": "9ec0183958eebed15e262202918db201bcd669e0d4975c7385ec88ecbc20805d",
+      "bytes": 148640,
+      "read": "full bytes, pixels"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/ORIGINAL_INTRO_OUTRO_SAFE_EXTRACT_V01.json",
+      "sha256": "2dc24f802027fb406282eef8e588bf77e797f6aaa43f7e8ccbfcb9ab0b478169",
+      "git_state": "untracked (not committed at 50a4455)",
+      "read": "full"
+    }
+  ],
+  "followup_V02_not_accessible": [
+    "session d4d1d7d1 outputs/ incl. REDEPLOY-V5.md, _test_vis.py, outro_card.png, _v5_outro.png, _outro_prev.png, _outro_over.png, unchained_nitin_logo_400/800.png (not copied; folder not grantable)"
+  ],
+  "followup_V02_side_effect_note": "A read-only git status created an empty .git/index.lock that the sandbox could not unlink; it was renamed to .git/index.lock.stale-claude-20260928T2018Z (0 bytes) so git is not blocked. No other repo change."
+}

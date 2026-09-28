@@ -1,0 +1,197 @@
+{
+  "schema": "INTRO_OUTRO_RETRIEVAL_MANIFEST_V01",
+  "task_id": "P0E4_CLAUDE_EDIT_POSTING_INTRO_OUTRO_REVIEW_V01",
+  "request": "p0e4/evidence/claude_edit_posting_handoff_review_v01/NITIN_CLAUDE_INTRO_OUTRO_REUSE_REQUEST_V01.json",
+  "request_sha256": "28e9ba550027a4493a48f3079493d19b5b3c7aa3105da811d966881784533809",
+  "retrieved_at_utc": "2026-09-28T20:05:39Z",
+  "overall_status": "OUTRO_WORDING_BYTE_PROVEN; DEPLOYED_LOGO_BYTES_HASH_BOUND_PROVENANCE_VIA_SAFE_EXTRACT; INTRO_COMPOSITION_NOT_RECOVERED",
+  "use_in_preview_authorized_by_this_result": false,
+  "substitutions_made": 0,
+  "invented_text": 0,
+  "recovered_files": [
+    {
+      "file": "RECOVERED_beat_service_app.py",
+      "role": "Claude beat-service source holding intro/outro/logo configuration and timing",
+      "sha256": "690e58ebec8f9e6979d0ec8a2d835c5b2db31c9e46249cc51d290fe157854dbb",
+      "bytes": 96083,
+      "byte_proven": true,
+      "sources": [
+        {
+          "kind": "google_drive",
+          "file_id": "1Gxr7-eqDc7QFXh6cn6r52EBGKghDUMK4",
+          "parent_folder_id": "16Rc80AbCzMBBITax32QjOaM1hPeFVxpC",
+          "title": "app.py",
+          "sha256_verified": true
+        },
+        {
+          "kind": "git_blob",
+          "commit": "50a44556f48bf6db234df86a257b4d4dfe40cb2f",
+          "path": "p0e4/evidence/claude_dispatch_beat_recovery_v01_execution/detector/app.py",
+          "blob": "c8bf6584b34b21237af2f7f11cb0f1f0483e99d8",
+          "sha256_verified": true
+        },
+        {
+          "kind": "prior_claude_evidence",
+          "ref": "Claude outputs/SOURCE_VERIFICATION.json source_sha256 690e58eb... (2026-09-19)"
+        }
+      ],
+      "limits": "deployed_source_parity_proven=false; env overrides (LOGO_PATH, OUTRO_PATH, OUTRO_DUR) of the deployed service unknown"
+    },
+    {
+      "file": "INTRO_OUTRO_CONFIG_EXTRACT_FROM_APP_PY.json",
+      "role": "verbatim line extract + derived timing contract",
+      "sha256": "42a3cfcc80871a6828415718806aea171da4733662e724143fc18095bbfbf8a0",
+      "derived_from": "RECOVERED_beat_service_app.py",
+      "byte_proven": true
+    },
+    {
+      "file": "ORIGINAL_visualizer_outro.png",
+      "role": "original Claude beat-service end card (OUTRO_PATH default)",
+      "sha256": "c8997aaeb5e8c024dc1dfa222a31676d591cbf0355936b883c2c2fc4ddc2ca10",
+      "bytes": 234197,
+      "byte_proven": true,
+      "copied_unchanged": true,
+      "cmp_identical_to_source": true,
+      "source": "~/Claude/ORIGINAL_INTRO_OUTRO_ASSETS_V01/visualizer_outro.png <- session d4d1d7d1 outputs/visualizer_outro.png == outputs/beat-service/visualizer_outro.png (per safe extract)"
+    },
+    {
+      "file": "ORIGINAL_unchained_nitin_logo.png",
+      "role": "original deployed Claude logo (gold lightning bolt + UNCHAINED NITIN wordmark)",
+      "sha256": "9ec0183958eebed15e262202918db201bcd669e0d4975c7385ec88ecbc20805d",
+      "bytes": 148640,
+      "byte_proven": true,
+      "copied_unchanged": true,
+      "cmp_identical_to_source": true,
+      "source": "~/Claude/ORIGINAL_INTRO_OUTRO_ASSETS_V01/unchained_nitin_logo.png <- session d4d1d7d1 outputs/ (per safe extract)"
+    }
+  ],
+  "outro_config": {
+    "status": "BYTE_PROVEN_CODE_DEFAULTS",
+    "asset_path_default": "visualizer_outro.png",
+    "duration_s_default": 4.0,
+    "min_clip_duration_s": 8.0,
+    "start": "d - OUTRO_DUR",
+    "layout": "full-frame 1080x1920 overlay",
+    "fade_in_s": 0.6,
+    "visualizer_video_fade_out_s": 0.5,
+    "suppresses": [
+      "brand_text",
+      "lyric pills (tail_guard)"
+    ],
+    "code_comment_verbatim": "# end-card met de socials in de laatste seconden (alleen bij clips >= 8s)",
+    "source_lines": "app.py 43-44, 1025-1026, 1065-1069, 1341-1350, 1416-1422"
+  },
+  "outro_text": {
+    "status": "BYTE_PROVEN",
+    "verbatim_lines_top_to_bottom": [
+      "UNCHAINED NITIN",
+      "~ THE INDESTRUCTIBLE VOICE ~",
+      "FOLLOW FOR MORE",
+      "@UnchainedNitin"
+    ],
+    "non_text_elements": [
+      "UN monogram with broken gold chains (chain-emblem lockup) above the wordmark",
+      "four gold platform icons between FOLLOW FOR MORE and the handle: TikTok-style note, Instagram, YouTube, Facebook"
+    ],
+    "method": "Read from the pixels of ORIGINAL_visualizer_outro.png (sha256 c8997aae...) by direct visual inspection and tesseract OCR (psm 11); both agree on all four lines. Matches exact_visible_wording in the safe extract.",
+    "source_asset_sha256": "c8997aaeb5e8c024dc1dfa222a31676d591cbf0355936b883c2c2fc4ddc2ca10",
+    "timing_from_code": "last OUTRO_DUR=4.0 s of clips >= 8.0 s, alpha fade-in 0.6 s (app.py 690e58eb...)"
+  },
+  "intro_logo": {
+    "status": "DEPLOYED_LOGO_ASSET_IDENTIFIED; INTRO_COMPOSITION_NOT_RECOVERED",
+    "deployed_logo": {
+      "file": "ORIGINAL_unchained_nitin_logo.png",
+      "sha256": "9ec0183958eebed15e262202918db201bcd669e0d4975c7385ec88ecbc20805d",
+      "dimensions": "661x691",
+      "visual": "gold lightning bolt; UNCHAINED / NITIN in gold textured block letters; THE INDESTRUCTIBLE VOICE (no tildes) along the bottom",
+      "provenance": {
+        "level": "hash-bound to reviewer-read bytes; role proven via safe extract",
+        "claims_from_safe_extract": [
+          "outputs/beat-service/REDEPLOY-V5.md identifies unchained_nitin_logo.png as the deployed logo",
+          "outputs/_test_vis.py binds app.LOGO_PATH to unchained_nitin_logo.png",
+          "original intro composition uses the same gold lightning-bolt identity"
+        ],
+        "independently_verified_by_reviewer": [
+          "sha256 of bytes == logo_sha256 in safe extract",
+          "file is a valid 661x691 RGBA PNG showing the lightning-bolt identity"
+        ],
+        "not_independently_verified": [
+          "contents of REDEPLOY-V5.md and _test_vis.py (source folder not grantable)"
+        ],
+        "safe_extract": {
+          "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/ORIGINAL_INTRO_OUTRO_SAFE_EXTRACT_V01.json",
+          "sha256": "2dc24f802027fb406282eef8e588bf77e797f6aaa43f7e8ccbfcb9ab0b478169",
+          "git_state": "untracked (not committed at 50a4455)"
+        }
+      }
+    },
+    "relation_to_code": "app.py default LOGO_PATH is unchained_chain_emblem.png; the V5 deployment overrode/bundled LOGO_PATH to unchained_nitin_logo.png per REDEPLOY-V5.md/_test_vis.py. In build_clip LOGO_PATH is the always-on top-left overlay (scale 280, 44:60).",
+    "distinct_from_chain_emblem": {
+      "chain_emblem": {
+        "name": "unchained_chain_emblem.png",
+        "sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509",
+        "dimensions": "933x292",
+        "visual": "UN monogram between broken gold chains",
+        "role": "app.py code default LOGO_PATH watermark and /brand_master UN_ASSET; also the lockup flattened inside visualizer_outro.png"
+      },
+      "difference": "Different bytes (9ec01839... vs 5e77eb7a...), dimensions (661x691 vs 933x292) and mark (lightning bolt + wordmark vs UN chain monogram). They must not be substituted for each other."
+    },
+    "original_intro_from_safe_extract": {
+      "timing_seconds": {
+        "start": 0.0,
+        "duration": 1.8,
+        "fade_in": 0.4,
+        "fade_out_start": 1.4,
+        "fade_out_duration": 0.4
+      },
+      "visible_text": [
+        "UNCHAINED NITIN",
+        "~ THE INDESTRUCTIBLE VOICE ~",
+        "O MAAHI"
+      ],
+      "status": "SECONDHAND (safe extract only); intro composition bytes not provided/inspected",
+      "adaptation_limit": "O MAAHI is historical song text; must not be used for Aakhri Ishq"
+    },
+    "not_resolved": "Exact request intro_url PNG (the composed intro card) was not provided; only the logo it is built from is proven. Note app.py default intro_dur is 3.0 s whereas the extract reports 1.8 s for the historical intro, i.e. that request overrode intro_dur or used a different path.",
+    "superseded_candidates": {
+      "C1_chain_emblem": "not the intro logo (watermark/outro lockup)",
+      "C2_unchained_nitin_logo_800": "derivative size variant name; not provided, not needed",
+      "C3_unchained_nitin_logo": "GCS 404 remains true; original bytes now obtained from session copy"
+    }
+  },
+  "smallest_unblocking_actions": [
+    "Optional: provide the historical intro composition PNG (request intro_url) if a byte-exact intro card is wanted; otherwise rebuild the intro from ORIGINAL_unchained_nitin_logo.png with the extract timing, without O MAAHI."
+  ],
+  "not_done_by_design": [
+    "no preview render",
+    "no asset substitution",
+    "no text inference from brand standard"
+  ],
+  "followup_V02": {
+    "updated_at_utc": "2026-09-28T20:22:00Z",
+    "inputs": [
+      {
+        "file": "~/Claude/ORIGINAL_INTRO_OUTRO_ASSETS_V01/visualizer_outro.png",
+        "sha256": "c8997aaeb5e8c024dc1dfa222a31676d591cbf0355936b883c2c2fc4ddc2ca10",
+        "bytes": 234197,
+        "png": "1080x1920 RGBA 8-bit",
+        "mtime": "2026-07-22 20:24 (as copied)"
+      },
+      {
+        "file": "~/Claude/ORIGINAL_INTRO_OUTRO_ASSETS_V01/unchained_nitin_logo.png",
+        "sha256": "9ec0183958eebed15e262202918db201bcd669e0d4975c7385ec88ecbc20805d",
+        "bytes": 148640,
+        "png": "661x691 RGBA 8-bit",
+        "mtime": "2026-07-10 14:37 (as copied)"
+      },
+      {
+        "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/ORIGINAL_INTRO_OUTRO_SAFE_EXTRACT_V01.json",
+        "sha256": "2dc24f802027fb406282eef8e588bf77e797f6aaa43f7e8ccbfcb9ab0b478169",
+        "git_state": "untracked (not committed at 50a4455)",
+        "role": "safe provenance extract prepared by Nitin/factory"
+      }
+    ],
+    "copy_note": "Copied by Nitin from earlier Claude session d4d1d7d1-1eb9-4047-a092-217ca0feff33 outputs/ into ~/Claude. That source folder itself remains inaccessible to this session; byte identity to the session originals rests on the copy plus the matching hashes stated in the safe extract.",
+    "access_boundary_still_in_force": "~/Library/Application Support/Claude/local-agent-mode-sessions (cannot be granted); REDEPLOY-V5.md and _test_vis.py NOT read directly by this reviewer."
+  }
+}

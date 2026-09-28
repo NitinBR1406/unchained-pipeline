@@ -1,0 +1,14 @@
+{
+  "schema": "CLAUDE_WORKTHREAD_DISPATCH_RECEIPT_V01",
+  "task_id": "P0E4_CLAUDE_EDIT_POSTING_INTRO_OUTRO_REVIEW_V01",
+  "session_url": "https://claude.ai/chat/37c99f03-fbe3-4310-86c2-5db2e6d53f66",
+  "source_commit": "50a44556f48bf6db234df86a257b4d4dfe40cb2f",
+  "request_hashes": [
+    "a487e83951bdccdaab4d84ca5621ba831ecba8eb58ccbd7c42431bc339ef9beb",
+    "28e9ba550027a4493a48f3079493d19b5b3c7aa3105da811d966881784533809"
+  ],
+  "acknowledged": true,
+  "review_complete": true,
+  "followup_complete": true,
+  "duplicate_dispatch": false
+}

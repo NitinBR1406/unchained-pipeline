@@ -1,0 +1,266 @@
+{
+  "schema": "CLAUDE_REVIEW_FINDINGS_V01",
+  "task_id": "P0E4_CLAUDE_EDIT_POSTING_INTRO_OUTRO_REVIEW_V01",
+  "source_commit": "50a44556f48bf6db234df86a257b4d4dfe40cb2f",
+  "inspected_at_utc": "2026-09-28T20:05:39Z",
+  "read_only": true,
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "HIGH",
+      "area": "V11_RECEIPT_PROVENANCE",
+      "title": "caption_readbacks sha256 is the patched input comp, not the Resolve readback",
+      "evidence_type": "code+bytes",
+      "evidence": [
+        "p0e4/resolve/render_aakhri_caption_clean_v11.py:175 readbacks.append({... 'sha256': sha256(readback), **old['patch']}) -> patch['sha256'] overwrites",
+        "receipt clip0 8a01a39b... == clip_00_v11.comp; clip_00_readback.comp == 5b71d540dd8585f3c5bd7c839b6cf0fe9a9befa5bdee8c11c7bc2c9b07b0b0b2",
+        "receipt clip3 8ba0b0dc... (V10 export) vs clip_03_readback.comp 202d004293f40fa2d4b42942b8a5b93055517a6fb0a7edf4aa6140cfc3617794; never compared",
+        "same construct in render_aakhri_caption_sharpness_v10.py"
+      ],
+      "impact": "Receipt presents unverified inputs as readback proof; clip rebuild drift for unpatched clips 3-5 cannot be detected.",
+      "proposed_fix": "Store patched_sha256 and readback_sha256 under separate keys; compare parsed readback against intended comp (semantic equality with Text+ defaults).",
+      "test_needed": "Unit test on receipt builder: readback key must equal hash of readback file; fixture where readback differs must fail.",
+      "owner": "factory (P0-E4 engineering workthread)"
+    },
+    {
+      "id": "F02",
+      "severity": "HIGH",
+      "area": "V11_MEDIA",
+      "title": "Title/artist slow fade and blink across frames 89-212 (visible in delivered MP4)",
+      "evidence_type": "media",
+      "evidence": [
+        "clip_01_readback.comp Merge3Blend/Merge4Blend keys [0]=1 linear->[96]=0, [100]=0.94, [112]=0.94, [114]=0 (title/artist foreground)",
+        "clip_02 Merge1Blend/Merge2Blend [0]=0 -> [8]=0.94 ... [94]=0.94 -> [102]=0",
+        "V11 mp4 b1e8558e...: title/artist visible from ~frame 90, fading to invisible ~frame 182, visible 188-200, gone ~203-210 (cut at 204), back ~212 (tile V11_TITLE_VISIBILITY_FRAMES_86_to_218_step6.jpg; per-frame yellow-pixel scan)",
+        "TECHNICAL_QC phone review sampled only t=1.5 s and 7.5 s"
+      ],
+      "media_timecodes_s": {
+        "fade_start": 2.97,
+        "invisible_by": 6.07,
+        "blink_on": [
+          6.27,
+          6.7
+        ],
+        "dropout_across_cut": [
+          6.8,
+          7.03
+        ],
+        "return": 7.07
+      },
+      "impact": "TITLE_ARTIST section is not a stable 3.0-4.5 s hold; effective max opacity 0.94 contradicts receipt fill_opacity=1; visible flicker at the edit.",
+      "proposed_fix": "Put title/artist on a single timeline-level node spanning the cut (or align per-clip blend keys to one continuous hold); remove inherited linear 1->0 ramp; set blend 1.0 if full opacity is intended.",
+      "test_needed": "Per-frame caption presence/alpha scan over rendered output with contract window; fail on gaps >1 frame or peak != declared.",
+      "owner": "factory"
+    },
+    {
+      "id": "F03",
+      "severity": "MEDIUM",
+      "area": "V11_READBACK",
+      "title": "Readback asserts do not verify the V11 change; one assert checks picture Transform instead of caption",
+      "evidence_type": "code",
+      "evidence": [
+        "render_aakhri_caption_clean_v11.py:170 asserts Center {0.5,0.72} which is UN_CONTINUOUS_RHYTHM_V03 (Transform)",
+        "no assertion on Enabled2/Enabled3/Softness1/Opacity1/Red1..Blue1"
+      ],
+      "impact": "Halo removal is asserted only by visual review, not by control readback.",
+      "proposed_fix": "Parse comp per tool; assert caption inputs (with defaults) equal contract.",
+      "test_needed": "Parser unit test with V10 comp (must fail) and V11 comp (must pass).",
+      "owner": "factory"
+    },
+    {
+      "id": "F04",
+      "severity": "MEDIUM",
+      "area": "V11_INVARIANCE",
+      "title": "Invariance booleans hard-coded; clip rebuild drops non-Fusion/non-LUT clip state silently",
+      "evidence_type": "code",
+      "evidence": [
+        "render_aakhri_caption_clean_v11.py:201-207 literal False values",
+        "lines 136-166: DeleteClips + AppendToTimeline restore only comp index 1 and LUT slot 1; SetLUT not read back/hashed",
+        "programme audio invariance IS evidenced (PCM 39650dfe... == V10)"
+      ],
+      "impact": "colour/rhythm/ending claims unproven; latent loss of inspector/grade/retime state.",
+      "proposed_fix": "Export and diff clip properties (GetProperty), node graph/LUT path+hash, all Fusion comps before/after; compute booleans from diffs.",
+      "test_needed": "Diff-based invariance check in receipt; fixture with changed zoom must flip boolean.",
+      "owner": "factory"
+    },
+    {
+      "id": "F05",
+      "severity": "LOW",
+      "area": "V11_PATCHER",
+      "title": "Non-idempotent comp patch inserts duplicate Opacity1",
+      "evidence_type": "bytes",
+      "evidence": [
+        "render_aakhri_caption_clean_v11.py:79-80",
+        "clip_01_v11.comp and clip_02_v11.comp each contain 2 'Opacity1 = Input' lines"
+      ],
+      "impact": "Relies on Resolve normalisation; repeated patching accumulates keys.",
+      "proposed_fix": "Use set_or_insert_value for Opacity1.",
+      "test_needed": "Patching twice yields identical bytes.",
+      "owner": "factory"
+    },
+    {
+      "id": "F06",
+      "severity": "MEDIUM",
+      "area": "V11_RENDER_RANGE",
+      "title": "Render stops at frame 620 while timeline/expected clips run to 720; no intro/outro in preview",
+      "evidence_type": "code+media",
+      "evidence": [
+        "EXPECTED_TIMELINE last clip (623,720); MarkOut origin+620",
+        "ffprobe nb_frames=621",
+        "LOGO_OVERLAY_REPAIR_V01 overlay at global frames 675-720 (outside rendered range)"
+      ],
+      "impact": "ending_changed=false cannot be evidenced; recovered outro/intro not present in V11.",
+      "proposed_fix": "Declare programme range explicitly in contract and receipt; either trim timeline or render full range.",
+      "test_needed": "Assert render range == declared programme range.",
+      "owner": "factory"
+    },
+    {
+      "id": "F07",
+      "severity": "MEDIUM",
+      "area": "TEMPLATE_CONFIG",
+      "title": "UNCHAINED_SOCIAL_TEMPLATE_V01 config stale and cache key incomplete",
+      "evidence_type": "code",
+      "evidence": [
+        "config.json integrated_preview_contract=integrated_preview_source_sync_v07.json",
+        "latest_private_instance.candidate_sha256 71c3f904... = V07 candidate rejected in NITIN_V07_BASE_CROP_DEFECT_V01.json",
+        "cache_key_fields lacks source_geometry_profile, outline/backing enabled, resolve_comp_readback_sha256, LUT sha, Resolve version, render settings, programme audio sha"
+      ],
+      "impact": "Cache reuse or instantiation from config.json can resolve to rejected state.",
+      "proposed_fix": "Promote latest accepted sidecar into config; union cache_invalidation_additions into cache_key_fields.",
+      "test_needed": "Test that config.latest instance == newest non-rejected sidecar and that cache_key covers all sidecar additions.",
+      "owner": "factory"
+    },
+    {
+      "id": "F08",
+      "severity": "MEDIUM",
+      "area": "TESTS",
+      "title": "Template tests mirror config; contradictory historical contracts all pass",
+      "evidence_type": "code",
+      "evidence": [
+        "p0e4/tests/test_unchained_social_template_integrated_preview.py:63-74 asserts V11 JSON literals",
+        "lines 41-43 still require outline/backing opacity>0 (rejected V09/V10 design)"
+      ],
+      "impact": "Green tests give no output assurance.",
+      "proposed_fix": "Mark superseded contracts; add media/readback-based tests (see F01-F03, F02).",
+      "test_needed": "As F02/F03.",
+      "owner": "factory"
+    },
+    {
+      "id": "F09",
+      "severity": "LOW",
+      "area": "TEMPLATE_DOC",
+      "title": "README/sections not aligned with instance",
+      "evidence_type": "code",
+      "evidence": [
+        "README: rhythm effects disabled until integrated; instance effects_enabled_for_instance=true",
+        "sections TITLE_ARTIST duration 3.0-4.5 s not validated"
+      ],
+      "impact": "Documentation drift.",
+      "proposed_fix": "Update README and validate section durations against render.",
+      "test_needed": "Section duration check from F02 scan.",
+      "owner": "factory"
+    },
+    {
+      "id": "F10",
+      "severity": "HIGH",
+      "area": "POSTING_BINDING",
+      "title": "V11 candidate not bound to any package/registry/approval; packaging uses logical asset IDs",
+      "evidence_type": "code",
+      "evidence": [
+        "b1e8558e... referenced only inside integrated_preview_caption_clean_v11 evidence",
+        "campaigns/aakhri-ishq/state/PACKAGING.json asset='aakhri-ishq:<platform>', caption null, publish_datetime null",
+        "p0e4/handoff.py:64-66 checks presence only"
+      ],
+      "impact": "No hash-bound path from edit output to posting package.",
+      "proposed_fix": "Package rows carry asset_sha256 == rendered derivative sha; handoff asserts equality with approved artifact.",
+      "test_needed": "handoff test with mismatched package sha must block.",
+      "owner": "factory"
+    },
+    {
+      "id": "F11",
+      "severity": "HIGH",
+      "area": "APPROVALS",
+      "title": "APPROVE record with placeholder artifact_sha256 in approvals.json",
+      "evidence_type": "state",
+      "evidence": [
+        "campaigns/aakhri-ishq/state/approvals.json NITIN_FINAL_VIDEO_APPROVAL decision=APPROVE artifact_sha256='AKI_PRODUCTION_MASTER_V01_SHA_PENDING_LOCAL_RENDER'",
+        "request governance NITIN_FINAL_VIDEO_APPROVAL=false"
+      ],
+      "impact": "A decision-only consumer would treat final video as approved.",
+      "proposed_fix": "Append a superseding NOT_BOUND/REVOKE record (no history rewrite); reject non-hex artifact_sha256 at write time.",
+      "test_needed": "Approval writer/validator rejects non-64-hex sha.",
+      "owner": "factory (state owner); Nitin only if a new approval is intended"
+    },
+    {
+      "id": "F12",
+      "severity": "MEDIUM",
+      "area": "STATE_INTEGRITY",
+      "title": "Handoff intake pinned to frozen state_version 10 while master is V16.19/45 with ledger integrity failures",
+      "evidence_type": "code+state",
+      "evidence": [
+        "p0e4/handoff.py:17-43",
+        "MASTER_STATE_UPDATE_STATUS_V01.json reasons: pointer sha mismatch; tamper at seq 31; malformed index 34"
+      ],
+      "impact": "Readiness computed from stale state.",
+      "proposed_fix": "Resolve ledger/pointer integrity first; then bind intake to current verified master state.",
+      "test_needed": "Intake refuses when replay verification fails.",
+      "owner": "factory"
+    },
+    {
+      "id": "F13",
+      "severity": "MEDIUM",
+      "area": "POST_READY_CONTRACT",
+      "title": "Hardened post-ready package misses lineage cross-check, colour/codec fields, destination subset, rights/caption payload and verifier fingerprint fields",
+      "evidence_type": "code",
+      "evidence": [
+        "p0e4/hardening/post_ready.py:27-111",
+        "shadow_distribution rows lack idempotency key/packaging_sha256/schedule_version",
+        "unpipe/publish_approval.py fingerprint uses packaging_sha256 + schedule_version"
+      ],
+      "impact": "Cannot produce a verifier-compatible, platform-deliverable request from the p0e4 package; HLG master unsuitable as-is.",
+      "proposed_fix": "Add transfer/codec/bitrate to technical; require provenance==inputs; explicit authorized_destinations + schedule; compute packaging_sha256/schedule_version at seal.",
+      "test_needed": "Round-trip test package->shadow->verifier request payload.",
+      "owner": "factory"
+    },
+    {
+      "id": "F14",
+      "severity": "HIGH",
+      "area": "LIVE_MAKE",
+      "title": "P1 Poster Publisher active; post-time byte binding and duplicate-post protection missing",
+      "evidence_type": "live_read",
+      "evidence": [
+        "Make 9627055 isActive=true, interval 900 s, nextExec 2026-09-28T20:17:33Z, lastEdit 2026-09-14",
+        "gate: POST unchained-approval.onrender.com/v/publish-eligibility with declared asset_sha256; eligible only on reason VALID_PUBLISH_APPROVAL; HTTP/parse errors logged fail-closed",
+        "posts image_url without hashing fetched bytes",
+        "write-back (modules 11/22) after post; no IN_FLIGHT marker",
+        "N3 9385359 inactive; V3 9561890 inactive; N1,N2,N7,V1,V2 active"
+      ],
+      "impact": "FIRST_REAL_POSTER pause relies entirely on verifier/datastore contents; wrong bytes at image_url could be posted under a valid approval; write-back failure could double-post.",
+      "proposed_fix": "Separately authorised builder task: hash fetched bytes and compare to asset_sha256 before post; set IN_FLIGHT before post; keep scenario unchanged until authorised.",
+      "test_needed": "Tester run in a deactivated copy with mismatched image bytes must stop before post.",
+      "owner": "Nitin decision (activation state) + Claude/Make builder (under separate authorisation)"
+    }
+  ],
+  "retrieval_findings": [
+    {
+      "id": "R01",
+      "severity": "BLOCKER",
+      "title": "Outro wording not byte-proven",
+      "ref": "INTRO_OUTRO_RETRIEVAL_MANIFEST.json#outro_text"
+    },
+    {
+      "id": "R02",
+      "severity": "BLOCKER",
+      "title": "Intro logo identity not proven; one hashed candidate, not chosen",
+      "ref": "INTRO_OUTRO_RETRIEVAL_MANIFEST.json#intro_logo"
+    }
+  ],
+  "no_blanket_green": true,
+  "governance_observed": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "NEXT_READY",
+  "status": "WAITING_FOR_NITIN_PRIVATE_PREVIEW_REVIEW",
+  "review_url": "https://drive.google.com/file/d/1umMpKh9xXLQWveW1-iouSGlQHu8-YZxU/view?usp=drivesdk",
+  "human_questions": [
+    "Does the original lightning-logo intro fit the Aakhri Ishq clip?",
+    "Does the original chain-mark outro card and exact English CTA fit the current brand direction?",
+    "Is the stable title/artist timing acceptable?"
+  ],
+  "after_approval": [
+    "Run independent Gemini QC on exact approved candidate",
+    "prepare posting package without activating posting flow"
+  ],
+  "publication_authorized": false
+}

@@ -1,0 +1,136 @@
+{
+  "baseline_project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V11_CLEAN_TYPOGRAPHY",
+  "caption_contract": {
+    "artist": {
+      "center": [
+        0.5,
+        0.255
+      ],
+      "fill_opacity": 1,
+      "size": 0.075,
+      "softness": 0
+    },
+    "local_backing": {
+      "enabled": false,
+      "native_text_plus_element": 3
+    },
+    "opening_hook": {
+      "center": [
+        0.5,
+        0.205
+      ],
+      "fill_opacity": 1,
+      "frames": [
+        0,
+        82
+      ],
+      "size": 0.105,
+      "softness": 0
+    },
+    "outline": {
+      "enabled": false,
+      "native_text_plus_element": 2
+    },
+    "overlap_prevention": "opening hook hidden before title/artist section; inherited duplicates disabled",
+    "title": {
+      "center": [
+        0.5,
+        0.13
+      ],
+      "fill_opacity": 1,
+      "fill_rgb": [
+        1.0,
+        0.86,
+        0.38
+      ],
+      "size": 0.125,
+      "softness": 0
+    }
+  },
+  "caption_readbacks": [
+    {
+      "changed": true,
+      "changes": [
+        "hook_size_preserved_0.105",
+        "clean_full_opacity_fill",
+        "outline_disabled",
+        "backing_disabled"
+      ],
+      "index": 0,
+      "sha256": "94844bde2cb7487950db413be2b70dd48d8dc6c7fdcf7d049dc41ffc0a18b856"
+    },
+    {
+      "changed": true,
+      "changes": [
+        "title_size_preserved_0.125",
+        "artist_size_preserved_0.075",
+        "stable_fade_in_then_hold",
+        "clean_full_opacity_fill",
+        "outline_disabled",
+        "backing_disabled"
+      ],
+      "index": 1,
+      "sha256": "645a2de5bdc1e8a762bc1f9b4e871a58c801e133035aedd7eb070bb3d522f98d"
+    },
+    {
+      "changed": true,
+      "changes": [
+        "title_size_preserved_0.125",
+        "artist_size_preserved_0.075",
+        "stable_hold_then_fade_out",
+        "clean_full_opacity_fill",
+        "outline_disabled",
+        "backing_disabled"
+      ],
+      "index": 2,
+      "sha256": "27a593bea3d7aa391465c747717bb17c0e7bf84f7cd8aa23e5bd6f8cb512d339"
+    },
+    {
+      "changed": false,
+      "changes": [],
+      "index": 3,
+      "sha256": "28b4e60e9cc70b1ec33fb379641c9badeb3a26ef5b59d74d47eb919c86ba17d6"
+    },
+    {
+      "changed": false,
+      "changes": [],
+      "index": 4,
+      "sha256": "331956f7ee1abfdd0016ee6130baabbd17996123801b437a06db8f960e6abadc"
+    },
+    {
+      "changed": false,
+      "changes": [],
+      "index": 5,
+      "sha256": "0a48dcb38ba6ca9c4e147f7b13183cd68a1b1a53e0fec100b54242a19bf77d1a"
+    }
+  ],
+  "colour_changed": false,
+  "drp": {
+    "bytes": 137343,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-integrated-preview-v12-claude-originals/UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS.drp",
+    "sha256": "25ef9250596167f2e120c829e722a1366c5704dec5645d82795b0c2d73fe1500"
+  },
+  "ending_changed": false,
+  "fusion_picture_geometry_changed": false,
+  "picture_source_ranges_changed": false,
+  "programme_audio_changed": false,
+  "project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS",
+  "prores": {
+    "bytes": 625786774,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-integrated-preview-v12-claude-originals/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V12_BASE_HLG_PRORES.mov",
+    "sha256": "5c9470bb8f641edef6948062bb9fe5588f3aba0549c381c4bd829687baf562d7"
+  },
+  "render_status": {
+    "CompletionPercentage": 100,
+    "JobStatus": "Complete",
+    "TimeTakenToRenderInMs": 38011
+  },
+  "rendered_frames": [
+    0,
+    719
+  ],
+  "rhythm_motion_changed": false,
+  "schema": "RESOLVE_CLAUDE_ORIGINALS_BASE_V12",
+  "timeline": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+  "timeline_cuts_changed": false
+}

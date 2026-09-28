@@ -1,0 +1,49 @@
+{
+  "schema": "ORIGINAL_INTRO_OUTRO_SAFE_EXTRACT_V01",
+  "source_session": "d4d1d7d1-1eb9-4047-a092-217ca0feff33",
+  "source_note": "Derived from original Claude output bytes; signed media URL and credential-like query data intentionally omitted.",
+  "intro": {
+    "logo_asset": "unchained_nitin_logo.png",
+    "logo_sha256": "9ec0183958eebed15e262202918db201bcd669e0d4975c7385ec88ecbc20805d",
+    "provenance": [
+      "outputs/beat-service/REDEPLOY-V5.md explicitly identifies unchained_nitin_logo.png as the deployed logo",
+      "outputs/_test_vis.py binds app.LOGO_PATH to unchained_nitin_logo.png",
+      "original intro composition uses the same gold lightning-bolt identity"
+    ],
+    "original_intro_timing_seconds": {
+      "start": 0.0,
+      "duration": 1.8,
+      "fade_in": 0.4,
+      "fade_out_start": 1.4,
+      "fade_out_duration": 0.4
+    },
+    "original_visible_text": [
+      "UNCHAINED NITIN",
+      "~ THE INDESTRUCTIBLE VOICE ~",
+      "O MAAHI"
+    ],
+    "adaptation_limit": "O MAAHI is historical source text and must not be used for Aakhri Ishq. Reuse only the verified logo/brand identity; do not treat historical song title as current copy."
+  },
+  "outro": {
+    "asset": "visualizer_outro.png",
+    "sha256": "c8997aaeb5e8c024dc1dfa222a31676d591cbf0355936b883c2c2fc4ddc2ca10",
+    "byte_identity": "outputs/visualizer_outro.png equals outputs/beat-service/visualizer_outro.png",
+    "exact_visible_wording": [
+      "UNCHAINED NITIN",
+      "~ THE INDESTRUCTIBLE VOICE ~",
+      "FOLLOW FOR MORE",
+      "@UnchainedNitin"
+    ],
+    "original_card_timing_seconds": {
+      "duration": 4.0,
+      "fade_in": 0.6,
+      "placement": "last four seconds for eligible clips"
+    },
+    "render_observation": "The original flattened outro card contains the full logo, the exact CTA FOLLOW FOR MORE, four platform icons, and @UnchainedNitin."
+  },
+  "governance": {
+    "publication_authorized": false,
+    "production_deployment_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  }
+}

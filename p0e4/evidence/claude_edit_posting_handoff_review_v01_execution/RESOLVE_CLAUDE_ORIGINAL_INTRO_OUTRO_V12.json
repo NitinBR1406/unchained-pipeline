@@ -1,0 +1,46 @@
+{
+  "drp": {
+    "bytes": 139036,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-integrated-preview-v12-claude-originals/UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS.drp",
+    "sha256": "3f85dd698a1edbbab6570e705aee78ffb9e68c3a8e9153318e8e078716c384ca"
+  },
+  "intro": {
+    "frames": [
+      0,
+      53
+    ],
+    "sha256": "5640d05bc5d845f6e16cf3fe51f88e870fe844cc93491773b99b0c087fe2fd41",
+    "source_sha256": "9ec0183958eebed15e262202918db201bcd669e0d4975c7385ec88ecbc20805d"
+  },
+  "outro": {
+    "exact_wording": [
+      "UNCHAINED NITIN",
+      "~ THE INDESTRUCTIBLE VOICE ~",
+      "FOLLOW FOR MORE",
+      "@UnchainedNitin"
+    ],
+    "frames": [
+      600,
+      719
+    ],
+    "sha256": "c8997aaeb5e8c024dc1dfa222a31676d591cbf0355936b883c2c2fc4ddc2ca10"
+  },
+  "project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS",
+  "publication_authorized": false,
+  "render": {
+    "bytes": 622719622,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-integrated-preview-v12-claude-originals/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V12_CLAUDE_ORIGINALS_HLG_PRORES.mov",
+    "sha256": "17c10e08fdf409b60023eb1b2ab36fffcf72603a42899cc39dbf0bf5971940e9"
+  },
+  "render_status": {
+    "CompletionPercentage": 100,
+    "JobStatus": "Complete",
+    "TimeTakenToRenderInMs": 37931
+  },
+  "rendered_frames": [
+    0,
+    719
+  ],
+  "schema": "RESOLVE_CLAUDE_ORIGINAL_INTRO_OUTRO_V12",
+  "timeline": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01"
+}

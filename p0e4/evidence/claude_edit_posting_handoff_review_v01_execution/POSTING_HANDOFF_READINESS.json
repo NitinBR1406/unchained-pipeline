@@ -1,0 +1,133 @@
+{
+  "schema": "POSTING_HANDOFF_READINESS_V01",
+  "task_id": "P0E4_CLAUDE_EDIT_POSTING_INTRO_OUTRO_REVIEW_V01",
+  "source_commit": "50a44556f48bf6db234df86a257b4d4dfe40cb2f",
+  "assessed_at_utc": "2026-09-28T20:05:39Z",
+  "overall": "NOT_READY_BLOCKED",
+  "posting_flow_state_required": "DISABLED",
+  "mutations_performed": 0,
+  "candidate": {
+    "file": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V11_CLEAN_TYPOGRAPHY_HLG.mp4",
+    "sha256": "b1e8558ec6f95e884429e44969b3c2528ca21a418df3e585301c792dd6a4dc14",
+    "drive_file_id": "1Ohwa8woLHZ2ZcJeVAAB8UjAHzm2WfRsO",
+    "status": "PRIVATE_PREVIEW_WAITING_NITIN_REVIEW",
+    "technical": "HEVC Main10, BT.2020 HLG, 1080x1920@30, 20.7 s, AAC 48 kHz",
+    "creative_defects_open": [
+      "F02"
+    ]
+  },
+  "checks": {
+    "media_sha_bound_to_package": {
+      "status": "FAIL",
+      "ref": "F10"
+    },
+    "final_video_approval_bound_to_sha": {
+      "status": "FAIL",
+      "detail": "placeholder sha APPROVE record present",
+      "ref": "F11"
+    },
+    "publish_approval_separate_from_final_video": {
+      "status": "PASS_IN_DESIGN",
+      "detail": "unpipe/publish_approval requires creative, final-asset/video and publish gates each bound to fingerprint"
+    },
+    "explicit_authorized_destinations_and_time": {
+      "status": "FAIL",
+      "detail": "PACKAGING publish_datetime null; hardened package demands all 5 platforms",
+      "ref": "F13"
+    },
+    "rights_and_credits": {
+      "status": "FAIL",
+      "detail": "RIGHTS_HOLD / UNKNOWN_RIGHTS_HOLD"
+    },
+    "idempotency_duplicate_protection": {
+      "status": "PARTIAL",
+      "detail": "control-plane reducer dedups idempotency keys; P1 relies on post_id write-back with no in-flight marker",
+      "ref": "F14"
+    },
+    "fail_closed_retries": {
+      "status": "PARTIAL",
+      "detail": "P1 verifier HTTP/parse errors fail closed; platform errors write *_ERR which stops retry"
+    },
+    "receipts_and_state_reconciliation": {
+      "status": "FAIL",
+      "detail": "ledger/pointer integrity failures; intake pinned to state_version 10",
+      "ref": "F12"
+    },
+    "deliverable_format_for_platforms": {
+      "status": "FAIL",
+      "detail": "HLG HEVC master; no SDR/H.264 derivative bound",
+      "ref": "F13"
+    },
+    "verifier_request_fields_producible": {
+      "status": "FAIL",
+      "ref": "F13"
+    }
+  },
+  "live_make_state_read_only": {
+    "team_id": 2778692,
+    "read_at_utc": "2026-09-28T20:05:39Z",
+    "inactive": [
+      {
+        "id": 9385359,
+        "name": "N3: Publisher — Schedule-Aware (All Platforms)"
+      },
+      {
+        "id": 9561890,
+        "name": "V3: Visualizer Approve -> Publish"
+      }
+    ],
+    "active_relevant": [
+      {
+        "id": 9627055,
+        "name": "P1: Poster Publisher (IG+FB, schedule-aware)",
+        "note": "posts photos when verifier eligible; see F14"
+      },
+      {
+        "id": 9571076,
+        "name": "N7: Release Scheduler (Scheduled -> New op tijd)"
+      },
+      {
+        "id": 9385197,
+        "name": "N2: Processing — Captions & Scheduling"
+      },
+      {
+        "id": 9385192,
+        "name": "N1: Intake — Drive Watcher"
+      },
+      {
+        "id": 9516949,
+        "name": "V1: Visualizer Intake"
+      },
+      {
+        "id": 9516688,
+        "name": "V2: Visualizer Cut -> Render"
+      }
+    ],
+    "video_posting_path_disabled": true,
+    "photo_poster_path_active_behind_verifier": true
+  },
+  "ownership": {
+    "factory": [
+      "F01-F13 code/state fixes",
+      "SDR derivative + package sealing"
+    ],
+    "claude_make_builder_under_separate_authorisation": [
+      "P1 byte-hash + in-flight guard (F14)"
+    ],
+    "nitin": [
+      "decide whether P1 should stay active while FIRST_REAL_POSTER is paused",
+      "final video / publish approvals"
+    ]
+  },
+  "access_blockers": [
+    "unchained-approval verifier state not read (no credential used)",
+    "datastore 177455 rows not read"
+  ],
+  "governance_observed": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false
+  }
+}
