@@ -1,0 +1,41 @@
+{
+  "schema": "NITIN_V10_TEXT_HALO_REJECTION_V01",
+  "recorded_local": "2026-09-28T20:02:41+02:00",
+  "source": "Direct Nitin feedback and two visible screenshots",
+  "user_verbatim": "Er zit een dikke schaduw waas om de letters dat is niet mooi!",
+  "screenshots": [
+    "IMG_5834.jpeg",
+    "IMG_5833.jpeg"
+  ],
+  "repository_head": "d21884e962c8be995f2fa49339f244be70e3a024",
+  "candidate": {
+    "version": "V10",
+    "sha256": "25dfbcdfa227c80c113dffc72144f8b24885efbc0b41bc9a024b676f9b78fff9"
+  },
+  "status": "TEXT_TREATMENT_REJECTED_HEAVY_HALO",
+  "observation": "Screenshots show conspicuous thick dark patches behind hook, artist and title, with dull-looking glyphs. Exact screenshot timecodes not supplied.",
+  "root_cause_status": "Current V10 evidence documents Text+ outline and local border-fill backing. Their precise contribution and any additional inherited shading must be verified by isolated layer inspection; do not call cause visually proven from parameters alone.",
+  "repair_contract": [
+    "Supersede the earlier instruction to strengthen local dark backing: remove the heavy dark halo/block treatment, not another increase in backing opacity.",
+    "In isolated Resolve project inspect and disable text border-fill backing, drop shadow, glow and other diffuse dark text shading in all active and inherited hook/title/artist layers. Start from clean fill-only native text; no replacement black panel or broad gradient.",
+    "Use sharp fully opaque bright white hook/artist text and crisp readable brand-gold title with existing fonts. Preserve current enlarged sizes as baseline; this request does not authorize shrinking the text.",
+    "Prefer no outline. Only if a specific rendered frame proves loss of legibility, use the smallest non-soft edge that does not form a visible halo at phone size; do not assume a normalized Text+ thickness is a verified pixel width.",
+    "Inspect actual rendered fill brightness, compositing, premultiplication and HLG/display conversion if letters still look gray. Do not blame Drive proxy without comparing original and playback.",
+    "Preserve section separation, face/mouth clearance, ceiling-free crop, source-frame/audio binding, beat timing, branding identity and 20.7s ending.",
+    "Before final candidate render inspect matching hook/title frames in native and phone sizes; then check the complete new bounded preview. No heavy patches, no diffuse letter halo, no overlap, readable main text, no face obstruction.",
+    "Deliver one new integrated private preview and same-frame before/after evidence. Update reusable template and regression. No preliminary creative A/B selection loop.",
+    "Preserve older outputs. Persist media in Shared Drive and code/config/evidence in GitHub with readback verification. Keep ledger/pointer hold explicit."
+  ],
+  "execution": {
+    "feedback_registered": true,
+    "new_render_executed": false,
+    "blocker": "No callable local Resolve connection in this session; repository registration is not execution."
+  },
+  "governance": {
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "NITIN_PUBLISH_APPROVAL": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
