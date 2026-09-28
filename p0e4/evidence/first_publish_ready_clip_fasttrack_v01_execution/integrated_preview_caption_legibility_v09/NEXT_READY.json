@@ -1,0 +1,8 @@
+{
+  "schema": "NEXT_READY_V01",
+  "state": "WAITING_FOR_NITIN_V09_CAPTION_LEGIBILITY_REVIEW",
+  "candidate_sha256": "3d4bf164130dca285ebe96045f31406eb6a11d6a438dad5f1e31f13f8d49dce7",
+  "smallest_human_action": "Review the exact V09 integrated private preview and accept or reject its caption size, spacing and contrast.",
+  "not_inferred": ["NITIN_FINAL_VIDEO_APPROVAL", "NITIN_FINAL_ASSET_APPROVAL", "NITIN_PUBLISH_APPROVAL"],
+  "publication_authorized": false
+}

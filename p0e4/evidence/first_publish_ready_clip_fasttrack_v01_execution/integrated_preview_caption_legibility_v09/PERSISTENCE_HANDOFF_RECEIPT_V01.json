@@ -1,0 +1,20 @@
+{
+  "schema": "PERSISTENCE_HANDOFF_RECEIPT_V01",
+  "mode": "COPY_NON_DESTRUCTIVE_NEW_VERSION",
+  "destination_path": "Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/INTEGRATED_PREVIEW_CAPTION_LEGIBILITY_V09_20260928",
+  "destination_folder_id": "1cOT6z-DtVcBLSvhl_il3PD-gjKgKHHOe",
+  "destination_folder_url": "https://drive.google.com/drive/folders/1cOT6z-DtVcBLSvhl_il3PD-gjKgKHHOe",
+  "review_file_id": "1Va_8n91gogsUrdp3akTk6jKFre15n8Fl",
+  "review_url": "https://drive.google.com/file/d/1Va_8n91gogsUrdp3akTk6jKFre15n8Fl/view?usp=drivesdk",
+  "readback": [
+    {"filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V09_CAPTION_LEGIBILITY_HLG.mp4", "source_sha256": "3d4bf164130dca285ebe96045f31406eb6a11d6a438dad5f1e31f13f8d49dce7", "destination_sha256": "3d4bf164130dca285ebe96045f31406eb6a11d6a438dad5f1e31f13f8d49dce7", "status": "MATCH"},
+    {"filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V09_CAPTION_LEGIBILITY_HLG_PRORES.mov", "source_sha256": "35fe23a53f6866a480e9826d655a8c8a4823fba926f26a4d2783b547a14d9b76", "destination_sha256": "35fe23a53f6866a480e9826d655a8c8a4823fba926f26a4d2783b547a14d9b76", "status": "MATCH"},
+    {"filename": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V09_CAPTION_LEGIBILITY.drp", "source_sha256": "d5f584f5e59825574f93551ec990e33c3e4148acd024b5fcc6778f23565e1f53", "destination_sha256": "d5f584f5e59825574f93551ec990e33c3e4148acd024b5fcc6778f23565e1f53", "status": "MATCH"},
+    {"filename": "MOBILE_1_50.png", "source_sha256": "a45d593950e3de8cbb3d75d9d6a003fd3f4323bb5b40604aa35bc260a7953092", "destination_sha256": "a45d593950e3de8cbb3d75d9d6a003fd3f4323bb5b40604aa35bc260a7953092", "status": "MATCH"},
+    {"filename": "MOBILE_7_50.png", "source_sha256": "46e0f59be2ae36fb718f94e9642c92b25718e4918afa22c0c21bd7cfb12a07e4", "destination_sha256": "46e0f59be2ae36fb718f94e9642c92b25718e4918afa22c0c21bd7cfb12a07e4", "status": "MATCH"},
+    {"filename": "MOBILE_19_50.png", "source_sha256": "ba87b541331be0666997f9c32f01a29324560a796f170afd072d80ad9a47de09", "destination_sha256": "ba87b541331be0666997f9c32f01a29324560a796f170afd072d80ad9a47de09", "status": "MATCH"}
+  ],
+  "source_staging_untouched": true,
+  "overwrite_performed": false,
+  "publication_performed": false
+}

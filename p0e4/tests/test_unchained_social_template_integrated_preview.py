@@ -25,3 +25,20 @@ def test_source_aware_ceiling_free_v08_contract():
  assert v["motion_migration"]["method"]=="PROPORTIONAL_SCALE_ABOVE_SOURCE_SPECIFIC_BASE"
  assert v["motion_migration"]["relative_timing_and_intensity_preserved"] is True
  assert {"source_geometry_profile","safe_base_center","safe_base_minimum_size","relative_motion_curve_sha256"}<=set(v["cache_invalidation_additions"])
+
+def test_caption_legibility_v09_contract():
+ v=json.loads((ROOT/"p0e4/resolve/templates/UNCHAINED_SOCIAL_TEMPLATE_V01/integrated_preview_caption_legibility_v09.json").read_text())
+ assert v["inherits"]=="integrated_preview_ceiling_free_v08.json"
+ timing=v["caption_timing"]
+ assert timing["opening_hook_frames"][1] < 88
+ assert timing["inherited_hook_disabled_from_clip_index"]==1
+ assert timing["inherited_small_song_id_disabled"] is True
+ style=v["caption_style"]
+ assert style["opening_hook"]["size"]>=0.09
+ assert style["title"]["size"]>=0.11
+ assert style["artist"]["size"]>=0.065
+ assert style["title"]["center"][1] < style["artist"]["center"][1]
+ assert style["outline"]["opacity"]>0
+ assert style["local_backing"]["appearance"]=="border_fill"
+ assert style["local_backing"]["opacity"]>0
+ assert all(v["preserved"].values())

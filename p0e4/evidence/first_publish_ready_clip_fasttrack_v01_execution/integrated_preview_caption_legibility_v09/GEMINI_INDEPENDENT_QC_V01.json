@@ -1,0 +1,16 @@
+{
+  "schema": "GEMINI_INDEPENDENT_CAPTION_LEGIBILITY_QC_V01",
+  "context_url": "https://gemini.google.com/app/c26db487e7914a78",
+  "candidate_sha256": "3d4bf164130dca285ebe96045f31406eb6a11d6a438dad5f1e31f13f8d49dce7",
+  "attachment_confirmed": true,
+  "verdict": "PASS_WITH_LIMITATIONS_INCONSISTENT_WITH_RENDER_READBACK_AND_FRAME_EVIDENCE",
+  "reported": [
+    {"range": "00:00-00:02", "finding": "white text described as lacking a backing"},
+    {"range": "00:02-00:17", "finding": "text described as covering mouth/chin"},
+    {"range": "00:18-00:20", "finding": "final graphic described as clear"},
+    {"range": "whole clip", "finding": "no section leaks; safe margins; no gaps; visible lipsync described as adequate"}
+  ],
+  "independent_limitations": ["Gemini review was browser/display based and was not a calibrated HDR evaluation.", "Gemini claimed the local backing was absent, while Resolve composition readback proves native Text+ element 3 border-fill was enabled and representative rendered frames visibly show it.", "The exact final candidate therefore remains subject to Nitin's visual review; the inconsistent observation is not promoted into a proven render defect."],
+  "creative_winner_selected": false,
+  "publication_approval_inferred": false
+}

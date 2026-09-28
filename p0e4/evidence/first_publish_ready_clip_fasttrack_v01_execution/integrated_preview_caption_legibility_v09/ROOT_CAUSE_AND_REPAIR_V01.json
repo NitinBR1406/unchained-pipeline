@@ -1,0 +1,21 @@
+{
+  "schema": "CAPTION_OVERLAP_LEGIBILITY_ROOT_CAUSE_AND_REPAIR_V01",
+  "request_sha256": "abbd85558bb16244e8f722bb5ce6e4997f162a330c1a37710f83624ad1be0e31",
+  "baseline": {"version": "V08", "candidate_sha256": "ed163bcce7abf5a4669afc98dc2d555d9ce0eace126983197848a3892a3fa7c"},
+  "root_cause": [
+    "V08 clip 0 drove opening-hook and small-song-ID visibility from the same Merge blend animation.",
+    "V08 clip 1 retained inherited hook/song-ID layers while title and artist became active.",
+    "Title and artist vertical spacing and sizes were insufficient for the requested mobile treatment."
+  ],
+  "repair": {
+    "opening_hook": {"old_size": 0.0624, "new_size": 0.09, "increase_percent": 44.23, "ends_before_title_section": true},
+    "title": {"old_size": 0.0792, "new_size": 0.11, "increase_percent": 38.89},
+    "artist": {"old_size": 0.0408, "new_size": 0.065, "increase_percent": 59.31},
+    "duplicates": "inherited hook and small song ID disabled before title/artist section",
+    "contrast": "black Text+ outline plus bounded local black backing behind active text",
+    "face_protection": "text centers remain below the eyes/nose/mouth exclusion area in the verified 9:16 base framing"
+  },
+  "preserved": ["source frames", "programme audio", "timeline cuts", "V08 picture geometry", "V08 rhythm motion", "V06 colour", "improved ending"],
+  "approval_inference": false,
+  "publication_authorized": false
+}

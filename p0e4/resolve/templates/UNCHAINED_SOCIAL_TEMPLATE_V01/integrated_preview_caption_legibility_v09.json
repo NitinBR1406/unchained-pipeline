@@ -1,0 +1,47 @@
+{
+  "schema": "UNCHAINED_INTEGRATED_PREVIEW_CAPTION_LEGIBILITY_V09",
+  "inherits": "integrated_preview_ceiling_free_v08.json",
+  "authorized_request_sha256": "abbd85558bb16244e8f722bb5ce6e4997f162a330c1a37710f83624ad1be0e31",
+  "caption_timing": {
+    "opening_hook_frames": [0, 82],
+    "opening_hook_fade_points": [[0, 0.0], [6, 1.0], [72, 1.0], [82, 0.0], [88, 0.0]],
+    "title_artist_start_clip_index": 1,
+    "inherited_hook_disabled_from_clip_index": 1,
+    "inherited_small_song_id_disabled": true
+  },
+  "caption_style": {
+    "opening_hook": {"font": "Montserrat", "weight": "Medium", "size": 0.09, "center": [0.5, 0.205]},
+    "title": {"font": "Cinzel", "weight": "SemiBold", "size": 0.11, "center": [0.5, 0.13], "fill_rgb": [1.0, 0.82, 0.36]},
+    "artist": {"font": "Montserrat", "weight": "Medium", "size": 0.065, "center": [0.5, 0.255]},
+    "outline": {"native_text_plus_element": 2, "colour": "BLACK", "opacity": 0.82, "thickness": 0.035},
+    "local_backing": {"native_text_plus_element": 3, "appearance": "border_fill", "colour": "BLACK", "opacity": 0.52, "extend": [0.055, 0.022], "round": 0.12}
+  },
+  "preserved": {
+    "source_ranges": true,
+    "programme_audio": true,
+    "timeline_cuts": true,
+    "picture_geometry": true,
+    "rhythm_motion": true,
+    "colour": true,
+    "ending": true
+  },
+  "output": {
+    "duration_seconds": 20.7,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "minimum_bit_depth": 10,
+    "colour_primaries": "BT.2020",
+    "transfer": "Rec.2100 HLG"
+  },
+  "cache_invalidation_additions": [
+    "caption_text",
+    "caption_timing",
+    "font_family_and_weight",
+    "caption_size_and_center",
+    "outline_settings",
+    "local_backing_settings",
+    "resolve_comp_readback_sha256",
+    "render_sha256"
+  ]
+}

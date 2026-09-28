@@ -1,0 +1,13 @@
+{
+  "schema": "INTEGRATED_PREVIEW_CAPTION_LEGIBILITY_REVIEW_PACKAGE_V01",
+  "status": "WAITING_FOR_NITIN_V09_CAPTION_LEGIBILITY_REVIEW",
+  "review_url": "https://drive.google.com/file/d/1Va_8n91gogsUrdp3akTk6jKFre15n8Fl/view?usp=drivesdk",
+  "folder_url": "https://drive.google.com/drive/folders/1cOT6z-DtVcBLSvhl_il3PD-gjKgKHHOe",
+  "candidate_sha256": "3d4bf164130dca285ebe96045f31406eb6a11d6a438dad5f1e31f13f8d49dce7",
+  "technical_qc": "GREEN_WITH_EXPLICIT_CREATIVE_REVIEW_GATE",
+  "gemini_qc": "PASS_WITH_LIMITATIONS_INCONSISTENT_WITH_RENDER_READBACK_AND_FRAME_EVIDENCE",
+  "review_scope": ["caption size", "caption spacing", "caption contrast", "face clearance"],
+  "no_new_ab_round": true,
+  "final_video_approval_inferred": false,
+  "publication_authorized": false
+}

@@ -1,0 +1,131 @@
+{
+  "baseline_project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V08_CEILING_FREE_BASE",
+  "caption_contract": {
+    "artist": {
+      "center": [
+        0.5,
+        0.255
+      ],
+      "size": 0.065
+    },
+    "local_backing": {
+      "appearance": "border_fill",
+      "black": true,
+      "extend": [
+        0.055,
+        0.022
+      ],
+      "native_text_plus_element": 3,
+      "opacity": 0.52,
+      "round": 0.12
+    },
+    "opening_hook": {
+      "center": [
+        0.5,
+        0.205
+      ],
+      "frames": [
+        0,
+        82
+      ],
+      "size": 0.09
+    },
+    "outline": {
+      "black": true,
+      "native_text_plus_element": 2,
+      "opacity": 0.82,
+      "thickness": 0.035
+    },
+    "overlap_prevention": "opening hook hidden before title/artist section; inherited duplicates disabled",
+    "title": {
+      "center": [
+        0.5,
+        0.13
+      ],
+      "fill_rgb": [
+        1.0,
+        0.82,
+        0.36
+      ],
+      "size": 0.11
+    }
+  },
+  "caption_readbacks": [
+    {
+      "changed": true,
+      "changes": [
+        "hook_size_0.09",
+        "hook_outline_and_local_backing",
+        "song_id_hidden",
+        "hook_clean_hold"
+      ],
+      "index": 0,
+      "sha256": "e5e205350753b708b4e0bd0cd879bca7f3da15cb494a00921336f11aa42ebce9"
+    },
+    {
+      "changed": true,
+      "changes": [
+        "inherited_hook_hidden",
+        "song_id_hidden",
+        "title_artist_enlarged_separated_outlined"
+      ],
+      "index": 1,
+      "sha256": "edbb8f4bb832b624a7b9945c8ba0260011723bf2cdfc2fb5a25f2b9202512442"
+    },
+    {
+      "changed": true,
+      "changes": [
+        "title_artist_enlarged_separated_outlined"
+      ],
+      "index": 2,
+      "sha256": "60aabef97a2cb60ce4938a2b28709fe960b54525f9a6d0a9221e088395837ad7"
+    },
+    {
+      "changed": false,
+      "changes": [],
+      "index": 3,
+      "sha256": "1bc4890aa72abf896f208cc4f147a99aa9aea364e04d775bce9adc0480aef4d3"
+    },
+    {
+      "changed": false,
+      "changes": [],
+      "index": 4,
+      "sha256": "9b83d6bea97b201e7939cba6bb3a9fe9735245cb4cb3e31f35c5b2502de320cf"
+    },
+    {
+      "changed": false,
+      "changes": [],
+      "index": 5,
+      "sha256": "ff2c7cf9bb32a263356ce010b7013dd4a322ff529f3981f46b8b50cb3fc81b08"
+    }
+  ],
+  "colour_changed": false,
+  "drp": {
+    "bytes": 137175,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-integrated-preview-caption-legibility-v09/UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V09_CAPTION_LEGIBILITY.drp",
+    "sha256": "d5f584f5e59825574f93551ec990e33c3e4148acd024b5fcc6778f23565e1f53"
+  },
+  "ending_changed": false,
+  "fusion_picture_geometry_changed": false,
+  "picture_source_ranges_changed": false,
+  "programme_audio_changed": false,
+  "project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V09_CAPTION_LEGIBILITY",
+  "prores": {
+    "bytes": 530925310,
+    "path": "/Users/nitinramdaras/.codex/.chatgpt-projects/g-p-6a9c53ef2a188191b31ad888f255ca99/unchained-pipeline/.local/aakhri-integrated-preview-caption-legibility-v09/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V09_CAPTION_LEGIBILITY_HLG_PRORES.mov",
+    "sha256": "35fe23a53f6866a480e9826d655a8c8a4823fba926f26a4d2783b547a14d9b76"
+  },
+  "render_status": {
+    "CompletionPercentage": 100,
+    "JobStatus": "Complete",
+    "TimeTakenToRenderInMs": 26380
+  },
+  "rendered_frames": [
+    0,
+    620
+  ],
+  "rhythm_motion_changed": false,
+  "schema": "RESOLVE_CAPTION_OVERLAP_LEGIBILITY_REPAIR_V09",
+  "timeline": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+  "timeline_cuts_changed": false
+}
