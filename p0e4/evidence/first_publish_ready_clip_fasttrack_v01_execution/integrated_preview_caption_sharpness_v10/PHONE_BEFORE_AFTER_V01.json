@@ -1,0 +1,10 @@
+{
+  "schema": "PHONE_BEFORE_AFTER_TEXT_SHARPNESS_V01",
+  "method": "same timestamps; same 1080x1920 sources; identical HLG-to-display transform; both scaled to 360x640; side-by-side only after scaling",
+  "comparisons": [
+    {"timestamp_seconds": 1.5, "content": "opening hook", "filename": "PHONE_BEFORE_AFTER_1_5.png", "sha256": "1b952f451e8c08d4c7c199e8922f8b04478f356ab24f21b2e3b625e3221f70c8"},
+    {"timestamp_seconds": 7.5, "content": "title and artist", "filename": "PHONE_BEFORE_AFTER_7_5.png", "sha256": "9994ab91309fccb8c8024d9f32d6ec5007bde1d6b9ba7db17821e8b920a108c3"}
+  ],
+  "result": "V10 glyph edges and hierarchy visibly more prominent at phone size; face and mouth remain clear",
+  "calibrated_hdr_claim": false
+}

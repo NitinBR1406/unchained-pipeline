@@ -1,0 +1,11 @@
+{
+  "schema": "INTEGRATED_PREVIEW_CAPTION_SHARPNESS_REVIEW_PACKAGE_V01",
+  "status": "WAITING_FOR_NITIN_V10_TEXT_SHARPNESS_REVIEW",
+  "review_url": "https://drive.google.com/file/d/13iN-RDE6V-iiyc81zICS6fDYbiMLZTaM/view?usp=drivesdk",
+  "folder_url": "https://drive.google.com/drive/folders/1UA2r4HNPbGWPC4CKKhMxJRAitJs_Jh0O",
+  "phone_before_after_urls": ["https://drive.google.com/file/d/1JLl6LqphGgMyBhiXLbNv84o8KnImW1a0/view?usp=drivesdk", "https://drive.google.com/file/d/1VE3QaWX0GrtQCyrKxKWHjr_TvytKg_BK/view?usp=drivesdk"],
+  "candidate_sha256": "25dfbcdfa227c80c113dffc72144f8b24885efbc0b41bc9a024b676f9b78fff9",
+  "technical_qc": "GREEN_WAITING_FOR_NITIN_TEXT_REVIEW",
+  "no_new_ab_round": true,
+  "publication_authorized": false
+}

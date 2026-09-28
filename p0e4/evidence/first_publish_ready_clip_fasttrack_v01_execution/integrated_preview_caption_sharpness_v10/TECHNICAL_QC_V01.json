@@ -1,0 +1,11 @@
+{
+  "schema": "INTEGRATED_PREVIEW_CAPTION_SHARPNESS_TECHNICAL_QC_V01",
+  "candidate": {"filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V10_TEXT_SHARPNESS_HLG.mp4", "sha256": "25dfbcdfa227c80c113dffc72144f8b24885efbc0b41bc9a024b676f9b78fff9", "bytes": 48101055},
+  "video": {"duration_seconds": 20.7, "width": 1080, "height": 1920, "fps": 30, "codec": "HEVC Main 10", "pixel_format": "yuv420p10le", "primaries": "BT.2020", "transfer": "Rec.2100 HLG", "full_decode": "PASS"},
+  "audio": {"codec": "AAC", "sample_rate_hz": 48000, "channels": 2, "full_decode": "PASS", "decoded_pcm_sha256_matches_v09": true, "decoded_pcm_sha256": "39650dfe74921bfe27d8585db3af19874d98ac9cd4481633a184db6b9dd901d4"},
+  "black_frames": {"status": "PASS", "detected_segments": 0},
+  "resolve_readback": {"status": "PASS", "crisp_default_values_omitted_by_resolve": ["Opacity1=1", "Softness1=0", "Opacity2=1", "Softness2=0"], "explicit_values_verified": ["new sizes", "outline thickness 0.018", "backing opacity 0.68", "backing softness 0.08"]},
+  "visual_checks": {"native_1080x1920": "PASS", "phone_360x640": "PASS", "overlap": "NONE_OBSERVED", "face_and_mouth_clear": true, "clipping": "NONE_OBSERVED"},
+  "limitations": ["Phone comparison frames use the same HLG-to-SDR display transform for relative review and are not calibrated HDR measurements.", "This caption-only repair does not infer lipsync, final-video or publication approval."],
+  "result": "GREEN_WAITING_FOR_NITIN_TEXT_REVIEW"
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "NEXT_READY_V01",
+  "state": "WAITING_FOR_NITIN_V10_TEXT_SHARPNESS_REVIEW",
+  "candidate_sha256": "25dfbcdfa227c80c113dffc72144f8b24885efbc0b41bc9a024b676f9b78fff9",
+  "smallest_human_action": "Review the exact V10 private preview and its matched V09/V10 phone comparisons for text sharpness and prominence.",
+  "not_inferred": ["NITIN_FINAL_VIDEO_APPROVAL", "NITIN_FINAL_ASSET_APPROVAL", "NITIN_PUBLISH_APPROVAL"],
+  "publication_authorized": false
+}

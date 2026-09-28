@@ -1,0 +1,21 @@
+{
+  "schema": "V09_TEXT_SHARPNESS_ROOT_CAUSE_AND_REPAIR_V01",
+  "request_sha256": "14a915997a8e9d83254b7f15e330a9e053e644ca3985423bedd03eaff9167d09",
+  "baseline": {"version": "V09", "candidate_sha256": "3d4bf164130dca285ebe96045f31406eb6a11d6a438dad5f1e31f13f8d49dce7"},
+  "diagnosis": {
+    "full_resolution_inspected": true,
+    "proven_source": "active Resolve Text+ layers retained fill, outline and backing softness values of 1.0 in the V09 project readback",
+    "drive_proxy_only_cause": false,
+    "post_text_picture_transform_changed": false
+  },
+  "repair": {
+    "fill": "native Text+ at full opacity and zero softness",
+    "outline": "zero softness; thickness reduced from 0.035 to 0.018 to avoid a heavy fuzzy edge",
+    "backing": "opacity raised from 0.52 to 0.68 with softness limited to 0.08",
+    "opening_hook_size": {"before": 0.09, "after": 0.105, "increase_percent": 16.67},
+    "title_size": {"before": 0.11, "after": 0.125, "increase_percent": 13.64},
+    "artist_size": {"before": 0.065, "after": 0.075, "increase_percent": 15.38}
+  },
+  "preserved": ["V09 overlap repair", "caption timing", "source frames", "programme audio", "timeline cuts", "V08 framing", "rhythm motion", "V06 colour", "ending"],
+  "publication_authorized": false
+}
