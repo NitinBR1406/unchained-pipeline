@@ -1,0 +1,113 @@
+{
+  "schema": "COVER_CAMPAIGN_RESEARCH_BRIEF_V01",
+  "date": "2026-09-28",
+  "status": "PRELIMINARY_SOURCE_RESEARCH_COMPLETE_GEMINI_INCOMPLETE_WORKTHREAD_PICKUP_UNCONFIRMED",
+  "user_intent": "Per cover een complete campagne inclusief foto's; volgende video gereed voordat huidige campagne start. Eerst uitvoerig onafhankelijk onderzoek samen met Gemini, daarna planning voor ruim tien te filmen covers.",
+  "prior_context": {
+    "catalogue_count": 14,
+    "count_basis": "Previously stated in conversation; current named inventory not verified",
+    "strategy_document": "Unchained_Nitin_Campaign_Growth_Strategy_2026_2031.docx",
+    "prior_model": "6-week cycle, 20–30 assets per song, daily short content",
+    "prior_model_status": "Retrieved historical concept, must assess feasibility; not current completed production inventory"
+  },
+  "definitions": {
+    "campaign": "One song/cover, potentially several clips",
+    "asset": "Distinct creative deliverable; one carousel counts as one asset",
+    "derivative": "Crop/export/language variation tracked separately",
+    "placement": "One asset posted on one platform",
+    "story_frame": "Count separately from feed assets; planned interactive slots not yet completed assets"
+  },
+  "verified_sources": [
+    {
+      "url": "https://www.artists.youtube/resources/shorts-for-artists/",
+      "finding": "YouTube explicitly says no minimum posting cadence is required for videos to have a chance to perform well; encourages different Shorts and consistency."
+    },
+    {
+      "url": "https://artists.youtube/resources/pre-release-strategy/",
+      "finding": "Several formats including performance and BTS; platform recommendations are not causal guarantees for this artist."
+    },
+    {
+      "url": "https://artists.youtube/resources/post-release-strategy/",
+      "finding": "Evaluate cadence and content using own audience analytics; experiment and expand what resonates."
+    },
+    {
+      "url": "https://about.fb.com/news/2024/10/best-practices-education-hub-creators-instagram/",
+      "finding": "Instagram offers personalized guidance including posting frequency and reel length; not a universal number."
+    },
+    {
+      "url": "https://newsroom.tiktok.com/introducing-the-artist-account-to-boost-discoverability-on-tiktok-us?lang=en",
+      "finding": "Behind the Song supports artist storytelling; feature eligibility for Nitin not established."
+    },
+    {
+      "url": "https://newsroom.tiktok.com/the-new-music-insights-platform-for-artists?lang=en-ZA",
+      "finding": "Analytics include completion, shares and followers; certified Artist Account needed for cited dashboard."
+    }
+  ],
+  "gemini_attempt": {
+    "surface": "Cloud browser, signed out",
+    "displayed_model": "Flash-Lite",
+    "observed_conversation_url": "https://gemini.google.com/app/e89186f7a0bcbef2",
+    "submission_observed": true,
+    "partial_response_observed": true,
+    "completed": false,
+    "error": "Something went wrong (1096); returned to /app",
+    "research_validated": false,
+    "partial_response_cautions": "Partial response asserted role distinctions without source verification and mentioned YouTube Stories. Do not accept this fragment as completed research or adopt its unsupported algorithm/demographic claims."
+  },
+  "candidate_counts_not_final": [
+    {
+      "tier": "Compact",
+      "main_video": 1,
+      "short_videos": 3,
+      "photo_posts_or_carousels": 1,
+      "unique_feed_assets": 5,
+      "story_frames": 4
+    },
+    {
+      "tier": "Standard pilot",
+      "main_video": 1,
+      "short_videos": 5,
+      "photo_posts_or_carousels": 2,
+      "unique_feed_assets": 8,
+      "story_frames": 6
+    },
+    {
+      "tier": "Extended",
+      "main_video": 1,
+      "short_videos": 8,
+      "photo_posts_or_carousels": 3,
+      "unique_feed_assets": 12,
+      "story_frames": 8
+    }
+  ],
+  "pilot_hypothesis": {
+    "standard_short_mix": [
+      "2 different performance moments",
+      "1 vocal highlight",
+      "1 why this cover/meaning video",
+      "1 BTS video"
+    ],
+    "photos": "One strong portrait/artwork post plus one carousel of real shoot photos. Individual photos, crops and thumbnails are supporting deliverables, not extra unique posts.",
+    "buffer": "Before campaign A starts, main video B must be edited, QC reviewed and Nitin-approved; B campaign assets prepared, C ready to record. Full campaign B readiness is a stronger proposed target, not implied approval.",
+    "test": "Two-cover feasibility pilot; do not claim causal winner from two songs. Measure actual production hours, rework, video retention/completion, shares/saves, meaningful reactions, new followers and buffer stability. Compare within platform and format at matched observation windows; label low-data cases.",
+    "cadence": "Compare 2, 3 and 6 week release intervals against production capacity. Six-week promotional tail can overlap the next cover; distinguish campaign duration from release interval.",
+    "hours": "Unmeasured; obtain factory estimates and record actual pilot time; no invented productivity claims."
+  },
+  "workthread_instruction": "Continue via existing Gemini communication route. This persisted file is NOT an automatic dispatch. Obtain full independent report, dated primary sources, exact model and completion receipt. Give Gemini objective and historical concept, request an independent proposal before showing candidate counts to avoid anchoring. Reconcile disagreement with ChatGPT, then deliver recommended asset matrix, platform mapping, shotlist including real photography and personal explanation, capacity model, two-cover pilot and provisional 14-cover rolling plan. Locate existing cover inventory rather than asking Nitin to rebuild it. Preserve currently authorized caption/logo/outro repairs. Do not create new tools or architecture to complete this research.",
+  "research_questions": [
+    "What post types fit discovery, personal connection and repeat listening for this cover artist?",
+    "How many distinct moments does each song genuinely support?",
+    "What is minimum/standard/expanded package by unique assets, story frames and platform placements?",
+    "What can be filmed in one session and what additional performance is required?",
+    "Is prior 20–30 asset concept counting derivatives as new content?",
+    "What cadence fits measured weekly availability and keeps next video ready?",
+    "What own analytics are available and what uncertainty remains?",
+    "How do photo carousels, translated meaning, BTS and talking-head content compare on effort and role?"
+  ],
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "research_is_not_final_creative_approval": true
+  }
+}
