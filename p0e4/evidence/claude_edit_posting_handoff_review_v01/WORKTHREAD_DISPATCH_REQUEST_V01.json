@@ -1,0 +1,32 @@
+{
+  "schema": "WORKTHREAD_DISPATCH_REQUEST_V01",
+  "recorded_local": "2026-09-28T20:47:24+02:00",
+  "user_verbatim": "Er is toch een communicatie laag gebouwd tussen ChatGPT en Claude. Maak daar gebruik van of geef de opdracht aan de workthread",
+  "assignee": "Existing P0-E4 engineering workthread / local factory",
+  "status": "PERSISTED_AWAITING_WORKTHREAD_PICKUP_NOT_DISPATCH_CONFIRMED",
+  "review_request": "p0e4/evidence/claude_edit_posting_handoff_review_v01/NITIN_REVIEW_REQUEST.json",
+  "review_request_commit": "263204fb34ae5746b835846a5d67e466e278b340",
+  "instructions": [
+    "Use the EXISTING ChatGPT/Claude communication layer on the execution host. Do not introduce a new bridge or use cloud browser failure as a global Claude blocker.",
+    "Inspect current authenticated transport, earlier successful Claude request/response receipts and workthread controller. Determine actual supported route; the bounded CodexCLI dispatcher is not a general Claude transport.",
+    "Check whether this exact review is already queued, acknowledged or complete before dispatch. Reuse request identity and avoid duplicate reviews.",
+    "Deliver the existing review request to Claude; pin newest source commit including current caption-halo repair. Request edit/template technical review and actual existing Make/posting handoff readiness assessment.",
+    "Persist delivery receipt with transport/context/task identity and request hash, acknowledgement, raw Claude result, normalized findings and source evidence in repository.",
+    "Continue authorized independent video repairs while review runs. Report only actionable access blockers if delivery fails; do not ask Nitin to relay messages.",
+    "No activation of production render or posting workflows as a way to wake the reviewer. No schedule/upload/publication or approval mutations. Preserve frozen components and state integrity hold."
+  ],
+  "inspection_in_this_session": {
+    "available_tool_route_to_existing_workthread": false,
+    "confirmed_repository_components": [
+      "p0e4/controller/dispatch.py: bounded Codex CLI audit transport",
+      "p0e4/evidence/wake_dispatch_v155/README.md: host-specific bounded native wake demonstrated, not a general GUI dispatcher",
+      "docs/AUTO_DISPATCH_SETUP.md: production render trigger, not review transport"
+    ],
+    "limitation": "Remote delivery/acknowledgement to the existing local workthread cannot be claimed from repository persistence alone."
+  },
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
