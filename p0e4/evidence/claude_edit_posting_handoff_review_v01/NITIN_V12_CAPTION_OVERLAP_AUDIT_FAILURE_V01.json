@@ -1,0 +1,35 @@
+{
+  "schema": "NITIN_V12_CAPTION_OVERLAP_AUDIT_FAILURE_V01",
+  "recorded_local": "2026-09-28T22:41:15+02:00",
+  "source_commit": "0f99bba9b4f7039f54b66588d5d77ff012d3e85c",
+  "user_verbatim": "Daarnaast zijn we weer captions over elkaar heen. Audit moet echt beter gebeuren hoor",
+  "status": "USER_REPORTED_DEFECT_OPEN_NOT_REPAIRED",
+  "candidate_sha256": "17c10e08fdf409b60023eb1b2ab36fffcf72603a42899cc39dbf0bf5971940e9",
+  "finding": {
+    "caption_overlap": "REPORTED_BY_NITIN",
+    "timecodes": "NOT_YET_LOCALIZED",
+    "independent_observation": "No new video inspection in this orchestrator turn; do not invent timing or root cause."
+  },
+  "parent_request": "p0e4/evidence/claude_edit_posting_handoff_review_v01/PREMIUM_IMPLEMENTATION_JOINT_BRIEF_V01.json",
+  "companion_defect": "p0e4/evidence/claude_edit_posting_handoff_review_v01/NITIN_V12_CHAIN_LOGO_CORRECTION_V01.json",
+  "instructions": [
+    "Treat V12 as not acceptable for final review: open logo identity and caption overlap defects. No blanket PASS.",
+    "Append to same workthread/Claude implementation job. Preserve approved source/audio/crop and other fixes; avoid another disconnected repair iteration.",
+    "Inspect full 24-second actual render and identify exact start/end timecodes for each collision. Inventory all active timeline tracks, Fusion Text+/Merge nodes, inherited comps and text baked into intro/outro graphics before identifying cause.",
+    "Give hook, title/artist, lyrics/captions and outro explicitly defined visibility windows and spatial bounds. Valid intended multi-line text is allowed; unrelated text layers must not collide. Repair incoming/outgoing animation overlaps across every cut and intro/outro transition.",
+    "Audit actual final rendered file throughout: full decode when available, normal-speed full viewing, frame-by-frame checks over every text entry/exit/cut/transition, and caption-presence/collision checks over entire programme where reliable. Spot checks alone are insufficient. Record limitations rather than PASS when full coverage unavailable.",
+    "Read back actual Resolve caption controls and bind separate intended/readback hashes. Include font, size, position, opacity, motion windows and render range checks. Do not trust hard-coded QC booleans.",
+    "Gemini must review exact repaired artifact before Nitin handoff and independently report timecoded findings. AI verdict never overrides user rejection.",
+    "Return one integrated corrected preview addressing BOTH chain logo and caption collision, plus full coverage evidence and change summary. Only request Nitin creative approval after objective defects are fixed."
+  ],
+  "execution": {
+    "claude_delivery_confirmed": false,
+    "gemini_review_complete": false,
+    "new_render_complete": false
+  },
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "NITIN_FINAL_VIDEO_APPROVAL": false
+  }
+}
