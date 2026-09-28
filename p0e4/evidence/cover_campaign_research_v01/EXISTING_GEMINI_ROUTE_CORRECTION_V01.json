@@ -1,0 +1,31 @@
+{
+  "schema": "EXISTING_GEMINI_ROUTE_CORRECTION_V01",
+  "date": "2026-09-28",
+  "user_instruction": "Met Gemini is er ook een communicatieplan gebouwd naar een specifieke chat.",
+  "status": "EXISTING_CHAT_REFERENCE_RECOVERED_DELIVERY_NOT_CONFIRMED",
+  "supersedes": "Any instruction to use a new unrelated Gemini chat, and any proposal treating daily publication as optional or extending beyond six unique performance video derivatives.",
+  "source_ref": "ad45caadd941a6c2a7f95118faf60f5185f862ca",
+  "verified_repository_evidence": [
+    "p0e4/evidence/history_v14/GEMINI_HISTORICAL_CONTEXT_PACKAGE.json",
+    "p0e4/integration/historical_context.py"
+  ],
+  "recovered_chat": {
+    "title": "YouTube-groeistrategie unchainednitin",
+    "url": "https://gemini.google.com/app/7c9afdcb27030bcb",
+    "meaning": "Exact historical strategic conversation bound in integration validator; no current live dispatch endpoint established by this evidence."
+  },
+  "workthread_instructions": [
+    "Use existing local Gemini communication plan and configured strategic chat. Verify that the recovered conversation matches current route/configuration before sending; do not choose one of the many isolated QC chats.",
+    "Continue campaign research from RESEARCH_BRIEF_AND_INITIAL_FINDINGS_V01.json with historical context; do not create a new disconnected conversation or integration.",
+    "Daily publication is Nitin's requirement. Research how to achieve it sustainably using video, photos, carousels, Stories and catalogue mix. Platform absence of minimum cadence does not cancel user requirement.",
+    "Preserve 14-day production-cycle baseline, maximum six unique video derivatives per performance and worldwide ambition. Earlier 20–30 asset and six-week concept is historical; distinguish assets/crops/placements/campaign tail versus release interval.",
+    "Keep next video completed and approved before current campaign launches. Research execution is authorized; actual scheduling/publication remains unauthorized.",
+    "Return dispatch receipt with exact conversation URL, actual submitted prompt and Gemini reply before marking delivered or complete."
+  ],
+  "execution": {
+    "direct_local_transport_available_in_this_session": false,
+    "workthread_pickup_confirmed": false,
+    "gemini_delivery_to_recovered_chat_confirmed": false
+  },
+  "PUBLICATION_AUTHORIZED": false
+}
