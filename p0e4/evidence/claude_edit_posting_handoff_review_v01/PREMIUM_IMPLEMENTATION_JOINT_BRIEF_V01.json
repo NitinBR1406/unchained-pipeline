@@ -1,0 +1,84 @@
+{
+  "schema": "PREMIUM_IMPLEMENTATION_JOINT_BRIEF_V01",
+  "request_id": "UNCHAINED_PREMIUM_JOINT_20260928_V01",
+  "recorded_local": "2026-09-28T21:36:02+02:00",
+  "source_commit": "3cd95bfc0833521e8372a5e213e5855d91021a7e",
+  "user_authorization": "Betrek Claude volgens implementatieplan en Gemini ook",
+  "status": "PERSISTED_NOT_DELIVERED",
+  "purpose": "Execute the agreed premium edit improvement plan through existing Claude/Gemini routes; €10 million denotes creative ambition, not budget or verified valuation.",
+  "parent_dispatch": "p0e4/evidence/claude_edit_posting_handoff_review_v01/WORKTHREAD_DISPATCH_REQUEST_V01.json",
+  "related_requests": [
+    "p0e4/evidence/claude_edit_posting_handoff_review_v01/NITIN_CLAUDE_INTRO_OUTRO_REUSE_REQUEST_V01.json",
+    "p0e4/evidence/cover_campaign_research_v01/EXISTING_GEMINI_ROUTE_CORRECTION_V01.json",
+    "p0e4/evidence/cover_campaign_research_v01/RESEARCH_BRIEF_AND_INITIAL_FINDINGS_V01.json"
+  ],
+  "routing": {
+    "claude": "Existing local communication layer, same implementation/review context; resolve actual configured destination, do not invent URL or new bridge.",
+    "gemini": {
+      "strategy_chat": "https://gemini.google.com/app/7c9afdcb27030bcb",
+      "title": "YouTube-groeistrategie unchainednitin",
+      "instruction": "Verify against existing communication plan on host, then use this established strategic context; preserve existing independent QC protocol for actual-asset review. No new disconnected chat."
+    },
+    "deduplication": "Append to active related request if already picked up; do not start duplicate reviews/renders."
+  },
+  "roles": {
+    "claude": [
+      "Read existing implementation plan and current template before edits; map each change to current implementation.",
+      "Retrieve exact original intro logo/outro wording with provenance; do not substitute fabricated assets.",
+      "Implement two short internal caption treatments on same source/time range, Cinzel SemiBold titles and Montserrat Medium captions, warm gold/white, sharp fill, no broad shadow/glow/backing halo, no overlapping text.",
+      "Align restrained caption animation/cuts/zooms to verified musical accents; preserve synchronized audio, zoomed ceiling-free crop and current accepted repairs. Do not present detector peaks as verified kick/snare labels.",
+      "Implement selected treatment in one complete private review clip; preserve original sources and record actual diffs.",
+      "Run technical and visual checks, save actual project/template, preview and media hashes with direct Drive links; measure active edit time, render time and rework.",
+      "Inspect existing Make/posting handoff readiness without activating it. Freeze reusable style after Nitin approval."
+    ],
+    "gemini": [
+      "Use existing premium/strategy context to assess typography, musical timing, emotional impact, face priority and brand coherence.",
+      "Review both actual short samples; provide specific recommendations, artifact identity and timestamps. No generic premium praise or unsupported PASS.",
+      "Review integrated video itself for caption sharpness, halo, overlap, face coverage, crop continuity, opening lipsync and beat relationship; explicitly state unverifiable items.",
+      "Continue previously authorized campaign research under fixed daily-publication/14-day-cycle/max-six-derivatives constraints; distinguish creative items, exports, Stories and placements."
+    ],
+    "chatgpt": [
+      "Reconcile advice with existing agreements, select one recommended creative direction for Nitin, resolve conflicting evidence.",
+      "Track prepared, delivered, acknowledged, executing, reviewed and approved separately; no status promotion from file creation.",
+      "Present one integrated review package and genuine remaining creative decision."
+    ],
+    "nitin": [
+      "Final creative/video approval; publication authorization remains separate."
+    ]
+  },
+  "sequence": [
+    "Verify current source/template and routes, return real dispatch and acknowledgement receipts.",
+    "Claude feasibility/input plus Gemini creative direction; render two bounded internal samples.",
+    "Gemini compares actual samples; ChatGPT selects recommended treatment; Claude finishes integrated clip.",
+    "Technical checks and independent Gemini actual-video review; repair objective defects internally.",
+    "Nitin receives one complete review clip with change summary; freeze style only following approval."
+  ],
+  "constraints": {
+    "daily_content": true,
+    "production_cycle_days": 14,
+    "max_unique_video_derivatives_per_performance": 6,
+    "performance_priority": "Retain current hard 80% performance constraint; no blanket text overlay.",
+    "monogram": "Intro/outro only",
+    "next_video": "Completed, QC reviewed and Nitin approved before current campaign launches",
+    "worldwide_ambition": true,
+    "no_new_architecture": true,
+    "no_full_master_render": true,
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "required_receipts": [
+    "Actual transport and exact target context",
+    "Submitted request identity/hash",
+    "Claude and Gemini acknowledgement separately",
+    "Original raw replies and artifact-specific reviews",
+    "Rendered preview SHA and source/template bindings",
+    "Measured execution time and actual outstanding blockers"
+  ],
+  "execution": {
+    "claude_delivery_confirmed": false,
+    "gemini_delivery_confirmed": false,
+    "workthread_pickup_confirmed": false,
+    "limitation": "This session has repository access but no callable existing local worker transport; persistence alone does not wake the factory."
+  }
+}
