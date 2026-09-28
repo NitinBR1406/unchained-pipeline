@@ -1,0 +1,50 @@
+{
+  "schema": "AAKHRI_V13_CODE_REPAIR_READY_V01",
+  "recorded_at_utc": "2026-09-28T21:10:15Z",
+  "source_head": "88fe67edabab9cb61e682395ff65a2035e3d5b2d",
+  "status": "CODE_REPAIR_VERIFIED_LOCAL_RESOLVE_EXECUTION_UNAVAILABLE",
+  "scope": "Private 24-second Aakhri Ishq preview only; no publication or production deployment",
+  "repairs": [
+    "Replace rejected lightning-logo binding with hash-bound gold UN broken-chain asset",
+    "Make intro, hook/title and outro visibility windows fail-closed and non-overlapping",
+    "Make caption scalar patching idempotent and reject duplicate Fusion inputs",
+    "Separate intended-comp and Resolve-readback hashes instead of overwriting one with the other",
+    "Restore and read back clip framing/crop/composite properties, every Fusion comp and LUT slot 1 after rebuilding clips",
+    "Bind the finalizer to the exact repair renderer and contract hashes so a stale project cannot render",
+    "Require complete video and audio decode plus ffprobe before emitting a candidate receipt"
+  ],
+  "chain_logo": {
+    "url": "https://storage.googleapis.com/unchained-nitin-media/assets/unchained_chain_emblem.png",
+    "sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509",
+    "observed_bytes": 590916,
+    "observed_dimensions": [933, 292],
+    "format": "RGBA PNG",
+    "identity": "Gold interlocked UN monogram with broken chains; visually matches Nitin's supplied reference",
+    "lightning_logo_allowed": false
+  },
+  "changed_code": {
+    "p0e4/resolve/aakhri_v12_repair_contract.py": "2fd71c412628a022d9d6ff57f799c5dc58a173af4e81673a35800290b9f5b16c",
+    "p0e4/resolve/render_aakhri_claude_intro_outro_v12.py": "7082920359ef65d9d51798f3b19ad4873b3c300be64eae02dbdfc26c31bd2bc5",
+    "p0e4/resolve/render_aakhri_claude_originals_v12.py": "9ca4e688f904c8d47e1bcb9c0cd1022f4a09b91d736cb138c916e618f40bf5c0",
+    "p0e4/tests/test_aakhri_v12_repair_contract.py": "21bdc289f7cfa0154268d7f56f1b36de6a1e83627d0bf16eb31b325ce30989b1"
+  },
+  "verification": {
+    "unit_tests": "6/6 PASS",
+    "python_compile": "PASS",
+    "full_decode_helper_real_media_smoke": "PASS_VIDEO_AND_AUDIO",
+    "git_diff_check": "PASS"
+  },
+  "not_claimed": {
+    "resolve_render_complete": false,
+    "actual_output_visual_audit_complete": false,
+    "gemini_exact_asset_qc_complete": false,
+    "shared_drive_persistence_complete": false,
+    "nitin_approval": false
+  },
+  "remaining_transport_boundary": "This execution host does not expose DaVinciResolveScript or the established Mac Resolve/workthread transport. The verified code must run on the existing Resolve host; then the exact render SHA requires full transition-by-transition inspection and independent Gemini QC before Nitin review.",
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
