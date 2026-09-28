@@ -1,0 +1,73 @@
+{
+  "results": [
+    {
+      "ceiling_band_frames": 350,
+      "ceiling_frame_ranges": [
+        [
+          0,
+          88
+        ],
+        [
+          204,
+          334
+        ],
+        [
+          491,
+          620
+        ]
+      ],
+      "criterion": "within top 360 rows, >=8 consecutive rows each with >72% pixels below RGB mean 110",
+      "decoder_exit": 0,
+      "first_hit": {
+        "frame": 0,
+        "max_dark_fraction": 0.975,
+        "row_runs": [
+          [
+            0,
+            225
+          ]
+        ],
+        "time_s": 0.0
+      },
+      "frames_decoded": 621,
+      "last_hit": {
+        "frame": 620,
+        "max_dark_fraction": 0.9962962962962963,
+        "row_runs": [
+          [
+            0,
+            224
+          ]
+        ],
+        "time_s": 20.667
+      },
+      "path": ".local/aakhri-integrated-preview-lipsync-v07/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V07_SOURCE_TAKE_SYNC_HLG.mp4",
+      "worst": {
+        "frame": 24,
+        "rows": [
+          [
+            0,
+            208
+          ]
+        ],
+        "score": 1.0
+      }
+    },
+    {
+      "ceiling_band_frames": 0,
+      "ceiling_frame_ranges": [],
+      "criterion": "within top 360 rows, >=8 consecutive rows each with >72% pixels below RGB mean 110",
+      "decoder_exit": 0,
+      "first_hit": null,
+      "frames_decoded": 621,
+      "last_hit": null,
+      "path": ".local/aakhri-integrated-preview-ceiling-free-v08/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V08_CEILING_FREE_BASE_HLG.mp4",
+      "worst": {
+        "frame": 611,
+        "rows": [],
+        "score": 0.7240740740740741
+      }
+    }
+  ],
+  "schema": "CEILING_VISIBILITY_FULL_FRAME_SCAN_V01"
+}

@@ -1,0 +1,31 @@
+{
+  "before_after": {
+    "filename": "V07_V08_FRAMING_BEFORE_AFTER_00_09.mp4",
+    "sha256": "35d0bc063f61adeb55f0a5d9fad40b06ba47faf15bc64659667ea406158e03fe"
+  },
+  "candidate": {
+    "filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V08_CEILING_FREE_BASE_HLG.mp4",
+    "sha256": "ed163bc12b5d3bea64d4d1b4231a45bc514ac91f501e6ad70eb2f973d024fa7c",
+    "status": "PRIVATE_REVIEW_CANDIDATE_NOT_APPROVED"
+  },
+  "cover": {
+    "filename": "AAKHRI_V08_COVER_FRAME_06_50.png",
+    "sha256": "75c000986932719fa75ed2936005001473b279b40c02efcc6b7c0f5659a50611"
+  },
+  "creative_approval": false,
+  "gemini_qc": "PASS_WITH_LIMITATIONS",
+  "inherited_v07_package_components": [
+    "platform copy concepts",
+    "rights and credits status",
+    "asset readiness inventory",
+    "source-level lipsync diagnosis"
+  ],
+  "private_review_url": "https://drive.google.com/drive/folders/1n8yp6Xi-DqNM4ClcbzVrzztyaNY9QMw1",
+  "publication_authorized": false,
+  "resolve_project": {
+    "filename": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V08_CEILING_FREE_BASE.drp",
+    "sha256": "4b21c5da98c9140bc00cd00beacf44c6d25f04af0ea546095311ebf8a05e6167"
+  },
+  "schema": "AAKHRI_V08_PRIVATE_REVIEW_PACKAGE_V01",
+  "technical_qc": "GREEN"
+}

@@ -1,0 +1,20 @@
+{
+  "black_segments": 0,
+  "candidate_sha256": "ed163bc12b5d3bea64d4d1b4231a45bc514ac91f501e6ad70eb2f973d024fa7c",
+  "ceiling_visible_frames": 0,
+  "central_master_state_blocker": "LEDGER_AND_POINTER_INTEGRITY_HOLD",
+  "central_master_state_promoted": false,
+  "drive_readback_sha256": "GREEN",
+  "full_audio_decode": "PASS",
+  "full_video_decode": "PASS",
+  "independent_gemini_qc": "PASS_WITH_EXPLICIT_LIMITATIONS",
+  "observed_utc": "2026-09-28T09:11:50Z",
+  "resolve_render": "COMPLETE_621_FRAMES",
+  "schema": "AAKHRI_CEILING_FREE_V08_VALIDATION_RECEIPT_V01",
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=$PWD/p0e4:$PWD python3 -m unittest -q p0e4.tests.test_caption_kit p0e4.tests.test_social_template_v01 p0e4.tests.test_performance_template p0e4.tests.test_v06_caption_beat_preview p0e4.tests.test_unchained_social_template_integrated_preview",
+    "failed": 0,
+    "passed": 17
+  },
+  "v07_ceiling_visible_frames_same_detector": 350
+}

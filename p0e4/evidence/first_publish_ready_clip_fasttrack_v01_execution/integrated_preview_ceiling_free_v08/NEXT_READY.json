@@ -1,0 +1,13 @@
+{
+  "candidate_sha256": "ed163bc12b5d3bea64d4d1b4231a45bc514ac91f501e6ad70eb2f973d024fa7c",
+  "not_implied": [
+    "NITIN_FINAL_VIDEO_APPROVAL",
+    "NITIN_FINAL_ASSET_APPROVAL",
+    "RIGHTS_CLEARANCE",
+    "NITIN_PUBLISH_APPROVAL",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZATION"
+  ],
+  "schema": "NEXT_READY_V01",
+  "smallest_human_action": "Nitin reviews the exact V08 candidate and V07-versus-V08 framing comparison, then accepts or rejects the ceiling-free framing, visible lipsync and integrated private preview.",
+  "status": "WAITING_FOR_NITIN_V08_EXACT_VIDEO_REVIEW"
+}

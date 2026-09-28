@@ -1,0 +1,48 @@
+{
+  "cache_invalidation_additions": [
+    "selected_take_sha256",
+    "per_segment_source_frames",
+    "programme_audio_sha256",
+    "source_geometry_profile",
+    "safe_base_center",
+    "safe_base_minimum_size",
+    "relative_motion_curve_sha256"
+  ],
+  "inherits": "integrated_preview_source_sync_v07.json",
+  "programme_audio": {
+    "name": "AAKHRI ISHQ MASTER 2.wav",
+    "sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "shift_ms": 0
+  },
+  "schema": "UNCHAINED_SOCIAL_TEMPLATE_INTEGRATED_PREVIEW_CEILING_FREE_V08",
+  "selected_take": {
+    "name": "IMG_5739.MOV",
+    "sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971",
+    "source_frame_ranges": [[2144,2233],[2233,2348],[2348,2479],[2479,2635],[2635,2767],[2767,2864]]
+  },
+  "source_geometry_profile": {
+    "apply_before_text_and_logo": true,
+    "center": [0.5, 0.72],
+    "minimum_size": 2.3,
+    "recovery_may_cross_below_minimum": false,
+    "source_sha256": "8361dc4346bf351abef670bb168aaa170e0c03539656aec8d2a6819646175971"
+  },
+  "motion_migration": {
+    "method": "PROPORTIONAL_SCALE_ABOVE_SOURCE_SPECIFIC_BASE",
+    "old_base": 2.02,
+    "new_base": 2.3,
+    "factor": 1.1386138613861385,
+    "relative_timing_and_intensity_preserved": true
+  },
+  "unchanged": [
+    "source_frame_ranges",
+    "programme_audio",
+    "cut_positions",
+    "rhythm_event_timing",
+    "V06_colour",
+    "R2_captions",
+    "brand_lockup",
+    "92.70s_endpoint",
+    "0.20s_end_fade"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "audio": {
+    "channels": 2,
+    "codec": "AAC LC",
+    "programme_audio_sha256": "670e5ddf2dac70563789ffc4c5a505af950c75310b68b674e9dd2b1a06b8def2",
+    "sample_rate_hz": 48000,
+    "shift_ms": 0,
+    "time_stretch": false
+  },
+  "candidate_sha256": "ed163bc12b5d3bea64d4d1b4231a45bc514ac91f501e6ad70eb2f973d024fa7c",
+  "ceiling_detector": "within top 360 rows, >=8 consecutive rows each with >72% pixels below RGB mean 110",
+  "checks": {
+    "black_segments": 0,
+    "ceiling_visible_frames": 0,
+    "full_audio_decode": "PASS",
+    "full_video_decode": "PASS",
+    "left_or_right_black_border_frames": 0,
+    "resolve_render_status": "Complete 100%",
+    "source_boundary_frames": 0
+  },
+  "limitations": [
+    "Automated ceiling detector is source-specific and corroborated by same-frame V07/V08 contact sheets.",
+    "Browser playback is not calibrated HDR review."
+  ],
+  "observed_utc": "2026-09-28T09:11:50Z",
+  "schema": "AAKHRI_V08_TECHNICAL_QC_V01",
+  "status": "GREEN",
+  "video": {
+    "codec": "HEVC hvc1 Main10",
+    "color_primaries": "bt2020",
+    "decoded_frames": 621,
+    "duration_s": 20.7,
+    "frame_rate": "30/1 CFR",
+    "matrix": "bt2020nc",
+    "minimum_bit_depth": 10,
+    "pixel_format": "yuv420p10le",
+    "resolution": "1080x1920",
+    "transfer": "arib-std-b67"
+  }
+}

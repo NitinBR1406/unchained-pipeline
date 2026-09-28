@@ -1,0 +1,13 @@
+{
+  "inherited": [
+    "COVER_COPY_ASSET_STATUS_V01.json",
+    "SOURCE_LEVEL_DIAGNOSIS_V01.json",
+    "TEMPLATE_REUSE_PROOF_V01.json"
+  ],
+  "new_cover": "AAKHRI_V08_COVER_FRAME_06_50.png",
+  "publication_authorized": false,
+  "remaining_rights_questions": "unchanged; credits are not rights clearance",
+  "schema": "AAKHRI_V08_INHERITED_PACKAGE_ASSETS_V01",
+  "source_evidence": "p0e4/evidence/first_publish_ready_clip_fasttrack_v01_execution/integrated_preview_source_sync_v07",
+  "status": "VALID_UNCHANGED_BY_GEOMETRY_ONLY_REPAIR"
+}

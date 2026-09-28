@@ -1,0 +1,20 @@
+{
+  "candidate_sha256": "ed163bc12b5d3bea64d4d1b4231a45bc514ac91f501e6ad70eb2f973d024fa7c",
+  "cut_frames": [
+    89,
+    204,
+    335,
+    491,
+    623
+  ],
+  "effect_keyframe_times_changed": false,
+  "gemini": "Motion deliberate at 00:17-00:20; no arbitrary/excessive motion reported.",
+  "limitations": [
+    "Low/high band labels remain non-semantic; no new kick/snare claim."
+  ],
+  "programme_audio_shift_ms": 0,
+  "relative_zoom_intensity_changed": false,
+  "repair_effect": "All former IMG_5741 geometry curves were multiplied by a constant factor. Attack, peak, hold and recovery frames are byte-identical in timing.",
+  "schema": "AAKHRI_V08_RHYTHM_RENDER_VALIDATION_V01",
+  "status": "UNCHANGED_FROM_V07_GEOMETRY_ONLY_REPAIR"
+}

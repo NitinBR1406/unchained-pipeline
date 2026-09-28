@@ -1,0 +1,57 @@
+{
+  "candidate_sha256": "ed163bc12b5d3bea64d4d1b4231a45bc514ac91f501e6ad70eb2f973d024fa7c",
+  "context_url": "https://gemini.google.com/app/3946b595a4bfbec6",
+  "file_observed": {
+    "attachment_available": true,
+    "duration_seen": "00:00:20.7"
+  },
+  "findings": [
+    {
+      "category": "Source Boundaries",
+      "observation": "No severe boundary breaches, black ceilings, or white borders noted in browser view.",
+      "severity": "Moderate",
+      "timecode": "00:00-00:20"
+    },
+    {
+      "category": "Framing",
+      "observation": "Tight vertical crop consistently applied. Core facial features remain visible without distracting clipping.",
+      "severity": "Moderate",
+      "timecode": "00:00-00:20"
+    },
+    {
+      "category": "Lipsync",
+      "observation": "Visual lip movements align with vocals. Sub-frame accuracy unprovable.",
+      "severity": "Moderate",
+      "timecode": "00:00-00:04"
+    },
+    {
+      "category": "Motion",
+      "observation": "Shake and zoom effects used at peak energy. Motion appears deliberate.",
+      "severity": "Moderate",
+      "timecode": "00:17-00:20"
+    },
+    {
+      "category": "Artifacts",
+      "observation": "No obvious black frames, gaps, or render dropouts detected.",
+      "severity": "Moderate",
+      "timecode": "00:00-00:20"
+    }
+  ],
+  "human_review_focus": [
+    "Edge inspection during 00:17-00:20 shake for pixel-level boundary checks.",
+    "Confirm artistic intent of tight top-crop."
+  ],
+  "limitations": [
+    "Visual-only audio sync check.",
+    "Cannot verify HDR/color calibration.",
+    "AI PASS is not Nitin approval."
+  ],
+  "new_independent_context": true,
+  "observed_utc": "2026-09-28T09:11:50Z",
+  "schema": "GEMINI_INDEPENDENT_AAKHRI_CEILING_FREE_V08_QC_V01",
+  "strengths": [
+    "Consistent center focus.",
+    "Legible branding and caption placement."
+  ],
+  "verdict": "PASS"
+}
