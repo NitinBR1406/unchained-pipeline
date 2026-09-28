@@ -59,3 +59,16 @@ def test_caption_sharpness_v10_contract():
  assert style["local_backing"]["opacity"]>0.52
  assert v["timing_inherited_unchanged"] is True
  assert all(v["preserved"].values())
+
+def test_caption_clean_v11_contract():
+ v=json.loads((ROOT/"p0e4/resolve/templates/UNCHAINED_SOCIAL_TEMPLATE_V01/integrated_preview_caption_clean_v11.json").read_text())
+ assert v["inherits"]=="integrated_preview_caption_sharpness_v10.json"
+ style=v["caption_style"]
+ assert style["outline"]["enabled"] is False
+ assert style["local_backing"]["enabled"] is False
+ assert style["drop_shadow"]["enabled"] is False
+ assert style["glow"]["enabled"] is False
+ assert style["opening_hook"]["size"]==0.105
+ assert style["title"]["size"]==0.125
+ assert style["artist"]["size"]==0.075
+ assert all(v["preserved"].values())

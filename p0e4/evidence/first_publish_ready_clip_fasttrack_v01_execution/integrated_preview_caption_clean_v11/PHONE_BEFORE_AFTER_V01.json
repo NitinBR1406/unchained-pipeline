@@ -1,0 +1,10 @@
+{
+  "schema": "PHONE_BEFORE_AFTER_HALO_REMOVAL_V01",
+  "method": "same timestamps and HLG-to-display transform; V10 and V11 each scaled from 1080x1920 to 360x640 before side-by-side assembly",
+  "comparisons": [
+    {"timestamp_seconds": 1.5, "content": "opening hook", "filename": "PHONE_BEFORE_AFTER_1_5.png", "sha256": "5474fbae5778200be49f35f62d070f979583de1b9244b51ccd282368f4436356"},
+    {"timestamp_seconds": 7.5, "content": "title and artist", "filename": "PHONE_BEFORE_AFTER_7_5.png", "sha256": "1074661b923f6eed10eb3a7df87f1044dc0dda7a20f7884702fd869037654043"}
+  ],
+  "result": "V11 removes the V10 dark patches and diffuse auxiliary edges while retaining clean enlarged typography",
+  "calibrated_hdr_claim": false
+}

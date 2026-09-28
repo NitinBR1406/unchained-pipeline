@@ -1,0 +1,17 @@
+{
+  "schema": "UNCHAINED_INTEGRATED_PREVIEW_CAPTION_CLEAN_V11",
+  "inherits": "integrated_preview_caption_sharpness_v10.json",
+  "authorized_request_sha256": "fc162625d3e78b261f10b594ddd33cdb5bc2ffb32a4542cbd1c402c511c2edb4",
+  "caption_style": {
+    "opening_hook": {"font": "Montserrat", "weight": "Medium", "size": 0.105, "center": [0.5, 0.205], "fill": "WHITE", "opacity": 1.0, "softness": 0.0},
+    "title": {"font": "Cinzel", "weight": "SemiBold", "size": 0.125, "center": [0.5, 0.13], "fill_rgb": [1.0, 0.86, 0.38], "opacity": 1.0, "softness": 0.0},
+    "artist": {"font": "Montserrat", "weight": "Medium", "size": 0.075, "center": [0.5, 0.255], "fill": "WHITE", "opacity": 1.0, "softness": 0.0},
+    "outline": {"native_text_plus_element": 2, "enabled": false},
+    "local_backing": {"native_text_plus_element": 3, "enabled": false},
+    "drop_shadow": {"enabled": false},
+    "glow": {"enabled": false}
+  },
+  "timing_inherited_unchanged": true,
+  "preserved": {"v09_overlap_fix": true, "v10_sizes": true, "source_ranges": true, "programme_audio": true, "timeline_cuts": true, "v08_picture_geometry": true, "rhythm_motion": true, "colour": true, "ending": true},
+  "cache_invalidation_additions": ["outline_enabled", "local_backing_enabled", "drop_shadow_enabled", "glow_enabled", "resolve_comp_readback_sha256", "render_sha256"]
+}

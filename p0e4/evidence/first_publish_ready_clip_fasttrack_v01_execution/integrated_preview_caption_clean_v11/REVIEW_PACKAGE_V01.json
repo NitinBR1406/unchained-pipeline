@@ -1,0 +1,11 @@
+{
+  "schema": "INTEGRATED_PREVIEW_CLEAN_TYPOGRAPHY_REVIEW_PACKAGE_V01",
+  "status": "WAITING_FOR_NITIN_V11_CLEAN_TYPOGRAPHY_REVIEW",
+  "review_url": "https://drive.google.com/file/d/1Ohwa8woLHZ2ZcJeVAAB8UjAHzm2WfRsO/view?usp=drivesdk",
+  "folder_url": "https://drive.google.com/drive/folders/1zMjD2FABPGhoJk_DyR_7Y8VTRYo78VKi",
+  "phone_before_after_urls": ["https://drive.google.com/file/d/14KYXOPW6ASkH6YCdJbcTtEjYhXbRbNxe/view?usp=drivesdk", "https://drive.google.com/file/d/1XBjrPaMEK_deGidYipC87RhU54-ob1mt/view?usp=drivesdk"],
+  "candidate_sha256": "b1e8558ec6f95e884429e44969b3c2528ca21a418df3e585301c792dd6a4dc14",
+  "technical_qc": "GREEN_WAITING_FOR_NITIN_CLEAN_TYPOGRAPHY_REVIEW",
+  "no_new_ab_round": true,
+  "publication_authorized": false
+}

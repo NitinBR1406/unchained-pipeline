@@ -1,0 +1,21 @@
+{
+  "schema": "PERSISTENCE_HANDOFF_RECEIPT_V01",
+  "mode": "COPY_NON_DESTRUCTIVE_NEW_VERSION",
+  "destination_path": "Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/FIRST_PUBLISH_READY_CLIP_FASTTRACK_V01/INTEGRATED_PREVIEW_CLEAN_TYPOGRAPHY_V11_20260928",
+  "destination_folder_id": "1zMjD2FABPGhoJk_DyR_7Y8VTRYo78VKi",
+  "destination_folder_url": "https://drive.google.com/drive/folders/1zMjD2FABPGhoJk_DyR_7Y8VTRYo78VKi",
+  "review_file_id": "1Ohwa8woLHZ2ZcJeVAAB8UjAHzm2WfRsO",
+  "review_url": "https://drive.google.com/file/d/1Ohwa8woLHZ2ZcJeVAAB8UjAHzm2WfRsO/view?usp=drivesdk",
+  "phone_comparisons": [
+    {"timestamp_seconds": 1.5, "file_id": "14KYXOPW6ASkH6YCdJbcTtEjYhXbRbNxe", "url": "https://drive.google.com/file/d/14KYXOPW6ASkH6YCdJbcTtEjYhXbRbNxe/view?usp=drivesdk", "sha256": "5474fbae5778200be49f35f62d070f979583de1b9244b51ccd282368f4436356"},
+    {"timestamp_seconds": 7.5, "file_id": "1XBjrPaMEK_deGidYipC87RhU54-ob1mt", "url": "https://drive.google.com/file/d/1XBjrPaMEK_deGidYipC87RhU54-ob1mt/view?usp=drivesdk", "sha256": "1074661b923f6eed10eb3a7df87f1044dc0dda7a20f7884702fd869037654043"}
+  ],
+  "readback": [
+    {"filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V11_CLEAN_TYPOGRAPHY_HLG.mp4", "source_sha256": "b1e8558ec6f95e884429e44969b3c2528ca21a418df3e585301c792dd6a4dc14", "destination_sha256": "b1e8558ec6f95e884429e44969b3c2528ca21a418df3e585301c792dd6a4dc14", "status": "MATCH"},
+    {"filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V11_CLEAN_TYPOGRAPHY_HLG_PRORES.mov", "source_sha256": "6dcae18d9e0d54abaa9dec1f5c6278619dc9ef6c425f5b499e50e572b49869e2", "destination_sha256": "6dcae18d9e0d54abaa9dec1f5c6278619dc9ef6c425f5b499e50e572b49869e2", "status": "MATCH"},
+    {"filename": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V11_CLEAN_TYPOGRAPHY.drp", "source_sha256": "b6c458117962fa4c6c590b6cfef15af41ee6fe89a2cc4530e5c9a7f6e49957af", "destination_sha256": "b6c458117962fa4c6c590b6cfef15af41ee6fe89a2cc4530e5c9a7f6e49957af", "status": "MATCH"}
+  ],
+  "source_staging_untouched": true,
+  "overwrite_performed": false,
+  "publication_performed": false
+}

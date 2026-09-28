@@ -1,0 +1,10 @@
+{
+  "schema": "INTEGRATED_PREVIEW_CAPTION_CLEAN_TECHNICAL_QC_V01",
+  "candidate": {"filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V11_CLEAN_TYPOGRAPHY_HLG.mp4", "sha256": "b1e8558ec6f95e884429e44969b3c2528ca21a418df3e585301c792dd6a4dc14", "bytes": 48121158},
+  "video": {"duration_seconds": 20.7, "width": 1080, "height": 1920, "fps": 30, "codec": "HEVC Main 10", "pixel_format": "yuv420p10le", "primaries": "BT.2020", "transfer": "Rec.2100 HLG", "full_decode": "PASS"},
+  "audio": {"codec": "AAC", "sample_rate_hz": 48000, "channels": 2, "full_decode": "PASS", "decoded_pcm_sha256_matches_v10": true, "decoded_pcm_sha256": "39650dfe74921bfe27d8585db3af19874d98ac9cd4481633a184db6b9dd901d4"},
+  "black_frames": {"status": "PASS", "detected_segments": 0},
+  "phone_review": {"scale": "360x640", "matching_timestamps_seconds": [1.5, 7.5], "heavy_dark_patches": "NONE_OBSERVED", "diffuse_letter_halo": "NONE_OBSERVED", "overlap": "NONE_OBSERVED", "face_and_mouth_clear": true, "main_text_readable": true},
+  "limitations": ["Phone comparison uses the same HLG-to-SDR display transform for relative review and is not a calibrated HDR measurement.", "This caption repair does not infer lipsync, final-video or publication approval."],
+  "result": "GREEN_WAITING_FOR_NITIN_CLEAN_TYPOGRAPHY_REVIEW"
+}

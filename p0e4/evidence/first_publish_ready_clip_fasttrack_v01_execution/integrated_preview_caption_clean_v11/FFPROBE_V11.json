@@ -1,0 +1,57 @@
+{
+    "programs": [
+
+    ],
+    "stream_groups": [
+        {
+            "streams": [
+                {
+                    "index": 0,
+                    "codec_name": "hevc",
+                    "profile": "Main 10",
+                    "width": 1080,
+                    "height": 1920,
+                    "pix_fmt": "yuv420p10le",
+                    "color_space": "bt2020nc",
+                    "color_transfer": "arib-std-b67",
+                    "color_primaries": "bt2020",
+                    "r_frame_rate": "30/1"
+                },
+                {
+                    "index": 2,
+                    "r_frame_rate": "0/0"
+                }
+            ]
+        }
+    ],
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "hevc",
+            "profile": "Main 10",
+            "width": 1080,
+            "height": 1920,
+            "pix_fmt": "yuv420p10le",
+            "color_space": "bt2020nc",
+            "color_transfer": "arib-std-b67",
+            "color_primaries": "bt2020",
+            "r_frame_rate": "30/1"
+        },
+        {
+            "index": 1,
+            "codec_name": "aac",
+            "profile": "LC",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+        },
+        {
+            "index": 2,
+            "r_frame_rate": "0/0"
+        }
+    ],
+    "format": {
+        "duration": "20.700000",
+        "size": "48121158"
+    }
+}

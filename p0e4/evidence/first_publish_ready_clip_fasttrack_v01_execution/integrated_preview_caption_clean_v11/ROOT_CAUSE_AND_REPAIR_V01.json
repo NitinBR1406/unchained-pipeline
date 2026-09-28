@@ -1,0 +1,9 @@
+{
+  "schema": "V10_TEXT_HALO_ROOT_CAUSE_AND_REPAIR_V01",
+  "request_sha256": "fc162625d3e78b261f10b594ddd33cdb5bc2ffb32a4542cbd1c402c511c2edb4",
+  "baseline": {"version": "V10", "candidate_sha256": "25dfbcdfa227c80c113dffc72144f8b24885efbc0b41bc9a024b676f9b78fff9"},
+  "diagnosis": {"isolated_layer_inspection": true, "outline_enabled": true, "local_border_fill_enabled": true, "additional_active_drop_shadow": false, "additional_active_glow": false, "conclusion": "V10 dark patches were created by auxiliary outline and local border-fill elements, not by source footage"},
+  "repair": {"fill": "clean native Text+ fill at full opacity and zero softness", "outline": "disabled", "local_backing": "disabled", "drop_shadow": "disabled", "glow": "disabled", "sizes": "V10 enlarged sizes preserved", "positions_and_timing": "unchanged"},
+  "preserved": ["V09 overlap fix", "V10 sizes", "source frames", "programme audio", "timeline cuts", "V08 framing", "rhythm motion", "V06 colour", "20.7-second ending"],
+  "publication_authorized": false
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "NEXT_READY_V01",
+  "state": "WAITING_FOR_NITIN_V11_CLEAN_TYPOGRAPHY_REVIEW",
+  "candidate_sha256": "b1e8558ec6f95e884429e44969b3c2528ca21a418df3e585301c792dd6a4dc14",
+  "smallest_human_action": "Review the exact V11 private preview and matched V10/V11 phone frames for clean typography without dark halo.",
+  "not_inferred": ["NITIN_FINAL_VIDEO_APPROVAL", "NITIN_FINAL_ASSET_APPROVAL", "NITIN_PUBLISH_APPROVAL"],
+  "publication_authorized": false
+}
