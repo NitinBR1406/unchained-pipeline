@@ -1,0 +1,28 @@
+{
+  "schema":"PREMIUM_QC_INDEPENDENT_REVIEW_BUNDLE_V01",
+  "created_at_utc":"2026-09-30T00:05:00Z",
+  "authoritative_commit_reviewed":"91f4f64fce115cfddb4b2bfc934e4b636a68f1bb",
+  "duplicate_work_check":"NO_DUPLICATE_RENDER_STARTED",
+  "actual_execution": {
+    "review_exports_separately_decoded":true,
+    "shared_drive_readback_hashes_verified":true,
+    "gemini_exact_existing_chat_used":true,
+    "gemini_actual_files_attached":true,
+    "claude_same_context_used":true,
+    "new_design_round_started":false,
+    "new_render_started":false
+  },
+  "objective_defects": [
+    {"id":"CAPTION_LOGO_COLLISION","severity":"HIGH","scope":"T1/T2/T3 opening","evidence":"Gemini moving-video review plus Claude code/contact-sheet inspection","repair_status":"NOT_RENDERED; exact timing/position correction required before selection"},
+    {"id":"COLOUR_R2_PARTIAL_GRADE","severity":"HIGH","scope":"C1/C2 frames 204-334 of source comparison range; 131/360 frames","evidence":"Claude code inspection and contact-sheet pixel comparison","repair_status":"NOT_RENDERED; current R2 invalid for final C0/C1/C2 selection"},
+    {"id":"CAPTION_READBACK_PROVENANCE","severity":"HIGH","scope":"ImportFusionComp return/active comp/readback assertions","evidence":"Claude code inspection","repair_status":"PATCH_REQUIRED_BEFORE_ANY_RE-RENDER"}
+  ],
+  "recommendation": {
+    "colour_direction":"C1_WARM_CINEMATIC is the provisional perceptual preference on the actually graded portion, but NO colour selection should be requested or recorded until a fully graded corrected comparison is generated and independently rechecked.",
+    "caption_direction":"T3_CINEMATIC_TITLE is the provisional typography preference, conditional on delaying the opening hook until after the chain-logo window and adding strict comp/readback assertions.",
+    "naming":"RECOMMENDATIONS_ARE_NON_PROMOTABLE_DIRECTIONS_NOT_APPROVALS"
+  },
+  "open_nitin_choice":"After bounded technical corrections and exact-file re-QC: choose one of C0/C1/C2 and one of T1/T2/T3. No choice inferred now.",
+  "master_state":{"promoted":false,"reason":"Human selection remains open and current assets contain proven defects; append-only state must not claim PASS."},
+  "governance":{"PRODUCTION_DEPLOYMENT_AUTHORIZED":false,"PUBLICATION_AUTHORIZED":false,"FIRST_REAL_POSTER":"PAUSED_BY_NITIN"}
+}

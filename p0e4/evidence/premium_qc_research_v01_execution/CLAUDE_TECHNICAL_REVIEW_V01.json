@@ -1,0 +1,166 @@
+{
+  "request_id": "UNCHAINED_PREMIUM_QC_TECHNICAL_REVIEW_20260929_V01",
+  "receipt": {
+    "reviewer": "Claude (Anthropic)",
+    "context": "https://claude.ai/code/session_01Bs6X4ij8MxDcMAM2ETjzM1 (same P0E4 review context)",
+    "reviewed_at_utc": "2026-09-29T21:40:00Z",
+    "reviews_execution_request": "UNCHAINED_PREMIUM_EXECUTION_20260929",
+    "duplicate_of_existing_review": false,
+    "side_effects": {
+      "renders": 0,
+      "file_changes_in_repo": 0,
+      "deploy": 0,
+      "make": 0,
+      "publish": 0
+    }
+  },
+  "inspected": {
+    "commit": "91f4f64fce115cfddb4b2bfc934e4b636a68f1bb",
+    "access": "read-only fetch of github.com/NitinBR1406/unchained-pipeline at that SHA (the ~/Downloads working copy is blocked for this session by macOS privacy); .local/ receipts, comps, DRPs and masters were NOT readable",
+    "paths": {
+      "p0e4/resolve/render_premium_qc_local_trials_v01.py": "5fdfa51e59cf6dc723c850515310d9956cc4ea0fd271da9b0a862921ea217e09",
+      "p0e4/resolve/rerender_premium_colour_trials_r2.py": "read (R2 renderer referenced by REGRESSION_V01)",
+      "p0e4/evidence/premium_qc_research_v01_execution/*": "all 13 files; hashes match its SHA256SUMS.txt"
+    },
+    "method": {
+      "CODE_INSPECTION": [
+        "both renderer scripts",
+        "all evidence JSON/CSV/MD"
+      ],
+      "MEDIA_VIEWED": [
+        "CAPTION_CONTACT_SHEET.png sha256 12608d36... (3x3 stills)",
+        "COLOUR_R2_CONTACT_SHEET.png sha256 1b9bd1e8... (3x3 stills, plus pixel-mean diff per cell)"
+      ],
+      "MEDIA_NOT_VIEWED": [
+        "any .mov/.mp4 trial or comparison render",
+        "PREMIUM_QC_LOCAL_TRIALS_V01.json and PREMIUM_QC_COLOUR_TRIALS_R2.json receipts (Drive/.local only)"
+      ],
+      "assumption": "Contact-sheet rows are variants (T1,T2,T3 / C0,C1,C2) and columns are sample times; the sheets carry no labels."
+    }
+  },
+  "findings": [
+    {
+      "id": "PQC-01",
+      "severity": "HIGH",
+      "area": "colour C1/C2",
+      "basis": "CODE_INSPECTION + MEDIA_VIEWED(contact sheet)",
+      "title": "R2 colour comparison is partly ungraded: C1/C2 CDL never applied to clip 2 (frames 204-334)",
+      "evidence": [
+        "render_premium_qc_local_trials_v01.py:166 applies SetCDL only when clip end > 335 and start <= 694 (R1 SAMPLE); clip 2 [204,335) fails 335>335",
+        "rerender_premium_colour_trials_r2.py reuses those same projects and renders 204-563 without re-applying the CDL",
+        "COLOUR_R2 contact sheet column 1: mean |row0-row1| = 0.75 and |row0-row2| = 0.76 code values (compression noise), versus about 4.0 in columns 2-3"
+      ],
+      "impact": "About 131 of the 360 R2 frames (36%) are identical across C0/C1/C2, so the comparison looks like a grade change in the middle of the clip and is not a fair creative choice.",
+      "fix": "Re-derive the affected-clip set from the rendered range (or grade all six clips); read back per-clip CDL/node state; re-render R2."
+    },
+    {
+      "id": "PQC-02",
+      "severity": "HIGH",
+      "area": "caption T1/T2/T3",
+      "basis": "CODE_INSPECTION + MEDIA_VIEWED(contact sheet)",
+      "title": "Hook is visible during the chain-logo intro: the forbidden intro/hook overlap is back",
+      "evidence": [
+        "line 190: hook Merge1Blend keys (0,0),(fade,1),(78,1),(88,0), so it is visible from frame 1 to 87",
+        "base V13 DRP keeps the chain-logo intro on V2 at frames 0-53; aakhri_v12_repair_contract.VISIBILITY_WINDOWS puts the hook at 54-88 and forbids chain_intro/opening_hook overlap",
+        "CAPTION_CONTACT_SHEET column 1, all three rows: UN chain emblem drawn on top of 'SOME LOVE STORIES'"
+      ],
+      "impact": "Same class of defect as Nitin's V12 overlap complaint, now in every caption treatment.",
+      "fix": "Start the hook no earlier than frame 54 (or 61 per plan V02); assert against VISIBILITY_WINDOWS with assert_no_forbidden_overlap before rendering."
+    },
+    {
+      "id": "PQC-03",
+      "severity": "HIGH",
+      "area": "caption readback provenance",
+      "basis": "CODE_INSPECTION",
+      "title": "The readback can pass without the patch ever being applied",
+      "evidence": [
+        "line 187/196: ExportFusionComp and ImportFusionComp return values are not checked",
+        "line 196: after ImportFusionComp on an existing item, the readback exports comp index 1; comp count and active comp are not asserted (V13 asserted GetFusionCompCount), so index 1 can be the original comp",
+        "lines 197-198 only check that the strings 'Montserrat', 'Cinzel' and 'SemiBold' exist, and V13 comps already contain them"
+      ],
+      "impact": "readback_sha256 does not prove what was rendered; a failed or appended import passes silently.",
+      "fix": "Check every API return; assert comp count and active comp; parse the readback and compare Size/Center/RGB/blend keys with the patch."
+    },
+    {
+      "id": "PQC-04",
+      "severity": "MEDIUM",
+      "area": "caption mapping and reuse safety",
+      "basis": "CODE_INSPECTION",
+      "title": "Merges are still picked by name; V13 contract helpers are not reused",
+      "evidence": [
+        "lines 190-195 hard-code Merge1-4 as hook/song-id/title/artist; this is correct for the inherited V11 clip-1 layout, but it is not derived from each Merge's foreground source",
+        "set_or_insert (lines 56-64) drops set_or_insert_scalar's duplicate-input rejection and does not import aakhri_v12_repair_contract",
+        "clip 2 (204-334) is not patched, so title/artist keep V13 size/colour/curves; frames 0-179 hide this, but applying T* to the full clip changes style at cut 204"
+      ],
+      "fix": "Map Merge by foreground source; import the contract helpers; patch clip 2 with continuous keys."
+    },
+    {
+      "id": "PQC-05",
+      "severity": "MEDIUM",
+      "area": "caption legibility and colour",
+      "basis": "CODE_INSPECTION",
+      "title": "Several T sizes are below Nitin's minimum legible sizes, and white is near HDR peak",
+      "evidence": [
+        "Below V09 minimums (hook>=0.09, artist>=0.065): T1 hook 0.088 and artist 0.060; T3 hook 0.078 and artist 0.058. T2 (0.106/0.128/0.072) passes.",
+        "off-white (.96,.94,.88) is about 96% of the HLG signal; gold (.847,.722,.314) is roughly the brand sample. No check that the timeline really is HLG",
+        "T2 'KINETIC_IMPACT' differs only by a 4-frame fade and larger sizes; the code has no motion"
+      ],
+      "fix": "Enforce the V09 test minimums as a gate; bind graphics levels to the timeline colour space; rename T2 or implement the stated motion."
+    },
+    {
+      "id": "PQC-06",
+      "severity": "MEDIUM",
+      "area": "colour implementation",
+      "basis": "CODE_INSPECTION",
+      "title": "CDL goes onto node 1, which also carries the V06 LUT, with no readback",
+      "evidence": [
+        "SetCDL NodeIndex 1 (lines 95-96, 167); the V06 look sits in LUT slot 1 on the same node; CDL-vs-LUT order and colour space are not recorded",
+        "no per-clip readback of node/LUT/CDL; C0 equivalence to the V13 master frames is not checked"
+      ],
+      "fix": "Put the CDL on a dedicated added serial node after the LUT (or record the processing order); read back and hash the grade state; compare C0 frames with the V13 master frames."
+    },
+    {
+      "id": "PQC-07",
+      "severity": "MEDIUM",
+      "area": "reuse and cache invalidation",
+      "basis": "CODE_INSPECTION",
+      "title": "Colour reuse trusts files on disk; the cache key is missing",
+      "evidence": [
+        "lines 153-161 reuse any existing .mov+.drp and record affected_clips 'RECORDED_IN_EXISTING_PROJECT', with no check against the prior receipt, script hash or CDL values",
+        "R2 script loads projects by name only, with no DRP-hash check",
+        "the receipts do not bind renderer/contract sha256, font file hashes, text strings, CDL values, LUT sha, clip properties or render settings; LOCAL_PICKUP_RECEIPT source_commit '4254c5c' is not the reviewed commit 91f4f64, so which code actually ran is unproven"
+      ],
+      "fix": "Key reuse on a canonical digest of script+inputs+settings; refuse reuse on mismatch; record the full commit SHA and script hashes in every receipt."
+    },
+    {
+      "id": "PQC-08",
+      "severity": "LOW",
+      "area": "evidence provenance",
+      "basis": "CODE_INSPECTION",
+      "title": "The caption comparison ProRes master has no Drive readback",
+      "evidence": [
+        "TECHNICAL_QC lists AAKHRI_PREMIUM_CAPTION_COMPARISON_T1_T2_T3_HLG.mov sha256 b5246b2b...; PERSISTENCE_HANDOFF_V02 contains only its review mp4 and ffprobe json",
+        "the R2 'performance_only' label is inaccurate: frames 204-334 include V13 title/artist text (visible in COLOUR_R2 contact sheet column 1)"
+      ],
+      "fix": "Persist the master or record why not; relabel R2, or choose a text-free range such as 335-599."
+    }
+  ],
+  "risks": [
+    "Choosing C1/C2 from R2 now is based on a 64%-graded comparison (PQC-01).",
+    "Carrying any T* treatment forward reintroduces the chain-intro collision (PQC-02) and leaves clip-2 style unpatched (PQC-04).",
+    "Receipts cannot prove the rendered comps or grade state (PQC-03, PQC-06, PQC-07).",
+    "Contact sheets are uncalibrated HDR stills; motion, sync and HDR level were not assessed by this reviewer.",
+    "Gemini actual-asset QC is still unverified (AGENT_ROUTE_STATUS)."
+  ],
+  "not_affected_confirmed_by_code": [
+    "Trials run on isolated clones; BASE_DRP/BASE_MASTER hashes are checked before and after; renders refuse to overwrite; no full master render; publication and deployment flags stay false"
+  ],
+  "recommendation": "Do not ask Nitin to choose C/T from these samples until PQC-01 and PQC-02 are fixed and re-rendered; PQC-03 is the minimum provenance fix before re-rendering.",
+  "status": "REVIEW_COMPLETE_CHANGES_REQUIRED",
+  "gates": {
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

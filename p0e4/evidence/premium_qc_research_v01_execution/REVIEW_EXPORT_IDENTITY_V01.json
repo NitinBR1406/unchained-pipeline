@@ -1,0 +1,18 @@
+{
+  "schema": "PREMIUM_QC_REVIEW_EXPORT_IDENTITY_V01",
+  "verified_at_utc": "2026-09-30T00:02:00Z",
+  "repository_commit": "91f4f64fce115cfddb4b2bfc934e4b636a68f1bb",
+  "colour_r2": {
+    "master": {"name":"AAKHRI_PREMIUM_COLOUR_COMPARISON_C0_C1_C2_PERFORMANCE_ONLY_R2_HLG.mov","sha256":"d940e84ee06c2ac6356e6fe16ee54d66233eef8df9e3930ad4f8bada54448781","duration_s":36.0,"codec":"ProRes 422 HQ 10-bit","full_decode":"PASS"},
+    "review": {"name":"AAKHRI_PREMIUM_COLOUR_COMPARISON_C0_C1_C2_PERFORMANCE_ONLY_R2_HLG_REVIEW.mp4","sha256":"6bb4fccd4d8c0c9eb7402515375d43afd841500d7c5bcc1928a45522db94c452","bytes":38521211,"duration_s":36.0,"codec":"HEVC 10-bit","colour":"BT.2020 / Rec.2100 HLG","full_decode":"PASS","shared_drive_readback_sha256_equal":true},
+    "relationship":"REVIEW_IS_A_SEPARATELY_ENCODED_DERIVATIVE; DECODE_AND_IDENTITY_VERIFIED_SEPARATELY",
+    "drive_url":"https://drive.google.com/file/d/1PoBzTJsIOaGY7LKP6M7neilRHSkAkGOz/view"
+  },
+  "caption": {
+    "master": {"name":"AAKHRI_PREMIUM_CAPTION_COMPARISON_T1_T2_T3_HLG.mov","sha256":"b5246b2b0f34e0067a0fba7e7a107c22b901f617de2a14c9606e31d039b9a12a","duration_s":18.0,"codec":"ProRes 422 HQ 10-bit","full_decode":"PASS"},
+    "review": {"name":"AAKHRI_PREMIUM_CAPTION_COMPARISON_T1_T2_T3_HLG_REVIEW.mp4","sha256":"680dde68786b30805d2585b9ff7551c6357872b115087b9bb9e5d63251fec73a","bytes":19001579,"duration_s":18.0,"codec":"HEVC 10-bit","colour":"BT.2020 / Rec.2100 HLG","full_decode":"PASS","shared_drive_readback_sha256_equal":true},
+    "relationship":"REVIEW_IS_A_SEPARATELY_ENCODED_DERIVATIVE; DECODE_AND_IDENTITY_VERIFIED_SEPARATELY",
+    "drive_url":"https://drive.google.com/file/d/1fWYSg2gkeL-t3wUjYAPnM0IL08TffRdw/view"
+  },
+  "base_master_preserved_sha256":"7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088"
+}

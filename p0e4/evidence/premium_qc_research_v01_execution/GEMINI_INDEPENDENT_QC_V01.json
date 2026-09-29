@@ -1,0 +1,30 @@
+{
+  "schema":"GEMINI_INDEPENDENT_PREMIUM_QC_V01",
+  "reviewed_at_utc":"2026-09-29T21:12:00Z",
+  "chat_url":"https://gemini.google.com/app/7c9afdcb27030bcb",
+  "new_chat_created":false,
+  "delivery": {
+    "colour":{"ui_attachment_confirmed":true,"displayed_duration":"00:36","actual_video_stream_accessible":true,"review_sha256":"6bb4fccd4d8c0c9eb7402515375d43afd841500d7c5bcc1928a45522db94c452","gemini_could_not_cryptographically_verify_sha":true},
+    "caption":{"ui_attachment_confirmed":true,"displayed_duration":"00:18","actual_video_stream_accessible":true,"review_sha256":"680dde68786b30805d2585b9ff7551c6357872b115087b9bb9e5d63251fec73a","gemini_could_not_cryptographically_verify_sha":true}
+  },
+  "colour": {
+    "segments":{"C0":"00:00-00:12","C1":"00:12-00:24","C2":"00:24-00:36"},
+    "observations":[
+      {"variant":"C0","timecode":"00:03-00:07","finding":"aggressive highlight rolloff/flattening; deeper shirt folds show slight crush"},
+      {"variant":"C1","timecode":"00:15-00:19","finding":"more controlled rolloff, balanced amber-olive skin, improved shoulder/background separation"},
+      {"variant":"C2","timecode":"00:26-00:30","finding":"slightly cooler/desaturated lift, less black density and punch"}
+    ],
+    "crop_alignment":"stable in browser playback",
+    "visible_lipsync_performance":"preserved in browser playback",
+    "gemini_preference":"C1 > C2 > C0",
+    "limitation":"Browser playback applies display/tone mapping; this is not calibrated HDR approval. Gemini did not verify cryptographic identity. Subsequent Claude code inspection proved the first 131 frames of C1/C2 were not graded, so this preference is non-promotable."
+  },
+  "caption": {
+    "segments":{"T1":"00:00-00:06","T2":"00:06-00:12","T3":"00:12-00:18"},
+    "critical_defect":{"all_variants":true,"ranges":["00:00-00:02.40","00:06-00:08.40","00:12-00:14.40"],"finding":"Opening line SOME LOVE STORIES overlaps the animated gold UN chain emblem; LOVE crosses the central logo."},
+    "other_findings":["V13 stacking issue is otherwise absent; opening fades before title entry","T3 at 00:15-00:18 has the clearest wide tracking/editorial hierarchy and strongest mobile readability","Face, eyes, nose and mouth remain clear; crop stable; visible lipsync/performance preserved in browser playback"],
+    "gemini_preference":"T3 > T1 > T2, conditional on removing the opening quote/logo collision",
+    "limitation":"Browser playback is not calibrated HDR evaluation; visual lipsync is observational, not sample-accurate measurement."
+  },
+  "status":"REVIEW_COMPLETE_DEFECTS_FOUND_NO_PASS"
+}
