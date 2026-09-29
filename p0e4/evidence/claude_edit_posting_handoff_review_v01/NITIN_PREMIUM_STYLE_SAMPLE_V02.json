@@ -1,0 +1,37 @@
+{
+  "schema": "NITIN_PREMIUM_STYLE_SAMPLE_V02",
+  "request_id": "UNCHAINED_PREMIUM_STYLE_SAMPLE_20260929_V02",
+  "recorded_local": "2026-09-29T18:29:06+02:00",
+  "user_authorization": {
+    "verbatim": "Oké goed plan",
+    "scope": "Proceed with a short private style proof on the same fragment, emphasizing typography and chain-logo animation. This is approval of the plan, not asset/video/publication approval."
+  },
+  "parent_brief": "p0e4/evidence/claude_edit_posting_handoff_review_v01/PREMIUM_IMPLEMENTATION_JOINT_BRIEF_V01.json",
+  "status": "PERSISTED_PICKUP_UNCONFIRMED",
+  "base_commit": "d0c11497c0f34631c2ca189c02ca914a201eaf23",
+  "base_master_sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+  "execution": [
+    "Reconcile this addendum with the existing active premium task before starting; reuse completed work and deduplicate task/sample hashes.",
+    "Inspect actual V13 and existing template. Use an isolated copy; preserve V13 and all locked assets.",
+    "Render one bounded short comparison on an identical source/time range. If the parent's two internal treatments already exist, reuse them; do not create another full design round.",
+    "Use Cinzel SemiBold titles, Montserrat Medium phrases, warm gold and off-white, deliberate spacing, one accent word at most and disjoint text windows.",
+    "Animate the exact gold UN broken-chain logo with one restrained light pass and a clean disappearance. Keep face clear; no replacement logo, lightning, broad glow or shadow haze.",
+    "Keep audio, color, source crop and edit timing fixed for this comparison. Outro shortening and further montage changes are deferred until the style proof is assessed.",
+    "Claude handles implementation through the existing route. Gemini assesses actual samples through the established context/protocol in the parent brief. Record destination, acknowledgement and artifact-specific review; do not silently create a disconnected chat.",
+    "Perform full sample decode and inspect every text/logo transition. Bind evidence to exact sample SHA and renderer identity; persist preview/project to authoritative Shared Drive with readback checks.",
+    "Present one recommended direction with the V13 reference and measured active edit/render/rework time. Do not freeze template or infer final approval."
+  ],
+  "performance_constraint": "Preserve the stricter established 80% performance constraint and at least 75% without text/graphics in the eventual full clip; label samples as excerpts, not proof of full-clip coverage.",
+  "gates": {
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "dispatch": {
+    "workthread_pickup_confirmed": false,
+    "claude_delivery_confirmed": false,
+    "gemini_delivery_confirmed": false,
+    "note": "Repository persistence is not dispatch or execution evidence."
+  }
+}
