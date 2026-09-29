@@ -1,0 +1,258 @@
+{
+  "base_binding": {
+    "contract_sha256": "d5c6c74369dbc61dedd964a26962533264baec3b0620ee2f38f6250f5f6b15d1",
+    "receipt_sha256": "79dfe95f20794b0619ff7d3d728f4cba4acbe7fafbf26013a4f0cdb67fba71f4",
+    "renderer_sha256": "7c73f2a90dbe9d9e9ab7ad5639aa2006498a3364bff772a29bb1662db5da8c37"
+  },
+  "drp": {
+    "bytes": 124736,
+    "path": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aakhri-integrated-preview-v13-chain-caption-repair/UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR.drp",
+    "sha256": "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec"
+  },
+  "full_decode": {
+    "audio": "FULL_DECODE_PASS",
+    "probe": {
+      "format": {
+        "bit_rate": "203486631",
+        "duration": "24.000000",
+        "filename": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aakhri-integrated-preview-v13-chain-caption-repair/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR_HLG_PRORES.mov",
+        "format_long_name": "QuickTime / MOV",
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "nb_programs": 0,
+        "nb_stream_groups": 1,
+        "nb_streams": 3,
+        "probe_score": 100,
+        "size": "610459894",
+        "start_time": "0.000000",
+        "tags": {
+          "compatible_brands": "qt  ",
+          "creation_time": "2026-09-29T14:58:11.000000Z",
+          "encoder": "Blackmagic Design DaVinci Resolve Studio",
+          "major_brand": "qt  ",
+          "minor_version": "512"
+        }
+      },
+      "streams": [
+        {
+          "avg_frame_rate": "30/1",
+          "bit_rate": "201180058",
+          "bits_per_raw_sample": "10",
+          "codec_long_name": "Apple ProRes (iCodec Pro)",
+          "codec_name": "prores",
+          "codec_tag": "0x68637061",
+          "codec_tag_string": "apch",
+          "codec_type": "video",
+          "coded_height": 1920,
+          "coded_width": 1080,
+          "color_primaries": "bt2020",
+          "color_range": "tv",
+          "color_space": "bt2020nc",
+          "color_transfer": "arib-std-b67",
+          "display_aspect_ratio": "9:16",
+          "disposition": {
+            "attached_pic": 0,
+            "captions": 0,
+            "clean_effects": 0,
+            "comment": 0,
+            "default": 1,
+            "dependent": 0,
+            "descriptions": 0,
+            "dub": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "karaoke": 0,
+            "lyrics": 0,
+            "metadata": 0,
+            "multilayer": 0,
+            "non_diegetic": 0,
+            "original": 0,
+            "still_image": 0,
+            "timed_thumbnails": 0,
+            "visual_impaired": 0
+          },
+          "duration": "24.000000",
+          "duration_ts": 368640,
+          "field_order": "progressive",
+          "has_b_frames": 0,
+          "height": 1920,
+          "id": "0x1",
+          "index": 0,
+          "level": -99,
+          "nb_frames": "720",
+          "nb_read_frames": "720",
+          "pix_fmt": "yuv422p10le",
+          "profile": "HQ",
+          "r_frame_rate": "30/1",
+          "refs": 1,
+          "sample_aspect_ratio": "1:1",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "tags": {
+            "creation_time": "2026-09-29T14:58:11.000000Z",
+            "encoder": "Apple ProRes 422 HQ",
+            "handler_name": "VideoHandler",
+            "timecode": "01:00:00:00",
+            "vendor_id": "appl"
+          },
+          "time_base": "1/15360",
+          "width": 1080
+        },
+        {
+          "avg_frame_rate": "0/0",
+          "bit_rate": "2304000",
+          "bits_per_raw_sample": "24",
+          "bits_per_sample": 24,
+          "channel_layout": "stereo",
+          "channels": 2,
+          "codec_long_name": "PCM signed 24-bit little-endian",
+          "codec_name": "pcm_s24le",
+          "codec_tag": "0x6d63706c",
+          "codec_tag_string": "lpcm",
+          "codec_type": "audio",
+          "disposition": {
+            "attached_pic": 0,
+            "captions": 0,
+            "clean_effects": 0,
+            "comment": 0,
+            "default": 1,
+            "dependent": 0,
+            "descriptions": 0,
+            "dub": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "karaoke": 0,
+            "lyrics": 0,
+            "metadata": 0,
+            "multilayer": 0,
+            "non_diegetic": 0,
+            "original": 0,
+            "still_image": 0,
+            "timed_thumbnails": 0,
+            "visual_impaired": 0
+          },
+          "duration": "24.000000",
+          "duration_ts": 1152000,
+          "id": "0x2",
+          "index": 1,
+          "initial_padding": 0,
+          "nb_frames": "1152000",
+          "nb_read_frames": "1152",
+          "r_frame_rate": "0/0",
+          "sample_fmt": "s32",
+          "sample_rate": "48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "tags": {
+            "creation_time": "2026-09-29T14:58:11.000000Z",
+            "handler_name": "SoundHandler",
+            "vendor_id": "[0][0][0][0]"
+          },
+          "time_base": "1/48000"
+        },
+        {
+          "avg_frame_rate": "15360/512",
+          "bit_rate": "1",
+          "codec_tag": "0x64636d74",
+          "codec_tag_string": "tmcd",
+          "codec_type": "data",
+          "disposition": {
+            "attached_pic": 0,
+            "captions": 0,
+            "clean_effects": 0,
+            "comment": 0,
+            "default": 1,
+            "dependent": 0,
+            "descriptions": 0,
+            "dub": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "karaoke": 0,
+            "lyrics": 0,
+            "metadata": 0,
+            "multilayer": 0,
+            "non_diegetic": 0,
+            "original": 0,
+            "still_image": 0,
+            "timed_thumbnails": 0,
+            "visual_impaired": 0
+          },
+          "duration": "24.000000",
+          "duration_ts": 368640,
+          "extradata_size": 20,
+          "id": "0x3",
+          "index": 2,
+          "nb_frames": "1",
+          "r_frame_rate": "0/0",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "tags": {
+            "creation_time": "2026-09-29T14:58:11.000000Z",
+            "handler_name": "TimeCodeHandler",
+            "language": "eng",
+            "timecode": "01:00:00:00"
+          },
+          "time_base": "1/15360"
+        }
+      ]
+    },
+    "video": "FULL_DECODE_PASS"
+  },
+  "independent_gemini_qc": "REQUIRED_ON_EXACT_RENDER_SHA_NOT_RUN_BY_THIS_SCRIPT",
+  "intro": {
+    "derived_clip": {
+      "frames": 54,
+      "sha256": "f1a6d070b32d0c7af6ef8e61e07bf39b1ee015ebf9dea48e84b8ad61f5a5e5f3"
+    },
+    "expected_sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509",
+    "frames": [
+      0,
+      53
+    ],
+    "identity": "NITIN_APPROVED_GOLD_UN_BROKEN_CHAIN",
+    "placement": {
+      "face_safe": "REQUIRES_RENDER_AUDIT",
+      "tilt": -3000.0,
+      "zoom": [
+        0.3,
+        0.3
+      ]
+    },
+    "sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509"
+  },
+  "nitin_approval": false,
+  "outro": {
+    "derived_clip": {
+      "frames": 120,
+      "sha256": "fca74f6032c4e3ed7ec373fbe70cb4f7c4b4872ed6fae905adfe6d7cae3fdfca"
+    },
+    "exact_wording": [
+      "UNCHAINED NITIN",
+      "~ THE INDESTRUCTIBLE VOICE ~",
+      "FOLLOW FOR MORE",
+      "@UnchainedNitin"
+    ],
+    "frames": [
+      600,
+      719
+    ],
+    "sha256": "c8997aaeb5e8c024dc1dfa222a31676d591cbf0355936b883c2c2fc4ddc2ca10"
+  },
+  "project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR",
+  "publication_authorized": false,
+  "render": {
+    "bytes": 610459894,
+    "path": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aakhri-integrated-preview-v13-chain-caption-repair/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR_HLG_PRORES.mov",
+    "sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088"
+  },
+  "render_status": {
+    "CompletionPercentage": 100,
+    "JobStatus": "Complete",
+    "TimeTakenToRenderInMs": 32826
+  },
+  "rendered_frames": [
+    0,
+    719
+  ],
+  "schema": "RESOLVE_CHAIN_CAPTION_REPAIR_V13",
+  "timeline": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01"
+}

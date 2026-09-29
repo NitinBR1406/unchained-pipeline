@@ -71,6 +71,21 @@ def set_or_insert_scalar(block: str, key: str, value: str) -> str:
     )
 
 
+def restore_property(item, key: str, expected) -> None:
+    """Restore a Resolve property and prove its readback.
+
+    Resolve returns ``False`` when SetProperty is asked to set some properties
+    to the value they already have.  Treat that documented API quirk as safe
+    only when the pre-write readback is already exact; a differing value must
+    still be accepted by SetProperty and every path is verified afterward.
+    """
+    observed = item.GetProperty(key)
+    if observed != expected and not item.SetProperty(key, expected):
+        raise RuntimeError(f"cannot restore {key}: {observed!r} -> {expected!r}")
+    if item.GetProperty(key) != expected:
+        raise RuntimeError(f"{key} readback drift")
+
+
 def resolve_chain_logo(destination: Path) -> Path:
     """Return exact chain-logo bytes, downloading atomically when absent."""
     if destination.exists() and sha256(destination) == CHAIN_LOGO_SHA256:

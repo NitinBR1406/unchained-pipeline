@@ -14,7 +14,11 @@ from pathlib import Path
 
 import DaVinciResolveScript as d
 
-from aakhri_v12_repair_contract import VISIBILITY_WINDOWS, set_or_insert_scalar
+from aakhri_v12_repair_contract import (
+    VISIBILITY_WINDOWS,
+    restore_property,
+    set_or_insert_scalar,
+)
 
 
 BASE = "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V11_CLEAN_TYPOGRAPHY"
@@ -134,6 +138,23 @@ project = manager.LoadProject(NEW)
 assert project
 timeline = project.GetCurrentTimeline()
 origin = timeline.GetStartFrame()
+# V11 contains a historical flattened logo/end overlay on upper video tracks.
+# It is both superseded by the V13 hash-bound chain intro/outro and may point
+# at an offline image sequence.  Remove upper-track overlays only inside this
+# disposable clone before rebuilding the two explicit V13 overlays.
+removed_inherited_overlays = []
+for track_index in range(2, timeline.GetTrackCount("video") + 1):
+    inherited = timeline.GetItemListInTrack("video", track_index)
+    removed_inherited_overlays.extend([
+        {
+            "track": track_index,
+            "name": clip.GetName(),
+            "frames": [clip.GetStart() - origin, clip.GetEnd() - origin],
+        }
+        for clip in inherited
+    ])
+    if inherited:
+        assert timeline.DeleteClips(inherited, False)
 clips = timeline.GetItemListInTrack("video", 1)
 assert [(c.GetStart() - origin, c.GetEnd() - origin) for c in clips] == EXPECTED_TIMELINE
 
@@ -176,8 +197,7 @@ for index, old in enumerate(saved):
     assert item.SetLUT(1, old["lut"])
     assert item.GetLUT(1) == old["lut"]
     for key, value in old["properties"].items():
-        assert item.SetProperty(key, value), f"cannot restore {key} on clip {index}"
-        assert item.GetProperty(key) == value, f"{key} readback drift on clip {index}"
+        restore_property(item, key, value)
     assert [item.GetStart() - origin, item.GetEnd() - origin] == old["timeline"]
     assert [item.GetSourceStartFrame(), item.GetSourceEndFrame()] == old["source"]
     readback_comps = []
@@ -232,6 +252,7 @@ receipt = {
     "picture_source_ranges_changed": False,
     "programme_audio_changed": "NOT_MUTATED_BY_SCRIPT_REQUIRES_RENDER_PCM_COMPARISON",
     "timeline_cuts_changed": False, "fusion_picture_geometry_changed": False,
+    "removed_inherited_overlays": removed_inherited_overlays,
     "rhythm_motion_changed": "ALL_FUSION_COMPS_RESTORED_AND_COUNT_VERIFIED",
     "colour_changed": "LUT_SLOT_1_RESTORED_AND_READ_BACK",
     "ending_changed": "NOT_MUTATED_BY_SCRIPT_REQUIRES_ACTUAL_OUTPUT_AUDIT",

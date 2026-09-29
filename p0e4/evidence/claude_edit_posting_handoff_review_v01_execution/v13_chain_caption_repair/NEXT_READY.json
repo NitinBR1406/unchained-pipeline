@@ -1,0 +1,13 @@
+{
+  "schema": "NEXT_READY",
+  "status": "WAITING_FOR_NITIN_PRIVATE_PREVIEW_REVIEW",
+  "review_file_id": "1uMtCO100ltM0mDK6brgVsO_0qMvWcVYj",
+  "review_url": "https://drive.google.com/file/d/1uMtCO100ltM0mDK6brgVsO_0qMvWcVYj/view?usp=drivesdk",
+  "candidate_master_sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+  "candidate_review_mp4_sha256": "b436eda79eadb289d4bbf7e5763eb2858c5eeef0ee13c7cb60f308c372664590",
+  "human_question": "Does this repaired V13 private preview meet Nitin's creative expectations for logo, captions and premium finish?",
+  "independent_gemini_qc": "PASS_WITH_EXPLICIT_HDR_AND_LIPSYNC_LIMITATIONS",
+  "nitin_final_video_approval": false,
+  "publication_authorized": false,
+  "first_real_poster": "PAUSED_BY_NITIN"
+}

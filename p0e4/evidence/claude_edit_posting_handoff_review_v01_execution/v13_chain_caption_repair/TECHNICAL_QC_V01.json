@@ -1,0 +1,65 @@
+{
+  "schema": "TECHNICAL_QC_V01",
+  "checked_at_utc": "2026-09-29T15:13:04Z",
+  "master": {
+    "filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR_HLG_PRORES.mov",
+    "sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+    "bytes": 610459894,
+    "duration_seconds": 24.0,
+    "frames": 720,
+    "width": 1080,
+    "height": 1920,
+    "fps": "30/1",
+    "video_codec": "prores_422_hq",
+    "pixel_format": "yuv422p10le",
+    "color_primaries": "bt2020",
+    "color_transfer": "arib-std-b67",
+    "color_matrix": "bt2020nc",
+    "audio_codec": "pcm_s24le",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2,
+    "full_video_decode": "PASS",
+    "full_audio_decode": "PASS"
+  },
+  "review_derivative": {
+    "filename": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR_HLG.mp4",
+    "sha256": "b436eda79eadb289d4bbf7e5763eb2858c5eeef0ee13c7cb60f308c372664590",
+    "bytes": 22053571,
+    "duration_seconds": 24.0,
+    "video_codec": "hevc",
+    "pixel_format": "yuv420p10le",
+    "color_primaries": "bt2020",
+    "color_transfer": "arib-std-b67",
+    "color_matrix": "bt2020nc",
+    "audio_codec": "aac",
+    "full_video_decode": "PASS",
+    "full_audio_decode": "PASS"
+  },
+  "programme_audio": {
+    "decoded_pcm_s24le_sha256": "2d374f73c9822c1b2e7fd21d2c90abe48a07ba7a7f7a581a43ed2a2adefc590b",
+    "matches_v12": true,
+    "edit_or_sync_timing_changed": false
+  },
+  "visual_checks": {
+    "contact_sheet_sha256": "cf872fca2b96a35c82c420579b0b1efeea657723506a9d554bb064a70ac43186",
+    "black_frames_detected": false,
+    "silence_events_detected": false,
+    "chain_intro_frames": [0, 53],
+    "hook_starts_frame": 54,
+    "outro_frames": [600, 719],
+    "transition_overlap_detected": false,
+    "duplicate_upper_track_overlay_detected": false,
+    "visible_border_detected": false,
+    "human_visual_review": "PENDING_NITIN"
+  },
+  "resolve_project": {
+    "name": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR",
+    "drp_sha256": "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec",
+    "render_status": "COMPLETE"
+  },
+  "governance": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  }
+}

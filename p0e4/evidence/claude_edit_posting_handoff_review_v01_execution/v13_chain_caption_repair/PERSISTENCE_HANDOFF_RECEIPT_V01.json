@@ -1,0 +1,40 @@
+{
+  "schema": "PERSISTENCE_HANDOFF_RECEIPT_V01",
+  "destination": {
+    "shared_drive": "Unchained Nitin — Master",
+    "path": "P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR",
+    "folder_id": "1OzXRrQZa2bHBAOf65alXOT7ouPL3WiDb",
+    "folder_url": "https://drive.google.com/drive/folders/1OzXRrQZa2bHBAOf65alXOT7ouPL3WiDb",
+    "review_file_id": "1uMtCO100ltM0mDK6brgVsO_0qMvWcVYj",
+    "review_url": "https://drive.google.com/file/d/1uMtCO100ltM0mDK6brgVsO_0qMvWcVYj/view?usp=drivesdk"
+  },
+  "copy_mode": "COPY_NEVER_MOVE",
+  "source_staging_preserved": true,
+  "files": [
+    {
+      "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR_HLG_PRORES.mov",
+      "sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+      "readback_sha256_match": true
+    },
+    {
+      "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR_HLG.mp4",
+      "sha256": "b436eda79eadb289d4bbf7e5763eb2858c5eeef0ee13c7cb60f308c372664590",
+      "readback_sha256_match": true
+    },
+    {
+      "name": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR.drp",
+      "sha256": "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec",
+      "readback_sha256_match": true
+    },
+    {
+      "name": "V13_TRANSITION_CONTACT_SHEET_QC2.png",
+      "sha256": "cf872fca2b96a35c82c420579b0b1efeea657723506a9d554bb064a70ac43186",
+      "readback_sha256_match": true
+    }
+  ],
+  "governance": {
+    "production_deployment_authorized": false,
+    "publication_authorized": false,
+    "first_real_poster": "PAUSED_BY_NITIN"
+  }
+}

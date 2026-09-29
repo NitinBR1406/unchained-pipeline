@@ -1,0 +1,32 @@
+{
+  "schema": "GEMINI_BOUNDED_REPAIR_HISTORY_V01",
+  "first_candidate": {
+    "sha256": "6a6bec4ae55369fd834c73322eff8f22ad70bb19b4427d2c9832af2f1f3b1a0e",
+    "gemini_context": "https://gemini.google.com/app/a422d76117112a48",
+    "attachment_confirmed": true,
+    "observed_duration_seconds": 24,
+    "verdict": "REPAIR_REQUIRED",
+    "observed_defect": "Gold UN broken-chain logo obstructed the performer's mouth during 00:00-00:01.",
+    "other_findings": {
+      "caption_transition_collision": false,
+      "unexpected_duplicate_layers": false,
+      "visible_borders": false,
+      "outro_complete": true,
+      "visible_lipsync": "UNCERTAIN_FROM_BROWSER_REVIEW"
+    }
+  },
+  "bounded_repair": {
+    "scope": "CHAIN_LOGO_PLACEMENT_ONLY",
+    "zoom_before": 0.38,
+    "zoom_after": 0.30,
+    "tilt_after": -3000.0,
+    "caption_timing_changed": false,
+    "edit_timing_changed": false,
+    "programme_audio_changed": false,
+    "colour_changed": false
+  },
+  "repaired_candidate_sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+  "independent_re_qc": "PASS_ON_EXACT_REVIEW_DERIVATIVE",
+  "publication_authorized": false,
+  "nitin_final_video_approval": false
+}

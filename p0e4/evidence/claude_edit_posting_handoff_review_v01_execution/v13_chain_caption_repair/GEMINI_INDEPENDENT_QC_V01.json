@@ -1,0 +1,39 @@
+{
+  "schema": "GEMINI_INDEPENDENT_QC_V01",
+  "context_url": "https://gemini.google.com/app/261618b089ec6d4b",
+  "reviewed_file": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR_HLG.mp4",
+  "reviewed_sha256": "b436eda79eadb289d4bbf7e5763eb2858c5eeef0ee13c7cb60f308c372664590",
+  "bound_prores_master_sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+  "attachment_confirmed": true,
+  "observed_duration": "00:00:24",
+  "verdict": "PASS",
+  "timecoded_findings": [
+    {
+      "timecode": "00:00-00:02",
+      "description": "Gold UN broken-chain logo is lower-center, isolated over the dark shirt, and clear of eyes, nose, mouth, chin and important facial expression."
+    },
+    {
+      "timecode": "00:02-00:19",
+      "description": "Title text is legible; no overlap, cut-off, transition collision or duplicate layer was observed."
+    },
+    {
+      "timecode": "00:00-00:20",
+      "description": "Consistent 9:16 framing with no unintended borders; continuous performance energy; visible lipsync appears accurate."
+    },
+    {
+      "timecode": "00:20-00:24",
+      "description": "Clean hard cut to complete outro; no overlap or transition artifact observed."
+    }
+  ],
+  "observed_defects": [],
+  "creative_suggestions_not_required_for_acceptance": [
+    "Optional title opacity fade before the outro.",
+    "Optional verified time-synced lyrics for future engagement experiments."
+  ],
+  "limitations": [
+    "Browser playback is not calibrated HDR evaluation; HLG gamut and brightness require an HDR reference display for calibrated judgement.",
+    "Visible lipsync judgement remains subject to browser, operating-system and hardware playback latency."
+  ],
+  "human_approval_inferred": false,
+  "publication_authorized": false
+}

@@ -8,11 +8,37 @@ from p0e4.resolve.aakhri_v12_repair_contract import (
     VISIBILITY_WINDOWS,
     assert_no_forbidden_overlap,
     resolve_chain_logo,
+    restore_property,
     set_or_insert_scalar,
 )
 
 
 class RepairContractTests(unittest.TestCase):
+    class FakeItem:
+        def __init__(self, value, accepts=True):
+            self.value = value
+            self.accepts = accepts
+
+        def GetProperty(self, _key):
+            return self.value
+
+        def SetProperty(self, _key, value):
+            if self.accepts:
+                self.value = value
+            return self.accepts
+
+    def test_identical_property_does_not_require_write(self):
+        restore_property(self.FakeItem(0.0, accepts=False), "AnchorPointX", 0.0)
+
+    def test_changed_property_requires_accepted_write(self):
+        with self.assertRaisesRegex(RuntimeError, "cannot restore ZoomX"):
+            restore_property(self.FakeItem(1.0, accepts=False), "ZoomX", 1.2)
+
+    def test_changed_property_is_read_back(self):
+        item = self.FakeItem(1.0)
+        restore_property(item, "ZoomX", 1.2)
+        self.assertEqual(item.value, 1.2)
+
     def test_authorized_windows_are_disjoint(self):
         assert_no_forbidden_overlap()
         self.assertLess(

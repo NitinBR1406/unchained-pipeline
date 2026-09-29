@@ -1,6 +1,9 @@
 """Bind the approved chain logo and flattened outro card to V13."""
 
 import json
+import os
+import shutil
+import subprocess
 import time
 from pathlib import Path
 
@@ -19,12 +22,34 @@ OUT = ROOT / ".local/aakhri-integrated-preview-v13-chain-caption-repair"
 PROJECT = "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR"
 INTRO = OUT / "unchained_chain_emblem.png"
 OUTRO = ROOT / "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/ORIGINAL_visualizer_outro.png"
+INTRO_CLIP = OUT / "unchained_chain_emblem_54f.mov"
+OUTRO_CLIP = OUT / "visualizer_outro_120f.mov"
 BASE_RECEIPT = OUT / "RESOLVE_CHAIN_CAPTION_REPAIR_BASE_V13.json"
 BASE_RENDERER = Path(__file__).with_name("render_aakhri_claude_intro_outro_v12.py")
 CONTRACT = Path(__file__).with_name("aakhri_v12_repair_contract.py")
 
 
+def build_overlay_clip(source: Path, destination: Path, frames: int) -> None:
+    """Create an exactly bounded alpha-capable overlay clip from a PNG."""
+    executable = shutil.which("ffmpeg") or "/Users/nitinramdaras/ffbin/ffmpeg"
+    if not Path(executable).is_file():
+        raise RuntimeError("ffmpeg unavailable for bounded overlay derivation")
+    temporary = destination.with_suffix(".partial.mov")
+    temporary.unlink(missing_ok=True)
+    command = [
+        executable, "-hide_banner", "-loglevel", "error", "-loop", "1",
+        "-i", str(source), "-frames:v", str(frames), "-r", "30",
+        "-c:v", "prores_ks", "-profile:v", "4", "-pix_fmt", "yuva444p10le",
+        "-color_primaries", "bt709", "-color_trc", "bt709",
+        "-colorspace", "bt709", "-an", "-y", str(temporary),
+    ]
+    subprocess.run(command, check=True)
+    os.replace(temporary, destination)
+
+
 resolve_chain_logo(INTRO)
+build_overlay_clip(INTRO, INTRO_CLIP, 54)
+build_overlay_clip(OUTRO, OUTRO_CLIP, 120)
 assert BASE_RECEIPT.exists(), "run caption/base repair before intro/outro render"
 base_receipt = json.loads(BASE_RECEIPT.read_text())
 assert base_receipt["project"] == PROJECT
@@ -48,23 +73,25 @@ prior = timeline.GetItemListInTrack("video", 2)
 if prior:
     assert timeline.DeleteClips(prior, False)
 
-imports = pool.ImportMedia([str(INTRO), str(OUTRO)])
+imports = pool.ImportMedia([str(INTRO_CLIP), str(OUTRO_CLIP)])
 by_name = {item.GetName(): item for item in imports}
-intro_item = by_name[INTRO.name]
-outro_item = by_name[OUTRO.name]
+intro_item = by_name[INTRO_CLIP.name]
+outro_item = by_name[OUTRO_CLIP.name]
 
 intro = pool.AppendToTimeline([{
-    "mediaPoolItem": intro_item, "startFrame": 0, "endFrame": VISIBILITY_WINDOWS["chain_intro"][1],
+    "mediaPoolItem": intro_item, "startFrame": 0, "endFrame": 54,
     "mediaType": 1, "trackIndex": 2, "recordFrame": origin,
 }])[0]
-assert intro.SetProperty("ZoomX", 0.55)
-assert intro.SetProperty("ZoomY", 0.55)
-assert intro.SetProperty("Tilt", 420.0)
+assert intro.SetProperty("ZoomX", 0.30)
+assert intro.SetProperty("ZoomY", 0.30)
+assert intro.SetProperty("Tilt", -3000.0)
+assert [intro.GetStart() - origin, intro.GetEnd() - origin] == [0, 54]
 
 outro = pool.AppendToTimeline([{
-    "mediaPoolItem": outro_item, "startFrame": 0, "endFrame": 119,
+    "mediaPoolItem": outro_item, "startFrame": 0, "endFrame": 120,
     "mediaType": 1, "trackIndex": 2, "recordFrame": origin + VISIBILITY_WINDOWS["outro_card"][0],
 }])[0]
+assert [outro.GetStart() - origin, outro.GetEnd() - origin] == [600, 720]
 
 assert manager.SaveProject()
 drp = OUT / f"{PROJECT}.drp"
@@ -101,8 +128,10 @@ receipt = {
         "frames": list(VISIBILITY_WINDOWS["chain_intro"]),
         "sha256": sha256(INTRO),
         "expected_sha256": CHAIN_LOGO_SHA256,
+        "derived_clip": {"frames": 54, "sha256": sha256(INTRO_CLIP)},
+        "placement": {"zoom": [0.30, 0.30], "tilt": -3000.0, "face_safe": "REQUIRES_RENDER_AUDIT"},
     },
-    "outro": {"frames": [600, 719], "sha256": sha256(OUTRO), "exact_wording": ["UNCHAINED NITIN", "~ THE INDESTRUCTIBLE VOICE ~", "FOLLOW FOR MORE", "@UnchainedNitin"]},
+    "outro": {"frames": [600, 719], "sha256": sha256(OUTRO), "derived_clip": {"frames": 120, "sha256": sha256(OUTRO_CLIP)}, "exact_wording": ["UNCHAINED NITIN", "~ THE INDESTRUCTIBLE VOICE ~", "FOLLOW FOR MORE", "@UnchainedNitin"]},
     "render": {"path": str(render), "sha256": sha256(render), "bytes": render.stat().st_size},
     "drp": {"path": str(drp), "sha256": sha256(drp), "bytes": drp.stat().st_size},
     "render_status": status,
