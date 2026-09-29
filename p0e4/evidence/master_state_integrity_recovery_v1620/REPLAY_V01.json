@@ -1,0 +1,11 @@
+{
+  "detail": "OK",
+  "ledger_head_hash": "906dea5404d43195700a076bf8bb3bcde12e717da4ec8f070fe762c854bd7e23",
+  "ledger_sha256": "5f76fa798bdd093f02c9b9d336f12be7cde8c869b4a97ec109a4ffae4c5d856d",
+  "schema": "MASTER_STATE_RECOVERY_REPLAY_V01",
+  "state_sha256": "86bfcaefc6c3b7a222a6dac0f0efe4910fab7727cf2a8372663180e725900cf2",
+  "state_version": 46,
+  "tested_sha": "79cc1e6e0cdc0db92f24094417fd7b6e3424b138",
+  "transition_count": 35,
+  "verified": true
+}

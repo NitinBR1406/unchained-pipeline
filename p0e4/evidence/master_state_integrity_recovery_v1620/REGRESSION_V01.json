@@ -1,0 +1,13 @@
+{
+  "optional_dependency_import_failures_excluded_from_claim": true,
+  "passed": 19,
+  "result": "PASS",
+  "schema": "MASTER_STATE_RECOVERY_REGRESSION_V01",
+  "suites": [
+    "p0e4.tests.test_master_recovery_v1620",
+    "p0e4.tests.test_engineering_executor",
+    "p0e4.tests.test_state_update"
+  ],
+  "tested_sha": "79cc1e6e0cdc0db92f24094417fd7b6e3424b138",
+  "total": 19
+}

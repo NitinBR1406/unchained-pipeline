@@ -1,0 +1,18 @@
+{
+  "always_on_dispatcher_proven": false,
+  "completed": [
+    "bounded controller receipt task",
+    "claim and local Codex CLI execution",
+    "remote-verified result commit",
+    "idempotent reoffer",
+    "additive Master State ledger recovery",
+    "V16.20 deterministic replay"
+  ],
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "remaining_blocker": "The native Codex heartbeat wakes this task, but no immutable binding currently invokes engineering.py for newly committed READY tasks without an agent turn. Stored JSON alone is not an execution trigger.",
+  "schema": "NEXT_READY_V01",
+  "smallest_human_action": "Approve changing the existing heartbeat prompt/configuration to invoke only the committed V11 allowlist through engineering.py. This does not authorize general Resolve automation, production deployment, Make, or publication.",
+  "status": "WAITING_FOR_NITIN_CHANGE_APPROVAL_FOR_AUTOSTART_BINDING"
+}

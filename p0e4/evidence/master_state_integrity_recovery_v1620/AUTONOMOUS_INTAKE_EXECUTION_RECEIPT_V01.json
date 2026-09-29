@@ -1,0 +1,48 @@
+{
+  "always_on_dispatcher_proven": false,
+  "automatic_wake_to_controller_invocation_proven": false,
+  "controller": "p0e4/controller/engineering.py",
+  "controller_scope": "p0e4_nonproduction_contract_fixture",
+  "dedup_reoffer": {
+    "child_redispatched": false,
+    "event_count_after": 34,
+    "event_count_before": 34,
+    "ledger_sha256_unchanged": true,
+    "output_sha256_unchanged": true,
+    "status": "COMPLETED_CACHED"
+  },
+  "events_sha256": "938ee83c06d27a510d5ed40277a6364df647fd0a285553bf7d2135707818f198",
+  "executor": "LOCAL_CODEX_CLI",
+  "first_real_poster": "PAUSED_BY_NITIN",
+  "focused_recovery_regression": {
+    "passed": 16,
+    "tested_sha": "aef33b6de3d03557e22d68fc8039338406a2fa5c",
+    "total": 16,
+    "tracked_worktree_clean": true
+  },
+  "initial_promotion_holds_preserved": {
+    "full_regression": "8b84ef64a14ed65da45bb130dd1418469f2eae4c8cd3d469afb98195bba8bbb3",
+    "reason": [
+      "missing optional local Python dependencies",
+      "local branch alias did not match controller contract"
+    ]
+  },
+  "make_invoked": false,
+  "output": {
+    "sha256": "6b4ff1c4ab232890f7f39581d4c8ca9deb4f5bbd35c0467b5e8c1c8540f12ade",
+    "uri": "p0e4/generated/autonomous_intake_control_receipt_v01.json"
+  },
+  "production_deployment_authorized": false,
+  "publication_authorized": false,
+  "remote_verified": true,
+  "resolve_invoked": false,
+  "result_commit": "aef33b6de3d03557e22d68fc8039338406a2fa5c",
+  "runtime_event_count": 34,
+  "runtime_ledger_sha256_after_completion": "71ba29547799d5914e9d3a3b9c48e45b5497496e448b79f974e3c46b72ecf223",
+  "schema": "AUTONOMOUS_INTAKE_EXECUTION_RECEIPT_V01",
+  "status": "COMPLETED",
+  "stored_request_auto_start_proven": false,
+  "task_id": "EC_CONTROL_INTAKE_RECEIPT_V01",
+  "task_sha256": "50363642f3613bdfd733b60ba9bdd12d23ade6a45214895e18293d86681f4471",
+  "thread_id": "01a0ee9a-ebc7-7033-a94b-32f7e4d611eb"
+}
