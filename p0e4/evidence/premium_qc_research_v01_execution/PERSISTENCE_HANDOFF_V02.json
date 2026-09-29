@@ -1,0 +1,194 @@
+{
+  "all_readback_sha256_equal": true,
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_PREMIUM_QC_RESEARCH_V01_20260929",
+  "file_count": 26,
+  "files": [
+    {
+      "bytes": 304966006,
+      "destination_sha256": "c018f23a2fac71b8dd16e6bbec9f9aeca5ce88f35c7e6046a940ebe29edd4327",
+      "name": "AAKHRI_PREMIUM_C0_CURRENT_REFERENCE_HLG.mov",
+      "source_sha256": "c018f23a2fac71b8dd16e6bbec9f9aeca5ce88f35c7e6046a940ebe29edd4327",
+      "verified": true
+    },
+    {
+      "bytes": 307060326,
+      "destination_sha256": "1af7cca3dcd69eee10f5871105cefd820b62c51e2c97366588b1172b72860a46",
+      "name": "AAKHRI_PREMIUM_C0_CURRENT_REFERENCE_V01_PERFORMANCE_ONLY_R2_HLG.mov",
+      "source_sha256": "1af7cca3dcd69eee10f5871105cefd820b62c51e2c97366588b1172b72860a46",
+      "verified": true
+    },
+    {
+      "bytes": 311752982,
+      "destination_sha256": "3627d72e901e84d1d9ccf8d241fe8d2ba4edae066a0eb5b4c407ca5a461d1856",
+      "name": "AAKHRI_PREMIUM_C1_WARM_CINEMATIC_HLG.mov",
+      "source_sha256": "3627d72e901e84d1d9ccf8d241fe8d2ba4edae066a0eb5b4c407ca5a461d1856",
+      "verified": true
+    },
+    {
+      "bytes": 312203702,
+      "destination_sha256": "4a4bb8af6f66199c1dfa9b63e97df4be643367233f6642b59e5876e2f8d18e19",
+      "name": "AAKHRI_PREMIUM_C1_WARM_CINEMATIC_V01_PERFORMANCE_ONLY_R2_HLG.mov",
+      "source_sha256": "4a4bb8af6f66199c1dfa9b63e97df4be643367233f6642b59e5876e2f8d18e19",
+      "verified": true
+    },
+    {
+      "bytes": 313347526,
+      "destination_sha256": "cec0ae0ca6acd5ea4b288251bea3a09ed93a6e4620a2f5463ec70b99b9ccf0ae",
+      "name": "AAKHRI_PREMIUM_C2_DRAMATIC_STAGE_HLG.mov",
+      "source_sha256": "cec0ae0ca6acd5ea4b288251bea3a09ed93a6e4620a2f5463ec70b99b9ccf0ae",
+      "verified": true
+    },
+    {
+      "bytes": 313500470,
+      "destination_sha256": "e0f25208bf14a26c6717b059d35bb814cefdac37cc6ec8af3d331698df0ec0b7",
+      "name": "AAKHRI_PREMIUM_C2_DRAMATIC_STAGE_V01_PERFORMANCE_ONLY_R2_HLG.mov",
+      "source_sha256": "e0f25208bf14a26c6717b059d35bb814cefdac37cc6ec8af3d331698df0ec0b7",
+      "verified": true
+    },
+    {
+      "bytes": 1540,
+      "destination_sha256": "f91425281af3315772191c8e6279c4eaf9ab1856a745bb889bdca389216c917f",
+      "name": "AAKHRI_PREMIUM_CAPTION_COMPARISON_T1_T2_T3_HLG.mov.ffprobe.json",
+      "source_sha256": "f91425281af3315772191c8e6279c4eaf9ab1856a745bb889bdca389216c917f",
+      "verified": true
+    },
+    {
+      "bytes": 19001579,
+      "destination_sha256": "680dde68786b30805d2585b9ff7551c6357872b115087b9bb9e5d63251fec73a",
+      "name": "AAKHRI_PREMIUM_CAPTION_COMPARISON_T1_T2_T3_HLG_REVIEW.mp4",
+      "source_sha256": "680dde68786b30805d2585b9ff7551c6357872b115087b9bb9e5d63251fec73a",
+      "verified": true
+    },
+    {
+      "bytes": 1543,
+      "destination_sha256": "dd8865fc07ce1093420f73bc73c79ff4817a2188e18a62f31ff32725e9798058",
+      "name": "AAKHRI_PREMIUM_COLOUR_COMPARISON_C0_C1_C2_HLG.mov.ffprobe.json",
+      "source_sha256": "dd8865fc07ce1093420f73bc73c79ff4817a2188e18a62f31ff32725e9798058",
+      "verified": true
+    },
+    {
+      "bytes": 30006344,
+      "destination_sha256": "33694ef0726d3571290cc7d3d4ab046c179d9327a85dcbf876a3bb73882751e1",
+      "name": "AAKHRI_PREMIUM_COLOUR_COMPARISON_C0_C1_C2_HLG_REVIEW.mp4",
+      "source_sha256": "33694ef0726d3571290cc7d3d4ab046c179d9327a85dcbf876a3bb73882751e1",
+      "verified": true
+    },
+    {
+      "bytes": 932776085,
+      "destination_sha256": "d940e84ee06c2ac6356e6fe16ee54d66233eef8df9e3930ad4f8bada54448781",
+      "name": "AAKHRI_PREMIUM_COLOUR_COMPARISON_C0_C1_C2_PERFORMANCE_ONLY_R2_HLG.mov",
+      "source_sha256": "d940e84ee06c2ac6356e6fe16ee54d66233eef8df9e3930ad4f8bada54448781",
+      "verified": true
+    },
+    {
+      "bytes": 1543,
+      "destination_sha256": "f933a4a3f083dea92759b8122f841d32a6d387e740c7148a47effc8618c88796",
+      "name": "AAKHRI_PREMIUM_COLOUR_COMPARISON_C0_C1_C2_PERFORMANCE_ONLY_R2_HLG.mov.ffprobe.json",
+      "source_sha256": "f933a4a3f083dea92759b8122f841d32a6d387e740c7148a47effc8618c88796",
+      "verified": true
+    },
+    {
+      "bytes": 38521211,
+      "destination_sha256": "6bb4fccd4d8c0c9eb7402515375d43afd841500d7c5bcc1928a45522db94c452",
+      "name": "AAKHRI_PREMIUM_COLOUR_COMPARISON_C0_C1_C2_PERFORMANCE_ONLY_R2_HLG_REVIEW.mp4",
+      "source_sha256": "6bb4fccd4d8c0c9eb7402515375d43afd841500d7c5bcc1928a45522db94c452",
+      "verified": true
+    },
+    {
+      "bytes": 153427798,
+      "destination_sha256": "a80d4199cf24fb9bec46f223823facabee2ba45a9bc9a5741fd7467663d27dbd",
+      "name": "AAKHRI_PREMIUM_T1_LYRICAL_ELEGANCE_HLG.mov",
+      "source_sha256": "a80d4199cf24fb9bec46f223823facabee2ba45a9bc9a5741fd7467663d27dbd",
+      "verified": true
+    },
+    {
+      "bytes": 154855430,
+      "destination_sha256": "15f543b483a82767ebcf07d2026a529de9b39be1ada5240116c22b9a1049c8b1",
+      "name": "AAKHRI_PREMIUM_T2_KINETIC_IMPACT_HLG.mov",
+      "source_sha256": "15f543b483a82767ebcf07d2026a529de9b39be1ada5240116c22b9a1049c8b1",
+      "verified": true
+    },
+    {
+      "bytes": 153580214,
+      "destination_sha256": "2a92f2d891330a84cd8d67f769ffa5dd5208dbf82324c09c137170c284c0839a",
+      "name": "AAKHRI_PREMIUM_T3_CINEMATIC_TITLE_HLG.mov",
+      "source_sha256": "2a92f2d891330a84cd8d67f769ffa5dd5208dbf82324c09c137170c284c0839a",
+      "verified": true
+    },
+    {
+      "bytes": 1584695,
+      "destination_sha256": "1b9bd1e861f1d1d8f037fb4afc1f6ba78bb1470711f8bb5183367caf7b9123c9",
+      "name": "COLOUR_R2_CONTACT_SHEET.png",
+      "source_sha256": "1b9bd1e861f1d1d8f037fb4afc1f6ba78bb1470711f8bb5183367caf7b9123c9",
+      "verified": true
+    },
+    {
+      "bytes": 5696,
+      "destination_sha256": "81be91db75df09cff6ed3978939dce870ddba9bc2da1bf5e147c1a6f5ccf11c2",
+      "name": "PERSISTENCE_HANDOFF_V01.json",
+      "source_sha256": "81be91db75df09cff6ed3978939dce870ddba9bc2da1bf5e147c1a6f5ccf11c2",
+      "verified": true
+    },
+    {
+      "bytes": 2076,
+      "destination_sha256": "4ee53f8455fc059e82731d47546427a802367863f50f87a4b26eca0ff05e3b17",
+      "name": "PREMIUM_QC_COLOUR_TRIALS_R2.json",
+      "source_sha256": "4ee53f8455fc059e82731d47546427a802367863f50f87a4b26eca0ff05e3b17",
+      "verified": true
+    },
+    {
+      "bytes": 7656,
+      "destination_sha256": "fef4422d99b34e1bb0ae571396c55a32ecc4baaf8ab4ae34d3bdd72bf92195b0",
+      "name": "PREMIUM_QC_LOCAL_TRIALS_V01.json",
+      "source_sha256": "fef4422d99b34e1bb0ae571396c55a32ecc4baaf8ab4ae34d3bdd72bf92195b0",
+      "verified": true
+    },
+    {
+      "bytes": 171440,
+      "destination_sha256": "7ce93ecef5e61e7db8b85105f75db646a697a154dc6b1607740602b0703ca8eb",
+      "name": "UNCHAINED_PREMIUM_QC_C0_CURRENT_REFERENCE_V01.drp",
+      "source_sha256": "7ce93ecef5e61e7db8b85105f75db646a697a154dc6b1607740602b0703ca8eb",
+      "verified": true
+    },
+    {
+      "bytes": 171515,
+      "destination_sha256": "d3f4073b9d72a1f0dd5a1fe832b62d6bb5285806e8928db9ec2c89b44947ca84",
+      "name": "UNCHAINED_PREMIUM_QC_C1_WARM_CINEMATIC_V01.drp",
+      "source_sha256": "d3f4073b9d72a1f0dd5a1fe832b62d6bb5285806e8928db9ec2c89b44947ca84",
+      "verified": true
+    },
+    {
+      "bytes": 171423,
+      "destination_sha256": "885ca67fa7a0363b9589d1929f58de629a2f93ba1159fe21f7aecb6dc9c17528",
+      "name": "UNCHAINED_PREMIUM_QC_C2_DRAMATIC_STAGE_V01.drp",
+      "source_sha256": "885ca67fa7a0363b9589d1929f58de629a2f93ba1159fe21f7aecb6dc9c17528",
+      "verified": true
+    },
+    {
+      "bytes": 171357,
+      "destination_sha256": "7370277006861b33449875b09ff2f6b06846f340bde087478550a4c34777dd75",
+      "name": "UNCHAINED_PREMIUM_QC_T1_LYRICAL_ELEGANCE_V01.drp",
+      "source_sha256": "7370277006861b33449875b09ff2f6b06846f340bde087478550a4c34777dd75",
+      "verified": true
+    },
+    {
+      "bytes": 171284,
+      "destination_sha256": "897b33acff3e23d46d80787e8a751f47b3d298150d87eda5378bc05c10c25e3e",
+      "name": "UNCHAINED_PREMIUM_QC_T2_KINETIC_IMPACT_V01.drp",
+      "source_sha256": "897b33acff3e23d46d80787e8a751f47b3d298150d87eda5378bc05c10c25e3e",
+      "verified": true
+    },
+    {
+      "bytes": 171263,
+      "destination_sha256": "fa2c4e521fb2be0f62cf0d581c7366a862189ffe0d3e87ba5dfdd9f0aae5e5e3",
+      "name": "UNCHAINED_PREMIUM_QC_T3_CINEMATIC_TITLE_V01.drp",
+      "source_sha256": "fa2c4e521fb2be0f62cf0d581c7366a862189ffe0d3e87ba5dfdd9f0aae5e5e3",
+      "verified": true
+    }
+  ],
+  "publication_authorized": false,
+  "request_id": "UNCHAINED_PREMIUM_EXECUTION_20260929",
+  "schema": "PREMIUM_QC_PERSISTENCE_HANDOFF_V02",
+  "source_staging_preserved": true,
+  "verified_at_utc": "2026-09-29T21:02:00Z"
+}

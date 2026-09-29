@@ -1,0 +1,28 @@
+{
+  "schema": "PREMIUM_QC_NEXT_READY_V01",
+  "request_id": "UNCHAINED_PREMIUM_EXECUTION_20260929",
+  "status": "WAITING_FOR_NITIN_PREMIUM_DIRECTION_REVIEW",
+  "human_choices": [
+    "Review corrected performance-only colour comparison R2 and choose C0, C1, C2, or provide one bounded correction.",
+    "Review caption comparison and choose T1, T2, T3, or provide one bounded correction."
+  ],
+  "independent_ready_work": [
+    "Retry Claude review only after the occupied Dispatch task is no longer running; deduplicate by request_id.",
+    "Retry Gemini actual-output QC only when the exact file attachment is visibly confirmed; do not treat a Drive-link prompt as asset access."
+  ],
+  "do_not_start": [
+    "combined full candidate before Nitin selects colour and caption direction",
+    "full master render",
+    "posting flow",
+    "publication"
+  ],
+  "master_state": {
+    "promoted": false,
+    "reason": "The local trials are execution evidence, while creative selection and independent actual-output QC remain open. V16.20/state_version 46 remains the latest valid ledger-derived central state."
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

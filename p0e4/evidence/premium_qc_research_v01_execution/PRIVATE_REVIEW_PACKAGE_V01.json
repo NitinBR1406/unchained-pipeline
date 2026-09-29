@@ -1,0 +1,20 @@
+{
+  "creative_choices_remaining": [
+    "Choose colour C0/C1/C2 only after reviewing corrected R2 performance-only comparison",
+    "Choose caption T1/T2/T3 or give one bundled correction"
+  ],
+  "non_approvals": [
+    "not final video approval",
+    "not publication approval",
+    "not master replacement"
+  ],
+  "request_id": "UNCHAINED_PREMIUM_EXECUTION_20260929",
+  "review_links": {
+    "caption": "https://drive.google.com/file/d/1fWYSg2gkeL-t3wUjYAPnM0IL08TffRdw/view",
+    "colour_r1_invalid_for_selection": "https://drive.google.com/file/d/1HJSSCevFiA8rtdoyewOKIp9FlduESP2I/view",
+    "colour_r2": "https://drive.google.com/file/d/1PoBzTJsIOaGY7LKP6M7neilRHSkAkGOz/view"
+  },
+  "schema": "PREMIUM_QC_PRIVATE_REVIEW_PACKAGE_V01",
+  "shared_drive_path": "Unchained Nitin \u2014 Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_PREMIUM_QC_RESEARCH_V01_20260929",
+  "status": "LOCAL_TRIALS_COMPLETE_INDEPENDENT_QC_PENDING"
+}

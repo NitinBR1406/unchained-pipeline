@@ -1,0 +1,32 @@
+{
+  "schema": "PREMIUM_QC_REGRESSION_V01",
+  "request_id": "UNCHAINED_PREMIUM_EXECUTION_20260929",
+  "checked_at_utc": "2026-09-29T20:56:00Z",
+  "python_compile": {
+    "status": "PASS",
+    "files": [
+      "p0e4/resolve/render_premium_qc_local_trials_v01.py",
+      "p0e4/resolve/rerender_premium_colour_trials_r2.py"
+    ]
+  },
+  "unit_regression": {
+    "status": "PASS",
+    "tests_run": 28,
+    "command_contract": "PYTHONPATH=p0e4 python3 -m unittest caption-kit social-template performance-template color-development source-color-management"
+  },
+  "render_validation": {
+    "status": "PASS",
+    "caption_comparison_full_video_decode": "PASS",
+    "caption_comparison_full_audio_decode": "PASS",
+    "colour_r2_comparison_full_video_decode": "PASS",
+    "colour_r2_comparison_full_audio_decode": "PASS"
+  },
+  "known_limits": [
+    "The first unqualified unittest invocation produced two import errors because PYTHONPATH was absent; the repository-qualified rerun passed all 28 tests.",
+    "Independent Gemini actual-output QC has no verified asset-access receipt or verdict.",
+    "Claude pre-render review has no acknowledgement because the existing Dispatch context was occupied.",
+    "Contact sheets and browser playback are not calibrated HDR evaluation."
+  ],
+  "base_master_preserved": true,
+  "publication_authorized": false
+}

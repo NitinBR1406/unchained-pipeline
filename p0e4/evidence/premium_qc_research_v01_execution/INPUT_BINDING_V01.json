@@ -1,0 +1,28 @@
+{
+  "base_master": {
+    "sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088"
+  },
+  "base_project_drp": {
+    "sha256": "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec"
+  },
+  "master_changed": false,
+  "request_id": "UNCHAINED_PREMIUM_EXECUTION_20260929",
+  "sample_contract": {
+    "caption_frames": [
+      0,
+      179
+    ],
+    "colour_r1_frames": [
+      335,
+      694
+    ],
+    "colour_r1_valid_for_creative_selection": false,
+    "colour_r2_frames": [
+      204,
+      563
+    ],
+    "colour_r2_performance_only": true
+  },
+  "schema": "PREMIUM_QC_INPUT_BINDING_V01",
+  "source_limitation": "Trials derive from immutable V13 edited project. They are not a pre-grade source reconstruction. CDL is bounded on isolated project clones."
+}

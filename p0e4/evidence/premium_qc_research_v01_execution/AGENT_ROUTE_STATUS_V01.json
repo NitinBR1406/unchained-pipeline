@@ -1,0 +1,21 @@
+{
+  "claude": {
+    "acknowledged": false,
+    "attempted": true,
+    "claim": "NO_ACK_CLAIMED",
+    "route": "local Claude Dispatch",
+    "status": "BLOCKED_BY_EXISTING_RUNNING_DISPATCH_TASK"
+  },
+  "gemini": {
+    "actual_file_access_proven": false,
+    "attempted": true,
+    "claim": "NO_QC_VERDICT_CLAIMED",
+    "drive_links_sent": true,
+    "route": "new isolated signed-in Gemini context",
+    "status": "BLOCKED_STALLED_WITHOUT_ACCESS_RECEIPT",
+    "verdict_received": false
+  },
+  "local_execution_continued": true,
+  "request_id": "UNCHAINED_PREMIUM_EXECUTION_20260929",
+  "schema": "PREMIUM_QC_AGENT_ROUTE_STATUS_V01"
+}

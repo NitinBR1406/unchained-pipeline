@@ -1,0 +1,61 @@
+{
+  "base_master_preserved": true,
+  "checked_at_utc": "2026-09-29T20:43:18.846180+00:00",
+  "full_master_rendered": false,
+  "independent_qc": "PENDING_GEMINI_ACTUAL_ASSET_ACCESS",
+  "items": [
+    {
+      "audio_codec": "pcm_s24le",
+      "bits_per_raw_sample": "10",
+      "bytes": 932776085,
+      "color_primaries": "bt2020",
+      "color_space": "bt2020nc",
+      "color_transfer": "arib-std-b67",
+      "duration_s": "36.000000",
+      "fps": "30/1",
+      "full_audio_decode": "PASS",
+      "full_video_decode": "PASS",
+      "height": 1920,
+      "name": "AAKHRI_PREMIUM_COLOUR_COMPARISON_C0_C1_C2_PERFORMANCE_ONLY_R2_HLG.mov",
+      "pix_fmt": "yuv422p10le",
+      "sha256": "d940e84ee06c2ac6356e6fe16ee54d66233eef8df9e3930ad4f8bada54448781",
+      "video_frames": "1080",
+      "width": 1080
+    },
+    {
+      "audio_codec": "pcm_s24le",
+      "bits_per_raw_sample": "10",
+      "bytes": 461867253,
+      "color_primaries": "bt2020",
+      "color_space": "bt2020nc",
+      "color_transfer": "arib-std-b67",
+      "duration_s": "18.000000",
+      "fps": "30/1",
+      "full_audio_decode": "PASS",
+      "full_video_decode": "PASS",
+      "height": 1920,
+      "name": "AAKHRI_PREMIUM_CAPTION_COMPARISON_T1_T2_T3_HLG.mov",
+      "pix_fmt": "yuv422p10le",
+      "sha256": "b5246b2b0f34e0067a0fba7e7a107c22b901f617de2a14c9606e31d039b9a12a",
+      "video_frames": "540",
+      "width": 1080
+    }
+  ],
+  "request_id": "UNCHAINED_PREMIUM_EXECUTION_20260929",
+  "schema": "PREMIUM_QC_TECHNICAL_VALIDATION_V01",
+  "visual_local_review": {
+    "caption_contact_sheet_sha256": "12608d36ff3756b2063b999272f7ed8f1c79804fb488ffe9e3e7632ac76346b3",
+    "caption_findings": [
+      "native Text+ glyphs visible",
+      "no broad dark halo observed in sampled frames",
+      "face and mouth remain unobscured in sampled frames",
+      "motion playback remains part of Nitin review"
+    ],
+    "colour_findings": [
+      "R1 range invalidated because it included existing outro",
+      "R2 is performance-only and uses identical frame range 204-563 for C0/C1/C2",
+      "browser/contact-sheet viewing is not calibrated HDR evaluation"
+    ],
+    "colour_r2_contact_sheet_sha256": "1b9bd1e861f1d1d8f037fb4afc1f6ba78bb1470711f8bb5183367caf7b9123c9"
+  }
+}

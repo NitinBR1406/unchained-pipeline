@@ -1,0 +1,32 @@
+{
+  "base_master": {
+    "path": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aakhri-integrated-preview-v13-chain-caption-repair/AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR_HLG_PRORES.mov",
+    "preserved": true,
+    "sha256_after": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+    "sha256_before": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088"
+  },
+  "claim": "ACKNOWLEDGED_AND_EXECUTED_LOCALLY",
+  "deduplication": {
+    "active_duplicate_worker_found": false,
+    "existing_completed_same_request_found": false,
+    "prior_receipt_found": false
+  },
+  "executor": "Codex Primary P0-E4 Engineering Work Executor",
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "host": "Mac-mini-van-Nitin.local",
+  "received_at_utc": "2026-09-29T20:43:18.846180+00:00",
+  "request_id": "UNCHAINED_PREMIUM_EXECUTION_20260929",
+  "resolve": {
+    "active_render_at_claim": false,
+    "process_pid": 89012,
+    "product": "DaVinci Resolve Studio",
+    "version": "21.1.0.17"
+  },
+  "schema": "PREMIUM_EXECUTION_LOCAL_PICKUP_RECEIPT_V01",
+  "source_commit": "4254c5c",
+  "workdir": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4"
+}

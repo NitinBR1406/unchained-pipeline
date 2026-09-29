@@ -1,0 +1,7 @@
+capability,status,evidence,limit
+Resolve Studio scripting,LIVE_PROVEN,Studio 21.1.0.17; isolated projects rendered,No general always-on worker claim
+Native Fusion Text+,SCRIPTABLE_TESTED,Montserrat Medium and Cinzel SemiBold read back from comps,Per-character emphasis not tested
+ASC CDL colour variants,SCRIPTABLE_TESTED,C1/C2 applied in isolated projects,Not calibrated HDR creative approval
+HLG 10-bit render,TECHNICALLY_GREEN,ProRes yuv422p10le bt2020/arib-std-b67 full decode,Dolby Vision identity not claimed
+Claude review,BLOCKED_BUSY,Existing Dispatch task streaming,No acknowledgement claimed
+Gemini actual-asset QC,BLOCKED_ACCESS,New context sent exact Drive links but no completed response/file-access proof,No Gemini verdict claimed
