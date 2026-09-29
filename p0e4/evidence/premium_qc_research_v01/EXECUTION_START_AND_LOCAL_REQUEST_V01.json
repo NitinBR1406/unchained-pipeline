@@ -1,0 +1,82 @@
+{
+  "schema": "PREMIUM_EXECUTION_START_V01",
+  "request_id": "UNCHAINED_PREMIUM_EXECUTION_20260929",
+  "source_commit": "7096e98653e190dcf5dfae4f9456c30f5affa056",
+  "authorization": {
+    "verbatim": "oke ik stel voor dat je aan de slag gaat!",
+    "scope": "Execute premium plan within existing engineering scope; isolated color/caption candidates, existing master preserved. No costs, no release gates, no general heartbeat expansion."
+  },
+  "status": "CLOUD_PREFLIGHT_EXECUTED_LOCAL_RENDER_NOT_STARTED",
+  "findings": {
+    "resolve_last_proven_version": "Studio 21.1.0.17; historical installed acceptance, not fresh live probe",
+    "detector_source": "p0e4/evidence/claude_dispatch_beat_recovery_v01_execution/detector/clip_fx.py",
+    "detector_sha256": "04fa93aff2847eaa9ae7b8542192ca37892c46b6b149c5235360a5c14abe3e97",
+    "detector_recovered": true,
+    "detector_algorithm": "NumPy band spectral-flux; no librosa",
+    "synthetic_tests": {
+      "silence_seconds": 4,
+      "legacy_detect_hits": {
+        "low_band_count": 29,
+        "high_band_count": 43
+      },
+      "detailed_detect_hits": {
+        "low_band_count": 0,
+        "high_band_count": 0
+      },
+      "three_60hz_bursts": {
+        "expected_s": [
+          0.5,
+          1.5,
+          2.5
+        ],
+        "detailed_low_band_s": [
+          0.464,
+          1.463,
+          2.473
+        ],
+        "detailed_high_band_count": 6
+      }
+    },
+    "interpretation": "Legacy path has a reproducible silence false-positive defect; detailed path still cannot supply verified kick/snare identities. Times require onset/window alignment validation. No real Aakhri accuracy claim.",
+    "test_boundary": "Exact retrieved source hash, imported in Linux Python with NumPy. _read_mono replaced in memory with synthetic PCM; no ffmpeg decoder, full master, Resolve, live endpoint or renderer used.",
+    "existing_capabilities": "Fusion reusable compositions, Text+ and native subtitle import already proven in bounded prior tests; Effects Library macro installation and per-character emphasis were not proven there."
+  },
+  "decision": {
+    "preferred_probe": "Compare native Resolve beat analysis against recovered detector on exact hash-bound audio; do not install another analyzer yet.",
+    "legacy_detector": "Do not select old detect_hits path for automatic effect triggers; preserve historical source unchanged.",
+    "music_semantics": "Band onsets are candidates, not instrument classifications or creative instructions.",
+    "baseline_selection": "Select representative 10-15 seconds after local source verification; no guessed offsets from different masters."
+  },
+  "local_work_request": {
+    "plan": "p0e4/evidence/premium_qc_research_v01/PREMIUM_PRODUCTION_IMPLEMENTATION_PLAN_V01.md",
+    "workdir": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4",
+    "sequence": [
+      "Read this request and latest instructions; deduplicate by request_id, task and artifact identity before claim.",
+      "Append receipt with actual executor/host and task ownership; do not infer pickup from file creation.",
+      "Verify current Resolve version and exact source audio/project; distinguish MASTER 2 duration/offsets from edited video and V13.",
+      "Use recovered detector path and capability evidence; repeat bounded silence probe if needed, then compare real-music timing with native beat analysis on exact common source.",
+      "Ask Claude for bounded pre-render implementation review through existing context, Gemini through established strategy/QC route; record actual acknowledgements.",
+      "Select native/reusable template candidates first; no paid download or plugin installation.",
+      "Render isolated two-color and three-caption comparisons as specified; preserve masters, locked audio and baseline project. No full-combination grid.",
+      "Run technical checks and actual-output independent review; persist exact artifacts and hashes to Shared Drive; report explicit gaps."
+    ],
+    "constraints": [
+      "No general READY insertion into V11 fixture-only controller",
+      "No heartbeat configuration change authorized by this request",
+      "No Make activation, deployment or publication",
+      "Stop at concrete unresolved source/permission/capability gate; continue unrelated READY work"
+    ]
+  },
+  "dispatch": {
+    "local_pickup_confirmed": false,
+    "claude_acknowledged": false,
+    "gemini_acknowledged": false,
+    "blocker": "This session has Linux execution and GitHub connector; no callable transport to Mac Resolve established. Existing heartbeat binding remains unproven and change-gated."
+  },
+  "governance": {
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_FINAL_VIDEO_APPROVAL": false
+  }
+}
