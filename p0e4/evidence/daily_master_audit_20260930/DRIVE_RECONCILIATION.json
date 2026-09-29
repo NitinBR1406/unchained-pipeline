@@ -1,0 +1,59 @@
+{
+  "drive": {
+    "id": "0AG0CqqUZ6YuXUk9PVA",
+    "name": "Unchained Nitin \u2014 Master"
+  },
+  "observed_at": "2026-09-29T23:06:12Z",
+  "premium_qc_trials": {
+    "caption_review": {
+      "id": "1fWYSg2gkeL-t3wUjYAPnM0IL08TffRdw",
+      "modified_time": "2026-09-29T20:32:29.468Z",
+      "name": "AAKHRI_PREMIUM_CAPTION_COMPARISON_T1_T2_T3_HLG_REVIEW.mp4",
+      "sha256_from_repository_receipt": "680dde68786b30805d2585b9ff7551c6357872b115087b9bb9e5d63251fec73a",
+      "size_bytes": 19001579
+    },
+    "colour_r2_review": {
+      "id": "1PoBzTJsIOaGY7LKP6M7neilRHSkAkGOz",
+      "modified_time": "2026-09-29T20:38:37.456Z",
+      "name": "AAKHRI_PREMIUM_COLOUR_COMPARISON_C0_C1_C2_PERFORMANCE_ONLY_R2_HLG_REVIEW.mp4",
+      "sha256_from_repository_receipt": "6bb4fccd4d8c0c9eb7402515375d43afd841500d7c5bcc1928a45522db94c452",
+      "size_bytes": 38521211
+    },
+    "folder_id": "15K2VTOzQpXQ3CZlJ4JeFNJyg9sFqZ-Ok",
+    "folder_url": "https://drive.google.com/drive/folders/15K2VTOzQpXQ3CZlJ4JeFNJyg9sFqZ-Ok",
+    "independent_qc": "DEFECTS_FOUND_NO_PASS",
+    "item_count": 26,
+    "repository_receipt_reports_readback_hash_match": true,
+    "selection_valid": false
+  },
+  "premium_style_sample": {
+    "creative_winner_selected": false,
+    "folder_id": "1X36j_C3DmsFMo-jt4KytvEpfwnVbl1RP",
+    "modified_time": "2026-09-29T16:56:37.466Z",
+    "review_file_id": "15HYhzTeTx99WmA5I8VTA3HV-FhseHDl-",
+    "review_name": "AAKHRI_PREMIUM_STYLE_COMPARISON_V13_A_B_HLG.mp4",
+    "size_bytes": 18847410
+  },
+  "result": "V13 and both premium trial packages are present. V13 is technically and independently reviewed but still awaits Nitin; the newest C/T comparisons are not valid for selection until the proven grade, overlap and readback defects are repaired and rechecked.",
+  "schema": "TARGETED_DRIVE_RECONCILIATION_V01",
+  "scope_limit": "Read-only targeted metadata and folder listings. No media download, calibrated HDR audit, Drive write, publication or deployment.",
+  "v13_chain_caption_repair": {
+    "folder_id": "1OzXRrQZa2bHBAOf65alXOT7ouPL3WiDb",
+    "folder_url": "https://drive.google.com/drive/folders/1OzXRrQZa2bHBAOf65alXOT7ouPL3WiDb",
+    "item_count": 12,
+    "master": {
+      "id": "1b0HB-g2eqzbrmtxjEjxWM6ejap7kXcHF",
+      "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR_HLG_PRORES.mov",
+      "sha256_from_repository_receipt": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+      "size_bytes": 610459894
+    },
+    "nitin_approval": false,
+    "repository_receipt_reports_readback_hash_match": true,
+    "review": {
+      "id": "1uMtCO100ltM0mDK6brgVsO_0qMvWcVYj",
+      "name": "AAKHRI_ISHQ_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR_HLG.mp4",
+      "sha256_from_repository_receipt": "b436eda79eadb289d4bbf7e5763eb2858c5eeef0ee13c7cb60f308c372664590",
+      "size_bytes": 22053571
+    }
+  }
+}

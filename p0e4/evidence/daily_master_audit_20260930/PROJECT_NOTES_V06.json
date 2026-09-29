@@ -1,0 +1,30 @@
+{
+  "accepted_facts": [
+    "V13 uses the approved gold UN broken-chain identity, preserves 10-bit BT.2020 HLG and has full A/V decode PASS.",
+    "V13 exact-file Gemini QC is PASS with explicit browser/HDR/lipsync limitations; this is not Nitin approval.",
+    "C1_WARM_CINEMATIC and T3_CINEMATIC_TITLE are provisional non-promotable preferences only.",
+    "No corrected premium comparison or combined final candidate exists yet.",
+    "Autostart binding remains unproven and unchanged."
+  ],
+  "authority": "Subordinate to versioned state and immutable evidence; supplements prior project notes.",
+  "chatgpt_memory_updated": false,
+  "current_operational_status": "V13 exists and passed bounded technical/Gemini review but still awaits Nitin. The newer C/T comparison round is invalid for selection: C1/C2 are partly ungraded and T1/T2/T3 overlap the chain-logo intro.",
+  "date": "2026-09-30",
+  "do_not_claim": [
+    "Do not call V13 final approved or publish ready.",
+    "Do not ask Nitin to choose from the defective C/T comparisons.",
+    "Do not promote C1 or T3 from provisional recommendation to selection.",
+    "Do not claim calibrated HDR approval or sample-accurate lipsync from browser review.",
+    "Do not claim ChatGPT memory was updated."
+  ],
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "next_handoff": "Repair only the proven premium trial defects on the established Mac Resolve worker, verify exact active grade/comp state, re-render the affected comparisons, and repeat exact-file independent QC before Nitin chooses.",
+  "registered_master_state": "V16.20 / state_version 46 remains registered. Ledger integrity and pointer sidecar are recovered; no further promotion because the newest premium comparisons contain proven defects and no human choice was made.",
+  "schema": "PROJECT_NOTES_V06",
+  "source_commit": "18f9b21e2e31783dd6bbfaac8e245bac7121b327",
+  "source_refs": "See DAILY_CHECKPOINT.json, VALIDATION.json and DRIVE_RECONCILIATION.json for exact commit, blob, SHA and Drive references."
+}
