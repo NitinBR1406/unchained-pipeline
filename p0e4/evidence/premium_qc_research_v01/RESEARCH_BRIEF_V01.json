@@ -1,0 +1,98 @@
+{
+  "schema": "PREMIUM_QC_RESEARCH_BRIEF_V01",
+  "request_id": "UNCHAINED_PREMIUM_QC_RESEARCH_20260929",
+  "recorded_local": "2026-09-29T21:16:28+02:00",
+  "source_commit": "93b25a6f38a763fb4c2b96bad66ccc26e17494ea",
+  "status": "DESK_RESEARCH_STARTED_LOCAL_BENCHMARK_NOT_DISPATCHED",
+  "purpose": "Validate faster editing and trustworthy technical plus creative judgement of every video, photo, carousel and platform export. Resolve Studio purchase alone is not QC acceptance.",
+  "authorization": "Research requested by Nitin; no budget, deploy, publishing, A/B choice or locked grade change authorized.",
+  "workstreams": [
+    {
+      "name": "COLOR",
+      "research": [
+        "Inspect installed Resolve Studio version, color management, input interpretation, output transforms, levels and tagging; preserve locked grade.",
+        "Measure scopes/clipping and reference shot consistency with correct color transforms; do not infer color match from metadata or raw unnormalized RGB.",
+        "Compare actual HLG outputs and separately proposed SDR derivatives on controlled reference display and target phone. Browser AI cannot certify calibrated HDR.",
+        "Set project-specific tolerances using reference samples, not universal skin-tone brightness targets."
+      ]
+    },
+    {
+      "name": "CAPTIONS",
+      "research": [
+        "Distinguish lyric subtitles, artist/song title graphics and platform post copy.",
+        "Check verified text and timing, font availability, duplicate layers, bounding boxes, temporal windows and UI-safe regions.",
+        "Combine project preflight with actual-render all-frame checks where feasible, transition inspection and real-size playback. Validate OCR recall on stylized gold fonts and Hindi/Romanized Hindi; abstain on uncertainty.",
+        "Evaluate native Fusion/Text+ and Studio animated subtitle workflows for actual installed version and scripting support; speech recognition alone does not establish sung lyric accuracy."
+      ]
+    },
+    {
+      "name": "EDIT_AUDIO",
+      "research": [
+        "Audit all cuts, source ranges, black/freeze events, frame pacing and lip-sync in final output; intentional holds excluded by contract.",
+        "Evaluate musical phrase/emotional structure as well as beat alignment; beat detector peaks are not proof of kick/snare identity.",
+        "Measure true peaks/loudness/codec effects and source continuity; no locked mix changes without authorization.",
+        "Check opening, ending, vocal breathing room, mouth visibility, motion restraint and real export."
+      ]
+    },
+    {
+      "name": "BRAND_ALL_POSTS",
+      "research": [
+        "Small approved motion/typography/logo design system, not per-post redesign.",
+        "Photo set: coherent lighting/skin appearance, controlled retouch retaining identity, crops, cover legibility and carousel continuity.",
+        "Verify correct thumbnail, aspect ratio, UI-safe text, asset SHA, copy, credits, CTA and target export for each placement."
+      ]
+    }
+  ],
+  "benchmark": {
+    "inputs": "Read historical defect evidence first; select exact V12/V13/A/B sources only when bytes available and permitted; do not assume any disputed sample is clean.",
+    "controls": "Isolated disposable known-defect variants plus independently verified clean controls; never overwrite masters.",
+    "cases": [
+      "wrong logo",
+      "caption collision",
+      "missing glyph/font fallback",
+      "face occlusion",
+      "crop drift",
+      "output transform/tag mismatch",
+      "clip timing or lipsync offset",
+      "unintended black/freeze frame",
+      "audio cut/click",
+      "poorly readable mobile typography"
+    ],
+    "method": "Separate tuning and held-out examples; blind identity labels while retaining hashes. Human-confirm ground truth where subjective or ambiguous. Measure missed critical defects, false alarms, review time, rework and active editing time versus same baseline.",
+    "acceptance": "All critical known defects in scoped held-out acceptance set must block; no unresolved critical disagreement can yield PASS. This does not prove zero error outside tested scope. Quality/style rubric calibrated to Nitin references and approved only after A/B decision.",
+    "uncertainty": "NOT_VERIFIED/HOLD instead of unsupported PASS; technical pass must not become aesthetic or publishing approval."
+  },
+  "roles": {
+    "work_codex": "Inspect capabilities, implement only authorized bounded checks and compare measured workflow times; immutable evidence.",
+    "claude": "Review template/automation design before benchmark execution via existing context; no unsupported media claims.",
+    "gemini": "Independent actual-asset timecoded creative/visual findings in existing strategy context; evidence required and contradictions retained.",
+    "nitin": "Creative standard and final approvals, not routine technical debugging"
+  },
+  "deliverables": [
+    "Capability matrix: native feature / scriptable and tested / UI-only / external fallback / unavailable.",
+    "Defect benchmark report with detection gaps and false alarms.",
+    "Versioned style and QC contract separating hard defects from subjective scores.",
+    "One pilot post package with exact export evidence and time comparison.",
+    "Prioritized implementation plan by actual time saved; no new subscription assumed."
+  ],
+  "initial_sources": [
+    "https://www.blackmagicdesign.com/products/davinciresolve/color",
+    "https://www.blackmagicdesign.com/nl/products/davinciresolve/edit",
+    "https://documents.blackmagicdesign.com/SupportNotes/DaVinci_Resolve_20_New_Features_Guide.pdf"
+  ],
+  "constraints": {
+    "reuse_existing_routes": true,
+    "no_new_scheduler": true,
+    "no_frozen_component_changes": true,
+    "preserve_locked_audio_color": true,
+    "style_choice": "PENDING_NITIN",
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "dispatch": {
+    "claude_acknowledged": false,
+    "gemini_acknowledged": false,
+    "local_benchmark_started": false
+  }
+}
