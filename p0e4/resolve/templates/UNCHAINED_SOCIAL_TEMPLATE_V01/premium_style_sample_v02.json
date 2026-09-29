@@ -1,0 +1,50 @@
+{
+  "schema": "UNCHAINED_PREMIUM_STYLE_SAMPLE_TEMPLATE_V02",
+  "request_id": "UNCHAINED_PREMIUM_STYLE_SAMPLE_20260929_V02",
+  "base_project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR",
+  "sample": {"frames": [0, 179], "fps": 30, "excerpt_only": true},
+  "locked": {
+    "audio_colour_crop_edit_timing_changed": false,
+    "base_master_sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+    "logo_sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509"
+  },
+  "windows": {
+    "logo": [0, 53],
+    "hook": [54, 88],
+    "title_artist": [89, 179]
+  },
+  "typography": {
+    "hook": "Montserrat Medium",
+    "title": "Cinzel SemiBold",
+    "artist": "Montserrat Medium",
+    "max_accent_words": 1,
+    "overlap_allowed": false
+  },
+  "treatments": {
+    "A_CINEMATIC_BALANCE": {
+      "hook_size": 0.088,
+      "title_size": 0.112,
+      "artist_size": 0.064
+    },
+    "B_EDITORIAL_RESTRAINT": {
+      "hook_size": 0.080,
+      "title_size": 0.104,
+      "artist_size": 0.057
+    }
+  },
+  "logo_motion": "single_restrained_diagonal_light_pass_then_clean_fade",
+  "fail_closed": [
+    "logo hash mismatch",
+    "caption windows overlap",
+    "font fallback",
+    "audio, colour, crop or edit timing drift",
+    "non-HLG or sub-10-bit output",
+    "full-master render requested"
+  ],
+  "governance": {
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

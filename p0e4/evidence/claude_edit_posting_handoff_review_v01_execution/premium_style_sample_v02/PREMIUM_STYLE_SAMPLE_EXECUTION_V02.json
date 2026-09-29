@@ -1,0 +1,513 @@
+{
+  "base_drp_sha256": "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec",
+  "base_master_sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+  "base_project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR",
+  "full_clip_coverage_constraint_proven_by_sample": false,
+  "nitin_approval": false,
+  "publication_authorized": false,
+  "request_id": "UNCHAINED_PREMIUM_STYLE_SAMPLE_20260929_V02",
+  "sample_is_excerpt": true,
+  "schema": "UNCHAINED_PREMIUM_STYLE_SAMPLE_EXECUTION_V02",
+  "selected_recommendation": "A_CINEMATIC_BALANCE",
+  "treatments": [
+    {
+      "audio_colour_crop_edit_timing_changed": false,
+      "caption_windows": {
+        "hook": [
+          54,
+          88
+        ],
+        "logo": [
+          0,
+          53
+        ],
+        "title_artist": [
+          89,
+          179
+        ]
+      },
+      "drp": {
+        "bytes": 172161,
+        "path": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aakhri-premium-style-sample-v02/UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_A_CINEMATIC_BALANCE.drp",
+        "sha256": "c3e881e5b6715053f20a0f6f190f115ce89efb0648bc2eb38ec23caa4c4538f3"
+      },
+      "logo_animation": {
+        "derived_sha256": "97c907ab6601b9fe5a9f7456e7031eca3d1843ab554696562158268fbd583cae",
+        "effect": "single_restrained_diagonal_light_pass_then_clean_fade",
+        "frames": [
+          0,
+          53
+        ],
+        "source_sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509"
+      },
+      "project": "UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_A_CINEMATIC_BALANCE",
+      "readbacks": [
+        {
+          "clip": 0,
+          "patched_sha256": "3b4ada732e965cec4ff8a7c208bc251601a597014c2133550de67cbd31109953",
+          "readback_sha256": "ead73827ee930f3f4ae39c1d298cbfb6e253eea064b34a4110de7208004b65eb",
+          "source_sha256": "8bb73e01ef18082a6e04513de9608ef6e6c5425a70dcdcd1c59b939ce7448e8c"
+        },
+        {
+          "clip": 1,
+          "patched_sha256": "5555df2f6d3cf21490c43d9985c5e337e7240ed09f180792557a08b353eb4781",
+          "readback_sha256": "63164dabf344b497f89a211f4ad8fd14d9306916530e6798a2bd21f63de796d7",
+          "source_sha256": "a682462161e49685dbeea47947472f145454fe449acdcd4c29a5c29cddcdfcf4"
+        }
+      ],
+      "recommendation": "RECOMMENDED_FOR_NITIN_REVIEW",
+      "render": {
+        "bytes": 151946390,
+        "decode": {
+          "a:0": "FULL_DECODE_PASS",
+          "probe": {
+            "format": {
+              "bit_rate": "202595186",
+              "duration": "6.000000",
+              "filename": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aakhri-premium-style-sample-v02/AAKHRI_PREMIUM_STYLE_A_CINEMATIC_BALANCE_HLG_PRORES.mov",
+              "format_long_name": "QuickTime / MOV",
+              "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+              "nb_programs": 0,
+              "nb_stream_groups": 1,
+              "nb_streams": 3,
+              "probe_score": 100,
+              "size": "151946390",
+              "start_time": "0.000000",
+              "tags": {
+                "compatible_brands": "qt  ",
+                "creation_time": "2026-09-29T16:45:28.000000Z",
+                "encoder": "Blackmagic Design DaVinci Resolve Studio",
+                "major_brand": "qt  ",
+                "minor_version": "512"
+              }
+            },
+            "streams": [
+              {
+                "avg_frame_rate": "30/1",
+                "bit_rate": "200286656",
+                "bits_per_raw_sample": "10",
+                "codec_long_name": "Apple ProRes (iCodec Pro)",
+                "codec_name": "prores",
+                "codec_tag": "0x68637061",
+                "codec_tag_string": "apch",
+                "codec_type": "video",
+                "coded_height": 1920,
+                "coded_width": 1080,
+                "color_primaries": "bt2020",
+                "color_range": "tv",
+                "color_space": "bt2020nc",
+                "color_transfer": "arib-std-b67",
+                "display_aspect_ratio": "9:16",
+                "disposition": {
+                  "attached_pic": 0,
+                  "captions": 0,
+                  "clean_effects": 0,
+                  "comment": 0,
+                  "default": 1,
+                  "dependent": 0,
+                  "descriptions": 0,
+                  "dub": 0,
+                  "forced": 0,
+                  "hearing_impaired": 0,
+                  "karaoke": 0,
+                  "lyrics": 0,
+                  "metadata": 0,
+                  "multilayer": 0,
+                  "non_diegetic": 0,
+                  "original": 0,
+                  "still_image": 0,
+                  "timed_thumbnails": 0,
+                  "visual_impaired": 0
+                },
+                "duration": "6.000000",
+                "duration_ts": 92160,
+                "field_order": "progressive",
+                "has_b_frames": 0,
+                "height": 1920,
+                "id": "0x1",
+                "index": 0,
+                "level": -99,
+                "nb_frames": "180",
+                "nb_read_frames": "180",
+                "pix_fmt": "yuv422p10le",
+                "profile": "HQ",
+                "r_frame_rate": "30/1",
+                "refs": 1,
+                "sample_aspect_ratio": "1:1",
+                "start_pts": 0,
+                "start_time": "0.000000",
+                "tags": {
+                  "creation_time": "2026-09-29T16:45:28.000000Z",
+                  "encoder": "Apple ProRes 422 HQ",
+                  "handler_name": "VideoHandler",
+                  "timecode": "01:00:00:00",
+                  "vendor_id": "appl"
+                },
+                "time_base": "1/15360",
+                "width": 1080
+              },
+              {
+                "avg_frame_rate": "0/0",
+                "bit_rate": "2304000",
+                "bits_per_raw_sample": "24",
+                "bits_per_sample": 24,
+                "channel_layout": "stereo",
+                "channels": 2,
+                "codec_long_name": "PCM signed 24-bit little-endian",
+                "codec_name": "pcm_s24le",
+                "codec_tag": "0x6d63706c",
+                "codec_tag_string": "lpcm",
+                "codec_type": "audio",
+                "disposition": {
+                  "attached_pic": 0,
+                  "captions": 0,
+                  "clean_effects": 0,
+                  "comment": 0,
+                  "default": 1,
+                  "dependent": 0,
+                  "descriptions": 0,
+                  "dub": 0,
+                  "forced": 0,
+                  "hearing_impaired": 0,
+                  "karaoke": 0,
+                  "lyrics": 0,
+                  "metadata": 0,
+                  "multilayer": 0,
+                  "non_diegetic": 0,
+                  "original": 0,
+                  "still_image": 0,
+                  "timed_thumbnails": 0,
+                  "visual_impaired": 0
+                },
+                "duration": "6.000000",
+                "duration_ts": 288000,
+                "id": "0x2",
+                "index": 1,
+                "initial_padding": 0,
+                "nb_frames": "288000",
+                "nb_read_frames": "288",
+                "r_frame_rate": "0/0",
+                "sample_fmt": "s32",
+                "sample_rate": "48000",
+                "start_pts": 0,
+                "start_time": "0.000000",
+                "tags": {
+                  "creation_time": "2026-09-29T16:45:28.000000Z",
+                  "handler_name": "SoundHandler",
+                  "vendor_id": "[0][0][0][0]"
+                },
+                "time_base": "1/48000"
+              },
+              {
+                "avg_frame_rate": "15360/512",
+                "bit_rate": "5",
+                "codec_tag": "0x64636d74",
+                "codec_tag_string": "tmcd",
+                "codec_type": "data",
+                "disposition": {
+                  "attached_pic": 0,
+                  "captions": 0,
+                  "clean_effects": 0,
+                  "comment": 0,
+                  "default": 1,
+                  "dependent": 0,
+                  "descriptions": 0,
+                  "dub": 0,
+                  "forced": 0,
+                  "hearing_impaired": 0,
+                  "karaoke": 0,
+                  "lyrics": 0,
+                  "metadata": 0,
+                  "multilayer": 0,
+                  "non_diegetic": 0,
+                  "original": 0,
+                  "still_image": 0,
+                  "timed_thumbnails": 0,
+                  "visual_impaired": 0
+                },
+                "duration": "6.000000",
+                "duration_ts": 92160,
+                "extradata_size": 20,
+                "id": "0x3",
+                "index": 2,
+                "nb_frames": "1",
+                "r_frame_rate": "0/0",
+                "start_pts": 0,
+                "start_time": "0.000000",
+                "tags": {
+                  "creation_time": "2026-09-29T16:45:28.000000Z",
+                  "handler_name": "TimeCodeHandler",
+                  "language": "eng",
+                  "timecode": "01:00:00:00"
+                },
+                "time_base": "1/15360"
+              }
+            ]
+          },
+          "v:0": "FULL_DECODE_PASS"
+        },
+        "path": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aakhri-premium-style-sample-v02/AAKHRI_PREMIUM_STYLE_A_CINEMATIC_BALANCE_HLG_PRORES.mov",
+        "reused_without_rerender": true,
+        "seconds": "UNAVAILABLE_AFTER_RECEIPT_WRITE_FAILURE",
+        "sha256": "133d2991ae8bd005eda9e8f162b28bf75fabc159cfa9c3154e5faf0016c0daaf"
+      },
+      "render_status": "COMPLETE_ARTIFACT_REUSED_AFTER_POST_RENDER_DECODE_TOOL_PATH_FAILURE",
+      "sample_frames": [
+        0,
+        179
+      ],
+      "treatment": "A_CINEMATIC_BALANCE"
+    },
+    {
+      "audio_colour_crop_edit_timing_changed": false,
+      "caption_windows": {
+        "hook": [
+          54,
+          88
+        ],
+        "logo": [
+          0,
+          53
+        ],
+        "title_artist": [
+          89,
+          179
+        ]
+      },
+      "drp": {
+        "bytes": 172110,
+        "path": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aakhri-premium-style-sample-v02/UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_B_EDITORIAL_RESTRAINT.drp",
+        "sha256": "ea6696000d85caa2e0361cc0ac611ba6e0798f0b2461fa29d76d8ef6e170bb70"
+      },
+      "logo_animation": {
+        "derived_sha256": "97c907ab6601b9fe5a9f7456e7031eca3d1843ab554696562158268fbd583cae",
+        "effect": "single_restrained_diagonal_light_pass_then_clean_fade",
+        "frames": [
+          0,
+          53
+        ],
+        "source_sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509"
+      },
+      "project": "UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_B_EDITORIAL_RESTRAINT",
+      "readbacks": [
+        {
+          "clip": 0,
+          "patched_sha256": "edc664fe4e1f040e9c98a5b987f6e4c7002bee6f5739d95742d47351e6ccce48",
+          "readback_sha256": "5ec4b87acdb43a4789f1dde393bf442ebaf839952864477032ac2aa2974d8cc2",
+          "source_sha256": "427ee3f8593eed1ee0a97a8ce7e0c40aea2c52a8bfeb3ff7d8371d219a95a4e6"
+        },
+        {
+          "clip": 1,
+          "patched_sha256": "0d9bea9c57fe82e0440bd32fbd5bdd39f39f6fdc6b5cf3f51b2bac5465d77d9c",
+          "readback_sha256": "59e9655b69b46f9eec9bbaf21ef882a20a2a66bbb332ec485c0a6dcd3b9bdbc0",
+          "source_sha256": "a682462161e49685dbeea47947472f145454fe449acdcd4c29a5c29cddcdfcf4"
+        }
+      ],
+      "recommendation": "ALTERNATIVE_NOT_SELECTED",
+      "render": {
+        "bytes": 151475318,
+        "decode": {
+          "a:0": "FULL_DECODE_PASS",
+          "probe": {
+            "format": {
+              "bit_rate": "201967090",
+              "duration": "6.000000",
+              "filename": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aakhri-premium-style-sample-v02/AAKHRI_PREMIUM_STYLE_B_EDITORIAL_RESTRAINT_HLG_PRORES.mov",
+              "format_long_name": "QuickTime / MOV",
+              "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+              "nb_programs": 0,
+              "nb_stream_groups": 1,
+              "nb_streams": 3,
+              "probe_score": 100,
+              "size": "151475318",
+              "start_time": "0.000000",
+              "tags": {
+                "compatible_brands": "qt  ",
+                "creation_time": "2026-09-29T16:47:07.000000Z",
+                "encoder": "Blackmagic Design DaVinci Resolve Studio",
+                "major_brand": "qt  ",
+                "minor_version": "512"
+              }
+            },
+            "streams": [
+              {
+                "avg_frame_rate": "30/1",
+                "bit_rate": "199658560",
+                "bits_per_raw_sample": "10",
+                "codec_long_name": "Apple ProRes (iCodec Pro)",
+                "codec_name": "prores",
+                "codec_tag": "0x68637061",
+                "codec_tag_string": "apch",
+                "codec_type": "video",
+                "coded_height": 1920,
+                "coded_width": 1080,
+                "color_primaries": "bt2020",
+                "color_range": "tv",
+                "color_space": "bt2020nc",
+                "color_transfer": "arib-std-b67",
+                "display_aspect_ratio": "9:16",
+                "disposition": {
+                  "attached_pic": 0,
+                  "captions": 0,
+                  "clean_effects": 0,
+                  "comment": 0,
+                  "default": 1,
+                  "dependent": 0,
+                  "descriptions": 0,
+                  "dub": 0,
+                  "forced": 0,
+                  "hearing_impaired": 0,
+                  "karaoke": 0,
+                  "lyrics": 0,
+                  "metadata": 0,
+                  "multilayer": 0,
+                  "non_diegetic": 0,
+                  "original": 0,
+                  "still_image": 0,
+                  "timed_thumbnails": 0,
+                  "visual_impaired": 0
+                },
+                "duration": "6.000000",
+                "duration_ts": 92160,
+                "field_order": "progressive",
+                "has_b_frames": 0,
+                "height": 1920,
+                "id": "0x1",
+                "index": 0,
+                "level": -99,
+                "nb_frames": "180",
+                "nb_read_frames": "180",
+                "pix_fmt": "yuv422p10le",
+                "profile": "HQ",
+                "r_frame_rate": "30/1",
+                "refs": 1,
+                "sample_aspect_ratio": "1:1",
+                "start_pts": 0,
+                "start_time": "0.000000",
+                "tags": {
+                  "creation_time": "2026-09-29T16:47:07.000000Z",
+                  "encoder": "Apple ProRes 422 HQ",
+                  "handler_name": "VideoHandler",
+                  "timecode": "01:00:00:00",
+                  "vendor_id": "appl"
+                },
+                "time_base": "1/15360",
+                "width": 1080
+              },
+              {
+                "avg_frame_rate": "0/0",
+                "bit_rate": "2304000",
+                "bits_per_raw_sample": "24",
+                "bits_per_sample": 24,
+                "channel_layout": "stereo",
+                "channels": 2,
+                "codec_long_name": "PCM signed 24-bit little-endian",
+                "codec_name": "pcm_s24le",
+                "codec_tag": "0x6d63706c",
+                "codec_tag_string": "lpcm",
+                "codec_type": "audio",
+                "disposition": {
+                  "attached_pic": 0,
+                  "captions": 0,
+                  "clean_effects": 0,
+                  "comment": 0,
+                  "default": 1,
+                  "dependent": 0,
+                  "descriptions": 0,
+                  "dub": 0,
+                  "forced": 0,
+                  "hearing_impaired": 0,
+                  "karaoke": 0,
+                  "lyrics": 0,
+                  "metadata": 0,
+                  "multilayer": 0,
+                  "non_diegetic": 0,
+                  "original": 0,
+                  "still_image": 0,
+                  "timed_thumbnails": 0,
+                  "visual_impaired": 0
+                },
+                "duration": "6.000000",
+                "duration_ts": 288000,
+                "id": "0x2",
+                "index": 1,
+                "initial_padding": 0,
+                "nb_frames": "288000",
+                "nb_read_frames": "288",
+                "r_frame_rate": "0/0",
+                "sample_fmt": "s32",
+                "sample_rate": "48000",
+                "start_pts": 0,
+                "start_time": "0.000000",
+                "tags": {
+                  "creation_time": "2026-09-29T16:47:07.000000Z",
+                  "handler_name": "SoundHandler",
+                  "vendor_id": "[0][0][0][0]"
+                },
+                "time_base": "1/48000"
+              },
+              {
+                "avg_frame_rate": "15360/512",
+                "bit_rate": "5",
+                "codec_tag": "0x64636d74",
+                "codec_tag_string": "tmcd",
+                "codec_type": "data",
+                "disposition": {
+                  "attached_pic": 0,
+                  "captions": 0,
+                  "clean_effects": 0,
+                  "comment": 0,
+                  "default": 1,
+                  "dependent": 0,
+                  "descriptions": 0,
+                  "dub": 0,
+                  "forced": 0,
+                  "hearing_impaired": 0,
+                  "karaoke": 0,
+                  "lyrics": 0,
+                  "metadata": 0,
+                  "multilayer": 0,
+                  "non_diegetic": 0,
+                  "original": 0,
+                  "still_image": 0,
+                  "timed_thumbnails": 0,
+                  "visual_impaired": 0
+                },
+                "duration": "6.000000",
+                "duration_ts": 92160,
+                "extradata_size": 20,
+                "id": "0x3",
+                "index": 2,
+                "nb_frames": "1",
+                "r_frame_rate": "0/0",
+                "start_pts": 0,
+                "start_time": "0.000000",
+                "tags": {
+                  "creation_time": "2026-09-29T16:47:07.000000Z",
+                  "handler_name": "TimeCodeHandler",
+                  "language": "eng",
+                  "timecode": "01:00:00:00"
+                },
+                "time_base": "1/15360"
+              }
+            ]
+          },
+          "v:0": "FULL_DECODE_PASS"
+        },
+        "path": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aakhri-premium-style-sample-v02/AAKHRI_PREMIUM_STYLE_B_EDITORIAL_RESTRAINT_HLG_PRORES.mov",
+        "seconds": 7.971,
+        "sha256": "26de668b7c0a4a44b91feb005ad210ff98110a5fb21af5075a88bd658b615b49"
+      },
+      "render_status": {
+        "CompletionPercentage": 100,
+        "JobStatus": "Complete",
+        "TimeTakenToRenderInMs": 7448
+      },
+      "sample_frames": [
+        0,
+        179
+      ],
+      "treatment": "B_EDITORIAL_RESTRAINT"
+    }
+  ]
+}

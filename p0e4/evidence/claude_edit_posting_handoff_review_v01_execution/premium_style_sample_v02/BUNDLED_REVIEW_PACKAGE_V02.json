@@ -1,0 +1,23 @@
+{
+  "base_commit": "3e1b268fac991247e340b5ee5830f4d8871ea6d5",
+  "comparison_sha256": "86360fb72c01630fab0a75d7d45be299fe7b0bac2d443608cc81ee94c5e648c2",
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_PREMIUM_STYLE_SAMPLE_V02_20260929",
+  "governance": {
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false
+  },
+  "open_decision": "Nitin chooses A, B, or reject both; no template freeze follows automatically",
+  "recommendation": "B_EDITORIAL_RESTRAINT based on corrected independent Gemini review; Nitin remains sole creative decision-maker",
+  "recorded_at": "2026-09-29T19:04:01.877162+02:00",
+  "request_id": "UNCHAINED_PREMIUM_STYLE_SAMPLE_20260929_V02",
+  "review_order": [
+    "V13_REFERENCE 00:00-00:06",
+    "A_CINEMATIC_BALANCE 00:06-00:12",
+    "B_EDITORIAL_RESTRAINT 00:12-00:18"
+  ],
+  "review_url": "https://drive.google.com/file/d/15HYhzTeTx99WmA5I8VTA3HV-FhseHDl-/view?usp=drivesdk",
+  "schema": "PREMIUM_STYLE_SAMPLE_BUNDLED_REVIEW_V02",
+  "status": "WAITING_FOR_NITIN_PREMIUM_STYLE_DIRECTION"
+}

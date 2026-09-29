@@ -1,0 +1,21 @@
+{
+  "acknowledgement": "PREMIUM_STYLE_SAMPLE_PLAN_COMPLETE",
+  "chat_url": "https://claude.ai/chat/37c99f03-fbe3-4310-86c2-5db2e6d53f66",
+  "claude_outputs": {
+    "ack_sha256": "ae9e0d3ed692a0126b03f9bde880fc19afe820f2959f83880df460e1aa5023a5",
+    "plan_json_sha256": "26105e767e2e621b980a1b7cf551b1473e2cee450257f996a73c7bd10e3a3303",
+    "plan_md_sha256": "ac090f7d8be052cb7e15f307ffcf2c5c10e9c047dcde1f2c7c54ea7d9b9670c0"
+  },
+  "constraints": [
+    "no render by Claude",
+    "no live posting flow",
+    "no publication"
+  ],
+  "delivery": "DELIVERED",
+  "duplicate_check": "NO_IDENTICAL_COMPLETED_PREMIUM_SAMPLE_FOUND",
+  "recorded_at": "2026-09-29T19:04:01.877162+02:00",
+  "request_id": "UNCHAINED_PREMIUM_STYLE_SAMPLE_20260929_V02",
+  "route": "Claude Desktop existing task: Posting intro/outro review task",
+  "schema": "CLAUDE_DISPATCH_RECEIPT_V02",
+  "submitted_commit": "3e1b268fac991247e340b5ee5830f4d8871ea6d5"
+}

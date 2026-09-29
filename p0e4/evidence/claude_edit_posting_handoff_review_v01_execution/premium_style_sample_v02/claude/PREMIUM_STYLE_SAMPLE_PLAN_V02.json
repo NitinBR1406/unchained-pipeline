@@ -1,0 +1,1420 @@
+{
+  "schema": "UNCHAINED_PREMIUM_STYLE_SAMPLE_PLAN_V02",
+  "request_id": "UNCHAINED_PREMIUM_STYLE_SAMPLE_20260929_V02",
+  "source_commit": "3e1b268fac991247e340b5ee5830f4d8871ea6d5",
+  "written_at_utc": "2026-09-29T16:55:00Z",
+  "status": "IMPLEMENTATION_READY_NOT_RENDERED",
+  "base": {
+    "project": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR",
+    "timeline": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+    "drp_sha256": "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec",
+    "master_prores_sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+    "review_mp4_sha256": "b436eda79eadb289d4bbf7e5763eb2858c5eeef0ee13c7cb60f308c372664590",
+    "programme_pcm_s24le_sha256_full_720f": "2d374f73c9822c1b2e7fd21d2c90abe48a07ba7a7f7a581a43ed2a2adefc590b",
+    "renderer_sha256": "7c73f2a90dbe9d9e9ab7ad5639aa2006498a3364bff772a29bb1662db5da8c37",
+    "finalizer_sha256": "f6c56597a609fe9c2e8c9b588bfe6c95e0d8ab48dd540986c32e42c676e404af",
+    "contract_sha256": "d5c6c74369dbc61dedd964a26962533264baec3b0620ee2f38f6250f5f6b15d1",
+    "cuts_output_frames": [
+      [
+        0,
+        89
+      ],
+      [
+        89,
+        204
+      ],
+      [
+        204,
+        335
+      ],
+      [
+        335,
+        491
+      ],
+      [
+        491,
+        623
+      ],
+      [
+        623,
+        720
+      ]
+    ],
+    "fps": 30,
+    "canvas": "1080x1920 Rec.2100 HLG",
+    "v2_overlays": {
+      "chain_intro": [
+        0,
+        53
+      ],
+      "outro_card": [
+        600,
+        719
+      ]
+    },
+    "chain_logo": {
+      "file": "unchained_chain_emblem.png",
+      "sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509",
+      "bytes": 590916,
+      "dimensions": [
+        933,
+        292
+      ],
+      "identity": "NITIN_REQUIRED_GOLD_UN_BROKEN_CHAIN (NITIN_V12_CHAIN_LOGO_CORRECTION_V01)",
+      "placement_readback": {
+        "ZoomX": 0.3,
+        "ZoomY": 0.3,
+        "Tilt": -3000.0
+      },
+      "lightning_logo_sha256_forbidden": "9ec0183958eebed15e262202918db201bcd669e0d4975c7385ec88ecbc20805d"
+    },
+    "isolation": "Export V13 DRP; ImportProject into two new disposable projects UNCHAINED_AAKHRI_PREMIUM_STYLE_V02_A and _B. Never open V13 for writing; abort if V13 DRP re-export sha differs from f1e720b6... before import."
+  },
+  "p0_blocker_found_in_v13": {
+    "id": "V13-OVL-01",
+    "severity": "HIGH",
+    "status": "OPEN_MUST_FIX_IN_BOTH_TREATMENTS_BEFORE_ANY_STYLE_JUDGEMENT",
+    "finding": "V13 clip 1 (timeline 89-203) addresses Merge1Blend/Merge2Blend by name, but in the inherited V11 comp Merge1 carries UN_BRAND_HOOK (size 0.0624, Softness1=1) and Merge2 carries UN_BRAND_HOOK_SONG_ID (size 0.0372, Softness1=1); UN_BRAND_TITLE/UN_BRAND_ARTIST sit on Merge3/Merge4. V13 therefore fades the small inherited hook and song-id IN on clip 1 while title/artist keep their inherited curves, stacking up to four text layers.",
+    "evidence": [
+      "render_aakhri_claude_intro_outro_v12.py:110-111 (clip index 1 sets Merge1Blend/Merge2Blend)",
+      "V11 readback clip_01 SourceOp mapping (reviewed 2026-09-28): Merge1<-UN_BRAND_HOOK, Merge2<-UN_BRAND_HOOK_SONG_ID, Merge3<-UN_BRAND_TITLE, Merge4<-UN_BRAND_ARTIST",
+      "V13_TRANSITION_CONTACT_SHEET_QC2.png sha256 cf872fca2b96a35c82c420579b0b1efeea657723506a9d554bb064a70ac43186, row 2 cells 4-5: 'UNCHAINED NITIN' + small 'SOME LOVE STORIES / NEVER REALLY END.' + 'AAKHRI ISHQ' stacked, and small hook + tiny song-id; matches Nitin's V12 overlap complaint and was missed by the Gemini PASS"
+    ],
+    "fix_rule": "Never address a caption by Merge name. Parse each comp, map Merge.Foreground SourceOp -> Text+ tool, and set the blend curve of the Merge whose Foreground is the target tool. All non-plan Text+ tools (UN_BRAND_HOOK_SONG_ID everywhere; UN_BRAND_HOOK outside its window) get a constant 0 blend and are verified at readback.",
+    "exact_frames_to_audit": "timeline 89-334 per frame (layer-isolation masks, see qc.collision)"
+  },
+  "invariants_fixed": {
+    "audio": "Programme audio untouched; sample PCM (s24le, 48 kHz, stereo) must equal V13 master PCM for the same sample range.",
+    "colour": "V06 look via LUT slot 1 per clip, restored and read back exactly as V13 (GetLUT(1) equality + LUT file sha256 recorded); no node/CDL change; Resolve colour-management settings read back identical to V13.",
+    "crop_geometry": "Clip properties ZoomX, ZoomY, Pan, Tilt, RotationAngle, AnchorPointX/Y, CropLeft/Right/Top/Bottom, CompositeMode, Opacity equal V13 readback; Fusion Transform UN_CONTINUOUS_RHYTHM_V03 block text byte-identical to V13 readback (Center {0.5,0.72}, Size curve).",
+    "edit_timing": "Cuts, source in/out and record frames equal base.cuts_output_frames; no clip added/removed on V1.",
+    "effects": "No new beat, zoom, shake, camera, glow, blur, shadow, outline, backing or particle tools. Allowed Fusion inventory delta: (a) Text+ input changes listed below, (b) Merge blend keyframes, (c) treatment B: one CharacterLevelStyling modifier on the hook, (d) new comp on the V2 chain-intro clip with exactly the tools in logo.fusion_graph.",
+    "outro": "Unchanged and outside the sample range (600-719). Outro shortening deferred per request."
+  },
+  "sample": {
+    "range_output_frames": [
+      0,
+      344
+    ],
+    "frames": 345,
+    "duration_s": 11.5,
+    "reason": "covers chain intro, hook, title/artist, cuts at 89/204/335 and 9 text-free frames after the last text exit; identical for A and B",
+    "label": "EXCERPT_STYLE_PROOF_NOT_FULL_CLIP_COVERAGE",
+    "performance_constraint_note": "80% performance / >=75% text-free applies to the eventual full clip. Measured text/graphics share inside this 24 s preview (if applied 0-719): V13 approx 62%, A 57.2%, B 55.0% because the 4 s outro (120 f) and 1.8 s intro (54 f) alone are 24%. Do not report the preview as meeting the full-clip constraint."
+  },
+  "colour_values": {
+    "precondition": "Read project/timeline colour settings (colorScienceMode, timeline colour space/gamma, Fusion working space). Values below are HLG signal code values for a Rec.2100 HLG timeline where Text+ RGB maps to output signal. If Resolve Colour Management or a non-HLG timeline space is active, FAIL_CLOSED and report; do not guess a conversion.",
+    "rationale": "ITU-R BT.2408 places HDR graphics white at 75% HLG signal. V13 renders gold at 1.0 signal (peak), which risks glare on HDR phones.",
+    "off_white_rgb": [
+      0.75,
+      0.735,
+      0.7
+    ],
+    "warm_gold_rgb": [
+      0.75,
+      0.645,
+      0.285
+    ],
+    "warm_gold_derivation": "V13-reviewed ratio 1.0:0.86:0.38 scaled to 0.75; consistent with brand sample [216,184,80] (BRAND_ASSET_PROVENANCE_V01)",
+    "sheen_rgba": [
+      0.75,
+      0.7,
+      0.58,
+      0.3
+    ]
+  },
+  "fonts": {
+    "Cinzel SemiBold": {
+      "use": "title only",
+      "sha256": "059afc21ea38c3ac0aaab344fa2c96443dd5cba76ca87daddd7306bfc15881ef",
+      "fusion": {
+        "Font": "Cinzel",
+        "Style": "SemiBold"
+      }
+    },
+    "Montserrat Medium": {
+      "use": "hook and artist",
+      "sha256": "f21bca5d2935b2cd626adea0de89a0671f52b02a352b64f960556356c1c20a4c",
+      "fusion": {
+        "Font": "Montserrat",
+        "Style": "Medium"
+      }
+    },
+    "gate": "Resolve-installed font files must hash-match; a substituted/fallback font fails the sample."
+  },
+  "text_strings_verbatim": {
+    "hook": "SOME LOVE STORIES\nNEVER REALLY END.",
+    "title": "AAKHRI ISHQ",
+    "artist": "UNCHAINED NITIN",
+    "source": "existing V11/V13 StyledText values; no lyrics used or invented"
+  },
+  "common_text_plus_controls": {
+    "Enabled2": 0,
+    "Enabled3": 0,
+    "Enabled4": 0,
+    "Softness1": 0,
+    "Opacity1": 1,
+    "HorizontalJustificationNew": "Center (1)",
+    "VerticalJustificationNew": "Center (1)",
+    "ElementShape1": "Text fill only",
+    "note": "No outline (element 2), border/backing (element 3), shadow (element 4); blur/glow tools absent."
+  },
+  "treatments": {
+    "A": {
+      "name": "ENGRAVED_STILLNESS",
+      "accent_words": 0,
+      "motion": "opacity only (smoothstep 12 f in/out)",
+      "layers": {
+        "hook": {
+          "tool": "UN_BRAND_HOOK",
+          "font": "Montserrat Medium",
+          "fill": "off_white",
+          "Size": 0.09,
+          "CharacterSpacing": 1.06,
+          "LineSpacing": 1.1,
+          "Center": [
+            0.5,
+            0.215
+          ],
+          "window_keys_timeline": [
+            60,
+            146
+          ],
+          "visible_nonzero": [
+            61,
+            145
+          ],
+          "blend_keys_timeline": [
+            [
+              60,
+              0.0
+            ],
+            [
+              61,
+              0.0197
+            ],
+            [
+              62,
+              0.0741
+            ],
+            [
+              63,
+              0.1562
+            ],
+            [
+              64,
+              0.2593
+            ],
+            [
+              65,
+              0.3762
+            ],
+            [
+              66,
+              0.5
+            ],
+            [
+              67,
+              0.6238
+            ],
+            [
+              68,
+              0.7407
+            ],
+            [
+              69,
+              0.8438
+            ],
+            [
+              70,
+              0.9259
+            ],
+            [
+              71,
+              0.9803
+            ],
+            [
+              72,
+              1.0
+            ],
+            [
+              134,
+              1.0
+            ],
+            [
+              135,
+              0.9803
+            ],
+            [
+              136,
+              0.9259
+            ],
+            [
+              137,
+              0.8438
+            ],
+            [
+              138,
+              0.7407
+            ],
+            [
+              139,
+              0.6238
+            ],
+            [
+              140,
+              0.5
+            ],
+            [
+              141,
+              0.3762
+            ],
+            [
+              142,
+              0.2593
+            ],
+            [
+              143,
+              0.1562
+            ],
+            [
+              144,
+              0.0741
+            ],
+            [
+              145,
+              0.0197
+            ],
+            [
+              146,
+              0.0
+            ]
+          ],
+          "spans_cut": 89,
+          "per_clip": {
+            "clip0 (0-88)": "UN_BRAND_HOOK keys at local frames = timeline",
+            "clip1 (89-203)": "restyle clip1 UN_BRAND_HOOK identically (Size/Center/Font/fill/spacing) and use keys at local = timeline-89; value at local 0 must equal clip0 value at 88 (=1.0)"
+          }
+        },
+        "title": {
+          "tool": "UN_BRAND_TITLE",
+          "font": "Cinzel SemiBold",
+          "fill": "warm_gold",
+          "Size": 0.115,
+          "CharacterSpacing": 1.12,
+          "Center": [
+            0.5,
+            0.205
+          ],
+          "window_keys_timeline": [
+            160,
+            314
+          ],
+          "visible_nonzero": [
+            161,
+            313
+          ],
+          "blend_keys_timeline": [
+            [
+              160,
+              0.0
+            ],
+            [
+              161,
+              0.0197
+            ],
+            [
+              162,
+              0.0741
+            ],
+            [
+              163,
+              0.1562
+            ],
+            [
+              164,
+              0.2593
+            ],
+            [
+              165,
+              0.3762
+            ],
+            [
+              166,
+              0.5
+            ],
+            [
+              167,
+              0.6238
+            ],
+            [
+              168,
+              0.7407
+            ],
+            [
+              169,
+              0.8438
+            ],
+            [
+              170,
+              0.9259
+            ],
+            [
+              171,
+              0.9803
+            ],
+            [
+              172,
+              1.0
+            ],
+            [
+              302,
+              1.0
+            ],
+            [
+              303,
+              0.9803
+            ],
+            [
+              304,
+              0.9259
+            ],
+            [
+              305,
+              0.8438
+            ],
+            [
+              306,
+              0.7407
+            ],
+            [
+              307,
+              0.6238
+            ],
+            [
+              308,
+              0.5
+            ],
+            [
+              309,
+              0.3762
+            ],
+            [
+              310,
+              0.2593
+            ],
+            [
+              311,
+              0.1562
+            ],
+            [
+              312,
+              0.0741
+            ],
+            [
+              313,
+              0.0197
+            ],
+            [
+              314,
+              0.0
+            ]
+          ],
+          "spans_cut": 204,
+          "per_clip": {
+            "clip1": "local = timeline-89 (keys 71..114 hold 1 at 114)",
+            "clip2": "local = timeline-204 (starts at 1.0, fades to 0 at local 110)"
+          }
+        },
+        "artist": {
+          "tool": "UN_BRAND_ARTIST",
+          "font": "Montserrat Medium",
+          "fill": "off_white",
+          "Size": 0.066,
+          "CharacterSpacing": 1.3,
+          "Center": [
+            0.5,
+            0.15
+          ],
+          "window_keys_timeline": [
+            166,
+            314
+          ],
+          "visible_nonzero": [
+            167,
+            313
+          ],
+          "blend_keys_timeline": [
+            [
+              166,
+              0.0
+            ],
+            [
+              167,
+              0.0197
+            ],
+            [
+              168,
+              0.0741
+            ],
+            [
+              169,
+              0.1562
+            ],
+            [
+              170,
+              0.2593
+            ],
+            [
+              171,
+              0.3762
+            ],
+            [
+              172,
+              0.5
+            ],
+            [
+              173,
+              0.6238
+            ],
+            [
+              174,
+              0.7407
+            ],
+            [
+              175,
+              0.8438
+            ],
+            [
+              176,
+              0.9259
+            ],
+            [
+              177,
+              0.9803
+            ],
+            [
+              178,
+              1.0
+            ],
+            [
+              302,
+              1.0
+            ],
+            [
+              303,
+              0.9803
+            ],
+            [
+              304,
+              0.9259
+            ],
+            [
+              305,
+              0.8438
+            ],
+            [
+              306,
+              0.7407
+            ],
+            [
+              307,
+              0.6238
+            ],
+            [
+              308,
+              0.5
+            ],
+            [
+              309,
+              0.3762
+            ],
+            [
+              310,
+              0.2593
+            ],
+            [
+              311,
+              0.1562
+            ],
+            [
+              312,
+              0.0741
+            ],
+            [
+              313,
+              0.0197
+            ],
+            [
+              314,
+              0.0
+            ]
+          ],
+          "spans_cut": 204,
+          "stagger": "enters 6 f after title, exits together"
+        }
+      }
+    },
+    "B": {
+      "name": "GOLD_ACCENT_RISE",
+      "accent_words": 1,
+      "motion": "opacity smoothstep 12 f + restrained 0.006 (about 11.5 px) upward settle on hook and title entry only; exits are opacity-only",
+      "layers": {
+        "hook": {
+          "tool": "UN_BRAND_HOOK",
+          "font": "Montserrat Medium",
+          "fill": "off_white",
+          "Size": 0.092,
+          "CharacterSpacing": 1.04,
+          "LineSpacing": 1.1,
+          "Center_keys_timeline": [
+            [
+              60,
+              [
+                0.5,
+                0.209
+              ]
+            ],
+            [
+              72,
+              [
+                0.5,
+                0.215
+              ]
+            ]
+          ],
+          "window_keys_timeline": [
+            60,
+            132
+          ],
+          "visible_nonzero": [
+            61,
+            131
+          ],
+          "blend_keys_timeline": [
+            [
+              60,
+              0.0
+            ],
+            [
+              61,
+              0.0197
+            ],
+            [
+              62,
+              0.0741
+            ],
+            [
+              63,
+              0.1562
+            ],
+            [
+              64,
+              0.2593
+            ],
+            [
+              65,
+              0.3762
+            ],
+            [
+              66,
+              0.5
+            ],
+            [
+              67,
+              0.6238
+            ],
+            [
+              68,
+              0.7407
+            ],
+            [
+              69,
+              0.8438
+            ],
+            [
+              70,
+              0.9259
+            ],
+            [
+              71,
+              0.9803
+            ],
+            [
+              72,
+              1.0
+            ],
+            [
+              120,
+              1.0
+            ],
+            [
+              121,
+              0.9803
+            ],
+            [
+              122,
+              0.9259
+            ],
+            [
+              123,
+              0.8438
+            ],
+            [
+              124,
+              0.7407
+            ],
+            [
+              125,
+              0.6238
+            ],
+            [
+              126,
+              0.5
+            ],
+            [
+              127,
+              0.3762
+            ],
+            [
+              128,
+              0.2593
+            ],
+            [
+              129,
+              0.1562
+            ],
+            [
+              130,
+              0.0741
+            ],
+            [
+              131,
+              0.0197
+            ],
+            [
+              132,
+              0.0
+            ]
+          ],
+          "spans_cut": 89,
+          "accent": {
+            "word": "END.",
+            "char_range_0_based_inclusive": [
+              31,
+              34
+            ],
+            "string_length": 35,
+            "fill": "warm_gold",
+            "fusion": "CharacterLevelStyling modifier on UN_BRAND_HOOK.StyledText; one entry: characters 31-34 Red/Green/Blue = warm_gold; no other attribute changed",
+            "fail_closed": "If CharacterLevelStyling readback does not contain exactly one styled range 31-34 with warm_gold, treatment B is INVALID; do not render B without the accent and do not fall back silently."
+          }
+        },
+        "title": {
+          "tool": "UN_BRAND_TITLE",
+          "font": "Cinzel SemiBold",
+          "fill": "warm_gold",
+          "Size": 0.12,
+          "CharacterSpacing": 1.08,
+          "Center_keys_timeline": [
+            [
+              148,
+              [
+                0.5,
+                0.199
+              ]
+            ],
+            [
+              160,
+              [
+                0.5,
+                0.205
+              ]
+            ]
+          ],
+          "window_keys_timeline": [
+            148,
+            300
+          ],
+          "visible_nonzero": [
+            149,
+            299
+          ],
+          "blend_keys_timeline": [
+            [
+              148,
+              0.0
+            ],
+            [
+              149,
+              0.0197
+            ],
+            [
+              150,
+              0.0741
+            ],
+            [
+              151,
+              0.1562
+            ],
+            [
+              152,
+              0.2593
+            ],
+            [
+              153,
+              0.3762
+            ],
+            [
+              154,
+              0.5
+            ],
+            [
+              155,
+              0.6238
+            ],
+            [
+              156,
+              0.7407
+            ],
+            [
+              157,
+              0.8438
+            ],
+            [
+              158,
+              0.9259
+            ],
+            [
+              159,
+              0.9803
+            ],
+            [
+              160,
+              1.0
+            ],
+            [
+              288,
+              1.0
+            ],
+            [
+              289,
+              0.9803
+            ],
+            [
+              290,
+              0.9259
+            ],
+            [
+              291,
+              0.8438
+            ],
+            [
+              292,
+              0.7407
+            ],
+            [
+              293,
+              0.6238
+            ],
+            [
+              294,
+              0.5
+            ],
+            [
+              295,
+              0.3762
+            ],
+            [
+              296,
+              0.2593
+            ],
+            [
+              297,
+              0.1562
+            ],
+            [
+              298,
+              0.0741
+            ],
+            [
+              299,
+              0.0197
+            ],
+            [
+              300,
+              0.0
+            ]
+          ],
+          "spans_cut": 204
+        },
+        "artist": {
+          "tool": "UN_BRAND_ARTIST",
+          "font": "Montserrat Medium",
+          "fill": "off_white",
+          "Size": 0.068,
+          "CharacterSpacing": 1.24,
+          "Center": [
+            0.5,
+            0.148
+          ],
+          "window_keys_timeline": [
+            154,
+            300
+          ],
+          "visible_nonzero": [
+            155,
+            299
+          ],
+          "blend_keys_timeline": [
+            [
+              154,
+              0.0
+            ],
+            [
+              155,
+              0.0197
+            ],
+            [
+              156,
+              0.0741
+            ],
+            [
+              157,
+              0.1562
+            ],
+            [
+              158,
+              0.2593
+            ],
+            [
+              159,
+              0.3762
+            ],
+            [
+              160,
+              0.5
+            ],
+            [
+              161,
+              0.6238
+            ],
+            [
+              162,
+              0.7407
+            ],
+            [
+              163,
+              0.8438
+            ],
+            [
+              164,
+              0.9259
+            ],
+            [
+              165,
+              0.9803
+            ],
+            [
+              166,
+              1.0
+            ],
+            [
+              288,
+              1.0
+            ],
+            [
+              289,
+              0.9803
+            ],
+            [
+              290,
+              0.9259
+            ],
+            [
+              291,
+              0.8438
+            ],
+            [
+              292,
+              0.7407
+            ],
+            [
+              293,
+              0.6238
+            ],
+            [
+              294,
+              0.5
+            ],
+            [
+              295,
+              0.3762
+            ],
+            [
+              296,
+              0.2593
+            ],
+            [
+              297,
+              0.1562
+            ],
+            [
+              298,
+              0.0741
+            ],
+            [
+              299,
+              0.0197
+            ],
+            [
+              300,
+              0.0
+            ]
+          ],
+          "spans_cut": 204
+        }
+      }
+    }
+  },
+  "legibility_minimums": {
+    "source": "p0e4/tests/test_unchained_social_template_integrated_preview.py (V09 Nitin mobile legibility)",
+    "hook_size_min": 0.09,
+    "title_size_min": 0.11,
+    "artist_size_min": 0.065,
+    "note": "Both treatments are slightly smaller than V13 (0.105/0.125/0.075) for restraint but stay above Nitin's minimums; the phone-scale review decides."
+  },
+  "disjointness": {
+    "rule": "Nonzero-opacity frame sets of chain_intro, hook, {title,artist} and outro_card must be pairwise disjoint, with >=6 clear frames between logo and hook and >=12 between hook and title; title/artist may co-exist (intended pair).",
+    "A": {
+      "chain_intro": [
+        1,
+        52
+      ],
+      "hook": [
+        61,
+        145
+      ],
+      "title_artist": [
+        161,
+        313
+      ],
+      "clear_gaps": {
+        "logo_hook": 8,
+        "hook_title": 15,
+        "title_to_cut_335": 21
+      }
+    },
+    "B": {
+      "chain_intro": [
+        1,
+        52
+      ],
+      "hook": [
+        61,
+        131
+      ],
+      "title_artist": [
+        149,
+        299
+      ],
+      "clear_gaps": {
+        "logo_hook": 8,
+        "hook_title": 17,
+        "title_to_cut_335": 35
+      }
+    },
+    "cut_continuity": "For every layer spanning a cut, the last frame of clip N and first frame of clip N+1 must carry the same blend value and byte-identical Text+ inputs; rendered text-mask IoU across the cut >= 0.98."
+  },
+  "logo": {
+    "asset_sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509",
+    "track": "V2",
+    "timeline_frames": [
+      0,
+      53
+    ],
+    "clip_source": "unchained_chain_emblem_54f.mov derived as in V13 finalizer (bind derived-clip sha)",
+    "placement": "Keep V13 readback exactly: ZoomX 0.30, ZoomY 0.30, Tilt -3000.0 (Gemini re-QC: lower-centre over shirt, face clear).",
+    "fusion_graph": {
+      "method": "intro_item.AddFusionComp(); build nodes by name; MediaOut1.Input = UN_LOGO_FADE.Output",
+      "nodes": [
+        {
+          "name": "MediaIn1",
+          "role": "logo with alpha"
+        },
+        {
+          "name": "UN_LOGO_SHEEN_BG",
+          "tool": "Background",
+          "inputs": {
+            "Type": "Gradient",
+            "GradientType": "Linear",
+            "UseFrameFormatSettings": 1,
+            "Gradient_stops": [
+              [
+                0.0,
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              [
+                0.42,
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              [
+                0.5,
+                [
+                  0.75,
+                  0.7,
+                  0.58,
+                  0.3
+                ]
+              ],
+              [
+                0.58,
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              [
+                1.0,
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "Start_keys": [
+              [
+                0,
+                [
+                  -0.4,
+                  0.44
+                ]
+              ],
+              [
+                14,
+                [
+                  -0.4,
+                  0.44
+                ]
+              ],
+              [
+                32,
+                [
+                  1.05,
+                  0.44
+                ]
+              ],
+              [
+                53,
+                [
+                  1.05,
+                  0.44
+                ]
+              ]
+            ],
+            "End_keys": [
+              [
+                0,
+                [
+                  -0.05,
+                  0.56
+                ]
+              ],
+              [
+                14,
+                [
+                  -0.05,
+                  0.56
+                ]
+              ],
+              [
+                32,
+                [
+                  1.4,
+                  0.56
+                ]
+              ],
+              [
+                53,
+                [
+                  1.4,
+                  0.56
+                ]
+              ]
+            ],
+            "interpolation": "linear between 14 and 32"
+          }
+        },
+        {
+          "name": "UN_LOGO_ALPHA_MASK",
+          "tool": "BitmapMask",
+          "inputs": {
+            "Image": "MediaIn1.Output",
+            "Channel": "Alpha"
+          }
+        },
+        {
+          "name": "UN_LOGO_SHEEN_MERGE",
+          "tool": "Merge",
+          "inputs": {
+            "Background": "MediaIn1.Output",
+            "Foreground": "UN_LOGO_SHEEN_BG.Output",
+            "ApplyMode": "Screen",
+            "Blend": 1.0,
+            "EffectMask": "UN_LOGO_ALPHA_MASK.Mask"
+          }
+        },
+        {
+          "name": "UN_LOGO_CLEAR",
+          "tool": "Background",
+          "inputs": {
+            "TopLeftAlpha": 0.0,
+            "UseFrameFormatSettings": 1
+          }
+        },
+        {
+          "name": "UN_LOGO_FADE",
+          "tool": "Merge",
+          "inputs": {
+            "Background": "UN_LOGO_CLEAR.Output",
+            "Foreground": "UN_LOGO_SHEEN_MERGE.Output",
+            "Blend_keys_local": [
+              [
+                0,
+                0.0
+              ],
+              [
+                1,
+                0.028
+              ],
+              [
+                2,
+                0.104
+              ],
+              [
+                3,
+                0.216
+              ],
+              [
+                4,
+                0.352
+              ],
+              [
+                5,
+                0.5
+              ],
+              [
+                6,
+                0.648
+              ],
+              [
+                7,
+                0.784
+              ],
+              [
+                8,
+                0.896
+              ],
+              [
+                9,
+                0.972
+              ],
+              [
+                10,
+                1.0
+              ],
+              [
+                41,
+                1.0
+              ],
+              [
+                42,
+                0.9803
+              ],
+              [
+                43,
+                0.9259
+              ],
+              [
+                44,
+                0.8438
+              ],
+              [
+                45,
+                0.7407
+              ],
+              [
+                46,
+                0.6238
+              ],
+              [
+                47,
+                0.5
+              ],
+              [
+                48,
+                0.3762
+              ],
+              [
+                49,
+                0.2593
+              ],
+              [
+                50,
+                0.1562
+              ],
+              [
+                51,
+                0.0741
+              ],
+              [
+                52,
+                0.0197
+              ],
+              [
+                53,
+                0.0
+              ]
+            ],
+            "note": "fade-in 0-10 (smoothstep 10 f), hold 10-41, fade-out 41-53 (smoothstep 12 f), exactly 0.0 at frames 0 and 53"
+          }
+        }
+      ],
+      "forbidden": [
+        "Glow",
+        "SoftGlow",
+        "Blur",
+        "Shadow",
+        "DropShadow",
+        "Rays",
+        "Highlight",
+        "any Transform/scale/rotate animation",
+        "replacement or re-coloured logo"
+      ]
+    },
+    "light_pass": {
+      "frames": [
+        14,
+        32
+      ],
+      "count": 1,
+      "direction": "left to right, 20 degree tilt",
+      "peak_added_signal": "<= +0.12 HLG within logo alpha only"
+    },
+    "clean_disappearance": "Frame 53 alpha max <= 1/1023; frame 54+ no V2 item until 600; no sheen residue."
+  },
+  "resolve_readback_checks_fail_closed": [
+    "Per clip: export every Fusion comp; parse tools; record intended_comp_sha256 and readback_comp_sha256 separately (never overwrite).",
+    "Per Text+ in plan: Font, Style, Size, Center (or Center keyframes), CharacterSpacing, LineSpacing, Red1/Green1/Blue1, Opacity1=1, Softness1=0, Enabled2/3/4=0 equal plan (apply Fusion defaults when an input is absent).",
+    "Per Merge: resolve Foreground SourceOp; blend keyframes equal plan for mapped tool; UN_BRAND_HOOK_SONG_ID blend constant 0 in every clip; hook blend 0 outside its window in clips 1-2.",
+    "No duplicate Input keys in any tool block (contract set_or_insert_scalar).",
+    "Tool inventory per comp equals V13 inventory plus only the allowed delta (invariants_fixed.effects).",
+    "V2: intro item frames [0,54), ZoomX/ZoomY/Tilt equal V13; outro item [600,720) unchanged; no other V2/V3 items.",
+    "LUT slot 1 path equal V13 and LUT file sha256 recorded; clip properties equal V13 via restore_property().",
+    "Render settings: MarkIn origin, MarkOut origin+344, ProRes 422 HQ, 1080x1920, 30 fps, LPCM 48 kHz; renderer and contract sha bound in receipt."
+  ],
+  "qc": {
+    "renders_per_treatment": [
+      "SAMPLE (frames 0-344)",
+      "CONTROL (same project, all plan text blends 0 and V2 intro disabled)",
+      "ISOLATION_LOGO",
+      "ISOLATION_HOOK",
+      "ISOLATION_TITLE_ARTIST"
+    ],
+    "decode": "Full video+audio decode of every render (verify_full_decode) before any other check.",
+    "control_equivalence": "CONTROL decoded frames (framemd5) equal V13 master frames 0-344; if not byte-exact, PSNR >= 60 dB on every frame and report the difference; otherwise FAIL.",
+    "text_masks": "Per layer mask = |ISOLATION_X - CONTROL| > 2/1023 on any channel; per-frame presence and bbox.",
+    "window_check": "Each layer's nonzero frames must be a subset of its visible_nonzero window; out-of-window pixels = FAIL.",
+    "collision": "For every frame, pairwise AND of masks (logo, hook, title_artist) must be empty; SAMPLE minus CONTROL must equal the union of isolation masks within 2 code values (detects unplanned inherited text).",
+    "face_clear": "Detect face bbox on CONTROL frames 0-344 with a recorded detector/version; expand 10%; every logo/text mask bbox must not intersect. If no detector is available, FAIL_CLOSED 'FACE_CHECK_UNAVAILABLE' (no PASS).",
+    "audio": "SAMPLE PCM s24le sha equal to V13 master PCM for samples 0-551999 (345 frames x 1600).",
+    "transition_inspection": "Frame-by-frame contact strips for 0-60, 56-75, 128-150 (A) / 118-165 (B), 195-215 (cut 204), 290-320, 330-344; human/Gemini review on the exact sample sha.",
+    "phone_review": "360x640 downscale at identical timestamps for A, B and V13; HLG-to-SDR preview noted as uncalibrated.",
+    "no_blanket_pass": "Any unavailable check is recorded as LIMITATION, not PASS."
+  },
+  "cache_and_provenance_fields": [
+    "source_media_sha256 (V13 V1 media pool items)",
+    "base_drp_sha256",
+    "base_master_sha256",
+    "timeline_name",
+    "sample_range_frames",
+    "cuts_output_frames",
+    "source_in_out_per_clip",
+    "treatment_id",
+    "plan_sha256 (this file)",
+    "renderer_sha256",
+    "contract_sha256",
+    "resolve_version",
+    "text_strings_sha256",
+    "font_file_sha256 x2",
+    "per_tool_text_inputs_sha256",
+    "blend_curves_sha256",
+    "character_level_styling_sha256 (B)",
+    "colour_values",
+    "timeline_colour_settings_readback",
+    "lut_slot1_path_and_sha256",
+    "clip_properties_readback_sha256",
+    "rhythm_transform_block_sha256",
+    "chain_logo_sha256",
+    "logo_derived_clip_sha256",
+    "logo_comp_intended_sha256",
+    "logo_comp_readback_sha256",
+    "render_settings",
+    "sample_prores_sha256",
+    "sample_pcm_sha256",
+    "control_prores_sha256",
+    "isolation_render_sha256 x3",
+    "qc_report_sha256",
+    "gemini_context_and_artifact_sha",
+    "active_edit_seconds",
+    "render_seconds",
+    "rework_count"
+  ],
+  "outputs_expected_from_implementer": [
+    "PREMIUM_STYLE_SAMPLE_V02_A_HLG_PRORES.mov",
+    "PREMIUM_STYLE_SAMPLE_V02_B_HLG_PRORES.mov",
+    "review HEVC derivatives",
+    "RESOLVE_PREMIUM_STYLE_SAMPLE_V02_RECEIPT.json",
+    "QC_V02.json",
+    "contact strips",
+    "Shared Drive copies with readback sha (COPY_NEVER_MOVE)"
+  ],
+  "routing": {
+    "implementer": "Claude via existing Resolve host/workthread route (execution host must expose DaVinciResolveScript)",
+    "independent_review": "Gemini per PREMIUM_IMPLEMENTATION_JOINT_BRIEF_V01 established context/protocol on exact sample SHAs",
+    "selection": "ChatGPT recommends one direction; Nitin decides"
+  },
+  "recommendation": {
+    "preferred": "A",
+    "why": "Lowest risk: opacity-only, no accent dependency on CharacterLevelStyling readback, most restrained; B is the comparison showing one gold accent and a subtle rise.",
+    "not_approval": true
+  },
+  "not_done": [
+    "no render",
+    "no DRP/project change",
+    "no Make/posting change",
+    "no template freeze",
+    "no lyrics",
+    "no approval inferred"
+  ],
+  "gates": {
+    "NITIN_FINAL_VIDEO_APPROVAL": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

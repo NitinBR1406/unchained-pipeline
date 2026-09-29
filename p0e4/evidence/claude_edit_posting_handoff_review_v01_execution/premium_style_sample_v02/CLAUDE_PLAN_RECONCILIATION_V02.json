@@ -1,0 +1,43 @@
+{
+  "accepted_common_constraints": [
+    "exact broken-chain logo hash",
+    "disjoint text windows",
+    "Cinzel SemiBold title",
+    "Montserrat Medium phrase/artist",
+    "warm gold and off-white",
+    "one restrained logo light pass",
+    "fixed audio, V06 colour, crop and edit timing",
+    "no new beat/camera effects",
+    "no publication"
+  ],
+  "claude_status": "RECEIVED_AND_PERSISTED",
+  "differences": [
+    {
+      "claude": "frames 0-344",
+      "executed": "frames 0-179 identical six-second excerpt",
+      "resolution": "Executed range follows the bounded request and is fully evidenced.",
+      "topic": "sample range"
+    },
+    {
+      "claude": [
+        "A_ENGRAVED_STILLNESS",
+        "B_GOLD_ACCENT_RISE"
+      ],
+      "executed": [
+        "A_CINEMATIC_BALANCE",
+        "B_EDITORIAL_RESTRAINT"
+      ],
+      "resolution": "Executed variants use the same constrained design axes; no third design round was created.",
+      "topic": "treatment names"
+    },
+    {
+      "claude": "Claimed inherited overlap from repository evidence without local untracked media access",
+      "executed": "Actual sample transitions inspected and Gemini correction retained; claim is not promoted beyond Claude advisory evidence.",
+      "topic": "V13 overlap claim"
+    }
+  ],
+  "recommendation_source": "Corrected Gemini actual-artifact review recommends B; Nitin decides.",
+  "recorded_at": "2026-09-29T19:04:01.877162+02:00",
+  "relationship": "ADVISORY_PLAN_RECEIVED_AFTER_RENDER_EXECUTION",
+  "schema": "CLAUDE_PLAN_RECONCILIATION_V02"
+}

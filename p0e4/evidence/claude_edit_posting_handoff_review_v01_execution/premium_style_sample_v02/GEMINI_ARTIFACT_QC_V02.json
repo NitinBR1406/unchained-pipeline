@@ -1,0 +1,48 @@
+{
+  "artifacts": [
+    {
+      "name": "V13_REFERENCE_REVIEW_HLG.mp4",
+      "sha256": "77fcb6973be633b58d13262b31c1b0f6266f4b96de39c8c4ab7bf0fca1c87450"
+    },
+    {
+      "name": "A_CINEMATIC_BALANCE_REVIEW_HLG.mp4",
+      "sha256": "c5260625298f65d7b9e0832aa300dfcdcb06b505be57c9afe51875b2e4854572"
+    },
+    {
+      "name": "B_EDITORIAL_RESTRAINT_REVIEW_HLG.mp4",
+      "sha256": "d4bfd1540939a7f0ff913d6bd7599fe205f256a2231bba1584af13f2a6c19d48"
+    }
+  ],
+  "attachment_proof": "three playable 00:06 attachments visible before response",
+  "chat_url": "https://gemini.google.com/app/7c9afdcb27030bcb",
+  "context": "existing strategy chat",
+  "corrected_findings": [
+    {
+      "finding": "V13 logo is static; A and B use a localized dynamic light pass with no observed face spill, broad haze or shadow haze.",
+      "range": "00:00-00:01.80"
+    },
+    {
+      "finding": "A and B preserve the reference mouth/audio relationship; no drift observed in this short browser review.",
+      "range": "full 00:00-00:06"
+    },
+    {
+      "finding": "A and B remove the reference text collision and stage the text windows cleanly.",
+      "range": "around 00:03"
+    },
+    {
+      "finding": "B has lighter editorial restraint and lower visual weight; A remains viable when a firmer title is desired.",
+      "range": "full excerpt"
+    }
+  ],
+  "creative_winner_selected": false,
+  "initial_response_status": "SUPERSEDED_AFTER_FALSE_V13_LIGHT_SWEEP_AND_INVENTED_LYRIC_CLAIMS",
+  "limitations": [
+    "browser playback is not calibrated HDR or nit measurement",
+    "visual lipsync assessment is perceptual, not a phoneme-level measurement",
+    "A/B light-pass microcontrast distinction was inconclusive",
+    "sample excerpt does not prove eventual full-clip 80 percent performance coverage"
+  ],
+  "recommendation": "B_EDITORIAL_RESTRAINT_FOR_NITIN_REVIEW",
+  "recorded_at": "2026-09-29T19:04:01.877162+02:00",
+  "schema": "GEMINI_ARTIFACT_QC_V02"
+}

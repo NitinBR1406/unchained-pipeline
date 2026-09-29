@@ -1,0 +1,51 @@
+{
+  "audio": {
+    "essence_equal": "PASS",
+    "full_decode": "PASS",
+    "raw_pcm_sha256_all_three": "c188f175d9f3008cc59331fbc916c6d235585651ccb28a8c510c765e414082bb"
+  },
+  "blackdetect": "NO_BLACK_GAPS_DETECTED",
+  "comparison": {
+    "duration_seconds": 18.021354,
+    "frames": 540,
+    "name": "AAKHRI_PREMIUM_STYLE_COMPARISON_V13_A_B_HLG.mp4",
+    "order": [
+      {
+        "item": "V13_REFERENCE",
+        "seconds": "00:00-00:06"
+      },
+      {
+        "item": "A_CINEMATIC_BALANCE",
+        "seconds": "00:06-00:12"
+      },
+      {
+        "item": "B_EDITORIAL_RESTRAINT",
+        "seconds": "00:12-00:18"
+      }
+    ],
+    "sha256": "86360fb72c01630fab0a75d7d45be299fe7b0bac2d443608cc81ee94c5e648c2"
+  },
+  "font_contract": "Cinzel SemiBold titles; Montserrat Medium hook/artist; no Helvetica or Thin fallback configured",
+  "limitations": [
+    "A render wall time unavailable because the first receipt step failed after a completed render; the existing artifact was reused and fully decoded",
+    "calibrated HDR appearance not proven",
+    "visual lipsync is additionally subject to human/Gemini perceptual review"
+  ],
+  "locked_edit": "audio, V06 colour, crop and edit timing unchanged",
+  "logo_animation_sha256": "97c907ab6601b9fe5a9f7456e7031eca3d1843ab554696562158268fbd583cae",
+  "logo_sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509",
+  "recorded_at": "2026-09-29T19:04:01.877162+02:00",
+  "schema": "PREMIUM_STYLE_SAMPLE_TECHNICAL_QC_V02",
+  "status": "GREEN_FOR_PRIVATE_STYLE_REVIEW",
+  "transitions_inspected": "contact sheets at every text/logo transition; no overlap or clipped text observed",
+  "video": {
+    "codec": "HEVC Main10",
+    "color_space": "bt2020nc",
+    "fps": 30,
+    "full_decode": "PASS",
+    "pixel_format": "yuv420p10le",
+    "primaries": "bt2020",
+    "resolution": "1080x1920",
+    "transfer": "arib-std-b67"
+  }
+}

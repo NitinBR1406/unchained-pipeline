@@ -1,0 +1,100 @@
+{
+  "all_byte_equal": true,
+  "copy_policy": "COPY_NEVER_MOVE; no differing file overwritten",
+  "destination_path": "/Users/nitinramdaras/Library/CloudStorage/GoogleDrive-nitin@unchainednitin.com/Gedeelde drives/Unchained Nitin — Master/P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AAKHRI_ISHQ_PREMIUM_STYLE_SAMPLE_V02_20260929",
+  "readback": [
+    {
+      "byte_equal": true,
+      "bytes": 18847410,
+      "destination_sha256": "86360fb72c01630fab0a75d7d45be299fe7b0bac2d443608cc81ee94c5e648c2",
+      "drive_file_id": "15HYhzTeTx99WmA5I8VTA3HV-FhseHDl-",
+      "name": "AAKHRI_PREMIUM_STYLE_COMPARISON_V13_A_B_HLG.mp4",
+      "review_url": "https://drive.google.com/file/d/15HYhzTeTx99WmA5I8VTA3HV-FhseHDl-/view?usp=drivesdk",
+      "source_sha256": "86360fb72c01630fab0a75d7d45be299fe7b0bac2d443608cc81ee94c5e648c2"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 6268615,
+      "destination_sha256": "c5260625298f65d7b9e0832aa300dfcdcb06b505be57c9afe51875b2e4854572",
+      "drive_file_id": "1Wy-H7pmHrexg54R1Q4VXXOjZ3piRbAik",
+      "name": "A_CINEMATIC_BALANCE_REVIEW_HLG.mp4",
+      "review_url": "https://drive.google.com/file/d/1Wy-H7pmHrexg54R1Q4VXXOjZ3piRbAik/view?usp=drivesdk",
+      "source_sha256": "c5260625298f65d7b9e0832aa300dfcdcb06b505be57c9afe51875b2e4854572"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 6271053,
+      "destination_sha256": "d4bfd1540939a7f0ff913d6bd7599fe205f256a2231bba1584af13f2a6c19d48",
+      "drive_file_id": "1ot-3f7AWHJS_3cixZ9TbZHoNy-ALZzgT",
+      "name": "B_EDITORIAL_RESTRAINT_REVIEW_HLG.mp4",
+      "review_url": "https://drive.google.com/file/d/1ot-3f7AWHJS_3cixZ9TbZHoNy-ALZzgT/view?usp=drivesdk",
+      "source_sha256": "d4bfd1540939a7f0ff913d6bd7599fe205f256a2231bba1584af13f2a6c19d48"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 6316252,
+      "destination_sha256": "77fcb6973be633b58d13262b31c1b0f6266f4b96de39c8c4ab7bf0fca1c87450",
+      "drive_file_id": "1ZaNke9LMDjBHWvW4iYiP9xlFUKxW6RIA",
+      "name": "V13_REFERENCE_REVIEW_HLG.mp4",
+      "review_url": "https://drive.google.com/file/d/1ZaNke9LMDjBHWvW4iYiP9xlFUKxW6RIA/view?usp=drivesdk",
+      "source_sha256": "77fcb6973be633b58d13262b31c1b0f6266f4b96de39c8c4ab7bf0fca1c87450"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 151946390,
+      "destination_sha256": "133d2991ae8bd005eda9e8f162b28bf75fabc159cfa9c3154e5faf0016c0daaf",
+      "drive_file_id": null,
+      "name": "AAKHRI_PREMIUM_STYLE_A_CINEMATIC_BALANCE_HLG_PRORES.mov",
+      "review_url": null,
+      "source_sha256": "133d2991ae8bd005eda9e8f162b28bf75fabc159cfa9c3154e5faf0016c0daaf"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 151475318,
+      "destination_sha256": "26de668b7c0a4a44b91feb005ad210ff98110a5fb21af5075a88bd658b615b49",
+      "drive_file_id": null,
+      "name": "AAKHRI_PREMIUM_STYLE_B_EDITORIAL_RESTRAINT_HLG_PRORES.mov",
+      "review_url": null,
+      "source_sha256": "26de668b7c0a4a44b91feb005ad210ff98110a5fb21af5075a88bd658b615b49"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 172161,
+      "destination_sha256": "c3e881e5b6715053f20a0f6f190f115ce89efb0648bc2eb38ec23caa4c4538f3",
+      "drive_file_id": null,
+      "name": "UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_A_CINEMATIC_BALANCE.drp",
+      "review_url": null,
+      "source_sha256": "c3e881e5b6715053f20a0f6f190f115ce89efb0648bc2eb38ec23caa4c4538f3"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 172110,
+      "destination_sha256": "ea6696000d85caa2e0361cc0ac611ba6e0798f0b2461fa29d76d8ef6e170bb70",
+      "drive_file_id": null,
+      "name": "UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_B_EDITORIAL_RESTRAINT.drp",
+      "review_url": null,
+      "source_sha256": "ea6696000d85caa2e0361cc0ac611ba6e0798f0b2461fa29d76d8ef6e170bb70"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 2296165,
+      "destination_sha256": "82c785d02ca698ed35bd81e018ab611f4fd0c0053a114af4227263aa85a2beed",
+      "drive_file_id": null,
+      "name": "A_CINEMATIC_BALANCE_TRANSITIONS_CONTACT_SHEET.png",
+      "review_url": null,
+      "source_sha256": "82c785d02ca698ed35bd81e018ab611f4fd0c0053a114af4227263aa85a2beed"
+    },
+    {
+      "byte_equal": true,
+      "bytes": 2294517,
+      "destination_sha256": "857faacb46ea5ece41d157b65a45ca725639d2f7d2737978a196797a09f8e07c",
+      "drive_file_id": null,
+      "name": "B_EDITORIAL_RESTRAINT_TRANSITIONS_CONTACT_SHEET.png",
+      "review_url": null,
+      "source_sha256": "857faacb46ea5ece41d157b65a45ca725639d2f7d2737978a196797a09f8e07c"
+    }
+  ],
+  "recorded_at": "2026-09-29T19:04:01.877162+02:00",
+  "schema": "PERSISTENCE_HANDOFF_RECEIPT_V02",
+  "source_staging_preserved": true
+}
