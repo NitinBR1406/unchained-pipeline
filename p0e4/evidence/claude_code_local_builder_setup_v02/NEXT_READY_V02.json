@@ -1,0 +1,12 @@
+{
+  "schema": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_NEXT_READY_V02",
+  "task_id": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01",
+  "status": "READ_ONLY_SETUP_PROVEN_WITH_LIMITATIONS",
+  "next": [
+    "Nitin decision (optional): trust the workspace so the project allow rule for get_resolve_status applies without a CLI flag - run `claude` once interactively in /Users/nitinramdaras/Downloads/unchained-pipeline-p0e4 and accept the trust dialog. Until then, pass --allowedTools mcp__davinci_resolve__get_resolve_status per session.",
+    "Work/Codex: independent technical verification of .claude/settings.json, the gate hook and this evidence.",
+    "Separate build task (with explicit NITIN_CHANGE_APPROVAL for any widened Resolve rights, isolated project copy) before any Resolve build work.",
+    "Autostart/duplicate-suppression proof remains a separate test; this manual probe does not prove it."
+  ],
+  "master_state_promotion": false
+}

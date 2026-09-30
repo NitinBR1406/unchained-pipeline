@@ -5,7 +5,7 @@ Claude Code is the local, bounded builder for P0-E4 Resolve implementation, priv
 Before any work:
 
 1. Read `p0e4/MASTER_STATE_LATEST.json` and the exact state it points to.
-2. Read `p0e4/README.md`, applicable request/evidence files, and repository governance recorded in the current Master State.
+2. Read `p0e4/README.md`, applicable request/evidence files, and repository governance recorded in the current Master State, including `p0e4/governance/AI_ROLES_AND_COMMUNICATION_V01.md` (roles, task/message contract, status labels) and `p0e4/governance/CLAUDE_GEMINI_SETUP_RESEARCH_V01.md` (builder setup recommendations). Those documents are authoritative; do not copy them here.
 3. Verify the Git branch, source paths, project/timeline identity, and required SHA256 bindings.
 4. Check active tasks, claims, render state, and project locks. One builder may act on a Resolve project/candidate at a time.
 
@@ -20,6 +20,10 @@ Execution rules:
 - Do not invent lyrics, rights, provenance, creative facts, approvals, or completion.
 - Do not choose a creative winner or assert approval for Nitin.
 - Do not activate Make, deploy, schedule, upload, purchase, or publish.
+
+Roles (per AI_ROLES_AND_COMMUNICATION_V01): ChatGPT = orchestrator; Claude Code = local Resolve builder; Work/Codex = independent technical verification; Gemini = independent creative/platform QC; Nitin = sole human approval authority. Build execution starts only after verified setup and a separate build task.
+
+Native Resolve access is technically bounded in `.claude/settings.json` + `.mcp.json` (server `davinci_resolve`): only `get_resolve_status` is allowed; mutating/destructive/full-system tools are denied; `run_script` passes only the SHA256-pinned read-only probes listed in `.claude/hooks/resolve_run_script_gate.py`. Widening these rules requires explicit NITIN_CHANGE_APPROVAL for the specific build task.
 
 Governance remains:
 

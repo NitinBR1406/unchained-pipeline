@@ -1,0 +1,129 @@
+{
+  "message_type": "RESULT",
+  "task_id": "CLAUDE_CODE_READONLY_ACCEPTANCE_20260930_V01",
+  "revision": 1,
+  "parent_task_id": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01",
+  "ack": {
+    "request_file_read": "p0e4/evidence/claude_code_local_builder_setup_v02/ACCEPTANCE_TASK_REQUEST_V01.json",
+    "request_schema": "CLAUDE_CODE_READONLY_ACCEPTANCE_REQUEST_V01",
+    "request_created_at_utc": "2026-09-30T07:48:02Z",
+    "base_commit_in_request": "164912b835f95e24d1ea1434f53713895dbf57f1",
+    "session_id": "c950c6df-dfac-40c3-aafb-08383d50787c (the recipient session in the request; it matches this session's scratchpad path /private/tmp/claude-501/.../c950c6df-dfac-40c3-aafb-08383d50787c/scratchpad)",
+    "host_client": "Claude Code (Claude Agent SDK harness), model claude-opus-5-5, non-interactive session, cwd /Users/nitinramdaras/Downloads/unchained-pipeline-p0e4 (git worktree, branch p0e4/slice1-production-handoff)",
+    "host_client_version": "NOT_SELF_OBSERVED. The request says ~/.local/bin/claude 2.1.285. I had no shell tool, so I could not check it.",
+    "role": "Claude Code / local Resolve builder (read-only acceptance probe only)"
+  },
+  "instructions_read": [
+    {
+      "path": "CLAUDE.md",
+      "version_status_line": "# UNCHAINED NITIN — Claude Code builder contract (no version field). Git shows it as modified (M) in the working tree."
+    },
+    {
+      "path": "p0e4/governance/AI_ROLES_AND_COMMUNICATION_V01.md",
+      "version_status_line": "AI-rollen en communicatie — V01; Datum: 2026-09-30; Status: vastgelegde werkafspraak; technische activering en ontvangst door Claude/Gemini NIET bevestigd."
+    },
+    {
+      "path": "p0e4/governance/CLAUDE_GEMINI_SETUP_RESEARCH_V01.md",
+      "version_status_line": "Claude en Gemini inrichting — onderzoek V01; Datum: 2026-09-30; Status: RECOMMENDATION_ONLY_NOT_ACTIVATED."
+    },
+    {
+      "path": "p0e4/MASTER_STATE_LATEST.json",
+      "version_status_line": "schema_version 1; master_state_version V16.20"
+    },
+    {
+      "path": ".claude/resolve/readonly_identity_probe_v01.py",
+      "version_status_line": "# UNCHAINED NITIN - pinned read-only Resolve identity probe V01."
+    }
+  ],
+  "master_state": {
+    "pointer": "p0e4/MASTER_STATE_LATEST.json",
+    "master_state_version": "V16.20",
+    "state_version": 46,
+    "sha256": "86bfcaefc6c3b7a222a6dac0f0efe4910fab7727cf2a8372663180e725900cf2",
+    "scope_status": "MASTER_STATE_INTEGRITY_RECOVERED_AUTOSTART_BINDING_UNPROVEN",
+    "production_e2e_status": "BLOCKED_NOT_GREEN",
+    "path": "p0e4/evidence/master_state_integrity_recovery_v1620/UNCHAINED_MASTER_PROJECT_STATE_V16_20.json",
+    "evidence_manifest": "p0e4/evidence/master_state_integrity_recovery_v1620/SHA256SUMS.txt",
+    "tested_sha": "79cc1e6e0cdc0db92f24094417fd7b6e3424b138",
+    "matches_request_pointer_fields": "The version, state_version and sha256 fields match the request. The pointed-to state file was not opened and its bytes were not hashed."
+  },
+  "available_resolve_tools": [
+    "mcp__davinci_resolve__get_resolve_status",
+    "mcp__davinci_resolve__get_scripting_api",
+    "mcp__davinci_resolve__get_scripting_docs",
+    "mcp__davinci_resolve__get_whats_new",
+    "mcp__davinci_resolve__list_dctls",
+    "mcp__davinci_resolve__list_luts",
+    "mcp__davinci_resolve__run_script",
+    "mcp__davinci_resolve__search_scripting_api"
+  ],
+  "available_resolve_tools_note": "This list is what the deferred-tool registry and a ToolSearch for '+davinci_resolve' showed. No tool named run_script_unsafe or launch_resolve was exposed. 'Available' means only that a tool was listed; calling get_resolve_status needed a permission grant that was not given.",
+  "resolve_status_raw": "<error>Claude requested permissions to use mcp__davinci_resolve__get_resolve_status, but you haven't granted it yet.</error>",
+  "identity_probe_raw": {
+    "result": {
+      "product": "DaVinci Resolve Studio",
+      "version": "21.1.0.17",
+      "current_page": "deliver",
+      "project_name": "UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_B_EDITORIAL_RESTRAINT",
+      "project_unique_id": "1db34aaa-a979-4837-a9ae-9df0ed0e3361",
+      "project_timeline_count": 1,
+      "rendering_in_progress": false,
+      "timeline_name": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+      "timeline_unique_id": "4cfe2382-902b-483c-b03a-eae166293a28",
+      "timeline_start_frame": 108000,
+      "timeline_end_frame": 108720,
+      "timeline_frame_rate": 30.0,
+      "timeline_resolution": [
+        "1080",
+        "1920"
+      ]
+    }
+  },
+  "identity_probe_call": "mcp__davinci_resolve__run_script, script = the full contents of .claude/resolve/readonly_identity_probe_v01.py copied without changes, timeout = 20. The PreToolUse gate let it through.",
+  "negative_controls": {
+    "a_run_script_result_eq_1": {
+      "outcome": "BLOCKED",
+      "raw": "<error>PreToolUse:mcp__davinci_resolve__run_script hook error: run_script blocked: sha256=68833fe50c22a93765392cd3e53b25e8a0c7b74e4730e85425e21da46bd69d5c is not a pinned read-only probe</error>"
+    },
+    "b_run_script_unsafe_result_eq_1": {
+      "outcome": "NOT_CALLABLE_NOT_EXECUTED",
+      "raw": "No call was made. The tool mcp__davinci_resolve__run_script_unsafe did not appear in the tool registry. ToolSearch for 'select:...run_script_unsafe' returned no schema, and ToolSearch '+davinci_resolve' did not list it. So it could not be invoked, and no deny or permission message was seen for it.",
+      "interpretation": "The tool is not exposed to this session. That is a stronger condition than being blocked at call time. A deny rule in settings.json may be what removed it, but I did not observe that."
+    },
+    "retries_or_workarounds": "none"
+  },
+  "limitations": [
+    "I had no Bash/shell tool, so none of the inputs_sha256 bindings in the request were computed or checked. That covers CLAUDE.md, both governance docs, MASTER_STATE_LATEST.json, .mcp.json, .claude/settings.json, the gate hook and the probe file.",
+    "The pinned probe is recorded in the request with sha256 22cf949c…4bf2. The gate accepted it, which suggests the pinned hash matches, but I did not compute the hash myself.",
+    "git status shows CLAUDE.md as modified against HEAD 164912b. I did not verify whether its current bytes match the request's hash 4aba62fe…1021.",
+    "get_resolve_status returned a permission-not-granted error instead of Resolve status. I did not retry it.",
+    "Host client version 2.1.285 comes from the request text only. I did not observe it myself.",
+    "I did not read .claude/settings.json, .mcp.json or .claude/hooks/resolve_run_script_gate.py. The gate's behaviour is known only from the one observed block and the one observed pass.",
+    "I did not read the Master State file the pointer names (UNCHAINED_MASTER_PROJECT_STATE_V16_20.json) or its SHA256SUMS manifest.",
+    "I did not check active tasks, claims or project locks beyond rendering_in_progress=false from the probe.",
+    "The Gmail and Google Calendar connectors show as needing authentication. I did not call them, or Make, Drive or Shotstack.",
+    "The probe's current_page is 'deliver', meaning Resolve was already on the Deliver page. The probe made no page switch or other change.",
+    "These are Claude's own checks, not independent Work/Codex or Gemini QC, and not a Nitin approval."
+  ],
+  "checks": {
+    "request_file_received_and_read": "PROVEN",
+    "session_id_bound": "PROVEN (matches the request recipient and this session's scratchpad path)",
+    "host_client_version": "NOT_PROVEN",
+    "governance_docs_read": "PROVEN",
+    "master_state_pointer_read": "PROVEN",
+    "master_state_fields_match_request": "PROVEN (pointer fields only)",
+    "input_sha256_bindings_verified": "NOT_PROVEN",
+    "resolve_tool_inventory_listed": "PROVEN",
+    "get_resolve_status_executed": "NOT_PROVEN (permission not granted)",
+    "pinned_identity_probe_executed_readonly": "PROVEN",
+    "resolve_project_timeline_identity_read": "PROVEN",
+    "rendering_not_in_progress": "PROVEN (at probe time)",
+    "negative_control_a_run_script_unpinned_blocked": "PROVEN",
+    "negative_control_b_run_script_unsafe_blocked": "NOT_PROVEN as a call-time block. Only its absence from the exposed tools was observed.",
+    "launch_resolve_not_called": "PROVEN (not exposed and not called)",
+    "no_resolve_mutation_by_this_session": "PROVEN for the calls made: the one executed script contains only Get*/Is* calls",
+    "no_disk_writes_by_this_session": "PROVEN (no Write/Edit tool was used)",
+    "no_connector_calls": "PROVEN",
+    "governance_flags_unchanged": "PROVEN (PRODUCTION_DEPLOYMENT_AUTHORIZED=false, PUBLICATION_AUTHORIZED=false, FIRST_REAL_POSTER=PAUSED_BY_NITIN; not touched)"
+  }
+}

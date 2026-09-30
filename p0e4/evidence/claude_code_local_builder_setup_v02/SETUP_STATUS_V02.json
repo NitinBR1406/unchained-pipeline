@@ -1,0 +1,61 @@
+{
+  "schema": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_STATUS_V02",
+  "task_id": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01",
+  "supersedes_status_file": "p0e4/evidence/claude_code_local_builder_setup_v01/SETUP_STATUS_V01.json (preserved unchanged)",
+  "observed_at_utc": "2026-09-30T07:52:00Z",
+  "setup_session": {
+    "session_id": "f8b1ec01-770e-400e-9a6e-bd6815a9e866",
+    "client": "Claude Code 2.1.284 embedded in Claude Desktop 2.16120.0 (entrypoint claude-desktop), started by Dispatch",
+    "note": "This session wrote the configuration and evidence. It did not itself load the new MCP registration (registered mid-session); the acceptance test ran in two fresh Claude Code CLI sessions."
+  },
+  "repository": {
+    "worktree": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4",
+    "branch": "p0e4/slice1-production-handoff",
+    "base_head": "164912b835f95e24d1ea1434f53713895dbf57f1",
+    "remote_checked": "git fetch origin: origin/p0e4/slice1-production-handoff == 164912b (no newer remote work)",
+    "other_worktrees_untouched": ["unchained-pipeline [main]", "unchained-pipeline-p0e [p0e-local]", "unchained-pipeline-p0e3-register (detached)", "/private/tmp/unchained-main-workflow (prunable, untouched)"],
+    "preexisting_untracked_preserved": true,
+    "governance_docs_present_at_base": true
+  },
+  "authentication": {
+    "status": "PASS",
+    "method": "`claude auth status` (CLI ~/.local/bin/claude 2.1.285): loggedIn=true, authMethod=claude.ai, apiProvider=firstParty, subscriptionType=max",
+    "usable_proof": "Two headless CLI sessions completed model turns (init apiKeySource=none, result subtype=success).",
+    "paid_api_route_activated": false,
+    "human_action_needed": false,
+    "note": "The OAuth login started in the V01 setup had already completed; no new login was started. The CLI result field total_cost_usd is a client-side estimate; apiKeySource=none shows subscription auth, not an API key."
+  },
+  "native_mcp_registration": {
+    "status": "PASS_PROJECT_SCOPED",
+    "binary": "/Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Applications/ResolveMCP",
+    "binary_sha256": "a656f93250e0c384cfa5b420c6b410bc8105481918f5db71e92d759e2aa036b1",
+    "codesign": "Identifier=com.blackmagic-design.resolve.mcp; Developer ID Application: Blackmagic Design Inc (9ZGFBWLSYP); timestamp 2026-09-10",
+    "resolve_app_version": "21.1.0",
+    "registration_command": "claude mcp add --scope project davinci_resolve -- <binary>",
+    "config_files": [".mcp.json", ".claude/settings.json", ".claude/hooks/resolve_run_script_gate.py", ".claude/resolve/readonly_identity_probe_v01.py"],
+    "second_mcp_server_installed": false,
+    "observed_in_session_init": "mcp_servers: {name: davinci_resolve, status: connected, source: project} in sessions c950c6df and d31091da"
+  },
+  "effective_tool_permissions": {
+    "evidence": "Session init tool lists + permission_denials + RESOLVE_GATE_DECISIONS_V01.jsonl",
+    "removed_from_session_by_deny_rules": ["run_script_unsafe", "update_dctl", "delete_dctl", "delete_lut", "generate_lut", "launch_resolve"],
+    "run_script": "Visible, but gated by PreToolUse hook: allowed only for SHA256 22cf949c0bd2b1fa657c542b5a9f3de057a39f444ceca85b3a970f6243ed4bf2 (readonly_identity_probe_v01). Observed allow x2 (sessions c950c6df, d31091da) and deny x1 ('result = 1', session c950c6df).",
+    "get_resolve_status": "Allowed in project settings, BUT that allow entry is IGNORED until the workspace is trusted (CLI stderr: workspace resolved to /Users/nitinramdaras/Downloads/unchained-pipeline not trusted). In session c950c6df it was denied; in session d31091da it was granted for that one session via --allowedTools.",
+    "visible_but_not_allowed": ["get_scripting_api", "get_scripting_docs", "search_scripting_api", "get_whats_new", "list_dctls", "list_luts"],
+    "visible_not_allowed_behaviour": "No allow rule: in headless -p mode they are denied; in an interactive session they would prompt the user.",
+    "bypass_mode": "permissions.disableBypassPermissionsMode=disable (not separately exercised)",
+    "general_permission_bypass_used": false,
+    "trust_or_global_permission_changed": false
+  },
+  "instructions": {
+    "status": "READ",
+    "read_by_setup_session": ["CLAUDE.md", "p0e4/governance/AI_ROLES_AND_COMMUNICATION_V01.md", "p0e4/governance/CLAUDE_GEMINI_SETUP_RESEARCH_V01.md", "p0e4/MASTER_STATE_LATEST.json", "p0e4/README.md (head)", "p0e4/evidence/claude_code_local_builder_setup_v01/*"],
+    "read_by_acceptance_session_R1": "Explicit Read calls: request file, MASTER_STATE_LATEST.json, both governance docs (first 40 lines only, not complete), probe. CLAUDE.md was not read with a tool call; the session cited its title, which is consistent with Claude Code auto-loading project CLAUDE.md, but the system prompt is not in the stream, so explicit CLAUDE.md load is NOT_PROVEN at tool level.",
+    "read_by_acceptance_session_R2": "Explicit Read calls: request R2, MASTER_STATE_LATEST.json, probe. Governance docs not read in R2.",
+    "agents_md": "none found in repository",
+    "claude_md_update": "Added references to both governance docs, the role split, and the technical Resolve boundary; no existing instruction removed."
+  },
+  "master_state": {"version": "V16.20", "state_version": 46, "sha256_verified_by_setup_session": "86bfcaefc6c3b7a222a6dac0f0efe4910fab7727cf2a8372663180e725900cf2", "promotion": false, "reason": "Setup evidence only; no reducer event type applies and no production state changes. Ledger/reducer not invoked."},
+  "governance": {"PRODUCTION_DEPLOYMENT_AUTHORIZED": false, "PUBLICATION_AUTHORIZED": false, "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"},
+  "unchanged": ["Resolve project/timeline/grade/captions/audio/settings/render queue", "heartbeat", "Make", "Gemini", "frozen P0-E0-P0-E3", "user-level ~/.claude.json mcpServers and trust entries"]
+}

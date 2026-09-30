@@ -1,0 +1,30 @@
+{
+  "schema": "CLAUDE_CODE_READONLY_ACCEPTANCE_REQUEST_V01",
+  "message_type": "REQUEST",
+  "task_id": "CLAUDE_CODE_READONLY_ACCEPTANCE_20260930_V01",
+  "revision": 1,
+  "parent_task_id": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01",
+  "created_at_utc": "2026-09-30T07:48:02Z",
+  "sender": "Claude Code setup session f8b1ec01-770e-400e-9a6e-bd6815a9e866 (claude-desktop entrypoint, on behalf of Nitin's setup instruction relayed via Dispatch)",
+  "recipient": "new headless Claude Code CLI session c950c6df-dfac-40c3-aafb-08383d50787c (~/.local/bin/claude 2.1.285, project cwd)",
+  "assigned_role": "Claude Code / local Resolve builder (read-only acceptance probe only)",
+  "manually_started": true,
+  "autonomous_handoff_claimed": false,
+  "base_commit": "164912b835f95e24d1ea1434f53713895dbf57f1",
+  "master_state": {"pointer": "p0e4/MASTER_STATE_LATEST.json", "version": "V16.20", "state_version": 46, "sha256": "86bfcaefc6c3b7a222a6dac0f0efe4910fab7727cf2a8372663180e725900cf2"},
+  "inputs_sha256": {
+    "CLAUDE.md": "4aba62fe8d09438acc321ee466cd00eb279733c7d11f6377eb0e1f8026881021",
+    "p0e4/governance/AI_ROLES_AND_COMMUNICATION_V01.md": "7f03b68318dfa6e241b54e58a40ea73b13d75ebbc73f8da97a17b2faa5efe661",
+    "p0e4/governance/CLAUDE_GEMINI_SETUP_RESEARCH_V01.md": "c5217a5328efeae5f47811f1c0cfd5c4b81de1b0682b39bda64d7c295999eed6",
+    "p0e4/MASTER_STATE_LATEST.json": "dd55050eef4d4cbb55664895307a91ee48480e44230b5fa9cd3e1230d61679dd",
+    ".mcp.json": "bfbc55f946ed5e380000dfa650f1cfb86d1dce1119c34819c833c2257fad7b01",
+    ".claude/settings.json": "b215be6666ba67c5e6505fed4dc431d37c930fba527657ddbf7cbc973f2e5480",
+    ".claude/hooks/resolve_run_script_gate.py": "b7386ff6bceb44f72c43d53b9d12b32bd5c38c3900896988078ae74ec58a753c",
+    ".claude/resolve/readonly_identity_probe_v01.py": "22cf949c0bd2b1fa657c542b5a9f3de057a39f444ceca85b3a970f6243ed4bf2"
+  },
+  "goal": "ACK; name instruction versions and Master State; list actually available MCP tools; read Resolve status and current project/timeline identity via allowed read-only tools; demonstrate blocked tools with harmless payloads.",
+  "allowed_effects": ["read repository files", "mcp__davinci_resolve__get_resolve_status", "mcp__davinci_resolve__run_script with pinned probe readonly_identity_probe_v01 only"],
+  "forbidden_effects": ["any Resolve project/timeline/grade/caption/audio/settings/render-queue change", "render start", "project switch/load", "launch_resolve", "file writes by the recipient", "Make/Gmail/Drive/Calendar connector calls", "heartbeat", "deploy/publish"],
+  "acceptance": "Missing checks are NOT_PROVEN; no invented PASS.",
+  "governance": {"PRODUCTION_DEPLOYMENT_AUTHORIZED": false, "PUBLICATION_AUTHORIZED": false, "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"}
+}

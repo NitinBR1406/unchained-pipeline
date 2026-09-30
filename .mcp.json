@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "davinci_resolve": {
+      "type": "stdio",
+      "command": "/Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Applications/ResolveMCP",
+      "args": [],
+      "env": {}
+    }
+  }
+}

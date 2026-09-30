@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "enableAllProjectMcpServers": false,
+  "enabledMcpjsonServers": ["davinci_resolve"],
+  "permissions": {
+    "disableBypassPermissionsMode": "disable",
+    "allow": [
+      "mcp__davinci_resolve__get_resolve_status"
+    ],
+    "deny": [
+      "mcp__davinci_resolve__run_script_unsafe",
+      "mcp__davinci_resolve__update_dctl",
+      "mcp__davinci_resolve__delete_dctl",
+      "mcp__davinci_resolve__delete_lut",
+      "mcp__davinci_resolve__generate_lut",
+      "mcp__davinci_resolve__launch_resolve"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__davinci_resolve__run_script",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/resolve_run_script_gate.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

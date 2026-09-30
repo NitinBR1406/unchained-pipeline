@@ -1,0 +1,9 @@
+TASK REQUEST task_id=CLAUDE_CODE_READONLY_ACCEPTANCE_20260930_V01 revision=2 parent_task_id=CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01.
+Request file: p0e4/evidence/claude_code_local_builder_setup_v02/ACCEPTANCE_TASK_REQUEST_V01_R2.json. Manually started READ-ONLY setup probe. Do not modify anything in Resolve or on disk. Do not call any connector (Make, Gmail, Drive, Calendar, Render, Shotstack, Claude Docs).
+1. ACK: Read the request file; state task_id, revision, your session id if known, and host client.
+2. Read CLAUDE.md and p0e4/MASTER_STATE_LATEST.json; report CLAUDE.md title and Master State version/state_version/sha256.
+3. List the exact names of all tools available to you starting with mcp__davinci_resolve__.
+4. Call mcp__davinci_resolve__get_resolve_status; report raw result.
+5. Read .claude/resolve/readonly_identity_probe_v01.py and call mcp__davinci_resolve__run_script with script EXACTLY that file content (verbatim) and timeout 20; report raw result.
+Never call launch_resolve; do not retry or work around any blocked call.
+6. Final answer: one JSON object only: message_type "RESULT", task_id, revision, ack, instructions_read, master_state, available_resolve_tools, resolve_status_raw, identity_probe_raw, limitations, checks (PROVEN / NOT_PROVEN each).

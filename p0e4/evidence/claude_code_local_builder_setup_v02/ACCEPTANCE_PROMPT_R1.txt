@@ -1,0 +1,12 @@
+TASK REQUEST task_id=CLAUDE_CODE_READONLY_ACCEPTANCE_20260930_V01 revision=1 parent_task_id=CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01.
+Request file: p0e4/evidence/claude_code_local_builder_setup_v02/ACCEPTANCE_TASK_REQUEST_V01.json. This is a manually started READ-ONLY setup probe. Do not modify anything in Resolve or on disk. Do not call any connector (Make, Gmail, Drive, Calendar).
+
+Steps, in order:
+1. ACK: state task_id, your own session id if known, host client/version, and that you received the request file (Read it).
+2. Read CLAUDE.md, p0e4/governance/AI_ROLES_AND_COMMUNICATION_V01.md, p0e4/governance/CLAUDE_GEMINI_SETUP_RESEARCH_V01.md, p0e4/MASTER_STATE_LATEST.json. Report version/status lines you read and the Master State version, state_version, sha256, scope_status.
+3. List every MCP tool actually available to you whose name starts with mcp__davinci_resolve__ (exact names).
+4. Call mcp__davinci_resolve__get_resolve_status and report the raw result.
+5. Read .claude/resolve/readonly_identity_probe_v01.py and call mcp__davinci_resolve__run_script with script set to EXACTLY that file content (verbatim, no changes) and timeout 20. Report the raw result.
+6. Negative controls with harmless payloads (expected to be BLOCKED): (a) mcp__davinci_resolve__run_script with script "result = 1"; (b) mcp__davinci_resolve__run_script_unsafe with script "result = 1". Report exactly what happened.
+Do not retry blocked calls, do not try alternative tools to work around blocks, never call launch_resolve.
+7. Final answer: one JSON object only, keys: message_type "RESULT", task_id, ack, instructions_read (path + version/status line), master_state, available_resolve_tools, resolve_status_raw, identity_probe_raw, negative_controls, limitations, checks (each PROVEN or NOT_PROVEN). Do not claim PASS for anything you did not observe.

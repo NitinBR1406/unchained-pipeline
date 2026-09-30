@@ -1,0 +1,119 @@
+{
+  "message_type": "RESULT",
+  "task_id": "CLAUDE_CODE_READONLY_ACCEPTANCE_20260930_V01",
+  "revision": 2,
+  "ack": {
+    "request_file": "p0e4/evidence/claude_code_local_builder_setup_v02/ACCEPTANCE_TASK_REQUEST_V01_R2.json",
+    "request_read": true,
+    "parent_task_id": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01",
+    "session_id": "d31091da-3428-4709-87c3-2b967985d8d3",
+    "session_id_source": "The session scratchpad path. It matches the recipient named in the request.",
+    "host_client": "Headless Claude Code CLI (Claude Agent SDK), model claude-opus-5-5, cwd /Users/nitinramdaras/Downloads/unchained-pipeline-p0e4 (git worktree, branch p0e4/slice1-production-handoff)",
+    "host_client_version": "Not checked. The request names ~/.local/bin/claude 2.1.285, but I could not verify it from inside this session.",
+    "manually_started": true,
+    "autonomous_handoff_claimed": false
+  },
+  "instructions_read": {
+    "CLAUDE.md": {
+      "title": "UNCHAINED NITIN — Claude Code builder contract",
+      "read": true,
+      "note": "The session-start git status marks CLAUDE.md as modified (M) against HEAD 164912b. I could not compute its SHA256 in this session, so I could not compare it with the expected 4aba62fe…1021."
+    },
+    "p0e4/governance/AI_ROLES_AND_COMMUNICATION_V01.md": "NOT_READ (outside the 6 listed steps for this probe)",
+    "p0e4/governance/CLAUDE_GEMINI_SETUP_RESEARCH_V01.md": "NOT_READ (outside the 6 listed steps for this probe)",
+    "resolve_probe_file": ".claude/resolve/readonly_identity_probe_v01.py (read in full, 20 lines, only Get*/Is* calls)"
+  },
+  "master_state": {
+    "pointer": "p0e4/MASTER_STATE_LATEST.json",
+    "master_state_version": "V16.20",
+    "state_version": 46,
+    "sha256": "86bfcaefc6c3b7a222a6dac0f0efe4910fab7727cf2a8372663180e725900cf2",
+    "path": "p0e4/evidence/master_state_integrity_recovery_v1620/UNCHAINED_MASTER_PROJECT_STATE_V16_20.json",
+    "evidence_manifest": "p0e4/evidence/master_state_integrity_recovery_v1620/SHA256SUMS.txt",
+    "scope_status": "MASTER_STATE_INTEGRITY_RECOVERED_AUTOSTART_BINDING_UNPROVEN",
+    "production_e2e_status": "BLOCKED_NOT_GREEN",
+    "tested_sha": "79cc1e6e0cdc0db92f24094417fd7b6e3424b138",
+    "schema_version": 1,
+    "matches_request_declared_values": "Version, state_version and the sha256 value in the pointer all match the request. The pointed-to state file was not opened and its bytes were not hashed.",
+    "note": "This sha256 is the value written in the pointer file, not a hash I computed."
+  },
+  "available_resolve_tools": [
+    "mcp__davinci_resolve__get_resolve_status",
+    "mcp__davinci_resolve__get_scripting_api",
+    "mcp__davinci_resolve__get_scripting_docs",
+    "mcp__davinci_resolve__get_whats_new",
+    "mcp__davinci_resolve__list_dctls",
+    "mcp__davinci_resolve__list_luts",
+    "mcp__davinci_resolve__run_script",
+    "mcp__davinci_resolve__search_scripting_api"
+  ],
+  "available_resolve_tools_note": "These tools are exposed by name in the session's tool list. That does not mean they are permitted. launch_resolve and run_script_unsafe are not in the list; the run_script description mentions run_script_unsafe, but the tool is not there.",
+  "resolve_status_raw": {
+    "running": true,
+    "version": "21.1"
+  },
+  "identity_probe_raw": {
+    "result": {
+      "product": "DaVinci Resolve Studio",
+      "version": "21.1.0.17",
+      "current_page": "deliver",
+      "project_name": "UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_B_EDITORIAL_RESTRAINT",
+      "project_unique_id": "1db34aaa-a979-4837-a9ae-9df0ed0e3361",
+      "project_timeline_count": 1,
+      "rendering_in_progress": false,
+      "timeline_name": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+      "timeline_unique_id": "4cfe2382-902b-483c-b03a-eae166293a28",
+      "timeline_start_frame": 108000,
+      "timeline_end_frame": 108720,
+      "timeline_frame_rate": 30.0,
+      "timeline_resolution": [
+        "1080",
+        "1920"
+      ]
+    }
+  },
+  "identity_probe_call": {
+    "script": "the content of .claude/resolve/readonly_identity_probe_v01.py, passed verbatim",
+    "timeout": 20,
+    "retries": 0
+  },
+  "limitations": [
+    "This session has no shell or hashing tool, so I computed no SHA256 values. None of the input bindings in inputs_sha256 were verified, including the pinned probe hash 22cf949c…4bf2 that the run_script gate relies on.",
+    "CLAUDE.md shows as modified in git status, so its current bytes may differ from HEAD and from the expected hash.",
+    "The run_script call succeeded. The session gives no evidence of whether .claude/hooks/resolve_run_script_gate.py ran and allowed it, or whether the call went through some other permission path, so gate enforcement is not proven.",
+    "The request goal says to show that tools are blocked by calling them with harmless payloads. The six numbered steps do not ask for this and it was not done, so I have no evidence that the deny rules are enforced.",
+    "I called no connector: Make, Gmail, Drive, Calendar, Render, Shotstack and Claude Docs were all untouched. The claude.ai Gmail and Google Calendar connectors report that they need authorization in the claude.ai connector settings and cannot be used until then.",
+    "I made no file writes, no Resolve changes and no launch_resolve call. The only Resolve tools called were get_resolve_status (once) and run_script (once, with the pinned probe).",
+    "The probe shows project UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_B_EDITORIAL_RESTRAINT open on the deliver page with no render in progress. This probe does not check whether that project or timeline is the intended build target or is free of locks.",
+    "This is Claude Code's own implementation check. It is not independent Gemini QC or Codex verification, and not a Nitin approval."
+  ],
+  "checks": {
+    "ack_request_file_read": "PROVEN",
+    "task_id_and_revision_match": "PROVEN",
+    "session_id_matches_request_recipient": "PROVEN",
+    "host_client_version_2_1_285": "NOT_PROVEN",
+    "claude_md_read": "PROVEN",
+    "claude_md_sha256_binding": "NOT_PROVEN",
+    "governance_docs_read": "NOT_PROVEN",
+    "governance_docs_sha256_binding": "NOT_PROVEN",
+    "master_state_pointer_read": "PROVEN",
+    "master_state_pointer_values_match_request": "PROVEN",
+    "master_state_pointer_file_sha256_binding": "NOT_PROVEN",
+    "master_state_target_file_sha256_binding": "NOT_PROVEN",
+    "resolve_tools_enumerated": "PROVEN",
+    "launch_resolve_not_exposed": "PROVEN",
+    "get_resolve_status_call_succeeded": "PROVEN",
+    "resolve_running_version_21_1": "PROVEN",
+    "identity_probe_executed_verbatim": "PROVEN",
+    "identity_probe_file_sha256_binding": "NOT_PROVEN",
+    "run_script_gate_hook_enforcement": "NOT_PROVEN",
+    "blocked_tools_demonstrated": "NOT_PROVEN",
+    "current_project_timeline_identity_read": "PROVEN",
+    "no_render_in_progress": "PROVEN",
+    "project_is_intended_build_target": "NOT_PROVEN",
+    "project_lock_or_claim_state": "NOT_PROVEN",
+    "no_resolve_or_disk_modification_by_this_session": "PROVEN",
+    "no_connector_calls": "PROVEN",
+    "governance_flags_unchanged": "PROVEN"
+  }
+}

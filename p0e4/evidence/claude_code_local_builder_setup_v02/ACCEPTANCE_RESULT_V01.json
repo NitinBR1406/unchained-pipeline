@@ -1,0 +1,45 @@
+{
+  "schema": "CLAUDE_CODE_READONLY_ACCEPTANCE_RESULT_V01",
+  "message_type": "RESULT",
+  "task_id": "CLAUDE_CODE_READONLY_ACCEPTANCE_20260930_V01",
+  "parent_task_id": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01",
+  "recorded_by": "setup session f8b1ec01-770e-400e-9a6e-bd6815a9e866 (collation + own hash checks; not independent review)",
+  "sessions": [
+    {"revision": 1, "session_id": "c950c6df-dfac-40c3-aafb-08383d50787c", "client": "Claude Code CLI 2.1.285 (-p, permission-mode default)", "model": "claude-opus-5-5", "apiKeySource": "none", "outcome": "success; get_resolve_status denied (untrusted workspace ignores project allow)", "result": "CLAUDE_CODE_RESULT_R1.json", "stream": "ACCEPTANCE_SESSION_R1_c950c6df_STREAM.jsonl"},
+    {"revision": 2, "session_id": "d31091da-3428-4709-87c3-2b967985d8d3", "client": "Claude Code CLI 2.1.285 (-p, permission-mode default, --allowedTools mcp__davinci_resolve__get_resolve_status)", "model": "claude-opus-5-5", "apiKeySource": "none", "outcome": "success; all requested Resolve reads completed", "result": "CLAUDE_CODE_RESULT_R2.json", "stream": "ACCEPTANCE_SESSION_R2_d31091da_STREAM.jsonl"}
+  ],
+  "resolve_observed": {
+    "get_resolve_status_raw": {"running": true, "version": "21.1"},
+    "get_resolve_status_session": "d31091da-3428-4709-87c3-2b967985d8d3 at ~2026-09-30T07:50:37Z",
+    "identity_probe_raw": {"product": "DaVinci Resolve Studio", "version": "21.1.0.17", "current_page": "deliver", "project_name": "UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_B_EDITORIAL_RESTRAINT", "project_unique_id": "1db34aaa-a979-4837-a9ae-9df0ed0e3361", "project_timeline_count": 1, "rendering_in_progress": false, "timeline_name": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01", "timeline_unique_id": "4cfe2382-902b-483c-b03a-eae166293a28", "timeline_start_frame": 108000, "timeline_end_frame": 108720, "timeline_frame_rate": 30.0, "timeline_resolution": ["1080", "1920"]},
+    "identity_probe_sessions": ["c950c6df @ 2026-09-30T07:49:01Z", "d31091da @ 2026-09-30T07:50:37Z"],
+    "consistency_with_v01_direct_handshake": "project/timeline names, frames, fps and resolution match RESOLVE_READONLY_HANDSHAKE_V01.json"
+  },
+  "checks": {
+    "authentication_subscription": "PROVEN",
+    "mcp_server_connected_project_scope": "PROVEN",
+    "task_receipt_ack_by_claude_code": "PROVEN (both sessions read the request file and returned task_id/revision)",
+    "instruction_versions_and_master_state_named": "PROVEN for MASTER_STATE_LATEST (V16.20, sv46, sha 86bfcae...) and governance doc headers (R1); CLAUDE.md tool-level read NOT_PROVEN (auto-load inferred); governance docs read only first 40 lines",
+    "mcp_tool_inventory_listed": "PROVEN (session init tool lists)",
+    "claude_code_to_resolve_tool_call": "PROVEN (get_resolve_status in R2; run_script pinned probe in R1 and R2)",
+    "project_timeline_identity_read": "PROVEN (current open project/timeline, twice, consistent)",
+    "project_is_intended_build_target": "NOT_PROVEN (no build task assigned; not asserted)",
+    "project_lock_or_claim_state": "NOT_PROVEN (only rendering_in_progress=false observed)",
+    "deny_rules_effective": "PROVEN (six denied tools absent from both sessions' tool lists)",
+    "run_script_gate_blocks_unpinned": "PROVEN (hook deny sha 68833fe... in R1, gate log + permission_denials)",
+    "run_script_gate_allows_only_pinned": "PROVEN for the observed calls (gate log allow entries for R1 and R2 with sha 22cf949c...)",
+    "project_allow_rule_effective_without_cli_flag": "NOT_PROVEN (ignored: workspace untrusted)",
+    "no_resolve_mutation": "PROVEN for the calls made (only get_resolve_status and a Get*/Is*-only script executed; render not started)",
+    "no_connector_calls": "PROVEN (no connector tool_use in either stream)",
+    "duplicate_suppression": "NOT_PROVEN (not tested)",
+    "autonomous_handoff": "NOT_CLAIMED (manually started test)",
+    "independent_review": "NOT_PERFORMED (Work/Codex / Gemini not involved)"
+  },
+  "limitations": [
+    "Acceptance sessions had no shell; SHA256 bindings were verified by the setup session, not by the acceptance sessions.",
+    "The setup session itself did not load the new MCP registration; proof comes from two fresh CLI sessions launched by it.",
+    "claude.ai connectors (Drive, Render, Claude Docs connected; Make/Shotstack pending; Gmail/Calendar need auth) were present in the acceptance sessions; none was called and none has an allow rule, but they are not removed from the tool list by project settings.",
+    "Revision 2 needed a session-level --allowedTools flag because the project allow rule is ignored until the workspace is trusted."
+  ],
+  "governance": {"PRODUCTION_DEPLOYMENT_AUTHORIZED": false, "PUBLICATION_AUTHORIZED": false, "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"}
+}

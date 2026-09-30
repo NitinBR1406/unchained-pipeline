@@ -1,0 +1,27 @@
+{
+  "schema": "CLAUDE_CODE_CONFIG_CHANGE_V01",
+  "session_id": "f8b1ec01-770e-400e-9a6e-bd6815a9e866",
+  "changed_at_utc": "2026-09-30T07:45:00Z",
+  "before": {
+    ".mcp.json": "absent",
+    ".claude/": "absent",
+    "~/.claude.json mcpServers (user scope)": "[] (no MCP servers)",
+    "~/.claude.json project entry for worktree": "mcpServers [], enabledMcpjsonServers [], hasTrustDialogAccepted true",
+    "~/.claude.json sha256 before": "efa09a8c610f18b638f6296798892bd72806ae769058a590d6a8595b342070c0",
+    "local backup (not in repo, may contain account metadata)": "~/.claude/backups/20260930_setup_v02/claude.json.pre",
+    "CLAUDE.md sha256 before": "f061b89bdc90a07b277a46b55c5e6169453a5e7952fb8ba954688a6d324cb80c"
+  },
+  "after_sha256": {
+    ".mcp.json": "bfbc55f946ed5e380000dfa650f1cfb86d1dce1119c34819c833c2257fad7b01",
+    ".claude/settings.json": "b215be6666ba67c5e6505fed4dc431d37c930fba527657ddbf7cbc973f2e5480",
+    ".claude/hooks/resolve_run_script_gate.py": "b7386ff6bceb44f72c43d53b9d12b32bd5c38c3900896988078ae74ec58a753c",
+    ".claude/resolve/readonly_identity_probe_v01.py": "22cf949c0bd2b1fa657c542b5a9f3de057a39f444ceca85b3a970f6243ed4bf2",
+    "CLAUDE.md": "4aba62fe8d09438acc321ee466cd00eb279733c7d11f6377eb0e1f8026881021"
+  },
+  "user_scope_changes": "none intentional (~/.claude.json changes only through normal Claude Code session bookkeeping; no mcpServers/trust/permission edits)",
+  "rollback": [
+    "claude mcp remove davinci_resolve -s project   # or delete .mcp.json",
+    "git rm -r .claude .mcp.json && git checkout 164912b -- CLAUDE.md",
+    "Optional: restore ~/.claude/backups/20260930_setup_v02/claude.json.pre only if user-scope config was damaged (it was not edited)"
+  ]
+}
