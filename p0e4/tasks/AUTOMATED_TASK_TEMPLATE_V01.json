@@ -1,0 +1,19 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "REPO_READONLY_20260930_V01",
+  "revision": 1,
+  "parent_task_id": null,
+  "status": "DRAFT",
+  "task_type": "READ_ONLY",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "goal": "Replace with one bounded goal before making READY.",
+  "base_commit": "REPLACE_WITH_EXACT_40_CHARACTER_COMMIT",
+  "inputs": [],
+  "acceptance_criteria": ["Replace with a checkable criterion and evidence requirement."],
+  "budget": {"max_attempts": 1, "timeout_seconds": 300, "max_turns": 8},
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}

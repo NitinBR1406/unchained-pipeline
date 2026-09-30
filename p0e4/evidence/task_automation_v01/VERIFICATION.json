@@ -1,0 +1,75 @@
+{
+  "schema": "P0E4_TASK_AUTOMATION_VERIFICATION_V01",
+  "at_utc": "2026-09-30T12:20:06.858306+00:00",
+  "role": "Work/Codex implementation and offline verification (not external independent audit)",
+  "status": "OFFLINE_VERIFIED_LOCAL_ACTIVATION_NOT_PROVEN",
+  "target_base": "a85bf252fd6e49c9d48b5065ae92f5d6c247c8ca",
+  "pr_original_head": "af54439c998208b02e65542aaa45784c5b8f035b",
+  "authorization_quote": "punt 2 mag ook automatisch door jouw/codex gedaan worden",
+  "tests": {
+    "command": "python3 -B -m unittest discover -s p0e4/tests -p test_task_runner.py -v",
+    "exit_code": 0,
+    "output": "test_cli_does_not_widen_tools_or_load_global_mcp (test_task_runner.ContractTests.test_cli_does_not_widen_tools_or_load_global_mcp) ... ok\ntest_malformed_gate_input_fails_closed (test_task_runner.ContractTests.test_malformed_gate_input_fails_closed) ... ok\ntest_only_existing_read_tools_can_pass_gate (test_task_runner.ContractTests.test_only_existing_read_tools_can_pass_gate) ... ok\ntest_pr_authorization_rejects_mixed_pr_fork_other_merger (test_task_runner.ContractTests.test_pr_authorization_rejects_mixed_pr_fork_other_merger) ... ok\ntest_scope_bypass_and_unknown_fields_rejected (test_task_runner.ContractTests.test_scope_bypass_and_unknown_fields_rejected) ... ok\ntest_secret_filter (test_task_runner.ContractTests.test_secret_filter) ... ok\ntest_traversal_secret_path_bad_hash_budget_and_draft (test_task_runner.ContractTests.test_traversal_secret_path_bad_hash_budget_and_draft) ... ok\ntest_valid_task_and_immutable_gates (test_task_runner.ContractTests.test_valid_task_and_immutable_gates) ... ok\ntest_ambiguous_intent_never_restarts (test_task_runner.RuntimeTests.test_ambiguous_intent_never_restarts) ... ok\ntest_current_pin_drift_blocks_dispatch (test_task_runner.RuntimeTests.test_current_pin_drift_blocks_dispatch) ... ok\ntest_delivery_failure_retries_only_delivery (test_task_runner.RuntimeTests.test_delivery_failure_retries_only_delivery) ... ok\ntest_duplicate_identity_different_pr_is_blocked (test_task_runner.RuntimeTests.test_duplicate_identity_different_pr_is_blocked) ... ok\ntest_input_sha_mismatch_and_symlink_rejected (test_task_runner.RuntimeTests.test_input_sha_mismatch_and_symlink_rejected) ... ok\ntest_real_git_context_and_fake_cli_execution (test_task_runner.RuntimeTests.test_real_git_context_and_fake_cli_execution) ... ok\ntest_two_polls_invoke_once (test_task_runner.RuntimeTests.test_two_polls_invoke_once) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.832s\n\nOK\n",
+    "scope": "15 offline tests; real temporary Git repos, fake Claude/Codex and mocked GitHub. No live MCP/model/GitHub runner calls."
+  },
+  "preserved": {
+    ".claude/settings.json": {
+      "status": "VERIFIED",
+      "command": "git diff --exit-code a85bf252fd6e49c9d48b5065ae92f5d6c247c8ca -- .claude/settings.json",
+      "exit_code": 0,
+      "output": ""
+    },
+    ".mcp.json": {
+      "status": "VERIFIED",
+      "command": "git diff --exit-code a85bf252fd6e49c9d48b5065ae92f5d6c247c8ca -- .mcp.json",
+      "exit_code": 0,
+      "output": ""
+    },
+    ".claude/hooks/resolve_run_script_gate.py": {
+      "status": "VERIFIED",
+      "command": "git diff --exit-code a85bf252fd6e49c9d48b5065ae92f5d6c247c8ca -- .claude/hooks/resolve_run_script_gate.py",
+      "exit_code": 0,
+      "output": ""
+    },
+    ".claude/resolve/readonly_identity_probe_v01.py": {
+      "status": "VERIFIED",
+      "command": "git diff --exit-code a85bf252fd6e49c9d48b5065ae92f5d6c247c8ca -- .claude/resolve/readonly_identity_probe_v01.py",
+      "exit_code": 0,
+      "output": ""
+    },
+    "p0e4/MASTER_STATE_LATEST.json": {
+      "status": "VERIFIED",
+      "command": "git diff --exit-code a85bf252fd6e49c9d48b5065ae92f5d6c247c8ca -- p0e4/MASTER_STATE_LATEST.json",
+      "exit_code": 0,
+      "output": ""
+    },
+    "p0e4/controller": {
+      "status": "VERIFIED",
+      "command": "git diff --exit-code a85bf252fd6e49c9d48b5065ae92f5d6c247c8ca -- p0e4/controller",
+      "exit_code": 0,
+      "output": ""
+    }
+  },
+  "source_sha256": {
+    "CLAUDE.md": "aca6759579354fb0ddb86ddefb2e5760e439b197b464b9968ad3217c0303dd96",
+    "p0e4/governance/AI_ROLES_AND_COMMUNICATION_V01.md": "94ebc4b545eeb7857d3ec7adf451d9083e5b1773e3c0ec229e26a4dfa9e880a9",
+    "p0e4/tasks/README.md": "e80c52da2747560b1d82f468ee3fd440f40fb3480d77adf8cdd91b77cd22ca3f",
+    "p0e4/tasks/AUTOMATION_POLICY_V01.md": "3db1bdc77047220a7b524b8b3e537656a7104c4af0a1e60402f52db991c23c45",
+    "p0e4/tasks/AUTOMATED_TASK_TEMPLATE_V01.json": "720073acfa592c31b355210428ea559ab5f14105a32aefea4ccb359dfbf8a336",
+    "p0e4/task_runner/runner.py": "7922252aa28a71d2c625a6a6e21f18a9f71e502c7661b01b00a41620bf8e8f99",
+    "p0e4/task_runner/tool_gate.py": "02c107fa0a844d7f591d2d9fbf116bac339e50a46caf217c78c077b7a27c8bcc",
+    "p0e4/task_runner/install.py": "fab4552047bbfbb9c72a5b1f404306ddb765b2ea6f7b258cd0c7caf3ca54b966",
+    "p0e4/tests/test_task_runner.py": "0a26f860ec14e060a3b55a3333b3c800b652cb5500aad948d8383ea98f682701"
+  },
+  "not_proven": [
+    "Mac launchd activation",
+    "actual unattended Claude restrictions with installed/managed configuration",
+    "actual local Codex sandbox/login",
+    "live merged-task pickup and result push/merge",
+    "Resolve read-only MCP acceptance",
+    "Gemini communication",
+    "continuous ChatGPT orchestration"
+  ],
+  "no_live_tasks_created": true,
+  "production_gates_changed": false
+}

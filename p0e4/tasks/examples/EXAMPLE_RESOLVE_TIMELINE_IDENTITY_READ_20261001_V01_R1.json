@@ -1,0 +1,95 @@
+{
+  "EXAMPLE": "EXAMPLE ONLY - NOT A REAL TASK - NEVER EXECUTE. Illustrative values; hashes shown are from the 2026-09-30 setup evidence and may be stale.",
+  "schema": "P0E4_TASK_PACKAGE_V01",
+  "task_id": "EXAMPLE_RESOLVE_TIMELINE_IDENTITY_READ_20261001_V01",
+  "revision": 1,
+  "parent_task_id": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01",
+  "task_type": "READ_ONLY",
+  "status": "READY",
+  "created_by": {"actor": "ChatGPT", "role": "orchestrator", "context": "00 MASTER ORCHESTRATOR chat (example)"},
+  "created_at_utc": "2026-10-01T08:00:00Z",
+  "assigned_role": "Claude Code / local Resolve builder",
+  "executor": null,
+
+  "goal": "Record the identity of the currently open Resolve project and timeline, and whether a render is running, without changing anything.",
+  "scope": {
+    "in_scope": ["get_resolve_status", "pinned probe readonly_identity_probe_v01", "evidence write under the evidence path"],
+    "out_of_scope": ["any edit, render, project switch or page switch"],
+    "resolve_project": {"name": "UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_B_EDITORIAL_RESTRAINT", "unique_id": "1db34aaa-a979-4837-a9ae-9df0ed0e3361", "isolated_copy_required": false},
+    "resolve_timeline": {"name": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01", "unique_id": "4cfe2382-902b-483c-b03a-eae166293a28"}
+  },
+  "limits_and_forbidden_actions": [
+    "No publication, deployment, upload, scheduling or Make activation",
+    "No heartbeat change",
+    "No changes to original masters, source media, accepted predecessors or frozen P0-E0-P0-E3",
+    "No Master State edit outside the ledger/reducer",
+    "No Resolve mutation of any kind; if the open project differs, report BLOCKED instead of switching"
+  ],
+  "required_rights": {
+    "resolve_mcp_tools": ["mcp__davinci_resolve__get_resolve_status", "mcp__davinci_resolve__run_script"],
+    "pinned_run_script_probes": ["readonly_identity_probe_v01 (sha256 22cf949c0bd2b1fa657c542b5a9f3de057a39f444ceca85b3a970f6243ed4bf2)"],
+    "render": false,
+    "file_write_paths": ["p0e4/evidence/example_resolve_timeline_identity_read_20261001_v01/"],
+    "within_current_settings": true,
+    "change_approval_needed_if_false": "NITIN_CHANGE_APPROVAL + reviewed .claude/settings.json change"
+  },
+  "inputs": {
+    "base_commit": "658cfacb0d22200faf783ee018251e3dcc73b118",
+    "master_state": {"pointer": "p0e4/MASTER_STATE_LATEST.json", "version": "V16.20", "state_version": 46, "sha256": "86bfcaefc6c3b7a222a6dac0f0efe4910fab7727cf2a8372663180e725900cf2"},
+    "source_files": [{"path": ".claude/resolve/readonly_identity_probe_v01.py", "sha256": "22cf949c0bd2b1fa657c542b5a9f3de057a39f444ceca85b3a970f6243ed4bf2", "role": "pinned read-only probe"}]
+  },
+  "acceptance_criteria": [
+    {"id": "AC1", "criterion": "get_resolve_status raw result recorded", "check_method": "tool result in the session stream; Codex checks it"},
+    {"id": "AC2", "criterion": "Project and timeline name and unique_id equal the scope values, or BLOCKED is recorded", "check_method": "probe result compared with scope; Codex checks it"},
+    {"id": "AC3", "criterion": "Zero Resolve mutations; rendering_in_progress recorded", "check_method": "only get_resolve_status and the pinned probe appear in the gate log and stream"}
+  ],
+  "evidence": {
+    "path": "p0e4/evidence/example_resolve_timeline_identity_read_20261001_v01/",
+    "required": ["session stream (sanitised)", "RESOLVE_GATE_DECISIONS excerpt", "RESULT.json", "SHA256SUMS.txt"],
+    "no_secrets": true
+  },
+  "reviewers": {"technical": "Work/Codex", "creative_platform": "not applicable"},
+  "human_gates": [],
+  "budget": {"max_renders": 0, "max_attempts": 1, "time_budget": "15 minutes"},
+
+  "nitin_approval": {
+    "NITIN_APPROVAL": false,
+    "approval_kind": "not required (READ_ONLY)",
+    "granted_at_local": null,
+    "covers_task_id": null,
+    "covers_revision": null,
+    "verbatim_quote": null,
+    "source": null,
+    "recorded_by": null
+  },
+
+  "claude_code": {
+    "ack": {
+      "acknowledged_at_utc": null,
+      "session_id": null,
+      "client_version": null,
+      "start_instruction_verbatim": null,
+      "preconditions": {"nitin_started_session": null, "approval_valid_or_read_only": null, "inputs_sha256_verified": null, "master_state_verified": null, "rights_within_settings": null, "no_duplicate_ack_or_running": null, "project_timeline_identity": null}
+    },
+    "result": {
+      "status": null,
+      "finished_at_utc": null,
+      "outputs": [],
+      "readback": null,
+      "acceptance_self_check": [],
+      "defects": [],
+      "limitations": [],
+      "evidence_manifest": null,
+      "note": "Claude Code self-checks are not independent verification."
+    }
+  },
+
+  "codex_verification": {"status": null, "reports": [], "summary": null},
+
+  "events": [
+    {"event_id": "EXAMPLE_RESOLVE_TIMELINE_IDENTITY_READ_20261001_V01-R1-E001", "message_type": "REQUEST", "status_after": "DRAFT", "from": "ChatGPT", "to": "Claude Code", "at_utc": "2026-10-01T08:00:00Z", "artifacts": [], "note": "Created from TASK_TEMPLATE.json"},
+    {"event_id": "EXAMPLE_RESOLVE_TIMELINE_IDENTITY_READ_20261001_V01-R1-E002", "message_type": "PROGRESS", "status_after": "READY", "from": "ChatGPT", "to": "Nitin", "at_utc": "2026-10-01T08:05:00Z", "artifacts": [], "note": "Read-only; waiting for Nitin to start: Voer taak EXAMPLE_RESOLVE_TIMELINE_IDENTITY_READ_20261001_V01 uit volgens p0e4/tasks/inbox/EXAMPLE_RESOLVE_TIMELINE_IDENTITY_READ_20261001_V01_R1.json"}
+  ],
+
+  "governance": {"PRODUCTION_DEPLOYMENT_AUTHORIZED": false, "PUBLICATION_AUTHORIZED": false, "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"}
+}

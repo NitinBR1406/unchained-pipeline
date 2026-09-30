@@ -23,6 +23,8 @@ Execution rules:
 
 Roles (per AI_ROLES_AND_COMMUNICATION_V01): ChatGPT = orchestrator; Claude Code = local Resolve builder; Work/Codex = independent technical verification; Gemini = independent creative/platform QC; Nitin = sole human approval authority. Build execution starts only after verified setup and a separate build task.
 
+Task inbox: tasks and findings live in `p0e4/tasks/` (see `p0e4/tasks/README.md`). The delegated automatic route is governed by `p0e4/tasks/AUTOMATION_POLICY_V01.md`. A merged, validated automated task can start a bounded headless session without a separate Nitin message. The runner supplies the task and full pinned governance. Do not poll, dispatch other agents, alter task authority or claim a human approval. Live Resolve builds/renders remain outside this route and need their separate task and rights approval. Historical V01 manual task packages do not become automatically executable.
+
 Native Resolve access is technically bounded in `.claude/settings.json` + `.mcp.json` (server `davinci_resolve`): only `get_resolve_status` is allowed; mutating/destructive/full-system tools are denied; `run_script` passes only the SHA256-pinned read-only probes listed in `.claude/hooks/resolve_run_script_gate.py`. Widening these rules requires explicit NITIN_CHANGE_APPROVAL for the specific build task.
 
 Governance remains:

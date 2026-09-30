@@ -1,0 +1,28 @@
+{
+  "schema": "P0E4_REVIEW_RESULT_V01",
+  "message_type": "REVIEW_RESULT",
+  "review_id": "<TASK_ID>_R<revision>_REVIEW_<NN>",
+  "task_id": "<TASK_ID>",
+  "revision": 1,
+  "reviewer": {"actor": "Work/Codex", "role": "technical_verifier", "session_or_host": "<concrete executor>"},
+  "reviewed_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "reviewed_commit": "<40-hex>",
+  "reviewed_artifacts": [{"path": "<path>", "sha256": "<hex, computed by the reviewer>"}],
+  "methods": ["code inspection | evidence/hash check | decode | settings readback check | regression suite <name>"],
+  "status": "PASS | FAIL | INCONCLUSIVE",
+  "acceptance_criteria": [{"id": "AC1", "result": "PASS | FAIL | NOT_VERIFIED", "evidence": "<ref>"}],
+  "defects": [
+    {
+      "defect_id": "<TASK_ID>-D01",
+      "severity": "CRITICAL | HIGH | MEDIUM | LOW",
+      "artifact_sha256": "<hex>",
+      "location": "<file:line | timecode/frame range>",
+      "observation": "<what was seen>",
+      "expected": "<what should be>",
+      "acceptance_check": "<how the repair will be confirmed>"
+    }
+  ],
+  "coverage_and_limitations": ["<what was not checked>"],
+  "no_approval_claim": "This report is technical verification only. It is not a Nitin approval or a creative judgement.",
+  "evidence_path": "p0e4/evidence/<task_id_lowercase>/"
+}
