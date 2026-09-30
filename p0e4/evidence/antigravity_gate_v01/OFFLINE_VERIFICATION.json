@@ -1,0 +1,26 @@
+{
+  "status": "OFFLINE_VERIFIED_MAC_RUNTIME_NIET_BEWEZEN",
+  "base_commit": "9b64d4ddb6b911dedc2bb487abf33f834190205f",
+  "checks": [
+    {
+      "command": "python3 -B -m unittest discover -s p0e4/tests -p test_antigravity_gate_acceptance.py -v",
+      "exit_code": 0,
+      "output_summary": "Ran 7 tests in 0.198s; OK",
+      "status": "VERIFIED"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s p0e4/tests -p test_task_runner.py -v",
+      "exit_code": 0,
+      "output_summary": "Ran 15 tests in 0.807s; OK",
+      "status": "VERIFIED"
+    }
+  ],
+  "sha256": {
+    "p0e4/tools/antigravity_gate_acceptance.py": "1f3993cb7d4cbb9e2f00090f1ece4d9cc21e64c8b5b9b8e64d7f13c31afe0615",
+    "p0e4/tests/test_antigravity_gate_acceptance.py": "3afb5417bfe0325cfec2683da052009e15d52f9515439257e3b5027286e78a2f"
+  },
+  "automatic_qc_authorized": false,
+  "mac_model_invoked_by_codex": false,
+  "master_state_modified": false,
+  "installed_runner_modified": false
+}
