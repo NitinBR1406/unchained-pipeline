@@ -1,0 +1,32 @@
+{
+  "schema": "CLAUDE_CODE_RESOLVE_READONLY_HANDSHAKE_V01",
+  "observed_at": "2026-09-30T09:29:00+02:00",
+  "method": "direct local Resolve scripting API and bundled ResolveMCP --test/--dump-tools",
+  "mutations": 0,
+  "render_started": false,
+  "resolve": {
+    "product": "DaVinci Resolve Studio",
+    "version": "21.1.0.17",
+    "reachable": true,
+    "active_project": "UNCHAINED_AAKHRI_PREMIUM_SAMPLE_V02_B_EDITORIAL_RESTRAINT",
+    "active_timeline": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+    "rendering": false,
+    "timeline_start_frame": 108000,
+    "timeline_end_frame": 108720,
+    "timeline_fps": 30.0,
+    "timeline_resolution": [1080, 1920]
+  },
+  "native_mcp": {
+    "binary": "/Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Applications/ResolveMCP",
+    "bundle": "/Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Resources/DaVinciResolve.mcpb",
+    "server_name": "davinci_resolve",
+    "server_version": "21.1",
+    "protocol_version": "2024-11-05",
+    "handshake": "PASS",
+    "tool_count": 14,
+    "tool_names": ["launch_resolve","get_resolve_status","get_whats_new","get_scripting_api","search_scripting_api","run_script","run_script_unsafe","get_scripting_docs","list_dctls","list_luts","update_dctl","delete_dctl","delete_lut","generate_lut"],
+    "registered_in_claude_code": false,
+    "registration_blocker": "Explicit NITIN_CHANGE_APPROVAL required because the native server exposes mutating/destructive and full-system tools in addition to read-only tools."
+  },
+  "scope_limit": "This proves local Resolve and native MCP availability. It is not a Claude Code MCP tool call and does not prove Claude task execution."
+}

@@ -1,0 +1,12 @@
+{
+  "schema":"CLAUDE_CODE_LOCAL_BUILDER_SETUP_NEXT_READY_V01",
+  "task_id":"CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01",
+  "next":[
+    "complete Claude Code OAuth login",
+    "obtain NITIN_CHANGE_APPROVAL for native ResolveMCP project registration with restrictive deny rules",
+    "run one unique read-only Claude Code task: instruction acknowledgement, state read, Resolve status/project/timeline read",
+    "persist matching receipt/result/session identity and prove duplicate suppression"
+  ],
+  "master_state_promotion":false,
+  "reason":"Required Claude Code authentication and governed MCP registration are incomplete."
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_STATUS_V01",
+  "task_id": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01",
+  "status": "PARTIALLY_READY_HUMAN_AUTH_AND_CHANGE_APPROVAL_REQUIRED",
+  "repository": {
+    "worktree": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4",
+    "branch": "p0e4/slice1-production-handoff",
+    "inspected_head": "18f9b21e2e31783dd6bbfaac8e245bac7121b327",
+    "tracked_changes_before": 0,
+    "preexisting_untracked_preserved": true,
+    "expected_governance_paths_present": false,
+    "governance_fallback": ["p0e4/MASTER_STATE_LATEST.json","p0e4/evidence/master_state_integrity_recovery_v1620/UNCHAINED_MASTER_PROJECT_STATE_V16_20.json","p0e4/README.md"]
+  },
+  "claude_desktop": {"installed": true, "version": "2.16120.0", "signed_in_ui_observed": true, "existing_dispatch_contexts_preserved": true},
+  "claude_code": {
+    "installed_before": true,
+    "preexisting_embedded_version": "2.1.284",
+    "repaired_native_version": "2.1.285",
+    "launcher": "/Users/nitinramdaras/.local/bin/claude",
+    "shell_path_rule_added_if_missing": true,
+    "doctor_native_install": "PASS",
+    "authentication": "NOT_YET_COMPLETE",
+    "login_flow_started": true,
+    "mcp_servers_configured": 0,
+    "project_instructions": "CLAUDE.md",
+    "project_instructions_created": true
+  },
+  "resolve": {"installed": true, "version": "21.1.0", "running": true, "native_mcp_discovered": true, "native_mcp_handshake": "PASS", "read_only_direct_api": "PASS"},
+  "task_communication": {
+    "unique_task_id_created": true,
+    "claude_code_receipt": "BLOCKED_PENDING_LOGIN",
+    "claude_code_session_id": null,
+    "autonomous_handoff_proven": false,
+    "manual_login_is_not_autonomous_handoff_proof": true
+  },
+  "changes": ["Created project CLAUDE.md","Repaired existing native Claude Code launcher to 2.1.285","Added ~/.local/bin to zsh PATH if missing"],
+  "unchanged": ["Resolve timeline","Resolve grade","Resolve captions","Resolve audio","Resolve project settings","render queue","heartbeat","Make","Gemini context","frozen P0-E0-P0-E3"],
+  "human_actions_required": [
+    "Complete the already-open Claude Code OAuth login in Chrome.",
+    "Explicitly approve project registration of bundled ResolveMCP despite its mutating/destructive tools; registration will then be paired with deny rules and the setup probe will use read-only calls only."
+  ],
+  "governance": {"PRODUCTION_DEPLOYMENT_AUTHORIZED":false,"PUBLICATION_AUTHORIZED":false,"FIRST_REAL_POSTER":"PAUSED_BY_NITIN"}
+}
