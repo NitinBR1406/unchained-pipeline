@@ -101,3 +101,4 @@ Behoud gelockte master/audio. Geen nieuwe aankopen, Make-activering of publicati
 - p0e4/evidence/premium_qc_research_v01_execution/INDEPENDENT_REVIEW_BUNDLE_V01.json
 - p0e4/evidence/daily_master_audit_20260930/DAILY_CHECKPOINT.json
 - p0e4/MASTER_STATE_LATEST.json
+- p0e4/tasks/README.md (taak-inbox die dit werkpakket- en berichtcontract toepast; geen kopie en geen vervanging)

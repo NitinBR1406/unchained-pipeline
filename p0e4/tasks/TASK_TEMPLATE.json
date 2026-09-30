@@ -1,0 +1,95 @@
+{
+  "schema": "P0E4_TASK_PACKAGE_V01",
+  "task_id": "<DOMAIN>_<SUBJECT>_<YYYYMMDD>_V<NN>",
+  "revision": 1,
+  "parent_task_id": null,
+  "task_type": "READ_ONLY | BUILD | REPAIR | VERIFICATION",
+  "status": "DRAFT",
+  "created_by": {"actor": "ChatGPT | Work/Codex | Nitin", "role": "orchestrator | technical_verifier | owner", "context": "<chat/session reference, no secrets>"},
+  "created_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "assigned_role": "Claude Code / local Resolve builder",
+  "executor": null,
+
+  "goal": "<one sentence outcome>",
+  "scope": {
+    "in_scope": ["<concrete item>"],
+    "out_of_scope": ["<concrete item>"],
+    "resolve_project": {"name": "<exact>", "unique_id": "<if known>", "isolated_copy_required": true},
+    "resolve_timeline": {"name": "<exact>", "unique_id": "<if known>"}
+  },
+  "limits_and_forbidden_actions": [
+    "No publication, deployment, upload, scheduling or Make activation",
+    "No heartbeat change",
+    "No changes to original masters, source media, accepted predecessors or frozen P0-E0-P0-E3",
+    "No Master State edit outside the ledger/reducer",
+    "<task-specific forbidden action>"
+  ],
+  "required_rights": {
+    "resolve_mcp_tools": ["mcp__davinci_resolve__get_resolve_status"],
+    "pinned_run_script_probes": [],
+    "render": false,
+    "file_write_paths": ["p0e4/evidence/<task_id_lowercase>/"],
+    "within_current_settings": true,
+    "change_approval_needed_if_false": "NITIN_CHANGE_APPROVAL + reviewed .claude/settings.json change"
+  },
+  "inputs": {
+    "base_commit": "<40-hex>",
+    "master_state": {"pointer": "p0e4/MASTER_STATE_LATEST.json", "version": "<Vxx.yy>", "state_version": 0, "sha256": "<hex>"},
+    "source_files": [{"path": "<repo path or Shared Drive path>", "sha256": "<hex>", "role": "<what it is>"}]
+  },
+  "acceptance_criteria": [
+    {"id": "AC1", "criterion": "<observable, checkable>", "check_method": "<how it is verified; who>"}
+  ],
+  "evidence": {
+    "path": "p0e4/evidence/<task_id_lowercase>/",
+    "required": ["<e.g. readback of Resolve settings>", "<output SHA256>", "SHA256SUMS.txt"],
+    "no_secrets": true
+  },
+  "reviewers": {"technical": "Work/Codex", "creative_platform": "Gemini (existing context) | not applicable"},
+  "human_gates": ["<e.g. NITIN_CREATIVE_APPROVAL for selection; never implied by this task>"],
+  "budget": {"max_renders": 0, "max_attempts": 1, "time_budget": "<existing budget>"},
+
+  "nitin_approval": {
+    "NITIN_APPROVAL": false,
+    "approval_kind": "NITIN_CHANGE_APPROVAL | not required (READ_ONLY)",
+    "granted_at_local": null,
+    "covers_task_id": null,
+    "covers_revision": null,
+    "verbatim_quote": null,
+    "source": null,
+    "recorded_by": null
+  },
+
+  "claude_code": {
+    "ack": {
+      "acknowledged_at_utc": null,
+      "session_id": null,
+      "client_version": null,
+      "start_instruction_verbatim": null,
+      "preconditions": {"nitin_started_session": null, "approval_valid_or_read_only": null, "inputs_sha256_verified": null, "master_state_verified": null, "rights_within_settings": null, "no_duplicate_ack_or_running": null, "project_timeline_identity": null}
+    },
+    "result": {
+      "status": null,
+      "finished_at_utc": null,
+      "outputs": [{"path": null, "sha256": null}],
+      "readback": null,
+      "acceptance_self_check": [{"id": "AC1", "result": "PROVEN | NOT_PROVEN | FAILED", "evidence": null}],
+      "defects": [],
+      "limitations": [],
+      "evidence_manifest": null,
+      "note": "Claude Code self-checks are not independent verification."
+    }
+  },
+
+  "codex_verification": {
+    "status": null,
+    "reports": [],
+    "summary": null
+  },
+
+  "events": [
+    {"event_id": "<task_id>-R1-E001", "message_type": "REQUEST", "status_after": "DRAFT", "from": "<actor>", "to": "Claude Code", "at_utc": "YYYY-MM-DDTHH:MM:SSZ", "artifacts": [], "note": null}
+  ],
+
+  "governance": {"PRODUCTION_DEPLOYMENT_AUTHORIZED": false, "PUBLICATION_AUTHORIZED": false, "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"}
+}
