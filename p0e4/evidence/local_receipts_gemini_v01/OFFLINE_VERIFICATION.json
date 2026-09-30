@@ -1,0 +1,15 @@
+{
+  "status": "OFFLINE_VERIFIED_LOCAL_RUN_PENDING",
+  "command": "python3 -B -m unittest discover -s p0e4/tests -p test_local_receipts_gemini_audit.py -v",
+  "exit_code": 0,
+  "output": "test_actual_tool_use_is_failed_not_quoted_text (test_local_receipts_gemini_audit.AuditTests.test_actual_tool_use_is_failed_not_quoted_text) ... ok\ntest_fake_or_empty_transcript_cannot_pass (test_local_receipts_gemini_audit.AuditTests.test_fake_or_empty_transcript_cannot_pass) ... ok\ntest_missing_transcript_is_unknown (test_local_receipts_gemini_audit.AuditTests.test_missing_transcript_is_unknown) ... ok\ntest_modified_receipt_fails_hash (test_local_receipts_gemini_audit.AuditTests.test_modified_receipt_fails_hash) ... ok\ntest_permission_expansion_fails_recorded_argv (test_local_receipts_gemini_audit.AuditTests.test_permission_expansion_fails_recorded_argv) ... ok\ntest_positive_receipts_and_known_limitations (test_local_receipts_gemini_audit.AuditTests.test_positive_receipts_and_known_limitations) ... ok\ntest_raw_conversation_and_secret_not_exported (test_local_receipts_gemini_audit.AuditTests.test_raw_conversation_and_secret_not_exported) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.182s\n\nOK\n",
+  "test_count": 7,
+  "source_sha256": {
+    "p0e4/tools/local_receipts_gemini_audit.py": "ad0623b7f00638d9bb8170c3c2259463d4afff576dcb1c6b52378d55bbfa0db6",
+    "p0e4/tests/test_local_receipts_gemini_audit.py": "dee9e49c9e323c3ea310703b8665f9c7cdca6731965df80fa2537cd31a18de18",
+    "p0e4/evidence/local_receipts_gemini_v01/RESEARCH_AND_STATUS_V01.md": "3c32cd7c8728b208f351e5d3ed32e890cdb0f2243b94ba49184288cd27881b5f"
+  },
+  "test_scope": "Fixtures only. No real Mac logs, Gemini app/CLI, authenticated publication or model calls used.",
+  "changes_existing_runner_or_pins": false,
+  "gemini_connected": "NIET BEWEZEN"
+}
