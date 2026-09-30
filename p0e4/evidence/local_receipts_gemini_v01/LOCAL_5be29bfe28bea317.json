@@ -1,0 +1,130 @@
+{
+  "schema": "P0E4_LOCAL_RECEIPTS_GEMINI_AUDIT_V01",
+  "at_utc": "2026-09-30T14:04:03.028502+00:00",
+  "status": "PARTIAL_VERIFICATION",
+  "task_pr": 2,
+  "result_commit": "933cd1415b4af450872e813120452504540df63e",
+  "audit_script_sha256": "ad0623b7f00638d9bb8170c3c2259463d4afff576dcb1c6b52378d55bbfa0db6",
+  "checks": {
+    "claude_receipt_hash": {
+      "status": "VERIFIED",
+      "detail": "Local receipt SHA256 compared with immutable published result 933cd1415b4af450872e813120452504540df63e"
+    },
+    "codex_receipt_hash": {
+      "status": "VERIFIED",
+      "detail": "Local receipt SHA256 compared with immutable published result 933cd1415b4af450872e813120452504540df63e"
+    },
+    "local_result_matches_published": {
+      "status": "VERIFIED",
+      "detail": "Exact parsed local/published result comparison"
+    },
+    "task_intent_binding": {
+      "status": "VERIFIED",
+      "detail": "Intent binds task bytes and merge commit"
+    },
+    "claude_recorded_argv": {
+      "status": "VERIFIED",
+      "detail": "Recorded argv and permission overlay; not proof of all effective managed settings"
+    },
+    "codex_no_recorded_tool_items": {
+      "status": "VERIFIED",
+      "detail": "Only agent_message/reasoning items permitted in this tool-free smoke audit"
+    },
+    "codex_execution_receipt": {
+      "status": "VERIFIED",
+      "detail": "Recorded read-only argv, completed turn and published thread binding"
+    },
+    "claude_no_recorded_tool_calls": {
+      "status": "VERIFIED",
+      "detail": "Persisted transcript for published session has assistant events and no recorded tool calls; not OS-wide proof"
+    },
+    "state_version_label_consistency": {
+      "status": "FAILED",
+      "detail": "Existing metadata discrepancy; no state files changed"
+    },
+    "state_sha256_binding": {
+      "status": "VERIFIED",
+      "detail": "Independent SHA256 of committed Master State bytes"
+    },
+    "installed_runtime_binding": {
+      "status": "VERIFIED",
+      "detail": "Installed runtime bytes match local pins and committed baseline"
+    },
+    "delivery_receipt": {
+      "status": "VERIFIED",
+      "detail": "Local delivery receipt matches independently observed merged PR #3"
+    },
+    "os_wide_absence_of_side_effects": {
+      "status": "NIET BEWEZEN",
+      "detail": "Application logs are not a complete operating-system audit."
+    },
+    "effective_managed_permissions": {
+      "status": "NIET BEWEZEN",
+      "detail": "Recorded argv does not establish every managed/global runtime setting."
+    },
+    "resolve_mcp_acceptance": {
+      "status": "NIET BEWEZEN",
+      "detail": "This task intentionally had zero MCP servers."
+    },
+    "gemini_task_receipt": {
+      "status": "NIET BEWEZEN",
+      "detail": "No Gemini task, login or model was started by this audit."
+    }
+  },
+  "observations": {
+    "claude_requested_profile": {
+      "restricted": true,
+      "built_in_tools": "",
+      "mcp_servers": [],
+      "permission_mode": "default",
+      "max_turns": "8"
+    },
+    "codex_event_types": {
+      "thread.started": 1,
+      "turn.started": 1,
+      "item.completed": 1,
+      "turn.completed": 1
+    },
+    "codex_item_types": {
+      "agent_message": 1
+    },
+    "claude_transcript": {
+      "sha256": "c73e1f0450a19a574c821b0bcba4749eb220f057b3b8c77eaf3347f9d89d8670",
+      "assistant_events": 2,
+      "tool_name_counts": {}
+    },
+    "state_versions": {
+      "pointer": "V16.20",
+      "internal": "V16.19",
+      "state_version": 46
+    },
+    "runtime_hash_matches": {
+      "runner.py": true,
+      "tool_gate.py": true
+    }
+  },
+  "gemini_inventory": {
+    "apps": [
+      {
+        "app_name": "Gemini.app",
+        "bundle_id": "com.google.GeminiMacOS",
+        "version": "1.119.2.914",
+        "build": "1.119.2.914",
+        "scripting_dictionaries": [],
+        "url_schemes": [
+          "googlegemini",
+          "comgooglegemini"
+        ]
+      }
+    ],
+    "cli_found": false,
+    "cli_executed": false,
+    "chat_context_access": "NIET BEWEZEN",
+    "identity_is_vendor_verified": false
+  },
+  "raw_transcripts_uploaded": false,
+  "credentials_read": false,
+  "models_started": false,
+  "master_state_modified": false,
+  "runner_modified": false
+}
