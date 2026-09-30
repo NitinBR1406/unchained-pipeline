@@ -1,0 +1,85 @@
+{
+  "schema": "CLAUDE_CODE_READONLY_ACCEPTANCE_REQUEST_V03",
+  "task_id": "CLAUDE_CODE_READONLY_ACCEPTANCE_20260930_V01",
+  "revision": 3,
+  "parent_task_id": "CLAUDE_CODE_LOCAL_BUILDER_SETUP_20260930_V01",
+  "base_commit": "cd543fae822883892dc3a507b30f88c9665ef41e",
+  "configuration_verified_at": "658cfacb0d22200faf783ee018251e3dcc73b118",
+  "authorization": {
+    "user_message": "lets go!",
+    "scope": "Proceed with the proposed read-only acceptance: full instruction reads and tests under existing project permissions; no permission widening or build."
+  },
+  "status": "PREPARED_NOT_DISPATCHED",
+  "dispatch": {
+    "sent": false,
+    "acknowledged": false,
+    "started": false,
+    "blocker": "Current Work executor is Linux; no Claude binary or callable local Mac/Claude transport is available. A repository write is not dispatch."
+  },
+  "workdir": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4",
+  "input_refs": [
+    "CLAUDE.md",
+    "p0e4/governance/AI_ROLES_AND_COMMUNICATION_V01.md",
+    "p0e4/governance/CLAUDE_GEMINI_SETUP_RESEARCH_V01.md",
+    "p0e4/MASTER_STATE_LATEST.json",
+    ".claude/settings.json",
+    ".mcp.json",
+    ".claude/hooks/resolve_run_script_gate.py",
+    ".claude/resolve/readonly_identity_probe_v01.py",
+    "p0e4/evidence/claude_code_local_builder_setup_v02/CODEX_VERIFICATION_V01.json"
+  ],
+  "steps": [
+    "Existing local executor: inspect active tasks and sessions; deduplicate by task_id/revision before starting. Preserve current work. Confirm actual cwd and Git SHA; do not silently reset, change worktrees, or mix PR #1 with the verified configuration.",
+    "Read the pinned independent report at cd543fa. Verify relevant input bytes against the reviewed configuration 658cfac. If changed, record exact diff and do not claim prior verification covers new configuration.",
+    "Inspect actual project/user/managed/session permission sources read-only and record sanitized effective settings, workspace trust and launch flags. Do not copy credentials or full account configuration into evidence.",
+    "Start one traceable Claude Code read-only acceptance session without --allowedTools overrides, bypass mode or permission/trust edits. Use existing supported auth and normal instruction/MCP loading; do not use a mode that omits project instructions.",
+    "Claude recipient must explicitly read COMPLETE CLAUDE.md and both governance documents, followed by Master State pointer AND its target. Use successive Read ranges until EOF if needed; record tool calls and actual ranges, file hashes computed by local executor, titles, key constraints and state identity. No claim of full ingestion from filenames or first 40 lines.",
+    "Record real ACK, task revision, session ID, actual client and host; never supply an invented session ID.",
+    "List visible Resolve MCP tools and call get_resolve_status once using existing project permissions. If denied, preserve error and mark FAILED for this acceptance criterion; do not rerun with extra permission flags, accept a prompt to change permissions, or substitute a direct scripting test.",
+    "If status read is permitted and existing hook is loaded, read the pinned identity probe and submit exactly its content to run_script. Do not modify the script. Record raw tool response and matching gate decision. Do not switch projects, launch Resolve or render.",
+    "Validate role boundaries and precise result: read-only readiness versus build capability versus autonomous handoff are separate. Full instructions and existing-rights execution must both pass for this acceptance.",
+    "Local executor persists immutable R3 receipt, sanitized session stream, result and manifest; use R3 names, preserve prior evidence and push only task evidence. No direct Master State edits."
+  ],
+  "acceptance": [
+    {
+      "id": "FULL_INSTRUCTIONS",
+      "required": "Complete explicit file reads and correct constraint/state summary in same acceptance session."
+    },
+    {
+      "id": "PROJECT_PERMISSIONS",
+      "required": "Successful get_resolve_status with no session allow override or changes to trust/permissions."
+    },
+    {
+      "id": "PINNED_IDENTITY_READ",
+      "required": "Exact approved probe tool call, matching gate receipt and raw Resolve identity result."
+    },
+    {
+      "id": "EVIDENCE",
+      "required": "Matching task/session/request/result, exact hashes and explicit limitations."
+    }
+  ],
+  "stop_conditions": [
+    "If no local transport, remain PREPARED_NOT_DISPATCHED.",
+    "If configuration or authority uncertain, fail closed and record exact blocker.",
+    "If extra rights or trust change is required, report a concrete proposed change; do not apply it under this request."
+  ],
+  "forbidden": [
+    "Resolve mutation",
+    "render",
+    "permission widening",
+    "workspace trust mutation",
+    "heartbeat change",
+    "Make activation",
+    "paid API activation",
+    "new Gemini chat",
+    "deployment",
+    "publication",
+    "duplicate run"
+  ],
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "autonomy_claim": false
+}
