@@ -1,0 +1,33 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "INBOX_READONLY_SMOKE_20260930_V01",
+  "revision": 1,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "READ_ONLY",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "goal": "End-to-end transport acceptance only. Read the full supplied governance and task inputs. In Dutch, report the three unchanged gates, current Master State version/state_version, and the allowed scope of this worker. Explicitly state that you have not inspected or changed Resolve, started a render, used Make, changed source code, or independently verified the transport. Do not call tools. Keep the response under 500 words. Identify your own result as Claude's observation; Codex must independently assess it. No proposal for an automatically dispatched follow-up task.",
+  "base_commit": "3d2885910c2b333065e95b176b70f50200f9e974",
+  "inputs": [
+    {
+      "path": "p0e4/tasks/AUTOMATION_POLICY_V01.md",
+      "sha256": "3db1bdc77047220a7b524b8b3e537656a7104c4af0a1e60402f52db991c23c45"
+    }
+  ],
+  "acceptance_criteria": [
+    "State PRODUCTION_DEPLOYMENT_AUTHORIZED=false, PUBLICATION_AUTHORIZED=false, FIRST_REAL_POSTER=PAUSED_BY_NITIN exactly; cite supplied governance.",
+    "State Master State V16.20/state_version 46 based on the supplied pointer, without claiming production readiness.",
+    "Explain READ_ONLY, BUILD_PROPOSAL text-only and RESOLVE_READ_ONLY; live builds/renders remain blocked.",
+    "Return a bounded Dutch report with no tool calls; no claim of independent verification. The outer verifier must separately inspect actual CLI receipts and GitHub delivery to establish transport."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
