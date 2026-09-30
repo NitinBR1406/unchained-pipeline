@@ -1,4 +1,14 @@
-# P0-E4 task inbox — V01
+# P0-E4 task inbox
+
+## Actuele automatische route
+
+Nitin heeft PR-merge door ChatGPT/Codex gedelegeerd. Gebruik voor de nieuwe route
+[`AUTOMATION_POLICY_V01.md`](AUTOMATION_POLICY_V01.md) en
+`AUTOMATED_TASK_TEMPLATE_V01.json`. Deze policy vervangt de onderstaande historische
+handmatige startregels uitsluitend voor het nieuwe schema. De bestaande V01-taken
+blijven handmatig en worden door de runner geweigerd.
+
+## Historisch V01-contract (handmatige taken)
 
 One fixed place where ChatGPT (orchestrator) and Work/Codex (technical verification) put
 task packages and findings for the local Claude Code builder. The inbox implements the
@@ -75,7 +85,7 @@ Claude Code starts a task only when **all** of the following hold:
 2. The file is in `p0e4/tasks/inbox/` with status `READY`, or it is a repair re-entry
    in `active/` with status `REPAIR_REQUIRED`.
 3. For any build work, meaning anything beyond read-only inspection:
-   `nitin_approval.granted == true` with a date, the source of Nitin's words and a
+   `nitin_approval.NITIN_APPROVAL == true` with a date, the source of Nitin's words and a
    scope that covers this revision. **Without NITIN_APPROVAL there is no build work.**
    Read-only tasks can run without it. Their `task_type` must then be `READ_ONLY`.
 4. Base commit, Master State reference, input SHA256 values and project/timeline

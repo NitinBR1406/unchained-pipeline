@@ -102,3 +102,6 @@ Behoud gelockte master/audio. Geen nieuwe aankopen, Make-activering of publicati
 - p0e4/evidence/daily_master_audit_20260930/DAILY_CHECKPOINT.json
 - p0e4/MASTER_STATE_LATEST.json
 - p0e4/tasks/README.md (taak-inbox die dit werkpakket- en berichtcontract toepast; geen kopie en geen vervanging)
+
+## Gedelegeerde taakuitvoering — aanvulling 2026-09-30
+Nitin heeft in de huidige Work/Codex-sessie de repo-PR → merge → lokale Claude-route gevraagd en expliciet gezegd: “punt 2 mag ook automatisch door jouw/codex gedaan worden”. ChatGPT/Codex mogen daarom taken binnen de begrensde policy mergen. Dit is gedelegeerde uitvoeringsautorisatie, geen NITIN_APPROVAL voor een asset of wijziging van productie-/publicatiegates. De concrete grenzen, automatische berichten en lokale acceptatievoorwaarden staan eenmalig in `p0e4/tasks/AUTOMATION_POLICY_V01.md`. Deze aanvulling vervangt het eerdere vereiste van een handmatig gestarte sessie uitsluitend voor die route. Bestaande Master State, technische Resolve-rechten en creative/QC-rollen blijven leidend.
