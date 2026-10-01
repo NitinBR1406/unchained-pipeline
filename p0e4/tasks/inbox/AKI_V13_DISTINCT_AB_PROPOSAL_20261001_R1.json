@@ -1,0 +1,42 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "AKI_V13_DISTINCT_AB_PROPOSAL_20261001",
+  "revision": 1,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "GEMINI_TEXT_QC",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "goal": "Claude Code is the primary builder. Produce a concrete Dutch A/B implementation proposal, text only, for Nitin's Aakhri Ishq V13. Nitin says V13 is okay for now, not final approval, and he sees no useful difference in the prior A/B. He approved creating this proposal on 2026-10-01. A: quiet cinematic, longer visual holds, restrained movement, performance first. B: rhythmic energetic, visibly differentiated beat-linked accents and expressive readable captions. This is planning authorization only, NOT authorization to alter locked cut timing, rhythm transforms, Resolve tools, renders, source assets, production or publication. Propose any needed departure from previous fixed-edit constraints explicitly as a pending change; do not hide it or pretend already authorized. Keep locked audio, V06 colour and safe crop as common baseline. Use the same proposed 12-second excerpt for both; label excerpt choice provisional until local source/beat review. No media is attached. Do not invent measured beat timestamps, lyrics, lip-sync defects, caption collisions, exact runtime parameter mappings or visual approval. Treat the historical Claude overlap allegation as advisory and reconciled by supplied later records. The old sample plan is historical, not the current creative request. Preserve the gold broken-chain UN logo, Cinzel and Montserrat, no lightning logo, no caption shadows/halos or overlap. Use at most 900 words: compact A/B parameter table, three relative 4-second storyboard blocks, implementation steps for an isolated project copy, and acceptance tests plus prerequisites. Distinguish proposed design values from observed media facts. Enumerate specific future Resolve operations needed and stop before execution. Do not dispatch tasks or call tools. Codex: assess concrete feasibility and constraints from text, mark unverified Resolve/API details. Gemini: assess textual specificity/distinctness and evidence discipline; no claim of actual audiovisual QC. Keep each review concise to fit the 32 KB request budget.",
+  "base_commit": "cfe1739e718b61bfcfa368062170e0af35c9224c",
+  "inputs": [
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/claude/PREMIUM_STYLE_SAMPLE_PLAN_V02.md",
+      "sha256": "ac090f7d8be052cb7e15f307ffcf2c5c10e9c047dcde1f2c7c54ea7d9b9670c0"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/CLAUDE_PLAN_RECONCILIATION_V02.json",
+      "sha256": "f67933ef4cc1f91d83d84a39b0705fbd131c17c342b247b323f95e7f3dc7da79"
+    },
+    {
+      "path": "p0e4/evidence/aki_review_handoff_20261001/V13_MEDIA_VERIFICATION_V01.json",
+      "sha256": "845e25767f97fec1f878e90cdff11aad0319cba13151c777f8ad18f09a05e0ec"
+    }
+  ],
+  "acceptance_criteria": [
+    "The proposal provides two materially distinct treatments of the same provisional 12-second source excerpt, with at least three numeric design differences (e.g. accent count, proposed transform amplitude/duration, caption motion/window) and three aligned 4-second storyboard blocks. Values are proposals, not measured media facts.",
+    "The proposal explicitly distinguishes current fixed audio/colour/crop/edit constraints from pending changes needed for new cut or beat patterns, and lists precise future Resolve operations without claiming authorization or executing them.",
+    "The proposal preserves broken-chain UN branding and font families, prohibits text overlap and halos, and reconciles visible captions with the full-clip minimum 75 percent unobstructed performance rule, targeting 80 percent. It does not claim a short sample proves full-clip compliance.",
+    "The plan specifies an isolated project copy and new outputs, source and asset identity checks, verified beat timing before keyframes, timeline readback and audio/lipsync/visual comparison checks; unverified data or API mappings remain prerequisites, never PASS.",
+    "The output addresses Nitin's insufficient A/B distinction with an explicit side-by-side or alternating same-excerpt review method and acceptance decision reserved to Nitin; it makes no production, publication or actual audiovisual quality claim."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
