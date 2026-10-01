@@ -1,0 +1,79 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "AKI_REVIEW_HANDOFF_AUDIT_20261001",
+  "revision": 2,
+  "parent_task_id": "AKI_REVIEW_HANDOFF_AUDIT_20261001",
+  "status": "READY",
+  "task_type": "READ_ONLY",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "goal": "Correct the two failed criteria in the supplied Claude/Codex result from task PR #7 and produce an actionable handoff using V13 as provisional working baseline. Owner feedback in the current session: V13 is provisionally acceptable; A/B comparison should have delivered more and has no visible difference to Nitin. This is NOT final creative/video approval, NOT A/B selection, NOT template freeze and NOT tool-rights or publication authorization. Do not ask Nitin to choose A/B again. Keep creative improvement OPEN, separate from progressing the existing V13. Use only supplied inputs. No tools, filesystem access, media inspection, render, state changes, agents or new task dispatch. Return Dutch, concise concrete outputs rather than another broad architecture review. Produce (1) corrected dated findings, (2) exact existing V13 handoff, (3) a minimal proposal for checking existing media and preparing a platform derivative, explicitly not executable without required bytes/rights, and (4) a short future creative-improvement brief requiring visibly distinct value over V13. Do not invent technical identifiers or imply access to the Mac.",
+  "base_commit": "7951e72e1b15e65f759208839963ebead0461d4f",
+  "inputs": [
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/BUNDLED_REVIEW_PACKAGE_V02.json",
+      "sha256": "d089229f0621e3dc0a96bf6f7f256c95ce57c21a6c3bc3089f2f0287b21486d8"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/TECHNICAL_QC_V02.json",
+      "sha256": "a146c584acabd770f05225e747d185513708513503b3793c12ee9bfdff8a98d3"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/GEMINI_ARTIFACT_QC_V02.json",
+      "sha256": "ba03d4ed8e4978779811b4d7cb2693a23f8dd8bde7d49eef0095a0fcf6941a75"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/MASTER_STATE_UPDATE_RECEIPT_V02.json",
+      "sha256": "8e9bd39ad1029d739bd5d7b42d4093f87c92f862b943e3aa19bad1b00289d781"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/TECHNICAL_QC_V01.json",
+      "sha256": "d6f46166295ec9d9606494dcd9cbebfb05a47bcb0c72a5fcade336f410c8a13c"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/NEXT_READY.json",
+      "sha256": "3b5d6b2801edb8929dd3b97e0774d753efb7e2d29b3399eeee81874ebec55c9b"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/POSTING_HANDOFF_READINESS.json",
+      "sha256": "6cc3a7d63d739e4a21d41bb3410943b8275bf553357e35d895382f023a29181d"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/FINDINGS.json",
+      "sha256": "3ebc4934ebf43d9a0b61de815fa195f5d666facecd3d6d2293ad429110674b5c"
+    },
+    {
+      "path": "p0e4/MASTER_STATE_LATEST.json",
+      "sha256": "dd55050eef4d4cbb55664895307a91ee48480e44230b5fa9cd3e1230d61679dd"
+    },
+    {
+      "path": "p0e4/evidence/master_state_integrity_recovery_v1620/RECOVERY_RECEIPT_V01.json",
+      "sha256": "a79f49c46a76690728b479c2691aaa243db2199a22f0abc30f7a387b984c508b"
+    },
+    {
+      "path": "p0e4/evidence/master_state_integrity_recovery_v1620/UNCHAINED_MASTER_PROJECT_STATE_V16_20.json",
+      "sha256": "86bfcaefc6c3b7a222a6dac0f0efe4910fab7727cf2a8372663180e725900cf2"
+    },
+    {
+      "path": "p0e4/evidence/task_runs/pr_7/RESULT.json",
+      "sha256": "62f5b7657ef7f6a3f825cdedd0ce4962192d976f5a7949e9167b66fec2f90ae1"
+    }
+  ],
+  "acceptance_criteria": [
+    "Correct the prior CURRENT/absent package and SDR claims to NOT_PROVEN_IN_SUPPLIED_INPUTS; date historical findings and cite full exact repository paths. Do not infer absence from missing inputs.",
+    "Use V13 as provisional baseline; keep creative improvement open, no forced A/B decision, no final approval, no template freeze. Distinguish the supplied owner's feedback from formal authorization.",
+    "Bind V13 review and master with full 64-character hashes and existing review URL; use full hashes for any other proposed inputs. Missing timeline/project/tool identifiers must be explicit NOT_PROVEN prerequisites, never invented.",
+    "Provide a minimal existing-V13 handoff: what can proceed read-only, what requires downloaded media, what requires explicit tool-rights approval, and what is only required before publication. Do not propose a fresh style render as mandatory.",
+    "Future creative brief must require clearly perceptible and purposeful differences at phone viewing size, preservation of locked audio/colour/timing, and honest comparison against V13. Do not choose creative changes as approved or render them.",
+    "Preserve all governance gates and distinguish text analysis from media validation or execution. Respond with corrected deliverables, not a claim that prior failures are automatically VERIFIED."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
