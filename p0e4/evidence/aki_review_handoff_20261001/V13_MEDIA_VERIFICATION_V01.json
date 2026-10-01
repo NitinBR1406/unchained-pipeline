@@ -1,0 +1,84 @@
+{
+  "schema": "V13_EXISTING_MEDIA_VERIFICATION_V01",
+  "source_drive_id": "1uMtCO100ltM0mDK6brgVsO_0qMvWcVYj",
+  "sha256": "b436eda79eadb289d4bbf7e5763eb2858c5eeef0ee13c7cb60f308c372664590",
+  "bytes": 22053571,
+  "full_av_decode": "PASS",
+  "streams": [
+    {
+      "index": 0,
+      "codec_type": "video",
+      "codec_name": "hevc",
+      "width": 1080,
+      "height": 1920,
+      "pix_fmt": "yuv420p10le",
+      "color_transfer": "arib-std-b67",
+      "color_primaries": "bt2020",
+      "r_frame_rate": "30/1",
+      "duration": "24.000000",
+      "nb_frames": "720",
+      "nb_read_frames": "720"
+    },
+    {
+      "index": 1,
+      "codec_type": "audio",
+      "codec_name": "aac",
+      "r_frame_rate": "0/0",
+      "duration": "24.000000",
+      "nb_frames": "1126",
+      "nb_read_frames": "1125",
+      "sample_rate": "48000",
+      "channels": 2
+    },
+    {
+      "index": 2,
+      "codec_type": "data",
+      "r_frame_rate": "0/0",
+      "duration": "24.000000",
+      "nb_frames": "1"
+    }
+  ],
+  "format": {
+    "nb_streams": 3,
+    "nb_programs": 0,
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "format_long_name": "QuickTime / MOV",
+    "start_time": "0.000000",
+    "duration": "24.000000",
+    "size": "22053571",
+    "bit_rate": "7351190",
+    "probe_score": 100
+  },
+  "caption_qc_correction": {
+    "export_visibility": "Can inspect composed frames for visible text overlaps or disappearance; no opacity-PASS inferred.",
+    "actual_opacity": "Requires original Fusion/Text+ settings or isolated alpha/layer renders, exact source binding and declared caption windows. Absent: NOT_PROVEN.",
+    "audio_scope": "Review MP4 is AAC; do not compare its decoded PCM hash against lossless master PCM as equality test."
+  },
+  "not_claimed": [
+    "Creative approval",
+    "Full per-frame caption analysis",
+    "Calibrated HDR assessment",
+    "Fresh lip-sync QC",
+    "Master PCM verification",
+    "Platform readiness",
+    "Independent acceptance of the amended Claude method"
+  ],
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "source_repository_commit": "2021f74ecdfea853d9bbd8c8018b6500c275e155",
+  "sampled_visual_check": {
+    "times_seconds": [
+      2,
+      2.5,
+      3,
+      3.5,
+      4
+    ],
+    "scope": "Five downscaled composed frames, no HDR tone mapping; layout screening only. Not calibrated colour/contrast QC or exhaustive caption scan.",
+    "observation": "Hook text at 2s; very faint text during transition around 2.5s; artist/hook/title grouped at 3-4s. No conclusive geometric text collision established from these five frames. Exact opacity and absence of between-sample gaps remain NOT_PROVEN.",
+    "repair_authorized": false
+  }
+}
