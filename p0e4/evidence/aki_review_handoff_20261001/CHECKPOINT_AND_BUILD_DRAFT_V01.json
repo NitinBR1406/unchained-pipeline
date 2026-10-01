@@ -1,0 +1,237 @@
+{
+  "schema": "AKI_REVIEW_HANDOFF_CHECKPOINT_V01",
+  "source_commit": "f4c3476a45b899c1c3e6c1a291ec5ba9756c6673",
+  "task_pr": "https://github.com/NitinBR1406/unchained-pipeline/pull/7",
+  "status": "EXISTING_PRIVATE_REVIEW_ASSETS_IDENTIFIED_NEXT_BUILD_HUMAN_GATED",
+  "verification": {
+    "task_runner_tests_passed": 15,
+    "master_recovery_tests_passed": 3,
+    "pointer_target_sha256": "MATCH",
+    "pointer_sidecar": "MATCH",
+    "recovered_ledger_records": 35,
+    "reducer_transition_count": 35,
+    "recovered_snapshot_replay": "EXACT_MATCH",
+    "pointer_version": "V16.20",
+    "snapshot_internal_version": "V16.19",
+    "state_version": 46,
+    "version_label_consistency": "FAILED_EXISTING_DEFECT",
+    "manifests": [
+      {
+        "manifest": "p0e4/evidence/master_state_integrity_recovery_v1620/SHA256SUMS.txt",
+        "entries": [
+          {
+            "path": "p0e4/evidence/master_state_integrity_recovery_v1620/AUTONOMOUS_INTAKE_EXECUTION_RECEIPT_V01.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/master_state_integrity_recovery_v1620/ENGINEERING_EVENT_LEDGER.jsonl",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/master_state_integrity_recovery_v1620/FORENSIC_REPORT_V01.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/master_state_integrity_recovery_v1620/NEXT_READY.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/master_state_integrity_recovery_v1620/RECOVERY_RECEIPT_V01.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/master_state_integrity_recovery_v1620/REGRESSION_V01.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/master_state_integrity_recovery_v1620/REPLAY_V01.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/master_state_integrity_recovery_v1620/UNCHAINED_MASTER_PROJECT_STATE_V16_20.json",
+            "status": "MATCH"
+          }
+        ]
+      },
+      {
+        "manifest": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/SHA256SUMS.txt",
+        "entries": [
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/GEMINI_BOUNDED_REPAIR_HISTORY_V01.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/GEMINI_INDEPENDENT_QC_V01.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/MASTER_STATE_UPDATE_STATUS_V01.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/NEXT_READY.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/PERSISTENCE_HANDOFF_RECEIPT_V01.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/RESOLVE_CHAIN_CAPTION_REPAIR_V13.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/TECHNICAL_QC_V01.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/V13_TRANSITION_CONTACT_SHEET_QC2.png",
+            "status": "MATCH"
+          }
+        ]
+      },
+      {
+        "manifest": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/SHA256SUMS.txt",
+        "entries": [
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/BUNDLED_REVIEW_PACKAGE_V02.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/CLAUDE_DISPATCH_RECEIPT_V02.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/CLAUDE_PLAN_RECONCILIATION_V02.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/GEMINI_ARTIFACT_QC_V02.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/GEMINI_ARTIFACT_REVIEW_RAW_V01.md",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/MASTER_STATE_UPDATE_RECEIPT_V02.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/PERSISTENCE_HANDOFF_RECEIPT_V02.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/PREMIUM_STYLE_SAMPLE_EXECUTION_V02.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/TECHNICAL_QC_V02.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/claude/PREMIUM_STYLE_SAMPLE_ACK_V02.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/claude/PREMIUM_STYLE_SAMPLE_PLAN_V02.json",
+            "status": "MATCH"
+          },
+          {
+            "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/premium_style_sample_v02/claude/PREMIUM_STYLE_SAMPLE_PLAN_V02.md",
+            "status": "MATCH"
+          }
+        ]
+      }
+    ]
+  },
+  "existing_review_assets": {
+    "v13_full_preview": {
+      "duration_seconds": 24.0,
+      "review_url": "https://drive.google.com/file/d/1uMtCO100ltM0mDK6brgVsO_0qMvWcVYj/view?usp=drivesdk",
+      "sha256": "b436eda79eadb289d4bbf7e5763eb2858c5eeef0ee13c7cb60f308c372664590",
+      "master_sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088",
+      "scope": "Previously rendered private 24-second clip; repository records decode/QC. Media not downloaded or re-decoded this session; not a newly approved asset."
+    },
+    "style_comparison": {
+      "review_url": "https://drive.google.com/file/d/15HYhzTeTx99WmA5I8VTA3HV-FhseHDl-/view?usp=drivesdk",
+      "sha256": "86360fb72c01630fab0a75d7d45be299fe7b0bac2d443608cc81ee94c5e648c2",
+      "segments": [
+        "V13_REFERENCE 00:00-00:06",
+        "A_CINEMATIC_BALANCE 00:06-00:12",
+        "B_EDITORIAL_RESTRAINT 00:12-00:18"
+      ],
+      "status": "WAITING_FOR_NITIN_PREMIUM_STYLE_DIRECTION",
+      "scope": "Three six-second samples, not a completed full 24-second A/B render."
+    }
+  },
+  "next_build_proposal": {
+    "status": "DRAFT_NOT_DISPATCHABLE",
+    "goal": "One complete 24-second private Aakhri Ishq candidate applying the Nitin-selected style to the existing V13 edit.",
+    "creative_selection": null,
+    "specific_tool_rights_approval": null,
+    "prerequisites": [
+      "Nitin selects A, B, or rejects both; model recommendation is not approval.",
+      "Separate bounded build task with explicit Nitin change approval for required Resolve operations; existing READ_ONLY runner does not authorize build.",
+      "Verify actual source media/project/font/logo hashes and exclusive project identity on Mac before mutation."
+    ],
+    "constraints": [
+      "Preserve locked audio, V06 colour, crop and edit timing.",
+      "Retain existing masters and previews; use isolated project copy and new versioned outputs.",
+      "Do not replace renderer or bypass pinned tool gate.",
+      "No Make, scheduling, social upload, production deployment or publication."
+    ],
+    "outputs": [
+      "Versioned 24-second private review video and master with full audio/video decode, ffprobe and SHA256.",
+      "Readback of actual timeline/Fusion/text/logo windows; reject overlap or stale asset binding.",
+      "Full-clip performance-coverage measurement against the accepted rule; six-second samples are insufficient.",
+      "Independent creative QC of exact resulting bytes with limitations recorded.",
+      "Shared Drive persistence/readback receipt and exact review link."
+    ],
+    "stop_at": "WAITING_FOR_NITIN_FINAL_VIDEO_APPROVAL; no approval automatically granted."
+  },
+  "blockers_reconciled": [
+    {
+      "item": "Historical V11 visual defects",
+      "status": "DO_NOT_TRANSFER_TO_V13_WITHOUT_EVIDENCE",
+      "evidence": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/TECHNICAL_QC_V01.json"
+    },
+    {
+      "item": "Malformed historical ledger",
+      "status": "ADDITIVE_RECOVERY_REPLAY_VERIFIED_HISTORY_RETAINED",
+      "evidence": "p0e4/evidence/master_state_integrity_recovery_v1620/RECOVERY_RECEIPT_V01.json"
+    },
+    {
+      "item": "V16.20/V16.19 version label",
+      "status": "CURRENT_NON_AUTHORITY_METADATA_DEFECT",
+      "next_action": "Prepare additive successor through existing ledger/reducer; coordinate pinned pointer update with runner reinstall, not during active delegated task."
+    },
+    {
+      "item": "Rights, destination/time, exact final/publish approval and platform derivative",
+      "status": "PUBLICATION_PREREQUISITES_UNRESOLVED",
+      "scope": "Do not falsely classify already existing private review files as not rendered."
+    },
+    {
+      "item": "Gemini CLI gate acceptance",
+      "status": "SEPARATE_NONBLOCKING_TRACK_FOR_CURRENT_READONLY_WORK"
+    },
+    {
+      "item": "Current Mac runner / current Make state / media availability",
+      "status": "NOT_OBSERVED_THIS_SESSION"
+    }
+  ],
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "human_approval_created": false,
+    "master_state_mutated": false,
+    "pinned_runtime_mutated": false
+  },
+  "limitations": [
+    "Repository QC and historic Gemini records verified as records, not new audiovisual inspection.",
+    "Snapshot replay integrity does not resolve its stale version label or imply full production readiness.",
+    "Checkpoint is subordinate evidence; not a replacement Master State.",
+    "Task PR merged, but actual runner execution remains unproven until result receipt."
+  ]
+}
