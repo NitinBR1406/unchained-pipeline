@@ -1,0 +1,32 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "GEMINI_CHAIN_ACCEPTANCE_20261001",
+  "revision": 1,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "GEMINI_TEXT_QC",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "goal": "Small TEXT-ONLY acceptance of the installed three-stage route. Read only supplied policy text. Claude: answer each criterion in at most 60 words, citing the supplied source path; distinguish policy statements from actual runtime evidence. Do not use tools, inspect local files, request other agents, render, modify configuration or claim approval. Codex: review those short answers and explicitly mark anything not proved by text. Gemini will receive the task inputs and reports automatically. Keep the entire response under 400 words. No task dispatch from model output.",
+  "base_commit": "af95c6cf2449a242f14d384d0192d4194fcfa05d",
+  "inputs": [
+    {
+      "path": "p0e4/tasks/GEMINI_TEXT_QC_POLICY_V02.md",
+      "sha256": "19e93182dbe852aedcd6a9b2ac0862fbbe0e4199d49f9cd71aaa6e0ba734c67e"
+    }
+  ],
+  "acceptance_criteria": [
+    "Assess the claim: only an explicit GEMINI_TEXT_QC task opts into the extra Gemini stage; merely mentioning Gemini in prose does not opt in.",
+    "Assess the claim: the supplied policy authorizes production deployment or publication.",
+    "Assess the claim: a successful text-only review proves the actual audiovisual quality or lip-sync of V13."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
