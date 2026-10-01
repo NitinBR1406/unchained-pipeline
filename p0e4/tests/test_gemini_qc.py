@@ -128,6 +128,30 @@ class AdapterTests(unittest.TestCase):
                     self.assertTrue((jobs[0]/'intent.json').exists())
                     self.assertFalse((jobs[0]/'RESULT.json').exists())
 
+    def test_empty_global_mcp_is_allowed_without_mutation(self):
+        with tempfile.TemporaryDirectory() as temp:
+            home=Path(temp);root=home/'Unchained-Gemini-QC';root.mkdir()
+            p=home/'.gemini/config/mcp_config.json';p.parent.mkdir(parents=True);p.write_bytes(b'')
+            self.assertIn('global_mcp', M.gate.config_conflicts(home,root))
+            self.assertEqual(M.adapter_config_conflicts(home,root), [])
+            self.assertTrue(p.is_file());self.assertEqual(p.read_bytes(),b'')
+            (p.parent/'hooks.json').write_text('{}')
+            self.assertEqual(M.adapter_config_conflicts(home,root), ['global_hooks'])
+
+    def test_nonempty_malformed_whitespace_and_symlink_mcp_stay_blocked(self):
+        with tempfile.TemporaryDirectory() as temp:
+            home=Path(temp);root=home/'Unchained-Gemini-QC';root.mkdir()
+            p=home/'.gemini/config/mcp_config.json';p.parent.mkdir(parents=True)
+            for raw in [b' ',b'{}',b'invalid',b'{"mcpServers":{}}']:
+                p.write_bytes(raw)
+                self.assertIn('global_mcp', M.adapter_config_conflicts(home,root))
+                self.assertEqual(p.read_bytes(),raw)
+            p.unlink();target=home/'empty';target.write_bytes(b'');p.symlink_to(target)
+            self.assertIn('global_mcp',M.adapter_config_conflicts(home,root))
+            p.unlink();p.parent.rmdir();p.parent.symlink_to(home/'elsewhere')
+            (home/'elsewhere').mkdir();(home/'elsewhere/mcp_config.json').write_bytes(b'')
+            self.assertIn('global_mcp',M.adapter_config_conflicts(home,root))
+
     def test_config_conflict_never_spawns(self):
         with tempfile.TemporaryDirectory() as temp:
             home=Path(temp);(home/'Unchained-Gemini-QC').mkdir()
