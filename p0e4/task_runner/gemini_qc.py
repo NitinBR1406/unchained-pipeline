@@ -12,6 +12,7 @@ import os
 from pathlib import Path
 import re
 import signal
+import stat
 import subprocess
 import sys
 
@@ -128,6 +129,25 @@ def synthetic_request():
             'sources': [{'id': 'S1', 'text': text, 'sha256': sha(text.encode())}], 'governance': GATES.copy()}
 
 
+def adapter_config_conflicts(home, root):
+    """A zero-byte regular global MCP placeholder contains no server configuration.
+
+    Do not change the historical acceptance checker or any existing file.
+    All nonempty, symlink, unreadable or other conflicts remain blocking.
+    """
+    conflicts = gate.config_conflicts(home, root)
+    if 'global_mcp' in conflicts:
+        path = home / '.gemini/config/mcp_config.json'
+        try:
+            require(not any(p.is_symlink() for p in (path, path.parent, path.parent.parent)), 'MCP_SYMLINK')
+            info = path.lstat()
+            if stat.S_ISREG(info.st_mode) and info.st_size == 0 and path.read_bytes() == b'':
+                conflicts.remove('global_mcp')
+        except (OSError, ValueError):
+            pass
+    return conflicts
+
+
 def execute(request, home):
     """One durable attempt; repeat invocation returns HOLD rather than launching again."""
     require(sys.platform == 'darwin', 'MAC_REQUIRED')
@@ -135,7 +155,8 @@ def execute(request, home):
     require(sha(Path(SPEC.origin).read_bytes()) == GATE_SCRIPT_SHA, 'GATE_SOURCE_DRIFT')
     root = home / 'Unchained-Gemini-QC'
     require(root.is_dir() and not root.is_symlink(), 'QC_ROOT')
-    require(not gate.config_conflicts(home, root), 'CUSTOM_CONFIG_HOLD')
+    conflicts = adapter_config_conflicts(home, root)
+    require(not conflicts, 'CUSTOM_CONFIG_HOLD:' + ','.join(conflicts))
     binary = home / '.local/bin/agy'
     require(sha(binary.read_bytes()) == BINARY_SHA, 'BINARY_DRIFT')
     receipt = parse((ROOT / 'p0e4/evidence/antigravity_gate_v01/LOCAL_1affce4e8ee7bf44.json').read_bytes())
@@ -163,6 +184,7 @@ def execute(request, home):
     require(proc.returncode == 0, 'PROCESS_FAILED_NO_RETRY')
     require(all(p.is_file() and not p.is_symlink() and sha(p.read_bytes()) == before[p] for p in protected)
             and sha(binary.read_bytes()) == BINARY_SHA, 'RUNTIME_DRIFT')
+    require(not adapter_config_conflicts(home, root), 'CUSTOM_CONFIG_CHANGED_DURING_RUN')
     require(not (job / 'denials.jsonl').exists(), 'TOOL_ATTEMPT_HOLD')
     require((job / 'stdout.log').stat().st_size <= 100000, 'OUTPUT_SIZE_HOLD')
     raw = (job / 'stdout.log').read_bytes()
