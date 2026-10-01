@@ -1,0 +1,24 @@
+{
+  "schema": "GEMINI_TEXT_QC_OFFLINE_V01",
+  "base_commit": "23ba5614841a53f971712b55d496351a648f94bb",
+  "status": "OFFLINE_VERIFIED_LIVE_ADAPTER_UNPROVEN",
+  "checks": {
+    "adapter_tests": 11,
+    "gate_regression_tests": 7,
+    "runner_regression_tests": 15
+  },
+  "source_sha256": {
+    "p0e4/task_runner/gemini_qc.py": "edba1cfffc60f0340caea983ecaaf683423cecd0126571987025999953e41d2d",
+    "p0e4/tests/test_gemini_qc.py": "8130a07710170619f2c21f2f8ff94c33fb6cdde968be500b59671b41a43be9c3",
+    "p0e4/evidence/gemini_text_qc_v01/README.md": "2249e61e72c52e37d75b268c62adc35e523968bc82a012c55ce2f432b1fccadc"
+  },
+  "runner_modified": false,
+  "automatic_qc_activated": false,
+  "master_state_modified": false,
+  "production_authorized": false,
+  "publication_authorized": false,
+  "limitations": [
+    "Process tests use mock CLI; no real Gemini adapter run in this execution host.",
+    "Not OS-wide isolation; existing PR14 denial scope is unchanged."
+  ]
+}
