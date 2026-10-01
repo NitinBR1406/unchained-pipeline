@@ -1,0 +1,19 @@
+{
+  "schema": "P0E4_AGY_GATE_ACCEPTANCE_V01",
+  "status": "HOLD",
+  "script_sha256": "1f3993cb7d4cbb9e2f00090f1ece4d9cc21e64c8b5b9b8e64d7f13c31afe0615",
+  "runner_modified": false,
+  "production_authorized": false,
+  "publication_authorized": false,
+  "models_started": 0,
+  "raw_logs_uploaded": false,
+  "automatic_qc_authorized": false,
+  "limitations": [
+    "Not OS-wide isolation or effective-settings attestation.",
+    "No MCP, browser, subagent or hook-failure integration test.",
+    "No automatic task-runner integration."
+  ],
+  "preflight_conflicts": [
+    "global_mcp"
+  ]
+}
