@@ -1,0 +1,29 @@
+{
+  "schema": "GEMINI_RUNNER_V02_OFFLINE",
+  "base_commit": "41508909539f9b91ce6b3bddf9c640ffa2dfe65b",
+  "status": "OFFLINE_VERIFIED_MAC_INSTALL_AND_LIVE_ROUTE_UNPROVEN",
+  "tests": {
+    "runner_integration_and_upgrade": 10,
+    "adapter": 13,
+    "gate": 7,
+    "legacy_runner": 15
+  },
+  "source_sha256": {
+    "p0e4/task_runner/runner_gemini.py": "03b988e7f3eb9e719461917daa35eed332c87827a934d776f19349f989f7892c",
+    "p0e4/task_runner/upgrade_gemini.py": "468a00ec0dbd29b6df95e5e82ba2fb1d7a96ad918f1bafefbf9cb0fd58be2443",
+    "p0e4/tasks/GEMINI_TEXT_QC_POLICY_V02.md": "19e93182dbe852aedcd6a9b2ac0862fbbe0e4199d49f9cd71aaa6e0ba734c67e",
+    "p0e4/tests/test_gemini_runner.py": "dc1432450f6fff5932ae4a895c96d5d4680cdad5b0f588043ff2ee4509df6430",
+    "p0e4/evidence/gemini_runner_v02/README.md": "c5416cb3c3eb000e8bd653db9f064073c24d7885491f5f4ef784a2a2f3aed050"
+  },
+  "old_runner_modified": false,
+  "old_installer_modified": false,
+  "master_state_modified": false,
+  "production_authorized": false,
+  "publication_authorized": false,
+  "live_integration_accepted": false,
+  "limits": [
+    "Process and launchd test doubles are not real Mac acceptance.",
+    "Separate-model text review is not blind or audiovisual QC.",
+    "No OS-wide isolation or all-tool denial claim."
+  ]
+}
