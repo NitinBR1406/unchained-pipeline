@@ -1,0 +1,21 @@
+{
+  "schema": "GEMINI_TEXT_QC_EMPTY_MCP_FIX_V01",
+  "base_commit": "dc447d896f0ed00c34d814d733729259cce369e1",
+  "reason": "Owner observed global_mcp recreated as zero-byte regular file; preflight stopped before intent/model launch.",
+  "change": "Adapter alone permits a readable zero-byte regular global MCP file; file and parent symlinks, nonempty files and all other conflicts still block. Recheck after model completion. Historical gate checker unchanged.",
+  "tests": {
+    "adapter": 13,
+    "historical_gate": 7,
+    "runner": 15
+  },
+  "source_sha256": {
+    "p0e4/task_runner/gemini_qc.py": "d9bfde84a1ac9f79224c0c4b4251d32aa674518aeb8e0bfd1e506bd8872a9b34",
+    "p0e4/tests/test_gemini_qc.py": "d6469e68fb5b4250864e11c7f4185bfa7ca67f872a31960ed6365fab79c0900b"
+  },
+  "live_adapter_acceptance": "NOT_PROVEN",
+  "automatic_runner_activated": false,
+  "existing_configuration_mutated": false,
+  "production_authorized": false,
+  "publication_authorized": false,
+  "limitation": "Pre/post checks are not OS-wide isolation or protection from concurrent configuration changes."
+}
