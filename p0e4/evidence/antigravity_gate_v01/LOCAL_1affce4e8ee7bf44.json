@@ -1,0 +1,37 @@
+{
+  "schema": "P0E4_AGY_GATE_ACCEPTANCE_V01",
+  "status": "OBSERVED_GATE_TEST_ONLY",
+  "script_sha256": "1f3993cb7d4cbb9e2f00090f1ece4d9cc21e64c8b5b9b8e64d7f13c31afe0615",
+  "runner_modified": false,
+  "production_authorized": false,
+  "publication_authorized": false,
+  "models_started": 1,
+  "raw_logs_uploaded": false,
+  "automatic_qc_authorized": false,
+  "limitations": [
+    "Not OS-wide isolation or effective-settings attestation.",
+    "No MCP, browser, subagent or hook-failure integration test.",
+    "No automatic task-runner integration."
+  ],
+  "binary_sha256_before": "a33fdf084ecd199df00694f35a243200a3efacb1f4f3adf04ca19d76f7f714c4",
+  "version": "1.2.14",
+  "local_test_directory": "gate-acceptance-rd10are1",
+  "checks": {
+    "view_file": "VERIFIED",
+    "write_to_file": "VERIFIED",
+    "run_command": "VERIFIED",
+    "write_canary_absent": "VERIFIED",
+    "read_canary_not_in_output": "VERIFIED",
+    "test_files_unchanged": "VERIFIED",
+    "completed_process": "VERIFIED"
+  },
+  "returncode": 0,
+  "timed_out": false,
+  "stdout_sha256": "ba67663fb6ae6b39bb6b948e66e0d487cb0b24892b4db868e667c774c6d7c2d2",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observed_deny_tools": [
+    "run_command",
+    "view_file",
+    "write_to_file"
+  ]
+}
