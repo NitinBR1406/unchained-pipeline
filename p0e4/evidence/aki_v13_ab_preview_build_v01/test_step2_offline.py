@@ -1,4 +1,4 @@
-"""Offline tests for step2_build_render_ab.py (rev 3). Never imports DaVinciResolveScript or touches Resolve."""
+"""Offline tests for step2_build_render_ab.py (rev 4). Never imports DaVinciResolveScript or touches Resolve."""
 import copy, importlib.util, json, re, tempfile, unittest
 from pathlib import Path
 
@@ -138,10 +138,10 @@ class PatchAndReadback(unittest.TestCase):
     def test_negatives(self):
         a, pa = self.patched["A"]; b, pb = self.patched["B"]
         cases = {
-            "caption opacity curve emptied": (re.sub(r"(UN_AB_HOOKBlend = BezierSpline \{.*?KeyFrames = \{)(.*?)(\n\t\t\t\})",
+            "caption opacity curve emptied": (re.sub(r"(UN_AB_HOOKMergeBlend = BezierSpline \{.*?KeyFrames = \{)(.*?)(\n\t\t\t\})",
                                                      r"\1\3", a, count=1, flags=re.S), pa),
-            "caption position key changed": (set_spline_value(b, "UN_AB_HOOK_P2CY", 0, 0.5), pb),
-            "caption opacity key changed": (set_spline_value(a, "UN_AB_HOOKBlend", 9, 0.5), pa),
+            "caption position key changed": (set_spline_value(b, "UN_AB_HOOK_P2CenterY", 0, 0.5), pb),
+            "caption opacity key changed": (set_spline_value(a, "UN_AB_HOOKMergeBlend", 9, 0.5), pa),
             "caption tool removed": (a[:s2.span(a, "UN_AB_HOOK")[0]] + a[s2.span(a, "UN_AB_HOOK")[1]:], pa),
             "output disconnected": (replace_in_tool(a, "MediaOut1", '"UN_AB_HOOKMerge"', '"Merge2"'), pa),
             "caption merge background rewired": (replace_in_tool(b, "UN_AB_HOOK_P2Merge", '"UN_AB_HOOK_P1Merge"', '"Merge2"'), pb),
@@ -329,6 +329,20 @@ class RealResolveRoundTrip(unittest.TestCase):
         after = (FIXTURES / "A_clip0_after_inplace_import_resolve_export.comp").read_text(encoding="utf-8")
         _, plan = s2.patch_clip(source, "A", s2.VARIANTS["A"], 0)
         s2.verify_readback(after, plan)
+
+    def test_verify_accepts_resolve_renamed_caption_splines(self):
+        """Rev-3 run: Fusion renamed UN_AB_HOOKCX/CY/Blend to <Tool><Input>; rev-4 names match that readback."""
+        source = (FIXTURES / "A_clip1_source_resolve_export.comp").read_text(encoding="utf-8")
+        after = (FIXTURES / "A_clip1_after_r3_import_resolve_export.comp").read_text(encoding="utf-8")
+        _, plan = s2.patch_clip(source, "A", s2.VARIANTS["A"], s2.TEXT_CLIP)
+        s2.verify_readback(after, plan)
+
+    def test_spline_names_follow_fusion_convention(self):
+        for key, v in s2.VARIANTS.items():
+            _, plan = s2.patch_clip(FIXTURE, key, v, s2.TEXT_CLIP)
+            for (tool_name, input_name), op in plan["wiring"].items():
+                if op in plan["splines"]:
+                    self.assertEqual(op, tool_name + input_name)
 
     def test_verify_rejects_unpatched_resolve_export(self):
         source = (FIXTURES / "A_clip0_source_resolve_export.comp").read_text(encoding="utf-8")

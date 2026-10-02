@@ -1,4 +1,4 @@
-"""AKI V13 A/B preview build V01 (rev 3) - step 2: build A/B timelines inside the isolated copy and render global [60,420).
+"""AKI V13 A/B preview build V01 (rev 4) - step 2: build A/B timelines inside the isolated copy and render global [60,420).
 Mutates only project UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01 (must already be open; never calls LoadProject).
 Pure helpers are importable without Resolve (offline tests); Resolve is only touched when run as __main__."""
 import hashlib, json, re, sys, time
@@ -10,9 +10,9 @@ V13_DRP = Path("/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aa
                "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR.drp")
 V13_DRP_SHA = "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec"
 BASE_TIMELINE = "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01"
-REV = "R3"
-COMPS = OUT / "comps_r3"
-FAILED_REV2_TIMELINE = "AKI_V13_AB_A_CINEMATIC_V01"   # left untouched as evidence of the failed rev-2 run
+REV = "R4"
+COMPS = OUT / "comps_r4"
+FAILED_TIMELINES = ("AKI_V13_AB_A_CINEMATIC_V01", "AKI_V13_AB_A_CINEMATIC_R3")   # failed rev-2/rev-3 runs, left untouched
 V1 = [(0, 89), (89, 204), (204, 335), (335, 491), (491, 623), (623, 720)]
 SRC_OFFSET = 2144                 # IMG_5739 source frame = timeline frame + 2144 (DRP In values)
 AUDIO_FILE, AUDIO_OFFSET = "AAKHRI ISHQ MASTER 2.wav", 2160   # WAV frame = timeline frame + 2160 (72.000 s)
@@ -26,10 +26,10 @@ MAX_ZOOM = 1.15                   # relative to V13 framing; V13 already upscale
 NEUTRAL = {"ZoomX": 1.0, "ZoomY": 1.0, "Pan": 0.0, "Tilt": 0.0, "RotationAngle": 0.0,
            "CropLeft": 0.0, "CropRight": 0.0, "CropTop": 0.0, "CropBottom": 0.0}
 VARIANTS = {   # shots: (start, end, zoom_from, zoom_to, window_dx) in excerpt frames; punch: (pp, attack, decay)
-    "A": {"timeline": "AKI_V13_AB_A_CINEMATIC_R3", "style": "Medium", "punch": None,
+    "A": {"timeline": "AKI_V13_AB_A_CINEMATIC_R4", "style": "Medium", "punch": None,
           "shots": [(0, 120, 1.00, 1.03, 0.0), (120, 240, 1.10, 1.13, 0.0), (240, 360, 1.00, 1.03, 0.02)],
           "captions": [("UN_AB_HOOK", 0, 0.205, [(30, 0), (38, 1), (82, 1), (90, 0)], None)]},
-    "B": {"timeline": "AKI_V13_AB_B_RHYTHMIC_R3", "style": "SemiBold", "punch": (0.03, 2, 8),
+    "B": {"timeline": "AKI_V13_AB_B_RHYTHMIC_R4", "style": "SemiBold", "punch": (0.03, 2, 8),
           "shots": [(0, 60, 1.00, 1.00, 0.0), (60, 120, 1.12, 1.12, 0.0), (120, 180, 1.00, 1.00, 0.03),
                     (180, 240, 1.10, 1.10, 0.0), (240, 300, 1.06, 1.06, 0.0), (300, 360, 1.12, 1.12, -0.02)],
           "captions": [("UN_AB_HOOK_P1", 1, 0.223, [(30, 0), (36, 1), (84, 1), (90, 0)], (30, 36)),
@@ -37,6 +37,7 @@ VARIANTS = {   # shots: (start, end, zoom_from, zoom_to, window_dx) in excerpt f
 }
 RISE, TEXT_SIZE = 0.008, 0.08
 TEXTPLUS_DEFAULTS = {"Softness1": 0.0, "Enabled2": 0.0, "Enabled3": 0.0}   # Fusion may omit default-valued inputs on export
+TEXTPLUS_DEFAULT_SIZE = 0.08   # rev-3 readback: Fusion omitted Size when set to 0.08, i.e. 0.08 is the TextPlus default
 RENDER_TIMEOUT_S, STOP_TIMEOUT_S = 900, 60
 NUM = r"-?\d+(?:\.\d*)?(?:[eE][-+]?\d+)?"
 
@@ -231,27 +232,30 @@ def patch_clip(text, key, v, idx):
             okeys = [(0, 0.0)] + [(local(ex), float(o)) for ex, o in opacity] + [(length - 1, 0.0)]
             ykeys = r6([(0, y - RISE), (local(rise[0]), y - RISE), (local(rise[1]), y), (length - 1, y)]
                        if rise else [(0, y), (length - 1, y)])
-            plan["splines"].update({f"{name}CX": [(0, 0.5), (length - 1, 0.5)], f"{name}CY": ykeys, f"{name}Blend": okeys})
+            plan["splines"].update({f"{name}CenterX": [(0, 0.5), (length - 1, 0.5)], f"{name}CenterY": ykeys, f"{name}MergeBlend": okeys})
             plan["kinds"].update({name: "TextPlus", f"{name}Center": "XYPath", f"{name}Merge": "Merge"})
-            plan["wiring"].update({(name, "Center"): f"{name}Center", (f"{name}Center", "X"): f"{name}CX",
-                                   (f"{name}Center", "Y"): f"{name}CY", (f"{name}Merge", "Blend"): f"{name}Blend",
+            plan["wiring"].update({(name, "Center"): f"{name}Center", (f"{name}Center", "X"): f"{name}CenterX",
+                                   (f"{name}Center", "Y"): f"{name}CenterY", (f"{name}Merge", "Blend"): f"{name}MergeBlend",
                                    (f"{name}Merge", "Background"): last, (f"{name}Merge", "Foreground"): name})
-            blocks += [spline(f"{name}CX", plan["splines"][f"{name}CX"]), spline(f"{name}CY", ykeys),
-                       xypath(f"{name}Center", f"{name}CX", f"{name}CY"),
+            blocks += [spline(f"{name}CenterX", plan["splines"][f"{name}CenterX"]), spline(f"{name}CenterY", ykeys),
+                       xypath(f"{name}Center", f"{name}CenterX", f"{name}CenterY"),
                        tool(name, "TextPlus", [inp("Width", value=2160), inp("Height", value=3840),
                             inp("UseFrameFormatSettings", value=1), inp("Center", f"{name}Center", source="Value"),
                             inp("StyledText", value=f'"{words}"'), inp("Font", value='"Montserrat"'),
                             inp("Style", value=f'"{v["style"]}"'), inp("Size", value=TEXT_SIZE),
                             inp("Softness1", value=0), inp("Enabled2", value=0), inp("Enabled3", value=0),
                             inp("VerticalJustificationNew", value=3), inp("HorizontalJustificationNew", value=3)]),
-                       spline(f"{name}Blend", okeys),
-                       tool(f"{name}Merge", "Merge", [inp("Blend", f"{name}Blend", source="Value"), inp("Background", last),
+                       spline(f"{name}MergeBlend", okeys),
+                       tool(f"{name}Merge", "Merge", [inp("Blend", f"{name}MergeBlend", source="Value"), inp("Background", last),
                                                       inp("Foreground", name), inp("PerformDepthMerge", value=0)])]
             plan["captions"].append({"tool": name, "text": words, "font": "Montserrat", "style": v["style"], "size": TEXT_SIZE,
                                      "opacity_excerpt_keys": opacity, "rise_excerpt": rise})
             last = f"{name}Merge"
         text = rewire(text, "MediaOut1", "Input", first, last)
     plan["wiring"][("MediaOut1", "Input")] = last
+    for (tool_name, input_name), op in plan["wiring"].items():
+        if op in plan["splines"]:   # Fusion renames animation splines to <Tool><Input> on import
+            assert op == tool_name + input_name, (tool_name, input_name, op)
     text, n = re.subn(r"\n\tTools = (?:ordered\(\) )?\{\n", lambda m: m.group(0) + "".join(blocks), text, count=1)
     assert n == 1
     plan["window_extremes"] = [min(w[0] for w in windows), max(w[1] for w in windows),
@@ -276,7 +280,7 @@ def verify_readback(body, plan):
     for c in plan["captions"]:
         b = block_of(body, c["tool"])
         assert string(b, "StyledText") == c["text"] and string(b, "Font") == c["font"] and string(b, "Style") == c["style"], c
-        assert abs(scalar(b, "Size") - c["size"]) < 1e-9, c
+        assert abs(scalar(b, "Size", TEXTPLUS_DEFAULT_SIZE) - c["size"]) < 1e-9, c
         for k, default in TEXTPLUS_DEFAULTS.items():
             assert scalar(b, k, default) == 0.0, (c["tool"], k)
     ours = {c["tool"] for c in plan["captions"]}
@@ -416,7 +420,7 @@ def build(d, receipt):
     for k, val in step1["settings"].items():
         assert p.GetSetting(k) == val, k
     timelines = {p.GetTimelineByIndex(i).GetName(): p.GetTimelineByIndex(i) for i in range(1, p.GetTimelineCount() + 1)}
-    assert sorted(timelines) == sorted([BASE_TIMELINE, FAILED_REV2_TIMELINE]), sorted(timelines)
+    assert sorted(timelines) == sorted([BASE_TIMELINE, *FAILED_TIMELINES]), sorted(timelines)
     base = timelines[BASE_TIMELINE]
     check_v1(base); base_audio = audio(base); before = base_comp_hashes(base, "before")
     for key, v in VARIANTS.items():
@@ -460,7 +464,7 @@ def build(d, receipt):
 def main():
     sys.path.append("/Library/Application Support/Blackmagic Design/DaVinci Resolve/Developer/Scripting/Modules/")
     import DaVinciResolveScript as d
-    receipt = {"schema": "AKI_V13_AB_PREVIEW_BUILD_V01", "revision": 3, "failed_rev2_timeline_left_untouched": FAILED_REV2_TIMELINE, "project": COPY, "base_timeline": BASE_TIMELINE,
+    receipt = {"schema": "AKI_V13_AB_PREVIEW_BUILD_V01", "revision": 3, "failed_timelines_left_untouched": FAILED_TIMELINES, "project": COPY, "base_timeline": BASE_TIMELINE,
                "excerpt_global_half_open": list(EXCERPT), "video_source_offset": SRC_OFFSET, "audio_source_offset": AUDIO_OFFSET,
                "zoom_anchor_pre_rhythm": F, "max_relative_zoom": MAX_ZOOM, "variants": {},
                "nitin_approval_of_result": False, "publication_authorized": False}
