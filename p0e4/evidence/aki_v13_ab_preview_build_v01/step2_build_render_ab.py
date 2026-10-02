@@ -1,4 +1,4 @@
-"""AKI V13 A/B preview build V01 (rev 2) - step 2: build A/B timelines inside the isolated copy and render global [60,420).
+"""AKI V13 A/B preview build V01 (rev 3) - step 2: build A/B timelines inside the isolated copy and render global [60,420).
 Mutates only project UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01 (must already be open; never calls LoadProject).
 Pure helpers are importable without Resolve (offline tests); Resolve is only touched when run as __main__."""
 import hashlib, json, re, sys, time
@@ -10,6 +10,9 @@ V13_DRP = Path("/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aa
                "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR.drp")
 V13_DRP_SHA = "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec"
 BASE_TIMELINE = "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01"
+REV = "R3"
+COMPS = OUT / "comps_r3"
+FAILED_REV2_TIMELINE = "AKI_V13_AB_A_CINEMATIC_V01"   # left untouched as evidence of the failed rev-2 run
 V1 = [(0, 89), (89, 204), (204, 335), (335, 491), (491, 623), (623, 720)]
 SRC_OFFSET = 2144                 # IMG_5739 source frame = timeline frame + 2144 (DRP In values)
 AUDIO_FILE, AUDIO_OFFSET = "AAKHRI ISHQ MASTER 2.wav", 2160   # WAV frame = timeline frame + 2160 (72.000 s)
@@ -23,10 +26,10 @@ MAX_ZOOM = 1.15                   # relative to V13 framing; V13 already upscale
 NEUTRAL = {"ZoomX": 1.0, "ZoomY": 1.0, "Pan": 0.0, "Tilt": 0.0, "RotationAngle": 0.0,
            "CropLeft": 0.0, "CropRight": 0.0, "CropTop": 0.0, "CropBottom": 0.0}
 VARIANTS = {   # shots: (start, end, zoom_from, zoom_to, window_dx) in excerpt frames; punch: (pp, attack, decay)
-    "A": {"timeline": "AKI_V13_AB_A_CINEMATIC_V01", "style": "Medium", "punch": None,
+    "A": {"timeline": "AKI_V13_AB_A_CINEMATIC_R3", "style": "Medium", "punch": None,
           "shots": [(0, 120, 1.00, 1.03, 0.0), (120, 240, 1.10, 1.13, 0.0), (240, 360, 1.00, 1.03, 0.02)],
           "captions": [("UN_AB_HOOK", 0, 0.205, [(30, 0), (38, 1), (82, 1), (90, 0)], None)]},
-    "B": {"timeline": "AKI_V13_AB_B_RHYTHMIC_V01", "style": "SemiBold", "punch": (0.03, 2, 8),
+    "B": {"timeline": "AKI_V13_AB_B_RHYTHMIC_R3", "style": "SemiBold", "punch": (0.03, 2, 8),
           "shots": [(0, 60, 1.00, 1.00, 0.0), (60, 120, 1.12, 1.12, 0.0), (120, 180, 1.00, 1.00, 0.03),
                     (180, 240, 1.10, 1.10, 0.0), (240, 300, 1.06, 1.06, 0.0), (300, 360, 1.12, 1.12, -0.02)],
           "captions": [("UN_AB_HOOK_P1", 1, 0.223, [(30, 0), (36, 1), (84, 1), (90, 0)], (30, 36)),
@@ -329,10 +332,24 @@ def audio(tl):
 def base_comp_hashes(base, tag):
     out = {}
     for idx in BUILD_CLIPS:
-        fp = OUT / "comps" / f"BASE_clip{idx}_{tag}.comp"
+        fp = COMPS / f"BASE_clip{idx}_{tag}.comp"
         assert base.GetItemListInTrack("video", 1)[idx].ExportFusionComp(str(fp), 1)
         out[idx] = sha(fp)
     return out
+
+
+def swap_comp(it, dst):
+    """Rev-2 run on Resolve 21.1 showed ImportFusionComp replacing 'Composition 1' in place (name list unchanged).
+    Accept that, or the add-new behaviour; anything else fails. Content is proven by verify_readback afterwards."""
+    assert it.ImportFusionComp(str(dst))
+    names = it.GetFusionCompNameList()
+    if names == ["Composition 1"]:
+        return "REPLACED_IN_PLACE"
+    new = [n for n in names if n != "Composition 1"]
+    assert len(new) == 1 and "Composition 1" in names, names
+    assert it.LoadFusionCompByName(new[0]) and it.DeleteFusionCompByName("Composition 1")
+    assert it.GetFusionCompNameList() == new
+    return "ADDED_THEN_OLD_DELETED"
 
 
 def job_ids(p): return [j.get("JobId") for j in p.GetRenderJobList() or []]
@@ -340,8 +357,8 @@ def job_ids(p): return [j.get("JobId") for j in p.GetRenderJobList() or []]
 
 def render(r, p, tl, key, out=OUT, timeout=RENDER_TIMEOUT_S, poll=0.5, clock=time.monotonic, sleep=time.sleep):
     assert p.SetCurrentTimeline(tl) and r.OpenPage("deliver")
-    o = tl.GetStartFrame(); target = out / f"{key}_RENDER"; target.mkdir(exist_ok=False)
-    name = f"AKI_V13_AB_{key}_PREVIEW_V01_HLG_PRORES"
+    o = tl.GetStartFrame(); target = out / f"{key}_RENDER_{REV}"; target.mkdir(exist_ok=False)
+    name = f"AKI_V13_AB_{key}_PREVIEW_{REV}_HLG_PRORES"
     path = target / f"{name}.mov"
     assert p.SetCurrentRenderFormatAndCodec("mov", "ProRes422HQ")
     p.SetCurrentRenderMode(1)
@@ -353,7 +370,7 @@ def render(r, p, tl, key, out=OUT, timeout=RENDER_TIMEOUT_S, poll=0.5, clock=tim
     job = p.AddRenderJob(); assert job
     assert job_ids(p) == [job], "render queue not exclusively owned by this run - refusing to start"
     job_readback = p.GetRenderJobList()
-    hold_file = out / f"STEP2_RENDER_HOLD_{key}.json"
+    hold_file = out / f"STEP2_RENDER_HOLD_{REV}_{key}.json"
 
     def hold(state):
         state.update({"variant": key, "job_id": job, "job_readback": job_readback, "expected_output": str(path),
@@ -391,15 +408,16 @@ def build(d, receipt):
     step1 = json.loads(step1_path.read_text())
     validate_step1(step1)
     receipt["step1_readback_sha256"] = sha(step1_path)
-    (OUT / "comps").mkdir(exist_ok=False)
+    COMPS.mkdir(exist_ok=False)
     r = d.scriptapp("Resolve"); assert r
     pm = r.GetProjectManager(); p = pm.GetCurrentProject()
     assert p and p.GetName() == COPY, "open project is not the isolated copy - refusing"
     assert not p.IsRenderingInProgress() and not p.GetRenderJobList(), "render jobs present in copy"
     for k, val in step1["settings"].items():
         assert p.GetSetting(k) == val, k
-    assert p.GetTimelineCount() == 1
-    base = p.GetTimelineByIndex(1); assert base.GetName() == BASE_TIMELINE
+    timelines = {p.GetTimelineByIndex(i).GetName(): p.GetTimelineByIndex(i) for i in range(1, p.GetTimelineCount() + 1)}
+    assert sorted(timelines) == sorted([BASE_TIMELINE, FAILED_REV2_TIMELINE]), sorted(timelines)
+    base = timelines[BASE_TIMELINE]
     check_v1(base); base_audio = audio(base); before = base_comp_hashes(base, "before")
     for key, v in VARIANTS.items():
         tl = base.DuplicateTimeline(v["timeline"]); assert tl and tl.GetName() == v["timeline"]
@@ -408,19 +426,16 @@ def build(d, receipt):
         clips = []
         for idx in BUILD_CLIPS:
             it = items[idx]; assert it.GetFusionCompNameList() == ["Composition 1"], it.GetFusionCompNameList()
-            src = OUT / "comps" / f"{key}_clip{idx}_source.comp"; assert it.ExportFusionComp(str(src), 1)
+            src = COMPS / f"{key}_clip{idx}_source.comp"; assert it.ExportFusionComp(str(src), 1)
             patched, plan = patch_clip(src.read_text(encoding="utf-8"), key, v, idx)
-            dst = OUT / "comps" / f"{key}_clip{idx}_patched.comp"; dst.write_text(patched, encoding="utf-8")
+            dst = COMPS / f"{key}_clip{idx}_patched.comp"; dst.write_text(patched, encoding="utf-8")
             verify_readback(patched, plan)
-            assert it.ImportFusionComp(str(dst))
-            new = [n for n in it.GetFusionCompNameList() if n != "Composition 1"]; assert len(new) == 1
-            assert it.LoadFusionCompByName(new[0]) and it.DeleteFusionCompByName("Composition 1")
-            assert it.GetFusionCompNameList() == new
-            rb = OUT / "comps" / f"{key}_clip{idx}_readback.comp"; assert it.ExportFusionComp(str(rb), 1)
+            swap_mode = swap_comp(it, dst)
+            rb = COMPS / f"{key}_clip{idx}_readback.comp"; assert it.ExportFusionComp(str(rb), 1)
             verify_readback(rb.read_text(encoding="utf-8"), plan)
             clips.append({"clip": idx, "window_extremes": plan["window_extremes"],
                           "composed_peak_total_size_in_excerpt": plan["composed_peak_total_size_in_excerpt"],
-                          "disabled_text_merges": plan["disabled_text_merges"], "captions": plan["captions"],
+                          "disabled_text_merges": plan["disabled_text_merges"], "captions": plan["captions"], "comp_swap": swap_mode,
                           "source_sha256": sha(src), "patched_sha256": sha(dst), "readback_sha256": sha(rb)})
         peak = max(zoom(v, e)[0] for e in range(360))
         receipt["variants"][key] = {
@@ -445,7 +460,7 @@ def build(d, receipt):
 def main():
     sys.path.append("/Library/Application Support/Blackmagic Design/DaVinci Resolve/Developer/Scripting/Modules/")
     import DaVinciResolveScript as d
-    receipt = {"schema": "AKI_V13_AB_PREVIEW_BUILD_V01", "revision": 2, "project": COPY, "base_timeline": BASE_TIMELINE,
+    receipt = {"schema": "AKI_V13_AB_PREVIEW_BUILD_V01", "revision": 3, "failed_rev2_timeline_left_untouched": FAILED_REV2_TIMELINE, "project": COPY, "base_timeline": BASE_TIMELINE,
                "excerpt_global_half_open": list(EXCERPT), "video_source_offset": SRC_OFFSET, "audio_source_offset": AUDIO_OFFSET,
                "zoom_anchor_pre_rhythm": F, "max_relative_zoom": MAX_ZOOM, "variants": {},
                "nitin_approval_of_result": False, "publication_authorized": False}
@@ -454,9 +469,9 @@ def main():
     except BaseException as exc:
         receipt["status"] = "HOLD" if isinstance(exc, BuildHold) else "FAILED"
         receipt["error"] = f"{type(exc).__name__}: {exc}"[:2000]
-        (OUT / "STEP2_FAILURE_RECEIPT.json").write_text(json.dumps(receipt, indent=1, default=str))
+        (OUT / f"STEP2_FAILURE_RECEIPT_{REV}.json").write_text(json.dumps(receipt, indent=1, default=str))
         raise
-    (OUT / "STEP2_BUILD_RENDER_RECEIPT.json").write_text(json.dumps(receipt, indent=1, default=str))
+    (OUT / f"STEP2_BUILD_RENDER_RECEIPT_{REV}.json").write_text(json.dumps(receipt, indent=1, default=str))
     print("STEP2_OK")
 
 

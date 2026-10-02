@@ -1,4 +1,4 @@
-"""Offline tests for step2_build_render_ab.py (rev 2). Never imports DaVinciResolveScript or touches Resolve."""
+"""Offline tests for step2_build_render_ab.py (rev 3). Never imports DaVinciResolveScript or touches Resolve."""
 import copy, importlib.util, json, re, tempfile, unittest
 from pathlib import Path
 
@@ -256,7 +256,7 @@ class RenderControl(unittest.TestCase):
         try:
             result = s2.render(FakeResolve(), p, FakeTimeline(), "A", out=tmp, timeout=5, poll=1, clock=clock, sleep=clock.sleep)
         except s2.BuildHold:
-            return None, json.loads((tmp / "STEP2_RENDER_HOLD_A.json").read_text())
+            return None, json.loads((tmp / f"STEP2_RENDER_HOLD_{s2.REV}_A.json").read_text())
         return result, None
 
     def test_success_deletes_only_own_job(self):
@@ -316,6 +316,51 @@ class Step1Validation(unittest.TestCase):
             with self.subTest(label):
                 with self.assertRaises(AssertionError):
                     s2.validate_step1(mutate(fn))
+
+
+FIXTURES = HERE / "fixtures"
+
+
+class RealResolveRoundTrip(unittest.TestCase):
+    """Source and post-import exports captured read-only from Resolve 21.1 after the failed rev-2 run (paths redacted)."""
+
+    def test_verify_accepts_resolve_reserialized_comp(self):
+        source = (FIXTURES / "A_clip0_source_resolve_export.comp").read_text(encoding="utf-8")
+        after = (FIXTURES / "A_clip0_after_inplace_import_resolve_export.comp").read_text(encoding="utf-8")
+        _, plan = s2.patch_clip(source, "A", s2.VARIANTS["A"], 0)
+        s2.verify_readback(after, plan)
+
+    def test_verify_rejects_unpatched_resolve_export(self):
+        source = (FIXTURES / "A_clip0_source_resolve_export.comp").read_text(encoding="utf-8")
+        _, plan = s2.patch_clip(source, "A", s2.VARIANTS["A"], 0)
+        with self.assertRaises(AssertionError):
+            s2.verify_readback(source, plan)
+
+
+class FakeItem:
+    def __init__(self, after_import):
+        self.names, self.after_import, self.loaded, self.deleted = ["Composition 1"], after_import, [], []
+    def ImportFusionComp(self, path): self.names = list(self.after_import); return True
+    def GetFusionCompNameList(self): return list(self.names)
+    def LoadFusionCompByName(self, n): self.loaded.append(n); return True
+    def DeleteFusionCompByName(self, n): self.deleted.append(n); self.names.remove(n); return True
+
+
+class SwapComp(unittest.TestCase):
+    def test_in_place_replacement(self):
+        it = FakeItem(["Composition 1"])
+        self.assertEqual(s2.swap_comp(it, Path("x.comp")), "REPLACED_IN_PLACE"); self.assertEqual(it.deleted, [])
+
+    def test_added_then_old_deleted(self):
+        it = FakeItem(["Composition 1", "Composition 2"])
+        self.assertEqual(s2.swap_comp(it, Path("x.comp")), "ADDED_THEN_OLD_DELETED")
+        self.assertEqual((it.loaded, it.deleted, it.names), (["Composition 2"], ["Composition 1"], ["Composition 2"]))
+
+    def test_unexpected_lists_fail(self):
+        for names in ([], ["Composition 2"], ["Composition 1", "A", "B"]):
+            with self.subTest(names=names):
+                with self.assertRaises(AssertionError):
+                    s2.swap_comp(FakeItem(names), Path("x.comp"))
 
 
 if __name__ == "__main__":

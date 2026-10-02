@@ -6,24 +6,27 @@
     "at": "2026-10-02T09:30:07+02:00",
     "scope": "Build and render both previews in a separate copy of V13 incl. proposed edit/zoom/caption changes; original V13, locked audio and colour preserved; no publication."
   },
-  "status": "BLOCKED_AWAITING_LOCAL_TOOL_PERMISSION",
+  "status": "HOLD_STEP2_REV2_FAILED_REV3_AWAITING_REREVIEW",
   "videos_rendered": false,
-  "resolve_mutated": false,
+  "resolve_mutated": "only the isolated copy: project UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01 created (step 1); timeline AKI_V13_AB_A_CINEMATIC_V01 duplicated and its clip-0 comp replaced (failed rev-2 step 2). V13 untouched.",
   "blocker": {
     "operation": "/usr/bin/python3 step1_import_readback.py (Resolve external scripting: ImportProject of V13 DRP as new copy + LoadProject of that copy)",
     "denied_by": "Claude Code auto-mode classifier (reason: Auto-Mode Bypass); writing the script into the local build folder was denied as well",
     "reason": "Repository Resolve access is read-only via MCP (.claude/settings.json); external Python scripting is a second route to the same mutations, so it requires an explicit, narrow NITIN_CHANGE_APPROVAL",
     "verified_side_effects_of_denied_attempt": "none: no output folder, no new Resolve project"
   },
-  "review_request": "Re-review of revision 2 (fixes for CODEX_REVIEW_V01.md at c9dcc16) on the exact bytes below before any execution",
+  "review_request": "Re-review of revision 3 (fix after failed rev-2 run, see LOCAL_RUN_RESULT_V01.json) before re-execution",
   "scripts": {
     "step1_import_readback.py": {
       "sha256": "77c7b9bafe6ffd965872ad1c6bcfd8ecc367987f4e778148f07761813da83984",
       "mutates": "creates Resolve project UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01 from the V13 DRP file, loads and saves it; writes readback/ only"
     },
     "step2_build_render_ab.py": {
-      "sha256": "e4d0a70a98e07974902f0a590eb734cf0d88ba082d29b584c2cdfd9a16903669",
-      "previous_reviewed_sha256": "1ce1bad4a7d034bd6a8f6087cdf8c91845ef29f9955509852a4942e0e4ab0e0b",
+      "sha256": "c3b34f0f39a1fad7bec72a9af3ac8cab90a0169b54f2ec04f039de00155d5f90",
+      "previous_reviewed_sha256": [
+        "1ce1bad4a7d034bd6a8f6087cdf8c91845ef29f9955509852a4942e0e4ab0e0b",
+        "e4d0a70a98e07974902f0a590eb734cf0d88ba082d29b584c2cdfd9a16903669"
+      ],
       "mutates": "only the open copy: duplicates base timeline twice, replaces Fusion comps of V1 clips 0-3 in the duplicates, renders [60,420) of each, exports copy DRP",
       "rev2_changes": [
         "render timeout: verifies sole ownership of the render queue before start; on timeout calls project-level StopRendering only while this run's job is the sole job, verifies stop, persists STEP2_RENDER_HOLD_<variant>.json and raises BuildHold so no further variant starts",
@@ -35,14 +38,19 @@
         "bug fix: merge with a static Blend value no longer gets a duplicate Blend input",
         "receipt: peak_base_size_excl_rhythm_pulse (relabelled) plus composed_peak_total_size computed from the inherited rhythm curve",
         "Resolve is only imported under __main__ so pure helpers are testable offline"
+      ],
+      "rev3_changes": [
+        "swap_comp(): accepts in-place replacement (observed) or add-new; anything else fails; content proven by verify_readback",
+        "new unique names: timelines AKI_V13_AB_A_CINEMATIC_R3 / AKI_V13_AB_B_RHYTHMIC_R3, comps_r3/, *_RENDER_R3/, receipts *_R3.json; failed A_V01 timeline required present and left untouched",
+        "real Resolve round-trip fixtures (paths redacted): verify_readback accepts Resolve's re-serialized patched comp and rejects the unpatched export"
       ]
     },
     "execution_location": "byte-identical copies in /Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-v13-ab-preview-build-v01/ (scripts use their own directory as OUT)",
     "own_checks": "ast parse + offline unit tests of pure helpers and render control with fakes; neither script executed against Resolve",
     "step3_not_included": "ffmpeg-only QC + review MP4 encode; needs no Resolve permission; will be committed with results",
     "test_step2_offline.py": {
-      "sha256": "00b89124d1cdf4dda24957d7ff6405a98790536bd616da3fbad4fbdda6582e9e",
-      "result": "14/14 OK (python3 test_step2_offline.py, 2026-10-02, builder run, no Resolve)",
+      "sha256": "934c534382c8f630480208fa8568ea4b1b329a48fa957c9f88aaff58baef16d0",
+      "result": "19/19 OK (rev 3, builder run on Mac, no Resolve)",
       "covers": [
         "positive patch+readback for A and B",
         "16 negative readback mutations (emptied/changed caption curves, removed caption, disconnected output, rewired chain, re-enabled pre-existing captions spline/static, T1 centre, T2/rhythm wiring, inherited rhythm curve, zoom key, style, halo, size)",
@@ -274,7 +282,7 @@
     "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
     "creative_selection": "Nitin only; no winner chosen"
   },
-  "revision": 2,
+  "revision": 3,
   "deliverables": {
     "step2_outputs": "ProRes 422 HQ HLG renders only",
     "A_PREVIEW.mp4_B_PREVIEW.mp4": "NOT produced by step 2; step 3 (ffmpeg QC + encode) will be committed with actual results",
@@ -285,5 +293,6 @@
     "reviewed_head": "36a68df358be5a5965810ceda3b534e90c192587",
     "status": "CHANGES_REQUIRED_BEFORE_EXECUTION",
     "response": "CODEX_REVIEW_RESPONSE_V01.md"
-  }
+  },
+  "local_run": "LOCAL_RUN_RESULT_V01.json"
 }

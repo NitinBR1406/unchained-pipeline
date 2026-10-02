@@ -1,0 +1,83 @@
+{
+  "schema": "AKI_V13_AB_LOCAL_RUN_RESULT_V01",
+  "run_date": "2026-10-02",
+  "authority": {
+    "build_approval": "Nitin 2026-10-02T09:30:07+02:00",
+    "code_review": "CODEX_REVIEW_V02.md (eligible for bounded local execution at ccd37b9)",
+    "temporary_permissions": "three rules from REQUIRED_PERMISSIONS rev2 added to local .claude/settings.local.json via the normal Claude Code approval prompt; removed again after the step-2 failure"
+  },
+  "steps": [
+    {
+      "step": "hash check",
+      "result": "OK",
+      "detail": "step1 77c7b9ba..., step2 e4d0a70a..., tests 00b89124... copied from 4cc5864 and verified with shasum -c immediately before each invocation"
+    },
+    {
+      "step": "offline tests on Mac",
+      "result": "14/14 OK incl. real local V13 comps"
+    },
+    {
+      "step": "step1_import_readback.py",
+      "result": "STEP1_OK",
+      "created_project": "UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01",
+      "readback_sha256": "c2501f264214741c59f229cd7fe35fec74e184a058e0dde4505006e0e5a42397"
+    },
+    {
+      "step": "step-1 readback inspection",
+      "result": "MATCH",
+      "by": "Nitin ran json.tool via ! prompt (Claude's own inspection command was denied by the auto-mode classifier); Claude compared in chat",
+      "observed": {
+        "color": "davinciYRGBColorManaged; timeline/output/input Rec.2100 HLG; HDR 1000",
+        "timeline": "30 fps, 1080x1920",
+        "v1": "6 clips IMG_5739.MOV, ranges as expected, source_start = timeline + 2144, FPS 30.0, 2160x3840 HLG, neutral transforms, single 'Composition 1'",
+        "audio": "single AAKHRI ISHQ MASTER 2.wav [0,720), source_start 2160",
+        "note": "timelinePlaybackFrameRate reports '24' (playback only; render sets FrameRate 30, to be verified on media)"
+      }
+    },
+    {
+      "step": "step2_build_render_ab.py rev2",
+      "result": "FAILED (fail-closed, no retry)",
+      "failed_at": "variant A, V1 clip 0, after ImportFusionComp: assertion expected exactly one new comp name",
+      "receipt": "STEP2_FAILURE_RECEIPT.json (status FAILED, variants {})",
+      "renders": "none"
+    }
+  ],
+  "post_failure_read_only_diagnosis": {
+    "probes": "external-scripting read-only: timeline/comp name listing and ExportFusionComp to scratchpad; no load/save/edit",
+    "copy_state": {
+      "timelines": [
+        "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+        "AKI_V13_AB_A_CINEMATIC_V01"
+      ],
+      "render_jobs": 0,
+      "rendering": false
+    },
+    "finding": "Resolve 21.1 ImportFusionComp replaced 'Composition 1' in place (name list unchanged, count 1); exported comp contains the UN_AB_ nodes",
+    "failed_timeline_A_V01": "clip 0 carries the patched comp; clips 1-3 untouched; left as-is as evidence",
+    "base_timeline_in_copy": "comp exports of clips 0-3 byte-identical to BASE_clip*_before (UNCHANGED)",
+    "v13_drp_sha256": "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec (unchanged)",
+    "v13_project_loaded": false
+  },
+  "fix": {
+    "revision": 3,
+    "step2_sha256": "c3b34f0f39a1fad7bec72a9af3ac8cab90a0169b54f2ec04f039de00155d5f90",
+    "tests_sha256": "934c534382c8f630480208fa8568ea4b1b329a48fa957c9f88aaff58baef16d0",
+    "tests": "19/19 OK",
+    "changes": [
+      "swap_comp(): accepts in-place replacement (observed) or add-new; anything else fails; content proven by verify_readback",
+      "new unique names: timelines AKI_V13_AB_A_CINEMATIC_R3 / AKI_V13_AB_B_RHYTHMIC_R3, comps_r3/, *_RENDER_R3/, receipts *_R3.json; failed A_V01 timeline required present and left untouched",
+      "real Resolve round-trip fixtures (paths redacted): verify_readback accepts Resolve's re-serialized patched comp and rejects the unpatched export"
+    ],
+    "fixtures_sha256": {
+      "A_clip0_source_resolve_export.comp": "7b9cfa71003de54bafb75fd1859cad24afe5d6d0a62f1796639ef6bface2ba0a",
+      "A_clip0_after_inplace_import_resolve_export.comp": "783ca16718217e88be13b2f66e1a7f0bcbd6f213121aed0d46864d2b3066e09c"
+    }
+  },
+  "status": "HOLD_AWAITING_REREVIEW_OF_REV3",
+  "videos_rendered": false,
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
