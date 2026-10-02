@@ -1,0 +1,33 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "AKI_V13_DISTINCT_AB_PROPOSAL_20261001",
+  "revision": 2,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "BUILD_PROPOSAL",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "goal": "Claude Code: revise your supplied R1 into a self-contained Dutch R2 A/B proposal, max 850 words. Address the actual Codex findings; reuse R1 rather than starting over. This is TEXT ONLY BUILD_PROPOSAL, no tools, file reads, Resolve operations, render, dispatch or permissions expansion. Source receipt records Gemini HOLD JSONDecodeError: no Gemini verdict exists. This round intentionally uses the established Claude/Codex route while diagnosis remains open; no claim of full QC. Use the same provisional 12s excerpt for A/B and preserve source chronology/lipsync, locked audio, V06 colour, safe crop, broken-chain logo and Cinzel/Montserrat. Distinguish source-reported facts from verified runtime facts. Explicitly include A push-in and both variants' caption and camera changes in pending-change coverage. Define shots versus internal cuts consistently: for example 3 shots/2 boundaries at 4s each vs 6 shots/5 boundaries at 2s each. On a single continuous camera source, split boundaries alone create no visible change: specify proposed visible crop/transform changes at boundaries without source-time jumps, subject to safe-crop feasibility; keep beat positions provisional until measured. Caption budgets must include every visible animation/fade frame, use zero-based half-open intervals, distinguish total visible duration from fully readable hold, and avoid unreadable 0.6s phrases. Provide one compact full 24s overlay-budget design (union of logo/text windows), >=75% unobstructed performance hard minimum and >=80% target, or explicitly show why fixed historical intro/outro prevents the target and which pending change is necessary. Do not claim the historical 5.8s overlay union is actually verified. Full 24s values are a proposed budget, not a render request. Preserve logo identity; any proposed timing departure must be explicit. Include 3 aligned 4s storyboard blocks, concrete conditional future operations on isolated project copies, source identity and measured beat prerequisites, per-element mask overlap tests, composed-frame halo/face checks, audio and human lipsync review. Do not present node readback or aggregate alpha as proof of all visual properties. Unknown Resolve/API mappings remain prerequisites. End with pending changes and Nitin X/Y comparison decision; no claim that changes have been approved. Codex: focus on closure of prior findings and arithmetic, max 500 words; separate proposal completeness from execution evidence. No Gemini restart from either output.",
+  "base_commit": "b802ce4dd7ce231533aa690064c80e6c2664ba8e",
+  "inputs": [
+    {
+      "path": "p0e4/evidence/task_runs/pr_21/RESULT.json",
+      "sha256": "e6453a0daf4bee1b7f4b58a878e45706fb0caa4afaefecc7c0bb1c760c6f956f"
+    }
+  ],
+  "acceptance_criteria": [
+    "R2 retains materially distinct A/B on the same provisional excerpt, consistent shots/internal-boundary counts and three aligned 4s blocks. Visible differences use specified spatial transformations, not merely splitting continuous footage; source chronology remains unchanged.",
+    "All proposed departures including A push-in, B transforms, caption windows/motion and any logo timing change are explicitly pending; locked audio/colour/crop and no-execution governance remain intact.",
+    "Caption windows use explicit frame intervals including fades and motion, with readable hold identified. Full 24s overlay union includes logo, intro/outro and all text; arithmetic for 75 percent minimum and 80 percent target is correct, and assumptions/conflicts are explicit.",
+    "Checks distinguish per-element overlap masks from composed-frame visual inspection and actual media review. Beat timings, source hashes and Resolve API mappings remain unverified prerequisites; no failed Gemini review is promoted to acceptance."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
