@@ -1,0 +1,65 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "FACTORY_NO_RELAY_AUTOMATION_20261002_V01",
+  "revision": 1,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "BUILD_PROPOSAL",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "base_commit": "d7fb4fcbe984978ddcd0deb63ee055d6499e361d",
+  "goal": "Nitin explicitly requires end-to-end automation with Claude Code as builder and NO routine copy/paste relay. His 2026-10-02 11:37 Europe/Amsterdam request: \"ik heb de opdracht gegegven. ik ben weer prompt heen en weer an het knippen en plakken, dit is niet wat ik wil.ik moet het volledig geautomatiseerd hebben\". He already started the manual PR27 B full24 build in another interactive local session. DO NOT dispatch, touch or duplicate that render. This task is implementation preparation through the existing automatic text route, not activation. Produce a concrete V02 migration patch and acceptance tests AS TEXT, not another general architecture essay. Extend the installed same-label Mac runner, keep Claude as builder, Codex independent verifier, optional Gemini truthfully text-only until media review is proven. Reuse existing durable controller/recovery machinery instead of a second competing scheduler. Propose a supported narrow capability boundary for private Resolve candidate build + private existing-Drive delivery, with a local one-time reviewed activation and no ongoing per-task prompt transfer. Never bypass hooks/denies; no skip-permissions. Existing runtime is hash-pinned and must not auto-update itself from arbitrary repo/model output. Use current source below. Distinguish code-generation sandbox, trusted reviewed execution recipe, automatic task pickup, progress/result return, bounded defect repair, and final human asset/publication gates. Private tasks with specific approved scope can execute without fresh creative approval; technical settings migration must be explicit. Deliver a minimal integrated patch in named file blocks/unified diffs, realistic tests, installation/rollback plan, exact integration call sites, and honest remaining limitations. Prioritize viable implementation over a broad new framework. Do not claim code ran; model has no tools. Do not manufacture bootstrap completion, Mac availability or independent media QC. No new paid services or credentials. Autonomous result reconciliation must not require an active ChatGPT conversation; include how to reach a reviewable result or a precise hold without endless retries. Be explicit about which parts can be automated with the present local capabilities and what remains unproven. Do not downgrade the user's goal to automatic proposals only.",
+  "inputs": [
+    {
+      "path": "p0e4/task_runner/runner.py",
+      "sha256": "7922252aa28a71d2c625a6a6e21f18a9f71e502c7661b01b00a41620bf8e8f99"
+    },
+    {
+      "path": "p0e4/task_runner/runner_gemini.py",
+      "sha256": "03b988e7f3eb9e719461917daa35eed332c87827a934d776f19349f989f7892c"
+    },
+    {
+      "path": "p0e4/task_runner/install.py",
+      "sha256": "fab4552047bbfbb9c72a5b1f404306ddb765b2ea6f7b258cd0c7caf3ca54b966"
+    },
+    {
+      "path": "p0e4/task_runner/tool_gate.py",
+      "sha256": "02c107fa0a844d7f591d2d9fbf116bac339e50a46caf217c78c077b7a27c8bcc"
+    },
+    {
+      "path": "p0e4/tests/test_task_runner.py",
+      "sha256": "0a26f860ec14e060a3b55a3333b3c800b652cb5500aad948d8383ea98f682701"
+    },
+    {
+      "path": "p0e4/tasks/AUTOMATION_POLICY_V01.md",
+      "sha256": "3db1bdc77047220a7b524b8b3e537656a7104c4af0a1e60402f52db991c23c45"
+    },
+    {
+      "path": "p0e4/tasks/manual/AKI_B_FULL24_CAPTION_REPAIR_20261002_V01.md",
+      "sha256": "a29f4618b1a29e4ce73abcf4b41c0d8889311a339ab21dd38ae1ba8b563abd25"
+    },
+    {
+      "path": "p0e4/controller/README.md",
+      "sha256": "2f6a2c864cf47711050400c01f4aa9cb40f9ac67ab6fc1b7a6dcbb987f2ecd3f"
+    }
+  ],
+  "acceptance_criteria": [
+    "Provide concrete patch/tests and exact integration points for the existing runner, with Claude builder and independent verifier; no second scheduler and no change to frozen P0-E0 through P0-E3.",
+    "No routine human prompt relay: task ingestion, ACK/progress, bounded execution, artifact identity, review/result delivery and bounded repair are covered; explicitly identify any unimplemented stage.",
+    "Preserve current PR27 manual build: single Resolve writer, busy/manual-session exclusion and post-completion migration. A queued task is not claimed to be running.",
+    "One-time version-bound upgrade must verify existing installation/config/pins, backup and rollback, re-use existing service label, preserve completed task registry and not re-run historical tasks. Do not execute or self-install upgrade.",
+    "Concrete narrow tool authorization: no general Bash/unsafe script bypass, no blanket permission grants, no self-modification of the installed trusted runtime; source/output restrictions are enforced, not merely prompt text.",
+    "Bounded retries, durable intent before side effects, crash/unknown-start reconciliation, timeout cancellation/readback of active Resolve jobs, deduplication, task revocation and input/source drift are handled and tested.",
+    "End-to-end acceptance requires two distinct queued tasks, automatic pickup, one actual private render and review receipt, repeat/restart without duplicate renders, plus failure/repair case; offline tests never claim Mac acceptance.",
+    "Preserve locked originals/audio/color, final creative and publication gates. No fabricated media review, cost authorization or human approval. State exact local handoff needed only for installation/OS permission if unavoidable."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
