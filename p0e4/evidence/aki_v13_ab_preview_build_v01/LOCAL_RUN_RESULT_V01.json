@@ -52,6 +52,21 @@
       "receipt_sha256": "c167409fea0b9d593cddf3e28fe5bfc93499ce2e7217247b63f470927f4df1d1",
       "renders": "none",
       "permission_removed_after": true
+    },
+    {
+      "step": "step2_build_render_ab.py rev4 (a3ab4952...)",
+      "authority": "CODEX_REVIEW_V04.md (one bounded R4 attempt)",
+      "preconditions": "R4 bytes from 80f1284 verified with shasum -c immediately before; 21/21 tests OK on Mac; read-only state: base + A_V01 + A_R3, 0 jobs; permission (Write build folder + exact step2 command) via approval prompt",
+      "result": "STEP2_OK",
+      "comp_swaps": "all 8 REPLACED_IN_PLACE, all readbacks verified",
+      "renders": "A and B complete",
+      "permission_removed_after": true,
+      "receipt": "STEP2_BUILD_RENDER_RECEIPT_R4_COMPACT.json"
+    },
+    {
+      "step": "step3 media QC + review MP4 + open + private Drive copy",
+      "result": "DONE",
+      "receipt": "STEP3_MEDIA_QC_R4.json"
     }
   ],
   "post_failure_read_only_diagnosis": {
@@ -85,7 +100,7 @@
       "A_clip0_after_inplace_import_resolve_export.comp": "783ca16718217e88be13b2f66e1a7f0bcbd6f213121aed0d46864d2b3066e09c"
     }
   },
-  "status": "HOLD_AWAITING_REVIEW_OF_REV4",
+  "status": "PREVIEWS_DELIVERED_PRIVATE_REVIEW_PENDING_NITIN",
   "videos_rendered": false,
   "governance": {
     "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,

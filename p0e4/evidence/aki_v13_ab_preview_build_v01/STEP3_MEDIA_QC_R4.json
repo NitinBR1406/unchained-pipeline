@@ -1,0 +1,111 @@
+{
+  "schema": "AKI_V13_AB_STEP3_MEDIA_QC_V01",
+  "checked": "2026-10-02",
+  "by": "Claude Code builder (own checks; not independent QC)",
+  "inputs": {
+    "A_prores": {
+      "sha256": "95cddeb372c039999a1fd8ff72377e976af0af2e70b350778a6093aacabc5e20"
+    },
+    "B_prores": {
+      "sha256": "f774de591f3d783d5eb835366e8106c8b92392bb0816500809328c6ab50973d1"
+    },
+    "v13_master_sha256": "7266506b3d9e5262ded0c579d664c2d6444e6c35c173cf00c062290810ffe088"
+  },
+  "prores_intermediates": {
+    "format": "ProRes 422 HQ, yuv422p10le, 1080x1920, 30/1, 360 frames (counted), duration 12.000000 s, BT.2020 / ARIB STD-B67 (HLG) / bt2020nc tags, PCM s24le 48 kHz stereo",
+    "full_decode": {
+      "A": "PASS",
+      "B": "PASS"
+    },
+    "audio_pcm": {
+      "method": "decoded pcm_s32le of A, B and V13 master atrim samples [96000,672000)",
+      "sha256_A": "92a280e812211e49bba15ca80ffe445f038fc1efc922e185dfcee8c37699c63b",
+      "sha256_B": "92a280e812211e49bba15ca80ffe445f038fc1efc922e185dfcee8c37699c63b",
+      "sha256_V13_excerpt": "92a280e812211e49bba15ca80ffe445f038fc1efc922e185dfcee8c37699c63b",
+      "result": "BIT_IDENTICAL (576000 samples x 2 ch)"
+    }
+  },
+  "visual_measurements": {
+    "ssim_540x960_mean": {
+      "A_vs_B": 0.7722,
+      "A_vs_V13_excerpt": 0.7475,
+      "B_vs_V13_excerpt": 0.753
+    },
+    "A_vs_B_per_2s_block": [
+      0.907,
+      0.716,
+      0.731,
+      0.823,
+      0.74,
+      0.715
+    ],
+    "B_vs_V13_frames_0_59_at_zoom_1": 0.9841,
+    "geometry_vs_predicted_top_anchored_crop_of_V13_top1000rows": {
+      "B2_e100_z1.12": 0.9872,
+      "A2_e200_z1.12": 0.9982,
+      "unzoomed_reference": "0.46-0.47"
+    },
+    "horizontal_window_shift_overlap_ssim": {
+      "B3_+32px": 0.9863,
+      "B3_0px": 0.4805,
+      "B6_22px_on_z1.12": 0.9883,
+      "B6_0px": 0.4302
+    },
+    "conclusion": "zoom, top anchor and window shifts rendered as designed; A and B measurably and visibly different"
+  },
+  "visual_inspection_own": {
+    "boundaries": "A: visible reframe at 120 and 240. B: visible at 60, 120, 180, 300; 240 (1.10->1.06) subtle",
+    "edges": "no black/missing borders seen on boundary frames",
+    "headroom": "hair top stays in frame; tightest around B 179-181",
+    "captions": "existing text only ('SOME LOVE STORIES' / 'NEVER REALLY END.'); no halo/shadow; on chest, not covering face; B phrases do not overlap each other; no V13 title/artist/song-id visible",
+    "legibility": "MARGINAL / NOT PROVEN: light text over skin and light collar edges loses letters in places (notably B around frame 60). Inspected as untonemapped HLG in SDR JPEG, so contrast on an HDR display may differ",
+    "font_weight": "B appears slightly heavier than A; SemiBold resolution not proven",
+    "logo": "none in excerpt (per R2)"
+  },
+  "review_mp4": {
+    "encode": "libx265 Main10 CRF16 preset slow, yuv420p10le (4:2:2->4:2:0 chroma subsampling only), HLG/BT.2020 tags passed through, no tone mapping or colour conversion, hvc1 tag; AAC 256 kb/s 48 kHz",
+    "A_PREVIEW.mp4": {
+      "sha256": "bf90dfe5c2028bc77e0087925a246a5b70921847552464b988196b0352e8c7f8",
+      "bytes": 17813593
+    },
+    "B_PREVIEW.mp4": {
+      "sha256": "8c7c3886d3969e580a833e9396c06de9a80cbe48d69d0581e1806017fb3d6eff",
+      "bytes": 17261563
+    },
+    "checks": "both: hevc Main 10, 1080x1920, 30/1, 360 frames, 12.000000 s video/audio/container, BT.2020/HLG tags, full decode PASS, SSIM vs ProRes 0.9976",
+    "aac_vs_pcm": "lossy (not bit-identical); cross-correlation lag 0 samples at 8 kHz resolution, equal length",
+    "local_paths": ".local/aki-v13-ab-preview-build-v01/REVIEW_MP4_R4/{A,B}_PREVIEW.mp4",
+    "opened_locally": true
+  },
+  "persistence": {
+    "destination": "Shared Drive 'Unchained Nitin — Master' / P0E4_PRODUCTION_INTEGRATION/PRIVATE_REVIEW_OUTPUT/Aakhri-Ishq/AKI_V13_AB_PREVIEW_BUILD_V01_R4",
+    "folder_id": "1YBzR0fQKQZK6WAtbMul3aiQ1uWJZOZWT",
+    "copy_mode": "COPY_NEVER_MOVE",
+    "sharing_changed": false,
+    "A_PREVIEW.mp4": {
+      "file_id": "1vnOCkdUAleBPcWSxMAsW8e4umEvwX2P8",
+      "server_size_bytes": 17813593
+    },
+    "B_PREVIEW.mp4": {
+      "file_id": "1EsoAsWc8_OEuTVGVbXR-AtnCelHCukM_",
+      "server_size_bytes": 17261563
+    },
+    "readback": "Drive API listing: both files present with exact byte sizes; SHA256 equal when read back through the Drive mount; no server-side hash compared"
+  },
+  "not_proven": [
+    "lip sync by human viewing (audio bit-identical to V13 and source offsets unchanged by readback, but no human sync review)",
+    "caption legibility in motion on target devices",
+    "face/caption clearance across every frame (spot frames only)",
+    "Montserrat SemiBold rendering in B",
+    "beat alignment beyond builder estimate",
+    "HDR appearance on HDR display",
+    "full 24 s overlay budget (12 s excerpts only)",
+    "independent creative QC (no Gemini review)"
+  ],
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
+    "creative_selection": "Nitin only"
+  }
+}
