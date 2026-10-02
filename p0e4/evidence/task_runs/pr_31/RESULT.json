@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED",
+  "reason": "claude_TIMEOUT_NO_RETRY",
+  "task_pr": 31,
+  "at_utc": "2026-10-02T12:49:29.601885+00:00",
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
