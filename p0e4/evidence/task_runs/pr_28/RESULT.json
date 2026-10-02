@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED",
+  "reason": "input size/secret HOLD",
+  "task_pr": 28,
+  "at_utc": "2026-10-02T09:43:58.843985+00:00",
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
