@@ -13,9 +13,10 @@
     }
   },
   "preconditions_before_running": [
-    "scripts in the local folder are byte-identical to this PR: step1 sha256 77c7b9bafe6ffd965872ad1c6bcfd8ecc367987f4e778148f07761813da83984, step2 sha256 1ce1bad4a7d034bd6a8f6087cdf8c91845ef29f9955509852a4942e0e4ab0e0b",
-    "code review of these exact bytes completed",
-    "step 2 only after step 1 readback has been inspected and matches the assumptions in BUILD_STATUS.json"
+    "code re-review of revision 2 completed on the exact bytes: step1 sha256 77c7b9bafe6ffd965872ad1c6bcfd8ecc367987f4e778148f07761813da83984, step2 sha256 e4d0a70a98e07974902f0a590eb734cf0d88ba082d29b584c2cdfd9a16903669",
+    "copy scripts from the reviewed commit into the build folder and run `shasum -a 256 -c` against SHA256SUMS.txt immediately before EACH invocation; abort on any mismatch; no edits between check and run",
+    "python3 test_step2_offline.py passes on the same bytes before step 1",
+    "step 2 only after step-1 readback has been inspected; step 2 itself refuses on any validate_step1 mismatch"
   ],
   "unchanged": [
     ".claude/settings.json (MCP davinci_resolve stays get_resolve_status-only; denies unchanged)",
@@ -25,5 +26,11 @@
     "no run_script_unsafe, no hook removal, no bypass mode"
   ],
   "not_needed_for_step3": "ffmpeg QC/encode uses normal Bash; no Resolve access",
-  "restore_after_execution": "remove the three temporary allow rules from settings.local.json and record the removal in the result receipt"
+  "restore_after_execution": "remove the three temporary allow rules from settings.local.json and record the removal in the result receipt",
+  "revision": 2,
+  "permission_scope_limits": [
+    "rules are path-based, not hash-enforced: hash verification above is a procedural control, not a technical one",
+    "the folder Write rule restricts Claude's Write tool only; it does not restrict side effects of the scripts (Resolve database: new project UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01; Resolve caches; render output into the build folder)",
+    "the auto-mode denial must be resolved through this local permission/approval process, not through any other tool or route"
+  ]
 }

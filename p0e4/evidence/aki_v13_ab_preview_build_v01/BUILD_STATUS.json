@@ -15,19 +15,52 @@
     "reason": "Repository Resolve access is read-only via MCP (.claude/settings.json); external Python scripting is a second route to the same mutations, so it requires an explicit, narrow NITIN_CHANGE_APPROVAL",
     "verified_side_effects_of_denied_attempt": "none: no output folder, no new Resolve project"
   },
-  "review_request": "ChatGPT/Codex review of the exact script bytes (sha256 below) before any execution",
+  "review_request": "Re-review of revision 2 (fixes for CODEX_REVIEW_V01.md at c9dcc16) on the exact bytes below before any execution",
   "scripts": {
     "step1_import_readback.py": {
       "sha256": "77c7b9bafe6ffd965872ad1c6bcfd8ecc367987f4e778148f07761813da83984",
       "mutates": "creates Resolve project UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01 from the V13 DRP file, loads and saves it; writes readback/ only"
     },
     "step2_build_render_ab.py": {
-      "sha256": "1ce1bad4a7d034bd6a8f6087cdf8c91845ef29f9955509852a4942e0e4ab0e0b",
-      "mutates": "only the open copy: duplicates base timeline twice, replaces Fusion comps of V1 clips 0-3 in the duplicates, renders [60,420) of each, exports copy DRP"
+      "sha256": "e4d0a70a98e07974902f0a590eb734cf0d88ba082d29b584c2cdfd9a16903669",
+      "previous_reviewed_sha256": "1ce1bad4a7d034bd6a8f6087cdf8c91845ef29f9955509852a4942e0e4ab0e0b",
+      "mutates": "only the open copy: duplicates base timeline twice, replaces Fusion comps of V1 clips 0-3 in the duplicates, renders [60,420) of each, exports copy DRP",
+      "rev2_changes": [
+        "render timeout: verifies sole ownership of the render queue before start; on timeout calls project-level StopRendering only while this run's job is the sole job, verifies stop, persists STEP2_RENDER_HOLD_<variant>.json and raises BuildHold so no further variant starts",
+        "render failure: persists RENDER_FAILED_HOLD with job identity; job deleted only after verified completion",
+        "any exception: STEP2_FAILURE_RECEIPT.json with partial receipt and status HOLD/FAILED",
+        "verify_readback compares every planned spline (frames+values, non-empty), every planned connection incl. MediaOut1 and caption merge chain, T1/T3 centres, caption text/font/style/size/halo inputs, unchanged inherited rhythm curve, and the exact inventory of disabled pre-existing caption merges (spline or static blend = 0)",
+        "patched comp is verified before import and the Resolve readback after import",
+        "validate_step1 checks step-1 readback against expected identity: 30 fps timeline and clip FPS, 1080x1920, HLG output, V1 ranges, source offset 2144, IMG_5739, single comp, neutral clip transforms, single WAV audio item [0,720) with offset 2160",
+        "bug fix: merge with a static Blend value no longer gets a duplicate Blend input",
+        "receipt: peak_base_size_excl_rhythm_pulse (relabelled) plus composed_peak_total_size computed from the inherited rhythm curve",
+        "Resolve is only imported under __main__ so pure helpers are testable offline"
+      ]
     },
     "execution_location": "byte-identical copies in /Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-v13-ab-preview-build-v01/ (scripts use their own directory as OUT)",
-    "own_checks": "ast.parse syntax check only; never executed",
-    "step3_not_included": "ffmpeg-only QC + review MP4 encode; needs no Resolve permission; will be committed with results"
+    "own_checks": "ast parse + offline unit tests of pure helpers and render control with fakes; neither script executed against Resolve",
+    "step3_not_included": "ffmpeg-only QC + review MP4 encode; needs no Resolve permission; will be committed with results",
+    "test_step2_offline.py": {
+      "sha256": "00b89124d1cdf4dda24957d7ff6405a98790536bd616da3fbad4fbdda6582e9e",
+      "result": "14/14 OK (python3 test_step2_offline.py, 2026-10-02, builder run, no Resolve)",
+      "covers": [
+        "positive patch+readback for A and B",
+        "16 negative readback mutations (emptied/changed caption curves, removed caption, disconnected output, rewired chain, re-enabled pre-existing captions spline/static, T1 centre, T2/rhythm wiring, inherited rhythm curve, zoom key, style, halo, size)",
+        "unknown extra text merge",
+        "punch and safety geometry",
+        "composed peak includes rhythm pulse",
+        "render success/timeout-owned/timeout-not-owned/foreign-job-refusal/failure with fakes",
+        "step-1 validation good + 7 mismatches",
+        "patch+verify of real local V13 comp exports clips 0-3 (skipped if absent)"
+      ],
+      "real_comp_inputs": {
+        "clip_00_v13.comp": "ff8a5bb3a90fc2a70475c879fa8f1ef3ffe0d3a1268310c640f427003933a7be",
+        "clip_01_v13.comp": "645a2de5bdc1e8a762bc1f9b4e871a58c801e133035aedd7eb070bb3d522f98d",
+        "clip_02_v13.comp": "27a593bea3d7aa391465c747717bb17c0e7bf84f7cd8aa23e5bd6f8cb512d339",
+        "clip_03_readback_comp_01.comp": "ccff53bd4d70be4186cdb671294514273a92c544c8fbead14192f7143958b9d7 (older readback export, not proven identical to the V13 clip-3 comp; step 2 uses the live export)"
+      },
+      "limits": "offline only; does not prove Resolve import/export behaviour, Fusion semantics or rendered pixels"
+    }
   },
   "identity_verified_locally": {
     "v13_project_name": "UNCHAINED_AAKHRI_FIRST_PUBLISH_PREVIEW_V13_CHAIN_CAPTION_REPAIR",
@@ -38,7 +71,13 @@
     "v13_review_mp4_sha256": "b436eda79eadb289d4bbf7e5763eb2858c5eeef0ee13c7cb60f308c372664590",
     "chain_logo_sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509",
     "master_format": "1080x1920, 30/1 fps, 720 frames, ProRes 422 HQ, BT.2020 / ARIB STD-B67 (HLG), PCM s24le 48 kHz stereo",
-    "fonts_installed": ["UNCHAINED-Cinzel-SemiBold.ttf", "UNCHAINED-Cinzel-VF.ttf", "UNCHAINED-Montserrat-Medium.ttf", "UNCHAINED-Montserrat-Regular.ttf", "UNCHAINED-Montserrat-VF.ttf"],
+    "fonts_installed": [
+      "UNCHAINED-Cinzel-SemiBold.ttf",
+      "UNCHAINED-Cinzel-VF.ttf",
+      "UNCHAINED-Montserrat-Medium.ttf",
+      "UNCHAINED-Montserrat-Regular.ttf",
+      "UNCHAINED-Montserrat-VF.ttf"
+    ],
     "copy_project_name_free": "UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01",
     "output_folder_absent": ".local/aki-v13-ab-preview-build-v01/",
     "other_processes_on_project": "none found (only this session and its MCP child)"
@@ -52,16 +91,56 @@
   ],
   "source_timeline_mapping": {
     "evidence": "offline parse of V13 DRP SeqContainer (In / Start / Duration / MediaFrameRate)",
-    "v1_clips_timeline_frames": [[0, 89], [89, 204], [204, 335], [335, 491], [491, 623], [623, 720]],
+    "v1_clips_timeline_frames": [
+      [
+        0,
+        89
+      ],
+      [
+        89,
+        204
+      ],
+      [
+        204,
+        335
+      ],
+      [
+        335,
+        491
+      ],
+      [
+        491,
+        623
+      ],
+      [
+        623,
+        720
+      ]
+    ],
     "v1_source": "IMG_5739.MOV (all six clips, one continuous camera file)",
     "video_source_frame": "timeline_frame + 2144",
     "audio_source": "AAKHRI ISHQ MASTER 2.wav, wav_frame = timeline_frame + 2160 (72.000 s at t=0)",
-    "source_native_fps": "30000/1001, conformed to 30.0 in Resolve (DRP MediaFrameRate = 30.0)",
-    "excerpt_global_half_open": [60, 420],
-    "excerpt_video_source_frames_half_open": [2204, 2564],
-    "excerpt_audio_wav_seconds": [74.0, 86.0],
-    "excerpt_master_pcm_samples_half_open": [96000, 672000],
-    "resolve_mark_in_out_inclusive": [60, 419],
+    "source_native_fps": "30000/1001 in the file; DRP MediaFrameRate = 30.0. Not by itself evidence of a sync defect; step 2 refuses to run unless step-1 readback reports clip FPS 30 and the expected offsets; lipsync still requires review of the render",
+    "excerpt_global_half_open": [
+      60,
+      420
+    ],
+    "excerpt_video_source_frames_half_open": [
+      2204,
+      2564
+    ],
+    "excerpt_audio_wav_seconds": [
+      74.0,
+      86.0
+    ],
+    "excerpt_master_pcm_samples_half_open": [
+      96000,
+      672000
+    ],
+    "resolve_mark_in_out_inclusive": [
+      60,
+      419
+    ],
     "proven_by_resolve_readback": false
   },
   "framing_and_zoom": {
@@ -73,12 +152,70 @@
     "ceiling_in_source": "~31% from top; V13 window top at 37.8%",
     "ab_layer": "3 Fusion transforms before UN_CONTINUOUS_RHYTHM_V03; zoom anchored at output top-centre, so window top never rises above V13 and headroom only scales up",
     "constraints_asserted_per_frame": "relative zoom 1.00-1.15; window inside source x [0.02,0.98], y >= 0.14 (y-up); window top <= V13 top",
-    "A": {"shots_excerpt_frames": [[0, 120, "1.00->1.03"], [120, 240, "1.10->1.13"], [240, 360, "1.00->1.03, window x +0.02"]], "peak_relative": 1.13, "peak_total_size_with_pulse": 2.656, "upscale_vs_source": 1.33},
-    "B": {"shots_excerpt_frames": [[0, 60, "1.00"], [60, 120, "1.12"], [120, 180, "1.00, window x +0.03"], [180, 240, "1.10"], [240, 300, "1.06"], [300, 360, "1.12, window x -0.02"]], "punch": "+3 percentage points above shot base; attack 2 f (k=0 +1.5, k=1 +3.0), linear decay to 0 over 8 f", "peak_relative": 1.15, "peak_total_size_with_pulse": 2.703, "upscale_vs_source": 1.35},
+    "A": {
+      "shots_excerpt_frames": [
+        [
+          0,
+          120,
+          "1.00->1.03"
+        ],
+        [
+          120,
+          240,
+          "1.10->1.13"
+        ],
+        [
+          240,
+          360,
+          "1.00->1.03, window x +0.02"
+        ]
+      ],
+      "peak_relative": 1.13,
+      "peak_total_size_with_pulse": "upper bound 2.656 (peak x max pulse); composed peak from V13 comps = 2.646188",
+      "upscale_vs_source": 1.32
+    },
+    "B": {
+      "shots_excerpt_frames": [
+        [
+          0,
+          60,
+          "1.00"
+        ],
+        [
+          60,
+          120,
+          "1.12"
+        ],
+        [
+          120,
+          180,
+          "1.00, window x +0.03"
+        ],
+        [
+          180,
+          240,
+          "1.10"
+        ],
+        [
+          240,
+          300,
+          "1.06"
+        ],
+        [
+          300,
+          360,
+          "1.12, window x -0.02"
+        ]
+      ],
+      "punch": "+3 percentage points above shot base; attack 2 f (k=0 +1.5, k=1 +3.0), linear decay to 0 over 8 f",
+      "peak_relative": 1.15,
+      "peak_total_size_with_pulse": "upper bound 2.703 (peak x max pulse); composed peak from V13 comps = 2.645",
+      "upscale_vs_source": 1.32
+    },
     "deviations_from_R2": [
       "B bases lowered (R2 118% + 3 = 121% would give 2.844 total size / 1.42x upscale); final cap 115% peak",
       "R2 A2 'Y -3%' dropped: worst-case headroom ~5%; top-anchored zoom tightens toward the face instead",
-      "boundaries kept on 2 s grid because they coincide with the builder beat estimate"
+      "boundaries kept on the nominal 2 s grid as an unvalidated rhythm approximation for the private preview"
     ]
   },
   "beats": {
@@ -86,18 +223,39 @@
     "estimate_bpm": 150.0,
     "beat_period_frames": 12,
     "grid_phase": "global 2.0 s",
-    "strong_onsets_at_boundaries_global_s": [4.0, 6.06, 8.0, 10.0, 12.0],
-    "independently_validated": false
+    "strong_onsets_at_boundaries_global_s": [
+      4.0,
+      6.06,
+      8.0,
+      10.0,
+      12.0
+    ],
+    "independently_validated": false,
+    "tolerance_statement": "6.06 s onset is 1.8 frames from the 6.00 s boundary; boundaries are NOT claimed to meet a +/-1 frame beat tolerance"
   },
   "captions": {
-    "existing_text_read_back_from_v13_comps": {"hook": "SOME LOVE STORIES\\nNEVER REALLY END.", "title": "AAKHRI ISHQ", "artist": "UNCHAINED NITIN"},
+    "existing_text_read_back_from_v13_comps": {
+      "hook": "SOME LOVE STORIES\\nNEVER REALLY END.",
+      "title": "AAKHRI ISHQ",
+      "artist": "UNCHAINED NITIN"
+    },
     "v13_defect_observed_in_excerpt": "hook text partially overlaps 'UNCHAINED NITIN' around global frames 108-156 (contact sheet)",
     "plan": "all existing V13 text merges in V1 clips 0-3 set to blend 0; title/artist move to end card (outside excerpt, per R2 PC-C3)",
     "A": "one TextPlus, existing two-line hook, Montserrat Medium 0.08, center y 0.205 (Fusion y-up), opacity 0 @30, 1 @38-82, 0 @90 (excerpt frames)",
     "B": "two TextPlus from the two existing lines, Montserrat SemiBold 0.08; P1 y 0.223 rise 0.008 + opacity [30,36), P2 y 0.187 rise + opacity [48,54); joint fade [84,90)",
     "no_halo_shadow": "Softness1 0, Enabled2 0, Enabled3 0 (V13 hook had Softness1 1)",
     "logo_in_excerpt": "none - per R2 the chain logo windows [0,30) and [672,720) lie outside [60,420)",
-    "legibility_proven": false
+    "legibility_proven": false,
+    "disabled_pre_existing_text_merges_from_v13_comps": [
+      "clip0 Merge1->UN_BRAND_HOOK",
+      "clip0 Merge2->UN_BRAND_HOOK_SONG_ID",
+      "clip1 Merge1->UN_BRAND_HOOK",
+      "clip1 Merge2->UN_BRAND_HOOK_SONG_ID",
+      "clip1 Merge3->UN_BRAND_TITLE",
+      "clip1 Merge4->UN_BRAND_ARTIST",
+      "clip2 Merge1->UN_BRAND_TITLE",
+      "clip2 Merge2->UN_BRAND_ARTIST"
+    ]
   },
   "not_proven": [
     "Resolve API behaviour of ImportFusionComp/LoadFusionCompByName/DeleteFusionCompByName on duplicated timelines",
@@ -108,12 +266,24 @@
   ],
   "independent_qc": {
     "gemini": "none valid (earlier empty response at CLI SUCCESS); creative QC remains open",
-    "codex_or_chatgpt_code_review": "requested on this PR"
+    "codex_or_chatgpt_code_review": "rev1 reviewed (changes required); rev2 awaiting re-review"
   },
   "governance": {
     "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
     "PUBLICATION_AUTHORIZED": false,
     "FIRST_REAL_POSTER": "PAUSED_BY_NITIN",
     "creative_selection": "Nitin only; no winner chosen"
+  },
+  "revision": 2,
+  "deliverables": {
+    "step2_outputs": "ProRes 422 HQ HLG renders only",
+    "A_PREVIEW.mp4_B_PREVIEW.mp4": "NOT produced by step 2; step 3 (ffmpeg QC + encode) will be committed with actual results",
+    "media_qc": "none yet"
+  },
+  "codex_review": {
+    "file": "CODEX_REVIEW_V01.md",
+    "reviewed_head": "36a68df358be5a5965810ceda3b534e90c192587",
+    "status": "CHANGES_REQUIRED_BEFORE_EXECUTION",
+    "response": "CODEX_REVIEW_RESPONSE_V01.md"
   }
 }
