@@ -1,0 +1,29 @@
+{
+  "schema": "AKI_V13_AB_REQUIRED_PERMISSIONS_V01",
+  "status": "NOT_GRANTED",
+  "requires": "explicit NITIN_CHANGE_APPROVAL for this build task (CLAUDE.md: widening Resolve access)",
+  "file": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.claude/settings.local.json (local, not pinned, not committed)",
+  "temporary_rules": {
+    "permissions": {
+      "allow": [
+        "Write(/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-v13-ab-preview-build-v01/**)",
+        "Bash(/usr/bin/python3 /Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-v13-ab-preview-build-v01/step1_import_readback.py)",
+        "Bash(/usr/bin/python3 /Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-v13-ab-preview-build-v01/step2_build_render_ab.py)"
+      ]
+    }
+  },
+  "preconditions_before_running": [
+    "scripts in the local folder are byte-identical to this PR: step1 sha256 77c7b9bafe6ffd965872ad1c6bcfd8ecc367987f4e778148f07761813da83984, step2 sha256 1ce1bad4a7d034bd6a8f6087cdf8c91845ef29f9955509852a4942e0e4ab0e0b",
+    "code review of these exact bytes completed",
+    "step 2 only after step 1 readback has been inspected and matches the assumptions in BUILD_STATUS.json"
+  ],
+  "unchanged": [
+    ".claude/settings.json (MCP davinci_resolve stays get_resolve_status-only; denies unchanged)",
+    ".claude/hooks/resolve_run_script_gate.py",
+    ".mcp.json",
+    "automatic runner, AUTOMATION_POLICY_V01 and Master State files",
+    "no run_script_unsafe, no hook removal, no bypass mode"
+  ],
+  "not_needed_for_step3": "ffmpeg QC/encode uses normal Bash; no Resolve access",
+  "restore_after_execution": "remove the three temporary allow rules from settings.local.json and record the removal in the result receipt"
+}
