@@ -1,0 +1,41 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "CLAUDE_FACTORY_STATUS_20261013_V01",
+  "revision": 1,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "READ_ONLY",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "goal": "Nitin asks Claude for the latest UNCHAINED NITIN factory status. Reply in Dutch, maximum 350 words. This is a new read-only status request, NOT a retry of PR31 or any render/build. Summarize what is actually completed, blocked and next for no-relay automation and Aakhri Ishq. Distinguish historical supplied repository evidence from your current response. The supplied records last changed by 2 October; do not present them as new Mac observations. You have no filesystem/shell tools or prior-session memory in this route: explicitly say local PR31 logs, manual full24 build status, active processes and newer media are unavailable if not supplied. Do not claim to have contacted other sessions or inspected media. Orchestrator reports draft PR33 contains offline-tested delivery/timeout diagnostics fixes but is not merged or installed; treat this as reported context, not your independent verification. Give the smallest next technical action and one precise missing capability. No commands, repairs, new dispatches, retries, upgrades, render or publication. Do not restate long historical Master State. A short truthful status is the whole deliverable.",
+  "base_commit": "3011df61ba455218e705d37959f7021f1657f0b5",
+  "inputs": [
+    {
+      "path": "p0e4/evidence/task_runs/pr_31/RESULT.json",
+      "sha256": "f1c6898dbe4a6cedbfa6939ab7df6243387066506beb2673f1366a13d9e4adbb"
+    },
+    {
+      "path": "p0e4/evidence/aki_review_handoff_20261001/CHECKPOINT_AND_BUILD_DRAFT_V01.json",
+      "sha256": "24593dd29711d0585f259c03cf21675cb3878b28da575917b135aff81a23e975"
+    },
+    {
+      "path": "p0e4/evidence/claude_edit_posting_handoff_review_v01_execution/v13_chain_caption_repair/NEXT_READY.json",
+      "sha256": "3b5d6b2801edb8929dd3b97e0774d753efb7e2d29b3399eeee81874ebec55c9b"
+    }
+  ],
+  "acceptance_criteria": [
+    "Dutch response no more than 350 words, distinguishing completed work, blockers and next action.",
+    "Cite the supplied paths for PR31 timeout and V13 preview status; do not infer a timeout cause or final video approval.",
+    "Explicitly distinguish current Claude response from unobserved Mac health, manual render progress and live integration acceptance.",
+    "No execution or approval claims, no tools, no retries or changes."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
