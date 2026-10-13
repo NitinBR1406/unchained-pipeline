@@ -1,0 +1,298 @@
+Composition {
+	CurrentTime = 0,
+	RenderRange = { 0, 88 },
+	GlobalRange = { -2144, 4193 },
+	CurrentID = 162,
+	HiQ = true,
+	PlaybackUpdateMode = 0,
+	StereoMode = false,
+	Version = "DaVinci Resolve Studio 21.1.0.0017",
+	SavedOutputs = 0,
+	HeldTools = 0,
+	DisabledTools = 0,
+	LockedTools = 0,
+	AudioOffset = 0,
+	Resumable = true,
+	OutputClips = {
+	},
+	Tools = {
+		MediaIn1 = Loader {
+			CustomData = { MediaProps = {
+					MEDIA_AUDIO_TRACKS_DESC = {
+						{
+							MEDIA_AUDIO_BIT_DEPTH = 32,
+							MEDIA_AUDIO_FRAME_RATE = 30,
+							MEDIA_AUDIO_NUM_CHANNELS = 2,
+							MEDIA_AUDIO_SAMPLE_RATE = 48000,
+							MEDIA_AUDIO_START_TIME = 0,
+							MEDIA_AUDIO_TRACK_ID = "Timeline Audio",
+							MEDIA_AUDIO_TRACK_NAME = "Timeline Audio [AKI_V13_AB_A_CINEMATIC_V01]"
+						},
+						{
+							MEDIA_AUDIO_BIT_DEPTH = 32,
+							MEDIA_AUDIO_FRAME_RATE = 30,
+							MEDIA_AUDIO_NUM_CHANNELS = 2,
+							MEDIA_AUDIO_SAMPLE_RATE = 48000,
+							MEDIA_AUDIO_START_TIME = 0,
+							MEDIA_AUDIO_TRACK_ID = "ea73865c-8705-42da-ac0a-a25ffdf21e5b",
+							MEDIA_AUDIO_TRACK_NAME = "IMG_5739.MOV"
+						}
+					},
+					MEDIA_AUDIO_TRACKS_NUM = 2,
+					MEDIA_FORMAT_TYPE = "QuickTime",
+					MEDIA_HAS_AUDIO = true,
+					MEDIA_HEIGHT = 3840,
+					MEDIA_ID = "ea73865c-8705-42da-ac0a-a25ffdf21e5b",
+					MEDIA_IS_SOURCE_RES = true,
+					MEDIA_MARK_IN = 0,
+					MEDIA_MARK_OUT = 88,
+					MEDIA_NAME = "IMG_5739.MOV",
+					MEDIA_NUM_FRAMES = 6338,
+					MEDIA_NUM_LAYERS = 1,
+					MEDIA_PAR = 1,
+					MEDIA_PATH = "<REDACTED_LOCAL_MEDIA_PATH>/IMG_5739.MOV",
+					MEDIA_SRC_FRAME_RATE = 30,
+					MEDIA_START_FRAME = -2144,
+					MEDIA_WIDTH = 2160
+				}, },
+			Inputs = {
+				GlobalIn = Input { Value = -2144, },
+				GlobalOut = Input { Value = 4194, },
+				AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+				Layer = Input { Value = "0", },
+				ClipTimeStart = Input { Value = -2144, },
+				ClipTimeEnd = Input { Value = 4193, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				DeepOutputMode = Input {
+					Value = 0,
+					Disabled = true,
+				},
+			},
+			Version = 1,
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Multiframe = true,
+					Filename = "<REDACTED_LOCAL_MEDIA_PATH>/IMG_5739.MOV",
+					Length = 6338,
+					LengthSetManually = true,
+					GlobalStart = -2144,
+					GlobalEnd = 4194,
+					TrimIn = -2144,
+					TrimOut = 4193,
+				}
+			}
+		},
+		MediaOut1 = Saver {
+			Inputs = {
+				Index = Input { Value = "0", },
+				Input = Input {
+					SourceOp = "Merge2",
+					Source = "Output",
+				}
+			},
+		},
+		UN_BRAND_HOOK = TextPlus {
+			Inputs = {
+				Offset3 = Input {
+					Value = Point {
+						X = 0,
+						Y = 0
+					},
+				},
+				Softness3 = Input {
+					Value = Number {
+						Value = 0.08
+					},
+				},
+				ExtendHorizontal3 = Input {
+					Value = Number {
+						Value = 0.065
+					},
+				},
+				OutsideOnly2 = Input {
+					Value = Number {
+						Value = 1
+					},
+				},
+				Thickness2 = Input {
+					Value = Number {
+						Value = 0.018
+					},
+				},
+				ExtendVertical3 = Input {
+					Value = Number {
+						Value = 0.028
+					},
+				},
+				Round3 = Input {
+					Value = Number {
+						Value = 0.12
+					},
+				},
+				Opacity3 = Input {
+					Value = Number {
+						Value = 0.68
+					},
+				},
+				ElementShape3 = Input {
+					Value = Number {
+						Value = 2
+					},
+				},
+				GlobalIn = Input { Value = -2144, },
+				GlobalOut = Input { Value = 4193, },
+				Width = Input { Value = 2160, },
+				Height = Input { Value = 3840, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Wrap = Input { Value = 1, },
+				Center = Input { Value = { 0.5, 0.205 }, },
+				LayoutRotation = Input { Value = 1, },
+				TransformRotation = Input { Value = 1, },
+				StyledText = Input { Value = "SOME LOVE STORIES\nNEVER REALLY END.", },
+				Font = Input { Value = "Montserrat", },
+				Style = Input { Value = "Medium", },
+				Size = Input { Value = 0.105, },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalJustificationNew = Input { Value = 3, }
+			},
+			Version = 1
+		},
+		Merge2Blend = BezierSpline {
+			SplineColor = { Red = 205, Green = 205, Blue = 205 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 29.3333333333333, 0 }, Flags = { Linear = true } },
+				[88] = { 0, LH = { 58.6666666666667, 0 }, Flags = { Linear = true } }
+			}
+		},
+		UN_CONTINUOUS_RHYTHM_V03Size = BezierSpline {
+			SplineColor = { Red = 225, Green = 0, Blue = 225 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 2.3, RH = { 7, 2.3 }, Flags = { Linear = true } },
+				[21] = { 2.3, LH = { 14, 2.3 }, RH = { 21.6666666666667, 2.31686666666667 }, Flags = { Linear = true } },
+				[23] = { 2.3506, LH = { 22.3333333333333, 2.33373333333333 }, RH = { 23.3333333333333, 2.3506 }, Flags = { Linear = true } },
+				[24] = { 2.3506, LH = { 23.6666666666667, 2.3506 }, RH = { 26.6666666666667, 2.33373333333333 }, Flags = { Linear = true } },
+				[32] = { 2.3, LH = { 29.3333333333333, 2.31686666666667 }, RH = { 33, 2.3 }, Flags = { Linear = true } },
+				[35] = { 2.3, LH = { 34, 2.3 }, RH = { 35.3333333333333, 2.30383333333333 }, Flags = { Linear = true } },
+				[36] = { 2.3115, LH = { 35.6666666666667, 2.30766666666667 }, RH = { 38.3333333333333, 2.30766666666667 }, Flags = { Linear = true } },
+				[43] = { 2.3, LH = { 40.6666666666667, 2.30383333333333 }, RH = { 58, 2.3 }, Flags = { Linear = true } },
+				[88] = { 2.3, LH = { 73, 2.3 }, Flags = { Linear = true } }
+			}
+		},
+		Merge1 = Merge {
+			Inputs = {
+				Blend = Input {
+					SourceOp = "Merge1Blend",
+					Source = "Value",
+				},
+				Background = Input {
+					SourceOp = "UN_CONTINUOUS_RHYTHM_V03",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "UN_BRAND_HOOK",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, }
+			},
+		},
+		Merge2 = Merge {
+			Inputs = {
+				Blend = Input {
+					SourceOp = "Merge2Blend",
+					Source = "Value",
+				},
+				Background = Input {
+					SourceOp = "Merge1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "UN_BRAND_HOOK_SONG_ID",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, }
+			},
+		},
+		UN_BRAND_HOOK_SONG_ID = TextPlus {
+			Inputs = {
+				GlobalIn = Input { Value = -2144, },
+				GlobalOut = Input { Value = 4193, },
+				Width = Input { Value = 2160, },
+				Height = Input { Value = 3840, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Wrap = Input { Value = 1, },
+				Center = Input { Value = { 0.5, 0.135 }, },
+				LayoutRotation = Input { Value = 1, },
+				TransformRotation = Input { Value = 1, },
+				Red1 = Input { Value = 0.847058823529412, },
+				Green1 = Input { Value = 0.72156862745098, },
+				Blue1 = Input { Value = 0.313725490196078, },
+				Softness1 = Input { Value = 1, },
+				StyledText = Input { Value = "AAKHRI ISHQ", },
+				Font = Input { Value = "Cinzel", },
+				Style = Input { Value = "SemiBold", },
+				Size = Input { Value = 0.0372, },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalJustificationNew = Input { Value = 3, }
+			},
+			Version = 1
+		},
+		Merge1Blend = BezierSpline {
+			SplineColor = { Red = 205, Green = 205, Blue = 205 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 17.6666666666667, 0 }, Flags = { Linear = true } },
+				[53] = { 0, LH = { 35.3333333333333, 0 }, RH = { 55.3333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+				[60] = { 1, LH = { 57.6666666666667, 0.666666666666667 }, RH = { 64, 1 }, Flags = { Linear = true } },
+				[72] = { 1, LH = { 68, 1 }, RH = { 75.3333333333333, 0.666666666666667 }, Flags = { Linear = true } },
+				[82] = { 0, LH = { 78.6666666666667, 0.333333333333333 }, RH = { 84, 0 }, Flags = { Linear = true } },
+				[88] = { 0, LH = { 86, 0 }, Flags = { Linear = true } }
+			}
+		},
+		UN_CONTINUOUS_RHYTHM_V03 = Transform {
+			Inputs = {
+				Center = Input { Value = { 0.5, 0.72 }, },
+				Size = Input {
+					SourceOp = "UN_CONTINUOUS_RHYTHM_V03Size",
+					Source = "Value",
+				},
+				Input = Input {
+					SourceOp = "MediaIn1",
+					Source = "Output",
+				}
+			},
+		}
+	},
+	Frames = {
+	},
+	Prefs = {
+		Comp = {
+			Interactive = {
+				Proxy = {
+					Scale = 1,
+				},
+			},
+			Paths = {
+				Map = {
+					["ResolveCaches:"] = "<REDACTED_LOCAL_CACHE_PATH>",
+				},
+			},
+			FrameFormat = {
+				Width = 2160,
+				Height = 3840,
+				GuideRatio = 1.77777777777778,
+				DepthFull = 3,
+				DepthPreview = 3,
+				DepthInteractive = 3,
+			},
+			Unsorted = {
+				GlobalStart = 4294965152,
+				GlobalEnd = 4193
+			},
+		}
+	},
+}

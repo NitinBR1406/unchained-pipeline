@@ -1,0 +1,36 @@
+{
+  "schema": "AKI_V13_AB_REQUIRED_PERMISSIONS_V01",
+  "status": "NOT_ACTIVE (granted via approval prompt for the rev-2 and rev-3 step-2 attempts, removed after each failure)",
+  "requires": "explicit NITIN_CHANGE_APPROVAL for this build task (CLAUDE.md: widening Resolve access)",
+  "file": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.claude/settings.local.json (local, not pinned, not committed)",
+  "temporary_rules": {
+    "permissions": {
+      "allow": [
+        "Write(/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-v13-ab-preview-build-v01/**)",
+        "Bash(/usr/bin/python3 /Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-v13-ab-preview-build-v01/step2_build_render_ab.py)"
+      ]
+    }
+  },
+  "preconditions_before_running": [
+    "code review of revision 4 on the exact bytes: step2 a3ab4952b676e0650a5fde32e54d1ad86bd96d8f29c8b90494416e7b6fbe26b0; step 1 is not re-run",
+    "copy scripts from the reviewed commit into the build folder and run `shasum -a 256 -c` against SHA256SUMS.txt immediately before EACH invocation; abort on any mismatch; no edits between check and run",
+    "python3 test_step2_offline.py passes on the same bytes before step 1",
+    "step 2 only after step-1 readback has been inspected; step 2 itself refuses on any validate_step1 mismatch"
+  ],
+  "unchanged": [
+    ".claude/settings.json (MCP davinci_resolve stays get_resolve_status-only; denies unchanged)",
+    ".claude/hooks/resolve_run_script_gate.py",
+    ".mcp.json",
+    "automatic runner, AUTOMATION_POLICY_V01 and Master State files",
+    "no run_script_unsafe, no hook removal, no bypass mode"
+  ],
+  "not_needed_for_step3": "ffmpeg QC/encode uses normal Bash; no Resolve access",
+  "restore_after_execution": "remove the three temporary allow rules from settings.local.json and record the removal in the result receipt",
+  "revision": 4,
+  "permission_scope_limits": [
+    "rules are path-based, not hash-enforced: hash verification above is a procedural control, not a technical one",
+    "the folder Write rule restricts Claude's Write tool only; it does not restrict side effects of the scripts (Resolve database: new project UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01; Resolve caches; render output into the build folder)",
+    "the auto-mode denial must be resolved through this local permission/approval process, not through any other tool or route"
+  ],
+  "rerun_scope": "step 2 rev 4 only, against the existing copy; requires base + AKI_V13_AB_A_CINEMATIC_V01 + AKI_V13_AB_A_CINEMATIC_R3 present"
+}

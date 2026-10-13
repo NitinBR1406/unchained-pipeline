@@ -1,0 +1,816 @@
+Composition {
+	CurrentTime = 0,
+	RenderRange = { 0, 114 },
+	GlobalRange = { -2233, 4104 },
+	CurrentID = 255,
+	HiQ = true,
+	PlaybackUpdateMode = 0,
+	StereoMode = false,
+	Version = "DaVinci Resolve Studio 21.1.0.0017",
+	SavedOutputs = 0,
+	HeldTools = 0,
+	DisabledTools = 0,
+	LockedTools = 0,
+	AudioOffset = 0,
+	Resumable = true,
+	OutputClips = {
+	},
+	Tools = {
+		UN_AB_HOOKCenter = XYPath {
+			ShowKeyPoints = false,
+			DrawMode = "ModifyOnly",
+			CtrlWZoom = false,
+			Inputs = {
+				X = Input {
+					SourceOp = "UN_AB_HOOKCenterX",
+					Source = "Value",
+				},
+				Y = Input {
+					SourceOp = "UN_AB_HOOKCenterY",
+					Source = "Value",
+				}
+			},
+		},
+		UN_AB_HOOKMergeBlend = BezierSpline {
+			SplineColor = { Red = 0, Green = 200, Blue = 255 },
+			CtrlWZoom = false,
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0, RH = { 0.333333333333333, 0 }, Flags = { Linear = true } },
+				[1] = { 0, LH = { 0.666666666666667, 0 }, RH = { 3.66666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+				[9] = { 1, LH = { 6.33333333333333, 0.666666666666667 }, RH = { 23.6666666666667, 1 }, Flags = { Linear = true } },
+				[53] = { 1, LH = { 38.3333333333333, 1 }, RH = { 55.6666666666667, 0.666666666666667 }, Flags = { Linear = true } },
+				[61] = { 0, LH = { 58.3333333333333, 0.333333333333333 }, RH = { 78.6666666666667, 0 }, Flags = { Linear = true } },
+				[114] = { 0, LH = { 96.3333333333333, 0 }, Flags = { Linear = true } }
+			}
+		},
+		UN_AB_T2CenterX = BezierSpline {
+			SplineColor = { Red = 0, Green = 200, Blue = 255 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0.5, RH = { 0.333333333333333, 0.5 }, Flags = { Linear = true } },
+				[1] = { 0.5, LH = { 0.666666666666667, 0.5 }, RH = { 1.33333333333333, 0.5 }, Flags = { Linear = true } },
+				[2] = { 0.5, LH = { 1.66666666666667, 0.5 }, RH = { 2.33333333333333, 0.5 }, Flags = { Linear = true } },
+				[3] = { 0.5, LH = { 2.66666666666667, 0.5 }, RH = { 3.33333333333333, 0.5 }, Flags = { Linear = true } },
+				[4] = { 0.5, LH = { 3.66666666666667, 0.5 }, RH = { 4.33333333333333, 0.5 }, Flags = { Linear = true } },
+				[5] = { 0.5, LH = { 4.66666666666667, 0.5 }, RH = { 5.33333333333333, 0.5 }, Flags = { Linear = true } },
+				[6] = { 0.5, LH = { 5.66666666666667, 0.5 }, RH = { 6.33333333333333, 0.5 }, Flags = { Linear = true } },
+				[7] = { 0.5, LH = { 6.66666666666667, 0.5 }, RH = { 7.33333333333333, 0.5 }, Flags = { Linear = true } },
+				[8] = { 0.5, LH = { 7.66666666666667, 0.5 }, RH = { 8.33333333333333, 0.5 }, Flags = { Linear = true } },
+				[9] = { 0.5, LH = { 8.66666666666667, 0.5 }, RH = { 9.33333333333333, 0.5 }, Flags = { Linear = true } },
+				[10] = { 0.5, LH = { 9.66666666666667, 0.5 }, RH = { 10.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[11] = { 0.5, LH = { 10.6666666666667, 0.5 }, RH = { 11.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[12] = { 0.5, LH = { 11.6666666666667, 0.5 }, RH = { 12.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[13] = { 0.5, LH = { 12.6666666666667, 0.5 }, RH = { 13.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[14] = { 0.5, LH = { 13.6666666666667, 0.5 }, RH = { 14.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[15] = { 0.5, LH = { 14.6666666666667, 0.5 }, RH = { 15.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[16] = { 0.5, LH = { 15.6666666666667, 0.5 }, RH = { 16.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[17] = { 0.5, LH = { 16.6666666666667, 0.5 }, RH = { 17.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[18] = { 0.5, LH = { 17.6666666666667, 0.5 }, RH = { 18.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[19] = { 0.5, LH = { 18.6666666666667, 0.5 }, RH = { 19.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[20] = { 0.5, LH = { 19.6666666666667, 0.5 }, RH = { 20.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[21] = { 0.5, LH = { 20.6666666666667, 0.5 }, RH = { 21.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[22] = { 0.5, LH = { 21.6666666666667, 0.5 }, RH = { 22.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[23] = { 0.5, LH = { 22.6666666666667, 0.5 }, RH = { 23.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[24] = { 0.5, LH = { 23.6666666666667, 0.5 }, RH = { 24.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[25] = { 0.5, LH = { 24.6666666666667, 0.5 }, RH = { 25.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[26] = { 0.5, LH = { 25.6666666666667, 0.5 }, RH = { 26.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[27] = { 0.5, LH = { 26.6666666666667, 0.5 }, RH = { 27.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[28] = { 0.5, LH = { 27.6666666666667, 0.5 }, RH = { 28.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[29] = { 0.5, LH = { 28.6666666666667, 0.5 }, RH = { 29.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[30] = { 0.5, LH = { 29.6666666666667, 0.5 }, RH = { 30.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[31] = { 0.5, LH = { 30.6666666666667, 0.5 }, RH = { 31.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[32] = { 0.5, LH = { 31.6666666666667, 0.5 }, RH = { 32.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[33] = { 0.5, LH = { 32.6666666666667, 0.5 }, RH = { 33.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[34] = { 0.5, LH = { 33.6666666666667, 0.5 }, RH = { 34.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[35] = { 0.5, LH = { 34.6666666666667, 0.5 }, RH = { 35.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[36] = { 0.5, LH = { 35.6666666666667, 0.5 }, RH = { 36.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[37] = { 0.5, LH = { 36.6666666666667, 0.5 }, RH = { 37.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[38] = { 0.5, LH = { 37.6666666666667, 0.5 }, RH = { 38.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[39] = { 0.5, LH = { 38.6666666666667, 0.5 }, RH = { 39.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[40] = { 0.5, LH = { 39.6666666666667, 0.5 }, RH = { 40.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[41] = { 0.5, LH = { 40.6666666666667, 0.5 }, RH = { 41.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[42] = { 0.5, LH = { 41.6666666666667, 0.5 }, RH = { 42.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[43] = { 0.5, LH = { 42.6666666666667, 0.5 }, RH = { 43.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[44] = { 0.5, LH = { 43.6666666666667, 0.5 }, RH = { 44.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[45] = { 0.5, LH = { 44.6666666666667, 0.5 }, RH = { 45.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[46] = { 0.5, LH = { 45.6666666666667, 0.5 }, RH = { 46.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[47] = { 0.5, LH = { 46.6666666666667, 0.5 }, RH = { 47.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[48] = { 0.5, LH = { 47.6666666666667, 0.5 }, RH = { 48.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[49] = { 0.5, LH = { 48.6666666666667, 0.5 }, RH = { 49.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[50] = { 0.5, LH = { 49.6666666666667, 0.5 }, RH = { 50.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[51] = { 0.5, LH = { 50.6666666666667, 0.5 }, RH = { 51.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[52] = { 0.5, LH = { 51.6666666666667, 0.5 }, RH = { 52.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[53] = { 0.5, LH = { 52.6666666666667, 0.5 }, RH = { 53.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[54] = { 0.5, LH = { 53.6666666666667, 0.5 }, RH = { 54.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[55] = { 0.5, LH = { 54.6666666666667, 0.5 }, RH = { 55.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[56] = { 0.5, LH = { 55.6666666666667, 0.5 }, RH = { 56.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[57] = { 0.5, LH = { 56.6666666666667, 0.5 }, RH = { 57.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[58] = { 0.5, LH = { 57.6666666666667, 0.5 }, RH = { 58.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[59] = { 0.5, LH = { 58.6666666666667, 0.5 }, RH = { 59.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[60] = { 0.5, LH = { 59.6666666666667, 0.5 }, RH = { 60.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[61] = { 0.5, LH = { 60.6666666666667, 0.5 }, RH = { 61.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[62] = { 0.5, LH = { 61.6666666666667, 0.5 }, RH = { 62.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[63] = { 0.5, LH = { 62.6666666666667, 0.5 }, RH = { 63.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[64] = { 0.5, LH = { 63.6666666666667, 0.5 }, RH = { 64.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[65] = { 0.5, LH = { 64.6666666666667, 0.5 }, RH = { 65.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[66] = { 0.5, LH = { 65.6666666666667, 0.5 }, RH = { 66.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[67] = { 0.5, LH = { 66.6666666666667, 0.5 }, RH = { 67.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[68] = { 0.5, LH = { 67.6666666666667, 0.5 }, RH = { 68.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[69] = { 0.5, LH = { 68.6666666666667, 0.5 }, RH = { 69.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[70] = { 0.5, LH = { 69.6666666666667, 0.5 }, RH = { 70.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[71] = { 0.5, LH = { 70.6666666666667, 0.5 }, RH = { 71.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[72] = { 0.5, LH = { 71.6666666666667, 0.5 }, RH = { 72.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[73] = { 0.5, LH = { 72.6666666666667, 0.5 }, RH = { 73.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[74] = { 0.5, LH = { 73.6666666666667, 0.5 }, RH = { 74.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[75] = { 0.5, LH = { 74.6666666666667, 0.5 }, RH = { 75.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[76] = { 0.5, LH = { 75.6666666666667, 0.5 }, RH = { 76.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[77] = { 0.5, LH = { 76.6666666666667, 0.5 }, RH = { 77.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[78] = { 0.5, LH = { 77.6666666666667, 0.5 }, RH = { 78.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[79] = { 0.5, LH = { 78.6666666666667, 0.5 }, RH = { 79.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[80] = { 0.5, LH = { 79.6666666666667, 0.5 }, RH = { 80.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[81] = { 0.5, LH = { 80.6666666666667, 0.5 }, RH = { 81.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[82] = { 0.5, LH = { 81.6666666666667, 0.5 }, RH = { 82.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[83] = { 0.5, LH = { 82.6666666666667, 0.5 }, RH = { 83.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[84] = { 0.5, LH = { 83.6666666666667, 0.5 }, RH = { 84.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[85] = { 0.5, LH = { 84.6666666666667, 0.5 }, RH = { 85.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[86] = { 0.5, LH = { 85.6666666666667, 0.5 }, RH = { 86.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[87] = { 0.5, LH = { 86.6666666666667, 0.5 }, RH = { 87.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[88] = { 0.5, LH = { 87.6666666666667, 0.5 }, RH = { 88.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[89] = { 0.5, LH = { 88.6666666666667, 0.5 }, RH = { 89.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[90] = { 0.5, LH = { 89.6666666666667, 0.5 }, RH = { 90.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[91] = { 0.5, LH = { 90.6666666666667, 0.5 }, RH = { 91.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[92] = { 0.5, LH = { 91.6666666666667, 0.5 }, RH = { 92.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[93] = { 0.5, LH = { 92.6666666666667, 0.5 }, RH = { 93.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[94] = { 0.5, LH = { 93.6666666666667, 0.5 }, RH = { 94.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[95] = { 0.5, LH = { 94.6666666666667, 0.5 }, RH = { 95.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[96] = { 0.5, LH = { 95.6666666666667, 0.5 }, RH = { 96.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[97] = { 0.5, LH = { 96.6666666666667, 0.5 }, RH = { 97.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[98] = { 0.5, LH = { 97.6666666666667, 0.5 }, RH = { 98.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[99] = { 0.5, LH = { 98.6666666666667, 0.5 }, RH = { 99.3333333333333, 0.5 }, Flags = { Linear = true } },
+				[100] = { 0.5, LH = { 99.6666666666667, 0.5 }, RH = { 100.333333333333, 0.5 }, Flags = { Linear = true } },
+				[101] = { 0.5, LH = { 100.666666666667, 0.5 }, RH = { 101.333333333333, 0.5 }, Flags = { Linear = true } },
+				[102] = { 0.5, LH = { 101.666666666667, 0.5 }, RH = { 102.333333333333, 0.5 }, Flags = { Linear = true } },
+				[103] = { 0.5, LH = { 102.666666666667, 0.5 }, RH = { 103.333333333333, 0.5 }, Flags = { Linear = true } },
+				[104] = { 0.5, LH = { 103.666666666667, 0.5 }, RH = { 104.333333333333, 0.5 }, Flags = { Linear = true } },
+				[105] = { 0.5, LH = { 104.666666666667, 0.5 }, RH = { 105.333333333333, 0.5 }, Flags = { Linear = true } },
+				[106] = { 0.5, LH = { 105.666666666667, 0.5 }, RH = { 106.333333333333, 0.5 }, Flags = { Linear = true } },
+				[107] = { 0.5, LH = { 106.666666666667, 0.5 }, RH = { 107.333333333333, 0.5 }, Flags = { Linear = true } },
+				[108] = { 0.5, LH = { 107.666666666667, 0.5 }, RH = { 108.333333333333, 0.5 }, Flags = { Linear = true } },
+				[109] = { 0.5, LH = { 108.666666666667, 0.5 }, RH = { 109.333333333333, 0.5 }, Flags = { Linear = true } },
+				[110] = { 0.5, LH = { 109.666666666667, 0.5 }, RH = { 110.333333333333, 0.5 }, Flags = { Linear = true } },
+				[111] = { 0.5, LH = { 110.666666666667, 0.5 }, RH = { 111.333333333333, 0.5 }, Flags = { Linear = true } },
+				[112] = { 0.5, LH = { 111.666666666667, 0.5 }, RH = { 112.333333333333, 0.5 }, Flags = { Linear = true } },
+				[113] = { 0.5, LH = { 112.666666666667, 0.5 }, RH = { 113.333333333333, 0.5 }, Flags = { Linear = true } },
+				[114] = { 0.5, LH = { 113.666666666667, 0.5 }, Flags = { Linear = true } }
+			}
+		},
+		UN_AB_T3 = Transform {
+			Inputs = {
+				Center = Input { Value = { 0.5, 0.62173913 }, },
+				Input = Input {
+					SourceOp = "UN_AB_T2",
+					Source = "Output",
+				}
+			},
+		},
+		Merge2Blend = BezierSpline {
+			SplineColor = { Red = 0, Green = 200, Blue = 255 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 38, 0 }, Flags = { Linear = true } },
+				[114] = { 0, LH = { 76, 0 }, Flags = { Linear = true } }
+			}
+		},
+		UN_AB_HOOK = TextPlus {
+			Inputs = {
+				GlobalIn = Input { Value = -2233, },
+				GlobalOut = Input { Value = 4104, },
+				Width = Input { Value = 2160, },
+				Height = Input { Value = 3840, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				Center = Input {
+					SourceOp = "UN_AB_HOOKCenter",
+					Source = "Value",
+				},
+				StyledText = Input { Value = "SOME LOVE STORIES\nNEVER REALLY END.", },
+				Font = Input { Value = "Montserrat", },
+				Style = Input { Value = "Medium", },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalJustificationNew = Input { Value = 3, }
+			},
+			Version = 1
+		},
+		UN_BRAND_HOOK = TextPlus {
+			Inputs = {
+				GlobalIn = Input { Value = -2233, },
+				GlobalOut = Input { Value = 4104, },
+				Width = Input { Value = 2160, },
+				Height = Input { Value = 3840, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Wrap = Input { Value = 1, },
+				Center = Input { Value = { 0.5, 0.205 }, },
+				LayoutRotation = Input { Value = 1, },
+				TransformRotation = Input { Value = 1, },
+				Softness1 = Input { Value = 1, },
+				StyledText = Input { Value = "SOME LOVE STORIES\nNEVER REALLY END.", },
+				Font = Input { Value = "Montserrat", },
+				Style = Input { Value = "Medium", },
+				Size = Input { Value = 0.0624, },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalJustificationNew = Input { Value = 3, }
+			},
+			Version = 1
+		},
+		Merge3Blend = BezierSpline {
+			SplineColor = { Red = 0, Green = 200, Blue = 255 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 38, 0 }, Flags = { Linear = true } },
+				[114] = { 0, LH = { 76, 0 }, Flags = { Linear = true } }
+			}
+		},
+		Merge4 = Merge {
+			Inputs = {
+				Blend = Input {
+					SourceOp = "Merge4Blend",
+					Source = "Value",
+				},
+				Background = Input {
+					SourceOp = "Merge3",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "UN_BRAND_ARTIST",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, }
+			},
+		},
+		Merge4Blend = BezierSpline {
+			SplineColor = { Red = 0, Green = 200, Blue = 255 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 38, 0 }, Flags = { Linear = true } },
+				[114] = { 0, LH = { 76, 0 }, Flags = { Linear = true } }
+			}
+		},
+		UN_AB_T2Center = XYPath {
+			ShowKeyPoints = false,
+			DrawMode = "ModifyOnly",
+			CtrlWZoom = false,
+			Inputs = {
+				X = Input {
+					SourceOp = "UN_AB_T2CenterX",
+					Source = "Value",
+				},
+				Y = Input {
+					SourceOp = "UN_AB_T2CenterY",
+					Source = "Value",
+				}
+			},
+		},
+		UN_BRAND_HOOK_SONG_ID = TextPlus {
+			Inputs = {
+				GlobalIn = Input { Value = -2233, },
+				GlobalOut = Input { Value = 4104, },
+				Width = Input { Value = 2160, },
+				Height = Input { Value = 3840, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Wrap = Input { Value = 1, },
+				Center = Input { Value = { 0.5, 0.135 }, },
+				LayoutRotation = Input { Value = 1, },
+				TransformRotation = Input { Value = 1, },
+				Red1 = Input { Value = 0.847058823529412, },
+				Green1 = Input { Value = 0.72156862745098, },
+				Blue1 = Input { Value = 0.313725490196078, },
+				Softness1 = Input { Value = 1, },
+				StyledText = Input { Value = "AAKHRI ISHQ", },
+				Font = Input { Value = "Cinzel", },
+				Style = Input { Value = "SemiBold", },
+				Size = Input { Value = 0.0372, },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalJustificationNew = Input { Value = 3, }
+			},
+			Version = 1
+		},
+		UN_CONTINUOUS_RHYTHM_V03 = Transform {
+			Inputs = {
+				Center = Input { Value = { 0.5, 0.72 }, },
+				Size = Input {
+					SourceOp = "UN_CONTINUOUS_RHYTHM_V03Size",
+					Source = "Value",
+				},
+				Input = Input {
+					SourceOp = "UN_AB_T3",
+					Source = "Output",
+				}
+			},
+		},
+		UN_AB_HOOKMerge = Merge {
+			Inputs = {
+				Blend = Input {
+					SourceOp = "UN_AB_HOOKMergeBlend",
+					Source = "Value",
+				},
+				Background = Input {
+					SourceOp = "Merge4",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "UN_AB_HOOK",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, }
+			},
+		},
+		Merge2 = Merge {
+			Inputs = {
+				Blend = Input {
+					SourceOp = "Merge2Blend",
+					Source = "Value",
+				},
+				Background = Input {
+					SourceOp = "Merge1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "UN_BRAND_HOOK_SONG_ID",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, }
+			},
+		},
+		Merge1 = Merge {
+			Inputs = {
+				Blend = Input {
+					SourceOp = "Merge1Blend",
+					Source = "Value",
+				},
+				Background = Input {
+					SourceOp = "UN_CONTINUOUS_RHYTHM_V03",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "UN_BRAND_HOOK",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, }
+			},
+		},
+		Merge3 = Merge {
+			Inputs = {
+				Blend = Input {
+					SourceOp = "Merge3Blend",
+					Source = "Value",
+				},
+				Background = Input {
+					SourceOp = "Merge2",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "UN_BRAND_TITLE",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, }
+			},
+		},
+		UN_BRAND_ARTIST = TextPlus {
+			Inputs = {
+				Offset3 = Input {
+					Value = Point {
+						X = 0,
+						Y = 0
+					},
+				},
+				Softness3 = Input {
+					Value = Number {
+						Value = 0.08
+					},
+				},
+				ExtendHorizontal3 = Input {
+					Value = Number {
+						Value = 0.065
+					},
+				},
+				OutsideOnly2 = Input {
+					Value = Number {
+						Value = 1
+					},
+				},
+				Thickness2 = Input {
+					Value = Number {
+						Value = 0.018
+					},
+				},
+				ExtendVertical3 = Input {
+					Value = Number {
+						Value = 0.028
+					},
+				},
+				Round3 = Input {
+					Value = Number {
+						Value = 0.12
+					},
+				},
+				Opacity3 = Input {
+					Value = Number {
+						Value = 0.68
+					},
+				},
+				ElementShape3 = Input {
+					Value = Number {
+						Value = 2
+					},
+				},
+				GlobalIn = Input { Value = -2233, },
+				GlobalOut = Input { Value = 4104, },
+				Width = Input { Value = 2160, },
+				Height = Input { Value = 3840, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Wrap = Input { Value = 1, },
+				Center = Input { Value = { 0.5, 0.255 }, },
+				LayoutRotation = Input { Value = 1, },
+				TransformRotation = Input { Value = 1, },
+				StyledText = Input { Value = "UNCHAINED NITIN", },
+				Font = Input { Value = "Montserrat", },
+				Style = Input { Value = "Medium", },
+				Size = Input { Value = 0.075, },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalJustificationNew = Input { Value = 3, }
+			},
+			Version = 1
+		},
+		UN_CONTINUOUS_RHYTHM_V03Size = BezierSpline {
+			SplineColor = { Red = 225, Green = 0, Blue = 225 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 2.3, RH = { 21.3333333333333, 2.3 }, Flags = { Linear = true } },
+				[64] = { 2.3, LH = { 42.6666666666667, 2.3 }, RH = { 64.6666666666667, 2.3138 }, Flags = { Linear = true } },
+				[66] = { 2.3414, LH = { 65.3333333333333, 2.3276 }, RH = { 66.3333333333333, 2.3414 }, Flags = { Linear = true } },
+				[67] = { 2.3414, LH = { 66.6666666666667, 2.3414 }, RH = { 71, 2.3276 }, Flags = { Linear = true } },
+				[79] = { 2.3, LH = { 75, 2.3138 }, RH = { 90.6666666666667, 2.3 }, Flags = { Linear = true } },
+				[114] = { 2.3, LH = { 102.333333333333, 2.3 }, Flags = { Linear = true } }
+			}
+		},
+		UN_AB_T2CenterY = BezierSpline {
+			SplineColor = { Red = 0, Green = 200, Blue = 255 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0.5, RH = { 38, 0.5 }, Flags = { Linear = true } },
+				[114] = { 0.5, LH = { 76, 0.5 }, Flags = { Linear = true } }
+			}
+		},
+		UN_AB_T2Size = BezierSpline {
+			SplineColor = { Red = 0, Green = 200, Blue = 255 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 1.00725, RH = { 0.333333333333333, 1.00733333333333 }, Flags = { Linear = true } },
+				[1] = { 1.0075, LH = { 0.666666666666667, 1.00741666666667 }, RH = { 1.33333333333333, 1.00758333333333 }, Flags = { Linear = true } },
+				[2] = { 1.00775, LH = { 1.66666666666667, 1.00766666666667 }, RH = { 2.33333333333333, 1.00783333333333 }, Flags = { Linear = true } },
+				[3] = { 1.008, LH = { 2.66666666666667, 1.00791666666667 }, RH = { 3.33333333333333, 1.00808333333333 }, Flags = { Linear = true } },
+				[4] = { 1.00825, LH = { 3.66666666666667, 1.00816666666667 }, RH = { 4.33333333333333, 1.00833333333333 }, Flags = { Linear = true } },
+				[5] = { 1.0085, LH = { 4.66666666666667, 1.00841666666667 }, RH = { 5.33333333333333, 1.00858333333333 }, Flags = { Linear = true } },
+				[6] = { 1.00875, LH = { 5.66666666666667, 1.00866666666667 }, RH = { 6.33333333333333, 1.00883333333333 }, Flags = { Linear = true } },
+				[7] = { 1.009, LH = { 6.66666666666667, 1.00891666666667 }, RH = { 7.33333333333333, 1.00908333333333 }, Flags = { Linear = true } },
+				[8] = { 1.00925, LH = { 7.66666666666667, 1.00916666666667 }, RH = { 8.33333333333333, 1.00933333333333 }, Flags = { Linear = true } },
+				[9] = { 1.0095, LH = { 8.66666666666667, 1.00941666666667 }, RH = { 9.33333333333333, 1.00958333333333 }, Flags = { Linear = true } },
+				[10] = { 1.00975, LH = { 9.66666666666667, 1.00966666666667 }, RH = { 10.3333333333333, 1.00983333333333 }, Flags = { Linear = true } },
+				[11] = { 1.01, LH = { 10.6666666666667, 1.00991666666667 }, RH = { 11.3333333333333, 1.01008333333333 }, Flags = { Linear = true } },
+				[12] = { 1.01025, LH = { 11.6666666666667, 1.01016666666667 }, RH = { 12.3333333333333, 1.01033333333333 }, Flags = { Linear = true } },
+				[13] = { 1.0105, LH = { 12.6666666666667, 1.01041666666667 }, RH = { 13.3333333333333, 1.01058333333333 }, Flags = { Linear = true } },
+				[14] = { 1.01075, LH = { 13.6666666666667, 1.01066666666667 }, RH = { 14.3333333333333, 1.01083333333333 }, Flags = { Linear = true } },
+				[15] = { 1.011, LH = { 14.6666666666667, 1.01091666666667 }, RH = { 15.3333333333333, 1.01108333333333 }, Flags = { Linear = true } },
+				[16] = { 1.01125, LH = { 15.6666666666667, 1.01116666666667 }, RH = { 16.3333333333333, 1.01133333333333 }, Flags = { Linear = true } },
+				[17] = { 1.0115, LH = { 16.6666666666667, 1.01141666666667 }, RH = { 17.3333333333333, 1.01158333333333 }, Flags = { Linear = true } },
+				[18] = { 1.01175, LH = { 17.6666666666667, 1.01166666666667 }, RH = { 18.3333333333333, 1.01183333333333 }, Flags = { Linear = true } },
+				[19] = { 1.012, LH = { 18.6666666666667, 1.01191666666667 }, RH = { 19.3333333333333, 1.01208333333333 }, Flags = { Linear = true } },
+				[20] = { 1.01225, LH = { 19.6666666666667, 1.01216666666667 }, RH = { 20.3333333333333, 1.01233333333333 }, Flags = { Linear = true } },
+				[21] = { 1.0125, LH = { 20.6666666666667, 1.01241666666667 }, RH = { 21.3333333333333, 1.01258333333333 }, Flags = { Linear = true } },
+				[22] = { 1.01275, LH = { 21.6666666666667, 1.01266666666667 }, RH = { 22.3333333333333, 1.01283333333333 }, Flags = { Linear = true } },
+				[23] = { 1.013, LH = { 22.6666666666667, 1.01291666666667 }, RH = { 23.3333333333333, 1.01308333333333 }, Flags = { Linear = true } },
+				[24] = { 1.01325, LH = { 23.6666666666667, 1.01316666666667 }, RH = { 24.3333333333333, 1.01333333333333 }, Flags = { Linear = true } },
+				[25] = { 1.0135, LH = { 24.6666666666667, 1.01341666666667 }, RH = { 25.3333333333333, 1.01358333333333 }, Flags = { Linear = true } },
+				[26] = { 1.01375, LH = { 25.6666666666667, 1.01366666666667 }, RH = { 26.3333333333333, 1.01383333333333 }, Flags = { Linear = true } },
+				[27] = { 1.014, LH = { 26.6666666666667, 1.01391666666667 }, RH = { 27.3333333333333, 1.01408333333333 }, Flags = { Linear = true } },
+				[28] = { 1.01425, LH = { 27.6666666666667, 1.01416666666667 }, RH = { 28.3333333333333, 1.01433333333333 }, Flags = { Linear = true } },
+				[29] = { 1.0145, LH = { 28.6666666666667, 1.01441666666667 }, RH = { 29.3333333333333, 1.01458333333333 }, Flags = { Linear = true } },
+				[30] = { 1.01475, LH = { 29.6666666666667, 1.01466666666667 }, RH = { 30.3333333333333, 1.01483333333333 }, Flags = { Linear = true } },
+				[31] = { 1.015, LH = { 30.6666666666667, 1.01491666666667 }, RH = { 31.3333333333333, 1.01508333333333 }, Flags = { Linear = true } },
+				[32] = { 1.01525, LH = { 31.6666666666667, 1.01516666666667 }, RH = { 32.3333333333333, 1.01533333333333 }, Flags = { Linear = true } },
+				[33] = { 1.0155, LH = { 32.6666666666667, 1.01541666666667 }, RH = { 33.3333333333333, 1.01558333333333 }, Flags = { Linear = true } },
+				[34] = { 1.01575, LH = { 33.6666666666667, 1.01566666666667 }, RH = { 34.3333333333333, 1.01583333333333 }, Flags = { Linear = true } },
+				[35] = { 1.016, LH = { 34.6666666666667, 1.01591666666667 }, RH = { 35.3333333333333, 1.01608333333333 }, Flags = { Linear = true } },
+				[36] = { 1.01625, LH = { 35.6666666666667, 1.01616666666667 }, RH = { 36.3333333333333, 1.01633333333333 }, Flags = { Linear = true } },
+				[37] = { 1.0165, LH = { 36.6666666666667, 1.01641666666667 }, RH = { 37.3333333333333, 1.01658333333333 }, Flags = { Linear = true } },
+				[38] = { 1.01675, LH = { 37.6666666666667, 1.01666666666667 }, RH = { 38.3333333333333, 1.01683333333333 }, Flags = { Linear = true } },
+				[39] = { 1.017, LH = { 38.6666666666667, 1.01691666666667 }, RH = { 39.3333333333333, 1.01708333333333 }, Flags = { Linear = true } },
+				[40] = { 1.01725, LH = { 39.6666666666667, 1.01716666666667 }, RH = { 40.3333333333333, 1.01733333333333 }, Flags = { Linear = true } },
+				[41] = { 1.0175, LH = { 40.6666666666667, 1.01741666666667 }, RH = { 41.3333333333333, 1.01758333333333 }, Flags = { Linear = true } },
+				[42] = { 1.01775, LH = { 41.6666666666667, 1.01766666666667 }, RH = { 42.3333333333333, 1.01783333333333 }, Flags = { Linear = true } },
+				[43] = { 1.018, LH = { 42.6666666666667, 1.01791666666667 }, RH = { 43.3333333333333, 1.01808333333333 }, Flags = { Linear = true } },
+				[44] = { 1.01825, LH = { 43.6666666666667, 1.01816666666667 }, RH = { 44.3333333333333, 1.01833333333333 }, Flags = { Linear = true } },
+				[45] = { 1.0185, LH = { 44.6666666666667, 1.01841666666667 }, RH = { 45.3333333333333, 1.01858333333333 }, Flags = { Linear = true } },
+				[46] = { 1.01875, LH = { 45.6666666666667, 1.01866666666667 }, RH = { 46.3333333333333, 1.01883333333333 }, Flags = { Linear = true } },
+				[47] = { 1.019, LH = { 46.6666666666667, 1.01891666666667 }, RH = { 47.3333333333333, 1.01908333333333 }, Flags = { Linear = true } },
+				[48] = { 1.01925, LH = { 47.6666666666667, 1.01916666666667 }, RH = { 48.3333333333333, 1.01933333333333 }, Flags = { Linear = true } },
+				[49] = { 1.0195, LH = { 48.6666666666667, 1.01941666666667 }, RH = { 49.3333333333333, 1.01958333333333 }, Flags = { Linear = true } },
+				[50] = { 1.01975, LH = { 49.6666666666667, 1.01966666666667 }, RH = { 50.3333333333333, 1.01983333333333 }, Flags = { Linear = true } },
+				[51] = { 1.02, LH = { 50.6666666666667, 1.01991666666667 }, RH = { 51.3333333333333, 1.02008333333333 }, Flags = { Linear = true } },
+				[52] = { 1.02025, LH = { 51.6666666666667, 1.02016666666667 }, RH = { 52.3333333333333, 1.02033333333333 }, Flags = { Linear = true } },
+				[53] = { 1.0205, LH = { 52.6666666666667, 1.02041666666667 }, RH = { 53.3333333333333, 1.02058333333333 }, Flags = { Linear = true } },
+				[54] = { 1.02075, LH = { 53.6666666666667, 1.02066666666667 }, RH = { 54.3333333333333, 1.02083333333333 }, Flags = { Linear = true } },
+				[55] = { 1.021, LH = { 54.6666666666667, 1.02091666666667 }, RH = { 55.3333333333333, 1.02108333333333 }, Flags = { Linear = true } },
+				[56] = { 1.02125, LH = { 55.6666666666667, 1.02116666666667 }, RH = { 56.3333333333333, 1.02133333333333 }, Flags = { Linear = true } },
+				[57] = { 1.0215, LH = { 56.6666666666667, 1.02141666666667 }, RH = { 57.3333333333333, 1.02158333333333 }, Flags = { Linear = true } },
+				[58] = { 1.02175, LH = { 57.6666666666667, 1.02166666666667 }, RH = { 58.3333333333333, 1.02183333333333 }, Flags = { Linear = true } },
+				[59] = { 1.022, LH = { 58.6666666666667, 1.02191666666667 }, RH = { 59.3333333333333, 1.02208333333333 }, Flags = { Linear = true } },
+				[60] = { 1.02225, LH = { 59.6666666666667, 1.02216666666667 }, RH = { 60.3333333333333, 1.02233333333333 }, Flags = { Linear = true } },
+				[61] = { 1.0225, LH = { 60.6666666666667, 1.02241666666667 }, RH = { 61.3333333333333, 1.02258333333333 }, Flags = { Linear = true } },
+				[62] = { 1.02275, LH = { 61.6666666666667, 1.02266666666667 }, RH = { 62.3333333333333, 1.02283333333333 }, Flags = { Linear = true } },
+				[63] = { 1.023, LH = { 62.6666666666667, 1.02291666666667 }, RH = { 63.3333333333333, 1.02308333333333 }, Flags = { Linear = true } },
+				[64] = { 1.02325, LH = { 63.6666666666667, 1.02316666666667 }, RH = { 64.3333333333333, 1.02333333333333 }, Flags = { Linear = true } },
+				[65] = { 1.0235, LH = { 64.6666666666667, 1.02341666666667 }, RH = { 65.3333333333333, 1.02358333333333 }, Flags = { Linear = true } },
+				[66] = { 1.02375, LH = { 65.6666666666667, 1.02366666666667 }, RH = { 66.3333333333333, 1.02383333333333 }, Flags = { Linear = true } },
+				[67] = { 1.024, LH = { 66.6666666666667, 1.02391666666667 }, RH = { 67.3333333333333, 1.02408333333333 }, Flags = { Linear = true } },
+				[68] = { 1.02425, LH = { 67.6666666666667, 1.02416666666667 }, RH = { 68.3333333333333, 1.02433333333333 }, Flags = { Linear = true } },
+				[69] = { 1.0245, LH = { 68.6666666666667, 1.02441666666667 }, RH = { 69.3333333333333, 1.02458333333333 }, Flags = { Linear = true } },
+				[70] = { 1.02475, LH = { 69.6666666666667, 1.02466666666667 }, RH = { 70.3333333333333, 1.02483333333333 }, Flags = { Linear = true } },
+				[71] = { 1.025, LH = { 70.6666666666667, 1.02491666666667 }, RH = { 71.3333333333333, 1.02508333333333 }, Flags = { Linear = true } },
+				[72] = { 1.02525, LH = { 71.6666666666667, 1.02516666666667 }, RH = { 72.3333333333333, 1.02533333333333 }, Flags = { Linear = true } },
+				[73] = { 1.0255, LH = { 72.6666666666667, 1.02541666666667 }, RH = { 73.3333333333333, 1.02558333333333 }, Flags = { Linear = true } },
+				[74] = { 1.02575, LH = { 73.6666666666667, 1.02566666666667 }, RH = { 74.3333333333333, 1.02583333333333 }, Flags = { Linear = true } },
+				[75] = { 1.026, LH = { 74.6666666666667, 1.02591666666667 }, RH = { 75.3333333333333, 1.02608333333333 }, Flags = { Linear = true } },
+				[76] = { 1.02625, LH = { 75.6666666666667, 1.02616666666667 }, RH = { 76.3333333333333, 1.02633333333333 }, Flags = { Linear = true } },
+				[77] = { 1.0265, LH = { 76.6666666666667, 1.02641666666667 }, RH = { 77.3333333333333, 1.02658333333333 }, Flags = { Linear = true } },
+				[78] = { 1.02675, LH = { 77.6666666666667, 1.02666666666667 }, RH = { 78.3333333333333, 1.02683333333333 }, Flags = { Linear = true } },
+				[79] = { 1.027, LH = { 78.6666666666667, 1.02691666666667 }, RH = { 79.3333333333333, 1.02708333333333 }, Flags = { Linear = true } },
+				[80] = { 1.02725, LH = { 79.6666666666667, 1.02716666666667 }, RH = { 80.3333333333333, 1.02733333333333 }, Flags = { Linear = true } },
+				[81] = { 1.0275, LH = { 80.6666666666667, 1.02741666666667 }, RH = { 81.3333333333333, 1.02758333333333 }, Flags = { Linear = true } },
+				[82] = { 1.02775, LH = { 81.6666666666667, 1.02766666666667 }, RH = { 82.3333333333333, 1.02783333333333 }, Flags = { Linear = true } },
+				[83] = { 1.028, LH = { 82.6666666666667, 1.02791666666667 }, RH = { 83.3333333333333, 1.02808333333333 }, Flags = { Linear = true } },
+				[84] = { 1.02825, LH = { 83.6666666666667, 1.02816666666667 }, RH = { 84.3333333333333, 1.02833333333333 }, Flags = { Linear = true } },
+				[85] = { 1.0285, LH = { 84.6666666666667, 1.02841666666667 }, RH = { 85.3333333333333, 1.02858333333333 }, Flags = { Linear = true } },
+				[86] = { 1.02875, LH = { 85.6666666666667, 1.02866666666667 }, RH = { 86.3333333333333, 1.02883333333333 }, Flags = { Linear = true } },
+				[87] = { 1.029, LH = { 86.6666666666667, 1.02891666666667 }, RH = { 87.3333333333333, 1.02908333333333 }, Flags = { Linear = true } },
+				[88] = { 1.02925, LH = { 87.6666666666667, 1.02916666666667 }, RH = { 88.3333333333333, 1.02933333333333 }, Flags = { Linear = true } },
+				[89] = { 1.0295, LH = { 88.6666666666667, 1.02941666666667 }, RH = { 89.3333333333333, 1.02958333333333 }, Flags = { Linear = true } },
+				[90] = { 1.02975, LH = { 89.6666666666667, 1.02966666666667 }, RH = { 90.3333333333333, 1.05316666666667 }, Flags = { Linear = true } },
+				[91] = { 1.1, LH = { 90.6666666666667, 1.07658333333333 }, RH = { 91.3333333333333, 1.10008333333333 }, Flags = { Linear = true } },
+				[92] = { 1.10025, LH = { 91.6666666666667, 1.10016666666667 }, RH = { 92.3333333333333, 1.10033333333333 }, Flags = { Linear = true } },
+				[93] = { 1.1005, LH = { 92.6666666666667, 1.10041666666667 }, RH = { 93.3333333333333, 1.10058333333333 }, Flags = { Linear = true } },
+				[94] = { 1.10075, LH = { 93.6666666666667, 1.10066666666667 }, RH = { 94.3333333333333, 1.10083333333333 }, Flags = { Linear = true } },
+				[95] = { 1.101, LH = { 94.6666666666667, 1.10091666666667 }, RH = { 95.3333333333333, 1.10108333333333 }, Flags = { Linear = true } },
+				[96] = { 1.10125, LH = { 95.6666666666667, 1.10116666666667 }, RH = { 96.3333333333333, 1.10133333333333 }, Flags = { Linear = true } },
+				[97] = { 1.1015, LH = { 96.6666666666667, 1.10141666666667 }, RH = { 97.3333333333333, 1.10158333333333 }, Flags = { Linear = true } },
+				[98] = { 1.10175, LH = { 97.6666666666667, 1.10166666666667 }, RH = { 98.3333333333333, 1.10183333333333 }, Flags = { Linear = true } },
+				[99] = { 1.102, LH = { 98.6666666666667, 1.10191666666667 }, RH = { 99.3333333333333, 1.10208333333333 }, Flags = { Linear = true } },
+				[100] = { 1.10225, LH = { 99.6666666666667, 1.10216666666667 }, RH = { 100.333333333333, 1.10233333333333 }, Flags = { Linear = true } },
+				[101] = { 1.1025, LH = { 100.666666666667, 1.10241666666667 }, RH = { 101.333333333333, 1.10258333333333 }, Flags = { Linear = true } },
+				[102] = { 1.10275, LH = { 101.666666666667, 1.10266666666667 }, RH = { 102.333333333333, 1.10283333333333 }, Flags = { Linear = true } },
+				[103] = { 1.103, LH = { 102.666666666667, 1.10291666666667 }, RH = { 103.333333333333, 1.10308333333333 }, Flags = { Linear = true } },
+				[104] = { 1.10325, LH = { 103.666666666667, 1.10316666666667 }, RH = { 104.333333333333, 1.10333333333333 }, Flags = { Linear = true } },
+				[105] = { 1.1035, LH = { 104.666666666667, 1.10341666666667 }, RH = { 105.333333333333, 1.10358333333333 }, Flags = { Linear = true } },
+				[106] = { 1.10375, LH = { 105.666666666667, 1.10366666666667 }, RH = { 106.333333333333, 1.10383333333333 }, Flags = { Linear = true } },
+				[107] = { 1.104, LH = { 106.666666666667, 1.10391666666667 }, RH = { 107.333333333333, 1.10408333333333 }, Flags = { Linear = true } },
+				[108] = { 1.10425, LH = { 107.666666666667, 1.10416666666667 }, RH = { 108.333333333333, 1.10433333333333 }, Flags = { Linear = true } },
+				[109] = { 1.1045, LH = { 108.666666666667, 1.10441666666667 }, RH = { 109.333333333333, 1.10458333333333 }, Flags = { Linear = true } },
+				[110] = { 1.10475, LH = { 109.666666666667, 1.10466666666667 }, RH = { 110.333333333333, 1.10483333333333 }, Flags = { Linear = true } },
+				[111] = { 1.105, LH = { 110.666666666667, 1.10491666666667 }, RH = { 111.333333333333, 1.10508333333333 }, Flags = { Linear = true } },
+				[112] = { 1.10525, LH = { 111.666666666667, 1.10516666666667 }, RH = { 112.333333333333, 1.10533333333333 }, Flags = { Linear = true } },
+				[113] = { 1.1055, LH = { 112.666666666667, 1.10541666666667 }, RH = { 113.333333333333, 1.10558333333333 }, Flags = { Linear = true } },
+				[114] = { 1.10575, LH = { 113.666666666667, 1.10566666666667 }, Flags = { Linear = true } }
+			}
+		},
+		MediaOut1 = Saver {
+			Inputs = {
+				Index = Input { Value = "0", },
+				Input = Input {
+					SourceOp = "UN_AB_HOOKMerge",
+					Source = "Output",
+				}
+			},
+		},
+		UN_AB_T2 = Transform {
+			Inputs = {
+				Center = Input {
+					SourceOp = "UN_AB_T2Center",
+					Source = "Value",
+				},
+				Size = Input {
+					SourceOp = "UN_AB_T2Size",
+					Source = "Value",
+				},
+				Input = Input {
+					SourceOp = "UN_AB_T1",
+					Source = "Output",
+				}
+			},
+		},
+		Merge1Blend = BezierSpline {
+			SplineColor = { Red = 0, Green = 200, Blue = 255 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 38, 0 }, Flags = { Linear = true } },
+				[114] = { 0, LH = { 76, 0 }, Flags = { Linear = true } }
+			}
+		},
+		MediaIn1 = Loader {
+			ExtentSet = true,
+			CustomData = {
+				MediaProps = {
+					MEDIA_AUDIO_TRACKS_DESC = {
+						{
+							MEDIA_AUDIO_BIT_DEPTH = 32,
+							MEDIA_AUDIO_FRAME_RATE = 30,
+							MEDIA_AUDIO_NUM_CHANNELS = 2,
+							MEDIA_AUDIO_SAMPLE_RATE = 48000,
+							MEDIA_AUDIO_START_TIME = 0,
+							MEDIA_AUDIO_TRACK_ID = "Timeline Audio",
+							MEDIA_AUDIO_TRACK_NAME = "Timeline Audio [AKI_V13_AB_A_CINEMATIC_R3]"
+						},
+						{
+							MEDIA_AUDIO_BIT_DEPTH = 32,
+							MEDIA_AUDIO_FRAME_RATE = 30,
+							MEDIA_AUDIO_NUM_CHANNELS = 2,
+							MEDIA_AUDIO_SAMPLE_RATE = 48000,
+							MEDIA_AUDIO_START_TIME = 0,
+							MEDIA_AUDIO_TRACK_ID = "ea73865c-8705-42da-ac0a-a25ffdf21e5b",
+							MEDIA_AUDIO_TRACK_NAME = "IMG_5739.MOV"
+						}
+					},
+					MEDIA_AUDIO_TRACKS_NUM = 2,
+					MEDIA_FORMAT_TYPE = "QuickTime",
+					MEDIA_HAS_AUDIO = true,
+					MEDIA_HEIGHT = 3840,
+					MEDIA_ID = "ea73865c-8705-42da-ac0a-a25ffdf21e5b",
+					MEDIA_IS_SOURCE_RES = true,
+					MEDIA_MARK_IN = 0,
+					MEDIA_MARK_OUT = 114,
+					MEDIA_NAME = "IMG_5739.MOV",
+					MEDIA_NUM_FRAMES = 6338,
+					MEDIA_NUM_LAYERS = 1,
+					MEDIA_PAR = 1,
+					MEDIA_PATH = "<REDACTED_LOCAL_MEDIA_PATH>/IMG_5739.MOV",
+					MEDIA_SRC_FRAME_RATE = 30,
+					MEDIA_START_FRAME = -2233,
+					MEDIA_WIDTH = 2160
+				},
+			},
+			Inputs = {
+				GlobalIn = Input { Value = -2233, },
+				GlobalOut = Input { Value = 4105, },
+				AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+				Layer = Input { Value = "0", },
+				ClipTimeStart = Input { Value = -2233, },
+				ClipTimeEnd = Input { Value = 4104, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				DeepOutputMode = Input {
+					Value = 0,
+					Disabled = true,
+				},
+			},
+			Version = 1,
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Multiframe = true,
+					Filename = "<REDACTED_LOCAL_MEDIA_PATH>/IMG_5739.MOV",
+					Length = 6338,
+					LengthSetManually = true,
+					GlobalStart = -2233,
+					GlobalEnd = 4105,
+					TrimIn = -2233,
+					TrimOut = 4104,
+				}
+			}
+		},
+		UN_BRAND_TITLE = TextPlus {
+			Inputs = {
+				Offset3 = Input {
+					Value = Point {
+						X = 0,
+						Y = 0
+					},
+				},
+				Softness3 = Input {
+					Value = Number {
+						Value = 0.08
+					},
+				},
+				ExtendHorizontal3 = Input {
+					Value = Number {
+						Value = 0.065
+					},
+				},
+				OutsideOnly2 = Input {
+					Value = Number {
+						Value = 1
+					},
+				},
+				Thickness2 = Input {
+					Value = Number {
+						Value = 0.018
+					},
+				},
+				ExtendVertical3 = Input {
+					Value = Number {
+						Value = 0.028
+					},
+				},
+				Round3 = Input {
+					Value = Number {
+						Value = 0.12
+					},
+				},
+				Opacity3 = Input {
+					Value = Number {
+						Value = 0.68
+					},
+				},
+				ElementShape3 = Input {
+					Value = Number {
+						Value = 2
+					},
+				},
+				GlobalIn = Input { Value = -2233, },
+				GlobalOut = Input { Value = 4104, },
+				Width = Input { Value = 2160, },
+				Height = Input { Value = 3840, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Wrap = Input { Value = 1, },
+				Center = Input { Value = { 0.5, 0.13 }, },
+				LayoutRotation = Input { Value = 1, },
+				TransformRotation = Input { Value = 1, },
+				Green1 = Input { Value = 0.86, },
+				Blue1 = Input { Value = 0.38, },
+				StyledText = Input { Value = "AAKHRI ISHQ", },
+				Font = Input { Value = "Cinzel", },
+				Style = Input { Value = "SemiBold", },
+				Size = Input { Value = 0.125, },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalJustificationNew = Input { Value = 3, }
+			},
+			Version = 1
+		},
+		UN_AB_T1 = Transform {
+			Inputs = {
+				Center = Input { Value = { 0.5, 0.37826087 }, },
+				Input = Input {
+					SourceOp = "MediaIn1",
+					Source = "Output",
+				}
+			},
+		},
+		UN_AB_HOOKCenterX = BezierSpline {
+			SplineColor = { Red = 0, Green = 200, Blue = 255 },
+			CtrlWZoom = false,
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0.5, RH = { 38, 0.5 }, Flags = { Linear = true } },
+				[114] = { 0.5, LH = { 76, 0.5 }, Flags = { Linear = true } }
+			}
+		},
+		UN_AB_HOOKCenterY = BezierSpline {
+			SplineColor = { Red = 0, Green = 200, Blue = 255 },
+			CtrlWZoom = false,
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0.205, RH = { 38, 0.205 }, Flags = { Linear = true } },
+				[114] = { 0.205, LH = { 76, 0.205 }, Flags = { Linear = true } }
+			}
+		}
+	},
+	Frames = {
+	},
+	Prefs = {
+		Comp = {
+			Interactive = {
+				Proxy = {
+					Scale = 1,
+				},
+			},
+			Paths = {
+				Map = {
+					["ResolveCaches:"] = "<REDACTED_LOCAL_CACHE_PATH>",
+				},
+			},
+			FrameFormat = {
+				Width = 2160,
+				Height = 3840,
+				GuideRatio = 1.77777777777778,
+				DepthFull = 3,
+				DepthPreview = 3,
+				DepthInteractive = 3,
+			},
+			Unsorted = {
+				GlobalStart = 4294965063,
+				GlobalEnd = 4104
+			},
+		}
+	},
+}
