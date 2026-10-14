@@ -145,6 +145,12 @@ class P2ContractTests(unittest.TestCase):
         code, ans = self._send(dict(self.record, asset_sha256=h), h)
         self.assertFalse(ans["eligible"])
 
+    def test_empty_registered_hash_never_reaches_the_gate(self):
+        for r in FX["routes"]:
+            env = env_for(r, dict(self.record, asset_sha256="", media_url="https://x.invalid/a?generation=1"), "", meta="")
+            self.assertFalse(filter_true(r["gate_prefilter"], env), r["channel"])
+            self.assertTrue(filter_true(r["blocked_hash_filter"], env), r["channel"])
+
     def test_drive_metadata_must_agree_too(self):
         env = env_for(self.route, self.record, self.computed, meta="")
         self.assertFalse(filter_true(self.route["gate_prefilter"], env))

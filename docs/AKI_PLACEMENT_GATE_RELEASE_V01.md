@@ -47,7 +47,7 @@ P2 (Make 9974134) was changed in its stored configuration (still INACTIVE):
 
 There is **no verifier code change** for this. `tests/test_p2_request_contract.py` and its fixture were regenerated from the stored P2 (read back via the Make API).
 
-Not yet proven in Make itself: that IML `sha256()` over a binary buffer equals the true SHA-256. If it does not, every placement BLOCKS; it can never pass by accident. The isolated test scenario 9975568 (synthetic files, no data store, no upload) is ready for a manual "Run once".
+Not yet proven in Make itself: that IML `sha256()` over a binary buffer equals the true SHA-256. If it computes a wrong value, every placement BLOCKS. If it raises an error, the error handler logs it and sets BLOCKED. Either way a placement cannot pass by accident. Claim-write failures and id write-back failures after an upload are logged (the record then stays PUBLISHING and is never re-uploaded). The isolated test scenario 9975568 (synthetic files, no data store, no upload) is ready for a manual "Run once".
 
 ## Post-deploy verification (after a later, approved deploy)
 

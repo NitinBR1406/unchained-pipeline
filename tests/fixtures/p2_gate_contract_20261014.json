@@ -1,5 +1,5 @@
 {
- "source": "Make scenario 9974134 (P2 version e) as stored in Make on 2026-10-14T15:04:22.723Z (read back via API)",
+ "source": "Make scenario 9974134 (P2 version e) as stored in Make on 2026-10-14T15:27:20.920Z (read back via API)",
  "auth_keychain_header": "x-publish-apikey (Make keychain 217337; value never in repo)",
  "routes": [
   {
@@ -7,9 +7,14 @@
    "fetch_module": "http:MakeRequest",
    "fetch_id": 300,
    "fetch_filter": {
-    "name": "instagram_reels (variant 9x16)",
+    "name": "instagram_reels (api instagram, variant 9x16)",
     "conditions": [
      [
+      {
+       "a": "{{1.data.platform_api}}",
+       "b": "instagram",
+       "o": "text:equal"
+      },
       {
        "a": "{{1.data.channel}}",
        "b": "instagram_reels",
@@ -32,6 +37,11 @@
     "name": "computed sha256 of hosted bytes == registered AND URL pinned to one object generation named by its sha256",
     "conditions": [
      [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:notequal"
+      },
       {
        "a": "{{301.bytes_sha256}}",
        "b": "{{1.data.asset_sha256}}",
@@ -94,6 +104,13 @@
        "b": "{{1.data.asset_sha256}}",
        "o": "text:notcontain"
       }
+     ],
+     [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:equal"
+      }
      ]
     ]
    },
@@ -122,9 +139,14 @@
    "fetch_module": "http:MakeRequest",
    "fetch_id": 340,
    "fetch_filter": {
-    "name": "instagram_feed (variant 4x5)",
+    "name": "instagram_feed (api instagram, variant 4x5)",
     "conditions": [
      [
+      {
+       "a": "{{1.data.platform_api}}",
+       "b": "instagram",
+       "o": "text:equal"
+      },
       {
        "a": "{{1.data.channel}}",
        "b": "instagram_feed",
@@ -147,6 +169,11 @@
     "name": "computed sha256 of hosted bytes == registered AND URL pinned to one object generation named by its sha256",
     "conditions": [
      [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:notequal"
+      },
       {
        "a": "{{341.bytes_sha256}}",
        "b": "{{1.data.asset_sha256}}",
@@ -209,6 +236,13 @@
        "b": "{{1.data.asset_sha256}}",
        "o": "text:notcontain"
       }
+     ],
+     [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:equal"
+      }
      ]
     ]
    },
@@ -237,9 +271,14 @@
    "fetch_module": "google-drive:getAFile",
    "fetch_id": 380,
    "fetch_filter": {
-    "name": "facebook_reels (variant 9x16)",
+    "name": "facebook_reels (api facebook, variant 9x16)",
     "conditions": [
      [
+      {
+       "a": "{{1.data.platform_api}}",
+       "b": "facebook",
+       "o": "text:equal"
+      },
       {
        "a": "{{1.data.channel}}",
        "b": "facebook_reels",
@@ -262,6 +301,11 @@
     "name": "computed bytes sha256 == registered AND Drive sha256Checksum == registered",
     "conditions": [
      [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:notequal"
+      },
       {
        "a": "{{381.bytes_sha256}}",
        "b": "{{1.data.asset_sha256}}",
@@ -312,6 +356,13 @@
        "b": "{{1.data.asset_sha256}}",
        "o": "text:notequal"
       }
+     ],
+     [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:equal"
+      }
      ]
     ]
    },
@@ -340,9 +391,14 @@
    "fetch_module": "google-drive:getAFile",
    "fetch_id": 420,
    "fetch_filter": {
-    "name": "facebook_feed (variant 4x5)",
+    "name": "facebook_feed (api facebook, variant 4x5)",
     "conditions": [
      [
+      {
+       "a": "{{1.data.platform_api}}",
+       "b": "facebook",
+       "o": "text:equal"
+      },
       {
        "a": "{{1.data.channel}}",
        "b": "facebook_feed",
@@ -365,6 +421,11 @@
     "name": "computed bytes sha256 == registered AND Drive sha256Checksum == registered",
     "conditions": [
      [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:notequal"
+      },
       {
        "a": "{{421.bytes_sha256}}",
        "b": "{{1.data.asset_sha256}}",
@@ -415,6 +476,13 @@
        "b": "{{1.data.asset_sha256}}",
        "o": "text:notequal"
       }
+     ],
+     [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:equal"
+      }
      ]
     ]
    },
@@ -443,9 +511,14 @@
    "fetch_module": "google-drive:getAFile",
    "fetch_id": 460,
    "fetch_filter": {
-    "name": "youtube_shorts (variant 9x16)",
+    "name": "youtube_shorts (api youtube, variant 9x16)",
     "conditions": [
      [
+      {
+       "a": "{{1.data.platform_api}}",
+       "b": "youtube",
+       "o": "text:equal"
+      },
       {
        "a": "{{1.data.channel}}",
        "b": "youtube_shorts",
@@ -468,6 +541,11 @@
     "name": "computed bytes sha256 == registered AND Drive sha256Checksum == registered",
     "conditions": [
      [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:notequal"
+      },
       {
        "a": "{{461.bytes_sha256}}",
        "b": "{{1.data.asset_sha256}}",
@@ -518,6 +596,13 @@
        "b": "{{1.data.asset_sha256}}",
        "o": "text:notequal"
       }
+     ],
+     [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:equal"
+      }
      ]
     ]
    },
@@ -546,9 +631,14 @@
    "fetch_module": "google-drive:getAFile",
    "fetch_id": 500,
    "fetch_filter": {
-    "name": "youtube_hero (variant 9x16)",
+    "name": "youtube_hero (api youtube, variant 9x16)",
     "conditions": [
      [
+      {
+       "a": "{{1.data.platform_api}}",
+       "b": "youtube",
+       "o": "text:equal"
+      },
       {
        "a": "{{1.data.channel}}",
        "b": "youtube_hero",
@@ -571,6 +661,11 @@
     "name": "computed bytes sha256 == registered AND Drive sha256Checksum == registered",
     "conditions": [
      [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:notequal"
+      },
       {
        "a": "{{501.bytes_sha256}}",
        "b": "{{1.data.asset_sha256}}",
@@ -620,6 +715,13 @@
        "a": "{{ifempty(500.sha256Checksum; \"NONE\")}}",
        "b": "{{1.data.asset_sha256}}",
        "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:equal"
       }
      ]
     ]
