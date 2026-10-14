@@ -1,0 +1,28 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "CLAUDE_14_POSTS_HANDOFF_20261014_V01",
+  "revision": 1,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "READ_ONLY",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "base_commit": "eb1e178072d189feadec8b2233fa7c781ba09c46",
+  "goal": "Nitin explicitly asks Claude for status of newer work in a SEPARATE Claude session. His exact update on 2026-10-14: \"De status in claude is dat ik afzondelijk aan de slag ben gegaan en ik heb 14 posts ready. claude heeft ze beschikbaar. Ik wil nu overgaan tot posten\". He then instructs: \"vraag de status op aan claude\". Request a handoff of those 14 ready posts, not a repeat of V13/PR31 historical status. For each post, return ONLY if actually available: ID/title, exact final asset link/path, caption/hashtags, target platform/account, proposed order/date, completed review and remaining publication prerequisites. Include source/session provenance and last update. Treat 14 posts ready as Nitin-reported fact, not independently verified media. This bounded runner may not access the separate interactive Claude session or local files; do not pretend shared memory, invent 14 records, use denied tools or repeat obsolete blockers as current facts. If the requested handoff is not in supplied context, return a short Dutch HANDOFF_SOURCE_UNAVAILABLE with the exact missing session/artifact access; do not produce a generic status essay. No dispatch, render, build, scheduling or publication. This request only asks status; it does not bind publication approval to unspecified assets/accounts/times.",
+  "inputs": [],
+  "acceptance_criteria": [
+    "Address specifically Nitin's 14 ready posts from the separate Claude session, not the old V13 summary.",
+    "Return verifiable handoff references if supplied; otherwise state HANDOFF_SOURCE_UNAVAILABLE and the missing access without fabricating records.",
+    "Separate user-reported readiness from independently observed readiness, and preserve all runtime gates.",
+    "Respond concisely in Dutch; no tools, retries, changes or publication."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
