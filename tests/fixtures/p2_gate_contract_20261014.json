@@ -1,5 +1,5 @@
 {
- "source": "Make scenario 9974134 (P2 version e) as stored in Make on 2026-10-14T15:27:20.920Z (read back via API)",
+ "source": "Make scenario 9974134 (P2 version f2) as stored in Make on 2026-10-14T17:29:02.277Z (read back via API)",
  "auth_keychain_header": "x-publish-apikey (Make keychain 217337; value never in repo)",
  "routes": [
   {
@@ -7,23 +7,83 @@
    "fetch_module": "http:MakeRequest",
    "fetch_id": 300,
    "fetch_filter": {
-    "name": "instagram_reels (api instagram, variant 9x16)",
+    "name": "media_url is exactly the signed URL of the registered object version",
     "conditions": [
      [
       {
-       "a": "{{1.data.platform_api}}",
-       "b": "instagram",
+       "a": "UNCONFIGURED",
+       "b": "UNCONFIGURED",
+       "o": "text:notequal"
+      },
+      {
+       "a": "{{315.bucket}}",
+       "b": "UNCONFIGURED",
        "o": "text:equal"
       },
       {
-       "a": "{{1.data.channel}}",
-       "b": "instagram_reels",
+       "a": "{{315.object}}",
+       "b": "aki-ig-staging/{{1.data.asset_sha256}}.mp4",
        "o": "text:equal"
       },
       {
-       "a": "{{1.data.format_variant}}",
-       "b": "9x16",
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:notequal"
+      },
+      {
+       "a": "{{315.sha256}}",
+       "b": "{{1.data.asset_sha256}}",
        "o": "text:equal"
+      },
+      {
+       "a": "{{315.generation}}",
+       "b": "^[0-9]{1,20}$",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "https://storage.googleapis.com/UNCONFIGURED/aki-ig-staging/{{1.data.asset_sha256}}.mp4?",
+       "o": "text:startwith"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]generation={{315.generation}}(&|$)",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "generation=.*generation=",
+       "o": "text:notpattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Algorithm=GOOG4-RSA-SHA256(&|$)",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Signature=[0-9a-f]{64,}(&|$)",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Credential=[^&]+",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Expires=[0-9]+(&|$)",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[#@\\s]",
+       "o": "text:notpattern"
+      },
+      {
+       "a": "{{315.expires_epoch}}",
+       "b": "{{formatDate(addMinutes(now; 15); \"X\")}}",
+       "o": "number:greater"
       }
      ]
     ]
@@ -34,7 +94,7 @@
    },
    "gate_id": 303,
    "gate_prefilter": {
-    "name": "computed sha256 of hosted bytes == registered AND URL pinned to one object generation named by its sha256",
+    "name": "computed sha256 of the bytes served by the registered object version == registered",
     "conditions": [
      [
       {
@@ -46,16 +106,6 @@
        "a": "{{301.bytes_sha256}}",
        "b": "{{1.data.asset_sha256}}",
        "o": "text:equal"
-      },
-      {
-       "a": "{{1.data.media_url}}",
-       "b": "generation=",
-       "o": "text:contain"
-      },
-      {
-       "a": "{{1.data.media_url}}",
-       "b": "{{1.data.asset_sha256}}",
-       "o": "text:contain"
       }
      ]
     ]
@@ -81,28 +131,37 @@
      ]
     ]
    },
+   "upload_fence_id": 323,
+   "ownership_filter": {
+    "name": "this execution still owns the claim -> upload",
+    "conditions": [
+     [
+      {
+       "a": "{{323.claim_token}}",
+       "b": "{{49.owner}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{323.status}}",
+       "b": "PUBLISHING",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{323.attempt_count}}",
+       "b": "{{1.data.attempt_count + 1}}",
+       "o": "number:equal"
+      }
+     ]
+    ]
+   },
    "blocked_hash_filter": {
-    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "name": "hash mismatch / missing -> BLOCKED, no gate, no upload",
     "conditions": [
      [
       {
        "a": "{{301.bytes_sha256}}",
        "b": "{{1.data.asset_sha256}}",
        "o": "text:notequal"
-      }
-     ],
-     [
-      {
-       "a": "{{1.data.media_url}}",
-       "b": "generation=",
-       "o": "text:notcontain"
-      }
-     ],
-     [
-      {
-       "a": "{{1.data.media_url}}",
-       "b": "{{1.data.asset_sha256}}",
-       "o": "text:notcontain"
       }
      ],
      [
@@ -132,6 +191,118 @@
       }
      ]
     ]
+   },
+   "register_id": 315,
+   "register_source": "{{ifempty(1.data.hosting_register; \"NO_REGISTER\")}}",
+   "blocked_hosting_filter": {
+    "name": "media_url does not match the hosting register -> BLOCKED, no fetch",
+    "conditions": [
+     [
+      {
+       "a": "UNCONFIGURED",
+       "b": "UNCONFIGURED",
+       "o": "text:equal"
+      }
+     ],
+     [
+      {
+       "a": "{{315.bucket}}",
+       "b": "UNCONFIGURED",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{315.object}}",
+       "b": "aki-ig-staging/{{1.data.asset_sha256}}.mp4",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:equal"
+      }
+     ],
+     [
+      {
+       "a": "{{315.sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{315.generation}}",
+       "b": "^[0-9]{1,20}$",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "https://storage.googleapis.com/UNCONFIGURED/aki-ig-staging/{{1.data.asset_sha256}}.mp4?",
+       "o": "text:notstartwith"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]generation={{315.generation}}(&|$)",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "generation=.*generation=",
+       "o": "text:pattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Algorithm=GOOG4-RSA-SHA256(&|$)",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Signature=[0-9a-f]{64,}(&|$)",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Credential=[^&]+",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Expires=[0-9]+(&|$)",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[#@\\s]",
+       "o": "text:pattern"
+      }
+     ],
+     [
+      {
+       "a": "{{315.expires_epoch}}",
+       "b": "{{formatDate(addMinutes(now; 15); \"X\")}}",
+       "o": "number:lessorequal"
+      }
+     ]
+    ]
    }
   },
   {
@@ -139,23 +310,83 @@
    "fetch_module": "http:MakeRequest",
    "fetch_id": 340,
    "fetch_filter": {
-    "name": "instagram_feed (api instagram, variant 4x5)",
+    "name": "media_url is exactly the signed URL of the registered object version",
     "conditions": [
      [
       {
-       "a": "{{1.data.platform_api}}",
-       "b": "instagram",
+       "a": "UNCONFIGURED",
+       "b": "UNCONFIGURED",
+       "o": "text:notequal"
+      },
+      {
+       "a": "{{355.bucket}}",
+       "b": "UNCONFIGURED",
        "o": "text:equal"
       },
       {
-       "a": "{{1.data.channel}}",
-       "b": "instagram_feed",
+       "a": "{{355.object}}",
+       "b": "aki-ig-staging/{{1.data.asset_sha256}}.jpg",
        "o": "text:equal"
       },
       {
-       "a": "{{1.data.format_variant}}",
-       "b": "4x5",
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:notequal"
+      },
+      {
+       "a": "{{355.sha256}}",
+       "b": "{{1.data.asset_sha256}}",
        "o": "text:equal"
+      },
+      {
+       "a": "{{355.generation}}",
+       "b": "^[0-9]{1,20}$",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "https://storage.googleapis.com/UNCONFIGURED/aki-ig-staging/{{1.data.asset_sha256}}.jpg?",
+       "o": "text:startwith"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]generation={{355.generation}}(&|$)",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "generation=.*generation=",
+       "o": "text:notpattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Algorithm=GOOG4-RSA-SHA256(&|$)",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Signature=[0-9a-f]{64,}(&|$)",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Credential=[^&]+",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Expires=[0-9]+(&|$)",
+       "o": "text:pattern"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[#@\\s]",
+       "o": "text:notpattern"
+      },
+      {
+       "a": "{{355.expires_epoch}}",
+       "b": "{{formatDate(addMinutes(now; 15); \"X\")}}",
+       "o": "number:greater"
       }
      ]
     ]
@@ -166,7 +397,7 @@
    },
    "gate_id": 343,
    "gate_prefilter": {
-    "name": "computed sha256 of hosted bytes == registered AND URL pinned to one object generation named by its sha256",
+    "name": "computed sha256 of the bytes served by the registered object version == registered",
     "conditions": [
      [
       {
@@ -178,16 +409,6 @@
        "a": "{{341.bytes_sha256}}",
        "b": "{{1.data.asset_sha256}}",
        "o": "text:equal"
-      },
-      {
-       "a": "{{1.data.media_url}}",
-       "b": "generation=",
-       "o": "text:contain"
-      },
-      {
-       "a": "{{1.data.media_url}}",
-       "b": "{{1.data.asset_sha256}}",
-       "o": "text:contain"
       }
      ]
     ]
@@ -213,28 +434,37 @@
      ]
     ]
    },
+   "upload_fence_id": 363,
+   "ownership_filter": {
+    "name": "this execution still owns the claim -> upload",
+    "conditions": [
+     [
+      {
+       "a": "{{363.claim_token}}",
+       "b": "{{49.owner}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{363.status}}",
+       "b": "PUBLISHING",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{363.attempt_count}}",
+       "b": "{{1.data.attempt_count + 1}}",
+       "o": "number:equal"
+      }
+     ]
+    ]
+   },
    "blocked_hash_filter": {
-    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "name": "hash mismatch / missing -> BLOCKED, no gate, no upload",
     "conditions": [
      [
       {
        "a": "{{341.bytes_sha256}}",
        "b": "{{1.data.asset_sha256}}",
        "o": "text:notequal"
-      }
-     ],
-     [
-      {
-       "a": "{{1.data.media_url}}",
-       "b": "generation=",
-       "o": "text:notcontain"
-      }
-     ],
-     [
-      {
-       "a": "{{1.data.media_url}}",
-       "b": "{{1.data.asset_sha256}}",
-       "o": "text:notcontain"
       }
      ],
      [
@@ -261,6 +491,118 @@
        "a": "{{if(344.eligible = true; \"EOK\"; \"ENO\")}}",
        "b": "EOK",
        "o": "text:notequal"
+      }
+     ]
+    ]
+   },
+   "register_id": 355,
+   "register_source": "{{ifempty(1.data.hosting_register; \"NO_REGISTER\")}}",
+   "blocked_hosting_filter": {
+    "name": "media_url does not match the hosting register -> BLOCKED, no fetch",
+    "conditions": [
+     [
+      {
+       "a": "UNCONFIGURED",
+       "b": "UNCONFIGURED",
+       "o": "text:equal"
+      }
+     ],
+     [
+      {
+       "a": "{{355.bucket}}",
+       "b": "UNCONFIGURED",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{355.object}}",
+       "b": "aki-ig-staging/{{1.data.asset_sha256}}.jpg",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.asset_sha256}}",
+       "b": "",
+       "o": "text:equal"
+      }
+     ],
+     [
+      {
+       "a": "{{355.sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{355.generation}}",
+       "b": "^[0-9]{1,20}$",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "https://storage.googleapis.com/UNCONFIGURED/aki-ig-staging/{{1.data.asset_sha256}}.jpg?",
+       "o": "text:notstartwith"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]generation={{355.generation}}(&|$)",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "generation=.*generation=",
+       "o": "text:pattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Algorithm=GOOG4-RSA-SHA256(&|$)",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Signature=[0-9a-f]{64,}(&|$)",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Credential=[^&]+",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[?&]X-Goog-Expires=[0-9]+(&|$)",
+       "o": "text:notpattern"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "[#@\\s]",
+       "o": "text:pattern"
+      }
+     ],
+     [
+      {
+       "a": "{{355.expires_epoch}}",
+       "b": "{{formatDate(addMinutes(now; 15); \"X\")}}",
+       "o": "number:lessorequal"
       }
      ]
     ]
@@ -340,8 +682,31 @@
      ]
     ]
    },
+   "upload_fence_id": 403,
+   "ownership_filter": {
+    "name": "this execution still owns the claim -> upload",
+    "conditions": [
+     [
+      {
+       "a": "{{403.claim_token}}",
+       "b": "{{49.owner}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{403.status}}",
+       "b": "PUBLISHING",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{403.attempt_count}}",
+       "b": "{{1.data.attempt_count + 1}}",
+       "o": "number:equal"
+      }
+     ]
+    ]
+   },
    "blocked_hash_filter": {
-    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "name": "hash mismatch / missing -> BLOCKED, no gate, no upload",
     "conditions": [
      [
       {
@@ -460,8 +825,31 @@
      ]
     ]
    },
+   "upload_fence_id": 443,
+   "ownership_filter": {
+    "name": "this execution still owns the claim -> upload",
+    "conditions": [
+     [
+      {
+       "a": "{{443.claim_token}}",
+       "b": "{{49.owner}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{443.status}}",
+       "b": "PUBLISHING",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{443.attempt_count}}",
+       "b": "{{1.data.attempt_count + 1}}",
+       "o": "number:equal"
+      }
+     ]
+    ]
+   },
    "blocked_hash_filter": {
-    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "name": "hash mismatch / missing -> BLOCKED, no gate, no upload",
     "conditions": [
      [
       {
@@ -580,8 +968,31 @@
      ]
     ]
    },
+   "upload_fence_id": 483,
+   "ownership_filter": {
+    "name": "this execution still owns the claim -> upload",
+    "conditions": [
+     [
+      {
+       "a": "{{483.claim_token}}",
+       "b": "{{49.owner}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{483.status}}",
+       "b": "PUBLISHING",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{483.attempt_count}}",
+       "b": "{{1.data.attempt_count + 1}}",
+       "o": "number:equal"
+      }
+     ]
+    ]
+   },
    "blocked_hash_filter": {
-    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "name": "hash mismatch / missing -> BLOCKED, no gate, no upload",
     "conditions": [
      [
       {
@@ -700,8 +1111,31 @@
      ]
     ]
    },
+   "upload_fence_id": 523,
+   "ownership_filter": {
+    "name": "this execution still owns the claim -> upload",
+    "conditions": [
+     [
+      {
+       "a": "{{523.claim_token}}",
+       "b": "{{49.owner}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{523.status}}",
+       "b": "PUBLISHING",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{523.attempt_count}}",
+       "b": "{{1.data.attempt_count + 1}}",
+       "o": "number:equal"
+      }
+     ]
+    ]
+   },
    "blocked_hash_filter": {
-    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "name": "hash mismatch / missing -> BLOCKED, no gate, no upload",
     "conditions": [
      [
       {

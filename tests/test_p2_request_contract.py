@@ -1,10 +1,13 @@
-"""Contract between the Make publisher P2 (scenario 9974134, version e) and /v/publish-eligibility.
+"""Contract between the Make publisher P2 (scenario 9974134, version f2) and /v/publish-eligibility.
 
 The fixture holds, per channel route, P2's gate request template, the pre-gate hash filter, the upload filter and the
-BLOCKED filters exactly as stored in Make (read back via the API). P2 version e hashes the bytes it fetched and sends
+BLOCKED filters exactly as stored in Make (read back via the API). Since f2 the gate decision sits on the ownership read
+just before the upload (upload_filter) and Instagram only fetches a URL that matches the hosting register
+(fetch_filter / blocked_hosting_filter; bucket UNCONFIGURED in the stored config). P2 hashes the bytes it fetched and sends
 THAT hash ({{<n>.bytes_sha256}}) to the gate. The test computes the hash over a synthetic file, renders the template
 the way Make would, sends it to the real approval_server handler on 127.0.0.1 (isolated test mode, temp stores) and then
 applies P2's own filter conditions to the answer. Nothing here can match a real AKI placement (test: namespace)."""
+import copy
 import hashlib
 import json
 import os
@@ -43,7 +46,12 @@ def cond_true(c, env):
             x = x.replace("{{%s}}" % k, str(v))
         return x
     a, b, o = val(c["a"]), val(c.get("b")), c["o"]
-    return {"text:equal": a == b, "text:notequal": a != b, "text:contain": b in a, "text:notcontain": b not in a}[o]
+    num = lambda x: float(x) if re.fullmatch(r"-?[0-9]+(\.[0-9]+)?", x) else float("nan")
+    return {"text:equal": lambda: a == b, "text:notequal": lambda: a != b, "text:contain": lambda: b in a,
+            "text:notcontain": lambda: b not in a, "text:startwith": lambda: a.startswith(b),
+            "text:notstartwith": lambda: not a.startswith(b), "text:pattern": lambda: re.search(b, a) is not None,
+            "text:notpattern": lambda: re.search(b, a) is None, "number:greater": lambda: num(a) > num(b),
+            "number:lessorequal": lambda: num(a) <= num(b)}[o]()
 
 
 def filter_true(f, env):
@@ -156,14 +164,62 @@ class P2ContractTests(unittest.TestCase):
         self.assertFalse(filter_true(self.route["gate_prefilter"], env))
         self.assertTrue(filter_true(self.route["blocked_hash_filter"], env))
 
-    def test_instagram_requires_pinned_content_addressed_url(self):
-        r = ROUTES["instagram_reels"]
-        rec = dict(self.record, channel="instagram_reels")
-        good = "https://storage.example.invalid/aki/%s.mp4?generation=7" % self.computed
-        for url, expect in ((good, True), (good.split("?")[0], False), ("https://storage.example.invalid/aki/x.mp4?generation=7", False)):
-            env = env_for(r, dict(rec, media_url=url), self.computed)
-            self.assertEqual(filter_true(r["gate_prefilter"], env), expect, url)
-            self.assertEqual(filter_true(r["blocked_hash_filter"], env), not expect, url)
+    def test_instagram_fetch_requires_registered_signed_object_version(self):
+        NOW = 1_800_000_000
+        BUCKET = "aki-contract-test-bucket"
+
+        def configured(f):
+            """The stored filter with the UNCONFIGURED bucket sentinel replaced, as an approved hosting config would."""
+            f = copy.deepcopy(f)
+            for g in f["conditions"]:
+                for c in g:
+                    if c["a"] == "UNCONFIGURED": c["a"] = BUCKET
+                    elif c["a"].endswith(".bucket}}"): c["b"] = BUCKET
+                    elif c.get("b"): c["b"] = c["b"].replace("/UNCONFIGURED/", "/%s/" % BUCKET)
+            return f
+
+        for ch, ext in (("instagram_reels", "mp4"), ("instagram_feed", "jpg")):
+            r = ROUTES[ch]; reg_id = r["register_id"]
+            self.assertEqual(r["register_source"], '{{ifempty(1.data.hosting_register; "NO_REGISTER")}}')
+            obj = "aki-ig-staging/%s.%s" % (self.computed, ext)
+            register = dict(bucket=BUCKET, object=obj, generation="1712345678901234", sha256=self.computed, expires_epoch=NOW + 3600)
+            sig = "X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=sa%2F20261014%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20261014T120000Z&X-Goog-Expires=3600&X-Goog-SignedHeaders=host&X-Goog-Signature=" + "ab" * 128
+            good = "https://storage.googleapis.com/%s/%s?generation=1712345678901234&%s" % (BUCKET, obj, sig)
+
+            def env(url, **reg):
+                e = {"1.data.%s" % k: v for k, v in dict(self.record, channel=ch, media_url=url).items()}
+                e.update({"%d.%s" % (reg_id, k): v for k, v in dict(register, **reg).items()})
+                e['formatDate(addMinutes(now; 15); "X")'] = NOW + 900
+                return e
+
+            # stored config: hosting not approved -> every URL, even a perfect one, is BLOCKED before any fetch
+            self.assertFalse(filter_true(r["fetch_filter"], env(good)), ch)
+            self.assertTrue(filter_true(r["blocked_hosting_filter"], env(good)), ch)
+            fetch, blocked = configured(r["fetch_filter"]), configured(r["blocked_hosting_filter"])
+            cases = [(good, {}, True),
+                     (good.split("?")[0], {}, False),                                                  # unsigned, no generation
+                     (good.replace("storage.googleapis.com", "evil.example"), {}, False),              # other host
+                     (good.replace("/%s/" % BUCKET, "/other-bucket/"), {}, False),                    # other bucket
+                     (good.replace(self.computed, "0" * 64), {}, False),                               # other object
+                     (good, dict(generation="999"), False),                                            # other object version
+                     (good.replace("generation=1712345678901234", "generation=1712345678901234&generation=2"), {}, False),
+                     (good.replace("generation=1712345678901234", "generation="), {}, False),        # empty generation
+                     ("https://storage.googleapis.com/%s/x.%s?generation=1712345678901234&%s#%s" % (BUCKET, ext, sig, obj), {}, False),
+                     (good.replace("X-Goog-Signature=", "X-Goog-Sig="), {}, False),                   # not signed
+                     (good, dict(expires_epoch=NOW + 60), False),                                      # signed URL about to expire
+                     (good, dict(sha256="1" * 64), False),                                             # register for other bytes
+                     (good + "@evil.example", {}, False)]
+            for url, reg, expect in cases:
+                with self.subTest(ch=ch, url=url[:90], reg=reg):
+                    self.assertEqual(filter_true(fetch, env(url, **reg)), expect)
+                    self.assertEqual(filter_true(blocked, env(url, **reg)), not expect)   # exactly one route fires
+
+    def test_upload_only_while_this_run_still_owns_the_claim(self):
+        for r in FX["routes"]:
+            fence = r["ownership_filter"]["conditions"][0]
+            self.assertEqual({(c["a"].split(".")[-1].rstrip("}"), c["o"]) for c in fence},
+                             {("claim_token", "text:equal"), ("status", "text:equal"), ("attempt_count", "number:equal")}, r["channel"])
+            self.assertTrue(all(c["a"].startswith("{{%d." % r["upload_fence_id"]) for c in fence), r["channel"])
 
     def test_each_changed_field_is_refused_by_the_gate(self):
         for field, value in (("packaging_sha256", "c" * 64), ("channel", "instagram_reels"), ("target_account", "OTHER"),
