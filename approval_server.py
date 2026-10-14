@@ -90,6 +90,8 @@ def build_publish_service():
         approvals=ApprovalStore(os.environ.get(
             "PUBLISH_APPROVALS_STORE", str(CAMPAIGNS_ROOT / "_publish_approvals.json"))),
         grants=os.environ.get("PUBLISH_GRANTS_STORE", str(CAMPAIGNS_ROOT / "_publish_grants.json")),
+        # Isolated test environments only; never set on the production service (render.yaml does not define it).
+        allow_test_grants=os.environ.get("PUBLISH_ALLOW_TEST_GRANTS") == "1",
     )
 
 

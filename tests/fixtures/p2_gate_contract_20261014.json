@@ -1,0 +1,150 @@
+{
+ "source": "Make scenario 9974134 (P2), module 55 + route filters, as stored in Make on 2026-10-14T14:06:54Z (read back via API)",
+ "request_template": "{\"content_id\":\"{{1.data.gate_content_id}}\",\"platform\":\"{{1.data.channel}}\",\"target_account\":\"{{1.data.target_account}}\",\"asset_sha256\":\"{{1.data.asset_sha256}}\",\"packaging_sha256\":\"{{1.data.packaging_sha256}}\",\"schedule_version\":\"{{1.data.schedule_version}}\",\"scheduled_at_epoch\":{{1.data.scheduled_at_epoch}}}",
+ "request_url": "https://unchained-approval.onrender.com/v/publish-eligibility",
+ "auth_keychain_header": "x-publish-apikey (Make keychain 217337; value never in repo)",
+ "upload_route_filters": [
+  {
+   "name": "short_video -> instagram_reels",
+   "conditions": [
+    [
+     {
+      "a": "{{1.data.channel}}",
+      "b": "instagram_reels",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{60.reason}}",
+      "b": "VALID_PUBLISH_APPROVAL",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
+      "b": "EOK",
+      "o": "text:equal"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "still -> instagram_feed (4x5)",
+   "conditions": [
+    [
+     {
+      "a": "{{1.data.channel}}",
+      "b": "instagram_feed",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{60.reason}}",
+      "b": "VALID_PUBLISH_APPROVAL",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
+      "b": "EOK",
+      "o": "text:equal"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "short_video -> facebook_reels (Drive binary)",
+   "conditions": [
+    [
+     {
+      "a": "{{1.data.channel}}",
+      "b": "facebook_reels",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{60.reason}}",
+      "b": "VALID_PUBLISH_APPROVAL",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
+      "b": "EOK",
+      "o": "text:equal"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "still -> facebook_feed (4x5, Drive binary)",
+   "conditions": [
+    [
+     {
+      "a": "{{1.data.channel}}",
+      "b": "facebook_feed",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{60.reason}}",
+      "b": "VALID_PUBLISH_APPROVAL",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
+      "b": "EOK",
+      "o": "text:equal"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "short_video -> youtube_shorts (Drive binary)",
+   "conditions": [
+    [
+     {
+      "a": "{{1.data.channel}}",
+      "b": "youtube_shorts",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{60.reason}}",
+      "b": "VALID_PUBLISH_APPROVAL",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
+      "b": "EOK",
+      "o": "text:equal"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "full_song -> youtube_hero (ONLY channel for D14-V12) (Drive binary)",
+   "conditions": [
+    [
+     {
+      "a": "{{1.data.channel}}",
+      "b": "youtube_hero",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{60.reason}}",
+      "b": "VALID_PUBLISH_APPROVAL",
+      "o": "text:equal"
+     },
+     {
+      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
+      "b": "EOK",
+      "o": "text:equal"
+     }
+    ]
+   ]
+  }
+ ],
+ "synthetic_placement": {
+  "gate_content_id": "test:aki-synthetic:post:D01-V01",
+  "channel": "youtube_shorts",
+  "target_account": "TEST-ACCOUNT-YT",
+  "asset_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "title": "SYNTHETIC title",
+  "caption": "SYNTHETIC caption #test",
+  "schedule_version": "1",
+  "scheduled_at": "2030-01-01 19:00:00"
+ }
+}
