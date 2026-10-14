@@ -219,11 +219,20 @@ run_one(w, snapA, 'A'); rb = run_one(w, snapB, 'B')
 check('B17 stale bundle after a finished publication: lock rejects it and the PUBLISHED record is NOT rewritten',
       rb == 'lost_claim' and w.db[ig['placement_id']]['status'] == 'PUBLISHED' and w.posts[ig['placement_id']] == 1)
 
-residual = ('Model test, not real Make concurrency. Real-Make evidence: duplicate-key rejection of Add-a-record (live 2026-10-14). '
-            'Not yet run live (activation of the isolated test scenario not permitted in this session): sha256() over a binary buffer, '
-            'Ignore semantics in a real run, and whether Make refuses a second concurrent execution of the same scenario. '
-            'A crash between the lock insert and the claim update leaves the record READY with its lock present: it is then never '
-            'selected again with the same attempt (fail-closed, visible as plock:<placement>:a<n> without PUBLISHING).')
+uploads = [m for m, _ in mods if m['module'].split(':')[0] in ('instagram-business', 'facebook-pages', 'youtube') and 'Get' not in m['module']]
+wb_ok = []
+for u in uploads:
+    rd = byid[u['id'] + 20]   # write-back ownership read (b+26 where upload = b+6)
+    h = rd.get('onerror', [])
+    wb_ok.append(rd['module'] == 'datastore:GetRecord' and len(h) == 1 and h[0]['mapper']['data']['error_type'].startswith('WRITEBACK_FAIL_AFTER_UPLOAD a=')
+                 and ' id={{' in h[0]['mapper']['data']['error_type'])
+check('A23 write-back ownership read failing after an upload logs the platform id (WRITEBACK_FAIL_AFTER_UPLOAD a=.. id=..) for R1',
+      len(uploads) == 6 and all(wb_ok), [u['id'] for u in uploads])
+residual = ('Model test, not real Make concurrency. Run in Make on a synthetic test store (2026-10-14): duplicate-key rejection, '
+            'second concurrent execution refused, Ignore semantics, sha256() over bytes, lock/claim/recovery cases L1-L6. '
+            'Residual: an old run that already uploaded before a human recovery can lead to a second upload by the next attempt (L6); '
+            'no compare-and-set in Make data stores. A crash between the lock insert and the claim update leaves the record READY with '
+            'its lock present: it is then never selected again with the same attempt (fail-closed, visible as plock:<placement>:a<n>).')
 out = dict(test='P2 safety (structure + mocked simulation)', run_at_epoch=NOW[0], results=R, residual_risk=residual,
            passed=sum(r['passed'] for r in R), total=len(R))
 json.dump(out, open('TEST_RESULTS_P2_SAFETY.json', 'w'), indent=1)

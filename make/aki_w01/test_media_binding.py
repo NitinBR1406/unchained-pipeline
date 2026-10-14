@@ -65,6 +65,8 @@ def resolve(expr, rec, env):
         if re.fullmatch(r'\d+\.sha256Checksum', e): return env.get('meta') or ''
         mm = re.fullmatch(r'\d+\.(bucket|object|generation|sha256|expires_epoch)', e)
         if mm: return str((env.get('reg') or {}).get(mm.group(1), ''))
+        mm = re.fullmatch(r'ifempty\(\d+\.expires_epoch; 0\)', e)
+        if mm: return str((env.get('reg') or {}).get('expires_epoch', '') or 0)
         if e == 'formatDate(addMinutes(now; 15); "X")': return str(env['now'] + 900)
         if e.startswith('split("'):
             return e   # handled by caller
@@ -262,6 +264,16 @@ res, _ = igcase(good, reg=None)
 check('I12 no hosting register -> BLOCKED_REGISTER (parse error handler -> BLOCKED + log)', res == 'BLOCKED_REGISTER', res)
 res, _ = igcase(good, reg=dict(REG, sha256='0' * 64))
 check('I13 register sha256 differs from the approved asset -> BLOCKED_URL', res == 'BLOCKED_URL', res)
+res, _ = igcase(good, reg={k: v for k, v in REG.items() if k != 'expires_epoch'})
+check('I14 register without expires_epoch -> BLOCKED_URL (not stuck between routes)', res == 'BLOCKED_URL', res)
+res, _ = igcase(good + '&x=a@evil.example')
+check('I15 "@" in an otherwise valid signed URL -> BLOCKED_URL', res == 'BLOCKED_URL', res)
+for tag, cut in (('I16 X-Goog-Credential missing', 'X-Goog-Credential='), ('I17 X-Goog-Expires missing', 'X-Goog-Expires=')):
+    q = '&'.join(x for x in good.split('?', 1)[1].split('&') if not x.startswith(cut))
+    res, _ = igcase(good.split('?', 1)[0] + '?' + q)
+    check(tag + ' -> BLOCKED_URL', res == 'BLOCKED_URL', res)
+res, _ = igcase(good.replace('X-Goog-Algorithm=GOOG4-RSA-SHA256', 'X-Goog-Algorithm=GOOG4-HMAC-SHA256'))
+check('I18 other signing algorithm -> BLOCKED_URL', res == 'BLOCKED_URL', res)
 # 4 wrong / missing hash
 res, _ = p2(dict(base_fb, asset_sha256='0' * 64), A, meta=sha(A))
 check('M4a wrong registered hash -> BLOCKED', res == 'BLOCKED_HASH', res)

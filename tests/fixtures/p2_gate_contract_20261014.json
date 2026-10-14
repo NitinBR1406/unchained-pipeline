@@ -1,5 +1,5 @@
 {
- "source": "Make scenario 9974134 (P2 version f2) as stored in Make on 2026-10-14T17:29:02.277Z (read back via API)",
+ "source": "Make scenario 9974134 (P2 version f2) as stored in Make on 2026-10-14T17:48:25.264Z (read back via API)",
  "auth_keychain_header": "x-publish-apikey (Make keychain 217337; value never in repo)",
  "routes": [
   {
@@ -81,7 +81,7 @@
        "o": "text:notpattern"
       },
       {
-       "a": "{{315.expires_epoch}}",
+       "a": "{{ifempty(315.expires_epoch; 0)}}",
        "b": "{{formatDate(addMinutes(now; 15); \"X\")}}",
        "o": "number:greater"
       }
@@ -297,7 +297,7 @@
      ],
      [
       {
-       "a": "{{315.expires_epoch}}",
+       "a": "{{ifempty(315.expires_epoch; 0)}}",
        "b": "{{formatDate(addMinutes(now; 15); \"X\")}}",
        "o": "number:lessorequal"
       }
@@ -384,7 +384,7 @@
        "o": "text:notpattern"
       },
       {
-       "a": "{{355.expires_epoch}}",
+       "a": "{{ifempty(355.expires_epoch; 0)}}",
        "b": "{{formatDate(addMinutes(now; 15); \"X\")}}",
        "o": "number:greater"
       }
@@ -600,7 +600,7 @@
      ],
      [
       {
-       "a": "{{355.expires_epoch}}",
+       "a": "{{ifempty(355.expires_epoch; 0)}}",
        "b": "{{formatDate(addMinutes(now; 15); \"X\")}}",
        "o": "number:lessorequal"
       }

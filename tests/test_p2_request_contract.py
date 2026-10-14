@@ -44,8 +44,10 @@ def cond_true(c, env):
         x = x or ""
         for k, v in env.items():
             x = x.replace("{{%s}}" % k, str(v))
+        x = re.sub(r"\{\{ifempty\((\d+\.expires_epoch); 0\)\}\}", lambda m: str(env.get(m.group(1), "") or 0), x)
         return x
     a, b, o = val(c["a"]), val(c.get("b")), c["o"]
+    assert "{{" not in a + b, (a, b)   # an unsubstituted expression would make the case vacuous
     num = lambda x: float(x) if re.fullmatch(r"-?[0-9]+(\.[0-9]+)?", x) else float("nan")
     return {"text:equal": lambda: a == b, "text:notequal": lambda: a != b, "text:contain": lambda: b in a,
             "text:notcontain": lambda: b not in a, "text:startwith": lambda: a.startswith(b),
@@ -204,11 +206,15 @@ class P2ContractTests(unittest.TestCase):
                      (good, dict(generation="999"), False),                                            # other object version
                      (good.replace("generation=1712345678901234", "generation=1712345678901234&generation=2"), {}, False),
                      (good.replace("generation=1712345678901234", "generation="), {}, False),        # empty generation
-                     ("https://storage.googleapis.com/%s/x.%s?generation=1712345678901234&%s#%s" % (BUCKET, ext, sig, obj), {}, False),
+                     (good + "#frag", {}, False),                                                       # fragment
+                     (good.replace("X-Goog-Credential=", "X-Goog-Cred="), {}, False),                 # no credential
+                     (good.replace("X-Goog-Expires=3600&", ""), {}, False),                            # no expiry param
+                     (good.replace("GOOG4-RSA-SHA256", "GOOG4-HMAC-SHA256"), {}, False),              # other algorithm
                      (good.replace("X-Goog-Signature=", "X-Goog-Sig="), {}, False),                   # not signed
                      (good, dict(expires_epoch=NOW + 60), False),                                      # signed URL about to expire
                      (good, dict(sha256="1" * 64), False),                                             # register for other bytes
-                     (good + "@evil.example", {}, False)]
+                     (good.replace("&X-Goog-Date", "&x=a@evil.example&X-Goog-Date"), {}, False),      # "@" only
+                     (good, dict(expires_epoch=""), False)]                                            # register without expiry
             for url, reg, expect in cases:
                 with self.subTest(ch=ch, url=url[:90], reg=reg):
                     self.assertEqual(filter_true(fetch, env(url, **reg)), expect)

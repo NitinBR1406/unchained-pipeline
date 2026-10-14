@@ -96,7 +96,8 @@ def ok(mid, pid_expr, url_expr, log_id):
 def wb(b, okm, pid_expr, extra=()):
     """Write-back fence: re-read; own claim -> ok (+extra); claim lost -> log the platform id, never overwrite."""
     g = b + 26
-    return [getrec(g), {"id": b + 27, "mapper": {}, "module": "builtin:BasicRouter", "version": 1, "routes": [
+    rd = dict(getrec(g), onerror=[log(b + 31, "WRITEBACK_FAIL_AFTER_UPLOAD " + ATT + " id=" + pid_expr)])   # read failed after upload: keep the id for R1
+    return [rd, {"id": b + 27, "mapper": {}, "module": "builtin:BasicRouter", "version": 1, "routes": [
         {"flow": [dict(okm, filter={"name": "this execution still owns the claim", "conditions": [mine(g)]})] + list(extra)},
         {"flow": [note(b + 28, "WRITEBACK_SKIPPED_CLAIM_LOST " + ATT + " id=" + pid_expr + " owner={{ifempty(%d.claim_token; \"NONE\")}}" % g,
                        {"name": "claim lost", "conditions": not_mine(g)})]}]}]
@@ -141,7 +142,7 @@ def hosting_checks(ch, r):
            pat(url, "[?&]generation={{%d.generation}}(&|$)" % r), npat(url, "generation=.*generation="),
            pat(url, "[?&]X-Goog-Algorithm=GOOG4-RSA-SHA256(&|$)"), pat(url, "[?&]X-Goog-Signature=[0-9a-f]{64,}(&|$)"),
            pat(url, "[?&]X-Goog-Credential=[^&]+"), pat(url, "[?&]X-Goog-Expires=[0-9]+(&|$)"), npat(url, "[#@\\s]"),
-           {"a": "{{%d.expires_epoch}}" % r, "b": "{{formatDate(addMinutes(now; 15); \"X\")}}", "o": "number:greater"}]
+           {"a": "{{ifempty(%d.expires_epoch; 0)}}" % r, "b": "{{formatDate(addMinutes(now; 15); \"X\")}}", "o": "number:greater"}]
     inverse = {"text:equal": "text:notequal", "text:notequal": "text:equal", "text:pattern": "text:notpattern", "text:notpattern": "text:pattern",
                "text:startwith": "text:notstartwith", "number:greater": "number:lessorequal"}
     bad = [[dict(c, o=inverse[c["o"]])] for c in ok_]
