@@ -1,150 +1,660 @@
 {
- "source": "Make scenario 9974134 (P2), module 55 + route filters, as stored in Make on 2026-10-14T14:06:54Z (read back via API)",
- "request_template": "{\"content_id\":\"{{1.data.gate_content_id}}\",\"platform\":\"{{1.data.channel}}\",\"target_account\":\"{{1.data.target_account}}\",\"asset_sha256\":\"{{1.data.asset_sha256}}\",\"packaging_sha256\":\"{{1.data.packaging_sha256}}\",\"schedule_version\":\"{{1.data.schedule_version}}\",\"scheduled_at_epoch\":{{1.data.scheduled_at_epoch}}}",
- "request_url": "https://unchained-approval.onrender.com/v/publish-eligibility",
+ "source": "Make scenario 9974134 (P2 version e) as stored in Make on 2026-10-14T15:04:22.723Z (read back via API)",
  "auth_keychain_header": "x-publish-apikey (Make keychain 217337; value never in repo)",
- "upload_route_filters": [
+ "routes": [
   {
-   "name": "short_video -> instagram_reels",
-   "conditions": [
-    [
-     {
-      "a": "{{1.data.channel}}",
-      "b": "instagram_reels",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{60.reason}}",
-      "b": "VALID_PUBLISH_APPROVAL",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
-      "b": "EOK",
-      "o": "text:equal"
-     }
+   "channel": "instagram_reels",
+   "fetch_module": "http:MakeRequest",
+   "fetch_id": 300,
+   "fetch_filter": {
+    "name": "instagram_reels (variant 9x16)",
+    "conditions": [
+     [
+      {
+       "a": "{{1.data.channel}}",
+       "b": "instagram_reels",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{1.data.format_variant}}",
+       "b": "9x16",
+       "o": "text:equal"
+      }
+     ]
     ]
-   ]
+   },
+   "hash_variable": {
+    "name": "bytes_sha256",
+    "value": "{{sha256(300.data)}}"
+   },
+   "gate_id": 303,
+   "gate_prefilter": {
+    "name": "computed sha256 of hosted bytes == registered AND URL pinned to one object generation named by its sha256",
+    "conditions": [
+     [
+      {
+       "a": "{{301.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "generation=",
+       "o": "text:contain"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:contain"
+      }
+     ]
+    ]
+   },
+   "request_template": "{\"content_id\":\"{{1.data.gate_content_id}}\",\"platform\":\"{{1.data.channel}}\",\"target_account\":\"{{1.data.target_account}}\",\"asset_sha256\":\"{{301.bytes_sha256}}\",\"packaging_sha256\":\"{{1.data.packaging_sha256}}\",\"schedule_version\":\"{{1.data.schedule_version}}\",\"scheduled_at_epoch\":{{1.data.scheduled_at_epoch}}}",
+   "request_url": "https://unchained-approval.onrender.com/v/publish-eligibility",
+   "parse_id": 304,
+   "upload_module": "instagram-business:CreateAReelPost",
+   "upload_filter": {
+    "name": "gate: eligible and VALID_PUBLISH_APPROVAL",
+    "conditions": [
+     [
+      {
+       "a": "{{304.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{if(304.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:equal"
+      }
+     ]
+    ]
+   },
+   "blocked_hash_filter": {
+    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "conditions": [
+     [
+      {
+       "a": "{{301.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "generation=",
+       "o": "text:notcontain"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notcontain"
+      }
+     ]
+    ]
+   },
+   "blocked_gate_filter": {
+    "name": "gate said NO / unexpected answer -> BLOCKED",
+    "conditions": [
+     [
+      {
+       "a": "{{304.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{if(304.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   }
   },
   {
-   "name": "still -> instagram_feed (4x5)",
-   "conditions": [
-    [
-     {
-      "a": "{{1.data.channel}}",
-      "b": "instagram_feed",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{60.reason}}",
-      "b": "VALID_PUBLISH_APPROVAL",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
-      "b": "EOK",
-      "o": "text:equal"
-     }
+   "channel": "instagram_feed",
+   "fetch_module": "http:MakeRequest",
+   "fetch_id": 340,
+   "fetch_filter": {
+    "name": "instagram_feed (variant 4x5)",
+    "conditions": [
+     [
+      {
+       "a": "{{1.data.channel}}",
+       "b": "instagram_feed",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{1.data.format_variant}}",
+       "b": "4x5",
+       "o": "text:equal"
+      }
+     ]
     ]
-   ]
+   },
+   "hash_variable": {
+    "name": "bytes_sha256",
+    "value": "{{sha256(340.data)}}"
+   },
+   "gate_id": 343,
+   "gate_prefilter": {
+    "name": "computed sha256 of hosted bytes == registered AND URL pinned to one object generation named by its sha256",
+    "conditions": [
+     [
+      {
+       "a": "{{341.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "generation=",
+       "o": "text:contain"
+      },
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:contain"
+      }
+     ]
+    ]
+   },
+   "request_template": "{\"content_id\":\"{{1.data.gate_content_id}}\",\"platform\":\"{{1.data.channel}}\",\"target_account\":\"{{1.data.target_account}}\",\"asset_sha256\":\"{{341.bytes_sha256}}\",\"packaging_sha256\":\"{{1.data.packaging_sha256}}\",\"schedule_version\":\"{{1.data.schedule_version}}\",\"scheduled_at_epoch\":{{1.data.scheduled_at_epoch}}}",
+   "request_url": "https://unchained-approval.onrender.com/v/publish-eligibility",
+   "parse_id": 344,
+   "upload_module": "instagram-business:CreatePostPhoto",
+   "upload_filter": {
+    "name": "gate: eligible and VALID_PUBLISH_APPROVAL",
+    "conditions": [
+     [
+      {
+       "a": "{{344.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{if(344.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:equal"
+      }
+     ]
+    ]
+   },
+   "blocked_hash_filter": {
+    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "conditions": [
+     [
+      {
+       "a": "{{341.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "generation=",
+       "o": "text:notcontain"
+      }
+     ],
+     [
+      {
+       "a": "{{1.data.media_url}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notcontain"
+      }
+     ]
+    ]
+   },
+   "blocked_gate_filter": {
+    "name": "gate said NO / unexpected answer -> BLOCKED",
+    "conditions": [
+     [
+      {
+       "a": "{{344.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{if(344.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   }
   },
   {
-   "name": "short_video -> facebook_reels (Drive binary)",
-   "conditions": [
-    [
-     {
-      "a": "{{1.data.channel}}",
-      "b": "facebook_reels",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{60.reason}}",
-      "b": "VALID_PUBLISH_APPROVAL",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
-      "b": "EOK",
-      "o": "text:equal"
-     }
+   "channel": "facebook_reels",
+   "fetch_module": "google-drive:getAFile",
+   "fetch_id": 380,
+   "fetch_filter": {
+    "name": "facebook_reels (variant 9x16)",
+    "conditions": [
+     [
+      {
+       "a": "{{1.data.channel}}",
+       "b": "facebook_reels",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{1.data.format_variant}}",
+       "b": "9x16",
+       "o": "text:equal"
+      }
+     ]
     ]
-   ]
+   },
+   "hash_variable": {
+    "name": "bytes_sha256",
+    "value": "{{sha256(380.data)}}"
+   },
+   "gate_id": 383,
+   "gate_prefilter": {
+    "name": "computed bytes sha256 == registered AND Drive sha256Checksum == registered",
+    "conditions": [
+     [
+      {
+       "a": "{{381.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{380.sha256Checksum}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:equal"
+      }
+     ]
+    ]
+   },
+   "request_template": "{\"content_id\":\"{{1.data.gate_content_id}}\",\"platform\":\"{{1.data.channel}}\",\"target_account\":\"{{1.data.target_account}}\",\"asset_sha256\":\"{{381.bytes_sha256}}\",\"packaging_sha256\":\"{{1.data.packaging_sha256}}\",\"schedule_version\":\"{{1.data.schedule_version}}\",\"scheduled_at_epoch\":{{1.data.scheduled_at_epoch}}}",
+   "request_url": "https://unchained-approval.onrender.com/v/publish-eligibility",
+   "parse_id": 384,
+   "upload_module": "facebook-pages:uploadAReel",
+   "upload_filter": {
+    "name": "gate: eligible and VALID_PUBLISH_APPROVAL",
+    "conditions": [
+     [
+      {
+       "a": "{{384.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{if(384.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:equal"
+      }
+     ]
+    ]
+   },
+   "blocked_hash_filter": {
+    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "conditions": [
+     [
+      {
+       "a": "{{381.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{ifempty(380.sha256Checksum; \"NONE\")}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   },
+   "blocked_gate_filter": {
+    "name": "gate said NO / unexpected answer -> BLOCKED",
+    "conditions": [
+     [
+      {
+       "a": "{{384.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{if(384.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   }
   },
   {
-   "name": "still -> facebook_feed (4x5, Drive binary)",
-   "conditions": [
-    [
-     {
-      "a": "{{1.data.channel}}",
-      "b": "facebook_feed",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{60.reason}}",
-      "b": "VALID_PUBLISH_APPROVAL",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
-      "b": "EOK",
-      "o": "text:equal"
-     }
+   "channel": "facebook_feed",
+   "fetch_module": "google-drive:getAFile",
+   "fetch_id": 420,
+   "fetch_filter": {
+    "name": "facebook_feed (variant 4x5)",
+    "conditions": [
+     [
+      {
+       "a": "{{1.data.channel}}",
+       "b": "facebook_feed",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{1.data.format_variant}}",
+       "b": "4x5",
+       "o": "text:equal"
+      }
+     ]
     ]
-   ]
+   },
+   "hash_variable": {
+    "name": "bytes_sha256",
+    "value": "{{sha256(420.data)}}"
+   },
+   "gate_id": 423,
+   "gate_prefilter": {
+    "name": "computed bytes sha256 == registered AND Drive sha256Checksum == registered",
+    "conditions": [
+     [
+      {
+       "a": "{{421.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{420.sha256Checksum}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:equal"
+      }
+     ]
+    ]
+   },
+   "request_template": "{\"content_id\":\"{{1.data.gate_content_id}}\",\"platform\":\"{{1.data.channel}}\",\"target_account\":\"{{1.data.target_account}}\",\"asset_sha256\":\"{{421.bytes_sha256}}\",\"packaging_sha256\":\"{{1.data.packaging_sha256}}\",\"schedule_version\":\"{{1.data.schedule_version}}\",\"scheduled_at_epoch\":{{1.data.scheduled_at_epoch}}}",
+   "request_url": "https://unchained-approval.onrender.com/v/publish-eligibility",
+   "parse_id": 424,
+   "upload_module": "facebook-pages:UploadPhoto",
+   "upload_filter": {
+    "name": "gate: eligible and VALID_PUBLISH_APPROVAL",
+    "conditions": [
+     [
+      {
+       "a": "{{424.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{if(424.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:equal"
+      }
+     ]
+    ]
+   },
+   "blocked_hash_filter": {
+    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "conditions": [
+     [
+      {
+       "a": "{{421.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{ifempty(420.sha256Checksum; \"NONE\")}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   },
+   "blocked_gate_filter": {
+    "name": "gate said NO / unexpected answer -> BLOCKED",
+    "conditions": [
+     [
+      {
+       "a": "{{424.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{if(424.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   }
   },
   {
-   "name": "short_video -> youtube_shorts (Drive binary)",
-   "conditions": [
-    [
-     {
-      "a": "{{1.data.channel}}",
-      "b": "youtube_shorts",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{60.reason}}",
-      "b": "VALID_PUBLISH_APPROVAL",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
-      "b": "EOK",
-      "o": "text:equal"
-     }
+   "channel": "youtube_shorts",
+   "fetch_module": "google-drive:getAFile",
+   "fetch_id": 460,
+   "fetch_filter": {
+    "name": "youtube_shorts (variant 9x16)",
+    "conditions": [
+     [
+      {
+       "a": "{{1.data.channel}}",
+       "b": "youtube_shorts",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{1.data.format_variant}}",
+       "b": "9x16",
+       "o": "text:equal"
+      }
+     ]
     ]
-   ]
+   },
+   "hash_variable": {
+    "name": "bytes_sha256",
+    "value": "{{sha256(460.data)}}"
+   },
+   "gate_id": 463,
+   "gate_prefilter": {
+    "name": "computed bytes sha256 == registered AND Drive sha256Checksum == registered",
+    "conditions": [
+     [
+      {
+       "a": "{{461.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{460.sha256Checksum}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:equal"
+      }
+     ]
+    ]
+   },
+   "request_template": "{\"content_id\":\"{{1.data.gate_content_id}}\",\"platform\":\"{{1.data.channel}}\",\"target_account\":\"{{1.data.target_account}}\",\"asset_sha256\":\"{{461.bytes_sha256}}\",\"packaging_sha256\":\"{{1.data.packaging_sha256}}\",\"schedule_version\":\"{{1.data.schedule_version}}\",\"scheduled_at_epoch\":{{1.data.scheduled_at_epoch}}}",
+   "request_url": "https://unchained-approval.onrender.com/v/publish-eligibility",
+   "parse_id": 464,
+   "upload_module": "youtube:ActionUploadVideo",
+   "upload_filter": {
+    "name": "gate: eligible and VALID_PUBLISH_APPROVAL",
+    "conditions": [
+     [
+      {
+       "a": "{{464.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{if(464.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:equal"
+      }
+     ]
+    ]
+   },
+   "blocked_hash_filter": {
+    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "conditions": [
+     [
+      {
+       "a": "{{461.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{ifempty(460.sha256Checksum; \"NONE\")}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   },
+   "blocked_gate_filter": {
+    "name": "gate said NO / unexpected answer -> BLOCKED",
+    "conditions": [
+     [
+      {
+       "a": "{{464.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{if(464.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   }
   },
   {
-   "name": "full_song -> youtube_hero (ONLY channel for D14-V12) (Drive binary)",
-   "conditions": [
-    [
-     {
-      "a": "{{1.data.channel}}",
-      "b": "youtube_hero",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{60.reason}}",
-      "b": "VALID_PUBLISH_APPROVAL",
-      "o": "text:equal"
-     },
-     {
-      "a": "{{if(60.eligible = true; \"EOK\"; \"ENO\")}}",
-      "b": "EOK",
-      "o": "text:equal"
-     }
+   "channel": "youtube_hero",
+   "fetch_module": "google-drive:getAFile",
+   "fetch_id": 500,
+   "fetch_filter": {
+    "name": "youtube_hero (variant 9x16)",
+    "conditions": [
+     [
+      {
+       "a": "{{1.data.channel}}",
+       "b": "youtube_hero",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{1.data.format_variant}}",
+       "b": "9x16",
+       "o": "text:equal"
+      }
+     ]
     ]
-   ]
+   },
+   "hash_variable": {
+    "name": "bytes_sha256",
+    "value": "{{sha256(500.data)}}"
+   },
+   "gate_id": 503,
+   "gate_prefilter": {
+    "name": "computed bytes sha256 == registered AND Drive sha256Checksum == registered",
+    "conditions": [
+     [
+      {
+       "a": "{{501.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{500.sha256Checksum}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:equal"
+      }
+     ]
+    ]
+   },
+   "request_template": "{\"content_id\":\"{{1.data.gate_content_id}}\",\"platform\":\"{{1.data.channel}}\",\"target_account\":\"{{1.data.target_account}}\",\"asset_sha256\":\"{{501.bytes_sha256}}\",\"packaging_sha256\":\"{{1.data.packaging_sha256}}\",\"schedule_version\":\"{{1.data.schedule_version}}\",\"scheduled_at_epoch\":{{1.data.scheduled_at_epoch}}}",
+   "request_url": "https://unchained-approval.onrender.com/v/publish-eligibility",
+   "parse_id": 504,
+   "upload_module": "youtube:ActionUploadVideo",
+   "upload_filter": {
+    "name": "gate: eligible and VALID_PUBLISH_APPROVAL",
+    "conditions": [
+     [
+      {
+       "a": "{{504.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{if(504.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:equal"
+      }
+     ]
+    ]
+   },
+   "blocked_hash_filter": {
+    "name": "hash mismatch / missing / unpinned -> BLOCKED, no gate, no upload",
+    "conditions": [
+     [
+      {
+       "a": "{{501.bytes_sha256}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{ifempty(500.sha256Checksum; \"NONE\")}}",
+       "b": "{{1.data.asset_sha256}}",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   },
+   "blocked_gate_filter": {
+    "name": "gate said NO / unexpected answer -> BLOCKED",
+    "conditions": [
+     [
+      {
+       "a": "{{504.reason}}",
+       "b": "VALID_PUBLISH_APPROVAL",
+       "o": "text:notequal"
+      }
+     ],
+     [
+      {
+       "a": "{{if(504.eligible = true; \"EOK\"; \"ENO\")}}",
+       "b": "EOK",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   }
   }
  ],
  "synthetic_placement": {
   "gate_content_id": "test:aki-synthetic:post:D01-V01",
   "channel": "youtube_shorts",
   "target_account": "TEST-ACCOUNT-YT",
-  "asset_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "asset_sha256": "3792c80f242f3f1089416227c1e136daa606c2ab83303a6ba0046358b25b978e",
   "title": "SYNTHETIC title",
   "caption": "SYNTHETIC caption #test",
   "schedule_version": "1",
-  "scheduled_at": "2030-01-01 19:00:00"
+  "scheduled_at": "2030-01-01 19:00:00",
+  "format_variant": "9x16",
+  "media_file": "tests/fixtures/synthetic_media/SYN_HTTP_MEDIA.bin"
  }
 }

@@ -35,6 +35,34 @@ which account the post goes to.
   - The existing refusals still apply: other bytes, other platform, other time.
 - **New fields add refusals only; they never turn a refusal into an approval.** The target-account check and the test-namespace check sit *after* all existing checks.
 
+## Update 2026-10-14 (P2 version e)
+
+P2 (Make 9974134) was changed in its stored configuration (still INACTIVE):
+
+1. The lock is taken before the claim update (a stale bundle can no longer rewrite a finished record).
+2. P2 fetches the exact bytes first and computes `sha256()` over them.
+3. FB/YT additionally require Drive's `sha256Checksum` (SHA-256, same algorithm as the registry) to match.
+4. Instagram requires a URL pinned to one object generation and named by its sha256.
+5. The gate request carries the **computed** hash (`{{<n>.bytes_sha256}}`), so a changed file invalidates the approval at the verifier.
+
+There is **no verifier code change** for this. `tests/test_p2_request_contract.py` and its fixture were regenerated from the stored P2 (read back via the Make API).
+
+Not yet proven in Make itself: that IML `sha256()` over a binary buffer equals the true SHA-256. If it does not, every placement BLOCKS; it can never pass by accident. The isolated test scenario 9975568 (synthetic files, no data store, no upload) is ready for a manual "Run once".
+
+## Post-deploy verification (after a later, approved deploy)
+
+1. Before the merge, back up `/data/_publish_grants.json` and `/data/_publish_approvals.json`, and record their sha256.
+2. After the deploy:
+   - Render shows the new commit as `live`.
+   - `GET /healthz` returns 200.
+   - Logs show no tracebacks.
+3. `POST /v/publish-eligibility` without a key returns 401. With the key:
+   - `{}` returns `MALFORMED_REQUEST`;
+   - an unknown content id returns `NO_PUBLISH_APPROVAL`.
+4. The sha256 of both stores is unchanged. Nothing else is touched: no grant is created, no test grant, and `PUBLISH_ALLOW_TEST_GRANTS` stays unset.
+5. Existing poster flow (P1 9627055): no change in behaviour. A legacy poster grant without `target_account` evaluates exactly as before; `PosterCompatibilityTests` covers this. Do not run P1 as a test.
+6. If any of these checks fails, use the rollback below.
+
 ## Deploy target (verified 2026-10-14)
 
 - **Service and source:** Render service `unchained-approval` (`srv-dafht9f40ujc73bc48fg`), Docker, branch **`main`**, `autoDeploy: yes` (trigger: commit). PR previews are off.
