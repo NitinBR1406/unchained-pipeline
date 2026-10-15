@@ -29,6 +29,7 @@ from .approvals import GATE_CREATIVE, GATE_FINAL_ASSET, GATE_PUBLISH
 # Single source of truth for canonicalization (re-exported so existing importers keep working).
 from .canonical import compute_fingerprint, final_gate_for_medium, MEDIUM_VIDEO
 from .util import read_json
+from .tiktok_settings import settings_for_response
 
 REASON_ELIGIBLE = "VALID_PUBLISH_APPROVAL"
 TEST_PREFIX = "test:"   # reserved namespace for synthetic test grants; never a real content id
@@ -141,13 +142,19 @@ class PublishApprovalService:
             if not schedule_ok:
                 return self._blocked("SCHEDULE_MISMATCH")
 
-            return {
+            res = {
                 "eligible": True,
                 "content_id": content_id,
                 "platform": platform,
                 "approval_id": grant.get("approval_id"),
                 "reason": REASON_ELIGIBLE,
             }
+            # TikTok: the creator's own per-post choice (privacy / interactions / consent), stored on THIS grant by
+            # unpipe.tiktok_settings. Informational for P3; it never makes an ineligible request eligible.
+            tt = settings_for_response(grant, platform)
+            if tt is not None:
+                res["tiktok"] = tt
+            return res
         except Exception:
             # Any unexpected error (incl. approval-store unavailable) MUST fail closed.
             return self._blocked("INTERNAL_ERROR")

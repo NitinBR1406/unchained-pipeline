@@ -9,7 +9,8 @@ Same safety chain as P2 version e: insert-only exclusive lock BEFORE the claim; 
 them (+ Drive sha256Checksum for video; version-pinned, content-addressed URL for photos); the gate receives the COMPUTED
 hash; any mismatch / missing hash / disallowed privacy level -> BLOCKED (never a silent stop); OUTCOME_UNKNOWN after a
 possibly successful call, no blind retry.
-TikTok UX rules: privacy level must be chosen by the creator per post (record field tiktok_privacy_level, no default)
+TikTok UX rules: privacy level must be chosen by the creator per post on the approval page (unpipe.tiktok_settings; stored on
+the publish grant, returned by the gate as <gate>.tiktok.*; no default; a missing choice -> BLOCKED)
 and must be one of creator_info.privacy_level_options; comment/duet/stitch off unless chosen; caption editable (it is
 the approved package text). A Direct Post returns a publish_id; the public post id only appears after moderation
 (status/fetch) -> status SUBMITTED, reconciled later."""
@@ -39,8 +40,10 @@ def http(mid, url, body, onerror, extra=None):
          "parameters": {"authenticationType": "noAuth"}, "onerror": onerror}
     if extra: m.update(extra)
     return m
-POST_INFO = ('"post_info":{"title":"{{replace(1.data.caption; newline; \"\\n\")}}","privacy_level":"{{1.data.tiktok_privacy_level}}",'
-             '"disable_comment":{{if(1.data.tiktok_allow_comment = "TRUE"; false; true)}},"disable_duet":true,"disable_stitch":true}')
+def post_info(g):
+    """Creator's per-post choice as returned by the publish gate (unpipe.tiktok_settings), never from the Make record."""
+    return ('"post_info":{"title":"{{replace(1.data.caption; newline; \"\\n\")}}","privacy_level":"{{%d.tiktok.privacy_level}}",'
+            '"disable_comment":{{%d.tiktok.disable_comment}},"disable_duet":{{%d.tiktok.disable_duet}},"disable_stitch":{{%d.tiktok.disable_stitch}}}' % (g, g, g, g))
 def eq(a, b): return {"a": a, "b": b, "o": "text:equal"}
 def blocked_on_error(mid, label):   # deterministic failure (e.g. hash function error): log + BLOCKED, never a silent stop
     return [log(mid, label), upd(mid + 1, {"status": "BLOCKED", "last_error": label + ": {{error.message}}", "last_error_at": "{{now}}", "lock_until": ""})]
@@ -65,7 +68,7 @@ HOSTING_OFF_OK = {"a": TT_PHOTO_HOSTING, "b": "UNCONFIGURED", "o": "text:notequa
 HOSTING_OFF_BAD = {"a": TT_PHOTO_HOSTING, "b": "UNCONFIGURED", "o": "text:equal"}
 def blocked(mid, msg, conds, name):
     return upd(mid, {"status": "BLOCKED", "last_error": msg, "last_error_at": "{{now}}", "lock_until": ""}, flt={"name": name, "conditions": conds})
-def priv_router(mid, then):
+def priv_router(mid, then, g):
     """creator_info -> privacy level chosen by the creator must be offered; otherwise BLOCKED (no silent stop)"""
     return [{"id": mid, "mapper": {"key": "main", "returnWrapped": False}, "module": "datastore:GetRecord", "version": 1, "parameters": {"datastore": TOK}},
             dict(http(mid + 1, TT + "/post/publish/creator_info/query/", "{}", fail(mid + 40, "TT_CREATOR_INFO_FAIL")),
@@ -73,8 +76,8 @@ def priv_router(mid, then):
                              headers=[{"name": "Authorization", "value": "Bearer {{%d.access_token}}" % mid}, {"name": "Content-Type", "value": "application/json; charset=UTF-8"}])),
             {"id": mid + 2, "mapper": {}, "module": "builtin:BasicRouter", "version": 1, "routes": [
                 {"flow": then},
-                {"flow": [blocked(mid + 3, "TT_PRIVACY_LEVEL_NOT_OFFERED: {{1.data.tiktok_privacy_level}}",
-                                  [[{"a": "{{%d.data.data.privacy_level_options}}" % (mid + 1), "b": "{{1.data.tiktok_privacy_level}}", "o": "array:notcontain"}]],
+                {"flow": [blocked(mid + 3, "TT_PRIVACY_NOT_CHOSEN_OR_NOT_OFFERED: {{ifempty(%d.tiktok.privacy_level; \"NONE\")}}" % g,
+                                  [[{"a": "{{%d.data.data.privacy_level_options}}" % (mid + 1), "b": "{{%d.tiktok.privacy_level}}" % g, "o": "array:notcontain"}]],
                                   "privacy level not offered by creator_info -> BLOCKED")]}]}]
 def tok(mid): return "Bearer {{%d.access_token}}" % mid
 def tt_http(mid, url, body, onerror, tokmid, flt=None):
@@ -91,10 +94,10 @@ def gate_no(p): return [[ne("{{%d.reason}}" % p, "VALID_PUBLISH_APPROVAL")], [ne
 TT_VIDEO_MODE = os.environ.get("AKI_TT_VIDEO_MODE", "INBOX")
 NOTIFY_TO = os.environ.get("AKI_NOTIFY_EMAIL", "")       # not committed (public repo); empty => no notification module
 V = 200
-v_priv = {"a": "{{%d.data.data.privacy_level_options}}" % (V + 21), "b": "{{1.data.tiktok_privacy_level}}", "o": "array:contain"}
+v_priv = {"a": "{{%d.data.data.privacy_level_options}}" % (V + 21), "b": "{{%d.tiktok.privacy_level}}" % (V + 4), "o": "array:contain"}
 video_upload = [
     tt_http(V + 30, TT + "/post/publish/video/init/",
-            '{' + POST_INFO + ',"source_info":{"source":"FILE_UPLOAD","video_size":{{%d.filesize}},"chunk_size":{{%d.filesize}},"total_chunk_count":1}}' % (V, V),
+            '{' + post_info(V + 4) + ',"source_info":{"source":"FILE_UPLOAD","video_size":{{%d.filesize}},"chunk_size":{{%d.filesize}},"total_chunk_count":1}}' % (V, V),
             fail(V + 70, "TT_INIT_FAIL"), V + 20, flt={"name": "privacy level offered by creator_info", "conditions": [[v_priv]]}),
     {"id": V + 31, "mapper": {"url": "{{%d.data.data.upload_url}}" % (V + 30), "method": "put", "headers": [
         {"name": "Content-Range", "value": "bytes 0-{{%d.filesize - 1}}/{{%d.filesize}}" % (V, V)}], "contentType": "custom", "contentTypeValue": "video/mp4",
@@ -120,7 +123,7 @@ if TT_VIDEO_MODE == "INBOX":
     video_gate_yes = [{"id": V + 20, "mapper": {"key": "main", "returnWrapped": False}, "module": "datastore:GetRecord", "version": 1,
                        "parameters": {"datastore": TOK}}] + video_upload
 else:
-    video_gate_yes = priv_router(V + 20, video_upload)
+    video_gate_yes = priv_router(V + 20, video_upload, V + 4)
 video = {"flow": [
     {"id": V, "filter": {"name": "tiktok video (variant 9x16, Drive binary)", "conditions": [[eq("{{1.data.channel}}", "tiktok"), eq("{{1.data.format_variant}}", "9x16")]]},
      "mapper": {"select": "map", "file": "{{1.data.drive_file_id}}", "formatDocuments": "application/pdf", "formatSpreadsheets": "text/csv",
@@ -143,10 +146,10 @@ video = {"flow": [
                           "hash mismatch / missing / > 64 MB -> BLOCKED")]}]}]}
 # ---- photo: GET pinned hosted JPEG -> sha256 -> gate(computed) -> creator_info/privacy -> content init (PULL_FROM_URL) ----
 F = 300
-f_priv = {"a": "{{%d.data.data.privacy_level_options}}" % (F + 21), "b": "{{1.data.tiktok_privacy_level}}", "o": "array:contain"}
+f_priv = {"a": "{{%d.data.data.privacy_level_options}}" % (F + 21), "b": "{{%d.tiktok.privacy_level}}" % (F + 4), "o": "array:contain"}
 photo_post = [
     tt_http(F + 30, TT + "/post/publish/content/init/",
-            '{"media_type":"PHOTO","post_mode":"DIRECT_POST",' + POST_INFO.replace('"disable_duet":true,"disable_stitch":true', '"auto_add_music":false') +
+            '{"media_type":"PHOTO","post_mode":"DIRECT_POST",' + post_info(F + 4).replace(',"disable_duet":{{%d.tiktok.disable_duet}},"disable_stitch":{{%d.tiktok.disable_stitch}}' % (F + 4, F + 4), ',"auto_add_music":false') +
             ',"source_info":{"source":"PULL_FROM_URL","photo_cover_index":0,"photo_images":["{{1.data.media_url}}"]}}',
             uncertain(F + 70, "TT_PHOTO_INIT"), F + 20, flt={"name": "privacy level offered by creator_info", "conditions": [[f_priv]]}),
     logged(upd(F + 31, {"status": "SUBMITTED", "reconcile_note": "tiktok publish_id={{%d.data.data.publish_id}}" % (F + 30), "published_via": "AUTO_P3", "lock_until": "", "last_error": ""}),
@@ -165,7 +168,7 @@ photo = {"flow": [
                   gate(F + 3, "")[1],
                   {"id": F + 5, "mapper": {}, "module": "builtin:BasicRouter", "version": 1, "routes": [
                       {"flow": [dict(x, filter={"name": "gate said YES", "conditions": [gate_yes(F + 4)]}) if i == 0 else x
-                                for i, x in enumerate(priv_router(F + 20, photo_post))]},
+                                for i, x in enumerate(priv_router(F + 20, photo_post, F + 4))]},
                       {"flow": [blocked(F + 6, "GATE_NOT_ELIGIBLE: {{%d.reason}}" % (F + 4), gate_no(F + 4), "gate said NO / unexpected answer -> BLOCKED")]}]}]},
         {"flow": [blocked(F + 7, "ASSET_HASH_MISMATCH_OR_UNPINNED: bytes {{%d.bytes_sha256}} / registered {{ifempty(1.data.asset_sha256; \"NONE\")}}" % (F + 1),
                           [[HOSTING_OFF_BAD], [ne("{{%d.bytes_sha256}}" % (F + 1), "{{1.data.asset_sha256}}")], [eq("{{1.data.asset_sha256}}", "")], [{"a": "{{1.data.media_url}}", "b": "generation=", "o": "text:notcontain"}],
@@ -175,7 +178,6 @@ DUE = {"name": "due, privacy level chosen by creator, aki:post id, caption JSON-
     {"a": "{{1.data.scheduled_at_epoch}}", "b": "0", "o": "number:greater"},
     {"a": "{{1.data.scheduled_at_epoch}}", "b": "{{formatDate(now; \"X\")}}", "o": "number:lessorequal"},
     {"a": "{{1.data.scheduled_at_epoch}}", "b": "{{formatDate(addHours(now; -6); \"X\")}}", "o": "number:greater"},
-    {"a": "{{ifempty(1.data.tiktok_privacy_level; \"NONE\")}}", "b": "NONE", "o": "text:notequal"},
     {"a": "{{1.data.gate_content_id}}", "b": "aki:post:", "o": "text:startwith"},
     {"a": "{{1.data.caption}}", "b": "\"", "o": "text:notcontain"}, {"a": "{{1.data.caption}}", "b": "\\", "o": "text:notcontain"}]]}
 if TT_VIDEO_MODE == "INBOX":   # privacy + caption are set by the creator in the TikTok app; nothing of them is sent to the API
