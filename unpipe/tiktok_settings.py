@@ -19,9 +19,10 @@ import base64
 import hashlib
 import hmac
 import json
+import secrets
 import time
 
-from .util import read_json, write_json, now_iso
+from .util import read_json, write_json, now_iso, locked
 
 GATE_TIKTOK_SETTINGS = "tiktok_settings"
 TIKTOK_PLATFORMS = ("tiktok", "tiktok_photo")
@@ -55,10 +56,12 @@ class TikTokSettingsService:
         opts = [o for o in (privacy_options or []) if o in KNOWN_PRIVACY]
         if not opts:
             raise TikTokSettingsError("no privacy options from creator_info")
+        if preview_url and not str(preview_url).startswith("https://"):
+            raise TikTokSettingsError("preview must be an https URL")
         payload = {"gate": GATE_TIKTOK_SETTINGS, "content_id": content_id, "platform": platform, "caption": caption,
                    "preview_url": preview_url, "creator_nickname": creator_nickname, "privacy_options": opts,
                    "exp": self._now() + int(ttl),
-                   "nonce": _b64e(hashlib.sha256(("%s%s%s" % (content_id, platform, time.time())).encode()).digest()[:12])}
+                   "nonce": secrets.token_urlsafe(12)}
         pb = _b64e(json.dumps(payload, separators=(",", ":")).encode())
         return "%s.%s" % (pb, self._sign(pb))
 
@@ -73,9 +76,16 @@ class TikTokSettingsService:
             p = json.loads(_b64d(pb))
         except Exception:
             raise TikTokSettingsError("malformed token")
-        if p.get("gate") != GATE_TIKTOK_SETTINGS:
+        if not isinstance(p, dict) or p.get("gate") != GATE_TIKTOK_SETTINGS:
             raise TikTokSettingsError("wrong gate")
-        if self._now() > int(p["exp"]):
+        try:
+            exp = int(p["exp"])
+        except (KeyError, TypeError, ValueError):
+            raise TikTokSettingsError("malformed token")
+        if not p.get("nonce") or not p.get("content_id") or p.get("platform") not in TIKTOK_PLATFORMS \
+                or not isinstance(p.get("privacy_options"), list):
+            raise TikTokSettingsError("malformed token")
+        if self._now() > exp:
             raise TikTokSettingsError("token expired")
         return p
 
@@ -96,9 +106,6 @@ class TikTokSettingsService:
         p = self._verify(token)
         if approver not in self.approvers:
             raise TikTokSettingsError("unauthorized approver")
-        consumed = read_json(self.consumed_path, default={}) or {}
-        if p["nonce"] in consumed:
-            return {**consumed[p["nonce"]], "idempotent_replay": True}
         level = (form.get("privacy_level") or "").strip()
         if not level:
             raise TikTokSettingsError("privacy level must be chosen (no default)")
@@ -107,20 +114,26 @@ class TikTokSettingsService:
         if (form.get("consent") or "") != "yes":
             raise TikTokSettingsError("explicit consent is required")
         key = "%s::%s" % (p["content_id"], p["platform"])
-        data = self._grants()
-        grant = data["grants"].get(key)
-        if not grant or grant.get("revoked") or p["platform"] not in (grant.get("platforms") or []):
-            raise TikTokSettingsError("no active publish grant for this placement")
-        settings = {"privacy_level": level,
-                    "allow_comment": form.get("allow_comment") == "on",
-                    "allow_duet": form.get("allow_duet") == "on",
-                    "allow_stitch": form.get("allow_stitch") == "on",
-                    "consent": True, "by": approver, "at": now_iso(), "nonce": p["nonce"],
-                    "grant_fingerprint": grant.get("fingerprint")}
-        grant["tiktok_settings"] = settings
-        write_json(self.grants_path, data)
-        consumed[p["nonce"]] = settings
-        write_json(self.consumed_path, consumed)
+        # One lock for nonce + grant, shared with every grant-store writer (provisioners): no double use of a link,
+        # no lost update of the grant store (a concurrent revoke can never be overwritten).
+        with locked(self.grants_path):
+            consumed = read_json(self.consumed_path, default={}) or {}
+            if p["nonce"] in consumed:
+                return {**consumed[p["nonce"]], "idempotent_replay": True}
+            data = self._grants()
+            grant = data["grants"].get(key)
+            if not grant or grant.get("revoked") or p["platform"] not in (grant.get("platforms") or []):
+                raise TikTokSettingsError("no active publish grant for this placement")
+            settings = {"privacy_level": level,
+                        "allow_comment": form.get("allow_comment") == "on",
+                        "allow_duet": form.get("allow_duet") == "on",
+                        "allow_stitch": form.get("allow_stitch") == "on",
+                        "consent": True, "by": approver, "at": now_iso(), "nonce": p["nonce"],
+                        "grant_fingerprint": grant.get("fingerprint")}
+            consumed[p["nonce"]] = settings            # claim the link FIRST: a crash after this leaves it used, never reusable
+            write_json(self.consumed_path, consumed)
+            grant["tiktok_settings"] = settings
+            write_json(self.grants_path, data)
         return settings
 
 

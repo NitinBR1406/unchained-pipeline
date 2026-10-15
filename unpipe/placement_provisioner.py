@@ -18,7 +18,7 @@ from .approvals import GATE_CREATIVE, GATE_PUBLISH
 from .canonical import (compute_fingerprint, packaging_sha256, scheduled_at_to_epoch,
                         schedule_window, final_gate_for_medium, MEDIUM_VIDEO, MEDIUM_POSTER)
 from .publish_approval import TEST_PREFIX
-from .util import read_json, write_json
+from .util import read_json, write_json, locked
 
 
 class ProvisionError(Exception):
@@ -80,17 +80,19 @@ class PlacementProvisioner:
             "medium": medium,
             "test_only": bool(test_only),
         }
-        data = self._load()
-        data["grants"][key] = grant
-        write_json(self.grants_path, data)
+        with locked(self.grants_path):   # serialised with every other grant-store writer
+            data = self._load()
+            data["grants"][key] = grant
+            write_json(self.grants_path, data)
         return grant
 
     def revoke_grant(self, content_id, platform):
         key = self.grant_key(content_id, platform)
-        data = self._load()
-        g = data["grants"].get(key)
-        if not g:
-            return False
-        g["revoked"] = True
-        write_json(self.grants_path, data)
+        with locked(self.grants_path):
+            data = self._load()
+            g = data["grants"].get(key)
+            if not g:
+                return False
+            g["revoked"] = True
+            write_json(self.grants_path, data)
         return True

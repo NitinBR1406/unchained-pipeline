@@ -15,7 +15,7 @@ import time
 from .approvals import GATE_CREATIVE, GATE_FINAL_ASSET, GATE_PUBLISH
 from .canonical import (compute_fingerprint, packaging_sha256, scheduled_at_to_epoch,
                         schedule_window, MEDIUM_POSTER)
-from .util import read_json, write_json, sha256_bytes
+from .util import read_json, write_json, locked, sha256_bytes
 
 
 class ProvisionError(Exception):
@@ -81,19 +81,21 @@ class PosterProvisioner:
             "revoked": False,
             "medium": MEDIUM_POSTER,
         }
-        data = self._load()
-        data["grants"][key] = grant  # non-destructive to other platform keys / content_ids
-        write_json(self.grants_path, data)
+        with locked(self.grants_path):   # serialised with every other grant-store writer
+            data = self._load()
+            data["grants"][key] = grant  # non-destructive to other platform keys / content_ids
+            write_json(self.grants_path, data)
         return grant
 
     def revoke_grant(self, content_id, platform):
         """Revoke ONE platform's grant (content_id::platform). Never affects the other platform."""
         key = self.grant_key(content_id, platform)
-        data = self._load()
-        g = data["grants"].get(key)
-        if not g:
-            return False
-        g["revoked"] = True
-        data["grants"][key] = g
-        write_json(self.grants_path, data)
+        with locked(self.grants_path):
+            data = self._load()
+            g = data["grants"].get(key)
+            if not g:
+                return False
+            g["revoked"] = True
+            data["grants"][key] = g
+            write_json(self.grants_path, data)
         return True

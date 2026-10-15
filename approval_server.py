@@ -216,6 +216,9 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Referrer-Policy", "no-referrer")
         self.send_header("Cache-Control", "no-store")
+        if ctype == "text/html":   # pages have no scripts; inline styles, https media, same-origin forms only
+            self.send_header("Content-Security-Policy", "default-src 'none'; style-src 'unsafe-inline'; media-src https:; "
+                                                        "form-action 'self'; frame-ancestors 'none'; base-uri 'none'")
         self.end_headers()
         self.wfile.write(b)
 

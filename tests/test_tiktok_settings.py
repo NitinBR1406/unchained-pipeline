@@ -98,6 +98,43 @@ class SettingsServiceTests(unittest.TestCase):
         self.assertTrue(again["idempotent_replay"])
         self.assertEqual(self.grant()["tiktok_settings"]["privacy_level"], "PUBLIC_TO_EVERYONE")   # replay changes nothing
 
+    def test_concurrent_use_of_one_link_stores_exactly_one_choice(self):
+        out, errs = [], []
+        def go(level):
+            try: out.append(self.svc.decide(self.tok, {"privacy_level": level, "consent": "yes"}, "nitin"))
+            except Exception as e: errs.append(e)
+        ts = [threading.Thread(target=go, args=(OPTS[i % 2],)) for i in range(12)]
+        [t.start() for t in ts]; [t.join() for t in ts]
+        self.assertEqual(errs, [])
+        self.assertEqual(sum(1 for r in out if not r.get("idempotent_replay")), 1)       # one winner, the rest replays
+        winner = next(r for r in out if not r.get("idempotent_replay"))["privacy_level"]
+        self.assertEqual(self.grant()["tiktok_settings"]["privacy_level"], winner)
+        self.assertTrue(all(r["privacy_level"] == winner for r in out))
+
+    def test_revoke_and_choice_never_lose_the_revoke(self):
+        for _ in range(5):
+            tmp = tempfile.mkdtemp()
+            store, grants, _ = make_grant(tmp)
+            svc = TikTokSettingsService(SECRET, ["nitin"], grants, str(Path(tmp) / "c.json"))
+            tok = svc.create_request(CID, PLAT, CAPTION, OPTS)
+            prov = PlacementProvisioner(store, grants)
+            t1 = threading.Thread(target=lambda: prov.revoke_grant(CID, PLAT))
+            def choose():
+                try: svc.decide(tok, {"privacy_level": "SELF_ONLY", "consent": "yes"}, "nitin")
+                except TikTokSettingsError: pass
+            t2 = threading.Thread(target=choose)
+            t2.start(); t1.start(); t1.join(); t2.join()
+            self.assertTrue(json.loads(Path(grants).read_text())["grants"]["%s::%s" % (CID, PLAT)]["revoked"])
+
+    def test_only_https_preview_and_malformed_tokens_refused(self):
+        with self.assertRaises(TikTokSettingsError):
+            self.svc.create_request(CID, PLAT, CAPTION, OPTS, preview_url="javascript:alert(1)")
+        import base64, hashlib, hmac as H
+        pb = base64.urlsafe_b64encode(json.dumps({"gate": "tiktok_settings", "content_id": CID}).encode()).decode().rstrip("=")
+        forged = pb + "." + H.new(SECRET.encode(), pb.encode(), hashlib.sha256).hexdigest()     # signed but no exp/nonce
+        with self.assertRaises(TikTokSettingsError):
+            self.svc.render_request(forged)
+
     def test_gate_returns_choice_only_when_eligible_and_bound(self):
         verifier = lambda: PublishApprovalService(self.store, self.grants, allow_test_grants=True)
         self.assertNotIn("tiktok", verifier().evaluate(gate_req(self.pkg)))      # not chosen yet
@@ -154,6 +191,9 @@ class SettingsHttpTests(unittest.TestCase):
         self.assertEqual(len(re.findall(r"type=radio name=privacy_level", page)), 2)
         self.assertNotIn("checked", page)                                                   # no default anywhere
         self.assertIn("Music Usage Confirmation", page)
+        req2 = urllib.request.Request(self.base + path)
+        with urllib.request.urlopen(req2, timeout=5) as r:
+            self.assertIn("default-src 'none'", r.headers.get("Content-Security-Policy", ""))
         token = urllib.parse.parse_qs(urllib.parse.urlparse(path).query)["token"][0]
         self.assertEqual(self.call("/v/tiktok", {"token": token, "approver": "nitin", "privacy_level": "SELF_ONLY"}, form=True)[0], 400)
         code, _ = self.call("/v/tiktok", {"token": token, "approver": "nitin", "privacy_level": "SELF_ONLY", "consent": "yes"}, form=True)
