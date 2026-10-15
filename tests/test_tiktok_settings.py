@@ -194,6 +194,7 @@ class SettingsHttpTests(unittest.TestCase):
         req2 = urllib.request.Request(self.base + path)
         with urllib.request.urlopen(req2, timeout=5) as r:
             self.assertIn("default-src 'none'", r.headers.get("Content-Security-Policy", ""))
+            self.assertIn("charset=utf-8", r.headers.get("Content-Type", ""))
         token = urllib.parse.parse_qs(urllib.parse.urlparse(path).query)["token"][0]
         self.assertEqual(self.call("/v/tiktok", {"token": token, "approver": "nitin", "privacy_level": "SELF_ONLY"}, form=True)[0], 400)
         code, _ = self.call("/v/tiktok", {"token": token, "approver": "nitin", "privacy_level": "SELF_ONLY", "consent": "yes"}, form=True)
