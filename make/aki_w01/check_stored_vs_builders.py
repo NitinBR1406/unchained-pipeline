@@ -11,7 +11,8 @@ import hashlib
 for name, stored, local in (('P2 9974134', 'P2_9974134_STORED_20261015h.json', 'P2_blueprint.json'),
                             ('M1 9974218', 'M1_9974218_STORED_20261014f.json', 'M1_blueprint.json'),
                             ('P3 9975129', 'P3_9975129_STORED_20261015j.json', 'P3_blueprint.json'),
-                            ('R1 9975098', 'R1_9975098_STORED_20261014f.json', 'R1_blueprint.json')):
+                            ('R1 9975098', 'R1_9975098_STORED_20261014f.json', 'R1_blueprint.json'),
+                            ('P3L 9982005', 'P3L_9982005_STORED_20261015.json', 'P3L_blueprint.json')):
     d = json.loads((HERE / stored).read_text())
     out[name] = dict(equal=strip(d['blueprint']['flow']) == strip(json.loads((HERE / local).read_text())['flow']),
                      isinvalid=d.get('isinvalid'), isActive=d.get('isActive'), lastEdit=d.get('lastEdit'),
