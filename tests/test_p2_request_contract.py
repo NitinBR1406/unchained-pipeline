@@ -3,11 +3,10 @@
 The fixture holds, per channel route, P2's gate request template, the pre-gate hash filter, the upload filter and the
 BLOCKED filters exactly as stored in Make (read back via the API). Since f2 the gate decision sits on the ownership read
 just before the upload (upload_filter) and Instagram only fetches a URL that matches the hosting register
-(fetch_filter / blocked_hosting_filter; bucket UNCONFIGURED in the stored config). P2 hashes the bytes it fetched and sends
+(fetch_filter / blocked_hosting_filter; private bucket configured since 2026-10-15, name redacted as __IG_BUCKET__). P2 hashes the bytes it fetched and sends
 THAT hash ({{<n>.bytes_sha256}}) to the gate. The test computes the hash over a synthetic file, renders the template
 the way Make would, sends it to the real approval_server handler on 127.0.0.1 (isolated test mode, temp stores) and then
 applies P2's own filter conditions to the answer. Nothing here can match a real AKI placement (test: namespace)."""
-import copy
 import hashlib
 import json
 import os
@@ -170,15 +169,9 @@ class P2ContractTests(unittest.TestCase):
         NOW = 1_800_000_000
         BUCKET = "aki-contract-test-bucket"
 
-        def configured(f):
-            """The stored filter with the UNCONFIGURED bucket sentinel replaced, as an approved hosting config would."""
-            f = copy.deepcopy(f)
-            for g in f["conditions"]:
-                for c in g:
-                    if c["a"] == "UNCONFIGURED": c["a"] = BUCKET
-                    elif c["a"].endswith(".bucket}}"): c["b"] = BUCKET
-                    elif c.get("b"): c["b"] = c["b"].replace("/UNCONFIGURED/", "/%s/" % BUCKET)
-            return f
+        def with_bucket(f, name):
+            """The stored filter with its (redacted) configured bucket set to `name`; 'UNCONFIGURED' = hosting switched off."""
+            return json.loads(json.dumps(f).replace("__IG_BUCKET__", name))
 
         for ch, ext in (("instagram_reels", "mp4"), ("instagram_feed", "jpg")):
             r = ROUTES[ch]; reg_id = r["register_id"]
@@ -194,10 +187,13 @@ class P2ContractTests(unittest.TestCase):
                 e['formatDate(addMinutes(now; 15); "X")'] = NOW + 900
                 return e
 
-            # stored config: hosting not approved -> every URL, even a perfect one, is BLOCKED before any fetch
-            self.assertFalse(filter_true(r["fetch_filter"], env(good)), ch)
-            self.assertTrue(filter_true(r["blocked_hosting_filter"], env(good)), ch)
-            fetch, blocked = configured(r["fetch_filter"]), configured(r["blocked_hosting_filter"])
+            self.assertIn("__IG_BUCKET__", json.dumps(r["fetch_filter"]))        # stored P2 has a configured private bucket
+            # hosting switched off (UNCONFIGURED) -> every URL, even a perfect one, is BLOCKED before any fetch
+            self.assertFalse(filter_true(with_bucket(r["fetch_filter"], "UNCONFIGURED"), env(good)), ch)
+            self.assertTrue(filter_true(with_bucket(r["blocked_hosting_filter"], "UNCONFIGURED"), env(good)), ch)
+            # a perfect URL for ANOTHER bucket than the configured one is BLOCKED
+            self.assertFalse(filter_true(with_bucket(r["fetch_filter"], "other-bucket"), env(good)), ch)
+            fetch, blocked = with_bucket(r["fetch_filter"], BUCKET), with_bucket(r["blocked_hosting_filter"], BUCKET)
             cases = [(good, {}, True),
                      (good.split("?")[0], {}, False),                                                  # unsigned, no generation
                      (good.replace("storage.googleapis.com", "evil.example"), {}, False),              # other host

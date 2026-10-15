@@ -35,15 +35,16 @@ def walk(flow):
         for r in m.get('routes', []): yield from walk(r['flow'])
         for e in m.get('onerror') or []: yield e
 TEST_BUCKET = 'aki-test-bucket'
+PROD_BUCKET = json.dumps(json.load(open(HERE / 'P2_blueprint.json'))).split('https://storage.googleapis.com/')[1].split('/')[0]
 def load(bucket=None):
-    """bucket: test copy only (the stored/production blueprint keeps IG_BUCKET = UNCONFIGURED, i.e. every IG route blocks)"""
+    """bucket: test copy with the production bucket name replaced (local GCS-like store); 'UNCONFIGURED' = hosting switched off"""
     def sub(x):
         if isinstance(x, dict):
-            if x.get('a') == 'UNCONFIGURED' and x.get('b') == 'UNCONFIGURED':      # the "bucket is configured" sentinel check
+            if x.get('a') == PROD_BUCKET and x.get('b') == 'UNCONFIGURED':      # the "bucket is configured" sentinel: keep b
                 return dict(x, a=bucket)
             return {k: sub(v) for k, v in x.items()}
         if isinstance(x, list): return [sub(v) for v in x]
-        return x.replace('UNCONFIGURED', bucket) if isinstance(x, str) else x
+        return x.replace(PROD_BUCKET, bucket) if isinstance(x, str) else x
     flow = json.load(open(HERE / 'P2_blueprint.json'))['flow']
     return {m['id']: m for m in walk(sub(flow) if bucket else flow)}
 BY = load(); BYT = load(TEST_BUCKET)
@@ -217,7 +218,9 @@ def igcase(url, reg=REG, by=BYT, rec=ig): return p2(dict(rec, media_url=url), ge
 res, body = igcase(good)
 check('I1 signed URL of the registered object version, correct bytes -> eligible', res == 'UPLOAD' and body['asset_sha256'] == sha(FIX), res)
 res, _ = igcase(good, by=BY)
-check('I1b production blueprint (bucket UNCONFIGURED) blocks even a perfect URL -> no IG upload before hosting is approved', res == 'BLOCKED_URL', res)
+check('I1b production blueprint (real private bucket) rejects a perfect URL signed for another bucket', res == 'BLOCKED_URL', res)
+res, _ = igcase(good, by=load('UNCONFIGURED'))
+check('I1c hosting switched off (bucket UNCONFIGURED) blocks even a perfect URL', res == 'BLOCKED_URL', res)
 res, _ = igcase('https://evil.example.com/%s/%s?generation=%d&sha=%s&X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Signature=%s' % (TEST_BUCKET, name, gen, sha(FIX), 'a' * 64))
 check('I2 other host with generation= and the hash in the URL -> BLOCKED_URL', res == 'BLOCKED_URL', res)
 res, _ = igcase('https://storage.googleapis.com.evil.example.com/%s/%s?' % (TEST_BUCKET, name) + good.split('?', 1)[1])

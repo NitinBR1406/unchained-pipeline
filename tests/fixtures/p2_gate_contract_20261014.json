@@ -1,5 +1,5 @@
 {
- "source": "Make scenario 9974134 (P2 version f2) as stored in Make on 2026-10-14T17:48:25.264Z (read back via API)",
+ "source": "Make scenario 9974134 (P2) as stored in Make on 2026-10-15T12:23:44.668Z (read back via API); IG bucket name redacted as __IG_BUCKET__",
  "auth_keychain_header": "x-publish-apikey (Make keychain 217337; value never in repo)",
  "routes": [
   {
@@ -11,13 +11,13 @@
     "conditions": [
      [
       {
-       "a": "UNCONFIGURED",
+       "a": "__IG_BUCKET__",
        "b": "UNCONFIGURED",
        "o": "text:notequal"
       },
       {
        "a": "{{315.bucket}}",
-       "b": "UNCONFIGURED",
+       "b": "__IG_BUCKET__",
        "o": "text:equal"
       },
       {
@@ -42,7 +42,7 @@
       },
       {
        "a": "{{1.data.media_url}}",
-       "b": "https://storage.googleapis.com/UNCONFIGURED/aki-ig-staging/{{1.data.asset_sha256}}.mp4?",
+       "b": "https://storage.googleapis.com/__IG_BUCKET__/aki-ig-staging/{{1.data.asset_sha256}}.mp4?",
        "o": "text:startwith"
       },
       {
@@ -199,7 +199,7 @@
     "conditions": [
      [
       {
-       "a": "UNCONFIGURED",
+       "a": "__IG_BUCKET__",
        "b": "UNCONFIGURED",
        "o": "text:equal"
       }
@@ -207,7 +207,7 @@
      [
       {
        "a": "{{315.bucket}}",
-       "b": "UNCONFIGURED",
+       "b": "__IG_BUCKET__",
        "o": "text:notequal"
       }
      ],
@@ -242,7 +242,7 @@
      [
       {
        "a": "{{1.data.media_url}}",
-       "b": "https://storage.googleapis.com/UNCONFIGURED/aki-ig-staging/{{1.data.asset_sha256}}.mp4?",
+       "b": "https://storage.googleapis.com/__IG_BUCKET__/aki-ig-staging/{{1.data.asset_sha256}}.mp4?",
        "o": "text:notstartwith"
       }
      ],
@@ -314,13 +314,13 @@
     "conditions": [
      [
       {
-       "a": "UNCONFIGURED",
+       "a": "__IG_BUCKET__",
        "b": "UNCONFIGURED",
        "o": "text:notequal"
       },
       {
        "a": "{{355.bucket}}",
-       "b": "UNCONFIGURED",
+       "b": "__IG_BUCKET__",
        "o": "text:equal"
       },
       {
@@ -345,7 +345,7 @@
       },
       {
        "a": "{{1.data.media_url}}",
-       "b": "https://storage.googleapis.com/UNCONFIGURED/aki-ig-staging/{{1.data.asset_sha256}}.jpg?",
+       "b": "https://storage.googleapis.com/__IG_BUCKET__/aki-ig-staging/{{1.data.asset_sha256}}.jpg?",
        "o": "text:startwith"
       },
       {
@@ -502,7 +502,7 @@
     "conditions": [
      [
       {
-       "a": "UNCONFIGURED",
+       "a": "__IG_BUCKET__",
        "b": "UNCONFIGURED",
        "o": "text:equal"
       }
@@ -510,7 +510,7 @@
      [
       {
        "a": "{{355.bucket}}",
-       "b": "UNCONFIGURED",
+       "b": "__IG_BUCKET__",
        "o": "text:notequal"
       }
      ],
@@ -545,7 +545,7 @@
      [
       {
        "a": "{{1.data.media_url}}",
-       "b": "https://storage.googleapis.com/UNCONFIGURED/aki-ig-staging/{{1.data.asset_sha256}}.jpg?",
+       "b": "https://storage.googleapis.com/__IG_BUCKET__/aki-ig-staging/{{1.data.asset_sha256}}.jpg?",
        "o": "text:notstartwith"
       }
      ],

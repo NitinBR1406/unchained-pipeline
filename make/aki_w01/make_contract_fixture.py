@@ -40,7 +40,10 @@ for ch, f in FETCH.items():
                  blocked_hosting_filter=mods[1000 + reg + 3]["filter"])
     routes.append(r)
 
-out = dict(source="Make scenario 9974134 (P2 version f2) as stored in Make on %s (read back via API)" % stored["lastEdit"],
+bucket = mods[300]["filter"]["conditions"][0][1]["b"]          # {{315.bucket}} == <configured bucket>
+if bucket != "UNCONFIGURED":                                     # public repo: the private bucket name is not committed
+    routes = json.loads(json.dumps(routes).replace(bucket, "__IG_BUCKET__"))
+out = dict(source="Make scenario 9974134 (P2) as stored in Make on %s (read back via API); IG bucket name redacted as __IG_BUCKET__" % stored["lastEdit"],
            auth_keychain_header=old["auth_keychain_header"], routes=routes, synthetic_placement=old["synthetic_placement"])
 Path(sys.argv[3]).write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
 print("routes", len(routes), "->", sys.argv[3])

@@ -19,6 +19,7 @@ Order per placement (fail-closed at every step):
  6. UPLOAD the same fetched buffer (FB/YT) / the same pinned URL (IG). Errors -> OUTCOME_UNKNOWN unless definitely rejected.
 TikTok: no API call (BLOCKED)."""
 import json
+import os
 DS, ERR, KEYCHAIN = 196442, 168812, 217337
 IG, FB, YT = 14369479, 14363628, 14374103
 GDRIVE = 14383570   # google-restricted Drive connection (Shared Drive 'Unchained Nitin — Master')
@@ -127,7 +128,9 @@ def not_eligible(p): return [[ne("{{%d.reason}}" % p, "VALID_PUBLISH_APPROVAL")]
 #   {"bucket","object","generation","sha256","expires_epoch"}.  No free-text checks on the URL: host, bucket, object path,
 #   one unambiguous generation equal to the register, a V4 signature, no fragment/userinfo, not expiring within 15 min.
 # IG_BUCKET stays UNCONFIGURED until Nitin approves hosting and names the private bucket -> until then every IG route BLOCKS.
-IG_BUCKET = "UNCONFIGURED"
+# private IG staging bucket (approved 2026-10-15); name not committed (public repo): export AKI_IG_BUCKET to build the deployable P2.
+# Unset => "UNCONFIGURED" => every Instagram route is BLOCKED.
+IG_BUCKET = os.environ.get("AKI_IG_BUCKET", "UNCONFIGURED")
 IG_HOST = "https://storage.googleapis.com/"
 EXT = {'instagram_reels': 'mp4', 'instagram_feed': 'jpg'}
 def pat(a, b): return {"a": a, "b": b, "o": "text:pattern"}
