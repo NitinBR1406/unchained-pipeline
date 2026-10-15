@@ -9,7 +9,7 @@ Campaign data (registry, captions, Drive ids, read-backs) is deliberately **not*
 | file | purpose |
 |---|---|
 | `build_p2.py` | P2 f2: lock-before-claim (`plock:<placement>:a<n>`, insert-only), per-run owner `{{uuid}}`, ownership fence (GetRecord, `returnWrapped:false`) before every status write / upload / write-back, hash over fetched bytes, gate call, IG hosting register + strict signed-URL filter for a private GCS bucket (`AKI_IG_BUCKET`, not committed; unset = `UNCONFIGURED` = IG always BLOCKED), module-bound `error.type`/`error.message` with `ifempty`, unknown upload outcome -> `OUTCOME_UNKNOWN` |
-| `build_p3.py`, `make_fence.py` | same fencing for TikTok; photo hosting `UNCONFIGURED` |
+| `build_p3.py`, `make_fence.py` | same fencing for TikTok. Default `AKI_TT_VIDEO_MODE=INBOX`: video as draft in the TikTok inbox (Upload to TikTok, no audit), optional mail via `AKI_NOTIFY_EMAIL`; `DIRECT` = Direct Post after audit. Photos stay BLOCKED (verified domain needed) |
 | `build_m1.py` | metrics collector; run token `{{uuid}}` (`var.execution.id` is empty at runtime). Needs `AKI_M1_SHEET_ID` |
 | `build_r1.py` | R1 v2: `PUBLISHED` only via a stored platform id verified by id (account/type/window/text); otherwise `CANDIDATE_UNVERIFIED` / `MULTIPLE_CANDIDATES` / `NOT_FOUND` / `STORED_ID_MISMATCH` / `STORED_ID_NOT_VERIFIABLE` / `CONFLICTING_STORED_IDS`. R1 **does** update internal registrations (status/reconcile fields in data store 196442), never platform content |
 | `make_error_refs.py` | binds `error.*` to the handler's module |

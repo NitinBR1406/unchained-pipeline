@@ -14,6 +14,7 @@ and must be one of creator_info.privacy_level_options; comment/duet/stitch off u
 the approved package text). A Direct Post returns a publish_id; the public post id only appears after moderation
 (status/fetch) -> status SUBMITTED, reconciled later."""
 import json
+import os
 DS, ERR, KEYCHAIN, TOK, GDRIVE = 196442, 168812, 217337, 168757, 14383570
 TT = "https://open.tiktokapis.com/v2"
 
@@ -84,7 +85,11 @@ def tt_http(mid, url, body, onerror, tokmid, flt=None):
 def gate_yes(p): return [eq("{{%d.reason}}" % p, "VALID_PUBLISH_APPROVAL"), eq('{{if(%d.eligible = true; "EOK"; "ENO")}}' % p, "EOK")]
 def gate_no(p): return [[ne("{{%d.reason}}" % p, "VALID_PUBLISH_APPROVAL")], [ne('{{if(%d.eligible = true; "EOK"; "ENO")}}' % p, "EOK")]]
 
-# ---- video: Drive download -> sha256 -> gate(computed) -> creator_info/privacy -> init -> single-chunk upload ----
+# ---- video: Drive download -> sha256 -> gate(computed) -> [DIRECT: creator_info/privacy] -> init -> single-chunk upload ----
+# TT_VIDEO_MODE: INBOX (default, approved by Nitin 2026-10-15) = "Upload to TikTok": the video lands as a draft in the creator's
+# TikTok inbox; caption, privacy and the final Post tap happen in the TikTok app (no audit needed). DIRECT = Direct Post (audit).
+TT_VIDEO_MODE = os.environ.get("AKI_TT_VIDEO_MODE", "INBOX")
+NOTIFY_TO = os.environ.get("AKI_NOTIFY_EMAIL", "")       # not committed (public repo); empty => no notification module
 V = 200
 v_priv = {"a": "{{%d.data.data.privacy_level_options}}" % (V + 21), "b": "{{1.data.tiktok_privacy_level}}", "o": "array:contain"}
 video_upload = [
@@ -98,6 +103,24 @@ video_upload = [
      "onerror": uncertain(V + 72, "TT_UPLOAD")},
     logged(upd(V + 32, {"status": "SUBMITTED", "platform_post_id": "", "reconcile_note": "tiktok publish_id={{%d.data.data.publish_id}} (post id after moderation via status/fetch)" % (V + 30),
                  "published_via": "AUTO_P3", "lock_until": "", "last_error": ""}), V + 84, "WRITEBACK_FAIL_AFTER_SUBMIT publish_id={{%d.data.data.publish_id}}" % (V + 30))]
+if TT_VIDEO_MODE == "INBOX":
+    video_upload[0] = tt_http(V + 30, TT + "/post/publish/inbox/video/init/",
+                              '{"source_info":{"source":"FILE_UPLOAD","video_size":{{%d.filesize}},"chunk_size":{{%d.filesize}},"total_chunk_count":1}}' % (V, V),
+                              fail(V + 70, "TT_INIT_FAIL"), V + 20)
+    video_upload[2] = logged(upd(V + 32, {"status": "DRAFT_IN_TIKTOK_INBOX", "platform_post_id": "",
+                                          "reconcile_note": "tiktok inbox draft publish_id={{%d.data.data.publish_id}}; creator posts it in the app; post id via status/fetch or manual registration" % (V + 30),
+                                          "published_via": "AUTO_P3_INBOX", "lock_until": "", "last_error": ""}),
+                             V + 84, "WRITEBACK_FAIL_AFTER_SUBMIT publish_id={{%d.data.data.publish_id}}" % (V + 30))
+    if NOTIFY_TO:
+        video_upload.append({"id": V + 60, "module": "email:ActionSendMeEmail", "version": 7, "parameters": {}, "mapper": {
+            "to": NOTIFY_TO, "subject": "TikTok-concept klaar: {{1.key}}",
+            "html": "<p>De video voor <b>{{1.key}}</b> staat als concept in je TikTok-inbox. Open TikTok, plak de caption hieronder, "
+                    "kies de privacy-instelling en tik op Plaatsen.</p><pre style=\"white-space:pre-wrap\">{{1.data.caption}}</pre>"
+                    "<p>publish_id: {{%d.data.data.publish_id}}</p>" % (V + 30)}, "onerror": [log(V + 87, "NOTIFY_FAIL")]})
+    video_gate_yes = [{"id": V + 20, "mapper": {"key": "main", "returnWrapped": False}, "module": "datastore:GetRecord", "version": 1,
+                       "parameters": {"datastore": TOK}}] + video_upload
+else:
+    video_gate_yes = priv_router(V + 20, video_upload)
 video = {"flow": [
     {"id": V, "filter": {"name": "tiktok video (variant 9x16, Drive binary)", "conditions": [[eq("{{1.data.channel}}", "tiktok"), eq("{{1.data.format_variant}}", "9x16")]]},
      "mapper": {"select": "map", "file": "{{1.data.drive_file_id}}", "formatDocuments": "application/pdf", "formatSpreadsheets": "text/csv",
@@ -112,7 +135,7 @@ video = {"flow": [
                   gate(V + 3, "")[1],
                   {"id": V + 5, "mapper": {}, "module": "builtin:BasicRouter", "version": 1, "routes": [
                       {"flow": [dict(x, filter={"name": "gate said YES", "conditions": [gate_yes(V + 4)]}) if i == 0 else x
-                                for i, x in enumerate(priv_router(V + 20, video_upload))]},
+                                for i, x in enumerate(video_gate_yes)]},
                       {"flow": [blocked(V + 6, "GATE_NOT_ELIGIBLE: {{%d.reason}}" % (V + 4), gate_no(V + 4), "gate said NO / unexpected answer -> BLOCKED")]}]}]},
         {"flow": [blocked(V + 7, "ASSET_HASH_MISMATCH_OR_TOO_LARGE: bytes {{%d.bytes_sha256}} / drive {{ifempty(%d.sha256Checksum; \"NONE\")}} / registered {{ifempty(1.data.asset_sha256; \"NONE\")}} / size {{%d.filesize}}" % (V + 1, V, V),
                           [[ne("{{%d.bytes_sha256}}" % (V + 1), "{{1.data.asset_sha256}}")], [eq("{{1.data.asset_sha256}}", "")], [ne('{{ifempty(%d.sha256Checksum; "NONE")}}' % V, "{{1.data.asset_sha256}}")],
@@ -155,6 +178,9 @@ DUE = {"name": "due, privacy level chosen by creator, aki:post id, caption JSON-
     {"a": "{{ifempty(1.data.tiktok_privacy_level; \"NONE\")}}", "b": "NONE", "o": "text:notequal"},
     {"a": "{{1.data.gate_content_id}}", "b": "aki:post:", "o": "text:startwith"},
     {"a": "{{1.data.caption}}", "b": "\"", "o": "text:notcontain"}, {"a": "{{1.data.caption}}", "b": "\\", "o": "text:notcontain"}]]}
+if TT_VIDEO_MODE == "INBOX":   # privacy + caption are set by the creator in the TikTok app; nothing of them is sent to the API
+    DUE = {"name": "due, aki:post id (inbox draft: privacy and caption chosen in the TikTok app)",
+           "conditions": [[c for c in DUE["conditions"][0] if "tiktok_privacy_level" not in c["a"] and "caption" not in c["a"]]]}
 flow = [
  {"id": 1, "mapper": {"filter": [[{"a": "campaign_id", "b": "aakhri-ishq", "o": "text:equal"}, {"a": "platform_api", "b": "tiktok", "o": "text:equal"},
      {"a": "tiktok_route_enabled", "b": "TRUE", "o": "text:equal"}, {"a": "status", "b": "READY", "o": "text:equal"},
@@ -170,7 +196,7 @@ flow = [
    {"flow": [blocked(64, "CHANNEL_VARIANT_MISMATCH: {{1.data.channel}} / {{1.data.format_variant}}",
                      [[{"a": '{{split("tiktok:9x16,tiktok_photo:9x16jpg"; ",")}}', "b": "{{1.data.channel}}:{{1.data.format_variant}}", "o": "array:notcontain"}]],
                      "channel/format variant not an allowed pair -> BLOCKED")]}]}]
-bp = {"name": "P3: AKI TikTok Direct Post (BLOCKED: audit/token/route flag) — INACTIVE", "flow": flow,
+bp = {"name": "P3: AKI TikTok %s (route flag per placement; photos BLOCKED) — INACTIVE" % ("Inbox Draft" if TT_VIDEO_MODE == "INBOX" else "Direct Post"), "flow": flow,
       "metadata": {"instant": False, "version": 1, "designer": {"orphans": []}, "scenario": {"dlq": False, "dataloss": False, "maxErrors": 3, "autoCommit": True,
                    "roundtrips": 1, "sequential": True, "confidential": False, "freshVariables": False, "autoCommitTriggerLast": True}}}
 from make_error_refs import bind_error_refs
