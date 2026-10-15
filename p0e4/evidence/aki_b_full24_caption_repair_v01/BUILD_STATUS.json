@@ -1,0 +1,113 @@
+{
+  "schema": "AKI_B_FULL24_CAPTION_REPAIR_STATUS_V01",
+  "task": "AKI_B_FULL24_CAPTION_REPAIR_20261002_V01",
+  "brief": "p0e4/tasks/manual/AKI_B_FULL24_CAPTION_REPAIR_20261002_V01.md @ 0b438014df45949898eb8c6a1a82f0a576c5bb01",
+  "authority": "Nitin selected B ('B past Beter bij mij!') and approved the follow-up ('goed plan!'); private build only",
+  "status": "SCRIPTS_READY_AWAITING_REVIEW",
+  "videos_rendered": false,
+  "resolve_mutated": false,
+  "based_on": {
+    "r4_commit": "5e4f60fdfdfbbda290ac5c0afc0ca7deb163125b",
+    "r4_step2_sha256": "a3ab4952b676e0650a5fde32e54d1ad86bd96d8f29c8b90494416e7b6fbe26b0",
+    "r4_receipt_revision_label_note": "R4 receipt says revision=3 (stale label); the executed script is a3ab4952 with R4 paths",
+    "selected_b_preview_sha256": "8c7c3886d3969e580a833e9396c06de9a80cbe48d69d0581e1806017fb3d6eff"
+  },
+  "scripts": {
+    "step1_import_readback.py": {
+      "sha256": "de62725b2f8d07304d6f47c959cafd16f1588d20e1a59f418780128856e7bd32",
+      "diff_vs_reviewed_r4_step1": "docstring + COPY name only (UNCHAINED_AKI_B_FULL24_CAPTION_REPAIR_V01)"
+    },
+    "make_logo_overlays.py": {
+      "sha256": "4e4835e30babd922f28cba0e0c9988406983f8d45046752b3a0a425adeb561d4",
+      "resolve": false,
+      "builder_test": "ran twice in scratchpad: deterministic output, alpha bbox matches plan (intro 390x122 @ (540,1498); end card 430x135 @ (540,1400))"
+    },
+    "step2_build_render_full24.py": {
+      "sha256": "c28b2e22ccbb87f69b9461da8e879084833acecdb8b6e013198b79d740751468"
+    },
+    "test_full24_offline.py": {
+      "sha256": "338c4412bb597bf07ea7dff074727179af7b127f9406ce53970ae10068fa0693",
+      "result": "20/20 OK (builder run on Mac, no Resolve)"
+    }
+  },
+  "execution_folder": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-b-full24-caption-repair-v01",
+  "design": {
+    "range": "global [0,720), Resolve MarkIn/MarkOut origin+0/origin+719; source offset +2144, WAV offset +2160 (asserted from step-1 readback)",
+    "copy_and_timeline": "new project UNCHAINED_AKI_B_FULL24_CAPTION_REPAIR_V01 from the V13 DRP; timeline AKI_B_FULL24_CAPTION_REPAIR_V01 duplicated from the base; base, V13 and all A/B projects untouched",
+    "zoom": {
+      "layer": "R4 AB layer (top-centre anchor, window shift) on all 6 V1 clips",
+      "max_relative_incl_punch": 1.15,
+      "punch": "+0.03 at every cut, attack 2 f, decay 8 f",
+      "shots_global": "[0,60)1.06 [60,120)1.00 [120,180)1.12 [180,240)1.00+x.03 [240,300)1.10 [300,360)1.06 [360,420)1.12-x.02 [420,474)1.00 [474,548)1.10+x.02 [548,600)1.04 [600,656)1.12 [656,720)1.00",
+      "r4_span": "[60,420) identical to the selected R4 B",
+      "visible_change_rule": ">=0.04 zoom or >=0.02 shift at every cut (asserted)",
+      "safety": "every frame asserted inside source and never above V13 top edge; composed peak with inherited rhythm pulse computed in receipt"
+    },
+    "beats": {
+      "method": "builder onset envelope on V13 master audio; not independently validated",
+      "cuts_vs_nearest_strong_onset_frames": {
+        "60": 0.0,
+        "120": 0.0,
+        "180": 1.8,
+        "240": -3.6,
+        "300": 0.0,
+        "360": 0.0,
+        "420": -0.3,
+        "474": "moved to onset 15.80 s",
+        "548": "moved to onset 18.25 s",
+        "600": 1.2,
+        "656": "moved to onset 21.86 s"
+      },
+      "claim": "approximation; no proven beat sync"
+    },
+    "captions": {
+      "problem": "R4 hook lost contrast over skin/light shirt (around global 4 s)",
+      "measurement": "B R4 luma by band (text-free frames): rows 0.83-1.00 from top mean 95->56 vs 0.75-0.83 mean 109-121; centre (V-neck) brightest",
+      "hook": "existing text split into its two lines; Montserrat SemiBold size 0.095 (was 0.08); centres 0.848 / 0.892 from top (was 0.777 / 0.813); P1 [90,156) fade 6 f, P2 rise/fade [102,108), joint fade [150,156); holds 1.8 s / 1.4 s",
+      "end_card": "[672,720): chain logo (derived overlay) + 'AAKHRI ISHQ' Cinzel SemiBold gold 0.12 + 'UNCHAINED NITIN' Montserrat SemiBold 0.075; fade in 6 f, hold to 714, fade to 0 at 719; on dark shirt below the face",
+      "intro": "[0,30) chain logo overlay on chest (as V13 position), fade in 5 f / out 6 f",
+      "removed_from_v13": "all V13 Text+ overlays (hook, song id, title, artist) set to blend 0; V13 54 f emblem and 120 f outro card removed from the NEW timeline's V2 only",
+      "no_halo_shadow": "Softness1/Enabled2/Enabled3 = 0 (asserted, incl. Fusion omitted defaults)",
+      "tradeoff": "hook now sits in the bottom ~15 % that platform UI may cover on social apps; chosen for contrast in this private review"
+    },
+    "logo": {
+      "source_sha256": "5e77eb7a6590d63fc33042cdfc62582f20a77d9bd6175868c77a3b8354a7b509 (gold chain monogram)",
+      "lightning": "9ec01839... refused by make_logo_overlays; clip-5 UN_AUTH_FULL_LOCKUP (unchained_nitin_logo_800.png, file absent) is detached from MediaOut1 in V13 and asserted to stay unreachable",
+      "input_color_space": "Project (same as V13 emblem)"
+    },
+    "overlay_budget": {
+      "planned_overlay_frames": 143,
+      "clean_fraction": 0.8014,
+      "min_75": true,
+      "target_80": true,
+      "basis": "V2 overlay windows [0,30) and [672,720) + caption opacity > 0 [91,156); measured again from Resolve readback in step 2"
+    },
+    "fonts": {
+      "installed": [
+        "UNCHAINED-Cinzel-SemiBold.ttf",
+        "UNCHAINED-Cinzel-VF.ttf",
+        "UNCHAINED-Montserrat-Medium.ttf",
+        "UNCHAINED-Montserrat-Regular.ttf",
+        "UNCHAINED-Montserrat-VF.ttf"
+      ],
+      "resolution_check": "to be checked on the render (glyph shapes / weight); a missing font will be reported, not substituted"
+    }
+  },
+  "planned_execution": [
+    "shasum -c of all scripts immediately before each run",
+    "python3 test_full24_offline.py",
+    "python3 make_logo_overlays.py (no Resolve)",
+    "step1 once + readback inspection",
+    "step2 once (no blind retry)",
+    "step3 media QC (full decode, 720 f/24 s/30 fps, PCM vs V13 [0,1152000) samples, headroom/edges, captions in tone-mapped frames, logo, overlay budget), review MP4, open, private Drive copy in new version folder, receipt + PR"
+  ],
+  "independent_qc": {
+    "codex": "requested on this PR",
+    "gemini": "none"
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
