@@ -47,9 +47,11 @@ def main(argv=None):
     c.add_argument("--content-id", required=True)
     c.add_argument("--platform", required=True)
     c.add_argument("--target-account", required=True)
-    c.add_argument("--file", required=True, help="the EXACT media bytes that will be published")
+    c.add_argument("--file", default="", help="the EXACT media bytes that will be published")
+    c.add_argument("--asset-sha256", default="", help="instead of --file: sha256 of the exact media bytes")
+    c.add_argument("--packaging-sha256", default="", help="instead of --title-file/--caption-file: packaging sha256 of the exact texts")
     c.add_argument("--title-file", default="", help="UTF-8 file with the exact title (YouTube); empty for none")
-    c.add_argument("--caption-file", required=True, help="UTF-8 file with the exact caption/description")
+    c.add_argument("--caption-file", default="", help="UTF-8 file with the exact caption/description")
     c.add_argument("--scheduled-at", required=True, help="'YYYY-MM-DD HH:MM:SS' Europe/Amsterdam")
     c.add_argument("--schedule-version", required=True)
     c.add_argument("--exp", required=True, type=int)
@@ -63,10 +65,18 @@ def main(argv=None):
 
     if a.cmd == "create":
         prov = PlacementProvisioner(ApprovalStore(a.approvals), a.grants)
+        if bool(a.file) == bool(a.asset_sha256) or bool(a.caption_file) == bool(a.packaging_sha256):
+            print("REFUSED: give exactly one of --file/--asset-sha256 and one of --caption-file/--packaging-sha256", file=sys.stderr)
+            return 2
         try:
-            g = prov.create_grant(a.content_id, _sha256_file(a.file), a.platform, a.target_account.strip(), _read(a.title_file),
-                                  _read(a.caption_file), a.scheduled_at, a.schedule_version, a.exp, medium=a.medium,
-                                  approval_id=a.approval_id)
+            asset = _sha256_file(a.file) if a.file else a.asset_sha256
+            if a.packaging_sha256:
+                g = prov.create_grant_from_hashes(a.content_id, asset, a.platform, a.target_account.strip(), a.packaging_sha256,
+                                                  a.scheduled_at, a.schedule_version, a.exp, medium=a.medium, approval_id=a.approval_id)
+            else:
+                g = prov.create_grant(a.content_id, asset, a.platform, a.target_account.strip(), _read(a.title_file),
+                                      _read(a.caption_file), a.scheduled_at, a.schedule_version, a.exp, medium=a.medium,
+                                      approval_id=a.approval_id)
         except ProvisionError as e:
             print(f"REFUSED: {e}", file=sys.stderr)
             return 2

@@ -54,6 +54,15 @@ class PlacementProvisioner:
     def create_grant(self, content_id, asset_sha256, platform, target_account, title, caption,
                      scheduled_at, schedule_version, exp, medium=MEDIUM_VIDEO, test_only=False,
                      approval_id=None):
+        _, pkg = self.fingerprint(content_id, asset_sha256, platform, title, caption, schedule_version)
+        return self.create_grant_from_hashes(content_id, asset_sha256, platform, target_account, pkg, scheduled_at,
+                                             schedule_version, exp, medium=medium, test_only=test_only, approval_id=approval_id)
+
+    def create_grant_from_hashes(self, content_id, asset_sha256, platform, target_account, packaging_sha,
+                                 scheduled_at, schedule_version, exp, medium=MEDIUM_VIDEO, test_only=False,
+                                 approval_id=None):
+        """Same as create_grant, for a host that only holds the exact hashes (bytes sha256 + packaging sha256 of the
+        exact title/caption). The fingerprint and all refusals are identical."""
         if medium not in (MEDIUM_VIDEO, MEDIUM_POSTER):
             raise ProvisionError("REFUSED: unknown medium {!r}".format(medium))
         if not target_account:
@@ -62,7 +71,7 @@ class PlacementProvisioner:
             raise ProvisionError("REFUSED: test grants only in the '{}' namespace, and never a real "
                                  "grant there".format(TEST_PREFIX))
         key = self.grant_key(content_id, platform)
-        fp, _ = self.fingerprint(content_id, asset_sha256, platform, title, caption, schedule_version)
+        fp = compute_fingerprint(content_id, asset_sha256, platform, packaging_sha, schedule_version)
         gates = (GATE_CREATIVE, final_gate_for_medium(medium), GATE_PUBLISH)
         if not all(self.approvals.is_approved(key, g, fp) for g in gates):
             raise ProvisionError("REFUSED: creative + final + publish approvals must all exist (campaign "
