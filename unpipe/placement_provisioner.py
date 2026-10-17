@@ -82,7 +82,7 @@ class PlacementProvisioner:
             "fingerprint": fp,
             "platforms": [platform],
             "target_account": target_account,
-            "schedule_window": schedule_window(scheduled_at_to_epoch(scheduled_at)),
+            "schedule_window": schedule_window(scheduled_at if isinstance(scheduled_at, int) else scheduled_at_to_epoch(scheduled_at)),
             "schedule_version": schedule_version,
             "exp": int(exp),
             "revoked": False,

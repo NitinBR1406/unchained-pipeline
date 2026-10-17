@@ -3,6 +3,8 @@ FROM python:3.12-slim
 WORKDIR /app
 COPY unpipe/ ./unpipe/
 COPY approval_server.py make_approval_link.py ./
+# host CLIs run by Nitin in the Render shell (record approvals, provision/revoke grants)
+COPY scripts/ ./scripts/
 COPY campaigns/ ./campaigns/
 # Persistent nonce store lives on a mounted disk (see render.yaml). Cloud host injects $PORT.
 ENV CONSUMED_STORE=/data/_approvals_consumed.json

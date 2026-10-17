@@ -55,6 +55,15 @@ class RecordApprovalChain(unittest.TestCase):
             with self.subTest(kw=kw):
                 self.assertFalse(self.req(**kw)["eligible"])
 
+    def test_epoch_instead_of_local_time(self):
+        self.rec()
+        ep = C.scheduled_at_to_epoch(self.when)
+        rc = P.main(["create", "--grants", self.g, "--approvals", self.a, "--content-id", CID, "--platform", PLAT,
+                     "--target-account", ACCT, "--asset-sha256", SHA, "--packaging-sha256", self.pkg,
+                     "--scheduled-at-epoch", str(ep), "--schedule-version", "1", "--exp", str(int(time.time()) + 3600)])
+        self.assertEqual(rc, 0)
+        self.assertTrue(self.req()["eligible"])
+
     def test_refusals(self):
         self.assertEqual(self.rec(approver="someone"), 2)
         self.assertEqual(self.rec(content_id="test:post:X"), 2)
