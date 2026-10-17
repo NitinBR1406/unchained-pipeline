@@ -1,0 +1,7 @@
+*_blueprint.json
+*_interface.json
+TEST_RESULTS_*.json
+*_STORED_*.json
+TEST_P2_IG_FILTERS.json
+AKI_W01_CAMPAIGN_REGISTRY.json
+__pycache__/

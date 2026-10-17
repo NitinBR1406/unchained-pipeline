@@ -29,8 +29,10 @@ from .approvals import GATE_CREATIVE, GATE_FINAL_ASSET, GATE_PUBLISH
 # Single source of truth for canonicalization (re-exported so existing importers keep working).
 from .canonical import compute_fingerprint, final_gate_for_medium, MEDIUM_VIDEO
 from .util import read_json
+from .tiktok_settings import settings_for_response
 
 REASON_ELIGIBLE = "VALID_PUBLISH_APPROVAL"
+TEST_PREFIX = "test:"   # reserved namespace for synthetic test grants; never a real content id
 
 
 class PublishApprovalError(Exception):
@@ -48,8 +50,11 @@ class PublishApprovalService:
     Both are server-side artifacts (persistent disk); neither is writable from Make.
     """
 
-    def __init__(self, approvals, grants, now=None):
+    def __init__(self, approvals, grants, now=None, allow_test_grants=False):
         self.approvals = approvals
+        # Synthetic test grants are honoured ONLY by an explicitly isolated test verifier. The production
+        # server never sets this, so a test grant that ends up in the production store is refused.
+        self.allow_test_grants = bool(allow_test_grants)
         if isinstance(grants, (str, bytes)):
             data = read_json(grants, default={"grants": {}}) or {"grants": {}}
             self._grants = data.get("grants", {}) if isinstance(data, dict) else {}
@@ -113,6 +118,16 @@ class PublishApprovalService:
                 return self._blocked("FINGERPRINT_MISMATCH")
             if platform not in (grant.get("platforms") or []):
                 return self._blocked("PLATFORM_MISMATCH")
+            # Placement grants (unpipe.placement_provisioner) bind the target account. Grants without
+            # the field (existing poster/video grants) are unaffected.
+            if grant.get("target_account") is not None and req.get("target_account") != grant.get("target_account"):
+                return self._blocked("TARGET_ACCOUNT_MISMATCH")
+            # Synthetic test grants can only ever match the reserved "test:" namespace, and only on a verifier
+            # that was explicitly started in test mode.
+            if bool(grant.get("test_only")) != str(content_id).startswith(TEST_PREFIX):
+                return self._blocked("MALFORMED_APPROVAL")
+            if grant.get("test_only") and not self.allow_test_grants:
+                return self._blocked("TEST_GRANT_NOT_ALLOWED")
 
             sw = grant.get("schedule_window") or [None, None]
             st = req.get("scheduled_at_epoch")
@@ -127,13 +142,19 @@ class PublishApprovalService:
             if not schedule_ok:
                 return self._blocked("SCHEDULE_MISMATCH")
 
-            return {
+            res = {
                 "eligible": True,
                 "content_id": content_id,
                 "platform": platform,
                 "approval_id": grant.get("approval_id"),
                 "reason": REASON_ELIGIBLE,
             }
+            # TikTok: the creator's own per-post choice (privacy / interactions / consent), stored on THIS grant by
+            # unpipe.tiktok_settings. Informational for P3; it never makes an ineligible request eligible.
+            tt = settings_for_response(grant, platform)
+            if tt is not None:
+                res["tiktok"] = tt
+            return res
         except Exception:
             # Any unexpected error (incl. approval-store unavailable) MUST fail closed.
             return self._blocked("INTERNAL_ERROR")

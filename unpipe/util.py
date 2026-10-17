@@ -1,7 +1,9 @@
 """Shared helpers: hashing, time, secret redaction, safe JSON IO."""
+import fcntl
 import hashlib
 import json
 import os
+from contextlib import contextmanager
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -33,10 +35,30 @@ def read_json(path, default=None):
 
 
 def write_json(path, obj):
+    """Atomic: write a temp file in the same directory, fsync, then os.replace (readers never see half a file)."""
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(obj, indent=2, ensure_ascii=False))
+    tmp = p.with_name(".%s.%d.tmp" % (p.name, os.getpid()))
+    with open(tmp, "w") as f:
+        f.write(json.dumps(obj, indent=2, ensure_ascii=False))
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, p)
     return str(p)
+
+
+@contextmanager
+def locked(path):
+    """Exclusive inter-thread/inter-process lock for a read-modify-write of `path` (lock file next to it).
+    All writers of the grant store use this, so a revoke can never be lost by a concurrent update."""
+    lp = Path(str(path) + ".lock")
+    lp.parent.mkdir(parents=True, exist_ok=True)
+    with open(lp, "a") as f:
+        fcntl.flock(f.fileno(), fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(f.fileno(), fcntl.LOCK_UN)
 
 
 def redact(obj):

@@ -36,6 +36,8 @@ from unpipe.approval_service import ApprovalService, ApprovalError
 from unpipe.visualizer_approval import VisualizerApprovalService, VisualizerApprovalError
 from unpipe.approvals import ApprovalStore
 from unpipe.publish_approval import PublishApprovalService
+from unpipe.tiktok_settings import TikTokSettingsService, TikTokSettingsError
+from html import escape as _esc
 
 CAMPAIGNS_ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("campaigns")
 OWNER = os.environ.get("GH_OWNER", "NitinBR1406")
@@ -90,7 +92,35 @@ def build_publish_service():
         approvals=ApprovalStore(os.environ.get(
             "PUBLISH_APPROVALS_STORE", str(CAMPAIGNS_ROOT / "_publish_approvals.json"))),
         grants=os.environ.get("PUBLISH_GRANTS_STORE", str(CAMPAIGNS_ROOT / "_publish_grants.json")),
+        # Isolated test environments only; never set on the production service (render.yaml does not define it).
+        allow_test_grants=os.environ.get("PUBLISH_ALLOW_TEST_GRANTS") == "1",
     )
+
+
+def build_tiktok_settings_service():
+    # Per request (re-reads the grant store). Writes ONLY grant["tiktok_settings"] of an existing, active grant.
+    return TikTokSettingsService(
+        signing_secret=os.environ.get("APPROVAL_SIGNING_SECRET", ""),
+        approvers=[a.strip() for a in os.environ.get("APPROVERS", "nitin").split(",")],
+        grants_path=os.environ.get("PUBLISH_GRANTS_STORE", str(CAMPAIGNS_ROOT / "_publish_grants.json")),
+        consumed_path=os.environ.get("TIKTOK_SETTINGS_CONSUMED_STORE",
+                                     str(CAMPAIGNS_ROOT / "_tiktok_settings_consumed.json")),
+    )
+
+
+PRIVACY_LABELS = {"PUBLIC_TO_EVERYONE": "Everyone", "MUTUAL_FOLLOW_FRIENDS": "Friends",
+                  "FOLLOWER_OF_CREATOR": "Followers", "SELF_ONLY": "Only me"}
+
+
+def tiktok_page(d, token, approver):
+    """TikTok Direct Post UX: preview + caption, creator, privacy WITHOUT default, interactions off by default, consent."""
+    opts = "".join("<label class=o><input type=radio name=privacy_level value='{v}' required> {l}</label>".format(
+        v=_esc(o), l=_esc(PRIVACY_LABELS.get(o, o))) for o in d["privacy_options"])
+    prev = ("<video class=pv src='{u}' controls playsinline preload=metadata></video>".format(u=_esc(d["preview_url"]))
+            if d.get("preview_url") else "<div class=v>(no preview link)</div>")
+    return TTPAGE.format(content_id=_esc(d["content_id"]), platform=_esc(d["platform"]), caption=_esc(d["caption"]),
+                         creator=_esc(d.get("creator_nickname") or "-"), preview=prev, options=opts,
+                         token=_esc(token), approver=_esc(approver))
 
 
 def _publish_authed(headers):
@@ -119,6 +149,31 @@ requires a separate Publish Approval Token.</div>
 <input type=hidden name=token value="{token}"><input type=hidden name=approver value="{approver}">
 <button class=ok name=decision value=APPROVE>APPROVE</button>
 <button class=no name=decision value=REJECT>REJECT</button></form></div></body></html>"""
+
+
+TTPAGE = """<!doctype html><html><head><meta name=viewport content="width=device-width,initial-scale=1">
+<title>TikTok post settings</title><style>body{{font-family:-apple-system,system-ui,sans-serif;background:#0d0d0d;
+color:#F0EAD6;margin:0;padding:24px}}.card{{max-width:460px;margin:4vh auto;background:#151515;border:1px solid #2a2a2a;
+border-radius:16px;padding:24px}}h1{{color:#D4AF37;font-size:20px;margin:0 0 4px}}.k{{color:#8a8a8a;font-size:13px;
+margin-top:14px}}.v{{font-size:16px;white-space:pre-wrap}}.pv{{width:100%;border-radius:12px;margin-top:8px}}
+.o{{display:block;padding:8px 0;font-size:16px}}button{{width:100%;margin-top:22px;padding:16px;border:0;border-radius:12px;
+font-size:17px;font-weight:600;background:#1f6f43;color:#fff}}</style></head><body><div class=card>
+<h1>TikTok post settings</h1><div class=v>{content_id}</div>
+<div class=k>Preview</div>{preview}
+<div class=k>Caption (posted as approved)</div><div class=v>{caption}</div>
+<div class=k>Posting to TikTok account</div><div class=v>{creator}</div>
+<form method=POST action="/v/tiktok">
+<div class=k>Who can view this video (choose one; no default)</div>{options}
+<div class=k>Interactions (off unless you switch them on)</div>
+<label class=o><input type=checkbox name=allow_comment> Allow comments</label>
+<label class=o><input type=checkbox name=allow_duet> Allow Duet</label>
+<label class=o><input type=checkbox name=allow_stitch> Allow Stitch</label>
+<label class=o><input type=checkbox name=consent value=yes required> By posting, I agree to TikTok's
+<a style="color:#D4AF37" href="https://www.tiktok.com/legal/page/global/music-usage-confirmation/en">Music Usage Confirmation</a>.</label>
+<input type=hidden name=token value="{token}"><input type=hidden name=approver value="{approver}">
+<button>Save settings for this post</button></form>
+<div class=k>After posting it may take a few minutes before the video is visible on your profile.</div>
+</div></body></html>"""
 
 
 PAGE = """<!doctype html><html><head><meta name=viewport content="width=device-width,initial-scale=1">
@@ -155,12 +210,15 @@ class Handler(BaseHTTPRequestHandler):
     def _send(self, code, body, ctype="text/html"):
         b = body.encode()
         self.send_response(code)
-        self.send_header("Content-Type", ctype)
+        self.send_header("Content-Type", ctype + ("; charset=utf-8" if ctype in ("text/html", "text/plain", "application/json") else ""))
         self.send_header("Content-Length", str(len(b)))
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Referrer-Policy", "no-referrer")
         self.send_header("Cache-Control", "no-store")
+        if ctype == "text/html":   # pages have no scripts; inline styles, https media, same-origin forms only
+            self.send_header("Content-Security-Policy", "default-src 'none'; style-src 'unsafe-inline'; media-src https:; "
+                                                        "form-action 'self'; frame-ancestors 'none'; base-uri 'none'")
         self.end_headers()
         self.wfile.write(b)
 
@@ -179,6 +237,12 @@ class Handler(BaseHTTPRequestHandler):
         q = parse_qs(urlparse(self.path).query)
         token = (q.get("token") or [""])[0]
         approver = (q.get("approver") or ["nitin"])[0]
+        if path == "/v/tiktok":                        # TikTok post settings (privacy / interactions / consent)
+            try:
+                d = build_tiktok_settings_service().render_request(token)
+                return self._send(200, tiktok_page(d, token, approver))
+            except TikTokSettingsError as e:
+                return self._send(400, "<p>Invalid or expired link: %s</p>" % _esc(str(e)))
         if path == "/v/approve":                       # visualizer approval confirm page
             try:
                 d = VSVC.render_request(token)
@@ -221,6 +285,29 @@ class Handler(BaseHTTPRequestHandler):
             except Exception:
                 return self._send_json(500, {"eligible": False, "reason": "INTERNAL_ERROR"})
             return self._send_json(200, res)
+        if path == "/v/tiktok-link":
+            # Make (authenticated like publish-eligibility) asks for a settings link after querying creator_info.
+            if not _publish_authed(self.headers):
+                return self._send_json(401, {"ok": False, "reason": "UNAUTHORIZED"})
+            try:
+                req = json.loads(raw)
+                tok = build_tiktok_settings_service().create_request(
+                    req["content_id"], req["platform"], req.get("caption", ""), req.get("privacy_options") or [],
+                    preview_url=req.get("preview_url", ""), creator_nickname=req.get("creator_nickname", ""))
+            except (TikTokSettingsError, KeyError, TypeError, ValueError) as e:
+                return self._send_json(400, {"ok": False, "reason": type(e).__name__})
+            except Exception:
+                return self._send_json(500, {"ok": False, "reason": "INTERNAL_ERROR"})
+            return self._send_json(200, {"ok": True, "path": "/v/tiktok?token=" + tok})
+        if path == "/v/tiktok":
+            f = {k: (v or [""])[0] for k, v in parse_qs(raw).items()}
+            try:
+                st = build_tiktok_settings_service().decide(f.get("token", ""), f, f.get("approver", ""))
+            except TikTokSettingsError as e:
+                return self._send(400, "<p>Not saved: %s</p>" % _esc(str(e)))
+            return self._send(200, "<div style='font-family:system-ui;color:#F0EAD6;background:#0d0d0d;padding:40px'>"
+                                   "<h2 style='color:#04b34f'>Saved</h2><p>Privacy: %s. The post is published only if "
+                                   "the publish approval is valid.</p></div>" % _esc(st["privacy_level"]))
         form = parse_qs(raw)
         token = (form.get("token") or [""])[0]
         decision = (form.get("decision") or [""])[0]
