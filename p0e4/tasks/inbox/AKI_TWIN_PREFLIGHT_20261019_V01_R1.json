@@ -1,0 +1,30 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "AKI_TWIN_PREFLIGHT_20261019_V01",
+  "revision": 1,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "BUILD_PROPOSAL",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "base_commit": "b7ec5921708d92182536fdcf29376df346527301",
+  "inputs": [],
+  "goal": "Maak een concreet Nederlandstalig voorstel voor fase 1 van Unchained Nitin Digital Twin. Dit is een zelfvoorzienende ontwerpbrief; geen media-inspectie gevraagd in deze beperkte runner. Nitin heeft op 19-10-2026 in ChatGPT expliciet gekozen: 'Neem aakhri ishq beelden als referentie voor beeld en geluid. wie gaat wat bouwen?' en vervolgens 'go'. Gebruik voor toekomstige referentie-extractie uitsluitend zijn bestaande goedgekeurde Aakhri Ishq-master en echte zang, geen stemkloon. Exact masterpad/hash/tijdcodes zijn nog niet aangeleverd aan deze runner: maak geen selectieclaims of fictieve hashes. De uitvoerende interactieve Claude-sessie moet die later uit het bestaande private campagnaregister vaststellen. Doel: eerst referentiepakket en methode/kostenvoorstel ter review, daarna pas eventueel generatie. Twin herkenbaar als Nitin met natuurlijke huidskleur/leeftijd; donkere kleding, gouden ketting, rustige beweging, filmisch warm licht. Proef uiteindelijk circa 20 seconden verticaal: 0-5s medium close-up donkere studio, 5-15s ononderbroken zang voor lipsync, 15-20s subtiele camerabeweging/achtergrondverandering. Eerst still-review, vervolgens circa 5s bewegingstest, vervolgens volledige proef. Toekomstige tweede accounts op YT/IG/FB/TikTok zijn officiële AI-twin-kanalen naast de echte performer. Bestaande campagne niet wijzigen. Verdeling: ChatGPT scope/technische review, Gemini creatieve/identiteits-QC, Claude lokale referentie-extractie en bouw zodra apart goedgekeurd, Nitin enige creatieve en publicatiegoedkeurder. Deze runner kan alleen voorsteltekst produceren, heeft geen toegang tot interactieve Claude-context of AKI-mediabytes. Lever daarom uitvoerbare lokale werkinstructies en optioneel niet-uitgevoerde codevoorstellen voor contactbladen/audio-extractie, geen bestanden uitvoeren of renderen. Geen nieuwe AI-dienst upload, modeltraining, betaalde generatie, aanschaf, accountaanmaak, Make-wijziging, merge naar main, deployment of publicatie. Nieuwe dienst, gegevensoverdracht en kosten vereisen eerst Nitin-review. Geef een methodeselectiematrix met twee of drie productiebenaderingen, verificatievragen, kostenformule en onbekende prijzen; geen onbewezen actuele vendorprijzen of claims. Bewaar toekomstige media en persoonlijke gegevens privé; dit openbare repo-resultaat mag geen referentiebeelden, signed URLs, tokens of private bestands-ID's bevatten. De governancevelden zijn beperkingen van DEZE taak en geen wijziging aan de al apart goedgekeurde AKI-publicatiecampagne. Rapporteer ontvangst alleen voor deze headless sessie, nooit namens de interactieve bouwer of Gemini.",
+  "acceptance_criteria": [
+    "Lever een geordend referentiepakket-plan: masteridentificatie/hash, bronmanifest, selectie van bruikbare frames en zangpassage, contactblad, kwaliteitsbeperkingen; alles als voorstel, geen claim van media-inspectie.",
+    "Lever drie reviewpoorten: still-identiteit, 5s lipsync/beweging, 20s eindclip; met toetsbare criteria voor gezicht, huid, mond/tanden, handen, continuiteit, audio en AI-transparantie.",
+    "Lever een methodeselectiematrix en kostenraming-formule met expliciete onbekenden; geen dienst geselecteerd of geactiveerd en geen ongeverifieerde prijzen als feiten.",
+    "Lever een beperkte toekomstige factory-uitbreiding voor vier extra doelaccounts met accountgebonden goedkeuring, idempotentie en gescheiden metingen; geen implementatie in deze taak.",
+    "Lever een kopieerklare lokale uitvoerdersbrief voor de referentie-extractie na overdracht aan de interactieve Claude-sessie; noem benodigde exacte bronidentiteit als open preconditie, niet opnieuw nieuwe foto's vragen.",
+    "Sluit af met concrete beslissingen voor Nitin en status VOORSTEL_TER_REVIEW. Geen productie-, creatieve of publicatiegoedkeuring verlenen. Geen runtime- of campagnewijziging."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
