@@ -148,6 +148,33 @@ class RuntimeTests(unittest.TestCase):
         self.assertTrue((job / 'intent.json').exists())
         self.assertIn('NIET BEWEZEN', result['codex_review'])
 
+    def test_codex_failure_preserves_claude_result_without_retry(self):
+        claude = self.home / 'claude'
+        claude.write_text('#!' + sys.executable + '\nimport json\nprint(json.dumps({"type":"result","is_error":False,"result":"Offline analysis only","session_id":"fake-session"}))\n')
+        claude.chmod(0o700)
+        self.config.update(claude=str(claude), codex=str(self.home / 'missing-codex'))
+        job = self.state / 'pr_11'; job.mkdir()
+        result = r.execute_task(self.repo, self.commit, self.task, job, self.config)
+        self.assertEqual(result['status'], 'PARTIAL_REVIEW_CODEX_HOLD')
+        self.assertEqual(result['claude_result'], 'Offline analysis only')
+        self.assertEqual(result['claude_session_id'], 'fake-session')
+        self.assertIsNone(result['codex_review'])
+        self.assertEqual(result['codex_hold'], {'status': 'HOLD', 'reason': 'FileNotFoundError', 'automatic_retry': False})
+        self.assertEqual(result['governance'], r.GATES)
+        self.assertIn('claude.stdout', result['raw_receipt_sha256'])
+
+    def test_invalid_codex_receipt_is_hold_not_in_review(self):
+        claude = self.home / 'claude'
+        claude.write_text('#!' + sys.executable + '\nimport json\nprint(json.dumps({"type":"result","is_error":False,"result":"x","session_id":"s"}))\n')
+        codex = self.home / 'codex'
+        codex.write_text('#!' + sys.executable + '\nimport sys,pathlib\npathlib.Path(sys.argv[sys.argv.index("--output-last-message")+1]).write_text("r")\nprint("{\\"type\\":\\"turn.failed\\"}")\n')
+        claude.chmod(0o700); codex.chmod(0o700)
+        self.config.update(claude=str(claude), codex=str(codex))
+        job = self.state / 'pr_11'; job.mkdir()
+        result = r.execute_task(self.repo, self.commit, self.task, job, self.config)
+        self.assertEqual(result['status'], 'PARTIAL_REVIEW_CODEX_HOLD')
+        self.assertEqual(result['codex_hold']['reason'], 'invalid Codex receipt')
+
     def test_two_polls_invoke_once(self):
         gh = self.fake_github()
         with mock.patch.object(r, 'GitHub', return_value=gh), mock.patch.object(r, 'execute_task', return_value={'status':'IN_REVIEW'}) as execute:
