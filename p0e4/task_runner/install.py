@@ -16,7 +16,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--repo', required=True)
     p.add_argument('--activate', action='store_true')
-    p.add_argument('--codex', default='/Applications/ChatGPT.app/Contents/Resources/codex')
+    p.add_argument('--codex', default='/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex')  # ChatGPT app ships codex-cli/ since Oct 2026
     a = p.parse_args()
     require(sys.platform == 'darwin', 'Mac required; nothing installed')
     os.umask(0o077)
