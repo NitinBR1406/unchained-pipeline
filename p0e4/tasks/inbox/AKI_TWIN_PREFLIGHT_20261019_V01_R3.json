@@ -1,0 +1,35 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "AKI_TWIN_PREFLIGHT_20261019_V01",
+  "revision": 3,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "BUILD_PROPOSAL",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "base_commit": "bee7549f38bafa5e9274b934f2e554e8f72acbb0",
+  "inputs": [
+    {
+      "path": "p0e4/evidence/task_runs/pr_42/RESULT.json",
+      "sha256": "82037559a39c6662f41fdf7633f63e9b944e2bb4889a8d180287e1e68ad154e7"
+    }
+  ],
+  "goal": "Gerichte reparatie van het bestaande AI-twin-voorstel R2 op basis van de meegeleverde volledige Claude-uitvoer en onafhankelijke Codex-review. Nitin zei op 19-10-2026 18:43 Amsterdam 'Oké Lets go' op de voorgestelde correctie en aansluitende referentiepakketvoorbereiding. Lever een compacte gecorrigeerde uitvoeringsspecificatie (geen herhaling van de gehele brainstorm), een defect-resolutiematrix en een concrete lokale bouwbrief. Code is optioneel; verwijder de ongeteste codebijlage liever ten gunste van exacte eisen dan opnieuw onvolledige voorbeeldcode te presenteren. Deze runner voert geen shell/mediahandelingen uit. Het onderwerp blijft een visuele AI-twin met echte AKI-zang, eerst privé referentiepakket, daarna stills -> 5s test -> 20s clip en vier aparte twin-accounts. Bestaande goedgekeurde AKI-master als bron is door Nitin expliciet gekozen: vraag geen nieuwe foto's of hernieuwde toestemming voor bronidentificatie/lokale referentievoorbereiding. De lokale bouwer moet exacte actuele master en audio uit het private register vaststellen en verifiëren; dat kan deze headless runner niet. Geen onbewezen actuele bestandsidentiteit verzinnen. Corrigeer alle Codex-bevindingen: kosten/licenties/compute onbekend tot geverifieerd, contactbladen met volledige dekking inclusief laatste gedeeltelijke pagina, strikt gesanitiseerd openbaar manifest met allowlist, aparte video-/audiobronnen en toetsbare frame-/sample-extractie. SHA256 komt uit hashberekening, niet ffprobe. Gebruik de daadwerkelijke probe-duur voor dekking, geen oude 214,4s of andere historische duur als actuele bronwaarheid. Audio-integriteit beoordelen op lossless PCM of gedocumenteerde codecconversie, niet onvergelijkbare WAV/AAC-containerhashes. Maak geen extra toestemmingspoort voor louter publieke hashes, hou alle bronmanifesten en media voor deze fase privé en lever alleen gesanitiseerde samenvatting in repo. Corrigeer verouderde context: volgens Nitins gedeelde Claude-update van 18:33 is Codex-pad hersteld en poll 16:30:55Z OK; de aangeleverde R2-resultaatfile levert vervolgens werkelijk een Claude-sessie-ID en Codex-thread/review om 16:40:08Z. De keten R2 is dus bewezen voor voorstel+review; PR41 is een aparte nog niet gemergde verbetering voor behoud van output bij toekomstige reviewfouten en GEEN vereiste voor deze keten. Stel geen live Mac-inspectie door deze sessie voor. De campagne D01-D03 is afzonderlijk door Nitin goedgekeurd, D04-D14 inhoud niet. Herhaal geen algemene RIGHTS_HOLD of algemene publicatiepauze uit oude state als actuele campagnewaarheid. De vaste governancevelden begrenzen alleen DEZE twin-taak. Vier huidige artiestenaccounts plus vier voorgenomen twin-accounts, niet een reeds bestaande 8-account AKI-matrix. Geen algemene regel verzinnen dat alleen mensen accounts mogen aanmaken; accountaanmaak is eenvoudig buiten deze taak. Rollen: Claude bouwer, Codex technische review, Gemini creatieve review later van echte media, Nitin creatieve selectie en publicatiegoedkeuring. Geen nieuwe dienstupload, training, generatie, aanschaf, accountaanmaak, Make/deployment/runtimewijziging of publicatie. Nieuwe dienst/kosten/generatie blijven eerst ter review. Eindig met VOORSTEL_TER_REVIEW en resterende concrete technische precondities. Richt de lokale bouwbrief op daadwerkelijke private referentie-extractie als volgende stap, maar claim geen dispatch naar of ontvangst door die interactieve sessie.",
+  "acceptance_criteria": [
+    "Defect-resolutiematrix behandelt kosten/licenties, volledige contactbladdekking, manifestprivacy, frame/samplebewijs, ffprobe-versus-hash en audio-integriteit zonder onbewezen uitvoering.",
+    "Contactbladplan baseert paginering en einddekking op werkelijk gemeten duur/frame-PTS en controleert de laatste gedeeltelijke pagina; geen vaste éénpagina-limiet.",
+    "Private bronmanifesten onderscheiden video/audio, exacte selectiegrenzen en gerealiseerde frame/sampletelling; publieke samenvatting hanteert expliciete allowlist zonder bronpaden, tags of private IDs.",
+    "Runnerbewijs R2 correct onderscheiden van gebruikersmelding en PR41; geen verouderde algemene campagneblokkade, fictieve 8-accountstatus of onnodige hergoedkeuring van AKI-referentiegebruik.",
+    "Concrete lokale bouwbrief met inputverificatie, 8-15 kandidaatframes, 1-3 kandidaat-audiopassages, private opslag/readback, technische en creatieve review. Media-extractie niet als door deze sessie uitgevoerd rapporteren.",
+    "Geen nieuwe kosten- of productactie; geen ongefundeerde providerkeuze; nog te verifiëren methoden/prijzen apart van lokale voorbereiding; slotstatus VOORSTEL_TER_REVIEW."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
