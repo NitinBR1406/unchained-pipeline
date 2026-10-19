@@ -1,0 +1,34 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "AKI_TWIN_PREFLIGHT_20261019_V01",
+  "revision": 4,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "BUILD_PROPOSAL",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "base_commit": "193b6c07303585edc975466e6623347335450aa1",
+  "inputs": [
+    {
+      "path": "p0e4/evidence/task_runs/pr_44/RESULT.json",
+      "sha256": "b755b71db9ffe74cc8bf5540362bfbb8c319db1177140f3e8180854e4bf09267"
+    }
+  ],
+  "goal": "Nitin heeft op 19-10-2026 21:31 Amsterdam 'Go' gegeven voor de drie resterende correcties en aansluitende lokale overdracht. Repareer uitsluitend de drie punten uit de bijgevoegde R3/Codex-review. Lever een compact vervangend addendum en één praktische lokale bouwbrief, geen nieuwe brainstorm of ongeteste voorbeeldcode. (1) Vervang generieke lengte-regex door veldspecifieke validatie: schema/task_id/artifact_role/limitations alleen exact toegestane waarden, numerieke velden eindige waarden met grenzen, hashes exact 64 hex, geen onbekende sleutels of vrije tekst/paden/URLs/tags/private IDs. Valideer toegestane task_id expliciet zodat die niet als Drive-ID wordt geweigerd. Formuleer positieve en negatieve voorbeelden als verwachte testgevallen, niet als uitgevoerde tests. Houd media en bronmanifesten privé; de openbare samenvatting is optioneel en mag private referentievoorbereiding niet blokkeren. (2) Audio: definieer sample-index 0 van de volledig gedecodeerde presentatietijdlijn na gedocumenteerde decoderpriming/skip_samples; native rate/kanalen behouden. Canonieke ruwe interleaved PCM-representatie per bron vastleggen (sampletype, endian, kanalenvolgorde, decoder/versie, eventuele conversie). Selecteer [s_in,s_out) op die tijdlijn. Vereis daadwerkelijk uitgelezen output_sample_count == s_out-s_in, grenzen binnen beschikbare samples en PCM-vergelijking van exact hetzelfde interval met dezelfde representatie; geen containerhashvergelijking. (3) Video/contactbladen: gebruik volledig gedecodeerde presentatiereeks en reele frame-PTS. Definieer doelpunten vanaf eerste PTS met Delta=2s zolang doel <= laatste PTS; kies telkens eerste frame met PTS >= doel, dedup frame-indexen, voeg laatste frame toe. Dit hoeft niet van geschatte eindduur af te hangen. Gebruik expliciete tegel->frame-index->PTS-mapping en volledige paginering. Geen uniforme '+1 frame' of 'alleen laatste interval korter' eis bij VFR. Registreer daadwerkelijke laatste-frameduur indien beschikbaar; anders onbekend en afzonderlijk gerapporteerd, niet verzinnen of als blocker voor contactbladen gebruiken. Ontbrekende/niet-bruikbare PTS: concrete beperking of BLOCKED voor timing, geen stilzwijgende constante fps. Behoud reeds gecorrigeerde context: vier huidige artiestenaccounts, vier voorgenomen twin-accounts; AKI referentiegebruik en lokale voorbereiding door Nitin al geautoriseerd; echte zang, geen stemkloon. R2/R3 bewijzen voorstel+review, geen media-uitvoering. Geen algemene oude RIGHTS_HOLD/campagnepauze overnemen. Deze taak raakt geen AKI-publicatie. Geen nieuwe toestemmingsvragen voor referentiegebruik. Lokale builder moet exacte actuele bron uit private register vaststellen en met hashes verifiëren, bestaande machtigingen respecteren. Geef handoff met ACK/bronidentiteit/contactbladen/8-15 kandidaatframes/1-3 zangpassages >=10s/private Drive-readback/resultaat/review. De headless route doet geen media-extractie en claimt geen verzending naar interactieve sessie; benoem dit ene resterende transportvereiste. Geen generatie, cloud-AI-upload, training, kosten, accountaanmaak, deployment, Make- of runtimewijziging. Nitin reviewt methode/kosten en twin uiterlijk vóór generatie/publicatie. Governancevelden begrenzen deze twin-taak, niet de bestaande campagne. Eindig met concrete volgende lokale handeling en VOORSTEL_TER_REVIEW. Geen nieuwe scope of generieke harde eisen toevoegen.",
+  "acceptance_criteria": [
+    "Privacyvalidatie is intern consistent: exacte toegestane task_id slaagt; onverwachte velden, URL/pad/private identifier in vrije tekst worden afgewezen. Geen generieke regex die toegestane schemawaarden blokkeert. Testvoorbeelden eerlijk als onuitgevoerd benoemd.",
+    "Audio specificeert oorsprong na priming, exacte intervalgrenzen, canonieke PCM-representatie en verplicht output_sample_count == s_out-s_in naast integriteitsvergelijking.",
+    "VFR-contactbladselectie is deterministisch op frame-PTS, met deduplicatie, laatste-frame-inclusie, volledige paginering en mapping; geen veronderstelde vaste frameduur of ongedefinieerde K.",
+    "Compacte lokale bouwbrief behoudt bestaande bronautorisatie, private outputs, reviewrollen en geen nieuwe productieacties. Geen dispatch/ontvangst/mediawerk claimen; enige resterende lokale overdrachtsstap concreet aangeven.",
+    "Geen herhaling van afgehandelde discussie, extra approval gates of nieuwe scope. Oplevering is voorstel/addendum en geen uitvoeringbewijs."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
