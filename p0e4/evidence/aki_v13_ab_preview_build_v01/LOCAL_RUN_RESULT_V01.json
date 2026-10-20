@@ -1,0 +1,141 @@
+{
+  "schema": "AKI_V13_AB_LOCAL_RUN_RESULT_V01",
+  "run_date": "2026-10-02",
+  "authority": {
+    "build_approval": "Nitin 2026-10-02T09:30:07+02:00",
+    "code_review": "CODEX_REVIEW_V02.md (eligible for bounded local execution at ccd37b9)",
+    "temporary_permissions": "three rules from REQUIRED_PERMISSIONS rev2 added to local .claude/settings.local.json via the normal Claude Code approval prompt; removed again after the step-2 failure"
+  },
+  "steps": [
+    {
+      "step": "hash check",
+      "result": "OK",
+      "detail": "step1 77c7b9ba..., step2 e4d0a70a..., tests 00b89124... copied from 4cc5864 and verified with shasum -c immediately before each invocation"
+    },
+    {
+      "step": "offline tests on Mac",
+      "result": "14/14 OK incl. real local V13 comps"
+    },
+    {
+      "step": "step1_import_readback.py",
+      "result": "STEP1_OK",
+      "created_project": "UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01",
+      "readback_sha256": "c2501f264214741c59f229cd7fe35fec74e184a058e0dde4505006e0e5a42397"
+    },
+    {
+      "step": "step-1 readback inspection",
+      "result": "MATCH",
+      "by": "Nitin ran json.tool via ! prompt (Claude's own inspection command was denied by the auto-mode classifier); Claude compared in chat",
+      "observed": {
+        "color": "davinciYRGBColorManaged; timeline/output/input Rec.2100 HLG; HDR 1000",
+        "timeline": "30 fps, 1080x1920",
+        "v1": "6 clips IMG_5739.MOV, ranges as expected, source_start = timeline + 2144, FPS 30.0, 2160x3840 HLG, neutral transforms, single 'Composition 1'",
+        "audio": "single AAKHRI ISHQ MASTER 2.wav [0,720), source_start 2160",
+        "note": "timelinePlaybackFrameRate reports '24' (playback only; render sets FrameRate 30, to be verified on media)"
+      }
+    },
+    {
+      "step": "step2_build_render_ab.py rev2",
+      "result": "FAILED (fail-closed, no retry)",
+      "failed_at": "variant A, V1 clip 0, after ImportFusionComp: assertion expected exactly one new comp name",
+      "receipt": "STEP2_FAILURE_RECEIPT.json (status FAILED, variants {})",
+      "renders": "none"
+    },
+    {
+      "step": "step2_build_render_ab.py rev3 (c3b34f0f...)",
+      "authority": "CODEX_REVIEW_V03.md (one bounded R3 attempt)",
+      "preconditions": "R3 bytes from cd24f4f verified with shasum -c immediately before; 19/19 tests OK on Mac; read-only state check: copy open, timelines = base + A_V01, 0 jobs; permission (Write build folder + exact step2 command) added via approval prompt",
+      "result": "FAILED (fail-closed, no retry)",
+      "failed_at": "variant A, V1 clip 1 (caption clip), verify_readback after import: spline UN_AB_HOOKCX not found",
+      "progress_before_failure": "timeline AKI_V13_AB_A_CINEMATIC_R3 created; clip 0 swapped (REPLACED_IN_PLACE) and verified; clip 1 swapped in place, readback failed",
+      "receipt": "STEP2_FAILURE_RECEIPT_R3.json",
+      "receipt_sha256": "c167409fea0b9d593cddf3e28fe5bfc93499ce2e7217247b63f470927f4df1d1",
+      "renders": "none",
+      "permission_removed_after": true
+    },
+    {
+      "step": "step2_build_render_ab.py rev4 (a3ab4952...)",
+      "authority": "CODEX_REVIEW_V04.md (one bounded R4 attempt)",
+      "preconditions": "R4 bytes from 80f1284 verified with shasum -c immediately before; 21/21 tests OK on Mac; read-only state: base + A_V01 + A_R3, 0 jobs; permission (Write build folder + exact step2 command) via approval prompt",
+      "result": "STEP2_OK",
+      "comp_swaps": "all 8 REPLACED_IN_PLACE, all readbacks verified",
+      "renders": "A and B complete",
+      "permission_removed_after": true,
+      "receipt": "STEP2_BUILD_RENDER_RECEIPT_R4_COMPACT.json"
+    },
+    {
+      "step": "step3 media QC + review MP4 + open + private Drive copy",
+      "result": "DONE",
+      "receipt": "STEP3_MEDIA_QC_R4.json"
+    }
+  ],
+  "post_failure_read_only_diagnosis": {
+    "probes": "external-scripting read-only: timeline/comp name listing and ExportFusionComp to scratchpad; no load/save/edit",
+    "copy_state": {
+      "timelines": [
+        "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+        "AKI_V13_AB_A_CINEMATIC_V01"
+      ],
+      "render_jobs": 0,
+      "rendering": false
+    },
+    "finding": "Resolve 21.1 ImportFusionComp replaced 'Composition 1' in place (name list unchanged, count 1); exported comp contains the UN_AB_ nodes",
+    "failed_timeline_A_V01": "clip 0 carries the patched comp; clips 1-3 untouched; left as-is as evidence",
+    "base_timeline_in_copy": "comp exports of clips 0-3 byte-identical to BASE_clip*_before (UNCHANGED)",
+    "v13_drp_sha256": "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec (unchanged)",
+    "v13_project_loaded": false
+  },
+  "fix": {
+    "revision": 3,
+    "step2_sha256": "c3b34f0f39a1fad7bec72a9af3ac8cab90a0169b54f2ec04f039de00155d5f90",
+    "tests_sha256": "934c534382c8f630480208fa8568ea4b1b329a48fa957c9f88aaff58baef16d0",
+    "tests": "19/19 OK",
+    "changes": [
+      "swap_comp(): accepts in-place replacement (observed) or add-new; anything else fails; content proven by verify_readback",
+      "new unique names: timelines AKI_V13_AB_A_CINEMATIC_R3 / AKI_V13_AB_B_RHYTHMIC_R3, comps_r3/, *_RENDER_R3/, receipts *_R3.json; failed A_V01 timeline required present and left untouched",
+      "real Resolve round-trip fixtures (paths redacted): verify_readback accepts Resolve's re-serialized patched comp and rejects the unpatched export"
+    ],
+    "fixtures_sha256": {
+      "A_clip0_source_resolve_export.comp": "7b9cfa71003de54bafb75fd1859cad24afe5d6d0a62f1796639ef6bface2ba0a",
+      "A_clip0_after_inplace_import_resolve_export.comp": "783ca16718217e88be13b2f66e1a7f0bcbd6f213121aed0d46864d2b3066e09c"
+    }
+  },
+  "status": "PREVIEWS_DELIVERED_PRIVATE_REVIEW_PENDING_NITIN",
+  "videos_rendered": false,
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "post_r3_failure_read_only_diagnosis": {
+    "finding": "Fusion renames animation splines on import to <Tool><Input>: UN_AB_HOOKCX->UN_AB_HOOKCenterX, UN_AB_HOOKCY->UN_AB_HOOKCenterY, UN_AB_HOOKBlend->UN_AB_HOOKMergeBlend; keyframes identical (compared); zoom-layer splines already followed the convention",
+    "second_finding": "Fusion omits default-valued TextPlus inputs on export: Size (0.08), Softness1, Enabled2, Enabled3 absent in readback",
+    "copy_state": {
+      "timelines": [
+        "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+        "AKI_V13_AB_A_CINEMATIC_V01",
+        "AKI_V13_AB_A_CINEMATIC_R3"
+      ],
+      "render_jobs": 0
+    },
+    "base_timeline_in_copy": "comp exports clips 0-3 byte-identical to comps_r3/BASE_clip*_before and to the pre-rev2 snapshot (UNCHANGED)",
+    "v13_drp_sha256": "f1e720b6... unchanged",
+    "v13_project_loaded": false
+  },
+  "fix_rev4": {
+    "step2_sha256": "a3ab4952b676e0650a5fde32e54d1ad86bd96d8f29c8b90494416e7b6fbe26b0",
+    "tests_sha256": "2a91199ef8af5fb6a3ab17d70eabbe362d8ad416dc9214fb1568b140ff8e9882",
+    "tests": "21/21 OK",
+    "changes": [
+      "caption splines named per Fusion convention: <name>CenterX, <name>CenterY, <name>MergeBlend",
+      "patch_clip asserts every planned spline feeding an input is named <Tool><Input> (catches this class offline)",
+      "verify_readback treats an omitted TextPlus Size as the default 0.08 (Fusion omits it exactly when equal to default)",
+      "new unique names: *_R4 timelines, comps_r4/, *_RENDER_R4/, *_R4.json receipts; failed A_V01 and A_R3 timelines required present and left untouched",
+      "fixture test: actual R3 Resolve readback of clip 1 passes the R4 plan unchanged"
+    ],
+    "fixtures_sha256": {
+      "A_clip1_source_resolve_export.comp": "5df315330645960cd4d31d22526c0dc47eb6c1cdbd2c0cbacb18cdc18b25ef8c",
+      "A_clip1_after_r3_import_resolve_export.comp": "65dda8b1ee1b358dca358d4f084bf6c00916f0e83adc28d5ff6fdf2f94c49740"
+    }
+  }
+}

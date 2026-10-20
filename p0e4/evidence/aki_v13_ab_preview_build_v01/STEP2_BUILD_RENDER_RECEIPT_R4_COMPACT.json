@@ -1,0 +1,397 @@
+{
+  "schema": "AKI_V13_AB_PREVIEW_BUILD_V01",
+  "revision": 3,
+  "status": "STEP2_COMPLETE_RENDERS_ONLY",
+  "project": "UNCHAINED_AKI_V13_AB_PREVIEW_BUILD_V01",
+  "base_timeline": "AAKHRI_FIRST_PUBLISH_PREVIEW_72_96_V01",
+  "excerpt_global_half_open": [
+    60,
+    420
+  ],
+  "video_source_offset": 2144,
+  "audio_source_offset": 2160,
+  "max_relative_zoom": 1.15,
+  "base_timeline_unchanged": true,
+  "v13_drp_sha256_after": "f1e720b658315418279dc27e913e695308d00bdd5b572dca05e1395170870bec",
+  "failed_timelines_left_untouched": [
+    "AKI_V13_AB_A_CINEMATIC_V01",
+    "AKI_V13_AB_A_CINEMATIC_R3"
+  ],
+  "step1_readback_sha256": "c2501f264214741c59f229cd7fe35fec74e184a058e0dde4505006e0e5a42397",
+  "revision_label_note": "numeric revision=3 is a stale label in the reviewed R4 script (CODEX_REVIEW_V04 nonblocking); actual run = step2 sha256 a3ab4952b676e0650a5fde32e54d1ad86bd96d8f29c8b90494416e7b6fbe26b0, REV R4 paths",
+  "full_receipt_sha256": "447b2f0dcf0b18a5a876c26d4e98901cbb3be059486f1f7281c6d120f484bfae",
+  "copy_drp_sha256": "23074c31a1ec153b2b5c6c352fd43ac1d78181dbbef44826cbafb089c049afb5",
+  "variants": {
+    "A": {
+      "timeline": "AKI_V13_AB_A_CINEMATIC_R4",
+      "shots": [
+        [
+          0,
+          120,
+          1.0,
+          1.03,
+          0.0
+        ],
+        [
+          120,
+          240,
+          1.1,
+          1.13,
+          0.0
+        ],
+        [
+          240,
+          360,
+          1.0,
+          1.03,
+          0.02
+        ]
+      ],
+      "punch": null,
+      "peak_relative_zoom": 1.12975,
+      "peak_base_size_excl_rhythm_pulse": 2.598425,
+      "composed_peak_total_size": 2.646188,
+      "clips": [
+        {
+          "clip": 0,
+          "comp_swap": "REPLACED_IN_PLACE",
+          "window_extremes": [
+            0.2826086956521739,
+            0.7173913043478262,
+            0.1869565217391304,
+            0.6217391304347826
+          ],
+          "disabled_text_merges": [
+            "Merge1->UN_BRAND_HOOK",
+            "Merge2->UN_BRAND_HOOK_SONG_ID"
+          ],
+          "captions": [],
+          "source_sha256": "4f670f6d6554d1f32474d670d44b52aebb55b9b9b3473bd31aa310c5b0666445",
+          "patched_sha256": "05b4eebeaf8e9cbca77e8669d10e60dc3f963888af52f449d3e1460368b20019",
+          "readback_sha256": "9b6585a4931dccc8b61ddc5ec6adb9ac9b8d696c71be91445fa742fa696bf5ae"
+        },
+        {
+          "clip": 1,
+          "comp_swap": "REPLACED_IN_PLACE",
+          "window_extremes": [
+            0.2841734382250423,
+            0.7158265617749577,
+            0.19008600688486726,
+            0.6217391304347826
+          ],
+          "disabled_text_merges": [
+            "Merge2->UN_BRAND_HOOK_SONG_ID",
+            "Merge3->UN_BRAND_TITLE",
+            "Merge1->UN_BRAND_HOOK",
+            "Merge4->UN_BRAND_ARTIST"
+          ],
+          "captions": [
+            {
+              "tool": "UN_AB_HOOK",
+              "text": "SOME LOVE STORIES\\nNEVER REALLY END.",
+              "font": "Montserrat",
+              "style": "Medium",
+              "size": 0.08,
+              "opacity_excerpt_keys": [
+                [
+                  30,
+                  0
+                ],
+                [
+                  38,
+                  1
+                ],
+                [
+                  82,
+                  1
+                ],
+                [
+                  90,
+                  0
+                ]
+              ],
+              "rise_excerpt": null
+            }
+          ],
+          "source_sha256": "0402c7b04c1bed1ac3da9b1a904e8b07cea1aa2f893c7063b3964935ee572f0a",
+          "patched_sha256": "4dca371f608842b3af3b398660d37685b8156c4b969f6708ee6459081c77ff49",
+          "readback_sha256": "e1e10c9328c96241675a1eaa702547c3a14d7422b27ab97ac2f7edf593a7e79e"
+        },
+        {
+          "clip": 2,
+          "comp_swap": "REPLACED_IN_PLACE",
+          "window_extremes": [
+            0.29130434782608694,
+            0.7260869565217392,
+            0.1869565217391304,
+            0.6217391304347826
+          ],
+          "disabled_text_merges": [
+            "Merge1->UN_BRAND_TITLE",
+            "Merge2->UN_BRAND_ARTIST"
+          ],
+          "captions": [],
+          "source_sha256": "fa6fee6fe0198d11f326504d277ceec918914474ffb09bdc2796798268c2e221",
+          "patched_sha256": "673aa6348f20cfcff8967c3569e784068ac38f4cfe229f546fcdb012d6cc2e85",
+          "readback_sha256": "d98f858e0a4666f44398a2abf2e0f1c976a39ce30fb5d3c8a06033dc87ca3245"
+        },
+        {
+          "clip": 3,
+          "comp_swap": "REPLACED_IN_PLACE",
+          "window_extremes": [
+            0.2826086956521739,
+            0.7241258552879695,
+            0.1869565217391304,
+            0.6217391304347826
+          ],
+          "disabled_text_merges": [],
+          "captions": [],
+          "source_sha256": "648f1da934ec0366c95832808ff8e194ea357edaaa1764521cd49f019e842b48",
+          "patched_sha256": "c0efb97cd61a933777ba40abe6f74aa734f100eda19e771f243b074e84d1211e",
+          "readback_sha256": "c94a4d277e41f438eced9a6d0bd5504ecc66d75a46cd490eeaa111b0e6c2b98d"
+        }
+      ],
+      "render": {
+        "file": "AKI_V13_AB_A_PREVIEW_R4_HLG_PRORES.mov",
+        "sha256": "95cddeb372c039999a1fd8ff72377e976af0af2e70b350778a6093aacabc5e20",
+        "bytes": 290157106,
+        "status": {
+          "JobStatus": "Complete",
+          "CompletionPercentage": 100,
+          "TimeTakenToRenderInMs": 13718
+        },
+        "mark_in_out_inclusive": [
+          60,
+          419
+        ],
+        "job_readback": {
+          "MarkIn": 108060,
+          "MarkOut": 108419,
+          "FormatWidth": 1080,
+          "FormatHeight": 1920,
+          "FrameRate": "30",
+          "VideoFormat": "QuickTime",
+          "VideoCodec": "Apple ProRes 422 HQ",
+          "AudioCodec": "lpcm",
+          "AudioSampleRate": 48000,
+          "AudioBitDepth": 24,
+          "IsExportAudio": true
+        }
+      }
+    },
+    "B": {
+      "timeline": "AKI_V13_AB_B_RHYTHMIC_R4",
+      "shots": [
+        [
+          0,
+          60,
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          60,
+          120,
+          1.12,
+          1.12,
+          0.0
+        ],
+        [
+          120,
+          180,
+          1.0,
+          1.0,
+          0.03
+        ],
+        [
+          180,
+          240,
+          1.1,
+          1.1,
+          0.0
+        ],
+        [
+          240,
+          300,
+          1.06,
+          1.06,
+          0.0
+        ],
+        [
+          300,
+          360,
+          1.12,
+          1.12,
+          -0.02
+        ]
+      ],
+      "punch": [
+        0.03,
+        2,
+        8
+      ],
+      "peak_relative_zoom": 1.15,
+      "peak_base_size_excl_rhythm_pulse": 2.645,
+      "composed_peak_total_size": 2.645,
+      "clips": [
+        {
+          "clip": 0,
+          "comp_swap": "REPLACED_IN_PLACE",
+          "window_extremes": [
+            0.2826086956521739,
+            0.7173913043478262,
+            0.1869565217391304,
+            0.6217391304347826
+          ],
+          "disabled_text_merges": [
+            "Merge1->UN_BRAND_HOOK",
+            "Merge2->UN_BRAND_HOOK_SONG_ID"
+          ],
+          "captions": [],
+          "source_sha256": "031d14aec5a386dab82660c8fa031f4040a4ab954f327424dc5a1bb5e7024393",
+          "patched_sha256": "a31fdedfaf0d25ac550bd3e7e2eac6107db6f00eddf6ad0b995609ce1c80777a",
+          "readback_sha256": "67c6b939e8f5f0a8263a2adc1a1e0f74a3b1fb364a67995f7442b6a79320fcfc"
+        },
+        {
+          "clip": 1,
+          "comp_swap": "REPLACED_IN_PLACE",
+          "window_extremes": [
+            0.2826086956521739,
+            0.7304347826086958,
+            0.1869565217391304,
+            0.6217391304347826
+          ],
+          "disabled_text_merges": [
+            "Merge2->UN_BRAND_HOOK_SONG_ID",
+            "Merge3->UN_BRAND_TITLE",
+            "Merge1->UN_BRAND_HOOK",
+            "Merge4->UN_BRAND_ARTIST"
+          ],
+          "captions": [
+            {
+              "tool": "UN_AB_HOOK_P1",
+              "text": "SOME LOVE STORIES",
+              "font": "Montserrat",
+              "style": "SemiBold",
+              "size": 0.08,
+              "opacity_excerpt_keys": [
+                [
+                  30,
+                  0
+                ],
+                [
+                  36,
+                  1
+                ],
+                [
+                  84,
+                  1
+                ],
+                [
+                  90,
+                  0
+                ]
+              ],
+              "rise_excerpt": [
+                30,
+                36
+              ]
+            },
+            {
+              "tool": "UN_AB_HOOK_P2",
+              "text": "NEVER REALLY END.",
+              "font": "Montserrat",
+              "style": "SemiBold",
+              "size": 0.08,
+              "opacity_excerpt_keys": [
+                [
+                  48,
+                  0
+                ],
+                [
+                  54,
+                  1
+                ],
+                [
+                  84,
+                  1
+                ],
+                [
+                  90,
+                  0
+                ]
+              ],
+              "rise_excerpt": [
+                48,
+                54
+              ]
+            }
+          ],
+          "source_sha256": "8f77822ef7190cf947f506203bc95812230e4f57e61251874be7589c5867dcfa",
+          "patched_sha256": "2874f778e456365b8d29e271066519e288b1e973d3b8b917ca44a21cdff52154",
+          "readback_sha256": "3fed3ad5156a23b688dc70fb5ce1b42d4cc6419c29533cc8fb8012c546fffe54"
+        },
+        {
+          "clip": 2,
+          "comp_swap": "REPLACED_IN_PLACE",
+          "window_extremes": [
+            0.2949138638228056,
+            0.7304347826086958,
+            0.1869565217391304,
+            0.6217391304347826
+          ],
+          "disabled_text_merges": [
+            "Merge1->UN_BRAND_TITLE",
+            "Merge2->UN_BRAND_ARTIST"
+          ],
+          "captions": [],
+          "source_sha256": "9a82c1f914053bf698fb75abb0737365c811e0171535e4ec1742a29ef69027cf",
+          "patched_sha256": "d63bcc3e5632431473a25902c13df6c01be8f29b6d8c74dd381fed142593da39",
+          "readback_sha256": "12ad8ec818c8070642dd7a881fa47a5304df605dfc792238977645aec1ec6609"
+        },
+        {
+          "clip": 3,
+          "comp_swap": "REPLACED_IN_PLACE",
+          "window_extremes": [
+            0.2826086956521739,
+            0.7173913043478262,
+            0.1869565217391304,
+            0.6217391304347826
+          ],
+          "disabled_text_merges": [],
+          "captions": [],
+          "source_sha256": "8f23045ea6d72f7ffde2103e4b604d9573f986464977c87b626c4e7e0e5b8671",
+          "patched_sha256": "6d794baedcedf93880514f11b7f079be3e171bdae3ff701369bce6d65ec468fc",
+          "readback_sha256": "e19e47bc7329163ee8f9404759bd2735825f18c3fbda03de698c665cf61da2e8"
+        }
+      ],
+      "render": {
+        "file": "AKI_V13_AB_B_PREVIEW_R4_HLG_PRORES.mov",
+        "sha256": "f774de591f3d783d5eb835366e8106c8b92392bb0816500809328c6ab50973d1",
+        "bytes": 284494574,
+        "status": {
+          "JobStatus": "Complete",
+          "CompletionPercentage": 100,
+          "TimeTakenToRenderInMs": 13890
+        },
+        "mark_in_out_inclusive": [
+          60,
+          419
+        ],
+        "job_readback": {
+          "MarkIn": 108060,
+          "MarkOut": 108419,
+          "FormatWidth": 1080,
+          "FormatHeight": 1920,
+          "FrameRate": "30",
+          "VideoFormat": "QuickTime",
+          "VideoCodec": "Apple ProRes 422 HQ",
+          "AudioCodec": "lpcm",
+          "AudioSampleRate": 48000,
+          "AudioBitDepth": 24,
+          "IsExportAudio": true
+        }
+      }
+    }
+  }
+}
