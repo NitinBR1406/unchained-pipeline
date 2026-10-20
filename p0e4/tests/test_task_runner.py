@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import signal
 import tempfile
 import unittest
 from unittest import mock
@@ -169,6 +170,83 @@ class RuntimeTests(unittest.TestCase):
         with mock.patch.object(r, 'GitHub', return_value=gh), mock.patch.object(r, 'execute_task', return_value={'status':'IN_REVIEW'}) as execute:
             r.tick(self.config, self.state); r.tick(self.config, self.state)
             self.assertEqual(execute.call_count, 1); self.assertEqual(gh.deliver.call_count, 2)
+
+    def test_failed_delivery_does_not_starve_next_task_or_restart_models(self):
+        second_task = copy.deepcopy(self.task); second_task['revision'] = 2
+        path = self.repo / filename(second_task); path.write_text(json.dumps(second_task))
+        r.git(self.repo, 'add', str(path)); r.git(self.repo, 'commit', '-qm', 'second task')
+        second = copy.deepcopy(self.pr)
+        second.update(number=12, merge_commit_sha=r.git(self.repo, 'rev-parse', 'HEAD').decode().strip(),
+                      merged_at='2026-09-30T12:01:00Z')
+        (self.repo / '.git/FETCH_HEAD').write_text(second['merge_commit_sha'] + '\n')
+        gh = self.fake_github()
+        gh.pages.side_effect = lambda p: ([{'status': 'added', 'filename': filename(second_task)}]
+                                        if 'pulls/12/files?' in p else self.files
+                                        if '/files?' in p else [self.pr, second])
+        gh.api.side_effect = lambda p: second if p == 'pulls/12' else self.pr
+        gh.deliver.side_effect = [ValueError('offline'), 'delivered', 'delivered']
+        with mock.patch.object(r, 'GitHub', return_value=gh), mock.patch.object(r, 'execute_task', return_value={'status':'IN_REVIEW'}) as execute:
+            r.tick(self.config, self.state)
+            r.tick(self.config, self.state)
+            self.assertEqual(execute.call_count, 2)
+            self.assertEqual(gh.deliver.call_args.args[3], 12)
+            r.tick(self.config, self.state)
+            self.assertEqual(execute.call_count, 2)
+            self.assertEqual(gh.deliver.call_args.args[3], 11)
+
+    def test_timeout_diagnostic_is_delivered_without_raw_output(self):
+        gh = self.fake_github()
+        diagnostic = {'stage': 'claude', 'timeout_seconds': 300, 'timed_out': True}
+        with mock.patch.object(r, 'GitHub', return_value=gh), mock.patch.object(r, 'execute_task',
+                side_effect=r.ModelRunError('claude_TIMEOUT_NO_RETRY', diagnostic)) as execute:
+            r.tick(self.config, self.state); r.tick(self.config, self.state)
+            self.assertEqual(execute.call_count, 1)
+        result = json.loads((self.state / 'pr_11/result.json').read_text())
+        self.assertEqual(result['model_diagnostic'], diagnostic)
+        self.assertEqual(result['reason'], 'claude_TIMEOUT_NO_RETRY')
+
+    def test_timeout_escalation_and_exit_race_preserve_diagnostic(self):
+        for case in ('term', 'kill', 'exit_race'):
+            job = self.state / case; job.mkdir()
+            proc = mock.Mock(pid=999999, returncode=-signal.SIGTERM)
+            proc.communicate.side_effect = subprocess.TimeoutExpired('fake', 300)
+            if case == 'kill':
+                proc.wait.side_effect = [subprocess.TimeoutExpired('fake', 5), 0]
+            with mock.patch.object(r.subprocess, 'Popen', return_value=proc), mock.patch.object(r.os, 'killpg') as kill:
+                if case == 'exit_race': kill.side_effect = ProcessLookupError
+                with self.assertRaisesRegex(r.ModelRunError, 'claude_TIMEOUT_NO_RETRY'):
+                    r.model_run(['fake'], 'private prompt', job, 'claude')
+            receipt = json.loads((job / 'claude_diagnostic.json').read_text())
+            self.assertEqual(receipt['termination_signal_sent'], 'SIGKILL' if case == 'kill' else 'SIGTERM')
+            self.assertTrue(receipt['timed_out'])
+            self.assertFalse(receipt['automatic_retry'])
+            self.assertNotIn('private prompt', json.dumps(receipt))
+            self.assertEqual(kill.call_count, 2 if case == 'kill' else 1)
+
+    def test_real_child_timeout_is_reaped_without_retry(self):
+        job = self.state / 'timeout'; job.mkdir()
+        original = subprocess.Popen.communicate
+        def short_deadline(process, data, timeout):
+            self.assertEqual(timeout, 300)
+            return original(process, data, timeout=0.2)
+        with mock.patch.object(subprocess.Popen, 'communicate', short_deadline):
+            with self.assertRaises(r.ModelRunError):
+                r.model_run([sys.executable, '-c', 'import time; time.sleep(60)'], 'prompt', job, 'claude', cwd=self.repo)
+        receipt = json.loads((job / 'claude_diagnostic.json').read_text())
+        self.assertEqual(receipt['returncode'], -signal.SIGTERM)
+        self.assertTrue(receipt['direct_child_reaped'])
+        self.assertFalse(receipt['descendant_exit_verified'])
+
+    def test_nonzero_exit_diagnostic_has_only_metadata(self):
+        job = self.state / 'failure'; job.mkdir()
+        with self.assertRaisesRegex(r.ModelRunError, 'claude_FAILED_NO_RETRY'):
+            r.model_run([sys.executable, '-c', 'import sys; print("private-error", file=sys.stderr); sys.exit(7)'],
+                        'private-input', job, 'claude', cwd=self.repo)
+        receipt = json.loads((job / 'claude_diagnostic.json').read_text())
+        self.assertEqual(receipt['returncode'], 7)
+        self.assertGreater(receipt['stderr_bytes'], 0)
+        self.assertFalse(receipt['timed_out'])
+        self.assertNotIn('private-error', json.dumps(receipt))
 
     def test_current_pin_drift_blocks_dispatch(self):
         (self.repo / 'CLAUDE.md').write_text('altered governance')
