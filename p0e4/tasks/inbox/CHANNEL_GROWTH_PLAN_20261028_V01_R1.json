@@ -1,0 +1,36 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "CHANNEL_GROWTH_PLAN_20261028_V01",
+  "revision": 1,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "READ_ONLY",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "goal": "Produce a bounded Dutch execution proposal as text only. Nitin confirmed on 2026-10-28: EUR 10 million cumulative revenue by October 2031, primarily platform revenue from channel views, with 6-8 originals annually (30-40 over five years). This is an ambition, not a forecast. Prioritize daily content from both originals and previously released songs. Planning context supplied by the orchestrator, not independently verified here: current approved campaign covers 29 October-10 November; preserve it. Catalog candidates publicly released: O Maahi, Satranga, Hua Main, Saari Duniya Jalaa Denge. Source-master mapping and reuse eligibility are unverified. Existing creative series: Unchained Sessions; Hindi That Hits Different; One Take. One Voice.; Behind the Voice; Unchained Originals. Gemini advisory already received: consistent Western Sound/Eastern Soul positioning, catalog reuse, matched-window retention and conversion measurements; no independent account audit or media QC. Create a 14-day proposed content queue for 11-24 November 2026 and a measurement specification. Use no tools; do not inspect accounts, modify files, render, publish, spend, invent data, create tasks or claim execution. All claims must distinguish user target, supplied planning context, assumption and missing evidence.",
+  "base_commit": "ca9f423bc57d9790cd70cee58e72e4639eefa18d",
+  "inputs": [
+    {
+      "path": "p0e4/tasks/AUTOMATION_POLICY_V01.md",
+      "sha256": "3db1bdc77047220a7b524b8b3e537656a7104c4af0a1e60402f52db991c23c45"
+    }
+  ],
+  "acceptance_criteria": [
+    "Restate the cumulative revenue goal and 6-8 annual originals accurately; do not guarantee success or invent release dates/titles for future originals.",
+    "Return 14 dated proposal rows for 11-24 November: series, source candidate or source-needed, hook concept, suggested format, CTA, platform adaptations, dependency and approval state. All rows are PROPOSED, never scheduled/published.",
+    "Define a non-destructive source-match checklist: existing Content_ID, exact source, hash, publication ID, title aliases, cover/original, existing permissions and master status. Missing facts remain UNKNOWN.",
+    "Specify per-platform/format measurement fields for 24h/72h/7d, retention, returning audience, paid/organic, eligible-view denominator and actual platform revenue. Distinguish platform-reported RPM definitions; no assumed real-world RPMs.",
+    "Show symbolic revenue arithmetic and clearly hypothetical sensitivity at EUR 1, EUR 3 and EUR 5 per 1000 eligible views for a EUR 10m goal. These are illustrations, not market rates or forecasts; do not mix total views with eligible views or count revenue twice.",
+    "Give five prioritized next deliverables with owner, prerequisite and verifiable completion criterion; report account analytics and TikTok identity as missing, not zero.",
+    "State no live action was performed, the result needs review, and the existing approval gates remain. No tool calls or follow-up-task creation."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
