@@ -1,0 +1,40 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "CHANNEL_GROWTH_PLAN_20261028_V01",
+  "revision": 2,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "READ_ONLY",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "goal": "Produce one complete corrected Dutch replacement for revision 1 as text only. This is the single permitted repair revision for this work package. Preserve the already verified goal, fourteen dated proposal rows, source-match fields, symbolic EUR 1/EUR 3/EUR 5 sensitivity, gates and explicit distinction between target, supplied context, assumption and missing evidence. Correct exactly the demonstrated defects from the independent Codex review bound in the inputs: (1) replace the false queue summary with the exact mutually exclusive count: 9 catalog-only rows, 3 ORIG-only rows, 1 NEW row and 1 conditional ORIG-or-C1 row; do not invent another aggregation; (2) make the source-match procedure strictly read-only in this task—no copies, versioned folders, renames, moves, conversions, uploads or writes; (3) assign deliverable 1 to the existing local Claude catalog executor, while ChatGPT specifies/reviews and Nitin remains the rights/reuse gate; this does not prove dispatch or authorize access expansion; (4) add a concrete platform-by-format measurement-definition matrix for YouTube long-form, YouTube Shorts, Instagram Reels, Facebook Reels/video and TikTok. For every row distinguish views denominator, eligible/monetized denominator, revenue field, platform-reported RPM or equivalent field, evidence source/date and definition status. Because no platform documentation or account analytics is supplied and tools are forbidden, set every unverified definition/denominator to UNKNOWN and specify the evidence needed; do not fabricate current platform facts or RPMs. Keep analytics and canonical TikTok identity MISSING, not zero. Do not claim source matching, media QC, dispatch, scheduling, rendering, publication, revenue, permissions or human approval. Do not create or propose another task. State that absence of toolcalls or mutations remains independently unproven without raw runner/session evidence. All live gates stay unchanged.",
+  "base_commit": "f196b3f4232ae4793147e8e972d8676f9b8d06d2",
+  "inputs": [
+    {
+      "path": "p0e4/tasks/AUTOMATION_POLICY_V01.md",
+      "sha256": "3db1bdc77047220a7b524b8b3e537656a7104c4af0a1e60402f52db991c23c45"
+    },
+    {
+      "path": "p0e4/evidence/task_runs/pr_51/RESULT.json",
+      "sha256": "a699a6b4e2d172f8f37b42f9d93b784aabd49242087c1b7e111e7f50b38e394d"
+    }
+  ],
+  "acceptance_criteria": [
+    "Return a complete corrected replacement, not an addendum, and preserve the exact EUR 10 million cumulative revenue ambition to October 2031, primarily platform/view income, plus 6-8 originals annually; no forecast or guarantee.",
+    "Keep exactly 14 dated PROPOSED rows for 11-24 November 2026 and state the exact mutually exclusive composition: 9 catalog-only, 3 ORIG-only, 1 NEW and 1 conditional ORIG-or-C1.",
+    "Make the source-match checklist strictly read-only for this task: read and hash only; no copy, folder creation, rename, move, conversion, upload or write. Missing facts remain UNKNOWN.",
+    "Provide a platform-by-format definition matrix covering YouTube long-form, YouTube Shorts, Instagram Reels, Facebook Reels/video and TikTok, with denominator, eligible/monetized denominator, revenue/RPM-or-equivalent field, evidence source/date and definition status. Without supplied authoritative evidence every unverified value is UNKNOWN; no fabricated platform definitions or RPMs.",
+    "Assign source-match execution ownership specifically to the existing local Claude catalog executor, with ChatGPT as task specifier/reviewer and Nitin as rights/reuse gate. Do not infer dispatch, access or approval.",
+    "Retain the symbolic EUR 1/EUR 3/EUR 5 eligible-view sensitivity as hypothetical illustration only, prevent double counting, and keep analytics and TikTok identity MISSING rather than zero.",
+    "State no live action was performed, no follow-up task was created or proposed, the result remains IN_REVIEW, raw runner/session evidence is still needed to prove absence of toolcalls/mutations, and governance remains false/false/PAUSED_BY_NITIN."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
