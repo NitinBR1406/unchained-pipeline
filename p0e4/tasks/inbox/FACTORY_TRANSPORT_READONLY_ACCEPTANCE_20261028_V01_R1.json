@@ -1,0 +1,33 @@
+{
+  "schema": "P0E4_AUTOMATED_TASK_V01",
+  "task_id": "FACTORY_TRANSPORT_READONLY_ACCEPTANCE_20261028_V01",
+  "revision": 1,
+  "parent_task_id": null,
+  "status": "READY",
+  "task_type": "READ_ONLY",
+  "policy": "P0E4_DELEGATED_TASKS_V01",
+  "goal": "End-to-end transport acceptance only. Read the supplied automation policy and return one bounded Dutch observation proving that this exact task/revision and SHA-bound input reached Claude. Do not call tools, inspect Resolve, modify files, start renders, use Make, deploy, publish, purchase, create follow-up tasks, or claim independent verification.",
+  "base_commit": "8e00136a580e9cd373cac6cb3d895bd076766b3b",
+  "inputs": [
+    {
+      "path": "p0e4/tasks/AUTOMATION_POLICY_V01.md",
+      "sha256": "3db1bdc77047220a7b524b8b3e537656a7104c4af0a1e60402f52db991c23c45"
+    }
+  ],
+  "acceptance_criteria": [
+    "State the exact task_id, revision 1, base_commit and supplied policy SHA-256.",
+    "State PRODUCTION_DEPLOYMENT_AUTHORIZED=false, PUBLICATION_AUTHORIZED=false and FIRST_REAL_POSTER=PAUSED_BY_NITIN exactly, citing only the supplied policy.",
+    "State that this is Claude's bounded observation, not independent proof of runner transport, argv, sandboxing, duplicate suppression or GitHub result delivery.",
+    "Return under 400 words in Dutch with no tool calls and no proposal for a follow-up task."
+  ],
+  "budget": {
+    "max_attempts": 1,
+    "timeout_seconds": 300,
+    "max_turns": 8
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  }
+}
