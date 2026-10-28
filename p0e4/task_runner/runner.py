@@ -220,22 +220,33 @@ def execute_task(root, commit, task, job, config):
                      + json.dumps({'task': task, 'claude_result': result['result']}) + '\nINPUTS:\n' + context)
     review_dir = job / 'review_workspace'
     review_dir.mkdir()
-    model_run([config['codex'], 'exec', '--ignore-user-config', '--ephemeral', '--skip-git-repo-check',
-               '--sandbox', 'read-only', '-c', 'approval_policy="never"', '--json',
-               '--output-last-message', str(job / 'review.txt'), '-C', str(review_dir), '-'],
-              review_prompt, job, 'codex', cwd=review_dir)
-    review = (job / 'review.txt').read_text()
-    require(0 < len(review.encode()) < 200000, 'invalid Codex review')
-    events = [json.loads(line) for line in (job / 'codex.stdout').read_text().splitlines() if line.strip()]
-    require(any(e.get('type') == 'turn.completed' for e in events)
-            and not any(e.get('type') in ('error', 'turn.failed') for e in events), 'invalid Codex receipt')
-    require(not git(checkout, 'status', '--porcelain', '--untracked-files=no').strip(), 'unexpected tracked mutation')
-    return {'status': 'IN_REVIEW', 'task_id': task['task_id'], 'revision': task['revision'],
+    base = {'task_id': task['task_id'], 'revision': task['revision'],
             'claude_session_id': result.get('session_id'), 'claude_result': result['result'],
-            'codex_thread_id': next((e.get('thread_id') for e in events if e.get('type') == 'thread.started'), None),
-            'codex_review': review, 'independent_test_execution': False,
-            'governance': GATES, 'merge_commit': commit, 'at_utc': now(),
-            'raw_receipt_sha256': {p: sha((job / p).read_bytes()) for p in ['claude.stdout', 'codex.stdout']}}
+            'independent_test_execution': False, 'governance': GATES, 'merge_commit': commit}
+    # A Codex-stage failure (missing binary, timeout, invalid receipt) must not discard the completed Claude
+    # result: deliver it as PARTIAL_REVIEW_CODEX_HOLD. No automatic retry of Claude or Codex.
+    try:
+        model_run([config['codex'], 'exec', '--ignore-user-config', '--ephemeral', '--skip-git-repo-check',
+                   '--sandbox', 'read-only', '-c', 'approval_policy="never"', '--json',
+                   '--output-last-message', str(job / 'review.txt'), '-C', str(review_dir), '-'],
+                  review_prompt, job, 'codex', cwd=review_dir)
+        review = (job / 'review.txt').read_text()
+        require(0 < len(review.encode()) < 200000, 'invalid Codex review')
+        events = [json.loads(line) for line in (job / 'codex.stdout').read_text().splitlines() if line.strip()]
+        require(any(e.get('type') == 'turn.completed' for e in events)
+                and not any(e.get('type') in ('error', 'turn.failed') for e in events), 'invalid Codex receipt')
+    except Exception as exc:
+        reason = str(exc) if isinstance(exc, ValueError) else type(exc).__name__
+        require(not git(checkout, 'status', '--porcelain', '--untracked-files=no').strip(), 'unexpected tracked mutation')
+        receipts = {p: sha((job / p).read_bytes()) for p in ['claude.stdout', 'codex.stdout'] if (job / p).exists()}
+        return dict(base, status='PARTIAL_REVIEW_CODEX_HOLD', codex_thread_id=None, codex_review=None,
+                    codex_hold={'status': 'HOLD', 'reason': reason, 'automatic_retry': False},
+                    at_utc=now(), raw_receipt_sha256=receipts)
+    require(not git(checkout, 'status', '--porcelain', '--untracked-files=no').strip(), 'unexpected tracked mutation')
+    return dict(base, status='IN_REVIEW',
+                codex_thread_id=next((e.get('thread_id') for e in events if e.get('type') == 'thread.started'), None),
+                codex_review=review, at_utc=now(),
+                raw_receipt_sha256={p: sha((job / p).read_bytes()) for p in ['claude.stdout', 'codex.stdout']})
 
 
 class GitHub:
