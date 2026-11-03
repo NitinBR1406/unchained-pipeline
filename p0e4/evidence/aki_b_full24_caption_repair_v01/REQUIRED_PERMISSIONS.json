@@ -1,0 +1,30 @@
+{
+  "schema": "AKI_B_FULL24_REQUIRED_PERMISSIONS_V01",
+  "status": "NOT_GRANTED",
+  "file": "/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.claude/settings.local.json (local, not committed); added via the normal approval prompt, removed after each Resolve step",
+  "temporary_rules": {
+    "permissions": {
+      "allow": [
+        "Write(/Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-b-full24-caption-repair-v01/**)",
+        "Bash(/usr/bin/python3 /Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-b-full24-caption-repair-v01/step1_import_readback.py)",
+        "Bash(/usr/bin/python3 /Users/nitinramdaras/Downloads/unchained-pipeline-p0e4/.local/aki-b-full24-caption-repair-v01/step2_build_render_full24.py)"
+      ]
+    }
+  },
+  "not_needed": "make_logo_overlays.py, tests and ffmpeg QC use ordinary Bash without Resolve",
+  "preconditions": [
+    "review of exact bytes: step1 de62725b2f8d07304d6f47c959cafd16f1588d20e1a59f418780128856e7bd32, step2 c28b2e22ccbb87f69b9461da8e879084833acecdb8b6e013198b79d740751468, overlays 4e4835e30babd922f28cba0e0c9988406983f8d45046752b3a0a425adeb561d4",
+    "shasum -c immediately before each invocation; no edits in between",
+    "step 2 only after step-1 readback inspected (Nitin may show it via ! prompt)"
+  ],
+  "limits": [
+    "path-based rules, not hash-enforced",
+    "folder Write rule does not limit script side effects (Resolve DB: new project; caches; renders into the folder)"
+  ],
+  "unchanged": [
+    ".claude/settings.json and MCP denies",
+    ".claude/hooks/resolve_run_script_gate.py",
+    ".mcp.json",
+    "runner, policy, Master State"
+  ]
+}
