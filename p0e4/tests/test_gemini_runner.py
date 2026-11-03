@@ -57,6 +57,21 @@ class RouteTests(unittest.TestCase):
                 original.assert_called_once();gemini.assert_called_once()
                 self.assertFalse(out['gemini_text_qc']['automatic_retry'])
 
+    def test_codex_hold_is_never_upgraded_and_combines_with_gemini_hold(self):
+        for gemini_effect, expected in ((None, 'PARTIAL_REVIEW_CODEX_HOLD'),
+                                        (ValueError('tool attempt'), 'PARTIAL_REVIEW_CODEX_GEMINI_HOLD')):
+            with tempfile.TemporaryDirectory() as temp:
+                result={'status':'PARTIAL_REVIEW_CODEX_HOLD','claude_result':'Builder','codex_review':None,
+                        'codex_hold':{'status':'HOLD','reason':'FileNotFoundError','automatic_retry':False}}
+                kwargs={'side_effect':gemini_effect} if gemini_effect else {'return_value':{'status':'IN_REVIEW','media_inspected':False}}
+                with patch.object(v2,'ORIGINAL_EXECUTE',return_value=result), \
+                     patch.object(r,'regular_blob',return_value=b'{"synthetic":true}'), \
+                     patch.object(v2.qc,'execute',**kwargs):
+                    out=v2.execute_task(Path(temp),'b'*40,task(),Path(temp),{'gemini_text_qc_enabled':True})
+                    self.assertEqual(out['status'],expected)
+                    self.assertEqual(out['claude_result'],'Builder')
+                    self.assertFalse(out['codex_hold']['automatic_retry'])
+
     def test_disabled_hash_drift_or_oversize_stops_before_models(self):
         for config,raw in [({},b'{"synthetic":true}'),({'gemini_text_qc_enabled':True},b'changed'),
                            ({'gemini_text_qc_enabled':True},b'x'*13000)]:

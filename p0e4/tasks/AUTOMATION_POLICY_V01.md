@@ -77,6 +77,11 @@ taak wordt geblokkeerd. Historische V01 handmatige packages worden niet uitgevoe
   is geen bewijs van uitgevoerde tests. Resultaat blijft IN_REVIEW; de runner kent nooit
   eigenstandig productieacceptatie of human approval toe. Geblokkeerde taken worden ook
   als bewijs afgeleverd. Bij afleverproblemen blijft lokaal delivery_hold.json staan.
+- Faalt de Codex-review (ontbrekend programma, timeout of ongeldig receipt) na een geslaagd
+  Claude-resultaat, dan levert de runner het Claude-resultaat af als `PARTIAL_REVIEW_CODEX_HOLD`
+  met `codex_review = null` en `codex_hold.reason`; zonder automatische herhaling en nooit als
+  `IN_REVIEW`. Faalt bij een Gemini-taak ook Gemini, dan `PARTIAL_REVIEW_CODEX_GEMINI_HOLD`.
+  Zo'n resultaat heeft géén onafhankelijke technische review (besluit Nitin 2026-10-19).
 
 ChatGPT is niet permanent actief door deze installatie. De lokale Codex-review sluit
 de automatische terugkoppeling naar de repo; ChatGPT leest die bij de volgende sessie.

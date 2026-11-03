@@ -26,7 +26,7 @@ def validate_task(task, filename):
 
 def request_for(task, evidence, result):
     parts = [json.dumps({'goal': task['goal'], 'base_commit': task['base_commit']}),
-             evidence, result['claude_result'], result['codex_review']]
+             evidence, result['claude_result'], result['codex_review'] or 'CODEX_REVIEW_MISSING (codex_hold)']
     request = {'schema': 'GEMINI_TEXT_QC_V01',
                'task_id': task['task_id'] + '_R' + str(task['revision']),
                'criteria': [{'id': 'C' + str(i+1), 'question': question}
@@ -56,9 +56,10 @@ def execute_task(root, commit, task, job, config):
     try:
         review = qc.execute(request_for(task, evidence, result), Path.home())
         result['gemini_text_qc'] = review
-        result['status'] = 'IN_REVIEW'
+        # status unchanged: IN_REVIEW stays IN_REVIEW, PARTIAL_REVIEW_CODEX_HOLD is never upgraded
     except Exception as exc:
-        result['status'] = 'PARTIAL_REVIEW_GEMINI_HOLD'
+        result['status'] = ('PARTIAL_REVIEW_CODEX_GEMINI_HOLD' if result['status'] == 'PARTIAL_REVIEW_CODEX_HOLD'
+                            else 'PARTIAL_REVIEW_GEMINI_HOLD')
         reason = str(exc) if isinstance(exc, ValueError) and re.fullmatch(r'[A-Z0-9_,:]{1,160}', str(exc)) else type(exc).__name__
         result['gemini_text_qc'] = {'status': 'HOLD', 'reason': reason,
                                    'automatic_retry': False, 'media_inspected': False}
