@@ -1,0 +1,35 @@
+test_disabled_hash_drift_or_oversize_stops_before_models (test_gemini_runner.RouteTests.test_disabled_hash_drift_or_oversize_stops_before_models) ... ok
+test_gemini_failure_preserves_claude_codex_without_retry (test_gemini_runner.RouteTests.test_gemini_failure_preserves_claude_codex_without_retry) ... ok
+test_legacy_types_never_invoke_gemini (test_gemini_runner.RouteTests.test_legacy_types_never_invoke_gemini) ... ok
+test_new_type_schema_and_criterion_limit (test_gemini_runner.RouteTests.test_new_type_schema_and_criterion_limit) ... ok
+test_request_budget_never_truncates (test_gemini_runner.RouteTests.test_request_budget_never_truncates) ... ok
+test_success_preserves_reviews_and_bound_sources (test_gemini_runner.RouteTests.test_success_preserves_reviews_and_bound_sources) ... ok
+test_failed_activation_restores_exact_old_files (test_gemini_runner.UpgradeTests.test_failed_activation_restores_exact_old_files) ... ok
+test_installed_snapshot_imports_adapter_from_its_own_root (test_gemini_runner.UpgradeTests.test_installed_snapshot_imports_adapter_from_its_own_root) ... ok
+test_pending_task_blocks_baseline_advance (test_gemini_runner.UpgradeTests.test_pending_task_blocks_baseline_advance) ... ok
+test_success_reuses_same_label (test_gemini_runner.UpgradeTests.test_success_reuses_same_label) ... ok
+test_cli_does_not_widen_tools_or_load_global_mcp (test_task_runner.ContractTests.test_cli_does_not_widen_tools_or_load_global_mcp) ... ok
+test_malformed_gate_input_fails_closed (test_task_runner.ContractTests.test_malformed_gate_input_fails_closed) ... ok
+test_only_existing_read_tools_can_pass_gate (test_task_runner.ContractTests.test_only_existing_read_tools_can_pass_gate) ... ok
+test_pr_authorization_rejects_mixed_pr_fork_other_merger (test_task_runner.ContractTests.test_pr_authorization_rejects_mixed_pr_fork_other_merger) ... ok
+test_scope_bypass_and_unknown_fields_rejected (test_task_runner.ContractTests.test_scope_bypass_and_unknown_fields_rejected) ... ok
+test_secret_filter (test_task_runner.ContractTests.test_secret_filter) ... ok
+test_traversal_secret_path_bad_hash_budget_and_draft (test_task_runner.ContractTests.test_traversal_secret_path_bad_hash_budget_and_draft) ... ok
+test_valid_task_and_immutable_gates (test_task_runner.ContractTests.test_valid_task_and_immutable_gates) ... ok
+test_ambiguous_intent_never_restarts (test_task_runner.RuntimeTests.test_ambiguous_intent_never_restarts) ... ok
+test_current_pin_drift_blocks_dispatch (test_task_runner.RuntimeTests.test_current_pin_drift_blocks_dispatch) ... ok
+test_delivery_failure_retries_only_delivery (test_task_runner.RuntimeTests.test_delivery_failure_retries_only_delivery) ... ok
+test_duplicate_identity_different_pr_is_blocked (test_task_runner.RuntimeTests.test_duplicate_identity_different_pr_is_blocked) ... ok
+test_failed_delivery_does_not_starve_next_task_or_restart_models (test_task_runner.RuntimeTests.test_failed_delivery_does_not_starve_next_task_or_restart_models) ... ok
+test_input_sha_mismatch_and_symlink_rejected (test_task_runner.RuntimeTests.test_input_sha_mismatch_and_symlink_rejected) ... ok
+test_nonzero_exit_diagnostic_has_only_metadata (test_task_runner.RuntimeTests.test_nonzero_exit_diagnostic_has_only_metadata) ... ok
+test_real_child_timeout_is_reaped_without_retry (test_task_runner.RuntimeTests.test_real_child_timeout_is_reaped_without_retry) ... ok
+test_real_git_context_and_fake_cli_execution (test_task_runner.RuntimeTests.test_real_git_context_and_fake_cli_execution) ... ok
+test_timeout_diagnostic_is_delivered_without_raw_output (test_task_runner.RuntimeTests.test_timeout_diagnostic_is_delivered_without_raw_output) ... ok
+test_timeout_escalation_and_exit_race_preserve_diagnostic (test_task_runner.RuntimeTests.test_timeout_escalation_and_exit_race_preserve_diagnostic) ... ok
+test_two_polls_invoke_once (test_task_runner.RuntimeTests.test_two_polls_invoke_once) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 1.525s
+
+OK

@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED_LOCAL_RUNTIME_ACCESS",
+  "next_action": "Inspect existing Mac runner installation, PR31 stdout/stderr locally with secrets suppressed, current health, active child processes and identity registry. Determine actual timeout cause before another model revision. Prepare reviewed same-label upgrade/rollback preserving state and completed registry, then coordinate merge and pin activation.",
+  "required_checks": [
+    "No active model/render or manual Resolve writer.",
+    "Backup exact installed runtime, config, pins and service definition; preserve existing state.",
+    "Approve exact migration scope if it exceeds existing authorization; never silently widen tools.",
+    "Verify two distinct approved tasks, one failed delivery, restart dedup and returned diagnostics on Mac.",
+    "Register activated evidence through existing append-only ledger/reducer only after observed acceptance."
+  ],
+  "routine_prompt_relay_required": false,
+  "live_execution_claimed": false
+}

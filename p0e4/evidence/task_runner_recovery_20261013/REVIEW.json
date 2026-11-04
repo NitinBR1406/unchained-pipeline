@@ -1,0 +1,61 @@
+{
+  "schema": "TASK_RUNNER_RECOVERY_REVIEW_V01",
+  "at_utc": "2026-10-12T22:19:24.775299+00:00",
+  "source_base": "3011df61ba455218e705d37959f7021f1657f0b5",
+  "tested_sha": "27ae78cd2d14e772d01cfed1276b5acbc6cde051",
+  "status": "OFFLINE_VERIFIED_NOT_ACTIVATED",
+  "tests": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "p0e4/tests",
+      "-p",
+      "test*runner.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "passed": 30,
+    "scope": "Linux offline runner and Gemini adapter/upgrade regression; real disposable child timeout, mocked model/provider/GitHub calls"
+  },
+  "historical_failure": {
+    "path": "p0e4/evidence/task_runs/pr_31/RESULT.json",
+    "reason": "claude_TIMEOUT_NO_RETRY",
+    "underlying_cause": "UNPROVEN_LOCAL_TRANSCRIPTS_UNAVAILABLE",
+    "reconstructed_context_bytes": 399097,
+    "context_size_is_hypothesis_not_cause": true
+  },
+  "implemented": [
+    "Delivery failure no longer monopolizes subsequent polls; cached result delivery is retried without model execution.",
+    "Timeout and nonzero exit record stage, elapsed time, prompt/output byte counts, child exit and cancellation metadata without raw text.",
+    "Timeout-boundary ProcessLookupError does not discard timeout classification."
+  ],
+  "limitations": [
+    "No live Claude/Codex dispatch or Mac access in this session.",
+    "No automatic retry of historical PR31 or ambiguous intents.",
+    "Descendant process exit is not proven by direct-child wait.",
+    "No reduction of mandatory governance context or timeout increase.",
+    "No private render or full factory E2E acceptance."
+  ],
+  "runtime_change": {
+    "activation_status": "BLOCKED_LOCAL_RUNTIME_ACCESS",
+    "merge_status": "HOLD_UNTIL_COORDINATED_UPGRADE",
+    "reason": "runner.py is pinned; merging before reviewed local migration makes current runner stop with CURRENT_POLICY_DRIFT.",
+    "source": "p0e4/tasks/AUTOMATION_POLICY_V01.md"
+  },
+  "master_state": {
+    "pointer_mutated": false,
+    "reason": "Pinned pointer and installed runtime must migrate together; subordinate engineering evidence only, no new readiness claim."
+  },
+  "governance": {
+    "PRODUCTION_DEPLOYMENT_AUTHORIZED": false,
+    "PUBLICATION_AUTHORIZED": false,
+    "FIRST_REAL_POSTER": "PAUSED_BY_NITIN"
+  },
+  "remote_implementation_commit": "e0774cf33f6919e346b32d67781c3ab389714f8f",
+  "tested_tree_sha": "c548a53ea75410c17f2066589d438a8524cfaf31",
+  "remote_tree_sha": "c548a53ea75410c17f2066589d438a8524cfaf31",
+  "remote_equivalence": "Exact Git tree equality with locally tested SHA; commit metadata differs because shell Git auth unavailable. Uploaded through authorized GitHub connector."
+}

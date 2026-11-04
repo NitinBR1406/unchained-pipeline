@@ -15,6 +15,7 @@ import signal
 import subprocess
 import sys
 import tempfile
+import time
 
 REPO = 'NitinBR1406/unchained-pipeline'
 BRANCH = 'p0e4/slice1-production-handoff'
@@ -139,22 +140,53 @@ def contains_secret(raw):
                           rb'(?:password|api[_-]?key|access[_-]?token)\s*["\x27]?\s*[:=]\s*["\x27][^"\x27\s]{8,})', raw))
 
 
+class ModelRunError(ValueError):
+    def __init__(self, reason, diagnostic):
+        super().__init__(reason)
+        self.diagnostic = diagnostic
+
+
 def model_run(argv, prompt, job, prefix, cwd=None):
     # Durable intent is written by caller BEFORE Popen. No blind model retries.
     with (job / (prefix + '.stdout')).open('xb') as out, (job / (prefix + '.stderr')).open('xb') as err:
         process = subprocess.Popen(argv, cwd=cwd or job / 'checkout', stdin=subprocess.PIPE,
                                    stdout=out, stderr=err, start_new_session=True)
         atomic(job / (prefix + '_process.json'), {'pid': process.pid, 'at_utc': now(), 'argv': argv})
+        started = time.monotonic()
+        timed_out = False
+        termination = 'NOT_REQUIRED'
         try:
             process.communicate(prompt.encode(), timeout=300)
         except subprocess.TimeoutExpired:
-            os.killpg(process.pid, signal.SIGTERM)
+            timed_out = True
+            termination = 'SIGTERM'
+            try:
+                os.killpg(process.pid, signal.SIGTERM)
+            except ProcessLookupError:
+                pass  # Child exited at the timeout boundary; still never retry.
             try:
                 process.wait(timeout=5)
             except subprocess.TimeoutExpired:
-                os.killpg(process.pid, signal.SIGKILL); process.wait()
-            raise ValueError(prefix + '_TIMEOUT_NO_RETRY')
-    require(process.returncode == 0, prefix + '_FAILED_NO_RETRY')
+                termination = 'SIGKILL'
+                try:
+                    os.killpg(process.pid, signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+                process.wait()
+    diagnostic = {
+        'stage': prefix, 'timeout_seconds': 300, 'timed_out': timed_out,
+        'elapsed_seconds': round(time.monotonic() - started, 3),
+        'prompt_bytes': len(prompt.encode()), 'returncode': process.returncode,
+        'termination_signal_sent': termination, 'direct_child_reaped': True,
+        'descendant_exit_verified': False, 'automatic_retry': False,
+        'stdout_bytes': (job / (prefix + '.stdout')).stat().st_size,
+        'stderr_bytes': (job / (prefix + '.stderr')).stat().st_size,
+    }
+    atomic(job / (prefix + '_diagnostic.json'), diagnostic)
+    if timed_out:
+        raise ModelRunError(prefix + '_TIMEOUT_NO_RETRY', diagnostic)
+    if process.returncode != 0:
+        raise ModelRunError(prefix + '_FAILED_NO_RETRY', diagnostic)
     require((job / (prefix + '.stdout')).stat().st_size < 2000000, 'model output too large')
 
 
@@ -309,7 +341,14 @@ def tick(config, state):
     for path, digest in config['pins'].items():
         require(sha(regular_blob(root, head, path)) == digest, 'CURRENT_POLICY_DRIFT:' + path)
     prs = gh.pages('pulls?state=closed&base=' + BRANCH + '&per_page=100')
-    for stub in sorted((p for p in prs if p['merged_at']), key=lambda p: (p['merged_at'], p['number'])):
+    def delivery_order(pr):
+        # Fresh tasks precede retried deliveries; oldest attempted delivery goes next.
+        # This is local scheduling metadata, never permission to rerun a model.
+        attempt = state / ('pr_' + str(pr['number'])) / 'delivery_attempt.json'
+        last = json.loads(attempt.read_text())['at_utc'] if attempt.exists() else ''
+        return (last, pr['merged_at'], pr['number'])
+
+    for stub in sorted((p for p in prs if p['merged_at']), key=delivery_order):
         commit = stub['merge_commit_sha']
         if not commit:
             continue
@@ -349,8 +388,11 @@ def tick(config, state):
                     # Messages are fixed literals/paths, never child stderr or secret values.
                     record = {'status': 'BLOCKED', 'reason': str(exc) if isinstance(exc, ValueError) else type(exc).__name__,
                               'task_pr': stub['number'], 'at_utc': now(), 'governance': GATES}
+                    if isinstance(exc, ModelRunError):
+                        record['model_diagnostic'] = exc.diagnostic
                 atomic(job / 'result.json', record)
         record = json.loads((job / 'result.json').read_text())
+        atomic(job / 'delivery_attempt.json', {'at_utc': now()})
         try:
             url = gh.deliver(root, job, record, stub['number'], commit)
             atomic(job / 'delivered.json', {'url': url, 'at_utc': now()})
